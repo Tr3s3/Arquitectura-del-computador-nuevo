@@ -19,7 +19,7 @@ prioridad: maxima
 | Capacidad total | 24 bits | 8 × 3 |
 | Rango de direcciones | 000 a 111 | 0 a 7 en decimal |
 
-![ram_8x3](assets/ram_8x3.svg)
+![ram_8x3](../assets/ram_8x3.svg)
 
 ## Estructura interna
 1. **Decodificador 3→8**: recibe A2 A1 A0 y activa **una** de las 8 líneas de selección (mintérminos
@@ -86,6 +86,12 @@ en miniatura.
 > [!tip] Regla para el pizarrón
 > `cantidad de líneas de dirección = log₂(cantidad de palabras)`, `líneas de datos = bits por palabra`,
 > `capacidad = palabras × bits`. Si te dan la capacidad, la factorizás para deducir la organización.
+
+> [!example] Conexión con los TPs
+> El [[TP12 Memoria principal|TP12]] pide las características de RAM/ROM/caché y el **cuadro comparativo**; el
+> [[TP18 Direccionamiento de memoria|TP18]], el cálculo de **espacio de direccionamiento y bits de CodOp**
+> para memorias grandes. La RAM 8×3 es el mismo esquema en miniatura: memorias grandes = este circuito con más
+> bits.
 
 ## Cómo responderlo en el final (pregunta principal #5)
 1. Decir la organización y la capacidad: 8 palabras × 3 bits, 3 bits de dirección, 3 de datos, 24 bits.

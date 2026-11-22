@@ -12,7 +12,7 @@ prioridad: maxima
 > mover información entre esas unidades por los buses.
 
 ## El dibujo (hay que saber hacerlo de memoria)
-![estructura_basica](assets/estructura_basica.svg)
+![estructura_basica](../assets/estructura_basica.svg)
 
 ## Las unidades y qué hace cada una
 | Unidad | Función | Contiene |
@@ -46,7 +46,32 @@ prioridad: maxima
 - **Tres estados:** los dispositivos que comparten un bus deben poder ponerse en **alta impedancia**
   cuando no son seleccionados. Ver [[Celda elemental de memoria]].
 
-## Von Neumann vs Harvard
+## Los buses en detalle (TP14) — lo que agrega la cátedra
+> [!important] Definición y consecuencias
+> "Un **bus** es una vía de comunicación que conecta **dos o más dispositivos**: una señal transmitida por
+> cualquier dispositivo conectado será recibida por **todos** los otros."
+>
+> De ahí salen las dos reglas: **todos escuchan** ⇒ hace falta seleccionar quién responde (direcciones y
+> chip select); **uno habla por vez** ⇒ cada dispositivo debe poder ponerse en **alta impedancia**
+> (tres estados).
+
+| Bus | Función | Flujo | Su ancho determina |
+|---|---|---|---|
+| **Datos** | transporta el dato entre módulos | bidireccional | el **tamaño de palabra** del sistema |
+| **Direcciones** | **designa** el destino del dato (memoria o puerto E/S) | CPU → memoria/E/S | la **capacidad máxima de memoria** (`2ⁿ`) |
+| **Control** | controla el acceso y el uso de las otras líneas; órdenes y **temporización** | UC → todos → UC | cuántas operaciones de control existen |
+
+**Líneas de control típicas:** lectura/escritura de memoria · lectura/escritura de E/S · **petición de bus** ·
+**cesión de bus** · **petición de interrupción** (son las que enumera el [[TP14 Buses|TP14]]).
+
+**Ancho de bus y doble acceso:** si el bus de datos tiene 8 bits y las instrucciones son de 16, el
+procesador necesita **dos accesos a memoria por instrucción**. Los bits altos del bus de direcciones suelen
+usarse para **seleccionar el módulo** (memoria o E/S) y los bajos para la posición dentro del módulo.
+
+Elementos de bus que conviene nombrar: **maestro/esclavo**, **arbitraje** (petición/cesión), **síncrono vs
+asíncrono** (handshake READY/ACK), **multiplexado** y **jerarquía de buses** (local, sistema, E/S, expansión).
+
+## Von Neumann vs Harvard## Von Neumann vs Harvard
 - **Von Neumann** (la de la materia): **una sola memoria** para instrucciones y datos, un solo bus ⇒
   simple, pero el bus es cuello de botella (no se puede traer una instrucción y un dato a la vez:
   **cuello de botella de von Neumann**).

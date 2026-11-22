@@ -70,7 +70,20 @@ instrucción se puede medir como `búsqueda + ejecución` (ver [[Ciclo de máqui
 - Si la memoria es lenta, se agregan **pulsos de espera** (`WAIT`) informados por la señal `READY`: es el
   mismo mecanismo que usan los buses asíncronos.
 
-## Cómo responderlo en el final
+## Los 6 pasos del video (versión de la cátedra, TP16)
+La cátedra describe el ciclo de instrucción en **6 pasos** que engloban búsqueda + ejecución:
+1. **Búsqueda de la instrucción** (`PC → MAR → memoria → MBR → IR`) y `PC ← PC + 1`.
+2. **Decodificación** del opcode en la UC.
+3. **Búsqueda del operando** (si la instrucción lo requiere): la dirección del IR va al MAR.
+4. **Ejecución** de la operación (ALU o transferencia).
+5. **Almacenamiento del resultado** (registro o memoria).
+6. **Preparación de la próxima instrucción** (el PC ya apunta a la siguiente; se vuelve al paso 1).
+
+Estos 6 pasos se ven aplicados a un programa concreto en [[TP16 Ciclo de instrucción básico]] (cargar 1,
+sumarle 3, guardar el resultado). Si te piden "el ciclo de búsqueda", detallá los pulsos; si te piden "el
+ciclo de instrucción básico", usá estos 6 pasos. **Son el mismo proceso con distinto nivel de detalle.**
+
+## Cómo responderlo en el final## Cómo responderlo en el final
 1. Definir: secuencia fija que trae la instrucción al IR.
 2. Listar la tabla de 8 pulsos con señal(es) por pulso.
 3. Aclarar explícitamente el asunto de **7 vs 8** (pulso de espera / incremento solapado).

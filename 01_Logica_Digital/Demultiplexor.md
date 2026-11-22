@@ -26,7 +26,7 @@ También es el modelo del **demultiplexado de direcciones**: una dirección deco
 ## Funciones
 `Y0 = D·S1'·S0'`  `Y1 = D·S1'·S0`  `Y2 = D·S1·S0'`  `Y3 = D·S1·S0`
 
-![demux_1x4](assets/demux_1x4.svg)
+![demux_1x4](../assets/demux_1x4.svg)
 
 **Estructura:** 4 compuertas **AND de 3 entradas**: en cada una entra el dato D y la combinación de
 selectores que la habilita. (Si el dato D es siempre 1, el DEMUX se comporta como un **decodificador**:
@@ -44,6 +44,10 @@ el mismo C.I. para las dos funciones.
 2. **Escritura en memoria** de varios chips (la señal de escritura se demultiplexa por banco).
 3. Distribución de pulsos de reloj/ habilitación a distintos bloques (clock gating).
 4. Conversión serie → paralelo cuando se usa junto con un registro de desplazamiento.
+
+> [!example] Del TP6
+> El [[TP6 Decodificadores y demultiplexores|TP6]] pide el demultiplexor junto con el decodificador,
+> justamente para que se vea la diferencia: **el DEMUX lleva el dato D** en la ecuación.
 
 ## Cómo responderlo en el final (práctica)
 1. Definición (1 → 2ⁿ, dirige el dato).

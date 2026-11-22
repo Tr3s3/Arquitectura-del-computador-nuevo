@@ -430,22 +430,26 @@ def d_formatos():
 
 
 def d_modos():
-    s = Svg(780, 440, "Modos de direccionamiento: cómo se construye la dirección efectiva (EA)")
-    items = [("Inmediato", "OP  dato", "EA = — (el operando viaja dentro de la instrucción)", "LDI 5"),
-             ("Directo / absoluto", "OP  D", "EA = D  (un solo acceso a memoria)", "LDA 25h"),
-             ("Por registro", "OP  R", "EA = R  (no hay acceso a memoria)", "ADD RIF"),
-             ("Indirecto", "OP  D", "EA = M[D]  (dos accesos a memoria)", "LDA @25h"),
-             ("Indexado", "OP  D + X", "EA = D + X   con X = RIF o RID", "LDA 25h,RIF")]
-    for i, (name, form, expl, ej) in enumerate(items):
-        y = 50 + i * 66
-        s.raw(f'<rect x="20" y="{y}" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
-        s.text(34, y + 24, name, size=12, weight="700")
-        s.text(210, y + 24, form, size=11, family=MONO, weight="600", color="#0f766e")
-        s.text(34, y + 44, expl, size=10.5, color="#374151")
-        s.text(560, y + 44, ej, size=10.5, family=MONO, color="#7c2d12")
-    s.note(20, 400, ["Indexado = directo + un sumador de direcciones: la dirección de la instrucción se suma al registro índice",
-                     "en el momento del acceso ⇒ permite recorrer arreglos y tablas con un mismo código.",
-                     "EA (effective address) = dirección final que se pone en el MAR para ir a memoria."], size=10.5)
+    s = Svg(800, 600, "Los siete modos de direccionamiento: cómo se construye la dirección efectiva (EA)")
+    items = [("1. Inmediato", "OP  dato", "EA = —   el operando viaja dentro de la instrucción", "0 accesos", "LDI 5"),
+             ("2. Directo / absoluto", "OP  D", "EA = D", "1 acceso", "LDA 25h"),
+             ("3. Indirecto", "OP  D", "EA = M[D]   en la celda hay una dirección", "2 accesos", "LDA @25h"),
+             ("4. De registro", "OP  R", "EA = R   el operando está en un registro", "0 accesos", "ADD RIF"),
+             ("5. Registro indirecto", "OP  R", "EA = R   el registro guarda la dirección", "1 acceso", "LDA (RIF)"),
+             ("6. Desplazamiento / indexado", "OP  D + X", "EA = D + X   con X = RIF o RID", "1 acceso", "LDA 25h,RIF"),
+             ("7. De pila (stack)", "OP", "el operando está en el tope de la pila (LIFO)", "1 acceso", "PUSH / POP")]
+    for i, (name, form, expl, acc, ej) in enumerate(items):
+        y = 44 + i * 66
+        s.raw(f'<rect x="20" y="{y}" width="760" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+        s.text(32, y + 24, name, size=12, weight="700")
+        s.text(250, y + 24, form, size=11, family=MONO, weight="600", color="#0f766e")
+        s.text(32, y + 44, expl, size=10.5, color="#374151")
+        s.text(585, y + 24, acc, size=10.5, family=MONO, color="#b91c1c")
+        s.text(585, y + 44, ej, size=10.5, family=MONO, color="#7c2d12")
+    s.note(20, 528, ["EA (effective address) = dirección final que se pone en el MAR para ir a memoria.",
+                     "Indexado = directo + un sumador de direcciones: la dirección de la instrucción se suma al registro",
+                     "índice en el momento del acceso ⇒ permite recorrer arreglos y tablas con un mismo código.",
+                     "Regla para distinguirlos: contar los accesos a memoria que hacen falta para tener el dato."], size=10.5)
     s.save("modos_direccionamiento.svg")
 
 

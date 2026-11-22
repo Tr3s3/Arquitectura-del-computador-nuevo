@@ -30,13 +30,13 @@ Funciones (cada salida es un mintérmino):
 
 Circuito: **2 inversores** (para generar A1' y A0') + **4 AND de 2 entradas**.
 
-![decodificador_2x4](assets/decodificador_2x4.svg)
+![decodificador_2x4](../assets/decodificador_2x4.svg)
 
 ## Decodificador 3 a 8 (el de las memorias)
 8 salidas, una por cada combinación de A2 A1 A0; 3 bits ⇒ 2³ = 8 palabras.
 Se consigue comercialmente como bloque (74LS138) e incluye una entrada de habilitación **EN**.
 
-![decodificador_3x8](assets/decodificador_3x8.svg)
+![decodificador_3x8](../assets/decodificador_3x8.svg)
 
 > [!tip] Fórmula general
 > Un decodificador de n entradas necesita **2ⁿ compuertas AND de n entradas** y **n inversores**
@@ -56,6 +56,11 @@ Se consigue comercialmente como bloque (74LS138) e incluye una entrada de habili
 3. **Decodificación de instrucciones**: el opcode del IR entra a un decodificador y activa la línea de
    control de esa instrucción (ver [[Unidad de Control]]).
 4. **Decodificador de direcciones de E/S** (selección de periférico/puerto).
+
+> [!example] Del TP6
+> El [[TP6 Decodificadores y demultiplexores|TP6]] pide construir el **2→4** y el **3→8** con tabla de verdad
+> y circuito: es exactamente esta nota llevada al pizarrón. Recordá que en el bloque comercial (74LS138) las
+> salidas suelen ser **activas por nivel bajo**.
 
 ## Cómo responderlo en el final (práctica)
 1. Definición + relación con los mintérminos.

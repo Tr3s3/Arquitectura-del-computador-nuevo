@@ -23,7 +23,7 @@ prioridad: maxima
 | Unidades | UC + ALU + memoria + E/S | ver [[Estructura básica de un computador]] |
 
 ## Diagrama de bloques
-![blue_flujo](assets/blue_flujo.svg)
+![blue_flujo](../assets/blue_flujo.svg)
 
 ## El conjunto de instrucciones (las 16)
 | Opcode | Mnemónico | Qué hace | Microoperación |
@@ -50,7 +50,14 @@ prioridad: maxima
 > Los mnemónicos son los de siempre; la asignación exacta de códigos binarios y la 16.ª instrucción
 > conviene copiarla del apunte de la cátedra.
 
-## Los tres grupos funcionales
+> [!note] La tabla del simulador de la cátedra (TP16)
+> En el simulador de la máquina elemental (Blue) que usa el [[TP16 Ciclo de instrucción básico|TP16]] los
+> códigos son **decimales**: `1` = cargar (LDA), `2` = almacenar (STA) y `5` = sumar (ADD). La instrucción se
+> escribe como `opcode` seguido de la dirección (por ejemplo `1650` = opcode 1, dirección 650).
+> **En el final usá la tabla de tu apunte y aclaralo**; lo que se evalúa es la **secuencia del ciclo**, no el
+> número.
+
+## Los tres grupos funcionales## Los tres grupos funcionales
 1. **Transferencia de datos** (`LDA`, `STA`): el AC habla con la memoria.
 2. **Operaciones** (`ADD`, `SUB`, `AND`, `OR`, `XOR`, `NOT`): el AC habla con la ALU.
 3. **Control de flujo** (`JMP`, `JZ`, `JC`, `HLT`, `NOP`) y **E/S** (`IN`, `OUT`).

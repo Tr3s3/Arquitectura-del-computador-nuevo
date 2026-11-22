@@ -97,6 +97,11 @@ En la práctica son como `LDA`/`STA` pero el "destino" no es la memoria sino un 
 > 24. Si tu apunte cuenta 1 pulso por microoperación, los totales se reducen a la mitad: **la secuencia es
 > la misma**, cambia el conteo. Decilo así en el final y no hay forma de que te lo tomen mal.
 
+> [!example] Ejercicio de la cátedra (TP16)
+> El [[TP16 Ciclo de instrucción básico|TP16]] da un programa de 3 instrucciones (`1 650`, `5 651`, `2 652`)
+> y pide describir **los 6 pasos** en cada una. Ese ejercicio es la mejor forma de practicar esta nota:
+> búsqueda → decodificación → operando → ejecución → escritura → próxima instrucción.
+
 ## Cómo responderlo en el final
 1. Explicar que la ejecución depende del opcode y agrupar las 16 instrucciones en las 4 familias.
 2. Desarrollar `LDA` y `STA` completos (son las que se piden siempre).

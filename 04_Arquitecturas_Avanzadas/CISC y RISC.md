@@ -61,6 +61,11 @@ Los procesadores actuales **son híbridos**:
 - **ARM / RISC-V**: RISC modernos, load/store, 16–32 registros de propósito general.
 - **x86 actual (Core / Ryzen)**: híbrido.
 
+> [!example] Del TP20
+> El [[TP20 Lenguaje máquina|TP20]] pide RISC y CISC con **ventajas y desventajas** (y son las que están en la
+> tabla de esa nota). Si te las piden en el oral, arrancá por la tabla y cerrá con "los procesadores actuales
+> son **híbridos**: ISA CISC, microarquitectura RISC".
+
 ## Cómo responderlo en el final
 1. Definir las dos filosofías y el contexto histórico (memoria cara vs compiladores buenos).
 2. Dar la tabla comparativa (al menos 6 filas: ISA, formato, memoria, registros, ciclos, UC).

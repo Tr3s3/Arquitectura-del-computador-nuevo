@@ -13,7 +13,7 @@ prioridad: maxima
 > instrucción corta pero más instrucciones y un registro implícito (el acumulador).
 
 ## Los cuatro formatos
-![formatos_instruccion](assets/formatos_instruccion.svg)
+![formatos_instruccion](../assets/formatos_instruccion.svg)
 
 | Formato | Campos | Operación típica | Comentario |
 |---|---|---|---|
@@ -80,7 +80,26 @@ BLUE es de **1 dirección (acumulador)** con 16 bits:
 - En la versión **indexada** el formato cambia a `opcode (5) | dirección (16) | modificador (2)`
   (ver [[BLUE indexada (RIF, RID, nuevo formato)]]).
 
-## Cómo responderlo en el final (pregunta principal #2)
+## El formato según la cátedra (TP17 y TP18)
+La cátedra lo presenta en dos piezas, y conviene decirlo así:
+
+**Palabra instrucción (2 bytes = 16 bits):**
+| Campo | Bits |
+|---|---|
+| **CodOp** | 4 |
+| **Dirección** | 12 |
+
+**Palabra dato (4 bytes = 32 bits):** no se divide en campos, **usa todos los bits** para el dato. Si la
+celda es más chica que la palabra, el dato se reparte en **celdas consecutivas**.
+
+Y el **cálculo que hay que saber hacer de memoria** ([[TP18 Direccionamiento de memoria|TP18]]):
+`nº de celdas = memoria / tamaño de celda` → `bits de dirección = log₂(celdas)` →
+`bits de CodOp = bits de palabra − bits de dirección`.
+Ejemplo: 512 MB con celdas de 4 B ⇒ 2²⁷ celdas ⇒ 27 bits de dirección ⇒ `32 − 27 = 5` bits de CodOp.
+
+Desarrollo completo: [[Espacio de direccionamiento y cálculo de CodOp-Dirección]].
+
+## Cómo responderlo en el final## Cómo responderlo en el final (pregunta principal #2)
 1. Definir formato de instrucción = reparto de bits entre opcode y direcciones.
 2. Dibujar los cuatro formatos con sus campos.
 3. Mostrar el mismo cálculo (`X = A + B`) en los cuatro, contando instrucciones.

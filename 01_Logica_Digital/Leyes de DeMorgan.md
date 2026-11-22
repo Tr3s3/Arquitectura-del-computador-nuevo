@@ -46,6 +46,10 @@ Se aplica **de adentro hacia afuera**: primero se niega la operación de mayor j
 > en cambio si el enunciado pide todo en NAND: `F = ((A + B')·C')'' = ( (A+B')' + C )'` → `A+B'` se hace con
 > una NAND de `A'` y `B`. Moraleja: **DeMorgan sirve para cambiar el "tipo" de compuerta sin cambiar la función**.
 
+> [!example] Del TP2
+> DeMorgan es la ley que hay que **demostrar por tabla de verdad** (4 filas) y mostrar en su **circuito
+> equivalente**: una NAND = OR con entradas negadas. Ver [[TP2 Álgebra de Boole]].
+
 ## Cómo responderlo en el final
 1. Enunciar las dos leyes (forma OR y forma AND) con su dualidad.
 2. Demostrar una con tabla de verdad (rápido: 4 filas).

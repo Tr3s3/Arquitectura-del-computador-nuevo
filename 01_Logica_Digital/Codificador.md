@@ -50,6 +50,10 @@ y se agregan dos salidas auxiliares:
   se atiende primero.
 - **Compresión de datos**: pasar de "one-hot" (una línea por valor) a binario.
 
+> [!example] Del TP7
+> El [[TP7 Codificadores y multiplexores|TP7]] pide el **4x2** y el **8x3**; resolverlos es directo: una OR
+> por cada bit de salida (`X = D4+D5+D6+D7`, etc.).
+
 ## Cómo responderlo en el final
 Definir (inverso del decodificador) → tabla del 8→3 → ecuaciones → decir que en la práctica se usa **con
 prioridad** (GS y encadenamiento) → mencionar la aplicación al teclado y al árbitro de interrupciones.

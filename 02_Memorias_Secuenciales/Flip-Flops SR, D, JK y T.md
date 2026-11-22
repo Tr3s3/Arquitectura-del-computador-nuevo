@@ -22,7 +22,7 @@ El flip-flop se obtiene **realimentando** compuertas (dos NOR o dos NAND cruzada
 es lo que le permite "quedarse" con un valor: si Q = 1 y no se lo cambia, sigue en 1 indefinidamente.
 
 ## Los cuatro tipos
-![flipflops](assets/flipflops.svg)
+![flipflops](../assets/flipflops.svg)
 
 ### 1) S-R (Set-Reset)
 | S | R | Q(t+1) |
@@ -33,6 +33,18 @@ es lo que le permite "quedarse" con un valor: si Q = 1 y no se lo cambia, sigue 
 | 1 | 1 | **prohibido** |
 
 Ecuación: `Q(t+1) = S + R'·Q`. La combinación S=R=1 se prohíbe porque fuerza Q = Q' = 1 (estado
+inconsistente) y al soltar las entradas el estado queda indefinido.
+
+> [!warning] Las dos convenciones del RS (esto se pregunta en el TP8)
+> | | Con **NOR** (activo alto) | Con **NAND** (activo bajo) |
+> |---|---|---|
+> | Reposo | S = 0, R = 0 ⇒ **mantiene** | S = 1, R = 1 ⇒ **mantiene** |
+> | Prohibido | S = 1, R = 1 | S = 0, R = 0 |
+> | Set | S = 1, R = 0 ⇒ Q = 1 | S = 0, R = 1 ⇒ Q = 1 |
+> | Reset | S = 0, R = 1 ⇒ Q = 0 | S = 1, R = 0 ⇒ Q = 0 |
+>
+> En la tabla del [[TP9 Biestables D, JK y T|TP9]] y del [[TP8 Biestables RS|TP8]] conviene **decir cuál usás**;
+> si la tabla trae "0 0 indefinible", está en la versión **NAND** (activa por nivel bajo).Ecuación: `Q(t+1) = S + R'·Q`. La combinación S=R=1 se prohíbe porque fuerza Q = Q' = 1 (estado
 inconsistente) y al soltar las entradas el estado queda indefinido.
 
 ### 2) D (Data / Delay)

@@ -43,7 +43,7 @@ La demostración de la simplificación de Cout: `A'BCin + AB'Cin + ABCin' + ABC`
 - `Cout = G + P·Cin`.
 
 ## Circuito (2 XOR + 2 AND + 1 OR)
-![sumador_completo](assets/sumador_completo.svg)
+![sumador_completo](../assets/sumador_completo.svg)
 
 Estructura interna, de izquierda a derecha:
 1. `X1`: `S1 = A ⊕ B`
@@ -76,6 +76,11 @@ cada etapa: más compuertas, mucho menos retardo.
 > - bit 3: 0+0+1 ⇒ S = 1, C = 0
 > Resultado: 1011 (= 11). ✔  (6 + 5 = 11)
 > Si hubiera Cout = 1 en el último bit, eso es **desbordamiento** de la palabra.
+
+> [!example] Ejercicios de la cátedra (TP5)
+> Además del circuito y la tabla, el [[TP5 Sumadores|TP5]] pide **construir sumadores de 4 y 8 bits** y
+> verificar sumas concretas: `1101 + 0111` y `1101 0101 + 1010 0111`. La verificación columna por columna
+> está resuelta en la nota del TP, con el detalle del resultado que figura en la consigna.
 
 ## Cómo responderlo en el final (práctica, vale nota)
 1. **Definición**: suma 3 bits, produce S y Cout; es la celda del sumador de n bits.

@@ -12,7 +12,7 @@ prioridad: maxima
 > siguiente. Ese ciclo se mide en **pulsos de reloj**, y cada pulso habilita una microoperación.
 
 ## El ciclo, dibujado
-![ciclo_maquina](assets/ciclo_maquina.svg)
+![ciclo_maquina](../assets/ciclo_maquina.svg)
 
 ```
         ┌──────────────────────────────────────────────┐

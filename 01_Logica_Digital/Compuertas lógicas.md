@@ -34,6 +34,10 @@ La NOT es de una entrada: `NOT A = A' = Ā`, y vale 1 cuando A = 0.
 - XOR = "distintas": vale 1 cuando las entradas **son diferentes**. Es la compuerta de la suma sin acarreo
   (por eso aparece en el [[Semisumador]]) y del comparador de igualdad.
 
+> [!note] Nombres que usa la cátedra
+> La cátedra llama **NXOR** a la XOR negada (en los libros: **XNOR**). Usá el nombre que aparece en el TP y
+> aclaralo una vez: "NXOR o XNOR, la negación de la XOR".
+
 > [!tip] Regla mnemotécnica de XOR
 > **XOR = OR de las diferencias**: `A⊕B = A'·B + A·B'`. Si te olvidás, escribí esa fórmula: es un [[Mintérminos y maxtérminos|mintérmino]] doble.
 

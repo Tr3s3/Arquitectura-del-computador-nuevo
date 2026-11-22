@@ -6,6 +6,11 @@ tipo: guia
 > [!abstract] Cómo usar esta nota
 > Es el plan de la cátedra convertido en una lista de temas **con su nota correspondiente**.
 > Marcá `- [x]` cuando puedas explicar el tema en voz alta sin mirar.
+>
+> **Recordá la condición del examen:** el final es oral y, en la práctica, se aprueba **dibujando circuitos y
+> explicando tablas de verdad**. Por eso cada bloque de abajo trae también el TP de la cátedra que lo ejercita:
+> la teoría explica, el TP te obliga a dibujar. Si sólo hay tiempo para una cosa, hacé los TPs del
+> [[00 Índice de TPs y qué aporta cada uno|índice]] delante de una hoja en blanco.
 
 ## Unidad 1 — Circuitos de lógica digital
 Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos combinacionales: semisumador, sumador completo.
@@ -14,12 +19,14 @@ Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos 
 - [ ] [[Leyes de DeMorgan]] — enunciado y demostración por tabla
 - [ ] [[Mintérminos y maxtérminos]] — SOP y POS
 - [ ] [[Semisumador]] · [[Sumador completo]] — tabla, ecuaciones y gráfico
+- TP: [[TP1 Compuertas lógicas]] · [[TP2 Álgebra de Boole]] · [[TP3 Simplificación analítica]] · [[TP4 Mintérminos, maxtérminos y Karnaugh]] · [[TP5 Sumadores]]
 
 ## Unidad 2 — Memorias (parte secuencial)
 - [ ] [[Flip-Flops SR, D, JK y T]]
 - [ ] [[Registros]] — carga paralela, desplazamiento, bidireccional
 - [ ] [[Contadores]] — binario, con carga en paralelo
 - [ ] [[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]]
+- TP: [[TP6 Decodificadores y demultiplexores]] · [[TP7 Codificadores y multiplexores]] · [[TP8 Biestables RS]] · [[TP9 Biestables D, JK y T]] · [[TP10 Registros PIPO y SISO]] · [[TP11 Registros SIPO y PISO]]
 
 ## Unidad 2 — Memorias (parte memoria)
 - [ ] [[Celda elemental de memoria]]
@@ -28,6 +35,8 @@ Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos 
 - [ ] [[Jerarquía de memorias]]
 - [ ] [[Memoria caché]] — mapeos, escritura, inicialización
 - [ ] (complementario) [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]]
+- [ ] [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] — el cálculo de las memorias grandes
+- TP: [[TP12 Memoria principal]] · [[TP13 Componentes internos]] · [[TP14 Buses]]
 
 ## Unidad 3 — Transferencia de registros y microoperaciones
 - [ ] [[Flujo de información en BLUE (datos y direcciones)]] — transferencia entre registros, bus de tres estados
@@ -40,7 +49,8 @@ Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos 
 - [ ] [[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]]
 - [ ] [[Ciclo de ejecución — todas las operaciones]] · [[Ciclo de la instrucción LDA (24 pulsos)]]
 - [ ] [[Unidad de Control]] — funciones y señales de control
-- [ ] [[Programar en BLUE — ejemplos]]
+- [ ] [[Programar en BLUE — ejemplos]] · [[Lenguaje máquina y clasificación de instrucciones]]
+- TP: [[TP15 Arquitectura de Von Neumann (IAS)]] · [[TP16 Ciclo de instrucción básico]]
 
 ## Unidad 5 — Programación básica
 - [ ] [[Registros de la CPU]] — base, índice, puntero de pila, estado
@@ -48,6 +58,7 @@ Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos 
 - [ ] [[Formato de la instrucción (4 formatos)]]
 - [ ] [[BLUE indexada (RIF, RID, nuevo formato)]]
 - [ ] [[Interrupciones y entrada-salida]]
+- TP: [[TP17 Formato básico de instrucciones]] · [[TP18 Direccionamiento de memoria]] · [[TP19 Modos de direccionamiento]] · [[TP20 Lenguaje máquina]]
 
 ## Unidad 6 — Control microprogramado
 - [ ] [[Unidad de control cableada y microprogramada]] — memoria de control, secuenciamiento, microprograma de ejemplo

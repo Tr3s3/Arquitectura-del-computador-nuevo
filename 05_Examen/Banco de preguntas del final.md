@@ -7,6 +7,11 @@ tipo: examen
 > Es el **índice maestro**: las preguntas tal como vienen en el modelo, cada una con su nota de desarrollo
 > y la **respuesta mínima** (30 segundos) que tenés que poder decir sin pensar. Si una respuesta no te sale
 > en 30 segundos, entrá a la nota.
+>
+> Para el **oral**: el orden de estudio y el guion hablado están en
+> [[Guion de respuestas — preguntas principales]]; la vista de pájaro de toda la materia, en
+> [[04 Resumen integrador de la materia]]; el trazo de los circuitos, en
+> [[Cómo dibujar los circuitos (checklist de pizarrón)]].
 
 ## Preguntas principales (valen la nota)
 | # | Pregunta | Nota de desarrollo | Respuesta mínima |
@@ -25,7 +30,7 @@ tipo: examen
 |---|---|---|---|
 | 1 | Memoria RAM: **celda elemental** | [[Celda elemental de memoria]] | 1 bit + línea de selección + R/W' + buffer de tres estados. SRAM = latch; DRAM = capacitor con refresco |
 | 2 | **Flip-flops** | [[Flip-Flops SR, D, JK y T]] | Biestable = memoria de 1 bit, secuencial, por flanco. S-R (`Q=S+R'Q`, 1-1 prohibido), D (`Q=D`), J-K (`Q=JQ'+K'Q`, toggle), T (`Q=T⊕Q`) |
-| 3 | **Modos de direccionamiento** (ventajas del indexado) | [[Modos de direccionamiento]] | Inmediato, directo, registro, indirecto, indexado. El indexado permite recorrer arreglos con un solo código, ahorra bits de dirección y es reubicable |
+| 3 | **Modos de direccionamiento** (ventajas del indexado) | [[Modos de direccionamiento]] | **Siete**: inmediato, directo, indirecto, registro, registro indirecto, desplazamiento y pila. El indexado permite recorrer arreglos con un solo código, ahorra bits de dirección y es reubicable |
 | 4 | **Memoria ROM** | [[Memoria ROM y sus tipos]] | No volátil, sólo lectura: máscara, PROM, EPROM (UV), EEPROM, Flash. Uso: firmware, tablas y **memoria de control** del microprograma |
 | 5 | **Jerarquía de memorias** | [[Jerarquía de memorias]] | Registros → L1 → L2/L3 → RAM → disco → cinta: velocidad y costo por bit suben hacia arriba, capacidad baja. Funciona por **localidad** temporal y espacial |
 | 6 | **Pipeline** (definir y ejemplificar) | [[Pipeline]] | Etapas solapadas: 4 etapas y n instrucciones dan `4+(n−1)` ciclos en lugar de `4n`. Conflictos: datos (forwarding), control (predicción), estructurales |
@@ -35,6 +40,21 @@ tipo: examen
 | 10 | **Ciclo de ejecución para todas las operaciones** | [[Ciclo de ejecución — todas las operaciones]] | Cuatro familias: transferencia (LDA/STA), ALU (ADD/SUB/AND/OR/XOR/NOT), control (JMP/JZ/JC/NOP/HLT) y E/S (IN/OUT). Cada una con su secuencia de microoperaciones |
 | 11 | **Ciclo LDA (24 pulsos)** | [[Ciclo de la instrucción LDA (24 pulsos)]] | 8 de búsqueda + 16 de ejecución (8 microoperaciones × 2 pulsos). Secuencia: `MAR←IR(dir)`, MEMR, `MBR←M[MAR]`, `AC←MBR`, flags, `STATE←F` |
 | 12 | **Operaciones de máquina BLUE y qué hace cada una** | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] | 16 opcodes: LDA, STA, ADD, SUB, AND, OR, XOR, NOT, JMP, JZ, JC, IN, OUT, NOP, HLT (+1). Recorrer la tabla diciendo la microoperación de cada una |
+
+## Preguntas que se desprenden de los TPs (cayeron o pueden caer)
+El modelo no las enumera, pero están **explícitas** en los trabajamientos prácticos de la cátedra; si la mesa
+abre cualquiera de estos temas, esto es lo que hay que decir.
+
+| Tema | Nota | Respuesta mínima | TP |
+|---|---|---|---|
+| **Buses**: definición y tipos | [[Estructura básica de un computador]] | "Vía que conecta 2+ dispositivos; todos reciben." Datos (bidireccional, ancho = palabra), direcciones (unidireccional, ancho = capacidad de memoria) y control (lectura/escritura, petición/cesión de bus, interrupción) | [[TP14 Buses]] |
+| **Espacio de direccionamiento y CodOp** | [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] | `celdas = memoria / tamaño de celda`; `bits de dirección = log₂(celdas)`; `bits de CodOp = palabra − dirección`. Si da negativo, **hay que agrandar la celda** | [[TP17 Formato básico de instrucciones]] + [[TP18 Direccionamiento de memoria]] |
+| **IAS y el formato de 40 bits** | [[Estructura básica de un computador]] | Instrucción de **20 bits en dos mitades de 8+12**: una operación y una dirección por mitad; palabra de 40 bits = 2 instrucciones | [[TP15 Arquitectura de Von Neumann (IAS)]] |
+| **Lenguaje máquina y clasificación de instrucciones** | [[Lenguaje máquina y clasificación de instrucciones]] | Código directamente ejecutable; se clasifican por **función** (transferencia, aritméticas, lógicas, control, E/S) y por **formato/nº de operandos** | [[TP20 Lenguaje máquina]] |
+| **Componentes internos del equipo** | [[Estructura básica de un computador]] | CPU (UC, ALU, registros), memoria, buses, E/S, reloj, fuentes; el "Speccy" del TP como ejemplo de arquitectura completa | [[TP13 Componentes internos]] |
+| **RAM vs ROM (cuadro)** | [[Memoria ROM y sus tipos]] | RAM: volátil, lectura/escritura, rápida. ROM: no volátil, sólo lectura, para firmware y memoria de control | [[TP12 Memoria principal]] |
+| **Registros de corrimiento** | [[Registros]] | PIPO (carga paralela), SISO (serie puro), SIPO (entra serie, sale paralelo), PISO (entra paralelo, sale serie) | [[TP10 Registros PIPO y SISO]] + [[TP11 Registros SIPO y PISO]] |
+| **Codificadores** | [[Codificador]] | Inverso del decodificador: `2ⁿ` entradas → `n` salidas; una OR por bit | [[TP7 Codificadores y multiplexores]] |
 
 ## Prácticas (se resuelven en el pizarrón)
 | # | Práctica | Nota | Qué hay que entregar |
@@ -57,4 +77,6 @@ tipo: examen
 1. Respondé en voz alta las **8 principales** mirando sólo la columna "respuesta mínima".
 2. Hacé las **7 prácticas** en hoja en blanco, cronometradas (10 min cada una).
 3. Pasá por [[Autoevaluación]] y volvé a las notas de lo que falles.
-4. El día previo: [[Guion de respuestas — preguntas principales]].
+4. El día previo: [[Guion de respuestas — preguntas principales]] + una leída a
+   [[04 Resumen integrador de la materia]].
+5. Si queda tiempo muerto: [[00 Índice de TPs y qué aporta cada uno]] sirve de repaso rápido de los 20 TPs.

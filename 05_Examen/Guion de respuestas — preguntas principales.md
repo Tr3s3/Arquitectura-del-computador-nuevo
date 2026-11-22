@@ -8,6 +8,25 @@ tipo: examen
 > La estructura es siempre la misma: **definición → dibujo → desarrollo → cierre con una consecuencia**.
 > Si te trabás, volvé al esquema: la nota de cada pregunta está linkeada.
 
+> [!warning] El final es **oral** y se aprueba **dibujando**
+> No recite: **dibuje y explique lo que dibuja**. Cada respuesta de este guion tiene cuatro movimientos:
+> **1) la definición en una frase** (10 s) · **2) el dibujo en el pizarrón** (40 s, trazo grande y de
+> izquierda a derecha) · **3) el desarrollo hablado señalando el dibujo** (60–90 s) · **4) el cierre con una
+> consecuencia** (10 s). Si se queda sin palabras, **vuelva al dibujo**: cada bloque que dibujó es una frase.
+> Antes de entrar, repase [[Cómo dibujar los circuitos (checklist de pizarrón)]] y
+> [[Tablas de verdad de memoria]].
+
+| # | Pregunta | Minutos | Qué dibujar | Tabla que conviene tener a mano |
+|---|---|---|---|---|
+| 1 | Flujo de información | 3 | 5 registros colgados del bus + memoria + ALU | — |
+| 2 | Formato de la instrucción | 3 | las 4 cajas de campos, de la más larga a la más corta | — |
+| 3 | Ciclo de máquina | 2 | bucle búsqueda–ejecución con STATE F/E | — |
+| 4 | Estructura básica | 3 | CPU + memoria + E/S con los 3 buses | — |
+| 5 | RAM 8×3 | 4 | decodificador 3→8 + 8 celdas + CS/R-W' | tabla de la RAM |
+| 6 | BLUE indexada / sin indexar | 4 | camino de datos y después el sumador de direcciones | — |
+| 7 | Unidad de Control | 3 | UC al centro: IR/CLOCK/flags entran, señales salen | — |
+| 8 | Interrupciones | 3 | línea INT → guardar PC → ISR → RETI | estados F/E/I |
+
 ---
 
 ## 1. Flujo de información (dato y direcciones)
@@ -17,7 +36,7 @@ habilita su salida de tres estados y **otro** activa su `LOAD`: una transferenci
 fuentes a la vez (se cortocircuitaría el bus).
 
 **Dibujo.** Los 5 registros (PC, MAR, MBR, IR, AC) colgando del bus, con la memoria arriba y la UC/ALU abajo.
-→ ![blue_flujo](assets/blue_flujo.svg)
+→ ![blue_flujo](../assets/blue_flujo.svg)
 
 **Desarrollo.** Hay dos flujos:
 - **Direcciones (12 bits, unidireccional):** `PC → MAR → bus de direcciones → memoria` en la búsqueda;
@@ -219,3 +238,40 @@ pasa por **F / E / I** (búsqueda, ejecución, interrupción).
 PC (que ya apunta a la instrucción siguiente) y restaurarlo.
 
 → Nota completa: [[Interrupciones y entrada-salida]]
+
+---
+
+## Si la mesa pregunta por los códigos de operación
+
+> [!warning] Discrepancia real entre la cátedra y el mapa de la máquina BLUE
+> Hay **tres** conjuntos de códigos circulando en el material, y conviene tenerlos claros para no trabarse:
+>
+> | Instrucción | Simulador del [[TP16 Ciclo de instrucción básico]] (decimal) | Mapa BLUE de la cátedra (hex) | Tabla de 16 opcodes (binario) |
+> |---|---|---|---|
+> | Cargar | `1` | `1` | `LDA 0000` |
+> | Sumar | `5` | `5` | `ADD` (uno de los 16) |
+> | Almacenar | `2` (y `3` en el TP16) | `2`/`3` | `STA` |
+> | Fin | `C` (hex 12) | `C` = **parar** | `HLT 1110` |
+>
+> **Cómo manejarlo en el oral (esto es lo que se hace):** primero se dice **"en el material de la cátedra el
+> código de parar es C"**, y recién después se muestra la tabla de 16 opcodes. No se corrige al profesor ni
+> se inventa una tercera versión: se **aclara la fuente** ("según el simulador…", "según el mapa…") y se sigue
+> con la secuencia de microoperaciones, que es lo que se evalúa.
+> El desarrollo completo está en [[TP16 Ciclo de instrucción básico]] y [[TP20 Lenguaje máquina]].
+
+## Las cinco frases que cierran cualquier respuesta
+
+1. "Todo pasa por **un bus único**, y en cada pulso **uno habla y los demás escuchan**."
+2. "La **UC** no hace cuentas: **manda**; la que hace cuentas es la **ALU**."
+3. "La instrucción dice **qué** hacer; el **modo de direccionamiento** dice **dónde** está el dato."
+4. "La memoria es un **vector**: dirección = índice de la celda, y el decodificador elige la fila."
+5. "Si el dato no está en el camino, se lo **busca**; si está, se lo **ejecuta**: búsqueda y ejecución."
+
+## Antes de sentarse (checklist de 60 segundos)
+- [ ] Tengo claro **cuál es el dibujo** de cada una de las 8 principales.
+- [ ] Sé decir la **tabla de verdad del sumador completo** sin mirar (8 filas).
+- [ ] Sé explicar la **RAM 8×3** de punta a punta (dirección → decodificador → celda → salida).
+- [ ] Puedo contar el **ciclo de búsqueda** en 7 pulsos y el **LDA** en 24.
+- [ ] Tengo una **frase de cierre** para cada tema (las de arriba).
+- [ ] Si me preguntan algo que no está: lo **conecto** con lo que sí sé (los TPs del
+  [[00 Índice de TPs y qué aporta cada uno|índice]] cubren casi todo el plan).

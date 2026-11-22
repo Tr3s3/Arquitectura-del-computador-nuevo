@@ -13,7 +13,7 @@ prioridad: maxima
 > (16 bits, van al MBR/AC/IR).
 
 ## La regla de oro del bus único
-![blue_flujo](assets/blue_flujo.svg)
+![blue_flujo](../assets/blue_flujo.svg)
 
 1. **Nunca dos fuentes a la vez**: se cortocircuitan dos salidas. Por eso cada registro tiene salida de
    **tres estados** y sólo una está habilitada por pulso.

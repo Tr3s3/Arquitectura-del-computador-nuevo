@@ -32,11 +32,15 @@ En forma canónica: `S = Σm(1,2)`, `C = Σm(3)`.
 ## Circuito
 Dos compuertas: una XOR y una AND sobre las mismas entradas.
 
-![semisumador](assets/semisumador.svg)
+![semisumador](../assets/semisumador.svg)
 
 ## Verificación con números
 `1 + 1` en binario da `10` (dos): el semisumador devuelve S = 0 y C = 1 ⇒ "0 con acarreo 1" = 10₂. ✔
 `0 + 1` da 01: S = 1, C = 0. ✔
+
+> [!example] Del TP5
+> El semisumador es el **ejercicio 1** del [[TP5 Sumadores|TP5]]: tabla de verdad + circuito combinacional.
+> Después se encadena en el sumador completo (ej. 2) y en los de 4 y 8 bits (ej. 3 y 4).
 
 ## Cómo responderlo en el final (práctica)
 1. Dibujar la tabla de verdad (4 filas).

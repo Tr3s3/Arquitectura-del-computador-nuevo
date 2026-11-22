@@ -27,7 +27,7 @@ circuito que decide **cuál** de las fuentes llega al bus. Por eso aparece en:
 | 1 | 0 | D2 |
 | 1 | 1 | D3 |
 
-![mux_4x1](assets/mux_4x1.svg)
+![mux_4x1](../assets/mux_4x1.svg)
 
 **Estructura:** por cada entrada de datos, una compuerta AND de 3 entradas (el dato + los dos selectores,
 negados o no según corresponda) y una **OR final** de 4 entradas. Es decir: **AND-OR = suma de productos**.
@@ -49,6 +49,10 @@ n variables a las entradas de selección y cada entrada de datos se lleva a 0 o 
 3. Transmisión paralelo→serie (junto con un registro de desplazamiento): un MUX que va eligiendo bits
    uno por uno.
 4. En las [[Memoria caché]]/memorias: selección de banco.
+
+> [!example] Del TP7 (y su notación)
+> El [[TP7 Codificadores y multiplexores|TP7]] pide **MUX 2x1, 4x1 y 8x1** y usa la notación
+> **I0…In − S0 S1 − Y**. Usá esas letras en el examen (y en los codificadores, **D0…Dn − X Y Z**).
 
 ## Cómo responderlo en el final (práctica)
 1. Definición (selector de datos, 2ⁿ → 1).

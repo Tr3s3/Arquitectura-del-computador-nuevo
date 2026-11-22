@@ -60,7 +60,17 @@ Todos los FF comparten CLK; el modo lo fija la [[Unidad de Control]] con dos se�
 > aritmético (conserva el signo), rotación (el bit que sale entra por el otro extremo).
 > En [[ALU]] se implementan con un desplazador conectado al bus.
 
-## Cómo responderlo en el final
+## Los ejercicios de la cátedra (TP10 y TP11)
+| Registro | Dato del TP | Qué hay que mostrar |
+|---|---|---|
+| **PIPO 8 bits** | `10101010` | carga **en un solo pulso**: los 8 FF copian a la vez |
+| **SISO 8 bits** | `11001100` | tabla **pulso a pulso** del corrimiento (8 pulsos para entrar) |
+| **SIPO 8 bits** | `10101010` | entra bit a bit y se lee completo al pulso 8 |
+| **PISO 8 bits** | `11001100` | se carga junto y **sale** un bit por pulso |
+
+Las tablas pulso a pulso están resueltas en [[TP10 Registros PIPO y SISO]] y [[TP11 Registros SIPO y PISO]].
+
+## Cómo responderlo en el final## Cómo responderlo en el final
 1. Definición: n FF + reloj común + LOAD; guarda una palabra.
 2. Clasificar por entradas/salidas: PIPO, SISO, SIPO, PISO.
 3. Describir el bidireccional: MUX de 4 canales por FF, con los cuatro modos.

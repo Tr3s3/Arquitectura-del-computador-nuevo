@@ -59,6 +59,11 @@ F = A·B + A·B'  +  A'·B
 De 3 compuertas AND de 2 entradas + 1 OR de 3 a **una sola OR**: eso es ahorro de hardware y de
 retardo de propagación. Ese es el sentido práctico del álgebra.
 
+> [!example] Lo que pide la cátedra (TP2 y TP3)
+> En el [[TP2 Álgebra de Boole|TP2]] hay que **demostrar** las leyes con tabla de verdad **y** con el circuito
+> equivalente; en el [[TP3 Simplificación analítica|TP3]], simplificar una función **citando en cada paso la
+> ley, regla o teorema** aplicado (eso es lo que se corrige). Práctica con Karnaugh: [[TP4 Mintérminos, maxtérminos y Karnaugh|TP4]].
+
 ## Cómo responderlo en el final
 1. Definir el álgebra (conjunto {0,1}, operaciones +, ·, ', postulados).
 2. Enunciar **tres postulados** (identidad, distributiva, complemento) y decir qué permiten (transformar
