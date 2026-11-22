@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Decodificador 3 a 8 (bloque tipo 74LS138) y su tabla de verdad</text>
+  <rect x="130" y="55" width="150" height="160" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="205.0" y="132.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">DEC 3→8</text>
+  <text x="205.0" y="149.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">3 entradas · 8 salidas</text>
+  <line x1="50" y1="85" x2="130" y2="85" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="44" y="89" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1f2937">A2</text>
+  <line x1="50" y1="115" x2="130" y2="115" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="44" y="119" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1f2937">A1</text>
+  <line x1="50" y1="145" x2="130" y2="145" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="44" y="149" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1f2937">A0</text>
+  <line x1="50" y1="185" x2="130" y2="185" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="44" y="189" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="end" fill="#1f2937">EN</text>
+  <line x1="280" y1="72" x2="320" y2="72" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y0</text>
+  <line x1="280" y1="89" x2="320" y2="89" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="93" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y1</text>
+  <line x1="280" y1="106" x2="320" y2="106" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="110" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y2</text>
+  <line x1="280" y1="123" x2="320" y2="123" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="127" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y3</text>
+  <line x1="280" y1="140" x2="320" y2="140" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="144" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y4</text>
+  <line x1="280" y1="157" x2="320" y2="157" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="161" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y5</text>
+  <line x1="280" y1="174" x2="320" y2="174" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y6</text>
+  <line x1="280" y1="191" x2="320" y2="191" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="195" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y7</text>
+  <line x1="280" y1="208" x2="320" y2="208" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="326" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1d4ed8">Y8</text>
+  <rect x="400" y="50" width="350" height="215" rx="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="575" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">A2 A1 A0  →  salida activa (=1)</text>
+  <text x="575" y="94" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">0  0  0   →   Y0 = 1   (las demás en 0)</text>
+  <text x="575" y="116" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">0  0  1   →   Y1 = 1   (las demás en 0)</text>
+  <text x="575" y="138" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">0  1  0   →   Y2 = 1   (las demás en 0)</text>
+  <text x="575" y="160" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">0  1  1   →   Y3 = 1   (las demás en 0)</text>
+  <text x="575" y="182" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">1  0  0   →   Y4 = 1   (las demás en 0)</text>
+  <text x="575" y="204" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">1  0  1   →   Y5 = 1   (las demás en 0)</text>
+  <text x="575" y="226" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">1  1  0   →   Y6 = 1   (las demás en 0)</text>
+  <text x="575" y="248" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="600" text-anchor="middle" fill="#0f766e">1  1  1   →   Y7 = 1   (las demás en 0)</text>
+  <text x="30" y="300" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">· Cada salida Yi es un mintérmino: vale 1 sólo para la combinación de entrada que le corresponde.</text>
+  <text x="30" y="319" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">· EN (enable) = 0 deshabilita el C.I.: todas las salidas quedan inactivas. Por eso se pueden combinar dos</text>
+  <text x="30" y="338" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">   decodificadores 3→8 y armar uno 4→16 (se usa el bit más significativo como EN de cada uno).</text>
+  <text x="30" y="357" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">· En las memorias, el decodificador es el que 'elige' la fila o palabra que se va a leer o escribir.</text>
+  <text x="30" y="376" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">· Organización 2D: el decodificador de fila y el de columna seleccionan la celda dentro de la matriz.</text>
+</svg>

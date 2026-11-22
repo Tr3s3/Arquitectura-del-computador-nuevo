@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="400" viewBox="0 0 780 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Los cuatro formatos clásicos de instrucción</text>
+  <text x="24" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="start" fill="#1f2937">4 direcciones</text>
+  <rect x="150" y="61" width="52" height="30" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="176.0" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">OP</text>
+  <rect x="202" y="61" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="235.0" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A1</text>
+  <rect x="268" y="61" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="301.0" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A2</text>
+  <rect x="334" y="61" width="66" height="30" rx="3" fill="#bfdbfe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="367.0" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A3</text>
+  <rect x="400" y="61" width="66" height="30" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="433.0" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A4</text>
+  <text x="480" y="81" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="start" fill="#1d4ed8">A1 ← A2 OP A3 ;  salto a A4</text>
+  <text x="150" y="107" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="start" fill="#4b5563">instrucción más larga, menos instrucciones</text>
+  <text x="24" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="start" fill="#1f2937">3 direcciones</text>
+  <rect x="150" y="143" width="52" height="30" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="176.0" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">OP</text>
+  <rect x="202" y="143" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="235.0" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A1</text>
+  <rect x="268" y="143" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="301.0" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A2</text>
+  <rect x="334" y="143" width="66" height="30" rx="3" fill="#bfdbfe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="367.0" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A3</text>
+  <text x="414" y="163" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="start" fill="#1d4ed8">A1 ← A2 OP A3</text>
+  <text x="150" y="189" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="start" fill="#4b5563">equilibrado; base de máquinas RISC</text>
+  <text x="24" y="245" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="start" fill="#1f2937">2 direcciones</text>
+  <rect x="150" y="225" width="52" height="30" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="176.0" y="245" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">OP</text>
+  <rect x="202" y="225" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="235.0" y="245" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A1</text>
+  <rect x="268" y="225" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="301.0" y="245" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A2</text>
+  <text x="348" y="245" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="start" fill="#1d4ed8">A1 ← A1 OP A2   (se destruye A1)</text>
+  <text x="150" y="271" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="start" fill="#4b5563">típico de CISC / x86</text>
+  <text x="24" y="327" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="start" fill="#1f2937">1 dirección</text>
+  <rect x="150" y="307" width="52" height="30" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="176.0" y="327" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">OP</text>
+  <rect x="202" y="307" width="66" height="30" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="235.0" y="327" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle" fill="#1f2937">A1</text>
+  <text x="282" y="327" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="start" fill="#1d4ed8">AC ← AC OP A1   (acumulador implícito)</text>
+  <text x="150" y="353" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="start" fill="#4b5563">corta, pero más instrucciones por programa</text>
+  <text x="24" y="380" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Menos direcciones ⇒ instrucción más corta, pero se necesitan más instrucciones para el mismo trabajo.</text>
+  <text x="24" y="395" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">La cantidad de direcciones también define en qué registro queda el resultado (A1 o el AC).</text>
+</svg>

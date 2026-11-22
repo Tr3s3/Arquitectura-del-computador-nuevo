@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 700 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Decodificador 2 a 4 (activo por nivel alto)</text>
+  <polygon points="90,55 90,99 136,77.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="141" cy="77.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="64" y1="77.0" x2="90" y2="77.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="59" y="81.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A1</text>
+  <line x1="146" y1="77.0" x2="172" y2="77.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="177" y="81.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A1'</text>
+  <polygon points="90,115 90,159 136,137.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="141" cy="137.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="64" y1="137.0" x2="90" y2="137.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="59" y="141.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A0</text>
+  <line x1="146" y1="137.0" x2="172" y2="137.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="177" y="141.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A0'</text>
+  <path d="M330,55 L368.0,55 A26.0,26.0 0 0 1 368.0,107 L330,107 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="296" y1="72.33333333333333" x2="330" y2="72.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="76.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A1'</text>
+  <line x1="296" y1="89.66666666666666" x2="330" y2="89.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="93.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A0'</text>
+  <line x1="394" y1="81.0" x2="428" y2="81.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="433" y="85.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y0 = A1'·A0'</text>
+  <path d="M330,135 L368.0,135 A26.0,26.0 0 0 1 368.0,187 L330,187 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="296" y1="152.33333333333334" x2="330" y2="152.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="156.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A1'</text>
+  <line x1="296" y1="169.66666666666666" x2="330" y2="169.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="173.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A0</text>
+  <line x1="394" y1="161.0" x2="428" y2="161.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="433" y="165.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y1 = A1'·A0</text>
+  <path d="M330,215 L368.0,215 A26.0,26.0 0 0 1 368.0,267 L330,267 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="296" y1="232.33333333333334" x2="330" y2="232.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="236.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A1</text>
+  <line x1="296" y1="249.66666666666666" x2="330" y2="249.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="253.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A0'</text>
+  <line x1="394" y1="241.0" x2="428" y2="241.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="433" y="245.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y2 = A1·A0'</text>
+  <path d="M330,315 L368.0,315 A26.0,26.0 0 0 1 368.0,367 L330,367 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="296" y1="332.3333333333333" x2="330" y2="332.3333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="336.3333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A1</text>
+  <line x1="296" y1="349.6666666666667" x2="330" y2="349.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="291" y="353.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A0</text>
+  <line x1="394" y1="341.0" x2="428" y2="341.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="433" y="345.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y3 = A1·A0</text>
+  <text x="90" y="210" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">Los complementos A1' y A0'</text>
+  <text x="90" y="225" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">salen de dos inversores.</text>
+  <text x="90" y="240" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">Cada salida Yi es un mintérmino:</text>
+  <text x="90" y="255" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">Yi = 1 sólo para una</text>
+  <text x="90" y="270" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">combinación de entrada.</text>
+  <text x="20" y="385" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Uso típico: seleccionar una de 8 palabras de memoria (3→8) o habilitar un registro.</text>
+</svg>

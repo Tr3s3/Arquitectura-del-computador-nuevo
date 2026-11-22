@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="250" viewBox="0 0 520 250">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Semisumador (half adder):  S = A⊕B   ·   C = A·B</text>
+  <path d="M150,62 C168.2,62 201.8,67.2 220,88.0 C201.8,108.80000000000001 168.2,114 150,114 C162.6,96.32 162.6,79.68 150,62 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <path d="M141,62 C156.3,79.68 156.3,96.32 141,114" fill="none" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="136" y1="79.33333333333333" x2="158" y2="79.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="131" y="83.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="136" y1="96.66666666666666" x2="158" y2="96.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="131" y="100.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="220" y1="88.0" x2="242" y2="88.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="247" y="92.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">S = A ⊕ B</text>
+  <path d="M150,165 L194.0,165 A26.0,26.0 0 0 1 194.0,217 L150,217 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="128" y1="182.33333333333334" x2="150" y2="182.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="123" y="186.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="128" y1="199.66666666666666" x2="150" y2="199.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="123" y="203.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="220" y1="191.0" x2="242" y2="191.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="247" y="195.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">C = A · B</text>
+  <text x="40" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Suma sin acarreo de entrada: c = 0</text>
+  <text x="40" y="78" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Sólo sirve para el bit menos significativo (LSB).</text>
+  <text x="40" y="200" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">A, B: bits a sumar.</text>
+  <text x="40" y="215" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#4b5563">S: bit de suma.  C: acarreo de salida (carry).</text>
+</svg>

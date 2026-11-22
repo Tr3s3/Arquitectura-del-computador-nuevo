@@ -1,0 +1,67 @@
+---
+tipo: guia
+---
+# Plan de estudio — las 10 unidades
+
+> [!abstract] Cómo usar esta nota
+> Es el plan de la cátedra convertido en una lista de temas **con su nota correspondiente**.
+> Marcá `- [x]` cuando puedas explicar el tema en voz alta sin mirar.
+
+## Unidad 1 — Circuitos de lógica digital
+Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos combinacionales: semisumador, sumador completo.
+- [ ] [[Compuertas lógicas]] — tabla de verdad y símbolos de las 7 compuertas
+- [ ] [[Álgebra de Boole — postulados y teoremas]] — postulados, dualidad, simplificación
+- [ ] [[Leyes de DeMorgan]] — enunciado y demostración por tabla
+- [ ] [[Mintérminos y maxtérminos]] — SOP y POS
+- [ ] [[Semisumador]] · [[Sumador completo]] — tabla, ecuaciones y gráfico
+
+## Unidad 2 — Memorias (parte secuencial)
+- [ ] [[Flip-Flops SR, D, JK y T]]
+- [ ] [[Registros]] — carga paralela, desplazamiento, bidireccional
+- [ ] [[Contadores]] — binario, con carga en paralelo
+- [ ] [[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]]
+
+## Unidad 2 — Memorias (parte memoria)
+- [ ] [[Celda elemental de memoria]]
+- [ ] [[Memoria RAM 8x3]] — mapa de direcciones y conexión a la CPU
+- [ ] [[Memoria ROM y sus tipos]]
+- [ ] [[Jerarquía de memorias]]
+- [ ] [[Memoria caché]] — mapeos, escritura, inicialización
+- [ ] (complementario) [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]]
+
+## Unidad 3 — Transferencia de registros y microoperaciones
+- [ ] [[Flujo de información en BLUE (datos y direcciones)]] — transferencia entre registros, bus de tres estados
+- [ ] Microoperaciones aritméticas: sumador, sumador-restador, incrementador (en [[ALU]])
+- [ ] Microoperaciones lógicas y de desplazamiento (en [[ALU]] y [[Registros]])
+
+## Unidad 4 — Organización y diseño básico
+- [ ] [[Estructura básica de un computador]] — Von Neumann, unidades, buses
+- [ ] [[Máquina BLUE — arquitectura y conjunto de instrucciones]]
+- [ ] [[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]]
+- [ ] [[Ciclo de ejecución — todas las operaciones]] · [[Ciclo de la instrucción LDA (24 pulsos)]]
+- [ ] [[Unidad de Control]] — funciones y señales de control
+- [ ] [[Programar en BLUE — ejemplos]]
+
+## Unidad 5 — Programación básica
+- [ ] [[Registros de la CPU]] — base, índice, puntero de pila, estado
+- [ ] [[Modos de direccionamiento]]
+- [ ] [[Formato de la instrucción (4 formatos)]]
+- [ ] [[BLUE indexada (RIF, RID, nuevo formato)]]
+- [ ] [[Interrupciones y entrada-salida]]
+
+## Unidad 6 — Control microprogramado
+- [ ] [[Unidad de control cableada y microprogramada]] — memoria de control, secuenciamiento, microprograma de ejemplo
+
+## Unidad 7 — CPU y arquitecturas
+- [ ] [[Pipeline]] · [[Memoria caché]] (repaso) · [[Técnicas para aumentar la velocidad]]
+- [ ] [[CISC y RISC]]
+- [ ] Buses y tipos de bus → en [[Estructura básica de un computador]]
+
+## Unidad 8 — Paralelismo
+- [ ] [[Paralelismo y procesamiento vectorial]] — pipeline aritmético, vectorial, SIMD, memoria entrelazada
+
+## Unidad 9 — Hardware aritmético
+- [ ] [[Hardware aritmético (resumen)]] — suma/resta en complemento a 2, Booth, división, punto flotante, BCD
+
+## Unidad 10 — Entrada/Salida
+- [ ] [[Interrupciones y entrada-salida]] — transmisión serie/paralela, puertos, interfaces, controladores

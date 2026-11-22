@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="440" viewBox="0 0 780 440">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Modos de direccionamiento: cómo se construye la dirección efectiva (EA)</text>
+  <rect x="20" y="50" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="34" y="74" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#1f2937">Inmediato</text>
+  <text x="210" y="74" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#0f766e">OP  dato</text>
+  <text x="34" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#374151">EA = — (el operando viaja dentro de la instrucción)</text>
+  <text x="560" y="94" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="400" text-anchor="start" fill="#7c2d12">LDI 5</text>
+  <rect x="20" y="116" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="34" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#1f2937">Directo / absoluto</text>
+  <text x="210" y="140" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#0f766e">OP  D</text>
+  <text x="34" y="160" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#374151">EA = D  (un solo acceso a memoria)</text>
+  <text x="560" y="160" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="400" text-anchor="start" fill="#7c2d12">LDA 25h</text>
+  <rect x="20" y="182" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="34" y="206" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#1f2937">Por registro</text>
+  <text x="210" y="206" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#0f766e">OP  R</text>
+  <text x="34" y="226" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#374151">EA = R  (no hay acceso a memoria)</text>
+  <text x="560" y="226" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="400" text-anchor="start" fill="#7c2d12">ADD RIF</text>
+  <rect x="20" y="248" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="34" y="272" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#1f2937">Indirecto</text>
+  <text x="210" y="272" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#0f766e">OP  D</text>
+  <text x="34" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#374151">EA = M[D]  (dos accesos a memoria)</text>
+  <text x="560" y="292" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="400" text-anchor="start" fill="#7c2d12">LDA @25h</text>
+  <rect x="20" y="314" width="740" height="56" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="34" y="338" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#1f2937">Indexado</text>
+  <text x="210" y="338" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#0f766e">OP  D + X</text>
+  <text x="34" y="358" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#374151">EA = D + X   con X = RIF o RID</text>
+  <text x="560" y="358" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="400" text-anchor="start" fill="#7c2d12">LDA 25h,RIF</text>
+  <text x="20" y="400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Indexado = directo + un sumador de direcciones: la dirección de la instrucción se suma al registro índice</text>
+  <text x="20" y="415" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">en el momento del acceso ⇒ permite recorrer arreglos y tablas con un mismo código.</text>
+  <text x="20" y="430" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">EA (effective address) = dirección final que se pone en el MAR para ir a memoria.</text>
+</svg>

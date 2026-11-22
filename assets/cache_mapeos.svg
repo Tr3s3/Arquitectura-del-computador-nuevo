@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Formas de mapear la memoria principal en la caché y partición de la dirección</text>
+  <rect x="25" y="50" width="230" height="180" rx="8" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="140" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">Mapeo directo</text>
+  <text x="39" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">cada bloque tiene UN único lugar</text>
+  <text x="39" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">línea = (nº de bloque) mod (nº líneas)</text>
+  <text x="39" y="172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">+ simple, barato, rápido de buscar</text>
+  <text x="39" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">− conflictos (thrashing) frecuentes</text>
+  <rect x="275" y="50" width="230" height="180" rx="8" fill="#dcfce7" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="390" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">Asociativo total</text>
+  <text x="289" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">cualquier bloque, cualquier línea</text>
+  <text x="289" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">se compara con TODAS las etiquetas</text>
+  <text x="289" y="172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">+ máxima flexibilidad, menos fallos</text>
+  <text x="289" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">− comparadores caros (mem. asociativa)</text>
+  <rect x="525" y="50" width="230" height="180" rx="8" fill="#fef3c7" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="640" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">Asociativo por conjuntos</text>
+  <text x="539" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">el bloque va a UN conjunto fijo</text>
+  <text x="539" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">y dentro del conjunto, a cualquier vía</text>
+  <text x="539" y="172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">+ el compromiso real (L1/L2/L3)</text>
+  <text x="539" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">− necesita política de reemplazo</text>
+  <text x="25" y="275" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#334155">La dirección se parte así para buscar en caché:</text>
+  <rect x="40" y="295" width="170" height="36" rx="4" fill="#fecaca" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="125.0" y="317" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="600" text-anchor="middle" fill="#1f2937">ETIQUETA (tag)</text>
+  <rect x="210" y="295" width="190" height="36" rx="4" fill="#bfdbfe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="305.0" y="317" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="600" text-anchor="middle" fill="#1f2937">Nº de línea / conjunto</text>
+  <rect x="400" y="295" width="210" height="36" rx="4" fill="#bbf7d0" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="505.0" y="317" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="600" text-anchor="middle" fill="#1f2937">desplazamiento (palabra/byte)</text>
+  <text x="40" y="370" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">Comparación de etiqueta → acierto (hit) o fallo (miss). Si falla, se trae el bloque entero de la memoria principal</text>
+  <text x="40" y="389" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">y se reemplaza uno de los residentes (FIFO, LRU, aleatorio). Escritura: write-through (escribe siempre) o</text>
+  <text x="40" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">write-back (escribe en caché y marca el bit 'dirty' hasta que el bloque sale). La inicialización del caché la hace</text>
+  <text x="40" y="427" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">el hardware: arranca 'vacía' (todos los bits de validez en 0) y cada línea se valida cuando se carga.</text>
+</svg>

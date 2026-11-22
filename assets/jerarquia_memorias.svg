@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Jerarquía de memorias: velocidad, capacidad y costo por bit</text>
+  <rect x="280.0" y="50" width="260" height="44" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="69" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Registros de la CPU</text>
+  <text x="410.0" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">~1 ns · ≈ cientos de bytes</text>
+  <rect x="251.0" y="102" width="318" height="44" rx="5" fill="#c7ddfc" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="121" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Caché L1</text>
+  <text x="410.0" y="136" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">~1–2 ns · decenas de KB</text>
+  <rect x="222.0" y="154" width="376" height="44" rx="5" fill="#b5d0fa" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="173" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Caché L2 / L3</text>
+  <text x="410.0" y="188" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">~5–15 ns · MB</text>
+  <rect x="193.0" y="206" width="434" height="44" rx="5" fill="#a3c3f7" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="225" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Memoria principal (RAM)</text>
+  <text x="410.0" y="240" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">~50–100 ns · GB</text>
+  <rect x="164.0" y="258" width="492" height="44" rx="5" fill="#d7e0ea" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="277" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Memoria secundaria (SSD/disco)</text>
+  <text x="410.0" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">~0,1 ms · TB</text>
+  <rect x="135.0" y="310" width="550" height="44" rx="5" fill="#e5eaf0" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="410.0" y="329" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle" fill="#1f2937">Cinta magnética / respaldo</text>
+  <text x="410.0" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">segundos · TB</text>
+  <text x="20" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">más rápida</text>
+  <text x="20" y="160" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#1d4ed8">más cara por bit</text>
+  <line x1="50" y1="100" x2="50" y2="205" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="50" y1="205" x2="53.660629787682204" y2="196.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="50" y1="205" x2="46.339370212317796" y2="196.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="20" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#b91c1c">más lenta</text>
+  <text x="20" y="348" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" text-anchor="start" fill="#b91c1c">más barata por bit</text>
+  <line x1="50" y1="320" x2="50" y2="240" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="50" y1="240" x2="46.339370212317796" y2="248.2219091187834" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="50" y1="240" x2="53.660629787682204" y2="248.2219091187834" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="690" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="end" fill="#4b5563">Localidad: la CPU usa pocas instrucciones y datos muchas veces ⇒ lo chico y rápido arriba rinde.</text>
+</svg>
