@@ -607,6 +607,121 @@ def d_cache():
     s.save("cache_mapeos.svg")
 
 
+def d_cisc_risc():
+    s = Svg(780, 520, "CISC vs RISC: largo de la instrucción, quién hace el trabajo y por qué el pipeline")
+    GREEN = "#15803d"
+
+    # ---- encabezados
+    s.raw(f'<rect x="40" y="46" width="330" height="46" rx="6" fill="#fee2e2" stroke="#1f2937" stroke-width="1.7"/>')
+    s.text(205, 66, "CISC  (x86, 8086, VAX)", size=14, weight="700", anchor="middle")
+    s.text(205, 83, "pocas instrucciones, cada una hace mucho", size=10.5, anchor="middle", color="#4b5563")
+
+    s.raw(f'<rect x="410" y="46" width="330" height="46" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>')
+    s.text(575, 66, "RISC  (ARM, MIPS, RISC-V)", size=14, weight="700", anchor="middle")
+    s.text(575, 83, "muchas instrucciones, cada una hace poco", size=10.5, anchor="middle", color="#4b5563")
+
+    # ---- barra de instrucción variable (CISC)
+    s.text(40, 122, "Una instrucción puede medir de 1 a 6 bytes:", size=10.5, color="#4b5563")
+    campos_c = [(40, 56, "opc"), (96, 78, "mod"), (174, 116, "desplazamiento"), (290, 50, "dato")]
+    for x, w, lab in campos_c:
+        s.raw(f'<rect x="{x}" y="130" width="{w}" height="34" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.4"/>')
+        s.text(x + w / 2, 152, lab, size=9.2, weight="600", anchor="middle")
+    s.text(348, 152, "← 4 bytes", size=9.5, color="#4b5563")
+    campos_c2 = [(40, 56, "opc"), (96, 62, "reg")]
+    for x, w, lab in campos_c2:
+        s.raw(f'<rect x="{x}" y="170" width="{w}" height="34" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.4"/>')
+        s.text(x + w / 2, 192, lab, size=9.2, weight="600", anchor="middle")
+    s.text(166, 192, "← 2 bytes  ⇒ largo VARIABLE", size=9.5, color=RED, weight="600")
+    s.text(40, 226, "ADD [BX+SI+4], AX   →  memoria + memoria en UNA instrucción",
+           size=10, family=MONO, color=ACCENT)
+
+    # ---- barra de instrucción fija (RISC)
+    s.text(410, 122, "Todas las instrucciones miden lo mismo:", size=10.5, color="#4b5563")
+    campos_r = [(410, "Op"), (470, "rs1"), (530, "rs2"), (590, "rd"), (650, "funct")]
+    for x, lab in campos_r:
+        s.raw(f'<rect x="{x}" y="130" width="60" height="34" rx="3" fill="#bfdbfe" stroke="#1f2937" stroke-width="1.4"/>')
+        s.text(x + 30, 152, lab, size=9.6, weight="600", anchor="middle")
+    s.raw('<rect x="410" y="170" width="300" height="34" rx="3" fill="#eff6ff" stroke="#1f2937" '
+          'stroke-width="1.4" stroke-dasharray="4 3"/>')
+    for x, lab in campos_r:
+        s.raw(f'<rect x="{x}" y="170" width="60" height="34" rx="3" fill="#bfdbfe" stroke="#1f2937" stroke-width="1.4"/>')
+        s.text(x + 30, 192, lab, size=9.6, weight="600", anchor="middle")
+    s.text(716, 152, "4 bytes", size=9.5, color="#4b5563")
+    s.text(410, 226, "LW + ADD + SW  →  tres instrucciones simples",
+           size=10, family=MONO, color=ACCENT)
+
+    # ---- lista comparativa
+    s.line(40, 246, 740, 246, w=1.2, color="#cbd5e1")
+    izq = [
+        ("+", "densidad de código alta (programa chico)", GREEN),
+        ("+", "compatibilidad: el repertorio crece sin romper", GREEN),
+        ("+", "menos búsquedas de instrucción", GREEN),
+        ("-", "largo variable ⇒ pipeline difícil", RED),
+        ("-", "UC microprogramada ⇒ más lento por microorden", RED),
+        ("-", "hardware complejo y difícil de verificar", RED),
+        ("→", "se ejecuta traduciendo a micro-operaciones", "#4b5563"),
+    ]
+    der = [
+        ("+", "un ciclo por instrucción ⇒ pipeline eficiente", GREEN),
+        ("+", "UC cableada: pocos modos y todos registro", GREEN),
+        ("+", "muchos registros, acceso a memoria sólo load/store", GREEN),
+        ("+", "menos consumo y hardware regular y escalable", GREEN),
+        ("-", "más instrucciones: el programa ocupa más", RED),
+        ("-", "depende del compilador para optimizar", RED),
+        ("→", "control cableado, sin memoria de control", "#4b5563"),
+    ]
+    for i, (sym, txt, col) in enumerate(izq):
+        y = 274 + i * 25
+        s.text(44, y, sym, size=13, weight="700", color=col)
+        s.text(60, y, txt, size=10.4, color="#1f2937")
+    for i, (sym, txt, col) in enumerate(der):
+        y = 274 + i * 25
+        s.text(414, y, sym, size=13, weight="700", color=col)
+        s.text(430, y, txt, size=10.4, color="#1f2937")
+
+    s.line(40, 466, 740, 466, w=1.2, color="#cbd5e1")
+    s.note(40, 484, [
+        "Hoy son híbridos: el x86 (CISC) traduce cada instrucción a micro-operaciones simples y las ejecuta con un núcleo tipo RISC",
+        "⇒ CISC por fuera, RISC por dentro. Lo que decide no es \"cuál es mejor\" sino el compromiso: código compacto vs pipeline.",
+    ], size=10.4, lh=16)
+    s.save("cisc_risc.svg")
+
+
+def d_hazards():
+    s = Svg(780, 405, "Los tres conflictos del pipeline (hazards) y cómo se resuelven")
+    filas = [
+        ("1 · DATOS (RAW)", "ADD  R1, R2, R3", "necesita R1", "SUB  R4, R1, R5",
+         ["FORWARDING: adelantar el resultado de la ALU",
+          "por un camino lateral, sin esperar a que se",
+          "escriba el registro. Si no alcanza: STALL o NOP."]),
+        ("2 · CONTROL (saltos)", "JZ  fin", "¿cuál sigue?", "¿I3 o la del salto?",
+         ["No se sabe qué instrucción sigue hasta resolver",
+          "el salto ⇒ PREDICCIÓN por historial. Si falla,",
+          "se descarta lo que estaba en vuelo (burbuja)."]),
+        ("3 · ESTRUCTURAL", "I1 busca instrucción", "misma memoria", "I2 lee el dato",
+         ["Dos etapas quieren el mismo recurso ⇒ separar",
+          "CACHÉ DE INSTRUCCIONES (I) y DE DATOS (D):",
+          "por eso L1 está partida (Harvard por dentro)."]),
+    ]
+    y = 52
+    for titulo, t1, medio, t2, sol in filas:
+        s.text(40, y + 12, titulo, size=12, weight="700", color=RED)
+        s.box(40, y + 24, 176, 38, label=t1, size=10.4, fill="#f8fafc", weight="600")
+        s.box(252, y + 24, 176, 38, label=t2, size=10.4, fill="#f8fafc", weight="600")
+        s.arrow(220, y + 43, 246, y + 43, w=1.8, color=RED)
+        s.text(233, y + 16, medio, size=9.4, anchor="middle", color=RED)
+        for k, linea in enumerate(sol):
+            s.text(452, y + 32 + k * 15, linea, size=9.9, color="#1f2937")
+        s.line(40, y + 80, 740, y + 80, w=1, color="#e2e8f0")
+        y += 98
+    s.note(40, 356, [
+        "Regla de oro para el oral: el pipeline NO acelera una instrucción, acelera el ritmo. Y cada conflicto que se resuelve",
+        "cuesta hardware: comparadores y caminos de forwarding (datos), predictores (control) y memorias separadas (estructural).",
+        "Sin conflictos, con k etapas el speedup tiende a k.",
+    ], size=10.3, lh=17)
+    s.save("pipeline_hazards.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -625,3 +740,5 @@ if __name__ == "__main__":
     d_blue_flujo()
     d_ciclo_maquina()
     d_cache()
+    d_cisc_risc()
+    d_hazards()

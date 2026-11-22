@@ -165,6 +165,20 @@ En la BLUE indexada la instrucción ocupa **2 palabras**, así que las que **ref
 5. **Las de E/S**: explicar TRA y R, y que pueden repetir el ciclo: eso motiva las **interrupciones**.
 6. **Cierre**: "8, 16 o más: el número sale de contar ciclos de máquina de 8 pulsos".
 
+## Para ampliar: qué leer y qué buscar
+
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **`blue.pdf`** (Foster, *Una máquina elemental*) | **Tabla 2** ("El ciclo de búsqueda"), y las secciones "Instrucciones de E/S" e "Instrucciones de dos ciclos" | la tabla pulso por pulso de **cada** instrucción, con el nombre exacto de las señales de control | **Es la fuente literal** de esta pregunta: si sabés leer la tabla, sabés la respuesta |
+| **Apuntes de cátedra**, *Unidad 5* | sección de la **BLUE** y de la **unidad de control** | el repertorio y la lógica de `estado · pulso · instrucción` | Alineación con el vocabulario de la cátedra |
+| **[[Máquina BLUE — arquitectura y conjunto de instrucciones]]** | nota de la bóveda | el repertorio completo con opcodes octales y qué hace cada instrucción | La referencia rápida antes de los pulsos |
+| **[[Ciclo de búsqueda (7 y 8 pulsos)]]** · **[[Ciclo de máquina]]** | notas de la bóveda | el tronco común de CP1-CP8 y por qué son 8 pulsos de 125 ns | Prerrequisito: sin esto, los pulsos no significan nada |
+| **[[Cómo se implementa la Unidad de Control]]** | nota de la bóveda | cómo de `estado · pulso · instrucción` salen las señales | El "por qué" detrás de cada pulso |
+| **[[Ciclo de la instrucción LDA (24 pulsos)]]** y **[[Ciclo de LDA indexada (los 24 pulsos)]]** | notas de la bóveda | el detalle fino de la instrucción que más se pregunta | Para bajar al caso concreto |
+| **[[TP16 Ciclo de instrucción básico]]** · **[[TP17 Formato básico de instrucciones]]** | los TPs | los diagramas de pulsos y el formato que se entregaron | Modelo de lo que se espera dibujar |
+| **Stallings, *Organización y arquitectura de computadores*** | capítulo de **unidad de control** | el esquema de señales por paso y por instrucción | Formaliza el método |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **control cableado** | implementación con señales temporizadas | Ejercicios equivalentes |
+
 ## Errores típicos
 - Poner `A → Z` en ADD en CP2 **y** en CP6 (son pulsos distintos, Z y Y).
 - Darle ciclo de ejecución a JMP: el salto se resuelve en **CP8 de la búsqueda** (`IR → PC`).

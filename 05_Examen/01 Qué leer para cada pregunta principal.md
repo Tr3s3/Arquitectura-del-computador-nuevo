@@ -47,6 +47,21 @@ prioridad: maxima
 | **Ciclo LDA indexada, 24 pulsos** | [[Ciclo de LDA indexada (los 24 pulsos)]] | Apuntes **U5** → *"Ciclos de instrucción"* (tablas de `LDA 3/1/0, X`) | Hamacher (notación T0…Tn) · Patterson & Hennessy (multiciclo) |
 | **¿Cómo se implementa la UC?** | [[Cómo se implementa la Unidad de Control]] | `blue.pdf` → figs. 19-29 y Tablas 2-7 · Apuntes U5 → sección del **8088** (ROM 504×21, PLA, microMAR) | Tanenbaum · Hamacher · Stallings |
 
+### Segunda tanda de la matriz: las diez preguntas y su fuente
+
+| # | Pregunta (2.ª tanda) | Nota maestra | Fuente de la cátedra (obligatoria) | Ampliación recomendada |
+|---|---|---|---|---|
+| 1 | **Celda elemental de memoria** | [[Celda elemental de memoria]] | Apuntes **U3** → *"Celda elemental de memoria"*, selección, lectura/escritura · `memorias.pdf` → **7.3.2/7.3.3** (SRAM de 6 transistores, DRAM de 1 T + capacitor, refresco) | Floyd · Mano · Patterson & Hennessy (SRAM/DRAM) |
+| 2 | **CISC y RISC** | [[CISC y RISC]] | `Resumen final arqui.pdf` → *"Arquitectura CISC"* / *"Arquitectura RISC"* · Apuntes **U5** → sección del **8088** (UC microprogramada, ROM 504×21) · [[TP20 Lenguaje máquina]] | Patterson & Hennessy (cap. 1, el argumento original) · Stallings (RISC vs CISC) · Tanenbaum (brecha semántica) |
+| 3 | **Pipeline** | [[Pipeline]] | `Resumen final arqui.pdf` → *"Pipeline"* (las 5 etapas, "3 operaciones en 8 pulsos") · `blue.pdf` → *"El ciclo de búsqueda"* · Apuntes U5 → **BIU/EU del 8088** (cola de 4 bytes) | Patterson & Hennessy (procesador segmentado: hazards y forwarding) · Stallings · Hamacher |
+| 4 | **Interrupciones** | [[Interrupciones y entrada-salida]] | Apuntes **U5** → *"Interrupciones"*, *"Sistema elemental para BLUE indexada"*, *"Interrupciones vectorizadas"* · `blue.pdf` → *"Instrucciones de E/S"* y Conclusiones | Stallings (E/S e interrupciones, DMA) · Hamacher · Brey (interrupciones del 8086) |
+| 5 | **Las 16 instrucciones, todos los pulsos** | [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | `blue.pdf` → **Tablas 2 a 7** (ciclo de búsqueda + instrucciones de 1 y 2 ciclos + E/S) · Apuntes U5 → *"Ciclos de instrucción"* | Stallings (UC) · Hamacher (señales temporizadas) |
+| 6 | **Memoria ROM y sus tipos** | [[Memoria ROM y sus tipos]] | Apuntes **U3** → ROM y cuadro RAM/ROM · `memorias.pdf` → **7.2** (ROM con diodos/MOS, programación, FAMOS/FLOTOX) | Floyd (memorias) · Mano (ROM vs PLA/PAL) · Stallings |
+| 7 | **Memoria caché** | [[Memoria caché]] | Apuntes **U3** → sección de **caché** (mapeos, políticas, inicialización, niveles) · [[TP12 Memoria principal]] | Patterson & Hennessy (jerarquía: el capítulo clave) · Stallings (diseño de caché) · Hamacher |
+| 8 | **Registros base e índice (RIF, RID, RB)** | [[Registros base e índice]] | Apuntes **U5** → *"Nuevo hardware, nuevas instrucciones"*, *"Registro base"*, *"BLUE Indexada"* · [[TP19 Modos de direccionamiento]] | Stallings (indexado vs base) · Brey (`BX`/`SI`/`DI`/`BP`, segmentos) · Hamacher |
+| 9 | **Jerarquía de memorias** | [[Jerarquía de memorias]] | Apuntes **U3** → comienzo de la unidad (parámetros) y jerarquía · `memorias.pdf` → transparencias iniciales (pirámide) · [[TP12 Memoria principal]] | Patterson & Hennessy · Stallings (memoria interna/externa) · Tanenbaum |
+| 10 | **Modos de direccionamiento (y los 4 de la indexada)** | [[Modos de direccionamiento]] | [[TP19 Modos de direccionamiento]] (los 7 modos) · Apuntes **U5** → modos y *"BLUE Indexada"* (modificador de 2 bits) · [[BLUE indexada (RIF, RID, nuevo formato)]] | Stallings (cap. de modos de direccionamiento) · Hamacher · Brey (modos del 8086) |
+
 ---
 
 ## 3. La bibliografía, con qué es bueno cada libro

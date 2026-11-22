@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="405" viewBox="0 0 780 405">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Los tres conflictos del pipeline (hazards) y cómo se resuelven</text>
+  <text x="40" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#b91c1c">1 · DATOS (RAW)</text>
+  <rect x="40" y="76" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="128.0" y="98.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">ADD  R1, R2, R3</text>
+  <rect x="252" y="76" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="340.0" y="98.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">SUB  R4, R1, R5</text>
+  <line x1="220" y1="95" x2="246" y2="95" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="95" x2="237.7780908812166" y2="91.3393702123178" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="95" x2="237.7780908812166" y2="98.6606297876822" stroke="#b91c1c" stroke-width="1.8"/>
+  <text x="233" y="68" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#b91c1c">necesita R1</text>
+  <text x="452" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">FORWARDING: adelantar el resultado de la ALU</text>
+  <text x="452" y="99" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">por un camino lateral, sin esperar a que se</text>
+  <text x="452" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">escriba el registro. Si no alcanza: STALL o NOP.</text>
+  <line x1="40" y1="132" x2="740" y2="132" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="162" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#b91c1c">2 · CONTROL (saltos)</text>
+  <rect x="40" y="174" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="128.0" y="196.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">JZ  fin</text>
+  <rect x="252" y="174" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="340.0" y="196.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">¿I3 o la del salto?</text>
+  <line x1="220" y1="193" x2="246" y2="193" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="193" x2="237.7780908812166" y2="189.3393702123178" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="193" x2="237.7780908812166" y2="196.6606297876822" stroke="#b91c1c" stroke-width="1.8"/>
+  <text x="233" y="166" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#b91c1c">¿cuál sigue?</text>
+  <text x="452" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">No se sabe qué instrucción sigue hasta resolver</text>
+  <text x="452" y="197" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">el salto ⇒ PREDICCIÓN por historial. Si falla,</text>
+  <text x="452" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">se descarta lo que estaba en vuelo (burbuja).</text>
+  <line x1="40" y1="230" x2="740" y2="230" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#b91c1c">3 · ESTRUCTURAL</text>
+  <rect x="40" y="272" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="128.0" y="294.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">I1 busca instrucción</text>
+  <rect x="252" y="272" width="176" height="38" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="340.0" y="294.64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="middle" fill="#1f2937">I2 lee el dato</text>
+  <line x1="220" y1="291" x2="246" y2="291" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="291" x2="237.7780908812166" y2="287.3393702123178" stroke="#b91c1c" stroke-width="1.8"/>
+  <line x1="246" y1="291" x2="237.7780908812166" y2="294.6606297876822" stroke="#b91c1c" stroke-width="1.8"/>
+  <text x="233" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#b91c1c">misma memoria</text>
+  <text x="452" y="280" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">Dos etapas quieren el mismo recurso ⇒ separar</text>
+  <text x="452" y="295" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">CACHÉ DE INSTRUCCIONES (I) y DE DATOS (D):</text>
+  <text x="452" y="310" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="400" text-anchor="start" fill="#1f2937">por eso L1 está partida (Harvard por dentro).</text>
+  <line x1="40" y1="328" x2="740" y2="328" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.3" font-weight="400" text-anchor="start" fill="#4b5563">Regla de oro para el oral: el pipeline NO acelera una instrucción, acelera el ritmo. Y cada conflicto que se resuelve</text>
+  <text x="40" y="373" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.3" font-weight="400" text-anchor="start" fill="#4b5563">cuesta hardware: comparadores y caminos de forwarding (datos), predictores (control) y memorias separadas (estructural).</text>
+  <text x="40" y="390" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.3" font-weight="400" text-anchor="start" fill="#4b5563">Sin conflictos, con k etapas el speedup tiende a k.</text>
+</svg>

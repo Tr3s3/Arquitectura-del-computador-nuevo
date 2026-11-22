@@ -169,6 +169,20 @@ porque no son referencias a memoria.
 5. **Cierre**: la diferencia índice/base (tabla de arriba) y el beneficio: **el mismo código sirve para
    cualquier posición y tamaño**.
 
+## Para ampliar: qué leer y qué buscar
+
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **Apuntes de cátedra**, *Unidad 5* | sección de la **BLUE indexada**: registros nuevos, sumador de direcciones, campo modificador | la descripción de **RIF, RID y RB** con el formato de la instrucción | **Es la fuente exacta** de esta pregunta |
+| **`blue.pdf`** (Foster) | el capítulo de la máquina elemental, donde explica por qué el bus común y el direccionamiento directo limitan el repertorio | el contraste: la BLUE **base no tiene** registros índice | Para justificar "qué se agregó y por qué" |
+| **[[BLUE indexada (RIF, RID, nuevo formato)]]** · **[[BLUE vs BLUE indexada — qué cambia y por qué]]** | notas de la bóveda | el formato 5+2+9+16, las instrucciones `ENI`/`INI`/`LIX`/`SIX`/`RXT`/`IJP` y la tabla de "qué cambia" | El desarrollo completo del hardware |
+| **[[Modos de direccionamiento]]** | nota de la bóveda | los siete modos y el ejemplo del vector con RIF | El marco conceptual: por qué el índice existe |
+| **[[Ciclo de LDA indexada (los 24 pulsos)]]** | nota de la bóveda | `RID→X`, `MBR→W`, `Σ→MAR` en los pulsos exactos | Bajar el registro índice a señales concretas |
+| **[[TP19 Modos de direccionamiento]]** | el TP | la tabla de modos y el ejercicio del arreglo | Lo que se entrega por escrito |
+| **Stallings, *Organización y arquitectura de computadores*** | capítulo de **modos de direccionamiento** | **indexado** y **base con desplazamiento**, y la diferencia conceptual entre ambos | La mejor ampliación teórica |
+| **Brey, *Los microprocesadores Intel 8086/8088*** | capítulo de **direccionamiento** | `BX`/`SI`/`DI`/`BP` como base e índice, y la fórmula `seg × 10h + offset` | El caso real: los mismos conceptos con otros nombres |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **modos de direccionamiento** | indexado, autoincremento y registro base | Notación formal |
+
 ## Errores típicos
 - Decir que el índice se suma siempre: se suma **sólo en los modos 2 y 3**.
 - Confundir **W y X** con registros índice: son temporales del sumador de direcciones.
