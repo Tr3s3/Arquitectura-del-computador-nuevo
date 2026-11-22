@@ -22,14 +22,24 @@ tipo: guia
 > termina con un *cómo responderlo en el final* que es un **guion hablado**, y los diagramas están
 > pensados para **reproducirse a mano** en 2 o 3 minutos. No estudies leyendo: estudiá hablando y dibujando.
 
-## Las tres capas de la bóveda
-1. **Teoría** (`01_Logica_Digital`, `02_Memorias_Secundarias`, `03_CPU_Blue`, `04_Arquitecturas_Avanzadas`):
-   el concepto explicado desde cero, con diagramas y tablas.
-2. **Material de cátedra** (`01_Material_Catedra`): los **20 TPs**, con la consigna textual, qué hay que
-   saber para resolverla y la respuesta sintetizada. Es la voz del profesor: si hay diferencias de
-   notación o de numeración, manda el TP (y la bóveda lo advierte con un `[!warning]`).
-3. **Examen y práctica** (`05_Examen`, `06_Practica`): el banco de preguntas del modelo de final, el guion
-   oral, el checklist de dibujo, las tablas de verdad y las autoevaluaciones.
+## Los dos bloques (así está organizada la bóveda)
+
+> [!important] La bóveda tiene **dos bloques de desarrollo** y dos carpetas de apoyo
+> Cada nota vive en **un solo** bloque, en el lugar donde más se usa, pero **se llega a ella desde los dos**.
+
+| Bloque | Qué contiene | Puerta de entrada |
+|---|---|---|
+| **`10_Examen_Final/`** — *desarrollo del modelo de final* | las **27 preguntas de las 3 tandas** de la matriz, cada una como respuesta oral (tabla + dibujo + guion + repreguntas + "qué leer"), y las **guías** (matriz, chequeo de los 12 temas, fuentes, banco, guion) | [[00 Índice — bloque examen (las 3 tandas)]] |
+| **`20_Programa_Materia/`** — *desarrollo del programa* | la materia **completa, unidad por unidad** (las 10 unidades), con las notas que el final **no** pregunta (memoria virtual, contadores, registros, ALU, paralelismo, 8086, microprogramación) y el **mapa que conecta todo**, incluidas las notas del otro bloque | [[00 Índice — bloque programa (las 10 unidades)]] |
+
+| Carpeta de apoyo | Qué contiene |
+|---|---|
+| **`00_Inicio/`** | portada, mapa (MOC), plan de las 10 unidades, ruta para el final, resumen integrador, fuentes y glosario |
+| **`01_Material_Catedra/`** | los **21 TPs** con la consigna textual, qué hay que saber y la respuesta sintetizada: **es la voz del profesor** (si hay diferencias de notación, manda el TP, y la bóveda lo advierte con un `[!warning]`) |
+| **`30_Practica/`** | prácticas resueltas, checklist de dibujo, tablas de verdad de memoria y autoevaluación |
+
+**Cómo elegir el bloque:** si te falta poco para el final ⇒ entrá por el bloque **examen** y estudiá por tandas.
+Si estás cursando o querés entender la materia entera ⇒ entrá por el bloque **programa** y seguí las unidades.
 
 Empezá por el [[00 Índice de TPs y qué aporta cada uno|índice de TPs]] si querés ver de un saque qué pide
 la cátedra, y por [[04 Resumen integrador de la materia]] si querés el recorrido completo en 20 minutos.

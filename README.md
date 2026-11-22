@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 90 notas · 22 diagramas SVG · ~120.000 palabras · 1.395 enlaces internos, 0 rotos.
+**Estado:** 92 notas · 22 diagramas SVG · ~123.000 palabras · 1.560 enlaces internos, 0 rotos.
 
 ## Cómo abrirla
 
@@ -23,17 +23,25 @@ GitHub); algunos esquemas usan **Mermaid**, que Obsidian renderiza de forma nati
 ## Estructura
 
 ```
-00_Inicio/                  portada, mapa (MOC), plan de estudio, ruta para el final,
-                            resumen integrador de la materia y glosario
-01_Logica_Digital/          Unidad 1 — compuertas, Boole, DeMorgan, sumadores, MUX/DEMUX
-02_Memorias_Secuenciales/   Unidad 2 y 3 — flip-flops, registros, contadores, RAM/ROM, caché
-03_CPU_Blue/                Unidades 4 a 6 — estructura, UC, BLUE, ciclos, formato, modos, interrupciones
-04_Arquitecturas_Avanzadas/ Unidades 7 a 9 — pipeline, CISC/RISC, microprogramación, paralelismo
-01_Material_Catedra/        los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
-05_Examen/                  banco de preguntas del final + guion oral de las 8 principales
-06_Practica/                prácticas resueltas, cómo dibujar los circuitos, tablas de verdad, autoevaluación
-assets/                     diagramas SVG (generados con tools/diagramas.py)
+00_Inicio/                        portada, mapa (MOC), plan de las 10 unidades, ruta para el final,
+                                  resumen integrador, fuentes y glosario
+10_Examen_Final/                  BLOQUE 1 — desarrollo del MODELO DE FINAL
+├── 01 Primera tanda — la máquina/            8 preguntas + apoyos (ciclos, UC, formatos)
+├── 02 Segunda tanda — memorias y arquitectura/ 10 preguntas (caché, ROM, RISC/CISC, pipeline…)
+├── 03 Tercera tanda — circuitos con tablas/   8 ítems (Karnaugh, MUX/DEMUX, FF, sumadores) + RI
+└── 04 Guías del examen/                       matriz, chequeo de los 12 temas, fuentes, banco, guion
+20_Programa_Materia/              BLOQUE 2 — desarrollo del PROGRAMA (las 10 unidades)
+├── 01 Memorias, registros y contadores/
+├── 02 La CPU y su control/
+└── 03 Arquitecturas avanzadas/
+01_Material_Catedra/              los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
+30_Practica/                      prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
+assets/                           diagramas SVG (generados con tools/diagramas.py)
+tools/                            generador de los diagramas
 ```
+
+> Los dos bloques están **indexados** y se cruzan: `10_Examen_Final/00 Índice…` y
+> `20_Programa_Materia/00 Índice…`. Cada nota vive en un bloque y se llega a ella desde los dos.
 
 ## Escrita para aprender desde cero
 
@@ -45,15 +53,17 @@ el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin
 
 | Objetivo | Nota |
 |---|---|
-| Ver **qué cae y con qué peso** (foto del profesor) | `05_Examen/00 Matriz del final — las 3 tandas.md` |
+| **Preparar el final** (empezar acá) | `10_Examen_Final/00 Índice — bloque examen (las 3 tandas).md` |
+| **Estudiar la materia completa** (las 10 unidades) | `20_Programa_Materia/00 Índice — bloque programa (las 10 unidades).md` |
+| Ver **qué cae y con qué peso** (foto del profesor) | `10_Examen_Final/04 Guías del examen/00 Matriz del final — las 3 tandas.md` |
 | Ver la materia completa en 20 minutos | `00_Inicio/04 Resumen integrador de la materia.md` |
 | Saber qué pide la cátedra, TP por TP | `01_Material_Catedra/00 Índice de TPs y qué aporta cada uno.md` |
-| Entrenar el oral | `05_Examen/Guion de respuestas — preguntas principales.md` |
-| Practicar el pizarrón | `06_Practica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
-| Repasar tablas de verdad | `06_Practica/Tablas de verdad de memoria.md` |
+| Entrenar el oral | `10_Examen_Final/04 Guías del examen/Guion de respuestas — preguntas principales.md` |
+| Practicar el pizarrón | `30_Practica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
+| Repasar tablas de verdad | `30_Practica/Tablas de verdad de memoria.md` |
 | Saber de dónde sale cada dato | `00_Inicio/05 Fuentes y qué aporta cada una.md` |
-| Saber **qué leer para ampliar** cada tema | `05_Examen/01 Qué leer para cada pregunta principal.md` |
-| **Chequear la cobertura de la lista de 12 temas** | `05_Examen/02 Chequeo de los 12 temas.md` |
+| Saber **qué leer para ampliar** cada tema | `10_Examen_Final/04 Guías del examen/01 Qué leer para cada pregunta principal.md` |
+| **Chequear la cobertura de la lista de 12 temas** | `10_Examen_Final/04 Guías del examen/02 Chequeo de los 12 temas.md` |
 
 ## Fuentes
 

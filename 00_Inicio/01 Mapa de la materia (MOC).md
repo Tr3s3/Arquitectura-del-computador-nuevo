@@ -11,6 +11,14 @@ tipo: moc
 > El camino corto es: [[04 Resumen integrador de la materia]] → [[Banco de preguntas del final]] →
 > [[Guion de respuestas — preguntas principales]]. Este mapa es para **entender el orden** de la materia.
 
+## Las dos formas de recorrer la bóveda
+| Si querés… | Entrá por |
+|---|---|
+| **preparar el final** (las 27 preguntas de la matriz, por tandas) | [[00 Índice — bloque examen (las 3 tandas)]] |
+| **estudiar la materia completa** (las 10 unidades de punta a punta) | [[00 Índice — bloque programa (las 10 unidades)]] |
+
+Las unidades de abajo son el **orden lógico** de la materia; cada una lista las notas, estén donde estén.
+
 ## Unidad 1 — Circuitos de lógica digital
 - [[Álgebra de Boole — postulados y teoremas]]
 - [[Leyes de DeMorgan]]
