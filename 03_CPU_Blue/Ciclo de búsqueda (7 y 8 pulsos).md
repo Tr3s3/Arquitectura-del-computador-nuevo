@@ -94,6 +94,19 @@ ciclo de instrucción básico", usá estos 6 pasos. **Son el mismo proceso con d
 4. Dibujar el diagrama de tiempos o al menos la cadena `PC → MAR → memoria → MBR → IR`.
 5. Cerrar con que la búsqueda es idéntica para toda instrucción y que el PC queda apuntando a la siguiente.
 
+## Para ampliar: qué leer y qué buscar
+
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **`blue.pdf`** (Foster) | **"El ciclo de búsqueda"** y la **Tabla 2**; y el párrafo sobre la **memoria de ferrita** | los 8 pulsos con sus señales y la razón del octavo pulso | **Es la fuente literal** de esta pregunta |
+| **Apuntes de cátedra**, *Unidad 5* | sección de **ciclos de instrucción** (búsqueda / ejecución) | la versión de la cátedra (6 pasos) y su notación de estados | Alineación con el vocabulario |
+| **[[TP16 Ciclo de instrucción básico]]** | el TP | los 6 pasos y el diagrama de tiempos pedido | Lo que se entrega |
+| **[[Ciclo de máquina]]** | nota de la bóveda | los tres ciclos (reloj / máquina / instrucción) y RUN-STATE-CLOCK | El marco completo |
+| **[[Proceso de manejo de una instrucción]]** | nota de la bóveda | dónde encaja la búsqueda en el manejo de la instrucción | Para empezar la respuesta desde arriba |
+| **[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]** | nota de la bóveda | el mismo tronco de 8 pulsos en las 16 instrucciones | Verificación |
+| **Stallings, *Organización y arquitectura de computadores*** | capítulo del **ciclo de instrucción** | la figura búsqueda → decodificación → ejecución | Figura clásica para el pizarrón |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **control** | microoperaciones por paso (T0…Tn) | Formalización con notación T |
+
 ## Errores típicos
 - Olvidar el **incremento del PC** (el error más caro).
 - Poner `IR ← MBR` antes de que el dato esté en el MBR.

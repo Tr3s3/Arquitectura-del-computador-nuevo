@@ -108,6 +108,7 @@ prioridad: maxima
 - [[Unidad de Control]] — para el punto 6 de la 1.ª tanda.
 
 ## Relacionado
+[[02 Chequeo de los 12 temas]] · [[01 Qué leer para cada pregunta principal]]
 [[01 Qué leer para cada pregunta principal]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] ·
 [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]] ·
 [[00 Índice de TPs y qué aporta cada uno]]

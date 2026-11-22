@@ -40,6 +40,9 @@ una tabla con la fuente (cátedra y libros), **en qué parte** y **qué mirar**.
 [[01 Qué leer para cada pregunta principal]], con la bibliografía comentada (qué es bueno para qué) y un plan de
 lectura según el tiempo que tengas.
 
+Y para saber **si te falta algún tema**, está [[02 Chequeo de los 12 temas]]: la lista de la cátedra con su nota
+maestra, su peso y **lo que hay que poder decir** de cada uno.
+
 ## Cómo leer cada nota
 
 > [!tip] Las notas están escritas para alguien que **no sabe nada** del tema

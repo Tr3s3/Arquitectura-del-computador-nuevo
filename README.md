@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 88 notas · 22 diagramas SVG · ~116.000 palabras · 1.332 enlaces internos, 0 rotos.
+**Estado:** 90 notas · 22 diagramas SVG · ~120.000 palabras · 1.395 enlaces internos, 0 rotos.
 
 ## Cómo abrirla
 
@@ -53,6 +53,7 @@ el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin
 | Repasar tablas de verdad | `06_Practica/Tablas de verdad de memoria.md` |
 | Saber de dónde sale cada dato | `00_Inicio/05 Fuentes y qué aporta cada una.md` |
 | Saber **qué leer para ampliar** cada tema | `05_Examen/01 Qué leer para cada pregunta principal.md` |
+| **Chequear la cobertura de la lista de 12 temas** | `05_Examen/02 Chequeo de los 12 temas.md` |
 
 ## Fuentes
 

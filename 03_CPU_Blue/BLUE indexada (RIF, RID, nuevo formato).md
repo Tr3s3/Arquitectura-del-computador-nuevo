@@ -73,16 +73,72 @@ Y en **toda** referencia a memoria se suma además el **registro base**. Teoría
 
 Desarrollo pulso por pulso: [[Ciclo de LDA indexada (los 24 pulsos)]].
 
-## Cómo responderlo en el final
-1. Definir qué se agregó (RIF, RID, RB, Σ, W/X, decodificador del modificador).
-2. Dibujar el formato nuevo y la máquina con el sumador de direcciones.
-3. Los 4 modos con su EA.
-4. Un ejemplo que cierre: `LDA 3, 1000` con RID = 5000 ⇒ `M[6000]`, y el mismo código recorre todo el arreglo.
+## Ventajas (y costos) de la BLUE indexada — la pregunta "¿ventajas?"
+
+> [!important] La respuesta en una línea
+> La indexada **no hace más rápida una instrucción**: la hace **más lenta** (24 pulsos contra 16). Lo que gana
+> es **capacidad de expresar programas**: con un registro índice, **un lazo recorre un arreglo entero** sin
+> reescribir el código. Se cambia **velocidad por potencia de programación**.
+
+**Ventajas:**
+
+| # | Ventaja | Por qué |
+|---|---|---|
+| 1 | **Recorrer arreglos con un lazo** | `EA = campo + RIF` permite `LDA 2, 100` dentro de un lazo: **una** instrucción para **n** elementos |
+| 2 | **Más memoria** | el campo pasa de **12 a 16 bits** ⇒ de 4 096 a **65 536** celdas |
+| 3 | **Más instrucciones** | el opcode pasa de **4 a 5 bits** ⇒ de 16 a **32** (aparecen `ENI`, `INI`, `LIX`, `SIX`, `RXT`, `IJP`, y las de interrupciones) |
+| 4 | **4 modos de direccionamiento** | el campo **modificador de 2 bits** agrega **indirecto** y **dos indexados** (antes sólo había directo) |
+| 5 | **Reubicación del programa** | el **registro base** desplaza todas las referencias ⇒ el mismo programa corre en cualquier zona de memoria |
+| 6 | **Copiar bloques (vector a vector)** | con **RIF** (origen) y **RID** (destino) a la vez, un lazo copia elemento a elemento |
+| 7 | **Lazos más baratos de codificar** | `IJP Reg, dir` (salta si el registro no es cero) evita tener que comparar contra cero con el AC |
+| 8 | **Base para interrupciones** | el hardware nuevo habilita `ION/IOF/SKF/EMR/RTI` y la pila con `SP` |
+
+**Costos (decirlos sube nota):**
+
+| Costo | Detalle |
+|---|---|
+| **Más pulsos por instrucción** | 24 en vez de 16 (3 ciclos: uno más para leer la 2.ª palabra y calcular la EA); el indirecto, **32** |
+| **Instrucción de 2 palabras** | ocupa el doble de memoria y hay que buscar la segunda palabra |
+| **Hardware extra** | sumador de direcciones, RIF, RID, RB, W, X y el decodificador del modificador |
+| **Programas más difíciles de leer** | hay que administrar los índices (`ENI`, `INI`) a mano |
+
+> [!tip] La frase que cierra la respuesta
+> "La BLUE base es un **juguete didáctico**: 16 instrucciones y direccionamiento directo, 8 o 16 pulsos. La
+> indexada es **una máquina de verdad**: 32 instrucciones, 64 K, cuatro modos y arreglos con lazos. **Paga** con
+> pulsos (24 en lugar de 16) y con hardware; **gana** en programas posibles."
+
+## Cómo responderlo en el final (3–4 minutos)
+
+1. **Definir qué se agregó (30 s).** RIF, RID, RB, sumador de direcciones (Σ), W/X y el **decodificador del
+   modificador**. Es la BLUE base + un bloque de cálculo de dirección.
+2. **Dibujar el formato (40 s).** 5 + 2 + 9 + 16 = 32 bits (2 palabras) y decir qué gana cada campo:
+   **más opcodes**, **más modos**, **más memoria**.
+3. **Los 4 modos con su EA (40 s).** directo, indirecto, `+RIF`, `+RID` (y recordar que **siempre** se suma el
+   **RB**).
+4. **Las ventajas (50 s).** La lista: **lazos sobre arreglos**, 64 K, 32 instrucciones, reubicación con RB,
+   copia vector-vector con RIF y RID. Y el **costo**: **24 pulsos** (32 el indirecto) contra 16.
+5. **Cierre con un ejemplo (30 s).** `INI RIF, 100` y un lazo con `LDA 2, 0` recorre **todo** el arreglo; el
+   mismo código, con otra base, recorre otro. "**Eso es lo que la BLUE base no podía hacer.**"
 
 ## Errores típicos
+- Decir que la indexada es "más rápida": es **más lenta** por instrucción (24 vs 16); lo que gana es
+  **expresividad**.
 - Decir que el índice se suma siempre (sólo en modos 2 y 3).
 - Confundir **indirecto** (`EA = M[campo]`) con **indexado** (`EA = campo + RIF/RID`).
 - Contar 16 pulsos para la LDA indexada (son **24**: la instrucción ocupa 2 palabras).
+
+## Para ampliar: qué leer y qué buscar
+
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **Apuntes de cátedra**, *Unidad 5* | *"Nuevo hardware, nuevas instrucciones"*, *"BLUE Indexada"*, *"Registro base"* | el formato 5+2+9+16, los modos y la lista de instrucciones nuevas | **Es la fuente exacta** |
+| **`blue.pdf`** (Foster) | las conclusiones del capítulo de la máquina elemental | qué limitaciones tiene la BLUE base (bus único, una dirección) | Para justificar **por qué** se la indexa |
+| **[[BLUE vs BLUE indexada — qué cambia y por qué]]** | nota de la bóveda | la tabla "qué cambia" (hardware, formato, modos, pulsos) | La comparación completa |
+| **[[Ciclo de LDA indexada (los 24 pulsos)]]** | nota de la bóveda | el ciclo de 24 pulsos de punta a punta | El costo, medido |
+| **[[Registros base e índice]]** · **[[Modos de direccionamiento]]** | notas de la bóveda | RIF/RID/RB y los siete modos de la teoría general | El detalle de cada pieza |
+| **[[Interrupciones y entrada-salida]]** | nota de la bóveda | `ION/IOF/SKF/EMR/RTI` y la pila con `SP` | La otra ventaja del hardware nuevo |
+| **[[TP19 Modos de direccionamiento]]** | el TP | el ejercicio del arreglo con índice | Lo que se entrega |
+| **Stallings, *Organización y arquitectura de computadores*** | capítulo de **modos de direccionamiento** | indexado y base + desplazamiento | Contexto teórico |
 
 ## Relacionado
 [[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Ciclo de LDA indexada (los 24 pulsos)]] ·
