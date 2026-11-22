@@ -170,6 +170,19 @@ produce la dirección inicial del microprograma; cada microinstrucción tiene ca
   `E · CP1 · REF`.
 - Creer que la decodificación es "un programa": en la BLUE es un **demultiplexor 1→16**.
 
+## Para ampliar: qué leer y qué buscar
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **`blue.pdf`** (Foster) | sección **"Circuitos de la unidad de control"**: **fig. 19** (árbol de decodificación), **figs. 20-29** (compuertas de cada señal) y **tablas 2, 3, 4, 5 y 7** | cómo se arma cada señal con compuertas y de dónde salen `ARITH`, `DTA` y `REF` (fig. 25) | **Es la fuente exacta** del diseño cableado, compuerta por compuerta |
+| **`blue.pdf`**, **"Unidad de control"** | clasificación **sincrónica vs asincrónica** y el circuito del reloj (fig. 10) | ventajas y desventajas de cada esquema | Para justificar por qué la BLUE es sincrónica |
+| **Apuntes de cátedra**, *Unidad 5* | sección del **decodificador del campo modificador** y del **secuenciador** en la figura de la BLUE indexada | cómo crece la UC al agregar modos: un decodificador más | Mostrar que el diseño escala |
+| **Apuntes de cátedra**, *Unidad 5* (sección del **8088**) | **BIU/EU**, la **ROM de control de 504 × 21 bits**, la PLA, el `microMAR`, el registro `SR` y el formato de microinstrucción | el ejemplo real de UC microprogramada con todos sus números | Es el caso concreto que se cita en el final |
+| **[[Unidad de control cableada y microprogramada]]** | la nota de la bóveda | el microprograma de ejemplo | Complemento conceptual |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulos de **control cableado** y **microprogramado** | diseño de la sección de control y del secuenciador | La referencia formal del tema |
+| **Tanenbaum, *Estructura de computadores*** | capítulo de **microprogramación** | microinstrucciones, microprograma, nanomemoria | Clara y con ejemplos |
+| **Patterson & Hennessy, *Estructura y diseño de computadores*** | capítulo del **procesador: control** | control combinacional (cableado) vs microprogramado, y por qué RISC elige cableado | Cierra con [[CISC y RISC]] |
+| **Stallings, *Organización y arquitectura de computadores*** | capítulo de **control del procesador** | funciones y señales de control, implementación | Otra enumeración para ampliar |
+
 ## Relacionado
 [[Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[Registros de la CPU]] ·
 [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Decodificador]] ·

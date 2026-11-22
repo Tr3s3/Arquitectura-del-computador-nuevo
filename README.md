@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 87 notas · 17 diagramas SVG · ~77.000 palabras · 1.004 enlaces internos, 0 rotos.
+**Estado:** 88 notas · 17 diagramas SVG · ~90.000 palabras · 1.070 enlaces internos, 0 rotos.
 
 ## Cómo abrirla
 
@@ -52,6 +52,7 @@ el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin
 | Practicar el pizarrón | `06_Practica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
 | Repasar tablas de verdad | `06_Practica/Tablas de verdad de memoria.md` |
 | Saber de dónde sale cada dato | `00_Inicio/05 Fuentes y qué aporta cada una.md` |
+| Saber **qué leer para ampliar** cada tema | `05_Examen/01 Qué leer para cada pregunta principal.md` |
 
 ## Fuentes
 

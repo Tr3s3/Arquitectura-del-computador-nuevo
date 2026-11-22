@@ -145,6 +145,17 @@ Trae la **primera palabra** de la instrucción y deja el PC apuntando a la palab
   memoria; en el gráfico de la cátedra no se dibuja en el ciclo para no complicarlo (ver
   [[Registros base e índice]]).
 
+## Para ampliar: qué leer y qué buscar
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **Apuntes de cátedra**, *Unidad 5* | sección **"Ciclos de instrucción"** de la BLUE indexada — las tablas de **`LDA 3, X`**, `LDA 1, X`, `LDA 0, X`, `INI` y `ENI` | las tres tablas de 8 pulsos con la columna **Acción** (Envíe/Cargue) tal como se copian en el pizarrón | **Es la fuente exacta**: esta nota es la transcripción comentada de esas tablas |
+| **`blue.pdf`** (Foster) | **Tabla 2** (ciclo de búsqueda) y **Tabla 5** (LDA/STA de dos ciclos) | la base de 1 ciclo de búsqueda + 1 de ejecución, con la misma notación | De ahí sale la mitad del ciclo; después la indexada agrega el ciclo de la EA |
+| **Apuntes de cátedra**, *Unidad 5*, comentarios finales | las 3 notas al pie de los ciclos ("1 a 4 ciclos según instrucción y modo", "la indexada no tiene formato fijo") | la explicación de por qué hay instrucciones de 1 a 4 ciclos | Para cerrar la respuesta con la generalización |
+| **[[TP18 Direccionamiento de memoria]]** | el TP | los cálculos de memoria y direcciones | Complemento del "por qué 16 bits de dirección y 65 536 celdas" |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **microoperaciones** | cómo se escriben las microoperaciones por paso de reloj (`T0, T1…`) | Para poder pasar de "CP1…CP8" a la notación formal sin trabarte |
+| **Patterson & Hennessy, *Estructura y diseño de computadores*** | capítulo del **procesador multiciclo** | por qué una instrucción que necesita dos accesos a memoria cuesta más ciclos | Entender el paralelo: `lw` en MIPS también usa varios ciclos |
+| **[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]** | la nota de la bóveda | las tablas de las otras instrucciones | Para responder si te piden comparar con LDA/STA/ADD |
+
 ## Relacionado
 [[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
 [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de la instrucción LDA (24 pulsos)]] ·

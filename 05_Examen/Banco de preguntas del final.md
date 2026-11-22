@@ -14,6 +14,11 @@ tipo: examen
 > [[04 Resumen integrador de la materia]]; el trazo de los circuitos, en
 > [[Cómo dibujar los circuitos (checklist de pizarrón)]].
 
+> [!tip] Material de consulta por pregunta
+> Si querés **ampliar** cada tema (o saber de dónde sale cada dato), usá
+> [[01 Qué leer para cada pregunta principal]]: tiene, para cada pregunta, la fuente de la cátedra con la sección
+> exacta y la ampliación bibliográfica recomendada.
+
 > [!important] Empezá por la matriz
 > Si tenés poco tiempo, no leas este banco de arriba a abajo: abrí [[00 Matriz del final — las 3 tandas]],
 > elegí una tanda y respondé en voz alta con lo que linkea cada ítem. Este banco sirve como índice general

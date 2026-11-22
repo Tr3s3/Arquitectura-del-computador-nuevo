@@ -34,6 +34,12 @@ tipo: guia
 Empezá por el [[00 Índice de TPs y qué aporta cada uno|índice de TPs]] si querés ver de un saque qué pide
 la cátedra, y por [[04 Resumen integrador de la materia]] si querés el recorrido completo en 20 minutos.
 
+## Cada nota maestra tiene material de consulta
+Las notas de las **preguntas principales** terminan con una sección **"Para ampliar: qué leer y qué buscar"**:
+una tabla con la fuente (cátedra y libros), **en qué parte** y **qué mirar**. Todo junto está en
+[[01 Qué leer para cada pregunta principal]], con la bibliografía comentada (qué es bueno para qué) y un plan de
+lectura según el tiempo que tengas.
+
 ## Cómo leer cada nota
 
 > [!tip] Las notas están escritas para alguien que **no sabe nada** del tema

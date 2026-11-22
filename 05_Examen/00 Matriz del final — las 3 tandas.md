@@ -13,6 +13,11 @@ prioridad: maxima
 > son 10 temas de memoria y arquitectura; la 3.ª tanda es **todo con gráficos, tablas de verdad paso a paso
 > y funciones**. Es un oral: se aprueba **dibujando y explicando el dibujo**.
 
+> [!tip] Cada nota tiene su sección **"Para ampliar"**
+> Al final de cada nota maestra hay una tabla de **qué material de consulta leer** para ese tema (qué fuente, en
+> qué parte y qué buscar). El conjunto está reunido en
+> [[01 Qué leer para cada pregunta principal]] — es el mapa de bibliografía del final.
+
 > [!important] Regla de oro que se desprende de la matriz
 > La 3.ª tanda dice literalmente *"todo esto con gráficos y tablas de verdad paso a paso y funciones"*.
 > Es decir: **no alcanza con decir la definición**. De cada circuito hay que entregar
@@ -94,6 +99,6 @@ prioridad: maxima
 - [[Unidad de Control]] — para el punto 6 de la 1.ª tanda.
 
 ## Relacionado
-[[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] ·
+[[01 Qué leer para cada pregunta principal]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] ·
 [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]] ·
 [[00 Índice de TPs y qué aporta cada uno]]

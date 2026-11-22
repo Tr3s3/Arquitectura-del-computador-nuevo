@@ -118,6 +118,18 @@ Desarrollo completo en [[Ciclo de LDA indexada (los 24 pulsos)]].
 - Olvidar que el **registro base se suma siempre**; el índice se suma **sólo si el modificador lo pide**.
 - Decir "24 pulsos" sin poder explicar que son **3 ciclos de máquina de 8**.
 
+## Para ampliar: qué leer y qué buscar
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **Apuntes de cátedra**, *Unidad 5 — Arquitectura convencional* | secciones **"Nuevo hardware, nuevas instrucciones"** (registros índice, sumador de direcciones, decodificador del modificador), **"Registro base"** y **"BLUE Indexada"** (con la figura de la máquina) | la lista completa de lo que se agrega y el ejemplo del *Relocating Loader* (1000 → 5000) | **Es la fuente exacta**: la comparación y el diagrama salen de ahí |
+| **`blue.pdf`** (Foster) | **"Descripción para el programador"**, **"El juego de instrucciones"** y las **Conclusiones** | lo que la BLUE **no** tiene ("no existe direccionamiento indirecto, registros índices, interrupciones") | Te da el punto de partida y la justificación de cada agregado |
+| **Apuntes de cátedra**, *Unidad 5*, final | **"Conjunto de instrucciones de BLUE Indexada"** (opcodes 00 a 37) | qué instrucciones nuevas hay (`ENI`, `INI`, `LIX`, `SIX`, `RXT`, `IJP`) y cuántas palabras ocupa cada una | Para responder "¿qué instrucciones se agregan y por qué?" |
+| **[[TP19 Modos de direccionamiento]]** y **[[TP17 Formato básico de instrucciones]]** | los TPs | cómo la cátedra pide comparar formatos y modos | Ejercitación directa |
+| **[[Ciclo de LDA indexada (los 24 pulsos)]]** | la nota de la bóveda | el ciclo completo del caso indexado | Cerrar la respuesta con un ejemplo concreto |
+| **Patterson & Hennessy, *Estructura y diseño de computadores*** | capítulo de **direccionamiento y formatos** | `base + índice`, load/store, por qué RISC usa dos registros índice | Ver la misma idea en una ISA moderna |
+| **Brey, *Los microprocesadores Intel 8086/8088*** | capítulo de **registros y direccionamiento** | `SI`/`DI`, `BX`/`BP`, segmentos | El paralelo con una CPU real (usalo si te preguntan "¿esto existe de verdad?") |
+| **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **direccionamiento** | indexación, registro base, reubicación | Formalización del mismo concepto |
+
 ## Relacionado
 [[Ciclo de LDA indexada (los 24 pulsos)]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
 [[Registros base e índice]] · [[Modos de direccionamiento]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] ·
