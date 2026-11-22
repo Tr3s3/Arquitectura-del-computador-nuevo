@@ -29,7 +29,7 @@ Todas las notas de concepto respetan el mismo esqueleto:
 
 ## Convenciones
 
-- `![[nombre.svg]]` = diagrama. En Obsidian podés hacer clic para agrandarlo (y `![[nombre.svg|700]]` para fijar el ancho).
+- `![nombre](assets/nombre.svg)` = diagrama. En Obsidian podés hacer clic para agrandarlo (y `![nombre](assets/nombre.svg)` para fijar el ancho).
 - Los bloques de color (callouts) tienen significado fijo:
   - `[!abstract]` → la respuesta corta.
   - `[!warning]` → **verificar con el apunte de cátedra** (números de pulsos, nombres exactos de señales).

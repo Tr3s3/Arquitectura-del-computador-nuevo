@@ -23,7 +23,7 @@ prioridad: maxima
 | Unidades | UC + ALU + memoria + E/S | ver [[Estructura básica de un computador]] |
 
 ## Diagrama de bloques
-![[blue_flujo.svg]]
+![blue_flujo](assets/blue_flujo.svg)
 
 ## El conjunto de instrucciones (las 16)
 | Opcode | Mnemónico | Qué hace | Microoperación |

@@ -26,7 +26,7 @@ También es el modelo del **demultiplexado de direcciones**: una dirección deco
 ## Funciones
 `Y0 = D·S1'·S0'`  `Y1 = D·S1'·S0`  `Y2 = D·S1·S0'`  `Y3 = D·S1·S0`
 
-![[demux_1x4.svg]]
+![demux_1x4](assets/demux_1x4.svg)
 
 **Estructura:** 4 compuertas **AND de 3 entradas**: en cada una entra el dato D y la combinación de
 selectores que la habilita. (Si el dato D es siempre 1, el DEMUX se comporta como un **decodificador**:

@@ -22,7 +22,7 @@ Se trae un bloque porque la **localidad espacial** dice que se van a usar las pa
 ([[Jerarquía de memorias]]).
 
 ## La dirección vista por la caché
-![[cache_mapeos.svg]]
+![cache_mapeos](assets/cache_mapeos.svg)
 
 Se parte la dirección en tres campos:
 | Campo | Para qué sirve |

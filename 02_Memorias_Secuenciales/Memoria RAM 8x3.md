@@ -19,7 +19,7 @@ prioridad: maxima
 | Capacidad total | 24 bits | 8 × 3 |
 | Rango de direcciones | 000 a 111 | 0 a 7 en decimal |
 
-![[ram_8x3.svg]]
+![ram_8x3](assets/ram_8x3.svg)
 
 ## Estructura interna
 1. **Decodificador 3→8**: recibe A2 A1 A0 y activa **una** de las 8 líneas de selección (mintérminos

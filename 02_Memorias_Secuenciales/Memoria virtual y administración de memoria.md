@@ -23,7 +23,7 @@ La dirección virtual se parte: `nº de página virtual (VPN) | desplazamiento`.
 La traducción se hace con la **tabla de páginas**: por cada página virtual guarda el **marco físico**,
 más bits de control (presente, modificada/dirty, de acceso, permisos).
 
-![[cache_mapeos.svg]]
+![cache_mapeos](assets/cache_mapeos.svg)
 
 ## Tabla de páginas asociativa (TLB)
 La tabla de páginas está en memoria ⇒ cada acceso costaría dos accesos. Para evitarlo se usa la **TLB**

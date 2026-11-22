@@ -15,7 +15,7 @@ prioridad: alta
 `EA` = dirección que se envía a la memoria para acceder al operando. Cada modo es una forma distinta de
 calcularla; algunos modos **no acceden a memoria** (inmediato, registro) y otros acceden **una o dos veces**.
 
-![[modos_direccionamiento.svg]]
+![modos_direccionamiento](assets/modos_direccionamiento.svg)
 
 ## Los cinco modos de la cátedra
 | Modo | Forma simbólica | Cómo se calcula EA | Accesos a memoria | Uso típico |

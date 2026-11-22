@@ -47,7 +47,7 @@ prioridad: maxima
 > lo que importa es que puedas decir **qué hace cada campo** y **cuántos modos habilita**.
 
 ## El sumador de direcciones (la pieza nueva)
-![[modos_direccionamiento.svg]]
+![modos_direccionamiento](assets/modos_direccionamiento.svg)
 
 ```
    dirección (16 bits, del IR) ──┐

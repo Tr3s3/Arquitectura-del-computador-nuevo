@@ -27,7 +27,7 @@ De ahí que convenga traer **bloques** de instrucciones/datos, no palabras suelt
 que hace la [[Memoria caché]].
 
 ## Los niveles
-![[jerarquia_memorias.svg]]
+![jerarquia_memorias](assets/jerarquia_memorias.svg)
 
 | Nivel | Tecnología | Tiempo típico | Capacidad | Administrado por |
 |---|---|---|---|---|

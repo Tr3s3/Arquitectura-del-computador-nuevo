@@ -35,7 +35,7 @@ Simplificación de Cout: `Cout = Cin(A'B + AB') + AB(Cin' + Cin) = Cin(A⊕B) + 
 (acarreo **propagado** + acarreo **generado**).
 
 **3) Gráfico**
-![[sumador_completo.svg]]
+![sumador_completo](assets/sumador_completo.svg)
 
 2 XOR + 2 AND + 1 OR. Señales intermedias: `S1 = A⊕B`, `A·B`, `S1·Cin`.
 
@@ -68,12 +68,12 @@ Y0 = A1'·A0'      Y1 = A1'·A0
 Y2 = A1 ·A0'      Y3 = A1 ·A0
 ```
 **3) Gráfico**
-![[decodificador_2x4.svg]]
+![decodificador_2x4](assets/decodificador_2x4.svg)
 
 2 inversores (generan A1', A0') + 4 compuertas AND de 2 entradas.
 
 **4) El 3→8** (el de las memorias): 8 salidas, 3 bits de dirección ⇒ 8 palabras.
-![[decodificador_3x8.svg]]
+![decodificador_3x8](assets/decodificador_3x8.svg)
 
 **5) Cierre:** aplicaciones — seleccionar palabra de memoria, habilitar un registro, decodificar el opcode.
 
@@ -104,7 +104,7 @@ Y0 = D·S1'·S0'     Y1 = D·S1'·S0
 Y2 = D·S1 ·S0'     Y3 = D·S1 ·S0
 ```
 **3) Gráfico**
-![[demux_1x4.svg]]
+![demux_1x4](assets/demux_1x4.svg)
 
 4 compuertas AND de 3 entradas: el dato `D` entra a todas y el selector habilita una sola.
 
@@ -137,7 +137,7 @@ Y2 = D·S1 ·S0'     Y3 = D·S1 ·S0
 Z = S1'·S0'·D0 + S1'·S0·D1 + S1·S0'·D2 + S1·S0·D3
 ```
 **3) Gráfico**
-![[mux_4x1.svg]]
+![mux_4x1](assets/mux_4x1.svg)
 
 4 compuertas AND de 3 entradas (dato + dos selectores) y una OR de 4 entradas.
 
@@ -280,7 +280,7 @@ programa no la ve (es transparente). Funciona por **localidad** temporal y espac
 **Partes de la dirección:** `etiqueta (tag) | índice (línea o conjunto) | desplazamiento`.
 Cada línea guarda: `bit de validez + etiqueta + bloque de datos (+ bit dirty)`.
 
-![[cache_mapeos.svg]]
+![cache_mapeos](assets/cache_mapeos.svg)
 
 **Los tres mapeos**
 

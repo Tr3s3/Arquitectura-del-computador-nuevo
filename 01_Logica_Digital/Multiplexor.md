@@ -27,7 +27,7 @@ circuito que decide **cuál** de las fuentes llega al bus. Por eso aparece en:
 | 1 | 0 | D2 |
 | 1 | 1 | D3 |
 
-![[mux_4x1.svg]]
+![mux_4x1](assets/mux_4x1.svg)
 
 **Estructura:** por cada entrada de datos, una compuerta AND de 3 entradas (el dato + los dos selectores,
 negados o no según corresponda) y una **OR final** de 4 entradas. Es decir: **AND-OR = suma de productos**.

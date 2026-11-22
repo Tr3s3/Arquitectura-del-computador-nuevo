@@ -17,7 +17,7 @@ habilita su salida de tres estados y **otro** activa su `LOAD`: una transferenci
 fuentes a la vez (se cortocircuitaría el bus).
 
 **Dibujo.** Los 5 registros (PC, MAR, MBR, IR, AC) colgando del bus, con la memoria arriba y la UC/ALU abajo.
-→ ![[blue_flujo.svg]]
+→ ![blue_flujo](assets/blue_flujo.svg)
 
 **Desarrollo.** Hay dos flujos:
 - **Direcciones (12 bits, unidireccional):** `PC → MAR → bus de direcciones → memoria` en la búsqueda;

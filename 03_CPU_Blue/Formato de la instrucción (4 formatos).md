@@ -13,7 +13,7 @@ prioridad: maxima
 > instrucción corta pero más instrucciones y un registro implícito (el acumulador).
 
 ## Los cuatro formatos
-![[formatos_instruccion.svg]]
+![formatos_instruccion](assets/formatos_instruccion.svg)
 
 | Formato | Campos | Operación típica | Comentario |
 |---|---|---|---|

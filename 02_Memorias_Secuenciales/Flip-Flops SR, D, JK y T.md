@@ -22,7 +22,7 @@ El flip-flop se obtiene **realimentando** compuertas (dos NOR o dos NAND cruzada
 es lo que le permite "quedarse" con un valor: si Q = 1 y no se lo cambia, sigue en 1 indefinidamente.
 
 ## Los cuatro tipos
-![[flipflops.svg]]
+![flipflops](assets/flipflops.svg)
 
 ### 1) S-R (Set-Reset)
 | S | R | Q(t+1) |

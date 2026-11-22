@@ -43,7 +43,7 @@ La demostración de la simplificación de Cout: `A'BCin + AB'Cin + ABCin' + ABC`
 - `Cout = G + P·Cin`.
 
 ## Circuito (2 XOR + 2 AND + 1 OR)
-![[sumador_completo.svg]]
+![sumador_completo](assets/sumador_completo.svg)
 
 Estructura interna, de izquierda a derecha:
 1. `X1`: `S1 = A ⊕ B`

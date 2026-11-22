@@ -12,7 +12,7 @@ prioridad: maxima
 > mover información entre esas unidades por los buses.
 
 ## El dibujo (hay que saber hacerlo de memoria)
-![[estructura_basica.svg]]
+![estructura_basica](assets/estructura_basica.svg)
 
 ## Las unidades y qué hace cada una
 | Unidad | Función | Contiene |

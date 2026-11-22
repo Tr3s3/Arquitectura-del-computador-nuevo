@@ -32,7 +32,7 @@ En forma canónica: `S = Σm(1,2)`, `C = Σm(3)`.
 ## Circuito
 Dos compuertas: una XOR y una AND sobre las mismas entradas.
 
-![[semisumador.svg]]
+![semisumador](assets/semisumador.svg)
 
 ## Verificación con números
 `1 + 1` en binario da `10` (dos): el semisumador devuelve S = 0 y C = 1 ⇒ "0 con acarreo 1" = 10₂. ✔

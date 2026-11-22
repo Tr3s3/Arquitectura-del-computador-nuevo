@@ -18,7 +18,7 @@ Con pipeline (tres máquinas y tres personas): mientras se seca una carga se lav
 La primera carga sigue tardando 3 horas, pero después **sale una carga por hora**.
 Eso es exactamente lo que hace la CPU.
 
-![[pipeline.svg]]
+![pipeline](assets/pipeline.svg)
 
 ## Ejemplo numérico (el que se pide "definir y ejemplificar")
 4 etapas: **BI** (búsqueda) → **DE** (decodificación) → **OP** (lectura de operandos) → **EJ** (ejecución).
