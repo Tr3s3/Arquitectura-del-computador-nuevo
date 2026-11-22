@@ -5,6 +5,13 @@ examen: secundario
 ---
 # Memoria ROM y sus tipos
 
+> [!note] Si es la primera vez que ves esto
+> Cuando encendés la computadora, la RAM está **vacía** (es volátil) — entonces, ¿quién le dice a la máquina
+> qué hacer? Ahí entra la **ROM**: una memoria que **conserva su contenido sin corriente**. Guarda lo mínimo
+> indispensable para arrancar (BIOS/firmware) y las tablas fijas. Es "de sólo lectura" desde el punto de vista
+> del funcionamiento normal, aunque se pueda grabar con un equipo especial (PROM, EPROM, EEPROM, flash). Su
+> celda no es un biestable sino un **diodo o transistor** que está o no está: por eso no se pierde.
+
 > [!abstract] En una frase
 > La ROM (Read Only Memory) es una memoria **no volátil** cuyo contenido se fija al fabricarla o se graba
 > con un equipo especial: en operación normal **sólo se lee**. Se usa para el firmware/BIOS, para tablas

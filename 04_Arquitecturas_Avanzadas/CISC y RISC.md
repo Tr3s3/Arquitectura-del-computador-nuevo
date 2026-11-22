@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # CISC y RISC
 
+> [!note] Si es la primera vez que ves esto
+> Hay dos filosofías para diseñar el repertorio de instrucciones de una CPU. **CISC**: "que la instrucción
+> haga mucho" (pocas instrucciones, complejas, largas, con control microprogramado). **RISC**: "que la
+> instrucción haga poquito pero rapidísimo" (muchas instrucciones simples, todas del mismo tamaño, control
+> cableado, pipeline). Es la diferencia entre un **cuchillo multiuso** y un juego de **cuchillos
+> especializados**: el multiuso hace de todo con un solo objeto, el juego es más rápido si sabés cuál usar.
+> Las CPUs actuales son híbridas: por fuera hablan CISC (x86), por dentro trabajan RISC.
+
 > [!abstract] En una frase
 > **CISC** (*Complex Instruction Set Computer*) apuesta a **pocas instrucciones complejas** que hagan mucho
 > trabajo (x86); **RISC** (*Reduced Instruction Set Computer*) apuesta a **muchas instrucciones simples y

@@ -6,6 +6,14 @@ prioridad: maxima
 ---
 # Estructura básica de un computador
 
+> [!note] Si es la primera vez que ves esto
+> Un computador son **cinco cosas y tres cables**. Las cinco: **CPU** (que piensa: UC + ALU + registros),
+> **memoria** (que guarda), **entrada** (teclado), **salida** (pantalla) y **buses** (que comunican). Los tres
+> cables: **datos** (lo que viaja), **direcciones** (a dónde va) y **control** (qué hay que hacer). Con ese
+> esquema entendés cualquier computadora, desde una calculadora hasta un servidor: cambian los tamaños, no la
+> estructura. La idea revolucionaria que lo hace posible es la de **von Neumann**: el programa se guarda en la
+> misma memoria que los datos, así que la máquina no necesita estar "cableada" para cada tarea.
+
 > [!abstract] En una frase
 > Un computador tiene **cuatro unidades** —CPU (Unidad de Control + ALU + registros), Memoria, Entrada y
 > Salida— unidas por **tres buses** (datos, direcciones y control). Todo el funcionamiento consiste en
@@ -71,7 +79,7 @@ usarse para **seleccionar el módulo** (memoria o E/S) y los bajos para la posic
 Elementos de bus que conviene nombrar: **maestro/esclavo**, **arbitraje** (petición/cesión), **síncrono vs
 asíncrono** (handshake READY/ACK), **multiplexado** y **jerarquía de buses** (local, sistema, E/S, expansión).
 
-## Von Neumann vs Harvard## Von Neumann vs Harvard
+## Von Neumann vs Harvard
 - **Von Neumann** (la de la materia): **una sola memoria** para instrucciones y datos, un solo bus ⇒
   simple, pero el bus es cuello de botella (no se puede traer una instrucción y un dato a la vez:
   **cuello de botella de von Neumann**).

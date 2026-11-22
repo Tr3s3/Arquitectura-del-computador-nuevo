@@ -36,6 +36,11 @@ la cátedra, y por [[04 Resumen integrador de la materia]] si querés el recorri
 
 ## Cómo leer cada nota
 
+> [!tip] Las notas están escritas para alguien que **no sabe nada** del tema
+> Las notas troncales arrancan con un bloque **"Si es la primera vez que ves esto"**: una analogía y el
+> problema que resuelve ese concepto, antes de cualquier definición. Si ya sabés el tema, saltealo. Si no,
+> leelo dos veces: está pensado para que el resto de la nota se entienda sin ayuda.
+
 Todas las notas de concepto respetan el mismo esqueleto:
 
 1. **En una frase** → la respuesta mínima que tenés que poder decir.

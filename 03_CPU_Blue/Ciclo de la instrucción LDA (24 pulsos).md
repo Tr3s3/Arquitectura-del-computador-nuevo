@@ -4,91 +4,64 @@ tipo: concepto
 examen: secundario
 prioridad: maxima
 ---
-# Ciclo de la instrucción LDA (24 pulsos)
+# Ciclo de la instrucción LDA (16 o 24 pulsos, según la máquina)
 
 > [!abstract] En una frase
-> La instrucción completa `LDA D` (`AC ← M[D]`) insume **24 pulsos**: **8 de búsqueda** (traer la
-> instrucción) + **16 de ejecución** (traer el operando y cargarlo en el AC), contando **2 pulsos por
-> microoperación** (fase 1: la fuente pone el dato en el bus; fase 2: el destino lo carga).
+> La `LDA` **carga el acumulador con lo que hay en memoria**. En la **BLUE base** (instrucción de 1 palabra)
+> tarda **2 ciclos de máquina = 16 pulsos**. En la **BLUE indexada** (instrucción de 2 palabras) tarda
+> **3 ciclos de máquina = 24 pulsos**, porque hay un ciclo extra para traer el campo de dirección y calcular
+> la dirección efectiva. **La pregunta del final ("los 24 pulsos") es la de la BLUE indexada.**
 
-## La cuenta primero (para el pizarrón)
-```
-   búsqueda ..........  8 pulsos   (traer la instrucción al IR)
- + ejecución ......... 16 pulsos   (8 microoperaciones × 2 pulsos)
- ────────────────────────────────
-   total LDA ......... 24 pulsos
-```
+> [!warning] Leé esto antes que nada
+> Si en algún resumen ves una cuenta de "8 de búsqueda + 16 de ejecución, a 2 pulsos por microoperación",
+> **no es la cuenta de la cátedra**. El apunte de Foster (el que usa la materia) cuenta **ciclos de máquina de
+> 8 pulsos**: 2 ciclos para la LDA de la BLUE base y 3 para la indexada. En el oral usá **siempre** la cuenta
+> por ciclos de máquina, que es la que está en la tabla de abajo. La versión completa y dibujada está en
+> [[Ciclo de LDA indexada (los 24 pulsos)]].
 
-## Búsqueda (T0 – T7) — igual para todas las instrucciones
-| Pulso | Microoperación | Señales |
+## Las dos cuentas, lado a lado
+| | **BLUE base** | **BLUE indexada** |
 |---|---|---|
-| T0 | `MAR ← PC` | `PCout`, `MARin` |
-| T1 | `MEMR = 1` | `MEMR` |
-| T2 | espera de memoria | — |
-| T3 | `MBR ← M[MAR]` | `MBRload` |
-| T4 | `PC ← PC + 1` | `PCinc` |
-| T5 | `IR ← MBR` | `MBRout`, `IRin` |
-| T6 | decodificar el opcode (`LDA`) | UC |
-| T7 | `STATE ← E` | `STATE` |
+| Formato de la instrucción | 16 bits = **1 palabra** | 32 bits = **2 palabras** |
+| Ciclos de máquina | 2 | **3** |
+| Pulsos | **16** | **24** |
+| Por qué | búsqueda + ejecución | búsqueda + traer el campo de dirección y sumar el índice + ir al operando |
 
-## Ejecución (T8 – T23) — 8 microoperaciones × 2 pulsos
-| Microoperación | Pulsos | Fase 1 (fuente → bus) | Fase 2 (bus → destino) |
-|---|---|---|---|
-| E1 · `MAR ← IR(dir)` | T8–T9 | `IRout` | `MARin` |
-| E2 · activar lectura | T10–T11 | `MEMR = 1` | (espera) |
-| E3 · `MBR ← M[MAR]` | T12–T13 | la memoria pone el dato | `MBRload` |
-| E4 · `AC ← MBR` | T14–T15 | `MBRout` | `ACin` |
-| E5 · desactivar lectura | T16–T17 | `MEMR = 0` | (libera el bus) |
-| E6 · actualizar flags | T18–T19 | (la ALU/UC evalúa el AC) | `load flags` (Z, C) |
-| E7 · preparar el próximo ciclo | T20–T21 | (el PC ya apunta a la siguiente) | (selección de la fuente de la próxima búsqueda) |
-| E8 · `STATE ← F` | T22–T23 | — | `STATE` |
+## BLUE base: 16 pulsos (2 ciclos)
+**Ciclo 1 — búsqueda** (igual para todas las instrucciones): CP1 `PC→MAR` y orden de lectura · CP2 `+1→Y` ·
+CP3 espera · CP4 `SUMA→PC` · CP5 strobe MBR · CP6 `MBR→IR` · CP7 — · CP8 `E→STATE`.
 
-⇒ 8 microoperaciones × 2 pulsos = **16 pulsos** de ejecución ⇒ **8 + 16 = 24**.
+**Ciclo 2 — ejecución de LDA**: CP1 `IR→MAR` y orden de lectura · CP2-CP3 espera · CP4 strobe MBR ·
+**CP5 `MBR→A`** (el dato entra al acumulador) · CP6-CP7 — · CP8 `F→STATE`.
 
-## Diagrama de la instrucción completa
-```
- T0 ─ T7 : BÚSQUEDA            T8 ─ T23 : EJECUCIÓN de LDA
- ┌─────────────────────┐       ┌───────────────────────────────────┐
- │ PC→MAR  MEMR  MBR    │  IR   │ MAR←IR  MEMR  MBR←M[MAR]  AC←MBR  │
- │ PC+1    IR←MBR  decod│──────→│ flags   STATE←F                   │
- └─────────────────────┘       └───────────────────────────────────┘
-```
+## BLUE indexada: 24 pulsos (3 ciclos)
+| Ciclo | Pulsos | Qué pasa |
+|---|---|---|
+| 1 · Búsqueda | 1–8 | se trae la **primera palabra** (opcode + modificador) y el PC apunta a la segunda |
+| 2 · Ejecución 1 | 9–16 | se trae la **segunda palabra** (campo de dirección) y se calcula `EA = W + X` con el **sumador de direcciones** (X = 0, RIF o RID según el modificador) |
+| 3 · Ejecución 2 | 17–24 | se direcciona `EA`, se lee y **CP22: `MBR→A`**; CP24: `F→STATE` |
 
-> [!warning] Sobre el número 24
-> El número depende del criterio de conteo del apunte. Las dos formas de contarlo:
-> - **2 pulsos por microoperación** (éste): `LDA` = 8 + 16 = **24**.
-> - **1 pulso por microoperación** (con registros que se cargan en el mismo pulso en que se habilita el bus):
->   `LDA` ≈ 8 + 8 = **16**.
->
-> En el oral, decí el criterio antes que el número: *"cuento dos pulsos por microoperación porque el bus
-> único exige primero seleccionar la fuente y después cargar el destino; con ese criterio LDA da 24"*.
-> Eso es exactamente lo que se quiere escuchar: **que la cuenta esté justificada**.
+![Los 24 pulsos de la LDA indexada](../assets/lda24_pulsos.svg)
 
-## Comparación con otras instrucciones (mismo criterio)
-| Instrucción | Búsqueda | Ejecución | Total | Por qué |
+## Los cuatro modos de LDA
+| Instrucción | Modo | EA | Ciclos | Pulsos |
 |---|---|---|---|---|
-| `LDA D` | 8 | 16 | **24** | un acceso a memoria + carga del AC |
-| `STA D` | 8 | ~12 | ~20 | un acceso (escritura), menos pasos |
-| `ADD D` | 8 | 16 | 24 | igual a LDA + el paso de ALU |
-| `NOT` | 8 | 6 | ~14 | no accede a memoria |
-| `JMP D` | 8 | 4 | ~12 | `PC ← IR(dir)`, sin memoria |
-
-(En BLUE, si la máquina tiene ciclo fijo, las instrucciones cortas **gastan** los pulsos sobrantes: por eso
-`NOP` existe. Si la UC tiene lógica de fin anticipado, terminan antes.)
+| `LDA 0, X` | directo | `X` | 3 | 24 |
+| `LDA 1, X` | indirecto | `M[X]` | 4 | 32 |
+| `LDA 2, X` | indexado RIF | `X + RIF` | 3 | 24 |
+| `LDA 3, X` | indexado RID | `X + RID` | 3 | 24 |
 
 ## Cómo responderlo en el final
-1. Enunciar la cuenta: 8 de búsqueda + 16 de ejecución = 24, con el criterio de 2 pulsos por microoperación.
-2. Desarrollar la tabla de la búsqueda (T0–T7).
-3. Desarrollar la tabla de la ejecución, microoperación por microoperación.
-4. Explicar el rol de cada señal (`IRout`, `MARin`, `MEMR`, `MBRout`, `ACin`).
-5. Cerrar: la búsqueda es común a todas las instrucciones; lo que cambia es la ejecución, y por eso
-   `LDA`, `STA` y `ADD` difieren sólo en la última parte.
+1. Aclarar **de qué máquina** hablás (BLUE base = 16; indexada = 24) — la pregunta es la indexada.
+2. Decir la regla: **1 ciclo de máquina = 8 pulsos**; la LDA indexada usa **3**.
+3. Dibujar la barra de 24 pulsos en tres bloques y marcar los cuatro pulsos clave (CP1, CP6, CP13-CP14, CP22).
+4. Cerrar con el contraste: directo 24 · indexado 24 · **indirecto 32**.
 
 ## Errores típicos
-- Sumar mal: 8 + 16 = 24 √ (no 8 + 8).
-- Poner `AC ← MBR` antes de `MBR ← M[MAR]`.
-- Olvidar el pulso de `STATE ← F` (sin él la máquina no vuelve a buscar).
-- Contar el pulso de espera de memoria dos veces (una en búsqueda y otra en ejecución) sin avisar.
+- Mezclar las dos cuentas (decir 24 en la BLUE base o 16 en la indexada).
+- Contar 24 pulsos pero **2 ciclos** de máquina.
+- Olvidar el segundo incremento del PC (ciclo 2, CP4).
 
 ## Relacionado
-[[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Flujo de información en BLUE (datos y direcciones)]] · [[Unidad de Control]]
+[[Ciclo de LDA indexada (los 24 pulsos)]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
+[[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Registros base e índice]]

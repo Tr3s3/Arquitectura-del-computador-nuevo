@@ -26,16 +26,20 @@ prioridad: maxima
 ⇒ **8 pulsos** (`T0` a `T7`).
 
 ## ¿Y los 7 pulsos?
-> [!warning] El punto que hay que saber explicar
-> La secuencia **conceptual** tiene 7 operaciones (MAR←PC, MEMR, MBR←dato, PC+1, IR←MBR, decodificar,
-> STATE←E). El **8.º pulso** aparece cuando la memoria necesita un pulso extra de **espera** para que el
-> dato esté estable en el bus (`T2` en la tabla). Por eso la bibliografía habla indistintamente de 7 u 8:
-> - **7 pulsos**: memoria rápida / diseño con el incremento del PC en paralelo con `MAR ← PC`.
-> - **8 pulsos**: se cuenta el pulso de espera de memoria (o el de decodificación como pulso propio).
+> [!important] La respuesta exacta (está en el apunte de Foster que usa la cátedra)
+> El ciclo de máquina de la BLUE tiene **8 pulsos**, pero **la búsqueda se completa en 7**: en CP1 se copia el
+> PC al MAR (y a Z) y se ordena la lectura; CP2 pone +1 en Y; CP3 deja estabilizar la ALU; **CP4 incrementa el
+> PC**; CP5 copia el dato de memoria al MBR; **CP6 pasa el MBR al IR** y empieza la decodificación; **CP7 y CP8
+> quedan libres** para ejecutar.
 >
-> En el final conviene decir: *"la búsqueda tiene 7 pasos; el conteo en pulsos es 7 u 8 según se cuente el
-> pulso de espera de memoria (o el incremento del PC solapado). Si tu apunte dice 8, la tabla es T0…T7."*
-> Lo que **se evalúa** es que puedas justificar la cuenta, no el número.
+> **¿Por qué 8 y no 7, entonces?** Porque la BLUE original usaba **memoria de núcleos de ferrita**, que es
+> **destructiva**: al leerla, el dato se borra, así que hay que **volver a escribirlo**. Ese pulso extra era
+> para la reescritura. Con memorias de semiconductores (no destructivas) el octavo pulso ya no es necesario,
+> pero **se mantiene** para no cambiar el diseño y se aprovecha para adelantar la ejecución (las 8
+> instrucciones que terminan en un solo ciclo lo usan).
+>
+> **Frase para el final**: *"la búsqueda necesita 7 pulsos; el ciclo de máquina tiene 8 porque el octavo era
+> el pulso de reescritura de la memoria de ferrita. Con semiconductores sobra, y se usa para ejecutar."*
 
 ## Diagrama de tiempos
 ```
@@ -83,7 +87,7 @@ Estos 6 pasos se ven aplicados a un programa concreto en [[TP16 Ciclo de instruc
 sumarle 3, guardar el resultado). Si te piden "el ciclo de búsqueda", detallá los pulsos; si te piden "el
 ciclo de instrucción básico", usá estos 6 pasos. **Son el mismo proceso con distinto nivel de detalle.**
 
-## Cómo responderlo en el final## Cómo responderlo en el final
+## Cómo responderlo en el final
 1. Definir: secuencia fija que trae la instrucción al IR.
 2. Listar la tabla de 8 pulsos con señal(es) por pulso.
 3. Aclarar explícitamente el asunto de **7 vs 8** (pulso de espera / incremento solapado).

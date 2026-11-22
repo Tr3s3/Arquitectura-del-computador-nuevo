@@ -8,6 +8,11 @@ tipo: guia
 > preguntan para subir o bajar) y **7 de práctica** (son las que se resuelven en el pizarrón).
 > Estudiá en ese orden, no en el orden del programa.
 >
+> [!important] Empezá por la matriz real
+> La foto que pasó el profesor con las **3 tandas y el peso de cada tema** está transcrita en
+> [[00 Matriz del final — las 3 tandas]]. Esa nota es el índice de estudio definitivo: cada ítem dice qué
+> nota leer y qué dibujar. Esta ruta es el orden de los bloques.
+
 > [!important] El examen es **oral** y se rinde **dibujando**
 > Cada bloque termina en el pizarrón, no en la lectura: después de cada tema, **dibujalo de memoria** y
 > explicá en voz alta lo que dibujaste. Los TPs de la cátedra son el mejor simulacro: tomá cada consigna

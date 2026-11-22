@@ -5,6 +5,13 @@ examen: practica
 ---
 # Compuertas lógicas
 
+> [!note] Si es la primera vez que ves esto
+> Una compuerta es **una decisión escrita en un circuito**. Un interruptor de luz es una decisión ("si toco
+> el botón, la luz cambia"); una compuerta es lo mismo pero con dos cables de entrada y un cable de salida
+> que entrega **1 o 0** (hay tensión o no hay tensión). Todo lo que hace una computadora —sumar, comparar,
+> guardar— está construido **sólo con estas bolitas**. Con las 7 compuertas de esta nota se puede armar
+> cualquier circuito digital: no hay más piezas. Por eso es la primera nota de la materia.
+
 > [!abstract] En una frase
 > La compuerta es el **bloque mínimo de hardware** que realiza una operación del álgebra de Boole:
 > recibe una o más entradas binarias y entrega una salida binaria según su tabla de verdad.

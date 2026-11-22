@@ -20,6 +20,20 @@ Eso es exactamente lo que hace la CPU.
 
 ![pipeline](../assets/pipeline.svg)
 
+## El ejemplo de la cátedra (el de los 8 pulsos)
+> [!example] "En 8 pulsos pude hacer 3 operaciones"
+> Sin pipeline, cada operación (A, B, C) ocupa sus **8 pulsos** completos: A en 8, B en otros 8, C en otros 8
+> ⇒ **24 pulsos** para tres operaciones.
+> Con pipeline, mientras **ejecuto A** (etapa de ejecución), **decodifico B** y **busco C** ⇒ en los mismos
+> **8 pulsos** las tres avanzaron una etapa; sólo hay que sumar los pulsos de "llenado".
+>
+> Es exactamente el ciclo de máquina de la BLUE visto como etapas: **búsqueda** (traer la instrucción),
+> **decodificación**, **cálculo de direcciones**, **búsqueda de operandos** y **ejecución**. Si cada una es un
+> bloque de hardware distinto, pueden trabajar **a la vez sobre instrucciones distintas**.
+>
+> **El límite aparece con las dependencias**: si D = A + B + C necesita el resultado de C, hay que **esperar**
+> (un *stall* o burbuja). Se atenúa con **forwarding**, **predicción** o insertando **NOP**.
+
 ## Ejemplo numérico (el que se pide "definir y ejemplificar")
 4 etapas: **BI** (búsqueda) → **DE** (decodificación) → **OP** (lectura de operandos) → **EJ** (ejecución).
 Supongamos 1 ciclo de reloj por etapa.

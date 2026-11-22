@@ -5,6 +5,13 @@ examen: practica
 ---
 # Álgebra de Boole — postulados y teoremas
 
+> [!note] Si es la primera vez que ves esto
+> El álgebra normal tiene números y operaciones (`+`, `×`). El **álgebra de Boole** tiene **sólo 1 y 0** y
+> **tres** operaciones (OR, AND, NOT). Es el "idioma" con el que se escribe lo que hace un circuito. Sirve
+> para algo muy concreto: **un circuito más chico es más barato, más rápido y consume menos**, y para
+> achicarlo hay que saber reescribir su fórmula como se reescribe una expresión matemática. Cada regla de
+> esta nota es una "cuenta permitida" que te deja simplificar. Si no las sabés, no podés simplificar nada.
+
 > [!abstract] En una frase
 > El álgebra de Boole es un sistema algebraico con **dos valores (0 y 1)**, tres operaciones
 > (OR, AND, NOT) y un conjunto de **postulados** del que se deducen **teoremas** que permiten

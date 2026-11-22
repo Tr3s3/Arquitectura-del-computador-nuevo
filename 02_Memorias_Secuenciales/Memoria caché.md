@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # Memoria caché
 
+> [!note] Si es la primera vez que ves esto
+> El problema: la CPU es **rapidísima** y la RAM es **lenta**; cada vez que la CPU pide un dato a la RAM se
+> queda esperando cientos de ciclos. La solución: poner al lado de la CPU una memoria **chica pero igual de
+> rápida que ella** (la caché) y guardar ahí **lo último que se usó**, apostando a que se va a volver a usar
+> (localidad). Cuando la CPU pide algo, primero mira la caché: si está (**acierto**), sigue a toda velocidad;
+> si no está (**fallo**), va a la RAM y deja copia. Todo lo demás de la nota (mapeos, políticas, niveles) son
+> detalles de *cómo se decide qué guardar dónde*.
+
 > [!abstract] En una frase
 > La caché es una memoria **pequeña, rápida y transparente** que guarda **copias de los bloques de la
 > memoria principal** que la CPU está usando, para que el acceso promedio sea casi tan rápido como ella.

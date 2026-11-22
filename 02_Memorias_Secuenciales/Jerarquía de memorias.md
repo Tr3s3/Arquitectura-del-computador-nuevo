@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # Jerarquía de memorias
 
+> [!note] Si es la primera vez que ves esto
+> Hay un triángulo imposible: queremos memorias **grandes** (para guardar mucho), **rápidas** (para no
+> esperar) y **baratas**. No existe una que sea las tres. La solución es usar **varias a la vez**, ordenadas
+> en pisos: arriba, poquita y carísima pero instantánea; abajo, enorme y baratísima pero lenta. El sistema
+> funciona porque los programas **repiten** (localidad): si el dato que necesito está arriba casi siempre, el
+> promedio se parece a la velocidad de arriba con el costo de abajo. Es el mismo truco que tener heladera
+> chica en la cocina y depósito grande en el fondo.
+
 > [!abstract] En una frase
 > Como no existe una memoria que sea a la vez **grande, rápida y barata**, el computador usa **varios
 > niveles**: chicos y rápidos cerca de la CPU (registros, caché) y grandes y lentos lejos (RAM, disco,

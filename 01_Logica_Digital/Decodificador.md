@@ -6,6 +6,13 @@ prioridad: alta
 ---
 # Decodificador
 
+> [!note] Si es la primera vez que ves esto
+> Un decodificador es **el portero de un edificio con 8 departamentos**: entra un número (la dirección) y se
+> enciende **una sola** luz, la del departamento que corresponde. Es el circuito que, dentro de una memoria,
+> convierte "quiero la celda 5" en "activo la línea 5". Sin él, la memoria no sabría qué celda leer. Y es
+> además el mismo circuito que usa la Unidad de Control para saber qué instrucción llegó (4 bits → 16
+> líneas). Un solo circuito, dos usos centrales: por eso cae siempre en el final.
+
 > [!abstract] En una frase
 > Un decodificador de n a 2ⁿ entradas tiene n entradas y **2ⁿ salidas**, y activa **una sola salida**
 > (la que corresponde al número binario de entrada). Cada salida es un **mintérmino** de las entradas.

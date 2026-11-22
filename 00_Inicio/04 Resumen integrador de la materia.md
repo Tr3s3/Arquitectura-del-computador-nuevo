@@ -181,4 +181,4 @@ recorrer arreglos con el mismo código y ahorra bits de dirección.
    mismo problema: la diferencia de velocidad entre la CPU y la memoria."**
 
 ## Enlaces de arranque
-[[03 Ruta de estudio para el final]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] · [[Autoevaluación]]
+[[00 Matriz del final — las 3 tandas]] · [[03 Ruta de estudio para el final]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] · [[Autoevaluación]]

@@ -6,6 +6,13 @@ prioridad: maxima
 ---
 # Ciclo de máquina
 
+> [!note] Si es la primera vez que ves esto
+> Una CPU no "piensa": **repite un bucle** millones de veces por segundo. El bucle tiene dos mitades:
+> **buscar** la próxima instrucción (ir a memoria y traerla) y **ejecutarla** (hacer lo que dice). Nada más.
+> Todo lo demás son detalles de cada mitad. Si entendés ese bucle y sabés qué biestable lo controla
+> (**RUN** = estoy andando, **STATE** = estoy buscando o ejecutando, **CLOCK** = el pulso que marca el
+> compás), ya podés explicar cómo funciona una computadora.
+
 > [!abstract] En una frase
 > El ciclo de máquina es la **unidad de trabajo** de la CPU: mientras `RUN = 1`, la máquina repite
 > **búsqueda (fetch) → decodificación → ejecución (execute)** de una instrucción, y vuelve a empezar con la

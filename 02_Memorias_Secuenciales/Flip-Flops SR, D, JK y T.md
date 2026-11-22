@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # Flip-Flops SR, D, JK y T
 
+> [!note] Si es la primera vez que ves esto
+> Hasta acá todo era **combinacional**: la salida depende sólo de las entradas (si cambio la entrada, cambia
+> la salida). Pero una computadora necesita **recordar**. Un biestable (flip-flop) es el circuito más simple
+> que **recuerda un bit**: tiene una realimentación que lo hace "quedarse" en el estado en que lo dejaste.
+> De ahí sale todo lo demás: registros (8 biestables), memorias (muchos registros), contadores. La pregunta
+> clave de un biestable es siempre la misma: **¿qué le tengo que poner a las entradas para que cambie como
+> yo quiero?** Eso lo responde su tabla de transición.
+
 > [!abstract] En una frase
 > Un flip-flop (biestable) es un circuito **secuencial** capaz de **memorizar 1 bit**: su salida Q
 > depende de las entradas **y** de su estado anterior, y sólo cambia en el **flanco** del reloj.

@@ -8,17 +8,23 @@ tipo: examen
 > y la **respuesta mínima** (30 segundos) que tenés que poder decir sin pensar. Si una respuesta no te sale
 > en 30 segundos, entrá a la nota.
 >
-> Para el **oral**: el orden de estudio y el guion hablado están en
-> [[Guion de respuestas — preguntas principales]]; la vista de pájaro de toda la materia, en
+> Para el **oral**: la matriz real del final (las 3 tandas, con los pesos que anotó el profesor) está en
+> [[00 Matriz del final — las 3 tandas]]; el guion hablado de las 8 principales, en
+> [[Guion de respuestas — preguntas principales]]; la vista de pájaro, en
 > [[04 Resumen integrador de la materia]]; el trazo de los circuitos, en
 > [[Cómo dibujar los circuitos (checklist de pizarrón)]].
+
+> [!important] Empezá por la matriz
+> Si tenés poco tiempo, no leas este banco de arriba a abajo: abrí [[00 Matriz del final — las 3 tandas]],
+> elegí una tanda y respondé en voz alta con lo que linkea cada ítem. Este banco sirve como índice general
+> de temas; la matriz dice **qué cae junto y con qué peso**.
 
 ## Preguntas principales (valen la nota)
 | # | Pregunta | Nota de desarrollo | Respuesta mínima |
 |---|---|---|---|
 | 1 | **Flujo de información (dato y direcciones)** | [[Flujo de información en BLUE (datos y direcciones)]] | Bus único: por pulso, una fuente habilita su salida de tres estados y un destino carga. Direcciones (12 bits) van por PC/IR → MAR → memoria; datos (16 bits) van memoria → MBR → IR/AC o AC → MBR → memoria |
 | 2 | **Formato de la instrucción (las 4)** | [[Formato de la instrucción (4 formatos)]] | 4, 3, 2 y 1 dirección. Más direcciones = instrucción más larga y menos instrucciones; menos direcciones = instrucción corta, más instrucciones y un operando implícito (AC). BLUE usa 1 dirección: `opcode 4 + dirección 12` |
-| 3 | **Ciclo de máquina** | [[Ciclo de máquina]] | Búsqueda → decodificación → ejecución, repetido mientras RUN = 1. STATE pasa de F (fetch) a E (execute). Cada pulso = una microoperación |
+| 3 | **Ciclo de máquina** (y las 16 instrucciones con todos sus pulsos) | [[Ciclo de máquina]] + [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | Búsqueda → decodificación → ejecución, repetido mientras RUN = 1. STATE pasa de F (fetch) a E (execute). Cada pulso = una microoperación |
 | 4 | **Estructura básica (cada unidad y buses)** | [[Estructura básica de un computador]] | CPU (UC + ALU + registros), memoria, E/S, unidas por bus de datos (16), de direcciones (12) y de control. Von Neumann: una memoria para programa y datos |
 | 5 | **Memoria RAM 8×3** | [[Memoria RAM 8x3]] | 8 palabras × 3 bits = 24 bits; 3 bits de dirección (000–111), 3 de datos; decodificador 3→8 elige la palabra; CS habilita el chip y R/W' define lectura o escritura |
 | 6 | **Ciclo de ejecución de BLUE indexada y sin indexar** | [[BLUE indexada (RIF, RID, nuevo formato)]] + [[Ciclo de ejecución — todas las operaciones]] | Sin indexar: `MAR ← IR(dir)`, lectura, `AC ← MBR`. Indexada: la EA se calcula con el sumador de direcciones (`EA = D ± RIF/RID`) y el modificador de 2 bits elige el modo (directo/indirecto/RIF/RID) |
@@ -46,6 +52,12 @@ El modelo no las enumera, pero están **explícitas** en los trabajamientos prá
 abre cualquiera de estos temas, esto es lo que hay que decir.
 
 | Tema | Nota | Respuesta mínima | TP |
+|---|---|---|---|
+| **BLUE vs BLUE indexada** | [[BLUE vs BLUE indexada — qué cambia y por qué]] | 16 vs 32 opcodes · 4096 vs 65 536 celdas · 4+12 (1 palabra) vs 5+2+9+16 (2 palabras) · 1 vs 4 modos · +RIF, RID, RB, Σ, W, X | apuntes U5 |
+| **LDA indexada (24 pulsos)** | [[Ciclo de LDA indexada (los 24 pulsos)]] | 3 ciclos de 8: búsqueda + traer el campo de dirección y sumar el índice + ir al operando. Directo 24 · indirecto 32 | apuntes U5 |
+| **Cómo se implementa la UC** | [[Cómo se implementa la Unidad de Control]] | Cableada: decodificador 1→16 + compuertas `estado · pulso · instrucción` unidas con OR (`REF`, `ARITH`, `DTA`). Microprogramada: memoria de control, microinstrucción, PLA, secuenciador | blue.pdf / U6 |
+| **Registros base e índice** | [[Registros base e índice]] | Índice: lo maneja el programador, se suma sólo en los modos 2/3, sirve para recorrer arreglos. Base: lo maneja el sistema, se suma siempre, sirve para reubicar | apuntes U5 |
+| **Conversión de biestables** | [[Conversión entre biestables (RS, JK, D, T)]] | RS→JK: `S = J·Q̄`, `R = K·Q` (Karnaugh). JK→D: `D = J·Q̄ + K̄·Q`. T: `J = K = T` | TP8 / TP9 |
 |---|---|---|---|
 | **Buses**: definición y tipos | [[Estructura básica de un computador]] | "Vía que conecta 2+ dispositivos; todos reciben." Datos (bidireccional, ancho = palabra), direcciones (unidireccional, ancho = capacidad de memoria) y control (lectura/escritura, petición/cesión de bus, interrupción) | [[TP14 Buses]] |
 | **Espacio de direccionamiento y CodOp** | [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] | `celdas = memoria / tamaño de celda`; `bits de dirección = log₂(celdas)`; `bits de CodOp = palabra − dirección`. Si da negativo, **hay que agrandar la celda** | [[TP17 Formato básico de instrucciones]] + [[TP18 Direccionamiento de memoria]] |

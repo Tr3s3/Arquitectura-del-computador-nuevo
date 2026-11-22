@@ -61,7 +61,14 @@ tipo: moc
 - [[TP15 Arquitectura de Von Neumann (IAS)]] · [[TP16 Ciclo de instrucción básico]] · [[TP17 Formato básico de instrucciones]]
 - [[TP18 Direccionamiento de memoria]] · [[TP19 Modos de direccionamiento]] · [[TP20 Lenguaje máquina]]
 
+## Máquina BLUE en profundidad (lo que más cae)
+- [[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Registros base e índice]]
+- [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de LDA indexada (los 24 pulsos)]]
+- [[Cómo se implementa la Unidad de Control]]
+- [[Conversión entre biestables (RS, JK, D, T)]] (3.ª tanda del final)
+
 ## Examen
+- [[00 Matriz del final — las 3 tandas]] ← **la foto del profesor, con pesos**
 - [[04 Resumen integrador de la materia]] ← **la materia en 6 secciones, para leer el día antes**
 - [[Banco de preguntas del final]] ← **el índice de todo**
 - [[Guion de respuestas — preguntas principales]] ← qué decir y qué dibujar en el oral

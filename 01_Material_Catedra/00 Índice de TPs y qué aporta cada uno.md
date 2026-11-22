@@ -16,6 +16,7 @@ tipo: indice
 | **Secuenciales** | 8, 9, 10, 11 | biestables RS/D/JK/T; registros PIPO-SISO-SIPO-PISO | [[Flip-Flops SR, D, JK y T]] · [[Registros]] |
 | **Memoria y buses** | 12, 13, 14 | RAM/ROM/caché, componentes internos, buses | [[Memoria caché]] · [[Estructura básica de un computador]] |
 | **CPU y programa** | 15, 16, 17, 18 | Von Neumann (IAS), ciclo de instrucción, formato, espacio de direccionamiento | [[Estructura básica de un computador]] · [[Ciclo de máquina]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] |
+| **CPU real (8086)** | 21 | modelo de programación del 8086, registros, segmento:offset, primer programa en emu8086 | [[El 8086 como CPU convencional (TP21)]] |
 | **Direccionamiento y lenguaje máquina** | 19, 20 | 7 modos de direccionamiento, lenguaje máquina, RISC/CISC | [[Modos de direccionamiento]] · [[Lenguaje máquina y clasificación de instrucciones]] |
 
 ## Los TPs que más se parecen al final
@@ -32,4 +33,5 @@ tipo: indice
 [[TP10 Registros PIPO y SISO]] · [[TP11 Registros SIPO y PISO]] · [[TP12 Memoria principal]] ·
 [[TP13 Componentes internos]] · [[TP14 Buses]] · [[TP15 Arquitectura de Von Neumann (IAS)]] ·
 [[TP16 Ciclo de instrucción básico]] · [[TP17 Formato básico de instrucciones]] ·
-[[TP18 Direccionamiento de memoria]] · [[TP19 Modos de direccionamiento]] · [[TP20 Lenguaje máquina]]
+[[TP18 Direccionamiento de memoria]] · [[TP19 Modos de direccionamiento]] · [[TP20 Lenguaje máquina]] ·
+[[TP21 intro al emu8086]]

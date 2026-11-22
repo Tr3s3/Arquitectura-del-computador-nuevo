@@ -6,6 +6,14 @@ prioridad: maxima
 ---
 # Formato de la instrucción (los 4 formatos)
 
+> [!note] Si es la primera vez que ves esto
+> Una instrucción es **una orden escrita en bits**: "sumá" + "de dónde" + "a dónde". El **formato** es cómo
+> se reparten los bits de esa orden entre el **código de operación** (qué hacer) y las **direcciones** (dónde
+> están los datos). El problema es que las direcciones ocupan muchos bits: si pongo cuatro direcciones, la
+> instrucción es larguísima; si pongo una, es corta pero la máquina tiene que "adivinar" el resto (guardando
+> un operando fijo en un registro, el acumulador). Recorrer los cuatro formatos (4, 3, 2 y 1 dirección) es
+> recorrer **la historia de la informática** tratando de achicar la instrucción.
+
 > [!abstract] En una frase
 > El **formato** es cómo se reparten los bits de una instrucción entre el `opcode` y sus **direcciones**
 > (operandos y resultado). Hay cuatro formatos clásicos —**4, 3, 2 y 1 dirección**— y son un compromiso:
@@ -99,7 +107,7 @@ Ejemplo: 512 MB con celdas de 4 B ⇒ 2²⁷ celdas ⇒ 27 bits de dirección �
 
 Desarrollo completo: [[Espacio de direccionamiento y cálculo de CodOp-Dirección]].
 
-## Cómo responderlo en el final## Cómo responderlo en el final (pregunta principal #2)
+## Cómo responderlo en el final (pregunta principal #2)
 1. Definir formato de instrucción = reparto de bits entre opcode y direcciones.
 2. Dibujar los cuatro formatos con sus campos.
 3. Mostrar el mismo cálculo (`X = A + B`) en los cuatro, contando instrucciones.

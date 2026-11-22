@@ -6,10 +6,24 @@ prioridad: maxima
 ---
 # Memoria RAM 8×3
 
+> [!note] Si es la primera vez que ves esto
+> Una memoria es **un mueble con cajones numerados**. Cada cajón (celda o palabra) tiene un número (la
+> dirección) y guarda algo de tamaño fijo (el dato). La RAM 8×3 es el mueble más chico posible que sirve para
+> explicar todo: **8 cajones de 3 bits**. Para usarla hacen falta tres cosas: **decir qué cajón** (dirección
+> de 3 bits → decodificador 3→8), **decir qué hacer** (leer o escribir, con la señal L/E) y **llevar o traer
+> el dato** (3 bits por el bus de datos). En el final se pide dibujarla entera: 8 celdas, el decodificador a
+> la izquierda y las señales de control.
+
 > [!abstract] En una frase
 > Una RAM de **8 palabras × 3 bits**: tiene **8 posiciones** (por eso 3 bits de dirección, 2³ = 8) y
 > cada posición guarda **3 bits** (por eso 3 líneas de datos). Capacidad = **24 bits**. Direccionarla es
 > aplicar la dirección en el decodificador 3→8, elegir la palabra y leer o escribir sus 3 bits a la vez.
+
+> [!note] "8×3" o "3×8": las dos formas que vas a escuchar
+> En la matriz del final aparece como **"memoria RAM 3×8"** y en los apuntes como **8×3**. Significan lo
+> mismo, con dos convenciones: **8 palabras de 3 bits** (filas × columnas: 8 filas, 3 columnas) o
+> **3 bits × 8 posiciones**. En el oral conviene decirlo así: *"8 posiciones, cada una de 3 bits; capacidad
+> total 8 × 3 = **24 bits**"*. Si el profesor dice 3×8, seguí su orden sin corregirlo.
 
 ## Los números, que es lo primero que se pregunta
 | Parámetro | Valor | Cuenta |

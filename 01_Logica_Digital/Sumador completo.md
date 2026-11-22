@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # Sumador completo (full adder)
 
+> [!note] Si es la primera vez que ves esto
+> La computadora **sólo sabe sumar**: restar es sumar el complemento, multiplicar es sumar varias veces,
+> dividir es restar varias veces. Entonces la pieza más importante de toda la máquina es **la que suma dos
+> bits**. El problema es que, cuando sumás en papel, no alcanza con los dos dígitos: hay que arrastrar el
+> "me llevo uno". El **semisumador** suma dos bits pero no sabe recibir ese acarreo; el **sumador completo**
+> sí lo recibe. Con 4 sumadores completos encadenados se suma un nibble, y con 32 de ellos, la palabra de la
+> computadora. Ese es el circuito que se pide dibujar en el final.
+
 > [!abstract] En una frase
 > Suma **tres bits** (A, B y el acarreo de entrada Cin) y entrega **suma S** y **acarreo de salida Cout**:
 > `S = A ⊕ B ⊕ Cin`  ·  `Cout = A·B + Cin·(A⊕B)`. Es la celda que, repetida n veces, suma palabras de n bits.

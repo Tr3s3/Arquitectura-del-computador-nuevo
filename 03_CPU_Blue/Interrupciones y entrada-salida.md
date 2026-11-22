@@ -67,14 +67,59 @@ Cuando hay **varios pedidos a la vez**, hay que decidir el orden:
 - **Anidamiento:** una interrupción de mayor prioridad puede interrumpir a la rutina de una de menor
   prioridad (**interrupción anidada**), si las interrupciones se habilitan dentro de la rutina.
 
-## El sistema de interrupciones en BLUE
+## El sistema de interrupciones que agrega la cátedra a la BLUE indexada
+> [!note] Dato que conviene decir primero
+> **La BLUE original no tiene interrupciones** (el apunte de Foster lo dice explícitamente: no tiene registros
+> índice, ni direccionamiento indirecto, ni interrupciones). La cátedra las **agrega** sobre la BLUE indexada,
+> con un sistema elemental. Decir esto en el oral muestra que sabés de dónde sale cada cosa.
+
 | Elemento | Función |
 |---|---|
-| **SI** | flip-flop que **habilita/inhabilita** las interrupciones (equivale al flag I) |
-| **INT** | línea de pedido del periférico |
-| **INTACK / INTA** | la CPU **reconoce** el pedido |
-| **Estados F / E / I** | F = búsqueda, E = ejecución, **I = atención de la interrupción** |
-| **Rutina de servicio** | dirección fija (polling) o tomada de la tabla de vectores |
+| **SI** (flip-flop del sistema de interrupción) | **1 = habilitado**, 0 = deshabilitado. Se maneja con las instrucciones **ION** (habilita) e **IOF** (inhabilita) |
+| **IRQ** | línea única de pedido: es la **OR** de las "banderas de dispositivo" (cada periférico pone la suya en 1 cuando necesita atención) |
+| **I** (biestable auxiliar) | genera la señal de reconocimiento; su salida indica que **se está atendiendo** una interrupción |
+| **Estados F / E / I** | búsqueda, ejecución e **interrupción** |
+| **ACK** | reconocimiento de interrupción, en las **vectorizadas** (se encadena de un dispositivo al siguiente: prioridad por cercanía) |
+| **SKF / EMR / RTI** | instrucciones nuevas: **SKF X** omite la próxima instrucción si la bandera X es 0 · **EMR valor** carga el registro máscara · **RTI** retorno de interrupción |
+| **RM** (registro máscara) | permite **enmascarar** (no dar curso a) determinados pedidos |
+| **SP** (puntero de pila) | permite **interrupciones anidadas** guardando el contexto en una pila LIFO |
+
+**Cuándo se acepta**: con `IRQ = 1`, `SI = 1` y **CP8 estando en estado E**. O sea: **siempre después de
+terminar la instrucción en curso** (nunca en el medio).
+
+**Ciclo de interrupción (8 pulsos, el de la cátedra):**
+| Pulso | Acción |
+|---|---|
+| CP1 | **SI ← 0** (se deshabilita el sistema: evita que otra interrupción lo interrumpa) |
+| CP2 | Envíe PC, **Cargue MBR** (se guarda el PC) |
+| CP3 | Envíe 0, **Cargue MAR**, **Orden de escritura** ⇒ el PC queda guardado en la **posición CERO** |
+| CP4 | Envíe 1, **Cargue PC** ⇒ la rutina de atención empieza en la posición **1** |
+| CP5-CP7 | — (se ejecuta la rutina: guardar contexto, determinar quién interrumpió) |
+| CP8 | **I ← 0** (termina el reconocimiento) |
+
+**La rutina de atención hace tres cosas**: (1) **salva el contexto** (todos los registros menos el PC, que ya
+está en la posición 0), (2) **determina quién interrumpió** —el *polling* con `SKF`/`JMP`— y (3) atiende al
+dispositivo. Al final, **RTI** recupera el PC desde la posición CERO y **vuelve a poner SI = 1**.
+
+**Polling (identificación por software)**: la rutina pregunta bandera por bandera
+```
+SKF 1            ; ¿está la bandera 1 en 1? si está en 0, omite la próxima
+JMP Rutina1      ; atiende al dispositivo 1
+SKF 2
+JMP Rutina2
+...
+```
+**El orden en que se consultan las banderas ES la prioridad.**
+
+**Vectorizadas (identificación por hardware)**: cada dispositivo tiene una **dirección (vector)**; cuando la
+CPU da **ACK**, el dispositivo **pone su vector en el bus** y se hace un **salto indirecto** a través de él. Es
+**más rápido** que el polling (no hay que preguntar bandera por bandera) y la prioridad la resuelve el
+**encadenado de ACK** (el primero de la cadena gana).
+
+**Anidamiento**: con el esquema de la posición CERO no se puede interrumpir una interrupción (se perdería la
+dirección de retorno). Con **pila (SP)** sí: se apila el contexto, se incrementa/decrementa el puntero y el
+`SI` se vuelve a poner en 1 al empezar la rutina. Para que un dispositivo de menor prioridad no interrumpa a
+uno de mayor, se usa el **registro máscara**.
 
 **Ciclo de interrupción (esquema):**
 ```

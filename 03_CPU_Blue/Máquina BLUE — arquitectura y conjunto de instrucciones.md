@@ -26,38 +26,41 @@ prioridad: maxima
 ![blue_flujo](../assets/blue_flujo.svg)
 
 ## El conjunto de instrucciones (las 16)
-| Opcode | Mnemónico | Qué hace | Microoperación |
-|---|---|---|---|
-| 0000 | **LDA** | carga el AC con el contenido de la dirección D | `AC ← M[D]` |
-| 0001 | **STA** | almacena el AC en la dirección D | `M[D] ← AC` |
-| 0010 | **ADD** | suma al AC el contenido de D | `AC ← AC + M[D]` |
-| 0011 | **SUB** | resta al AC el contenido de D | `AC ← AC − M[D]` |
-| 0100 | **AND** | AND bit a bit con el contenido de D | `AC ← AC ∧ M[D]` |
-| 0101 | **OR** | OR bit a bit | `AC ← AC ∨ M[D]` |
-| 0110 | **XOR** | OR exclusiva bit a bit | `AC ← AC ⊕ M[D]` |
-| 0111 | **NOT** | complementa el AC (no usa dirección) | `AC ← AC'` |
-| 1000 | **JMP** | salto incondicional a D | `PC ← D` |
-| 1001 | **JZ** | salta si el resultado fue cero (Z = 1) | `si Z=1: PC ← D` |
-| 1010 | **JC** | salta si hubo acarreo (C = 1) | `si C=1: PC ← D` |
-| 1011 | **IN** | lee un dato del puerto de entrada al AC | `AC ← puerto` |
-| 1100 | **OUT** | envía el AC al puerto de salida | `puerto ← AC` |
-| 1101 | **NOP** | no hace nada (gasta un ciclo) | — |
-| 1110 | **HLT** | detiene la máquina | `RUN ← 0` |
-| 1111 | *(desplazamiento / libre)* | según apunte: SHL/SHR u otra | `AC ← despl(AC)` |
+La tabla **oficial** es la del apunte de Foster (el que usa la cátedra), en **octal**:
 
-> [!warning] Verificá los 4 bits de opcode con tu apunte
-> Lo que se evalúa es que puedas decir **16 instrucciones, 4 bits de opcode** y **qué hace cada una**.
-> Los mnemónicos son los de siempre; la asignación exacta de códigos binarios y la 16.ª instrucción
-> conviene copiarla del apunte de la cátedra.
+| Octal | Mnemónico | Qué hace | Microoperación | Pulsos |
+|---|---|---|---|---|
+| `00` | **HLT** | detiene la máquina | `RUN ← 0` | 8 |
+| `01` | **ADD** | suma al AC el contenido de XXXX | `AC ← AC + M[XXXX]` | 16 |
+| `02` | **XOR** | OR exclusiva bit a bit | `AC ← AC ⊕ M[XXXX]` | 16 |
+| `03` | **AND** | AND bit a bit | `AC ← AC · M[XXXX]` | 16 |
+| `04` | **IOR** | OR inclusiva bit a bit | `AC ← AC + M[XXXX]` | 16 |
+| `05` | **NOT** | complemento a uno del AC | `AC ← AC'` | 8 |
+| `06` | **LDA** | carga el AC con el contenido de XXXX | `AC ← M[XXXX]` | 16 |
+| `07` | **STA** | almacena el AC en XXXX | `M[XXXX] ← AC` | 16 |
+| `10` | **SRJ** | salto a subrutina (guarda el PC en el AC) | `AC ← PC+1` · `PC ← XXXX` | 8 |
+| `11` | **JMA** | salto condicional si el AC es negativo | `si A15=1: PC ← XXXX` | 8 |
+| `12` | **JMP** | salto incondicional | `PC ← XXXX` | 8 |
+| `13` | **INP** | entrada de 8 bits desde el dispositivo YY | `AC[7..0] ← (YY)` | 16+ |
+| `14` | **OUT** | salida de 8 bits al dispositivo YY | `(YY) ← AC[15..8]` | 16+ |
+| `15` | **RAL** | rota el AC un lugar a la izquierda | `AC ← 2·AC` (cíclico) | 8 |
+| `16` | **CSA** | copia el registro de llaves en el AC | `AC ← SR` | 8 |
+| `17` | **NOP** | no hace nada | — | 8 |
 
-> [!note] La tabla del simulador de la cátedra (TP16)
-> En el simulador de la máquina elemental (Blue) que usa el [[TP16 Ciclo de instrucción básico|TP16]] los
-> códigos son **decimales**: `1` = cargar (LDA), `2` = almacenar (STA) y `5` = sumar (ADD). La instrucción se
-> escribe como `opcode` seguido de la dirección (por ejemplo `1650` = opcode 1, dirección 650).
-> **En el final usá la tabla de tu apunte y aclaralo**; lo que se evalúa es la **secuencia del ciclo**, no el
-> número.
+> [!important] Por qué HLT es `00` y NOP es `17`
+> Fue **a propósito**: si la máquina salta por error a una zona de memoria **borrada (todo 0)**, encuentra un
+> **HLT** y se detiene en vez de seguir ejecutando basura. Y si ejecuta una palabra **toda de unos** (la
+> palabra de detención típica), encuentra un **NOP** y no rompe nada. Es una decisión de **diseño defensivo**
+> que vale la pena mencionar: suma puntos y demuestra que entendiste el conjunto, no que lo memorizaste.
 
-## Los tres grupos funcionales## Los tres grupos funcionales
+> [!warning] Ojo con el simulador del TP16
+> El **simulador** del [[TP16 Ciclo de instrucción básico|TP16]] usa una numeración **decimal y simplificada**
+> (`1` cargar, `2`/`3` almacenar, `5` sumar, `C` parar) que **no** es la tabla de la máquina. En el oral decí
+> "según el simulador del TP…" y "según la tabla octal de la máquina…", y seguí con las microoperaciones:
+> **lo que se evalúa es la secuencia de pulsos**. Detalle en
+> [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]].
+
+## Los tres grupos funcionales
 1. **Transferencia de datos** (`LDA`, `STA`): el AC habla con la memoria.
 2. **Operaciones** (`ADD`, `SUB`, `AND`, `OR`, `XOR`, `NOT`): el AC habla con la ALU.
 3. **Control de flujo** (`JMP`, `JZ`, `JC`, `HLT`, `NOP`) y **E/S** (`IN`, `OUT`).

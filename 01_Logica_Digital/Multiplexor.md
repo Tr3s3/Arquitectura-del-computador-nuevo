@@ -6,6 +6,13 @@ prioridad: alta
 ---
 # Multiplexor (MUX)
 
+> [!note] Si es la primera vez que ves esto
+> Un multiplexor es **un conmutador de vías**: muchos cables entran, uno solo sale, y un par de señales de
+> selección deciden **cuál** de las entradas pasa a la salida. Se usa para todo lo que signifique "elegir
+> uno entre varios": elegir qué registro pone su contenido en el bus, elegir qué índice entra al sumador de
+> direcciones, elegir un canal de televisión por un mismo cable. Es el inverso del demultiplexor y el primo
+> del decodificador: **mismo concepto de selección, distinta dirección del flujo**.
+
 > [!abstract] En una frase
 > El multiplexor es un **selector de datos**: tiene 2ⁿ entradas de datos, n entradas de **selección** y
 > **una sola salida**; la salida toma el valor de la entrada indicada por el código de selección.

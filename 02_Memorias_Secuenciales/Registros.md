@@ -70,7 +70,7 @@ Todos los FF comparten CLK; el modo lo fija la [[Unidad de Control]] con dos se�
 
 Las tablas pulso a pulso están resueltas en [[TP10 Registros PIPO y SISO]] y [[TP11 Registros SIPO y PISO]].
 
-## Cómo responderlo en el final## Cómo responderlo en el final
+## Cómo responderlo en el final
 1. Definición: n FF + reloj común + LOAD; guarda una palabra.
 2. Clasificar por entradas/salidas: PIPO, SISO, SIPO, PISO.
 3. Describir el bidireccional: MUX de 4 canales por FF, con los cuatro modos.

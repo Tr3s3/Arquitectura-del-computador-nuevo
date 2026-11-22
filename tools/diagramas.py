@@ -453,6 +453,64 @@ def d_modos():
     s.save("modos_direccionamiento.svg")
 
 
+
+def d_lda24():
+    """Línea de tiempo de la LDA indexada: 3 ciclos de máquina = 24 pulsos."""
+    rows = [
+        ("CICLO 1 · BÚSQUEDA", [
+            ("1", "PC→MAR\nZ\nMEMR"), ("2", "+1→Y"), ("3", "espera"),
+            ("4", "SUMA→PC"), ("5", "MBR\nstrobe"), ("6", "MBR→IR"), ("7", "decod."),
+            ("8", "E→STATE")]),
+        ("CICLO 2 · EJECUCIÓN 1\n(traer dirección y calcular EA)", [
+            ("9", "PC→MAR\nZ\nMEMR"), ("10", "+1→Y"), ("11", "espera"),
+            ("12", "SUMA→PC"), ("13", "RID→X"), ("14", "MBR→W"), ("15", "Σ suma"),
+            ("16", "sigue E")]),
+        ("CICLO 3 · EJECUCIÓN 2\n(ir al operando)", [
+            ("17", "Σ→MAR\nMEMR"), ("18", "espera"), ("19", "espera"),
+            ("20", "espera"), ("21", "espera"), ("22", "MBR→A"), ("23", "-"),
+            ("24", "F→STATE")]),
+    ]
+    s = Svg(1250, 615, "LDA 3, X en la BLUE indexada: 3 ciclos de máquina de 8 pulsos = 24 pulsos")
+    y0 = 60
+    cw, ch, gap, lx = 108, 96, 10, 250
+    for r, (label, cells) in enumerate(rows):
+        y = y0 + r * (ch + 34)
+        # etiqueta de la fila
+        s.raw(f'<rect x="16" y="{y}" width="{lx-30}" height="{ch}" rx="7" fill="#eef2ff" stroke="{ACCENT}" stroke-width="1.3"/>')
+        parts = label.split("\n")
+        s.text(16 + (lx - 30) / 2, y + (ch / 2) - (len(parts) - 1) * 9, parts[0], size=11.5,
+               weight="700", anchor="middle", color="#1e3a8a")
+        for i, extra in enumerate(parts[1:]):
+            s.text(16 + (lx - 30) / 2, y + (ch / 2) + 10 + i * 13, extra, size=9,
+                   anchor="middle", color="#3730a3")
+        for c, (num, act) in enumerate(cells):
+            x = lx + c * (cw + gap)
+            key = num in ("1", "4", "6", "13", "14", "17", "22", "24")
+            fill = "#fef9c3" if key else "#f8fafc"
+            stroke = "#ca8a04" if key else "#e5e7eb"
+            s.raw(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="1.3"/>')
+            s.text(x + 8, y + 17, "CP" + num, size=10.5, weight="700", color="#7c2d12", family=MONO)
+            for i, ln in enumerate(act.split("\n")):
+                s.text(x + 8, y + 34 + i * 13, ln, size=9.2, family=MONO, color="#111827")
+        # numeración global
+        s.text(lx - 8, y - 6, "" if r else "", size=9)
+    ty = y0 + 3 * (ch + 34) + 6
+    s.note(lx, ty, [
+        "Amarillo = los pulsos que hay que saber nombrar en el oral: CP1/CP6 de la búsqueda (traer la instrucción),",
+        "CP13/CP14 de ejecución 1 (cargar el índice en X y el campo de dirección en W) y CP17/CP22 de ejecución 2",
+        "(direccionar el operando y cargarlo en el acumulador).",
+    ], size=10)
+    s.note(lx, ty + 56, [
+        "Hay 3 accesos a memoria: búsqueda (trae la 1. palabra), ejecución 1 (trae la 2. palabra = campo de dirección)",
+        "y ejecución 2 (trae el operando). Por eso 24 pulsos y no 16: la instrucción ocupa 2 palabras.",
+    ], size=10)
+    s.note(lx, ty + 100, [
+        "LDA 0, X (directo): 24 pulsos, en CP13 se carga 0 en X.     LDA 1, X (indirecto): 32 pulsos (un ciclo más).",
+        "LDA 2, X (RIF): 24 pulsos, en CP13 se carga RIF.             LDA 3, X (RID): 24 pulsos, en CP13 se carga RID.",
+    ], size=10)
+    s.save("lda24_pulsos.svg")
+
+
 def d_blue_flujo():
     s = Svg(800, 560, "BLUE: registros y flujo de información (dato y direcciones)")
     # memoria
@@ -563,6 +621,7 @@ if __name__ == "__main__":
     d_pipeline()
     d_formatos()
     d_modos()
+    d_lda24()
     d_blue_flujo()
     d_ciclo_maquina()
     d_cache()

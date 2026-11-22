@@ -243,21 +243,26 @@ PC (que ya apunta a la instrucción siguiente) y restaurarlo.
 
 ## Si la mesa pregunta por los códigos de operación
 
-> [!warning] Discrepancia real entre la cátedra y el mapa de la máquina BLUE
-> Hay **tres** conjuntos de códigos circulando en el material, y conviene tenerlos claros para no trabarse:
+> [!warning] Los códigos de operación: qué es oficial y qué es del simulador
+> **La tabla oficial de la cátedra es la octal del apunte de Foster** (la misma que usa la BLUE indexada):
 >
-> | Instrucción | Simulador del [[TP16 Ciclo de instrucción básico]] (decimal) | Mapa BLUE de la cátedra (hex) | Tabla de 16 opcodes (binario) |
+> | Octal | Instrucción | Octal | Instrucción |
 > |---|---|---|---|
-> | Cargar | `1` | `1` | `LDA 0000` |
-> | Sumar | `5` | `5` | `ADD` (uno de los 16) |
-> | Almacenar | `2` (y `3` en el TP16) | `2`/`3` | `STA` |
-> | Fin | `C` (hex 12) | `C` = **parar** | `HLT 1110` |
+> | `00` | HLT | `10` | SRJ |
+> | `01` | ADD | `11` | JMA |
+> | `02` | XOR | `12` | JMP |
+> | `03` | AND | `13` | INP |
+> | `04` | IOR | `14` | OUT |
+> | `05` | NOT | `15` | RAL |
+> | `06` | LDA | `16` | CSA |
+> | `07` | STA | `17` | NOP |
 >
-> **Cómo manejarlo en el oral (esto es lo que se hace):** primero se dice **"en el material de la cátedra el
-> código de parar es C"**, y recién después se muestra la tabla de 16 opcodes. No se corrige al profesor ni
-> se inventa una tercera versión: se **aclara la fuente** ("según el simulador…", "según el mapa…") y se sigue
-> con la secuencia de microoperaciones, que es lo que se evalúa.
-> El desarrollo completo está en [[TP16 Ciclo de instrucción básico]] y [[TP20 Lenguaje máquina]].
+> **El simulador del [[TP16 Ciclo de instrucción básico|TP16]] usa otra numeración, decimal y simplificada**
+> (`1` cargar, `5` sumar, `2`/`3` almacenar, `C` para parar): es una ayuda didáctica del programa, **no** la
+> tabla de la máquina. **Cómo decirlo sin trabarse**: *"según el simulador del TP los códigos son 1, 5, 2 y C;
+> según la tabla octal de la máquina, `06` es LDA, `01` es ADD, `07` es STA y `00` es HLT. Para el ciclo de
+> pulsos uso la tabla octal."* Después seguí con las microoperaciones, que es lo que se evalúa.
+> Desarrollo completo: [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[TP20 Lenguaje máquina]].
 
 ## Las cinco frases que cierran cualquier respuesta
 

@@ -6,6 +6,14 @@ prioridad: alta
 ---
 # Celda elemental de memoria
 
+> [!note] Si es la primera vez que ves esto
+> Si un biestable guarda 1 bit, una memoria de 1 GB guarda 8 mil millones de bits: no puede ser "un biestable
+> por cable". La **celda elemental** resuelve el problema: es un biestable **más compuertas** que permiten
+> (1) **elegirlo** entre miles (línea de selección), (2) decir si **leo o escribo** (L/E) y (3) **colgarlo o
+> desconectarlo** del bus de datos (buffer de tres estados). Con ese "kit" repetido en forma de matriz y un
+> decodificador que elige la fila, ya tenés una RAM. Todo lo grande de la materia (RAM 8×3, caché, ROM) es
+> esta misma celda repetida.
+
 > [!abstract] En una frase
 > La celda elemental es el circuito que **guarda 1 bit** dentro de una memoria: un biestable (o latch)
 > con una **línea de selección** para leerlo/escribirlo. Miles de celdas + decodificador + buffers de

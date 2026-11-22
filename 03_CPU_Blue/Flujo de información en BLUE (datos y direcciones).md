@@ -6,6 +6,13 @@ prioridad: maxima
 ---
 # Flujo de información en BLUE (datos y direcciones)
 
+> [!note] Si es la primera vez que ves esto
+> Imaginá una sola autopista de un carril que conecta todos los registros de la CPU, la memoria y la ALU. Por
+> ese carril (el **bus**) sólo puede circular **un vehículo por vez**: o va una dirección, o va un dato, pero
+> nunca los dos. Entonces todo el funcionamiento de la máquina se reduce a decidir, pulso por pulso,
+> **quién sube al bus** ("Envíe X") y **quién lo copia** ("Cargue Y"). Esta nota es el mapa de esos viajes:
+> los de **direcciones** (12 bits, para decir a dónde ir) y los de **datos** (16 bits, la información en sí).
+
 > [!abstract] En una frase
 > Toda la información de BLUE viaja por **un solo bus**: en cada pulso, **un** registro pone su contenido
 > en el bus (habilitando su salida de tres estados) y **otro** lo toma (activando su `LOAD`). El flujo

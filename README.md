@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 77 notas · 16 diagramas SVG · ~59.000 palabras · 857 enlaces internos, 0 rotos.
+**Estado:** 87 notas · 17 diagramas SVG · ~77.000 palabras · 1.004 enlaces internos, 0 rotos.
 
 ## Cómo abrirla
 
@@ -29,21 +29,37 @@ GitHub); algunos esquemas usan **Mermaid**, que Obsidian renderiza de forma nati
 02_Memorias_Secuenciales/   Unidad 2 y 3 — flip-flops, registros, contadores, RAM/ROM, caché
 03_CPU_Blue/                Unidades 4 a 6 — estructura, UC, BLUE, ciclos, formato, modos, interrupciones
 04_Arquitecturas_Avanzadas/ Unidades 7 a 9 — pipeline, CISC/RISC, microprogramación, paralelismo
-01_Material_Catedra/        los 20 TPs: consigna, qué hay que saber y respuesta sintetizada
+01_Material_Catedra/        los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
 05_Examen/                  banco de preguntas del final + guion oral de las 8 principales
 06_Practica/                prácticas resueltas, cómo dibujar los circuitos, tablas de verdad, autoevaluación
 assets/                     diagramas SVG (generados con tools/diagramas.py)
 ```
 
+## Escrita para aprender desde cero
+
+Las notas troncales arrancan con un bloque **"Si es la primera vez que ves esto"**: la analogía y el problema
+que resuelve el concepto, antes de cualquier definición. Después vienen el desarrollo con tablas y diagramas,
+el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin otro material al lado.
+
 ## Por dónde empezar
 
 | Objetivo | Nota |
 |---|---|
+| Ver **qué cae y con qué peso** (foto del profesor) | `05_Examen/00 Matriz del final — las 3 tandas.md` |
 | Ver la materia completa en 20 minutos | `00_Inicio/04 Resumen integrador de la materia.md` |
 | Saber qué pide la cátedra, TP por TP | `01_Material_Catedra/00 Índice de TPs y qué aporta cada uno.md` |
 | Entrenar el oral | `05_Examen/Guion de respuestas — preguntas principales.md` |
 | Practicar el pizarrón | `06_Practica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
 | Repasar tablas de verdad | `06_Practica/Tablas de verdad de memoria.md` |
+| Saber de dónde sale cada dato | `00_Inicio/05 Fuentes y qué aporta cada una.md` |
+
+## Fuentes
+
+La bóveda está construida sobre el material de la cátedra: el apunte base (**Foster, *Computer
+Architecture***, capítulo de la máquina elemental "BLUE"), los **apuntes de las Unidades 1 a 5**, la **matriz
+del final**, los **21 TPs**, los resúmenes de clase y el material de memorias semiconductoras. El detalle de
+qué aporta cada fuente (y cómo se resolvieron los conflictos entre ellas) está en
+`00_Inicio/05 Fuentes y qué aporta cada una.md`.
 
 ## Avisos sobre el material de cátedra
 
