@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 88 notas · 19 diagramas SVG · ~100.000 palabras · 1.189 enlaces internos, 0 rotos.
+**Estado:** 88 notas · 22 diagramas SVG · ~116.000 palabras · 1.332 enlaces internos, 0 rotos.
 
 ## Cómo abrirla
 

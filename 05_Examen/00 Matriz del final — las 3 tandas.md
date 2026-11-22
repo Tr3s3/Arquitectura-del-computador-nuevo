@@ -73,6 +73,15 @@ prioridad: maxima
 | 8 | **Sumadores** | [[Semisumador]] + [[Sumador completo]] | Tabla, `S = A⊕B`, `C = A·B`; y el completo con sus 8 filas |
 | + | **Conjunto de instrucciones: el RI y 3 ejemplos de instrucciones** | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] + [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | La tabla de opcodes, qué hace el IR y 3 instrucciones explicadas paso a paso |
 
+> [!tip] Estado del desarrollo en la bóveda
+> Los **8 ítems** de esta tanda están desarrollados a nivel **maestro** (contexto desde cero → **tabla de
+> verdad** → **función canónica** → **mapa de Karnaugh** → **circuito** → guion oral → repreguntas → "Para
+> ampliar"). Empezá por [[Mintérminos y maxtérminos]] (la herramienta que usan los ítems 5, 6 y 7) y seguí con
+> [[Decodificador]], [[Codificador]], [[Multiplexor]], [[Demultiplexor]], [[Flip-Flops SR, D, JK y T]],
+> [[Conversión entre biestables (RS, JK, D, T)]], [[Álgebra de Boole — postulados y teoremas]],
+> [[Leyes de DeMorgan]], [[Semisumador]], [[Sumador completo]] y, para el ítem del RI,
+> [[Máquina BLUE — arquitectura y conjunto de instrucciones]].
+
 ---
 
 ## Cómo se estudia esta matriz (plan de 5 días)

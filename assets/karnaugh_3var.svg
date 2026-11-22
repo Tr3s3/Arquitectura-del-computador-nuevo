@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 700 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Mapa de Karnaugh de 3 variables: F = Σm(1,3,5,7)</text>
+  <text x="330" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#4b5563">BC</text>
+  <text x="195.0" y="78" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">00</text>
+  <text x="285.0" y="78" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">01</text>
+  <text x="375.0" y="78" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">11</text>
+  <text x="465.0" y="78" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">10</text>
+  <text x="116" y="127.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">A=0</text>
+  <rect x="150" y="90" width="90" height="64" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="195.0" y="128.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#6b7280">0</text>
+  <rect x="240" y="90" width="90" height="64" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="285.0" y="128.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <rect x="330" y="90" width="90" height="64" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="375.0" y="128.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <rect x="420" y="90" width="90" height="64" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="465.0" y="128.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#6b7280">0</text>
+  <text x="116" y="191.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">A=1</text>
+  <rect x="150" y="154" width="90" height="64" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="195.0" y="192.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#6b7280">0</text>
+  <rect x="240" y="154" width="90" height="64" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="285.0" y="192.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <rect x="330" y="154" width="90" height="64" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="375.0" y="192.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <rect x="420" y="154" width="90" height="64" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="465.0" y="192.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#6b7280">0</text>
+  <rect x="244" y="94" width="172" height="120" fill="none" stroke="#b91c1c" stroke-width="2.6" rx="4"/>
+  <text x="536" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937">Grupo de 4:</text>
+  <text x="536" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937"></text>
+  <text x="536" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937">• A cambia  ⇒ desaparece</text>
+  <text x="536" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937">• B cambia  ⇒ desaparece</text>
+  <text x="536" y="222" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937">• C = 1 siempre ⇒ queda</text>
+  <text x="536" y="240" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937"></text>
+  <text x="536" y="258" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="400" text-anchor="start" fill="#1f2937">F = C</text>
+  <text x="40" y="300" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">Las columnas van en código GRAY (00, 01, 11, 10): así dos casilleros vecinos difieren en UNA sola variable,</text>
+  <text x="40" y="316" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">y agruparlos equivale a aplicar A·B + A·B' = A. Un grupo de 2 elimina 1 variable; de 4, elimina 2; de 8, elimina 3.</text>
+</svg>

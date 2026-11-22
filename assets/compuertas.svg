@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="560" viewBox="0 0 830 560">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Las siete compuertas lógicas: símbolo, función y tabla de verdad</text>
+  <text x="79" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">AND</text>
+  <path d="M45,62 L90.0,62 A23.0,23.0 0 0 1 90.0,108 L45,108 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="29" y1="77.33333333333333" x2="45" y2="77.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="81.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="29" y1="92.66666666666667" x2="45" y2="92.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="96.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="113" y1="85.0" x2="129" y2="85.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="134" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="133" y="136" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = A · B</text>
+  <text x="274" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">OR</text>
+  <path d="M240,62 C257.68,62 290.32,66.6 308,85.0 C290.32,103.4 257.68,108 240,108 C252.24,92.36 252.24,77.64 240,62 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="232" y1="77.33333333333333" x2="248" y2="77.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="227" y="81.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="232" y1="92.66666666666667" x2="248" y2="92.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="227" y="96.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="308" y1="85.0" x2="324" y2="85.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="329" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="328" y="136" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = A + B</text>
+  <text x="469" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">NOT</text>
+  <polygon points="435,62 435,108 495,85.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="500" cy="85.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="419" y1="85.0" x2="435" y2="85.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="414" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="505" y1="85.0" x2="521" y2="85.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="526" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="523" y="136" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = A'</text>
+  <text x="664" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">NAND</text>
+  <path d="M630,62 L675.0,62 A23.0,23.0 0 0 1 675.0,108 L630,108 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="703" cy="85.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="614" y1="77.33333333333333" x2="630" y2="77.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="609" y="81.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="614" y1="92.66666666666667" x2="630" y2="92.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="609" y="96.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="708" y1="85.0" x2="724" y2="85.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="729" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="718" y="136" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = (A·B)'</text>
+  <text x="79" y="191" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">NOR</text>
+  <path d="M45,197 C62.68,197 95.32,201.6 113,220.0 C95.32,238.4 62.68,243 45,243 C57.24,227.36 57.24,212.64 45,197 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="118" cy="220.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="37" y1="212.33333333333334" x2="53" y2="212.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="32" y="216.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="37" y1="227.66666666666666" x2="53" y2="227.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="32" y="231.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="123" y1="220.0" x2="139" y2="220.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="144" y="224.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="133" y="271" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = (A+B)'</text>
+  <text x="274" y="191" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">XOR</text>
+  <path d="M240,197 C257.68,197 290.32,201.6 308,220.0 C290.32,238.4 257.68,243 240,243 C252.24,227.36 252.24,212.64 240,197 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <path d="M231,197 C246.12,212.64 246.12,227.36 231,243" fill="none" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="232" y1="212.33333333333334" x2="248" y2="212.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="227" y="216.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="232" y1="227.66666666666666" x2="248" y2="227.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="227" y="231.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="308" y1="220.0" x2="324" y2="220.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="329" y="224.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="328" y="271" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = A ⊕ B</text>
+  <text x="469" y="191" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1f2937">XNOR</text>
+  <path d="M435,197 C452.68,197 485.32,201.6 503,220.0 C485.32,238.4 452.68,243 435,243 C447.24,227.36 447.24,212.64 435,197 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <path d="M426,197 C441.12,212.64 441.12,227.36 426,243" fill="none" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="508" cy="220.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="427" y1="212.33333333333334" x2="443" y2="212.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="422" y="216.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="427" y1="227.66666666666666" x2="443" y2="227.66666666666666" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="422" y="231.66666666666666" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="513" y1="220.0" x2="529" y2="220.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="534" y="224.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="523" y="271" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="400" text-anchor="start" fill="#1d4ed8">Y = (A ⊕ B)'</text>
+  <line x1="35" y1="330" x2="795" y2="330" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="60" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">A</text>
+  <text x="105" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">B</text>
+  <text x="175" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">AND</text>
+  <text x="245" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">OR</text>
+  <text x="322" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">NAND</text>
+  <text x="395" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">NOR</text>
+  <text x="468" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">XOR</text>
+  <text x="543" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">XNOR</text>
+  <text x="640" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1f2937">NOT(A)</text>
+  <text x="60" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <text x="105" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <text x="175" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="245" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="322" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="395" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="468" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="543" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="640" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="60" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <text x="105" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <text x="175" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="245" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="322" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="395" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="468" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="543" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="640" y="408" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="60" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <text x="105" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <text x="175" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="245" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="322" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="395" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="468" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="543" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="640" y="434" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="60" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <text x="105" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <text x="175" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="245" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="322" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="395" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="468" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <text x="543" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+  <text x="640" y="460" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#374151">0</text>
+  <line x1="35" y1="370" x2="795" y2="370" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="35" y="486" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">NAND y NOR son universales: con cualquiera de ellas sola se arma cualquier función.</text>
+  <text x="35" y="502" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#4b5563">XOR = paridad (1 con un número impar de unos) · XNOR = igualdad (A = B).</text>
+</svg>

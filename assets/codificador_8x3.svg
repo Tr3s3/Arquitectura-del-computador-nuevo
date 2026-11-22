@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="790" height="400" viewBox="0 0 790 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Codificador 8 a 3: una compuerta OR por cada bit de salida</text>
+  <path d="M430,70 C449.76,70 486.24,75.4 506,97.0 C486.24,118.6 449.76,124 430,124 C443.68,105.64 443.68,88.36 430,70 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="408" y1="80.8" x2="438" y2="80.8" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="84.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E4</text>
+  <line x1="408" y1="91.6" x2="438" y2="91.6" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="95.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E5</text>
+  <line x1="408" y1="102.4" x2="438" y2="102.4" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="106.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E6</text>
+  <line x1="408" y1="113.2" x2="438" y2="113.2" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="117.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E7</text>
+  <line x1="506" y1="97.0" x2="536" y2="97.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="101.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A2  (bit 2)</text>
+  <path d="M430,165 C449.76,165 486.24,170.4 506,192.0 C486.24,213.6 449.76,219 430,219 C443.68,200.64 443.68,183.36 430,165 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="408" y1="175.8" x2="438" y2="175.8" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="179.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E2</text>
+  <line x1="408" y1="186.6" x2="438" y2="186.6" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="190.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E3</text>
+  <line x1="408" y1="197.4" x2="438" y2="197.4" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="201.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E6</text>
+  <line x1="408" y1="208.2" x2="438" y2="208.2" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="212.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E7</text>
+  <line x1="506" y1="192.0" x2="536" y2="192.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="196.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A1  (bit 1)</text>
+  <path d="M430,260 C449.76,260 486.24,265.4 506,287.0 C486.24,308.6 449.76,314 430,314 C443.68,295.64 443.68,278.36 430,260 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="408" y1="270.8" x2="438" y2="270.8" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="274.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E1</text>
+  <line x1="408" y1="281.6" x2="438" y2="281.6" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="285.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E3</text>
+  <line x1="408" y1="292.4" x2="438" y2="292.4" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="296.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E5</text>
+  <line x1="408" y1="303.2" x2="438" y2="303.2" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="403" y="307.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">E7</text>
+  <line x1="506" y1="287.0" x2="536" y2="287.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="291.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A0  (bit 0)</text>
+  <text x="40" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">Cada salida es la OR de las entradas</text>
+  <text x="40" y="107" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">cuyo NÚMERO tiene ese bit en 1:</text>
+  <text x="40" y="124" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563"></text>
+  <text x="40" y="141" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">  E5 = 101₂  ⇒  aporta a A2 y a A0</text>
+  <text x="40" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563"></text>
+  <text x="40" y="175" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">Sólo una entrada debe estar activa;</text>
+  <text x="40" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">si hay dos, la salida es la OR de los</text>
+  <text x="40" y="209" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">códigos (basura) ⇒ hace falta el</text>
+  <text x="40" y="226" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="400" text-anchor="start" fill="#4b5563">codificador CON PRIORIDAD.</text>
+  <text x="40" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="400" text-anchor="start" fill="#1f2937">Circuito: 3 compuertas OR de 4 entradas. No lleva AND ni inversores.</text>
+</svg>

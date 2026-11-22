@@ -62,6 +62,21 @@ prioridad: maxima
 | 9 | **Jerarquía de memorias** | [[Jerarquía de memorias]] | Apuntes **U3** → comienzo de la unidad (parámetros) y jerarquía · `memorias.pdf` → transparencias iniciales (pirámide) · [[TP12 Memoria principal]] | Patterson & Hennessy · Stallings (memoria interna/externa) · Tanenbaum |
 | 10 | **Modos de direccionamiento (y los 4 de la indexada)** | [[Modos de direccionamiento]] | [[TP19 Modos de direccionamiento]] (los 7 modos) · Apuntes **U5** → modos y *"BLUE Indexada"* (modificador de 2 bits) · [[BLUE indexada (RIF, RID, nuevo formato)]] | Stallings (cap. de modos de direccionamiento) · Hamacher · Brey (modos del 8086) |
 
+### Tercera tanda de la matriz (peso 12): los circuitos y su fuente
+
+| # | Pregunta (3.ª tanda) | Nota maestra | Fuente de la cátedra (obligatoria) | Ampliación recomendada |
+|---|---|---|---|---|
+| 1 | **Decodificadores** | [[Decodificador]] | Apuntes **U2** → decodificadores · [[TP6 Decodificadores y demultiplexores]] · `memorias.pdf` (decodificador de filas) | Floyd (combinacionales) · Mano (decodificador + OR = función) |
+| 2 | **Codificadores** | [[Codificador]] | Apuntes **U2** → codificadores (con prioridad) · [[TP7 Codificadores y multiplexores]] | Floyd (74LS148, GS/EI/EO) · Mano |
+| 3 | **Multiplexores** | [[Multiplexor]] | Apuntes **U2** → multiplexores · [[TP7 Codificadores y multiplexores]] | Floyd (74LS151) · Mano (MUX como generador de funciones) |
+| 4 | **Demultiplexores** | [[Demultiplexor]] | Apuntes **U2** → demultiplexores · [[TP6 Decodificadores y demultiplexores]] | Floyd · Mano |
+| 5 | **RS → JK con Karnaugh** | [[Conversión entre biestables (RS, JK, D, T)]] | Apuntes **U2** → conversión entre biestables · [[TP8 Biestables RS]] | Floyd (aplicaciones de FF) · Mano (diseño secuencial) |
+| 6 | **FF D, T y RS (mapa y función)** | [[Flip-Flops SR, D, JK y T]] | Apuntes **U2** → biestables · [[TP9 Biestables D, JK y T]] | Floyd (cronogramas) · Mano |
+| 7 | **Álgebra de Boole y DeMorgan** | [[Álgebra de Boole — postulados y teoremas]] + [[Leyes de DeMorgan]] | Apuntes **U2** → postulados y teoremas · [[TP2 Álgebra de Boole]] · [[TP3 Simplificación analítica]] | Floyd (álgebra booleana) · Mano · Tocci |
+| 8 | **Sumadores** | [[Semisumador]] + [[Sumador completo]] | Apuntes **U2** → circuitos aritméticos · [[TP5 Sumadores]] | Floyd (aritméticas) · Mano (sumador-restador, overflow) |
+| 9 | **RI y 3 ejemplos de instrucciones** | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] + [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | `blue.pdf` → Tabla 2 y repertorio · Apuntes **U5** (BLUE) · [[TP16 Ciclo de instrucción básico]] | Hamacher (repertorio) · Stallings (ciclo) |
+| — | **Herramienta que usan 5, 6 y 7** | [[Mintérminos y maxtérminos]] | Apuntes **U2** → Karnaugh · [[TP4 Mintérminos, maxtérminos y Karnaugh]] | Floyd (Karnaugh) · Mano (Quine-McCluskey) |
+
 ---
 
 ## 3. La bibliografía, con qué es bueno cada libro

@@ -191,6 +191,44 @@ OR a las entradas J y K.
 > aplicar estas conversiones: si un JK hecho con RS queda con `S = JQ̄` y `R = KQ`, se están usando 2
 > compuertas en lugar de las 4 del circuito "de libro".
 
+## Cómo responderlo en el final (los ítems 5 y 6 de la 3.ª tanda)
+
+> [!warning] Lo que se corrige
+> La matriz pide **"mapa de Karnaugh y función booleana"**: si sólo decís `S = J·Q̄`, no alcanza. Hay que
+> **mostrar la tabla de excitación**, **dibujar el mapa** y **agrupar** hasta llegar a la función.
+
+**Movimiento 1 — el problema (20 s).** "Tengo un biestable y necesito otro. No cambio el chip: le pongo
+compuertas en las entradas para que se comporte distinto."
+
+**Movimiento 2 — las dos tablas (60 s).** La **característica** (qué hace cada tipo) y la de **excitación** (qué
+entradas necesito para cada transición `Q → Q⁺`). Aclarar que son **inversas** y que las `X` son don't care.
+
+**Movimiento 3 — el caso estrella: RS → JK (90 s).** Tabla de 8 filas con `J, K, Q → Q⁺`, excitación del RS (S y
+R con sus X), **dos mapas de Karnaugh** (uno para S, uno para R) y los grupos:
+- `S = J·Q̄` (columna `Q = 0`, filas donde `J = 1`)
+- `R = K·Q` (columna `Q = 1`, filas donde `K = 1`)
+
+Cerrar con la verificación: con `J = K = 1` nunca se pide set y reset a la vez ⇒ **el RS se autoelimina el
+estado prohibido**: si `Q = 0` ⇒ `S = 1` (setea); si `Q = 1` ⇒ `R = 1` (resetea) ⇒ **invierte**, como el JK.
+
+**Movimiento 4 — el resto (40 s).** JK → RS: `J = S, K = R`. JK → D: `J = D, K = D̄` (o, si piden el desarrollo
+del D, `D = J·Q̄ + K̄·Q`). T: `J = K = T`. D → T: `T = D ⊕ Q`.
+
+**Movimiento 5 — cierre (20 s).** "El método es siempre el mismo: **característica → excitación → Karnaugh →
+circuito**. No hay 12 fórmulas que memorizar: hay un procedimiento."
+
+### Repreguntas típicas
+| Repregunta | Respuesta corta |
+|---|---|
+| ¿Qué diferencia hay entre tabla característica y de excitación? | La característica dice **qué hace**; la de excitación dice **qué entradas poner** para lograrlo (son inversas) |
+| ¿Por qué `S = J·Q̄` y no `S = J`? | Porque setear sólo tiene sentido **si todavía estoy en 0**; si ya estoy en 1, el set no hace falta |
+| ¿Qué pasa con `J = K = 1` en el RS convertido? | `S` y `R` **nunca** son 1 a la vez ⇒ **invierte**, y desaparece el estado prohibido |
+| ¿Por qué se usan las X? | Porque hay transiciones en las que la entrada **no importa** ⇒ permiten grupos más grandes en el mapa |
+| ¿Cómo paso de JK a D? | `J = D`, `K = D̄` (nunca pide toggle) |
+| ¿Cómo paso de D a T? | `T = D ⊕ Q` (invierto sólo si el dato es distinto del que tengo) |
+| ¿Cuál es la conversión más fácil? | **RS → JK** es la que se pregunta; **JK → RS** es la más fácil (`J = S`, `K = R`) |
+| ¿Para qué sirve convertir? | Para **reutilizar** un chip disponible (por ejemplo un 74LS76 de JK) como el biestable que falta |
+
 ## Errores típicos
 - Confundir **tabla del biestable** (qué hace) con **tabla de excitación** (qué entradas le doy para que
   haga eso): son inversas.
@@ -200,6 +238,18 @@ OR a las entradas J y K.
   pero no es la mínima y no es lo que se pide).
 - Decir que el JK "no tiene estado prohibido": no lo tiene **de comportamiento** (con 11 invierte), pero sí
   hay que evitar `S = R = 1` si por dentro es un RS.
+
+## Para ampliar: qué leer y qué buscar
+
+| Fuente | Dónde | Qué buscar | Para qué te sirve |
+|---|---|---|---|
+| **Apuntes de cátedra**, *Unidad 2* | sección de **biestables** y de **conversión entre biestables** | la tabla de excitación **tal como la da la cátedra** y el procedimiento con Karnaugh | **Es la fuente exacta** de esta pregunta |
+| **[[TP8 Biestables RS]]** · **[[TP9 Biestables D, JK y T]]** | los TPs | los circuitos **reducidos** (que son conversiones disfrazadas) | Lo que se entrega y se corrige |
+| **[[Flip-Flops SR, D, JK y T]]** | nota de la bóveda | las tablas características y los mapas de cada biestable | Prerrequisito de esta nota |
+| **Floyd, *Fundamentos de sistemas digitales*** | capítulo de **circuitos secuenciales** (aplicaciones de flip-flops) | conversión entre tipos y tablas de excitación | **La mejor ampliación**: ejercicios resueltos |
+| **Mano, *Lógica digital y diseño de computadoras*** | capítulo de **diseño secuencial** | tablas de excitación y el procedimiento general de diseño | Formalización (es el método "de libro") |
+| **[[Mintérminos y maxtérminos]]** | nota de la bóveda | cómo agrupar con don't care en el mapa | La herramienta que se usa acá |
+| **[[Registros]]** · **[[Contadores]]** | notas de la bóveda | para qué se usan el D y el T en la práctica | Aplicación |
 
 ## Relacionado
 [[Flip-Flops SR, D, JK y T]] · [[Mintérminos y maxtérminos]] · [[Álgebra de Boole — postulados y teoremas]] ·

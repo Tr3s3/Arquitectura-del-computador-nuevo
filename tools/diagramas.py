@@ -722,6 +722,113 @@ def d_hazards():
     s.save("pipeline_hazards.svg")
 
 
+def d_compuertas():
+    s = Svg(830, 560, "Las siete compuertas lógicas: símbolo, función y tabla de verdad")
+    items = [
+        ("AND",  "AND",  "Y = A · B"),
+        ("OR",   "OR",   "Y = A + B"),
+        ("NOT",  "NOT",  "Y = A'"),
+        ("NAND", "NAND", "Y = (A·B)'"),
+        ("NOR",  "NOR",  "Y = (A+B)'"),
+        ("XOR",  "XOR",  "Y = A ⊕ B"),
+        ("XNOR", "XNOR", "Y = (A ⊕ B)'"),
+    ]
+    for i, (kind, name, form) in enumerate(items):
+        col, row = i % 4, i // 4
+        x = 45 + col * 195
+        y = 62 + row * 135
+        s.text(x + 34, y - 6, name, size=12.5, weight="700", anchor="middle")
+        ins = ["A"] if kind == "NOT" else ["A", "B"]
+        g = s.gate(kind, x, y, ins=ins, out="Y", w=68, h=46, stub=16)
+        s.text(x + 88, y + 74, form, size=11, family=MONO, color=ACCENT)
+    # ---- tabla global
+    y0 = 330
+    s.line(35, y0, 795, y0, w=1.2, color="#cbd5e1")
+    heads = ["A", "B", "AND", "OR", "NAND", "NOR", "XOR", "XNOR", "NOT(A)"]
+    xs = [60, 105, 175, 245, 322, 395, 468, 543, 640]
+    for x, h in zip(xs, heads):
+        s.text(x, y0 + 26, h, size=11, weight="700", anchor="middle")
+    cols = {
+        "AND": [0, 0, 0, 1], "OR": [0, 1, 1, 1], "NAND": [1, 1, 1, 0],
+        "NOR": [1, 0, 0, 0], "XOR": [0, 1, 1, 0], "XNOR": [1, 0, 0, 1], "NOT(A)": [1, 1, 0, 0],
+    }
+    filas = [(0, 0), (0, 1), (1, 0), (1, 1)]
+    for r, (a, b) in enumerate(filas):
+        yy = y0 + 52 + r * 26
+        s.text(xs[0], yy, str(a), size=11.5, anchor="middle")
+        s.text(xs[1], yy, str(b), size=11.5, anchor="middle")
+        for x, h in zip(xs[2:], heads[2:]):
+            v = str(cols[h][r])
+            s.text(x, yy, v, size=11.5, anchor="middle",
+                   weight="700" if v == "1" else "400", color=ACCENT if v == "1" else "#374151")
+    s.line(35, y0 + 40, 795, y0 + 40, w=1, color="#cbd5e1")
+    s.note(35, 486, [
+        "NAND y NOR son universales: con cualquiera de ellas sola se arma cualquier función.",
+        "XOR = paridad (1 con un número impar de unos) · XNOR = igualdad (A = B).",
+    ], size=10.5, lh=16)
+    s.save("compuertas.svg")
+
+
+def d_codificador_8x3():
+    s = Svg(790, 400, "Codificador 8 a 3: una compuerta OR por cada bit de salida")
+    s.gate("OR", 430, 70, ins=["E4", "E5", "E6", "E7"], out="A2  (bit 2)", w=76, h=54, stub=30)
+    s.gate("OR", 430, 165, ins=["E2", "E3", "E6", "E7"], out="A1  (bit 1)", w=76, h=54, stub=30)
+    s.gate("OR", 430, 260, ins=["E1", "E3", "E5", "E7"], out="A0  (bit 0)", w=76, h=54, stub=30)
+    s.note(40, 90, [
+        "Cada salida es la OR de las entradas",
+        "cuyo NÚMERO tiene ese bit en 1:",
+        "",
+        "  E5 = 101₂  ⇒  aporta a A2 y a A0",
+        "",
+        "Sólo una entrada debe estar activa;",
+        "si hay dos, la salida es la OR de los",
+        "códigos (basura) ⇒ hace falta el",
+        "codificador CON PRIORIDAD.",
+    ], size=10.6, lh=17)
+    s.note(40, 330, [
+        "Circuito: 3 compuertas OR de 4 entradas. No lleva AND ni inversores.",
+    ], size=10.8, lh=17, color="#1f2937")
+    s.save("codificador_8x3.svg")
+
+
+def d_karnaugh_3var():
+    s = Svg(700, 400, "Mapa de Karnaugh de 3 variables: F = Σm(1,3,5,7)")
+    x0, y0, w, h = 150, 90, 90, 64
+    cols = ["00", "01", "11", "10"]
+    s.text(x0 + 2 * w, y0 - 34, "BC", size=11.5, weight="700", anchor="middle", color="#4b5563")
+    for j, c in enumerate(cols):
+        s.text(x0 + j * w + w / 2, y0 - 12, c, size=11.5, weight="700", anchor="middle")
+    vals = {("0", "00"): 0, ("0", "01"): 1, ("0", "11"): 1, ("0", "10"): 0,
+            ("1", "00"): 0, ("1", "01"): 1, ("1", "11"): 1, ("1", "10"): 0}
+    for i, a in enumerate(["0", "1"]):
+        s.text(x0 - 34, y0 + i * h + h / 2 + 5, "A=" + a, size=11.5, weight="700", anchor="middle")
+        for j, c in enumerate(cols):
+            v = vals[(a, c)]
+            fill = "#dbeafe" if v == 1 else "#ffffff"
+            s.raw(f'<rect x="{x0 + j * w}" y="{y0 + i * h}" width="{w}" height="{h}" '
+                  f'fill="{fill}" stroke="#1f2937" stroke-width="1.5"/>')
+            s.text(x0 + j * w + w / 2, y0 + i * h + h / 2 + 6, str(v), size=13,
+                   weight="700" if v == 1 else "400", anchor="middle",
+                   color=ACCENT if v == 1 else "#6b7280")
+    # grupo: columnas 01 y 11, las dos filas  (recuadro rojo)
+    s.raw(f'<rect x="{x0 + 1 * w + 4}" y="{y0 + 4}" width="{2 * w - 8}" height="{2 * h - 8}" '
+          f'fill="none" stroke="{RED}" stroke-width="2.6" rx="4"/>')
+    s.note(x0 + w * 4 + 26, y0 + 60, [
+        "Grupo de 4:",
+        "",
+        "• A cambia  ⇒ desaparece",
+        "• B cambia  ⇒ desaparece",
+        "• C = 1 siempre ⇒ queda",
+        "",
+        "F = C",
+    ], size=11.2, lh=18, color="#1f2937")
+    s.note(40, 300, [
+        "Las columnas van en código GRAY (00, 01, 11, 10): así dos casilleros vecinos difieren en UNA sola variable,",
+        "y agruparlos equivale a aplicar A·B + A·B' = A. Un grupo de 2 elimina 1 variable; de 4, elimina 2; de 8, elimina 3.",
+    ], size=10.4, lh=16)
+    s.save("karnaugh_3var.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -742,3 +849,6 @@ if __name__ == "__main__":
     d_cache()
     d_cisc_risc()
     d_hazards()
+    d_compuertas()
+    d_codificador_8x3()
+    d_karnaugh_3var()
