@@ -59,7 +59,7 @@ adentro: el nombre de la carpeta lo dice).
 │   ├── Tema 2.1 Biestables y flip-flops/  2.1.1 … 2.1.4
 │   └── Tema 2.2 … Tema 2.7
 └── Unidad 3 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
-│   └── Tema 2.4 Registros y contadores/  etc. (carpeta cuando el tema tiene varios archivos)
+│   └── Tema 2.2 Registros y contadores/  etc. (una carpeta por tema)
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada

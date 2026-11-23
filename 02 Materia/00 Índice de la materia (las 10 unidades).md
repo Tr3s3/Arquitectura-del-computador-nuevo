@@ -18,8 +18,8 @@ prioridad: maxima
 > │   └── 00 Unidad N — temas y subtemas     ← el índice de la unidad
 > ├── Unidad 2 — Memorias y circuitos secuenciales/
 > │   ├── 00 Unidad 2 — temas y subtemas
-> │   ├── Tema 2.4 Registros y contadores/    ← una carpeta por tema con varios archivos
-> │   └── Tema 2.5 Memorias complementarias/
+> │   ├── Tema 2.2 Registros y contadores/    ← una carpeta por tema
+> │   └── Tema 2.6 Memorias complementarias/
 > ├── Unidad 3 … Unidad 10
 > ```
 > **Cada nota vive en un solo lugar.** La mayoría de los temas del programa coinciden con preguntas del final,
@@ -44,13 +44,13 @@ prioridad: maxima
 | **2** Memorias y circuitos secuenciales | 7 | 19 | ✅ **desarrollada** | [[00 Síntesis — Unidad 2]] |
 | **3** Transferencia de registros y microoperaciones | 3 | 7 | ⏳ estructura definida | — |
 | **4** Organización y diseño básico | 4 | 10 | ⏳ estructura definida | — |
-| **5** Programación básica y CPU convencional | 6 | 12 | ⏳ estructura definida | — |
+| **5** Programación básica y CPU convencional | 6 | 13 | ⏳ estructura definida | — |
 | **6** Control microprogramado | 3 | 5 | ⏳ estructura definida | — |
 | **7** CPU y arquitecturas | 4 | 8 | ⏳ estructura definida | — |
 | **8** Paralelismo | 4 | 4 | ⏳ estructura definida | — |
 | **9** Hardware aritmético | 5 | 8 | ⏳ estructura definida | — |
 | **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **95** | **34 subtemas escritos** | **2 de 10** |
+| **Total** | **45** | **96** | **35 subtemas escritos** | **2 de 10** |
 
 > [!note] Mientras una unidad no está desarrollada
 > No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya

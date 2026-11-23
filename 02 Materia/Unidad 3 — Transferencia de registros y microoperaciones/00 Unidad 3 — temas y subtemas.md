@@ -44,7 +44,7 @@ y al terminar la unidad se genera **`00 Síntesis — Unidad 3`** con todo el co
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **3.1 Transferencia entre registros** | bus único · buffers de 3 estados · una transferencia por pulso · `PC→MAR`, `MBR→IR` | [[Flujo de información en BLUE (datos y direcciones)]] · carpeta `Tanda 1/1.1` |
-| **3.2 La ALU y sus microoperaciones** | aritméticas (suma, resta en A2, incremento) · lógicas (AND, OR, XOR, NOT) · desplazamiento y rotación | [[ALU]] · `Tema 3.1 La ALU/` |
+| **3.2 La ALU y sus microoperaciones** | aritméticas (suma, resta en A2, incremento) · lógicas (AND, OR, XOR, NOT) · desplazamiento y rotación | [[ALU]] · `Tema 3.2 La ALU/` |
 | **3.3 Registros de la CPU** | AC, PC, IR, MAR, MBR · propósito general (base, índice, pila, estado) | [[Registros de la CPU]] · `Unidad 5/Tema 5.1` |
 | **3.4 Buses** | interno vs externo · de datos, de direcciones, de control · bus común (comparación de costos) | [[Estructura básica de un computador]] · [[TP14 Buses]] · carpeta `Tanda 1/1.5` |
 | **3.5 Hardware aritmético** | sumador-restador · acarreo anticipado · (se profundiza en la unidad 9) | [[Hardware aritmético (resumen)]] · `Unidad 9` |

@@ -19,6 +19,14 @@ tema: "2.2"
 > **CLOCK** (cuándo se mueve) y **LOAD / SHIFT** (qué hace: cargar en paralelo o desplazar). Con esos dos
 > controles, el mismo hardware es registro o conversor.
 
+## Notas de desarrollo ampliado (estaban antes en esta unidad)
+Estas dos notas son la versión larga, orientada al examen, de estos mismos temas:
+
+| Nota | Qué agrega |
+|---|---|
+| [[Registros]] | desarrollo extendido de los cuatro tipos con ejemplos de la cátedra |
+| [[Contadores]] | contadores con carga en paralelo, módulo N y ejercicios resueltos |
+
 ## TPs y práctica
 [[TP10 Registros PIPO y SISO]] · [[TP11 Registros SIPO y PISO]]
 

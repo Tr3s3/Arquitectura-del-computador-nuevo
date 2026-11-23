@@ -54,7 +54,7 @@ y al terminar la unidad se genera **`00 Síntesis — Unidad 9`** con todo el co
 | **9.4 División** | restauración · no restauración · desplazamientos | [[Hardware aritmético (resumen)]] |
 | **9.5 Punto flotante** | signo, exponente, mantisa · normalización · suma y multiplicación · IEEE 754 | [[Hardware aritmético (resumen)]] |
 | **9.6 Aritmética BCD** | suma decimal corregida (sumar 6 si > 9) | [[Hardware aritmético (resumen)]] |
-| **9.7 La ALU** | señales de selección · flags (Z, C, N, V) | [[ALU]] · `Unidad 3/Tema 3.1 La ALU/` |
+| **9.7 La ALU** | señales de selección · flags (Z, C, N, V) | [[ALU]] · `Unidad 3/Tema 3.2 La ALU/` |
 
 ---
 

@@ -20,6 +20,13 @@ tema: "2.6"
 > RAM y disco. **Asociativa = buscar por contenido**: en vez de "dame la dirección X", se pregunta "¿quién tiene
 > esta etiqueta?" en paralelo.
 
+## Notas de desarrollo ampliado (estaban antes en esta unidad)
+
+| Nota | Qué agrega |
+|---|---|
+| [[Memoria virtual y administración de memoria]] | desarrollo extendido, orientado al examen |
+| [[Memoria auxiliar y memoria asociativa]] | desarrollo extendido, orientado al examen |
+
 ## Relacionado
 [[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.5 — índice]] · [[00 Tema 2.7 — índice]] ·
 [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]]

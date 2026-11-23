@@ -50,7 +50,7 @@ y al terminar la unidad se genera **`00 Síntesis — Unidad 4`** con todo el co
 |---|---|---|
 | **4.1 Estructura de una computadora** | von Neumann · unidades funcionales · IAS · buses | [[Estructura básica de un computador]] · carpeta `Tanda 1/1.5` |
 | **4.2 La máquina BLUE** | especificación (4096×16) · registros · 16 opcodes · señales RUN/STATE/CLOCK | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · carpeta `Tanda 3/3.9` |
-| **4.3 Programar la BLUE** | ensamblador de la cátedra · lazos · arreglos · ejemplos resueltos | [[Programar en BLUE — ejemplos]] · `Tema 4.3 Programar la BLUE/` |
+| **4.3 Programar la BLUE** | ensamblador de la cátedra · lazos · arreglos · ejemplos resueltos | [[Programar en BLUE — ejemplos]] · `Tema 4.2 La máquina BLUE/` |
 | **4.4 Ciclo de instrucción** | ciclo de reloj / de máquina / de instrucción · los 8 pulsos · búsqueda y ejecución | [[Ciclo de máquina]] · [[Proceso de manejo de una instrucción]] · carpeta `Tanda 1/1.8` y su `Apoyo a la pregunta/` |
 | **4.5 Unidad de Control** | 4 funciones · señales de control · `estado·pulso·instrucción` · implementación con decodificador | [[Unidad de Control]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` y su `Apoyo a la pregunta/` |
 | **4.6 Las 16 instrucciones** | microoperaciones de cada una · 1 ciclo vs 2 ciclos · E/S | [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · carpeta `Tanda 2/2.5` |
