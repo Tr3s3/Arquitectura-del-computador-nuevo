@@ -6,73 +6,71 @@ unidad: 4
 
 > [!abstract] Qué pide la unidad
 > Armar la computadora completa: **estructura** (CPU + memoria + E/S con buses), el modelo **von Neumann** con la
-> **máquina BLUE**, y el **ciclo de instrucción** gobernado por la **Unidad de Control**. Es el corazón de la
-> 1.ª tanda del final.
+> **máquina BLUE**, el **ciclo de instrucción** en 8 pulsos gobernado por la **Unidad de Control**. Es el corazón de
+> la 1.ª tanda del final.
+
+> [!success] Unidad desarrollada
+> Los **4 temas** y sus **10 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
+> **[[00 Síntesis — Unidad 4]]**. Estado: ✅ completa.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
 ```
 Unidad 4 — Organización y diseño básico/
-├── 4.1 Estructura y modelo von Neumann/
+├── 00 Unidad 4 — temas y subtemas   (esta nota)
+├── 00 Síntesis — Unidad 4           (toda la unidad en un solo archivo)
+├── Tema 4.1 Estructura y modelo von Neumann/
 │   ├── 4.1.1 Unidades funcionales de una computadora
 │   └── 4.1.2 IAS y el programa almacenado
-├── 4.2 La máquina BLUE/
-│   ├── 4.2.1 Especificación, registros y 4096×16
+├── Tema 4.2 La máquina BLUE/              (+ la nota ampliada Programar en BLUE — ejemplos)
+│   ├── 4.2.1 Especificación, registros y 4096x16
 │   ├── 4.2.2 Los 16 opcodes octales
 │   └── 4.2.3 Programar en BLUE
-├── 4.3 El ciclo de instrucción/
+├── Tema 4.3 El ciclo de instrucción/
 │   ├── 4.3.1 Ciclo de reloj, de máquina y de instrucción
-│   ├── 4.3.2 Búsqueda: los 8 pulsos
+│   ├── 4.3.2 Búsqueda, los 8 pulsos
 │   └── 4.3.3 Ejecución instrucción por instrucción
-└── 4.4 Unidad de Control/
+└── Tema 4.4 Unidad de Control/
     ├── 4.4.1 Funciones y señales de control
     └── 4.4.2 estado·pulso·instrucción y el decodificador 1-16
 ```
 
-**4 temas y 10 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
-y al terminar la unidad se genera **`00 Síntesis — Unidad 4`** con todo el contenido junto (como ya está hecho en
-[[00 Síntesis — Unidad 1|la Unidad 1]]).
+## Tema por tema
 
-| Tema | Subtemas | Estado |
+| Tema | Subtemas (notas) | Índice |
 |---|---|---|
-| **4.1 Estructura y modelo von Neumann** | 4.1.1 Unidades funcionales de una computadora · 4.1.2 IAS y el programa almacenado | ⏳ a desarrollar |
-| **4.2 La máquina BLUE** | 4.2.1 Especificación, registros y 4096×16 · 4.2.2 Los 16 opcodes octales · 4.2.3 Programar en BLUE | ⏳ a desarrollar |
-| **4.3 El ciclo de instrucción** | 4.3.1 Ciclo de reloj, de máquina y de instrucción · 4.3.2 Búsqueda: los 8 pulsos · 4.3.3 Ejecución instrucción por instrucción | ⏳ a desarrollar |
-| **4.4 Unidad de Control** | 4.4.1 Funciones y señales de control · 4.4.2 estado·pulso·instrucción y el decodificador 1-16 | ⏳ a desarrollar |
-
-> [!note] Qué hay ya de esta unidad
-> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
-> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
-> tema, con el detalle de la cursada y los TPs.
-
-## Material ya disponible de esta unidad
-| Tema | Subtemas | Dónde está el desarrollo |
-|---|---|---|
-| **4.1 Estructura de una computadora** | von Neumann · unidades funcionales · IAS · buses | [[Estructura básica de un computador]] · carpeta `Tanda 1/1.5` |
-| **4.2 La máquina BLUE** | especificación (4096×16) · registros · 16 opcodes · señales RUN/STATE/CLOCK | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · carpeta `Tanda 3/3.9` |
-| **4.3 Programar la BLUE** | ensamblador de la cátedra · lazos · arreglos · ejemplos resueltos | [[Programar en BLUE — ejemplos]] · `Tema 4.2 La máquina BLUE/` |
-| **4.4 Ciclo de instrucción** | ciclo de reloj / de máquina / de instrucción · los 8 pulsos · búsqueda y ejecución | [[Ciclo de máquina]] · [[Proceso de manejo de una instrucción]] · carpeta `Tanda 1/1.8` y su `Apoyo a la pregunta/` |
-| **4.5 Unidad de Control** | 4 funciones · señales de control · `estado·pulso·instrucción` · implementación con decodificador | [[Unidad de Control]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` y su `Apoyo a la pregunta/` |
-| **4.6 Las 16 instrucciones** | microoperaciones de cada una · 1 ciclo vs 2 ciclos · E/S | [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · carpeta `Tanda 2/2.5` |
+| **4.1 Estructura y von Neumann** | [[4.1.1 Unidades funcionales de una computadora]] · [[4.1.2 IAS y el programa almacenado]] | [[00 Tema 4.1 — índice]] |
+| **4.2 La máquina BLUE** | [[4.2.1 Especificación, registros y 4096x16]] · [[4.2.2 Los 16 opcodes octales]] · [[4.2.3 Programar en BLUE]] | [[00 Tema 4.2 — índice]] |
+| **4.3 El ciclo de instrucción** | [[4.3.1 Ciclo de reloj, de máquina y de instrucción]] · [[4.3.2 Búsqueda, los 8 pulsos]] · [[4.3.3 Ejecución instrucción por instrucción]] | [[00 Tema 4.3 — índice]] |
+| **4.4 Unidad de Control** | [[4.4.1 Funciones y señales de control]] · [[4.4.2 estado·pulso·instrucción y el decodificador 1-16]] | [[00 Tema 4.4 — índice]] |
 
 ---
 
 ## Qué hay que saber hacer al terminar la unidad
-1. **Dibujar** el diagrama de bloques con el bus único.
-2. **Contar los pulsos** de cualquier instrucción (8 o 16) y decir por qué.
-3. Escribir la **señal de control** de una microoperación (`E·CP8·LDA`).
-4. **Explicar** por qué la búsqueda tarda 7 pulsos y el ciclo tiene 8.
+1. **Dibujar** el diagrama de bloques con el bus único y las cinco unidades.
+2. Decir los **cuatro números** de la BLUE (4096×16, 8×125 ns = 1 µs, 16 instrucciones, 12 bits).
+3. **Codificar y decodificar** una instrucción en octal y decir cuántos pulsos tarda.
+4. Escribir la **tabla de los 8 pulsos** de la búsqueda y explicar por qué el 8.º existe.
+5. Explicar **por qué 8 instrucciones son de 1 ciclo y 6 de 2 ciclos**.
+6. Escribir la señal de control de cualquier microoperación (`F·CP5`, `E·CP8·ADD`).
 
 ## TPs de la unidad
 [[TP15 Arquitectura de Von Neumann (IAS)]] · [[TP16 Ciclo de instrucción básico]] ·
-(apoyo: [[TP14 Buses]] · [[TP17 Formato básico de instrucciones]])
+(apoyo) [[TP14 Buses]] · [[TP17 Formato básico de instrucciones]]
 
 ## Fuente de la cátedra
-`blue.pdf` (Foster, *Una máquina elemental*: ciclo de búsqueda, Tabla 2, unidad de control) ·
-Apuntes **Unidad 4** y **Unidad 5**.
+`blue.pdf` (Foster, *Una máquina elemental*: especificación, Tabla 2 del ciclo de búsqueda, instrucciones de dos
+ciclos, unidad de control) · Apuntes **Unidad 4** y **Unidad 5**.
+
+## Desarrollo de examen de estos temas
+[[00 Tanda 1 — índice]]: [[Estructura básica de un computador]] · [[Flujo de información en BLUE (datos y direcciones)]] ·
+[[Memoria RAM 8x3]] · [[Cómo se implementa la Unidad de Control]] · [[Unidad de Control]] · [[Ciclo de máquina]] ·
+[[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] ·
+Tanda 2: [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
+Tanda 3: [[Máquina BLUE — arquitectura y conjunto de instrucciones]]
 
 ---
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 3 — temas y subtemas]] ·
-[[00 Unidad 5 — temas y subtemas]] · [[00 Tanda 1 — índice]]
+[[00 Índice de la materia (las 10 unidades)]] · [[00 Síntesis — Unidad 4]] ·
+[[00 Unidad 3 — temas y subtemas]] · [[00 Unidad 5 — temas y subtemas]]

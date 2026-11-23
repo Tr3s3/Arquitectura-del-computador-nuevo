@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 192 notas · 22 diagramas SVG · ~175.000 palabras · 2.495 enlaces internos, 0 rotos.
-**Materia en detalle:** unidades 1, 2 y 3 completas (15 temas, 41 subtemas) con sus `00 Síntesis`; unidades 4 a 10 con la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 207 notas · 22 diagramas SVG · ~184.000 palabras · 2.602 enlaces internos, 0 rotos.
+**Materia en detalle:** unidades 1 a 4 completas (19 temas, 51 subtemas) con sus `00 Síntesis`; unidades 5 a 10 con la estructura `Unidad → Tema → Subtema` definida.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -60,7 +60,10 @@ adentro: el nombre de la carpeta lo dice).
 ├── Unidad 3 — Transferencia de registros y microoperaciones/  ✅ desarrollada (3 temas / 7 subtemas)
 │   ├── 00 Síntesis — Unidad 3
 │   └── Tema 3.1 Microoperaciones y bus/ · Tema 3.2 La ALU/ · Tema 3.3 Registros de la CPU/
-└── Unidad 4 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
+├── Unidad 4 — Organización y diseño básico/   ✅ desarrollada (4 temas / 10 subtemas)
+│   ├── 00 Síntesis — Unidad 4
+│   └── Tema 4.1 … Tema 4.4 (BLUE, ciclo de instrucción, UC)
+└── Unidad 5 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
 │   └── Tema 2.2 Registros y contadores/  etc. (una carpeta por tema)
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
