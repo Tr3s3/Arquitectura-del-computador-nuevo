@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Ciclo de máquina
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Proceso de manejo de una instrucción]]
+> **En otra tanda o unidad:** [[Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) · [[Interrupciones y entrada-salida]] (Tanda 2 · 2.8 Interrupciones) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.8 Ciclo de máquina]].
+
+
 > [!abstract] En una frase
 > El **ciclo de máquina** es la unidad de trabajo de la CPU: **8 pulsos de reloj** en los que la máquina hace
 > **una** cosa —**buscar** una instrucción o **ejecutar** una— y que se repite mientras el biestable **RUN**

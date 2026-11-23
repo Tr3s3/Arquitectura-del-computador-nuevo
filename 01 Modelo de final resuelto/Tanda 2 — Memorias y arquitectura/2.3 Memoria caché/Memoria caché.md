@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Memoria caché
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Jerarquía de memorias]] (Tanda 2 · 2.4 Jerarquía de memorias) · [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Memoria ROM y sus tipos]] (Tanda 2 · 2.2 Memoria ROM y sus tipos) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.3 Memoria caché]].
+
+
 > [!abstract] En una frase
 > La **caché** es una memoria **chica y rapidísima** (SRAM) puesta entre la CPU y la RAM para guardar **lo último
 > que se usó**, apostando a que se va a volver a usar. Cuando la CPU pide un dato, primero mira la caché: si está

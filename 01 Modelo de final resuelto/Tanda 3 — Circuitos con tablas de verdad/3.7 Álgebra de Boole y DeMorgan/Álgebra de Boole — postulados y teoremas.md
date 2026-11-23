@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Álgebra de Boole — postulados y teoremas
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Leyes de DeMorgan]]
+> **En otra tanda o unidad:** [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.7 Boole y DeMorgan]].
+
+
 > [!abstract] En una frase
 > El **álgebra de Boole** es el "idioma" de los circuitos digitales: trabaja con **dos valores (0 y 1)** y tres
 > operaciones (**OR `+`**, **AND `·`**, **NOT `'`**). Con un puñado de **postulados** (que se aceptan sin

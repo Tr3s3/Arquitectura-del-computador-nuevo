@@ -10,7 +10,7 @@ unidad: 6
 
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
-| **6.1 Control cableado** | lógica combinacional · señales `estado·pulso·instrucción` · rápido pero rígido | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` |
+| **6.1 Control cableado** | lógica combinacional · señales `estado·pulso·instrucción` · rápido pero rígido | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` y su `Apoyo a la pregunta/` |
 | **6.2 Control microprogramado** | memoria de control (**ROM**) · microinstrucción y sus campos · microprograma · secuenciamiento (microPC) · PLA vs ROM | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] |
 | **6.3 Comparación** | velocidad · flexibilidad · costo · relación con **CISC y RISC** | [[CISC y RISC]] · carpeta `Tanda 2/2.6` |
 | **6.4 El caso real** | el 8088: ROM de control 504×21 · ~90 microprocedimientos · microinstrucción de 5+5+3+4+3+1 | [[El 8086 como CPU convencional (TP21)]] · [[Cómo se implementa la Unidad de Control]] |

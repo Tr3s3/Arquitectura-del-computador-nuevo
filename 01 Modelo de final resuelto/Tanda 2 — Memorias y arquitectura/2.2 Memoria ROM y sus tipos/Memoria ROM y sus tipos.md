@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Memoria ROM y sus tipos
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.2 Memoria ROM]].
+
+
 > [!abstract] En una frase
 > La **ROM** (*Read Only Memory*) es una memoria **no volátil**: conserva su contenido **sin alimentación**, y en
 > operación normal **sólo se lee**. Guarda lo que tiene que estar desde el arranque: **firmware/BIOS**, tablas

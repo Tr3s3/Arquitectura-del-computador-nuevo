@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Arquitectura CISC y RISC
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Unidad de control cableada y microprogramada]] (Materia · Unidad 6) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.6 CISC y RISC]].
+
+
 > [!abstract] En una frase
 > Son dos filosofías para diseñar el **repertorio de instrucciones** de una CPU. **CISC** (*Complex Instruction
 > Set Computer*): **pocas instrucciones pero complejas**, de longitud variable, que pueden operar directamente

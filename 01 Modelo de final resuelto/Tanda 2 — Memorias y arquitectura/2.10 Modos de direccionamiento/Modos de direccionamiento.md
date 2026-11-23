@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Modos de direccionamiento
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Registros de la CPU]] (Materia · Unidad 5) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5) · [[Ciclo de la instrucción LDA (24 pulsos)]] (Tanda 1 · 1.3 Ciclo de LDA indexada (24 pulsos))
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.10 Modos de direccionamiento]].
+
+
 > [!abstract] En una frase
 > El **modo de direccionamiento** es la **forma en que la instrucción dice dónde está el operando**: cómo se
 > calcula la **dirección efectiva (EA)**, la que finalmente se pone en el MAR. La cátedra trabaja con **siete

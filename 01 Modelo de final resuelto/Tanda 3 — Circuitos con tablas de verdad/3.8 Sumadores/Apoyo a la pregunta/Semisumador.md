@@ -81,7 +81,7 @@ Se lee de un vistazo:
        │          └───┘
 ```
 
-![Semisumador](../../../assets/semisumador.svg)
+![Semisumador](../../../../assets/semisumador.svg)
 
 **Compuertas: 1 XOR + 1 AND.** (Si sólo hay NAND: 5 compuertas; si sólo hay AND-OR-NOT: 2 NOT + 2 AND + 1 OR.)
 

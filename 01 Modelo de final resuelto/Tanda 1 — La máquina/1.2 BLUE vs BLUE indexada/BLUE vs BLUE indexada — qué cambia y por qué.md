@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # BLUE vs BLUE indexada — qué cambia y por qué
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[BLUE indexada (RIF, RID, nuevo formato)]]
+> **En otra tanda o unidad:** [[Ciclo de LDA indexada (los 24 pulsos)]] (Tanda 1 · 1.3 Ciclo de LDA indexada (24 pulsos)) · [[Registros base e índice]] (Tanda 2 · 2.9 Registros base e índice) · [[Sumador completo]] (Tanda 3 · 3.8 Sumadores) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.2 BLUE vs indexada]].
+
+
 > [!abstract] En una frase
 > La **BLUE** es la máquina elemental del apunte de Foster: 16 instrucciones, 4096 celdas, instrucción de
 > una palabra con **4 bits de opcode + 12 de dirección** y un solo modo de direccionamiento (directo).

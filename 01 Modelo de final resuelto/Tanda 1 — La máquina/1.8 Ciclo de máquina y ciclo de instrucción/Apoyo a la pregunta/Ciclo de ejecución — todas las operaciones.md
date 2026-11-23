@@ -164,7 +164,7 @@ cambia el PC usa `IR → PC`**.
 | Ejecución 1 | 9–16 | trae la **2.ª palabra** a W; **CP13: RID→X**; CP14: MBR→W; el Σ calcula `W + X` |
 | Ejecución 2 | 17–24 | **CP17: Σ→MAR** y lectura; **CP22: MBR→AC**; CP24: `F→STATE` |
 
-![Los 24 pulsos de la LDA indexada, ciclo por ciclo](../../../assets/lda24_pulsos.svg)
+![Los 24 pulsos de la LDA indexada, ciclo por ciclo](../../../../assets/lda24_pulsos.svg)
 
 Con la explicación completa: [[Ciclo de LDA indexada (los 24 pulsos)]].
 

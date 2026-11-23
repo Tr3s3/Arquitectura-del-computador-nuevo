@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Decodificador
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) · [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Memoria ROM y sus tipos]] (Tanda 2 · 2.2 Memoria ROM y sus tipos)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.1 Decodificadores]].
+
+
 > [!abstract] En una frase
 > Un **decodificador de n a 2ⁿ** tiene **n entradas** y **2ⁿ salidas**, y activa **una sola salida**: la que
 > corresponde al número binario de la entrada. Cada salida es un **mintérmino** de las entradas:

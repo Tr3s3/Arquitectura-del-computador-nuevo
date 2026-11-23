@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Conversión entre biestables (RS, JK, D, T)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.5 RS a JK]].
+
+
 > [!abstract] En una frase
 > Convertir un biestable en otro es **construir el biestable que tengo para que se comporte como el que
 > quiero**: se escribe la tabla de transición del biestable pedido, se ve **qué entradas necesita el que

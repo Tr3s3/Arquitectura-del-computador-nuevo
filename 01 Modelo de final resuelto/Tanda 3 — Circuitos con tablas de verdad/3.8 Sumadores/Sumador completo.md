@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Sumador completo (full adder)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Semisumador]]
+> **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3) · [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Hardware aritmético (resumen)]] (Materia · Unidad 9)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.8 Sumadores]].
+
+
 > [!abstract] En una frase
 > El **sumador completo** suma **tres bits** (A, B y el acarreo de entrada **Cin**) y entrega **suma `S`** y
 > **acarreo `Cout`**: **`S = A ⊕ B ⊕ Cin`** · **`Cout = A·B + Cin·(A⊕B)`**. Es la celda que, repetida n veces y

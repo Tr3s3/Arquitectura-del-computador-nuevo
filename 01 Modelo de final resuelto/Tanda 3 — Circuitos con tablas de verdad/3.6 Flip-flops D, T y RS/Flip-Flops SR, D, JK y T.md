@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Flip-Flops SR, D, JK y T
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Conversión entre biestables (RS, JK, D, T)]] (Tanda 3 · 3.5 De flip-flop RS a JK (Karnaugh)) · [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Registros]] (Materia · Unidad 2)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.6 Flip-flops]].
+
+
 > [!abstract] En una frase
 > Un **flip-flop** es una **memoria de 1 bit**: guarda un valor (`Q`) hasta que una entrada se lo cambia. Cada
 > tipo se define por su **ecuación característica**:

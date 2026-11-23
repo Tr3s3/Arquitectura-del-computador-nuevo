@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Formato de la instrucción (4 formatos)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Espacio de direccionamiento y cálculo de CodOp-Dirección]]
+> **En otra tanda o unidad:** [[Máquina BLUE — arquitectura y conjunto de instrucciones]] (Tanda 3 · 3.9 El RI y 3 ejemplos de instrucciones) · [[Modos de direccionamiento]] (Tanda 2 · 2.10 Modos de direccionamiento) · [[Lenguaje máquina y clasificación de instrucciones]] (Materia · Unidad 5) · [[CISC y RISC]] (Tanda 2 · 2.6 CISC y RISC) · [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.7 Formato de la instrucción]].
+
+
 > [!abstract] En una frase
 > El **formato** es el reparto de bits de una instrucción entre el **código de operación** (qué hacer) y las
 > **direcciones** (dónde están los datos). Hay cuatro formatos clásicos —**4, 3, 2 y 1 dirección**— y cada uno

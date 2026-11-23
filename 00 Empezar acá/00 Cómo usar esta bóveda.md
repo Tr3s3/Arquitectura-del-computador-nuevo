@@ -33,9 +33,16 @@ tipo: guia
 | **`01 Modelo de final resuelto/`** | las **27 preguntas** del final, cada una resuelta | `Tanda 1\|2\|3` → `N. Pregunta/` → **los archivos de esa pregunta** (el desarrollo + sus subtemas, todo junto) | [[00 Índice — el final resuelto]] |
 | **`02 Materia/`** | la materia **completa**, las **10 unidades** | `Unidad N — nombre/` → `Tema N.M nombre/` → **los subtemas** | [[00 Índice de la materia (las 10 unidades)]] |
 
+> [!note] Dentro de cada pregunta hay una carpeta `Apoyo a la pregunta/`
+> Con la nota **`00 Apoyos — N.M …`**, que lista **qué archivos hacen falta para responderla**, **para qué sirve
+> cada uno** y el enlace a los apoyos que viven en **otras tandas** (hay notas que sirven a preguntas de dos
+> tandas distintas: no se duplican, se enlazan). Además, **la nota principal de cada pregunta abre con un bloque
+> "Qué necesitás para responder esta pregunta"**, así que nunca hay que adivinar qué leer antes.
+
 **Ejemplo de cómo se lee una ruta:** `01 Modelo de final resuelto/Tanda 1 — La máquina/1.8 Ciclo de máquina y ciclo de instrucción/`
-→ es la pregunta 1.8 de la primera tanda, y **adentro están** el ciclo de máquina, el de búsqueda, el de
-ejecución y el proceso de manejo de una instrucción. Nada de eso está suelto en otro lado.
+→ es la pregunta 1.8 de la primera tanda: adentro está la nota **Ciclo de máquina** y, en
+**`Apoyo a la pregunta/`**, el ciclo de búsqueda, el de ejecución y el proceso de manejo de una instrucción, más
+la nota `00 Apoyos` que dice para qué sirve cada uno. Nada de eso está suelto en otro lado.
 
 | Carpeta | Qué contiene |
 |---|---|

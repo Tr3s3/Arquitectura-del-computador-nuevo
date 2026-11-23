@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Estructura básica de un computador
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Registros de la CPU]] (Materia · Unidad 5) · [[ALU]] (Materia · Unidad 3) · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] (Tanda 3 · 3.9 El RI y 3 ejemplos de instrucciones) · [[Flujo de información en BLUE (datos y direcciones)]] (Tanda 1 · 1.1 Flujo de información (direcciones y datos)) · [[Jerarquía de memorias]] (Tanda 2 · 2.4 Jerarquía de memorias)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.5 Estructura básica]].
+
+
 > [!abstract] En una frase
 > Un computador es **cinco bloques y tres buses**: **CPU** (UC + ALU + registros), **memoria**, **entrada**,
 > **salida** y **buses** (de **datos**, de **direcciones** y de **control**). La idea que lo hace posible es la

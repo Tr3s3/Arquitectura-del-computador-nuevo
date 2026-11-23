@@ -12,13 +12,19 @@ prioridad: maxima
 | # | Pregunta | Carpeta | Archivos que corresponden |
 |---|---|---|---|
 | 1.1 | **Flujo de información (direcciones y datos)** | `1.1 Flujo de información (direcciones y datos)/` | [[Flujo de información en BLUE (datos y direcciones)]] |
-| 1.2 | **BLUE vs BLUE indexada** | `1.2 BLUE vs BLUE indexada/` | [[BLUE vs BLUE indexada — qué cambia y por qué]] · *subtema:* [[BLUE indexada (RIF, RID, nuevo formato)]] |
-| 1.3 | **Ciclo de LDA indexada (24 pulsos)** | `1.3 Ciclo de LDA indexada (24 pulsos)/` | [[Ciclo de LDA indexada (los 24 pulsos)]] · *subtema:* [[Ciclo de la instrucción LDA (24 pulsos)]] |
+| 1.2 | **BLUE vs BLUE indexada** | `1.2 BLUE vs BLUE indexada/` | [[BLUE vs BLUE indexada — qué cambia y por qué]] · *en `Apoyo a la pregunta/`:* [[BLUE indexada (RIF, RID, nuevo formato)]] |
+| 1.3 | **Ciclo de LDA indexada (24 pulsos)** | `1.3 Ciclo de LDA indexada (24 pulsos)/` | [[Ciclo de LDA indexada (los 24 pulsos)]] · *en `Apoyo a la pregunta/`:* [[Ciclo de la instrucción LDA (24 pulsos)]] |
 | 1.4 | **Memoria RAM 8×3** | `1.4 Memoria RAM 8x3/` | [[Memoria RAM 8x3]] |
 | 1.5 | **Estructura básica del computador** | `1.5 Estructura básica del computador/` | [[Estructura básica de un computador]] |
-| 1.6 | **Implementación de la Unidad de Control** | `1.6 Implementación de la Unidad de Control/` | [[Cómo se implementa la Unidad de Control]] · *subtema:* [[Unidad de Control]] |
-| 1.7 | **Formato de la instrucción (4 → 1 campo)** | `1.7 Formato de la instrucción (4 formatos)/` | [[Formato de la instrucción (4 formatos)]] · *subtema:* [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] |
-| 1.8 | **Ciclo de máquina y ciclo de instrucción** | `1.8 Ciclo de máquina y ciclo de instrucción/` | [[Ciclo de máquina]] · *subtemas:* [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Proceso de manejo de una instrucción]] |
+| 1.6 | **Implementación de la Unidad de Control** | `1.6 Implementación de la Unidad de Control/` | [[Cómo se implementa la Unidad de Control]] · *en `Apoyo a la pregunta/`:* [[Unidad de Control]] |
+| 1.7 | **Formato de la instrucción (4 → 1 campo)** | `1.7 Formato de la instrucción (4 formatos)/` | [[Formato de la instrucción (4 formatos)]] · *en `Apoyo a la pregunta/`:* [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] |
+| 1.8 | **Ciclo de máquina y ciclo de instrucción** | `1.8 Ciclo de máquina y ciclo de instrucción/` | [[Ciclo de máquina]] · *en `Apoyo a la pregunta/`:* [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Proceso de manejo de una instrucción]] |
+
+> [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**: la lista de los
+> archivos que hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos que viven en
+> otras tandas. La nota principal de la pregunta lo resume en un bloque al principio, así que nunca hay que
+> adivinar qué leer antes.
 
 ---
 

@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Las 16 instrucciones de BLUE — ciclo completo pulso por pulso
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Ciclo de búsqueda (7 y 8 pulsos)]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Ciclo de ejecución — todas las operaciones]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] (Tanda 3 · 3.9 El RI y 3 ejemplos de instrucciones) · [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Programar en BLUE — ejemplos]] (Materia · Unidad 4)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.5 Las 16 instrucciones]].
+
+
 > [!abstract] En una frase
 > **Todas** las instrucciones comparten el mismo **ciclo de búsqueda de 8 pulsos**. Lo que cambia es lo que
 > pasa después: **8 instrucciones terminan dentro de esos mismos 8 pulsos** (HLT, NOP, JMP, JMA, SRJ, CSA,

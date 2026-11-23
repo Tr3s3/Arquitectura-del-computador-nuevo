@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Interrupciones y entrada/salida
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Registros de la CPU]] (Materia · Unidad 5) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.8 Interrupciones]].
+
+
 > [!abstract] En una frase
 > Una **interrupción** es un pedido de atención que **rompe la secuencia** del programa: la CPU **termina la
 > instrucción en curso**, **guarda el contexto**, salta a una **rutina de servicio**, la ejecuta y **retorna**

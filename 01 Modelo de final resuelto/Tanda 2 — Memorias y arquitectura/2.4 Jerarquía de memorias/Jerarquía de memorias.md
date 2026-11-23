@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Jerarquía de memorias
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) · [[Memoria virtual y administración de memoria]] (Materia · Unidad 2) · [[Memoria auxiliar y memoria asociativa]] (Materia · Unidad 2)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.4 Jerarquía de memorias]].
+
+
 > [!abstract] En una frase
 > La **jerarquía de memoria** es la organización en **pisos** de las memorias de un computador: **registros → L1 →
 > L2/L3 → RAM → disco/SSD → cinta**, donde **arriba** hay poca capacidad, altísima velocidad y altísimo costo por

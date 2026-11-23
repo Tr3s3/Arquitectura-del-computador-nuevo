@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Pipeline (segmentación de instrucciones)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[CISC y RISC]] (Tanda 2 · 2.6 CISC y RISC) · [[Paralelismo y procesamiento vectorial]] (Materia · Unidad 8) · [[Técnicas para aumentar la velocidad]] (Materia · Unidad 7)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.7 Pipeline]].
+
+
 > [!abstract] En una frase
 > El **pipeline** es una técnica de **paralelismo a nivel de instrucciones**: se parte la ejecución en **etapas
 > fijas** (búsqueda, decodificación, cálculo de direcciones, búsqueda de operandos, ejecución) y cada etapa

@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Máquina BLUE — arquitectura y conjunto de instrucciones
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Programar en BLUE — ejemplos]] (Materia · Unidad 4)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.9 El RI]].
+
+
 > [!abstract] En una frase
 > BLUE es la **computadora didáctica** de la cátedra: 4096 palabras de 16 bits, 5 registros visibles
 > (PC, IR, MAR, MBR, AC), un bus único y 16 instrucciones de 4 bits de código + 12 bits de dirección.

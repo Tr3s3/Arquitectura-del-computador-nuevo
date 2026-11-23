@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Cómo se implementa la Unidad de Control
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Unidad de Control]]
+> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[CISC y RISC]] (Tanda 2 · 2.6 CISC y RISC) · [[Unidad de control cableada y microprogramada]] (Materia · Unidad 6)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.6 Implementación de la UC]].
+
+
 > [!abstract] En una frase
 > La UC se implementa como un **circuito secuencial** que combina tres cosas: **el estado** (los biestables
 > RUN, STATE, TRA y los flags), **el tiempo** (el reloj maestro que genera CP1…CP8) y **la instrucción**

@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Registros base e índice
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[BLUE vs BLUE indexada — qué cambia y por qué]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Modos de direccionamiento]] (Tanda 2 · 2.10 Modos de direccionamiento)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.9 Registros base e índice]].
+
+
 > [!abstract] En una frase
 > Los **registros índice** (RIF y RID en la BLUE indexada) son registros que el **programador** usa como
 > punteros: su contenido **se suma al campo de dirección** sólo cuando la instrucción lo pide, y sirven para

@@ -18,7 +18,7 @@ unidad: 2
 | **2.6 Memoria ROM** | decodificador + OR · máscara, PROM, EPROM, EEPROM, Flash | [[Memoria ROM y sus tipos]] · carpeta `Tanda 2/2.2` |
 | **2.7 Jerarquía y caché** | localidad · pirámide · mapeos · políticas · AMAT | [[Jerarquía de memorias]] · [[Memoria caché]] · carpetas `Tanda 2/2.3 y 2.4` |
 | **2.8 Memorias complementarias** | memoria virtual y paginación · TLB · memoria asociativa | [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]] · `Tema 2.5 Memorias complementarias/` |
-| **2.9 Memorias grandes** | `bits dir = log₂ celdas` · CodOp vs dirección | [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] · carpeta `Tanda 1/1.7` |
+| **2.9 Memorias grandes** | `bits dir = log₂ celdas` · CodOp vs dirección | [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] · carpeta `Tanda 1/1.7` y su `Apoyo a la pregunta/` |
 
 ---
 

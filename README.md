@@ -9,7 +9,7 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 105 notas · 22 diagramas SVG · ~128.000 palabras · 1.655 enlaces internos, 0 rotos.
+**Estado:** 133 notas · 22 diagramas SVG · ~140.000 palabras · 2.059 enlaces internos, 0 rotos.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -34,7 +34,9 @@ adentro: el nombre de la carpeta lo dice).
 ├── 00 Índice — el final resuelto.md
 ├── 00 Guías/                    matriz, chequeo de los 12 temas, qué leer, banco, guion
 ├── Tanda 1 — La máquina/        00 Tanda 1 — índice
-│   ├── 1.1 Flujo de información (direcciones y datos)/   → nota (+ subtemas)
+│   ├── 1.1 Flujo de información (direcciones y datos)/
+│   │   ├── Flujo de información en BLUE (datos y direcciones).md   ← nota principal
+│   │   └── Apoyo a la pregunta/   00 Apoyos — 1.1 … (+ los archivos de apoyo de esa pregunta)
 │   ├── 1.2 BLUE vs BLUE indexada/                        → nota + «BLUE indexada (RIF, RID)»
 │   ├── 1.3 Ciclo de LDA indexada (24 pulsos)/
 │   ├── 1.4 Memoria RAM 8x3/
@@ -56,10 +58,12 @@ assets/                          diagramas SVG (generados con tools/diagramas.py
 tools/                           generador de los diagramas
 ```
 
-> **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**, y adentro está el
-> **desarrollo principal** más los **subtemas** que hacen falta para responderla (así los apoyos no quedan
-> sueltos). En `02 Materia/` la cadena es `Unidad → Tema → Subtemas`. Cada nota vive en un solo lugar y hay
-> enlaces cruzados entre los dos bloques.
+> **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**: adentro está la
+> **nota principal** y la carpeta **`Apoyo a la pregunta/`** con su nota `00 Apoyos — N.M …` (qué archivos hacen
+> falta, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas) más los archivos de
+> apoyo propios de esa pregunta. La nota principal **abre diciendo qué apoyos necesita**. En `02 Materia/` la
+> cadena es `Unidad → Tema → Subtemas`. Cada nota vive en un solo lugar: lo que sirve a dos preguntas se
+> enlaza, no se duplica.
 
 ## Escrita para aprender desde cero
 

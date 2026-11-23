@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Flujo de información en BLUE (datos y direcciones)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Máquina BLUE — arquitectura y conjunto de instrucciones]] (Tanda 3 · 3.9 El RI y 3 ejemplos de instrucciones) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Estructura básica de un computador]] (Tanda 1 · 1.5 Estructura básica del computador) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.1 Flujo de información]].
+
+
 > [!abstract] En una frase
 > En la BLUE **toda la información circula por un único bus**: en cada pulso **un** registro pone su contenido
 > en el bus ("Envíe…") y **otro** lo copia ("Cargue…"). Hay dos flujos que hay que saber separar: el de

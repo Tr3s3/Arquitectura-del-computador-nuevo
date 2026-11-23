@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Multiplexor (MUX)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.3 Multiplexores]].
+
+
 > [!abstract] En una frase
 > Un **multiplexor de 2ⁿ a 1** tiene **2ⁿ entradas de dato**, **n entradas de selección** y **una sola salida**:
 > la salida **copia** la entrada cuyo número indican las líneas de selección. `Y = S1'·S0'·I0 + S1'·S0·I1 +

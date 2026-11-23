@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Celda elemental de memoria
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) · [[Memoria ROM y sus tipos]] (Tanda 2 · 2.2 Memoria ROM y sus tipos) · [[Jerarquía de memorias]] (Tanda 2 · 2.4 Jerarquía de memorias)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.1 Celda de memoria]].
+
+
 > [!abstract] En una frase
 > La **celda elemental** es el circuito que guarda **un bit** dentro de una memoria: un **biestable** (o un
 > capacitor, según la tecnología) **más compuertas** para tres cosas: **ser seleccionada** entre miles (línea de

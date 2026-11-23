@@ -21,6 +21,12 @@ prioridad: maxima
 | 3.8 | **Sumadores** | `3.8 Sumadores/` | [[Semisumador]] · [[Sumador completo]] |
 | 3.9 | **El RI y 3 ejemplos de instrucciones** | `3.9 El RI y 3 ejemplos de instrucciones/` | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] |
 
+> [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**:
+> qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos
+> que viven en otras tandas. Es lo primero que muestra la nota principal.
+
+
 ---
 
 ## El orden en que conviene estudiarla

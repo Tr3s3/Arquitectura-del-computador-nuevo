@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Demultiplexor (DEMUX)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.4 Demultiplexores]].
+
+
 > [!abstract] En una frase
 > Un **demultiplexor de 1 a 2ⁿ** recibe **un dato** y **n líneas de selección**, y **envía el dato a una sola**
 > de sus **2ⁿ salidas** (las demás quedan en 0): `Yi = D · mi`. Es, literalmente, **un decodificador con el dato

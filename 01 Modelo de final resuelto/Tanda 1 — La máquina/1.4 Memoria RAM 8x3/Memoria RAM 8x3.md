@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Memoria RAM 8x3
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) · [[Estructura básica de un computador]] (Tanda 1 · 1.5 Estructura básica del computador) · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos))
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.4 Memoria RAM 8x3]].
+
+
 > [!abstract] En una frase
 > Una RAM de **8 × 3** es una memoria con **8 posiciones (direcciones) de 3 bits cada una**: capacidad
 > **24 bits**, **3 bits de dirección** (000 a 111) y **3 bits de dato**; internamente tiene una **matriz de

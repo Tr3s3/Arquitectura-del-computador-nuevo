@@ -27,6 +27,12 @@ prioridad: maxima
 > 2.10 y los registros de la 2.9. Está guardado en `Tanda 1 → 1.2 BLUE vs BLUE indexada/`, porque ahí es donde
 > más se usa.
 
+> [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**:
+> qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos
+> que viven en otras tandas. Es lo primero que muestra la nota principal.
+
+
 ---
 
 ## El orden en que conviene estudiarla

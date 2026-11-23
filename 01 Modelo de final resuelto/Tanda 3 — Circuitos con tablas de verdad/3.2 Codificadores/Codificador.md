@@ -6,6 +6,11 @@ prioridad: maxima
 ---
 # Codificador
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En otra tanda o unidad:** [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Interrupciones y entrada-salida]] (Tanda 2 · 2.8 Interrupciones)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.2 Codificadores]].
+
+
 > [!abstract] En una frase
 > El **codificador** hace lo **inverso** del [[Decodificador]]: recibe **2ⁿ líneas** (de las cuales **una** está
 > activa) y entrega en la salida el **código binario de n bits** de esa línea. Sus salidas son **sumas de las

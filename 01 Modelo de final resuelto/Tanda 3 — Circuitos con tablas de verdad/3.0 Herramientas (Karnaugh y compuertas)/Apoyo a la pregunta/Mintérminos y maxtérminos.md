@@ -141,7 +141,7 @@ Grupo vertical de 2 ⇒ `A` cambia, `B` no cambia (vale 1) ⇒ **`F = B`**. (Y p
 
 ### Ejemplo 2 — `F(A,B,C) = Σm(1,3,5,7)` (el de la cátedra)
 
-![Mapa de Karnaugh de 3 variables](../../../assets/karnaugh_3var.svg)
+![Mapa de Karnaugh de 3 variables](../../../../assets/karnaugh_3var.svg)
 ```
             BC
           00   01   11   10

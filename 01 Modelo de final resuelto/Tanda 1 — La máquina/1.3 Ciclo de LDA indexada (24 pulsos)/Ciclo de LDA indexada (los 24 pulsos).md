@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Ciclo de LDA indexada (los 24 pulsos)
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Ciclo de la instrucción LDA (24 pulsos)]]
+> **En otra tanda o unidad:** [[Ciclo de búsqueda (7 y 8 pulsos)]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Sumador completo]] (Tanda 3 · 3.8 Sumadores) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.3 LDA indexada (24 pulsos)]].
+
+
 > [!abstract] En una frase
 > La `LDA 3, X` (cargar por índice RID) tarda **3 ciclos de máquina de 8 pulsos = 24 pulsos**:
 > **8 de búsqueda** (traer la primera palabra de la instrucción), **8 de cálculo de la dirección efectiva**

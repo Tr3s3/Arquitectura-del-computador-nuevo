@@ -6,6 +6,12 @@ prioridad: maxima
 ---
 # Compuertas lógicas
 
+> [!important] Qué necesitás para responder esta pregunta
+> **En `Apoyo a la pregunta/`:** [[Mintérminos y maxtérminos]]
+> **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Leyes de DeMorgan]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS)
+> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.0 Herramientas]].
+
+
 > [!abstract] En una frase
 > Las **compuertas** son los componentes físicos que realizan las operaciones del álgebra de Boole: **AND, OR,
 > NOT** (las tres básicas), más **NAND, NOR, XOR y XNOR** (derivadas). Cada una tiene su **símbolo**, su **tabla

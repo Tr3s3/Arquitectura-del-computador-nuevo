@@ -41,7 +41,7 @@ CP3 espera · CP4 `SUMA→PC` · CP5 strobe MBR · CP6 `MBR→IR` · CP7 — · 
 | 2 · Ejecución 1 | 9–16 | se trae la **segunda palabra** (campo de dirección) y se calcula `EA = W + X` con el **sumador de direcciones** (X = 0, RIF o RID según el modificador) |
 | 3 · Ejecución 2 | 17–24 | se direcciona `EA`, se lee y **CP22: `MBR→A`**; CP24: `F→STATE` |
 
-![Los 24 pulsos de la LDA indexada](../../../assets/lda24_pulsos.svg)
+![Los 24 pulsos de la LDA indexada](../../../../assets/lda24_pulsos.svg)
 
 ## Los cuatro modos de LDA
 | Instrucción | Modo | EA | Ciclos | Pulsos |
