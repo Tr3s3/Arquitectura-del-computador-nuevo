@@ -17,7 +17,7 @@ tipo: indice
 
 | # | Mejora | Tipo | Impacto | Esfuerzo | Prioridad |
 |---|---|---|---|---|---|
-| **M1** | **Glosario**: agregar los ~15 términos nuevos de la Fase 12 | arreglo | medio | **1 h** | **P1** |
+| ~~**M1**~~ | ~~**Glosario**: fichas desarrolladas por unidad~~ ✅ **hecho** (180 fichas) | — | — | — | **cerrado** |
 | **M2** | **Figuras de libro en los 34 subtemas que no tienen** (usar las **108 ya extraídas** que quedaron sin usar) | mejora | alto | **1 sesión** | **P1** |
 | **M3** | **Banco de autoevaluación**: 107 preguntas (hoy hay ~16) | mejora | **muy alto** | 3-4 sesiones | **P1** |
 | **M4** | **Figuras de los TPs**: extraer los circuitos resueltos de los 21 PDF (es la única fuente para U1 combinacional) | mejora | alto | 1-2 sesiones | P2 |
@@ -31,13 +31,23 @@ tipo: indice
 
 ## Detalle: cómo quedaría cada uno
 
-### M1 · Glosario completo — P1, 1 hora
-**Estado:** el glosario tiene **49 entradas / 768 palabras** y **no** incluye nada de lo agregado en la Fase 12.
-**Falta:** `AIKEN`, `exceso 3`, `exceso 64`, `Gray`, `Johnson`, `BCD empaquetado`, `paridad`, `LRC`, `CRC`,
-`Hamming`, `síndrome`, `DIMM`, `SODIMM`, `DDR`, `FSB`, `NOP`, `secuenciamiento`, `microPC`.
-**Cómo:** una fila por término (`| término | definición de una línea | nota donde se desarrolla |`), ordenadas
-alfabéticamente dentro de las letras que ya existen.
-**Terminado cuando:** cualquier término que aparece en un `[!abstract]` está en el glosario.
+### M1 · Glosario completo — ✅ HECHO
+**Cómo quedó:** el glosario dejó de ser una tabla de 49 líneas y pasó a ser **180 fichas** repartidas en **diez
+notas** (una por unidad, ver [[Glosario]]). Cada ficha tiene cuatro campos:
+**Qué es** · **Para qué sirve** · **Características** · **Se estudia en** (enlace al subtema con el ejemplo y el
+diagrama). El índice central es **alfabético**, con una línea por término, enlace directo a la ficha, y una tabla
+final de **23 pares que se confunden** (`C` vs `V`, paridad vs Hamming, caché vs memoria virtual…).
+
+| Unidad | Fichas | Unidad | Fichas |
+|---|---|---|---|
+| 1 — lógica digital | 31 | 6 — control microprogramado | 10 |
+| 2 — memorias y secuenciales | 34 | 7 — CPU y arquitecturas | 15 |
+| 3 — transferencia y microoperaciones | 12 | 8 — paralelismo | 16 |
+| 4 — organización y diseño básico | 13 | 9 — hardware aritmético | 15 |
+| 5 — programación y CPU convencional | 20 | 10 — entrada y salida | 14 |
+
+**Si se quiere seguir:** los términos de la sección "Términos que se confunden" podrían tener ficha propia, y
+faltaría un diagrama por ficha (hoy cada una remite al diagrama del subtema).
 
 ### M2 · Figuras de libro en los 34 subtemas que no tienen — P1, 1 sesión
 **Estado:** **73 de 107** subtemas tienen figura de libro; **34** no. De las **208 figuras extraídas**, **108

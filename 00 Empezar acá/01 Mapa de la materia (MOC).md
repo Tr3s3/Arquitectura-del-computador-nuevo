@@ -98,6 +98,12 @@ todo el desarrollo). Los índices de unidad están en `02 Materia/Unidad N — �
 - [[Guion de respuestas — preguntas principales]] ← qué decir y qué dibujar en el oral
 - [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]]
 - [[Prácticas resueltas]] · [[Autoevaluación]]
+## Glosario
+**[[Glosario]]**: los **180 conceptos** de la materia, cada uno con ficha desarrollada (qué es, para qué sirve,
+características y en qué subtema se estudia). Índice alfabético + los 23 pares que se confunden.
+- [[Glosario — Unidad 1]] · [[Glosario — Unidad 2]] · [[Glosario — Unidad 3]] · [[Glosario — Unidad 4]] · [[Glosario — Unidad 5]]
+- [[Glosario — Unidad 6]] · [[Glosario — Unidad 7]] · [[Glosario — Unidad 8]] · [[Glosario — Unidad 9]] · [[Glosario — Unidad 10]]
+
 ## Validación y mejoras
 [[06 Validación de contenido (resúmenes, TPs y claridad)]]: qué se auditó contra los resúmenes y los TPs, y qué se agregó.
 [[07 Plan de mejoras pendientes]]: el backlog con prioridades, esfuerzo y cómo se haría cada mejora.

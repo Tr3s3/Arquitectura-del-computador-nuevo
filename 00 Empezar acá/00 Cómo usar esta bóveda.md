@@ -46,10 +46,10 @@ la nota `00 Apoyos` que dice para qué sirve cada uno. Nada de eso está suelto 
 
 | Carpeta | Qué contiene |
 |---|---|
-| **`00 Empezar acá/`** | esta nota, el mapa (MOC), el plan de las 10 unidades, la ruta para el final, el resumen integrador, las fuentes y el glosario |
+| **`00 Empezar acá/`** | esta nota, el mapa (MOC), el plan de las 10 unidades, la ruta para el final, el resumen integrador, las fuentes y el **glosario** (180 fichas en 10 notas) |
 | **`03 Material de cátedra (TPs)/`** | los **21 TPs** con la consigna textual, qué hay que saber y la respuesta sintetizada: **es la voz del profesor** (si hay diferencias de notación, manda el TP, y la bóveda lo advierte con un `[!warning]`) |
 | **`04 Práctica/`** | prácticas resueltas, checklist de dibujo, tablas de verdad de memoria y autoevaluación |
-| **`assets/`** | los 22 SVG que usan las notas |
+| **`assets/`** | los **100 SVG** que usan las notas |
 
 **Cómo elegir:** si te falta poco para el final ⇒ entrá por [[00 Índice — el final resuelto]] y estudiá por
 tandas. Si estás cursando o querés entender la materia entera ⇒ entrá por
@@ -57,6 +57,12 @@ tandas. Si estás cursando o querés entender la materia entera ⇒ entrá por
 
 Empezá por el [[00 Índice de TPs y qué aporta cada uno|índice de TPs]] si querés ver de un saque qué pide
 la cátedra, y por [[04 Resumen integrador de la materia]] si querés el recorrido completo en 20 minutos.
+
+## Si te trabás con una palabra
+**[[Glosario]]** tiene **180 conceptos** con ficha desarrollada: **qué es**, **para qué sirve**, **características**
+y **en qué subtema se estudia**. Sirve para dos cosas: buscar la palabra que no te sale (índice alfabético) y
+repasar tapando la definición. Al final tiene los **23 pares que se confunden** (acarreo vs desborde, paridad vs
+Hamming, caché vs memoria virtual), que es donde se pierden puntos en el oral.
 
 ## Cada nota maestra tiene material de consulta
 Las notas de las **preguntas principales** terminan con una sección **"Para ampliar: qué leer y qué buscar"**:
