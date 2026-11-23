@@ -9,6 +9,49 @@ unidad: 5
 > direccionamiento, la **BLUE indexada** (con registros índice y base), interrupciones, y el salto a una **CPU
 > real** (el 8088/8086 del TP21).
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 5 — Programación básica y CPU convencional/
+├── 5.1 Lenguaje máquina/
+│   ├── 5.1.1 Instrucción: opcode y operandos
+│   └── 5.1.2 Clasificación de las instrucciones
+├── 5.2 Formato de la instrucción/
+│   ├── 5.2.1 Los 4 formatos y el campo único de dirección
+│   └── 5.2.2 Cálculo de CodOp según el tamaño de memoria
+├── 5.3 Modos de direccionamiento/
+│   ├── 5.3.1 Los 7 modos
+│   └── 5.3.2 Dirección efectiva y costo en accesos
+├── 5.4 La BLUE indexada/
+│   ├── 5.4.1 RIF, RID y RB
+│   └── 5.4.2 Modificador de 2 bits y los 24 pulsos
+├── 5.5 Interrupciones/
+│   ├── 5.5.1 IRQ·SI·CP8 y polling del flag
+│   └── 5.5.2 Máscara, pila y RTI
+└── 5.6 El 8086/8088/
+    ├── 5.6.1 BIU, EU y segmentación
+    └── 5.6.2 UC microprogramada y emu8086
+```
+
+**6 temas y 12 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 5`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **5.1 Lenguaje máquina** | 5.1.1 Instrucción: opcode y operandos · 5.1.2 Clasificación de las instrucciones | ⏳ a desarrollar |
+| **5.2 Formato de la instrucción** | 5.2.1 Los 4 formatos y el campo único de dirección · 5.2.2 Cálculo de CodOp según el tamaño de memoria | ⏳ a desarrollar |
+| **5.3 Modos de direccionamiento** | 5.3.1 Los 7 modos · 5.3.2 Dirección efectiva y costo en accesos | ⏳ a desarrollar |
+| **5.4 La BLUE indexada** | 5.4.1 RIF, RID y RB · 5.4.2 Modificador de 2 bits y los 24 pulsos | ⏳ a desarrollar |
+| **5.5 Interrupciones** | 5.5.1 IRQ·SI·CP8 y polling del flag · 5.5.2 Máscara, pila y RTI | ⏳ a desarrollar |
+| **5.6 El 8086/8088** | 5.6.1 BIU, EU y segmentación · 5.6.2 UC microprogramada y emu8086 | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **5.1 Lenguaje máquina** | instrucción = opcode + operandos · clasificación (transferencia, aritméticas, lógicas, control, E/S) · ensamblador vs máquina | [[Lenguaje máquina y clasificación de instrucciones]] · `Tema 5.1 Lenguaje máquina y registros/` |

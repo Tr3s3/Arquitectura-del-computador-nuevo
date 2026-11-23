@@ -9,6 +9,38 @@ unidad: 3
 > **microoperación**, y todas viajan por **un bus** (con buffers de tres estados). Es la unidad que después hace
 > posible entender el ciclo de instrucción.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 3 — Transferencia de registros y microoperaciones/
+├── 3.1 Microoperaciones y bus/
+│   ├── 3.1.1 Notación de transferencia entre registros
+│   ├── 3.1.2 Bus único y buffers de 3 estados
+│   └── 3.1.3 Buses de datos, de direcciones y de control
+├── 3.2 La ALU/
+│   ├── 3.2.1 Estructura, G/P y señales de selección
+│   └── 3.2.2 Operaciones aritméticas, lógicas y flags
+└── 3.3 Registros de la CPU/
+    ├── 3.3.1 AC, PC, IR, MAR y MBR
+    └── 3.3.2 Base, índice, puntero de pila y estado
+```
+
+**3 temas y 7 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 3`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **3.1 Microoperaciones y bus** | 3.1.1 Notación de transferencia entre registros · 3.1.2 Bus único y buffers de 3 estados · 3.1.3 Buses de datos, de direcciones y de control | ⏳ a desarrollar |
+| **3.2 La ALU** | 3.2.1 Estructura, G/P y señales de selección · 3.2.2 Operaciones aritméticas, lógicas y flags | ⏳ a desarrollar |
+| **3.3 Registros de la CPU** | 3.3.1 AC, PC, IR, MAR y MBR · 3.3.2 Base, índice, puntero de pila y estado | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **3.1 Transferencia entre registros** | bus único · buffers de 3 estados · una transferencia por pulso · `PC→MAR`, `MBR→IR` | [[Flujo de información en BLUE (datos y direcciones)]] · carpeta `Tanda 1/1.1` |

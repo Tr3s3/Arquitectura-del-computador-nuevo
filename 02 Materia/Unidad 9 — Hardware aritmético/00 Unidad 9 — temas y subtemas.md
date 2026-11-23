@@ -9,6 +9,43 @@ unidad: 9
 > (**Booth**), división, **punto flotante** y aritmética **BCD**. Nada de esto es magia: son los circuitos de la
 > unidad 1 encadenados.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 9 — Hardware aritmético/
+├── 9.1 Suma y resta/
+│   ├── 9.1.1 Complemento a 2 y desbordamiento
+│   └── 9.1.2 Acarreo anticipado (G y P)
+├── 9.2 Multiplicación/
+│   ├── 9.2.1 Sumas y desplazamientos
+│   └── 9.2.2 Algoritmo de Booth
+├── 9.3 División/
+│   └── 9.3.1 Restauración y no restauración
+├── 9.4 Punto flotante/
+│   ├── 9.4.1 Formato, normalización y operaciones
+│   └── 9.4.2 IEEE 754
+└── 9.5 Aritmética BCD/
+    └── 9.5.1 Suma decimal corregida
+```
+
+**5 temas y 8 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 9`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **9.1 Suma y resta** | 9.1.1 Complemento a 2 y desbordamiento · 9.1.2 Acarreo anticipado (G y P) | ⏳ a desarrollar |
+| **9.2 Multiplicación** | 9.2.1 Sumas y desplazamientos · 9.2.2 Algoritmo de Booth | ⏳ a desarrollar |
+| **9.3 División** | 9.3.1 Restauración y no restauración | ⏳ a desarrollar |
+| **9.4 Punto flotante** | 9.4.1 Formato, normalización y operaciones · 9.4.2 IEEE 754 | ⏳ a desarrollar |
+| **9.5 Aritmética BCD** | 9.5.1 Suma decimal corregida | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **9.1 Suma y resta** | semisumador · sumador completo · sumador de n bits · `A − B = A + B' + 1` · desbordamiento | [[Hardware aritmético (resumen)]] · [[Semisumador]] · [[Sumador completo]] · carpeta `Tanda 3/3.8` |

@@ -8,6 +8,41 @@ unidad: 7
 > Cómo se hace **más rápida** una computadora sin cambiar el programa: **solapando** (pipeline), **acercando los
 > datos** (caché) y **simplificando el repertorio** (RISC). Y qué tipos de **bus** y de arquitectura existen.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 7 — CPU y arquitecturas/
+├── 7.1 Pipeline/
+│   ├── 7.1.1 Etapas y diagrama en escalera
+│   └── 7.1.2 Hazards y cálculo de speedup
+├── 7.2 Técnicas para aumentar la velocidad/
+│   ├── 7.2.1 Superscalar, superpipeline, SMT y multicore
+│   └── 7.2.2 Caché y predicción de saltos
+├── 7.3 CISC y RISC/
+│   ├── 7.3.1 Tabla comparativa y ejemplos
+│   └── 7.3.2 UC cableada vs microprogramada y load/store
+└── 7.4 Arquitecturas y buses/
+    ├── 7.4.1 von Neumann vs Harvard
+    └── 7.4.2 Buses internos y externos
+```
+
+**4 temas y 8 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 7`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **7.1 Pipeline** | 7.1.1 Etapas y diagrama en escalera · 7.1.2 Hazards y cálculo de speedup | ⏳ a desarrollar |
+| **7.2 Técnicas para aumentar la velocidad** | 7.2.1 Superscalar, superpipeline, SMT y multicore · 7.2.2 Caché y predicción de saltos | ⏳ a desarrollar |
+| **7.3 CISC y RISC** | 7.3.1 Tabla comparativa y ejemplos · 7.3.2 UC cableada vs microprogramada y load/store | ⏳ a desarrollar |
+| **7.4 Arquitecturas y buses** | 7.4.1 von Neumann vs Harvard · 7.4.2 Buses internos y externos | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **7.1 Pipeline** | 5 etapas · diagrama en escalera · `k+(n−1)` vs `k·n` · 3 hazards y sus soluciones | [[Pipeline]] · carpeta `Tanda 2/2.7` |

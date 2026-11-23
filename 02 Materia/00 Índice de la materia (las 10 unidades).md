@@ -27,6 +27,36 @@ prioridad: maxima
 
 ---
 
+## Cómo se desarrolla cada unidad (el método)
+
+> [!important] Unidad → Tema → Subtema, y al final una síntesis
+> 1. **Cada tema tiene su carpeta** (`Tema N.M — nombre/`).
+> 2. **Cada subtema es una nota** dentro de esa carpeta, con el detalle completo: definición, tabla, circuito,
+>    ejemplo y errores típicos.
+> 3. Cuando la unidad está **terminada**, se genera **`00 Síntesis — Unidad N`**: la unidad entera en **un solo
+>    archivo**, para repasar o imprimir sin abrir nada más.
+
+## Estado del desarrollo
+
+| Unidad | Temas | Subtemas | Estado | Síntesis |
+|---|---|---|---|---|
+| **1** Circuitos de lógica digital | 5 | 15 | ✅ **desarrollada** | [[00 Síntesis — Unidad 1]] |
+| **2** Memorias y circuitos secuenciales | 7 | 19 | ⏳ estructura definida | — |
+| **3** Transferencia de registros y microoperaciones | 3 | 7 | ⏳ estructura definida | — |
+| **4** Organización y diseño básico | 4 | 10 | ⏳ estructura definida | — |
+| **5** Programación básica y CPU convencional | 6 | 12 | ⏳ estructura definida | — |
+| **6** Control microprogramado | 3 | 5 | ⏳ estructura definida | — |
+| **7** CPU y arquitecturas | 4 | 8 | ⏳ estructura definida | — |
+| **8** Paralelismo | 4 | 4 | ⏳ estructura definida | — |
+| **9** Hardware aritmético | 5 | 8 | ⏳ estructura definida | — |
+| **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
+| **Total** | **45** | **95** | 15 subtemas escritos | 1 de 10 |
+
+> [!note] Mientras una unidad no está desarrollada
+> No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya
+> disponible", los enlaces al **desarrollo de examen** que cubre cada tema. Así se puede estudiar el tema hoy y,
+> cuando se desarrolle el subtema, queda en la carpeta de su tema.
+
 ## Las 10 unidades
 
 | Unidad | Tema | Índice | Qué se estudia |

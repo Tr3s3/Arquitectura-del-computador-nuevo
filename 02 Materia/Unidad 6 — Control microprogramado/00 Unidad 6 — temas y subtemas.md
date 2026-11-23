@@ -8,6 +8,36 @@ unidad: 6
 > Cómo se construye la **Unidad de Control**: con **compuertas (cableada)** o con un **microprograma guardado en
 > una ROM (microprogramada)**. La BLUE usa cableada; el 8088, microprogramada con una ROM de **504 × 21 bits**.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 6 — Control microprogramado/
+├── 6.1 Control cableado/
+│   └── 6.1.1 Circuito, compuertas y señales
+├── 6.2 Control microprogramado/
+│   ├── 6.2.1 Memoria de control y microinstrucción
+│   └── 6.2.2 Secuenciamiento y microPC
+└── 6.3 Comparación y caso real/
+    ├── 6.3.1 Cableada vs microprogramada
+    └── 6.3.2 El 8088: ROM de control 504×21
+```
+
+**3 temas y 5 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 6`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **6.1 Control cableado** | 6.1.1 Circuito, compuertas y señales | ⏳ a desarrollar |
+| **6.2 Control microprogramado** | 6.2.1 Memoria de control y microinstrucción · 6.2.2 Secuenciamiento y microPC | ⏳ a desarrollar |
+| **6.3 Comparación y caso real** | 6.3.1 Cableada vs microprogramada · 6.3.2 El 8088: ROM de control 504×21 | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **6.1 Control cableado** | lógica combinacional · señales `estado·pulso·instrucción` · rápido pero rígido | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` y su `Apoyo a la pregunta/` |

@@ -9,6 +9,40 @@ unidad: 10
 > interfaces y dispositivos. Cierra la materia con el mecanismo que ya usaste en la 1.ª tanda (INP/OUT de BLUE) y
 > en la 2.ª (interrupciones, peso 9).
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 10 — Entrada y Salida/
+├── 10.1 E/S programada/
+│   ├── 10.1.1 Polling y sus límites
+│   └── 10.1.2 Puertos, interfaces y handshake
+├── 10.2 Interrupciones/
+│   ├── 10.2.1 Mecanismo completo
+│   └── 10.2.2 Interrupciones vectorizadas y prioridad
+├── 10.3 DMA/
+│   └── 10.3.1 Controlador, robo de ciclo y transferencia de bloques
+└── 10.4 Dispositivos y almacenamiento/
+    ├── 10.4.1 Discos, SSD y latencias
+    └── 10.4.2 Interfaces serie y paralelo
+```
+
+**4 temas y 7 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 10`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **10.1 E/S programada** | 10.1.1 Polling y sus límites · 10.1.2 Puertos, interfaces y handshake | ⏳ a desarrollar |
+| **10.2 Interrupciones** | 10.2.1 Mecanismo completo · 10.2.2 Interrupciones vectorizadas y prioridad | ⏳ a desarrollar |
+| **10.3 DMA** | 10.3.1 Controlador, robo de ciclo y transferencia de bloques | ⏳ a desarrollar |
+| **10.4 Dispositivos y almacenamiento** | 10.4.1 Discos, SSD y latencias · 10.4.2 Interfaces serie y paralelo | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **10.1 E/S programada (polling)** | la CPU pregunta en un lazo · desperdicia tiempo · INP/OUT de la BLUE | [[Interrupciones y entrada-salida]] · carpeta `Tanda 2/2.8` |

@@ -9,6 +9,43 @@ unidad: 4
 > **máquina BLUE**, y el **ciclo de instrucción** gobernado por la **Unidad de Control**. Es el corazón de la
 > 1.ª tanda del final.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 4 — Organización y diseño básico/
+├── 4.1 Estructura y modelo von Neumann/
+│   ├── 4.1.1 Unidades funcionales de una computadora
+│   └── 4.1.2 IAS y el programa almacenado
+├── 4.2 La máquina BLUE/
+│   ├── 4.2.1 Especificación, registros y 4096×16
+│   ├── 4.2.2 Los 16 opcodes octales
+│   └── 4.2.3 Programar en BLUE
+├── 4.3 El ciclo de instrucción/
+│   ├── 4.3.1 Ciclo de reloj, de máquina y de instrucción
+│   ├── 4.3.2 Búsqueda: los 8 pulsos
+│   └── 4.3.3 Ejecución instrucción por instrucción
+└── 4.4 Unidad de Control/
+    ├── 4.4.1 Funciones y señales de control
+    └── 4.4.2 estado·pulso·instrucción y el decodificador 1-16
+```
+
+**4 temas y 10 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 4`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **4.1 Estructura y modelo von Neumann** | 4.1.1 Unidades funcionales de una computadora · 4.1.2 IAS y el programa almacenado | ⏳ a desarrollar |
+| **4.2 La máquina BLUE** | 4.2.1 Especificación, registros y 4096×16 · 4.2.2 Los 16 opcodes octales · 4.2.3 Programar en BLUE | ⏳ a desarrollar |
+| **4.3 El ciclo de instrucción** | 4.3.1 Ciclo de reloj, de máquina y de instrucción · 4.3.2 Búsqueda: los 8 pulsos · 4.3.3 Ejecución instrucción por instrucción | ⏳ a desarrollar |
+| **4.4 Unidad de Control** | 4.4.1 Funciones y señales de control · 4.4.2 estado·pulso·instrucción y el decodificador 1-16 | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **4.1 Estructura de una computadora** | von Neumann · unidades funcionales · IAS · buses | [[Estructura básica de un computador]] · carpeta `Tanda 1/1.5` |

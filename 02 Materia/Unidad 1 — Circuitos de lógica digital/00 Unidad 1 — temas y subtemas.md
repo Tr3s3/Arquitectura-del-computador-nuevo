@@ -9,18 +9,47 @@ unidad: 1
 > simplificación (Karnaugh) → circuitos combinacionales (decodificadores, MUX, sumadores). Todo lo de esta unidad
 > se rinde **dibujando**.
 
-> [!note] Dónde están los archivos
-> Los temas de esta unidad **coinciden** con la 3.ª tanda del final (la de peso 12), así que sus notas están en
-> `01 Modelo de final resuelto/Tanda 3 — Circuitos con tablas de verdad/`. Desde acá se llega a todas.
+> [!success] Unidad desarrollada
+> Los **5 temas** y sus **15 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
+> **[[00 Síntesis — Unidad 1]]**. Estado: ✅ completa.
 
-| Tema | Subtemas | Dónde está el desarrollo |
+## La estructura de la unidad
+
+```
+Unidad 1 — Circuitos de lógica digital/
+├── 00 Unidad 1 — temas y subtemas   (esta nota)
+├── 00 Síntesis — Unidad 1           (toda la unidad en un solo archivo)
+├── Tema 1.1 Compuertas lógicas/
+│   ├── 1.1.1 Compuerta AND, OR y NOT
+│   ├── 1.1.2 NAND, NOR, XOR y XNOR
+│   └── 1.1.3 Compuertas universales
+├── Tema 1.2 Álgebra de Boole/
+│   ├── 1.2.1 Postulados, dualidad y teoremas
+│   ├── 1.2.2 Leyes de DeMorgan
+│   └── 1.2.3 Simplificación analítica
+├── Tema 1.3 Formas canónicas y Karnaugh/
+│   ├── 1.3.1 Mintérminos y maxtérminos
+│   ├── 1.3.2 Mapa de Karnaugh de 2, 3 y 4 variables
+│   └── 1.3.3 Don't care y criterios de agrupación
+├── Tema 1.4 Bloques combinacionales/
+│   ├── 1.4.1 Decodificador
+│   ├── 1.4.2 Codificador
+│   ├── 1.4.3 Multiplexor
+│   └── 1.4.4 Demultiplexor
+└── Tema 1.5 Aritmética combinacional/
+    ├── 1.5.1 Semisumador y sumador completo
+    └── 1.5.2 Sumador de n bits y resta en complemento a 2
+```
+
+## Tema por tema
+
+| Tema | Subtemas (notas) | Índice |
 |---|---|---|
-| **1.1 Compuertas lógicas** | AND, OR, NOT · NAND, NOR, XOR, XNOR · símbolos y tablas · universales | [[Compuertas lógicas]] · carpeta `Tanda 3/3.0 Herramientas` |
-| **1.2 Álgebra de Boole** | postulados · teoremas · dualidad · simplificación analítica | [[Álgebra de Boole — postulados y teoremas]] · carpeta `Tanda 3/3.7` |
-| **1.3 Leyes de DeMorgan** | `(A+B)' = A'B'` · `(AB)' = A'+B'` · pasar todo a NAND | [[Leyes de DeMorgan]] · carpeta `Tanda 3/3.7` |
-| **1.4 Simplificación y Karnaugh** | mintérminos y maxtérminos · formas canónicas · mapas de 2, 3 y 4 variables · don't care | [[Mintérminos y maxtérminos]] · carpeta `Tanda 3/3.0` |
-| **1.5 Bloques combinacionales** | decodificador · codificador · multiplexor · demultiplexor | [[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]] · carpetas `Tanda 3/3.1 a 3.4` |
-| **1.6 Aritmética combinacional** | semisumador · sumador completo · sumador de n bits · resta en complemento a 2 | [[Semisumador]] · [[Sumador completo]] · carpeta `Tanda 3/3.8` |
+| **1.1 Compuertas lógicas** | [[1.1.1 Compuerta AND, OR y NOT]] · [[1.1.2 NAND, NOR, XOR y XNOR]] · [[1.1.3 Compuertas universales]] | [[00 Tema 1.1 — índice]] |
+| **1.2 Álgebra de Boole** | [[1.2.1 Postulados, dualidad y teoremas]] · [[1.2.2 Leyes de DeMorgan]] · [[1.2.3 Simplificación analítica]] | [[00 Tema 1.2 — índice]] |
+| **1.3 Formas canónicas y Karnaugh** | [[1.3.1 Mintérminos y maxtérminos]] · [[1.3.2 Mapa de Karnaugh de 2, 3 y 4 variables]] · [[1.3.3 Don't care y criterios de agrupación]] | [[00 Tema 1.3 — índice]] |
+| **1.4 Bloques combinacionales** | [[1.4.1 Decodificador]] · [[1.4.2 Codificador]] · [[1.4.3 Multiplexor]] · [[1.4.4 Demultiplexor]] | [[00 Tema 1.4 — índice]] |
+| **1.5 Aritmética combinacional** | [[1.5.1 Semisumador y sumador completo]] · [[1.5.2 Sumador de n bits y resta en complemento a 2]] | [[00 Tema 1.5 — índice]] |
 
 ---
 
@@ -29,18 +58,23 @@ unidad: 1
 2. **Pasar de la tabla a la función** (`Σm`) y **simplificarla** con Karnaugh.
 3. **Dibujar el circuito** con las compuertas, contando cuántas usa.
 4. **Reconocer los 4 bloques combinacionales** por su tabla (decodificador, codificador, MUX, DEMUX).
-5. **Sumar en binario** con semisumador y sumador completo, y encadenarlos.
+5. **Sumar y restar en binario** con semisumador, sumador completo y `A + B' + 1`.
 
 ## TPs de la unidad
 [[TP1 Compuertas lógicas]] · [[TP2 Álgebra de Boole]] · [[TP3 Simplificación analítica]] ·
-[[TP4 Mintérminos, maxtérminos y Karnaugh]] · [[TP5 Sumadores]]
+[[TP4 Mintérminos, maxtérminos y Karnaugh]] · [[TP5 Sumadores]] · (apoyo) [[TP6 Decodificadores y demultiplexores]] ·
+[[TP7 Codificadores y multiplexores]]
 
 ## Fuente de la cátedra
 Apuntes **Unidad 2 — Circuitos lógicos y digitales** · Floyd (compuertas, álgebra y simplificación) ·
 Mano (lógica combinacional).
 
+## Desarrollo de examen de estos temas
+[[00 Tanda 3 — índice]] (la tanda de peso 12): [[Compuertas lógicas]] · [[Álgebra de Boole — postulados y teoremas]] ·
+[[Leyes de DeMorgan]] · [[Mintérminos y maxtérminos]] · [[Decodificador]] · [[Codificador]] · [[Multiplexor]] ·
+[[Demultiplexor]] · [[Semisumador]] · [[Sumador completo]]
+
 ---
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 2 — temas y subtemas]] ·
-[[00 Tanda 3 — índice]]
+[[00 Índice de la materia (las 10 unidades)]] · [[00 Síntesis — Unidad 1]] · [[00 Unidad 2 — temas y subtemas]]

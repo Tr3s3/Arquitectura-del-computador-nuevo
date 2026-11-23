@@ -31,7 +31,7 @@ tipo: guia
 | Carpeta | Para qué | Cómo baja | Puerta de entrada |
 |---|---|---|---|
 | **`01 Modelo de final resuelto/`** | las **27 preguntas** del final, cada una resuelta | `Tanda 1\|2\|3` → `N. Pregunta/` → **los archivos de esa pregunta** (el desarrollo + sus subtemas, todo junto) | [[00 Índice — el final resuelto]] |
-| **`02 Materia/`** | la materia **completa**, las **10 unidades** | `Unidad N — nombre/` → `Tema N.M nombre/` → **los subtemas** | [[00 Índice de la materia (las 10 unidades)]] |
+| **`02 Materia/`** | la materia **completa**, las **10 unidades** | `Unidad N — nombre/` → `Tema N.M nombre/` → **una nota por subtema**, y al terminar la unidad un **`00 Síntesis — Unidad N`** con todo junto | [[00 Índice de la materia (las 10 unidades)]] |
 
 > [!note] Dentro de cada pregunta hay una carpeta `Apoyo a la pregunta/`
 > Con la nota **`00 Apoyos — N.M …`**, que lista **qué archivos hacen falta para responderla**, **para qué sirve

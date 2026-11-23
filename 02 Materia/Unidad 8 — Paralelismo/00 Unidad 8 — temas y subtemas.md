@@ -8,6 +8,37 @@ unidad: 8
 > Las formas de hacer **varias cosas a la vez**: pipeline aritmético, procesamiento **vectorial**, **SIMD**,
 > **multiprocesadores** y **memoria entrelazada**. Es la continuación natural del pipeline de la unidad 7.
 
+## La estructura de la unidad (Unidad → Tema → Subtema)
+
+```
+Unidad 8 — Paralelismo/
+├── 8.1 Pipeline aritmético/
+│   └── 8.1.1 Etapas segmentadas y suma de vectores
+├── 8.2 Procesamiento vectorial y SIMD/
+│   └── 8.2.1 SIMD, registros vectoriales y GPU
+├── 8.3 Memoria entrelazada/
+│   └── 8.3.1 Bancos de memoria y ancho de banda
+└── 8.4 Multiprocesadores/
+    └── 8.4.1 Multicore, coherencia de caché y ley de Amdahl
+```
+
+**4 temas y 4 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
+y al terminar la unidad se genera **`00 Síntesis — Unidad 8`** con todo el contenido junto (como ya está hecho en
+[[00 Síntesis — Unidad 1|la Unidad 1]]).
+
+| Tema | Subtemas | Estado |
+|---|---|---|
+| **8.1 Pipeline aritmético** | 8.1.1 Etapas segmentadas y suma de vectores | ⏳ a desarrollar |
+| **8.2 Procesamiento vectorial y SIMD** | 8.2.1 SIMD, registros vectoriales y GPU | ⏳ a desarrollar |
+| **8.3 Memoria entrelazada** | 8.3.1 Bancos de memoria y ancho de banda | ⏳ a desarrollar |
+| **8.4 Multiprocesadores** | 8.4.1 Multicore, coherencia de caché y ley de Amdahl | ⏳ a desarrollar |
+
+> [!note] Qué hay ya de esta unidad
+> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
+> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
+> tema, con el detalle de la cursada y los TPs.
+
+## Material ya disponible de esta unidad
 | Tema | Subtemas | Dónde está el desarrollo |
 |---|---|---|
 | **8.1 Pipeline aritmético** | etapas de la ALU segmentada · suma de vectores solapada · límites por dependencias | [[Paralelismo y procesamiento vectorial]] · `Unidad 8 — Paralelismo/` |
