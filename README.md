@@ -9,39 +9,57 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 92 notas · 22 diagramas SVG · ~123.000 palabras · 1.560 enlaces internos, 0 rotos.
+**Estado:** 105 notas · 22 diagramas SVG · ~128.000 palabras · 1.655 enlaces internos, 0 rotos.
+
+**Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
+pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
+Cada unidad tiene su nota índice `00 Unidad N — temas y subtemas`.
 
 ## Cómo abrirla
 
 1. Descargá o cloná este repositorio.
 2. En Obsidian: **Abrir carpeta como bóveda** → elegí esta carpeta.
-3. Empezá por `00_Inicio/00 Cómo usar esta bóveda.md`.
+3. Empezá por `00 Empezar acá/00 Cómo usar esta bóveda.md`.
 
 No necesita plugins. Los diagramas son SVG dentro de `assets/` (se ven en Obsidian y en
 GitHub); algunos esquemas usan **Mermaid**, que Obsidian renderiza de forma nativa.
 
 ## Estructura
 
+Dos carpetas grandes, con jerarquía **explícita en carpetas** (no hay que abrir un índice para saber qué hay
+adentro: el nombre de la carpeta lo dice).
+
 ```
-00_Inicio/                        portada, mapa (MOC), plan de las 10 unidades, ruta para el final,
-                                  resumen integrador, fuentes y glosario
-10_Examen_Final/                  BLOQUE 1 — desarrollo del MODELO DE FINAL
-├── 01 Primera tanda — la máquina/            8 preguntas + apoyos (ciclos, UC, formatos)
-├── 02 Segunda tanda — memorias y arquitectura/ 10 preguntas (caché, ROM, RISC/CISC, pipeline…)
-├── 03 Tercera tanda — circuitos con tablas/   8 ítems (Karnaugh, MUX/DEMUX, FF, sumadores) + RI
-└── 04 Guías del examen/                       matriz, chequeo de los 12 temas, fuentes, banco, guion
-20_Programa_Materia/              BLOQUE 2 — desarrollo del PROGRAMA (las 10 unidades)
-├── 01 Memorias, registros y contadores/
-├── 02 La CPU y su control/
-└── 03 Arquitecturas avanzadas/
-01_Material_Catedra/              los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
-30_Practica/                      prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
-assets/                           diagramas SVG (generados con tools/diagramas.py)
-tools/                            generador de los diagramas
+01 Modelo de final resuelto/      las 27 preguntas del final, cada una resuelta
+├── 00 Índice — el final resuelto.md
+├── 00 Guías/                    matriz, chequeo de los 12 temas, qué leer, banco, guion
+├── Tanda 1 — La máquina/        00 Tanda 1 — índice
+│   ├── 1.1 Flujo de información (direcciones y datos)/   → nota (+ subtemas)
+│   ├── 1.2 BLUE vs BLUE indexada/                        → nota + «BLUE indexada (RIF, RID)»
+│   ├── 1.3 Ciclo de LDA indexada (24 pulsos)/
+│   ├── 1.4 Memoria RAM 8x3/
+│   ├── 1.5 Estructura básica del computador/
+│   ├── 1.6 Implementación de la Unidad de Control/
+│   ├── 1.7 Formato de la instrucción (4 formatos)/
+│   └── 1.8 Ciclo de máquina y ciclo de instrucción/       → ciclo de máquina + búsqueda + ejecución
+├── Tanda 2 — Memorias y arquitectura/   2.1 … 2.10 (una carpeta por pregunta)
+└── Tanda 3 — Circuitos con tablas de verdad/   3.0 … 3.9 (incluye el RI)
+02 Materia/                       la materia completa, las 10 unidades
+├── 00 Índice de la materia (las 10 unidades).md
+├── Unidad 1 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas
+│   └── Tema 2.4 Registros y contadores/  etc. (carpeta cuando el tema tiene varios archivos)
+00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
+                                 resumen integrador, fuentes y glosario
+03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
+04 Práctica/                     prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
+assets/                          diagramas SVG (generados con tools/diagramas.py)
+tools/                           generador de los diagramas
 ```
 
-> Los dos bloques están **indexados** y se cruzan: `10_Examen_Final/00 Índice…` y
-> `20_Programa_Materia/00 Índice…`. Cada nota vive en un bloque y se llega a ella desde los dos.
+> **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**, y adentro está el
+> **desarrollo principal** más los **subtemas** que hacen falta para responderla (así los apoyos no quedan
+> sueltos). En `02 Materia/` la cadena es `Unidad → Tema → Subtemas`. Cada nota vive en un solo lugar y hay
+> enlaces cruzados entre los dos bloques.
 
 ## Escrita para aprender desde cero
 
@@ -53,17 +71,17 @@ el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin
 
 | Objetivo | Nota |
 |---|---|
-| **Preparar el final** (empezar acá) | `10_Examen_Final/00 Índice — bloque examen (las 3 tandas).md` |
-| **Estudiar la materia completa** (las 10 unidades) | `20_Programa_Materia/00 Índice — bloque programa (las 10 unidades).md` |
-| Ver **qué cae y con qué peso** (foto del profesor) | `10_Examen_Final/04 Guías del examen/00 Matriz del final — las 3 tandas.md` |
-| Ver la materia completa en 20 minutos | `00_Inicio/04 Resumen integrador de la materia.md` |
-| Saber qué pide la cátedra, TP por TP | `01_Material_Catedra/00 Índice de TPs y qué aporta cada uno.md` |
-| Entrenar el oral | `10_Examen_Final/04 Guías del examen/Guion de respuestas — preguntas principales.md` |
-| Practicar el pizarrón | `30_Practica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
-| Repasar tablas de verdad | `30_Practica/Tablas de verdad de memoria.md` |
-| Saber de dónde sale cada dato | `00_Inicio/05 Fuentes y qué aporta cada una.md` |
-| Saber **qué leer para ampliar** cada tema | `10_Examen_Final/04 Guías del examen/01 Qué leer para cada pregunta principal.md` |
-| **Chequear la cobertura de la lista de 12 temas** | `10_Examen_Final/04 Guías del examen/02 Chequeo de los 12 temas.md` |
+| **Preparar el final** (empezar acá) | `01 Modelo de final resuelto/00 Índice — el final resuelto.md` |
+| **Estudiar la materia completa** (las 10 unidades) | `02 Materia/00 Índice de la materia (las 10 unidades).md` |
+| Ver **qué cae y con qué peso** (foto del profesor) | `01 Modelo de final resuelto/00 Guías/00 Matriz del final — las 3 tandas.md` |
+| Ver la materia completa en 20 minutos | `00 Empezar acá/04 Resumen integrador de la materia.md` |
+| Saber qué pide la cátedra, TP por TP | `03 Material de cátedra (TPs)/00 Índice de TPs y qué aporta cada uno.md` |
+| Entrenar el oral | `01 Modelo de final resuelto/00 Guías/Guion de respuestas — preguntas principales.md` |
+| Practicar el pizarrón | `04 Práctica/Cómo dibujar los circuitos (checklist de pizarrón).md` |
+| Repasar tablas de verdad | `04 Práctica/Tablas de verdad de memoria.md` |
+| Saber de dónde sale cada dato | `00 Empezar acá/05 Fuentes y qué aporta cada una.md` |
+| Saber **qué leer para ampliar** cada tema | `01 Modelo de final resuelto/00 Guías/01 Qué leer para cada pregunta principal.md` |
+| **Chequear la cobertura de la lista de 12 temas** | `01 Modelo de final resuelto/00 Guías/02 Chequeo de los 12 temas.md` |
 
 ## Fuentes
 
@@ -71,7 +89,7 @@ La bóveda está construida sobre el material de la cátedra: el apunte base (**
 Architecture***, capítulo de la máquina elemental "BLUE"), los **apuntes de las Unidades 1 a 5**, la **matriz
 del final**, los **21 TPs**, los resúmenes de clase y el material de memorias semiconductoras. El detalle de
 qué aporta cada fuente (y cómo se resolvieron los conflictos entre ellas) está en
-`00_Inicio/05 Fuentes y qué aporta cada una.md`.
+`00 Empezar acá/05 Fuentes y qué aporta cada una.md`.
 
 ## Avisos sobre el material de cátedra
 

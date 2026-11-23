@@ -1,0 +1,65 @@
+---
+tipo: moc
+prioridad: maxima
+---
+# La materia completa — las 10 unidades
+
+> [!abstract] Qué es esta carpeta
+> El **programa de la cátedra**, unidad por unidad, para estudiarlo **de punta a punta**. Acá viven las notas que
+> el final no pregunta (registros, contadores, memoria virtual, ALU, paralelismo, 8086, microprogramación) y acá
+> está **el mapa que conecta todo**, incluidas las notas que están guardadas en
+> [[00 Índice — el final resuelto|Modelo de final resuelto]].
+
+> [!important] Cómo está armada
+> ```
+> 02 Materia/
+> ├── 00 Índice de la materia (esta nota)
+> ├── Unidad 1 — Circuitos de lógica digital/
+> │   └── 00 Unidad N — temas y subtemas     ← el índice de la unidad
+> ├── Unidad 2 — Memorias y circuitos secuenciales/
+> │   ├── 00 Unidad 2 — temas y subtemas
+> │   ├── Tema 2.4 Registros y contadores/    ← una carpeta por tema con varios archivos
+> │   └── Tema 2.5 Memorias complementarias/
+> ├── Unidad 3 … Unidad 10
+> ```
+> **Cada nota vive en un solo lugar.** La mayoría de los temas del programa coinciden con preguntas del final,
+> así que su nota está en `01 Modelo de final resuelto/`; desde el índice de cada unidad **se llega igual**.
+
+---
+
+## Las 10 unidades
+
+| Unidad | Tema | Índice | Qué se estudia |
+|---|---|---|---|
+| **1** | Circuitos de lógica digital | [[00 Unidad 1 — temas y subtemas]] | compuertas, Boole, DeMorgan, Karnaugh, sumadores, MUX/DEMUX |
+| **2** | Memorias y circuitos secuenciales | [[00 Unidad 2 — temas y subtemas]] | flip-flops, registros, contadores, celdas, RAM/ROM, caché, jerarquía |
+| **3** | Transferencia de registros y microoperaciones | [[00 Unidad 3 — temas y subtemas]] | bus, microoperaciones, ALU |
+| **4** | Organización y diseño básico | [[00 Unidad 4 — temas y subtemas]] | estructura, máquina BLUE, ciclos, unidad de control |
+| **5** | Programación básica y CPU convencional | [[00 Unidad 5 — temas y subtemas]] | lenguaje máquina, formatos, modos, indexada, interrupciones, 8086 |
+| **6** | Control microprogramado | [[00 Unidad 6 — temas y subtemas]] | UC cableada vs microprogramada, memoria de control |
+| **7** | CPU y arquitecturas | [[00 Unidad 7 — temas y subtemas]] | pipeline, técnicas de velocidad, CISC/RISC |
+| **8** | Paralelismo | [[00 Unidad 8 — temas y subtemas]] | pipeline aritmético, vectorial, SIMD, memoria entrelazada |
+| **9** | Hardware aritmético | [[00 Unidad 9 — temas y subtemas]] | complemento a 2, Booth, división, punto flotante, BCD |
+| **10** | Entrada / Salida | [[00 Unidad 10 — temas y subtemas]] | E/S programada, interrupciones, DMA, puertos e interfaces |
+
+---
+
+## Plan de 3 semanas para la materia completa
+
+| Semana | Unidades | Qué hacer |
+|---|---|---|
+| **1. Los ladrillos** | 1 y 2 | compuertas → Boole/Karnaugh → sumadores → MUX/DEMUX → flip-flops → memorias. **Dibujar cada circuito.** |
+| **2. La máquina** | 3, 4 y 5 | estructura, BLUE, ciclos, UC, formatos, modos, indexada, 8086 |
+| **3. Lo avanzado** | 6 a 10 | microprogramación, pipeline, CISC/RISC, paralelismo, aritmética, E/S |
+
+> [!tip] Regla de oro
+> Por cada tema: (1) leé la nota, (2) **dibujá el circuito o el esquema sin mirar**, (3) resolvé el **TP** de esa
+> unidad, (4) contá en voz alta qué resuelve ese concepto. Si hacés las cuatro, el tema es tuyo.
+> Los TPs están en [[00 Índice de TPs y qué aporta cada uno]].
+
+---
+
+## Relacionado
+[[00 Índice — el final resuelto]] · [[01 Mapa de la materia (MOC)]] ·
+[[02 Plan de estudio — las 10 unidades]] · [[04 Resumen integrador de la materia]] ·
+[[05 Fuentes y qué aporta cada una]]
