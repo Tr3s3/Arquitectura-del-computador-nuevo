@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Handshake asíncrono: STB y ACK, paso a paso</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">Sin handshake la transferencia se pisa; con handshake cada parte sabe cuándo actuar</text>
+  <text x="30" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">DATO</text>
+  <line x1="90" y1="96" x2="860" y2="96" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="30" y="144" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">STB</text>
+  <line x1="90" y1="140" x2="860" y2="140" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="30" y="188" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">ACK</text>
+  <line x1="90" y1="184" x2="860" y2="184" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="200" y1="96" x2="200" y2="76" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="200" y1="76" x2="480" y2="76" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="480" y1="76" x2="480" y2="96" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="300" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#7c2d12">dato válido en las líneas</text>
+  <line x1="90" y1="140" x2="200" y2="140" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="200" y1="140" x2="200" y2="120" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="200" y1="120" x2="420" y2="120" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="420" y1="120" x2="420" y2="140" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="420" y1="140" x2="860" y2="140" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="210" y="112" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#7c2d12">STB = 1 (el dato está puesto)</text>
+  <line x1="90" y1="184" x2="330" y2="184" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="330" y1="184" x2="330" y2="164" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="330" y1="164" x2="560" y2="164" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="560" y1="164" x2="560" y2="184" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="560" y1="184" x2="860" y2="184" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="340" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#15803d">ACK = 1 (lo tomé)</text>
+  <text x="24" y="226" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Secuencia: 1 · el periférico pone el dato  →  2 · pone STB  →  3 · el receptor toma el dato y contesta ACK  →  4 · se bajan las dos señales</text>
+  <text x="24" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Recién cuando STB volvió a 0 se puede poner el dato siguiente: eso es lo que evita perder o repetir datos.</text>
+  <rect x="24" y="266" width="872" height="98" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Por qué es asíncrono: no hay reloj común; cada parte espera la señal de la otra. Sirve para periféricos de cualquier velocidad.</text>
+  <text x="40" y="308" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Costo: dos líneas más y más tiempo por transferencia (hay que esperar el ida y vuelta). Por eso los buses rápidos son sincrónicos.</text>
+  <text x="40" y="328" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">En la BLUE es más simple: la línea R (ready) hace de 'listo' y la instrucción INP espera ahí mismo (polling dentro de la instrucción).</text>
+  <text x="40" y="348" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Las tres señales del handshake (STB, ACK, BUSY) son las mismas en Centronics, en el 8255 y en cualquier interfaz paralela.</text>
+</svg>

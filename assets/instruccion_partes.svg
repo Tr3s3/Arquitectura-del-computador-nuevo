@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">La instrucción: código de operación + operandos</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">Qué debe contestar una instrucción</text>
+  <text x="40" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">1 · QUÉ se hace  ⇒ código de operación (opcode / CodOp)</text>
+  <text x="40" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">2 · CON QUÉ se hace  ⇒ uno o más operandos (registro, memoria, inmediato)</text>
+  <text x="40" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">3 · CÓMO se busca el operando ⇒ modo de direccionamiento</text>
+  <rect x="40" y="140" width="140" height="46" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="110" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">CodOp</text>
+  <rect x="180" y="140" width="120" height="46" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="240" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1f2937">modo</text>
+  <rect x="300" y="140" width="160" height="46" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="380" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">operando / dirección</text>
+  <text x="490" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Una instrucción de máquina, campo por campo.</text>
+  <text x="490" y="176" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">El largo total lo fija el formato (1, 2 o más palabras).</text>
+  <text x="24" y="216" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">Clasificación por número de operandos (lo que se pregunta de memoria)</text>
+  <rect x="40" y="242" width="206" height="66" rx="5" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="52" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1d4ed8">3 direcciones</text>
+  <text x="52" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">A ← B + C  (una instrucción, más bits)</text>
+  <rect x="260" y="242" width="206" height="66" rx="5" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="272" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1d4ed8">2 direcciones</text>
+  <text x="272" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">A ← A + B  (destruye A)</text>
+  <rect x="480" y="242" width="206" height="66" rx="5" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="492" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1d4ed8">1 dirección</text>
+  <text x="492" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">AC ← AC + M[D]  (acumulador: la BLUE)</text>
+  <rect x="700" y="242" width="206" height="66" rx="5" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="712" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1d4ed8">0 direcciones</text>
+  <text x="712" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">pila: push, push, add  (todo implícito)</text>
+  <text x="24" y="336" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Menos direcciones ⇒ instrucciones más cortas y más simples (bueno para RISC), pero más instrucciones para lo mismo.</text>
+  <text x="24" y="358" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">En la BLUE: 16 bits = 4 de opcode + 12 de dirección ⇒ 1 dirección (acumulador), 16 opcodes y 4 096 celdas direccionables.</text>
+  <text x="24" y="380" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Una instrucción NO dice el valor: dice DÓNDE está el valor. Esa diferencia es todo el tema de los modos de direccionamiento (5.3).</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Por qué RISC es load/store y cableado: la cadena que lo explica todo</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">La cadena causal (la respuesta del final)</text>
+  <rect x="30" y="78" width="150" height="76" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="105" y="102" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">instrucciones</text>
+  <text x="105" y="117" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">simples</text>
+  <text x="105" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">pocas y</text>
+  <text x="105" y="145" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">uniformes</text>
+  <line x1="182" y1="116" x2="198" y2="116" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="198" y1="116" x2="189.7780908812166" y2="112.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="198" y1="116" x2="189.7780908812166" y2="119.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="202" y="78" width="150" height="76" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="277" y="102" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">control</text>
+  <text x="277" y="117" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">cableado</text>
+  <text x="277" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">sin microcódigo</text>
+  <line x1="354" y1="116" x2="370" y2="116" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="370" y1="116" x2="361.7780908812166" y2="112.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="370" y1="116" x2="361.7780908812166" y2="119.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="374" y="78" width="150" height="76" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="449" y="102" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">1 ciclo por</text>
+  <text x="449" y="117" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">instrucción</text>
+  <text x="449" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">CPI ≈ 1</text>
+  <line x1="526" y1="116" x2="542" y2="116" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="542" y1="116" x2="533.7780908812166" y2="112.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="542" y1="116" x2="533.7780908812166" y2="119.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="546" y="78" width="150" height="76" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="621" y="102" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">pipeline</text>
+  <text x="621" y="117" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">natural</text>
+  <text x="621" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">etapas parejas</text>
+  <line x1="698" y1="116" x2="714" y2="116" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="714" y1="116" x2="705.7780908812166" y2="112.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="714" y1="116" x2="705.7780908812166" y2="119.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="718" y="78" width="150" height="76" rx="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="793" y="102" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">load/store</text>
+  <text x="793" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">la memoria sólo en</text>
+  <text x="793" y="145" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#4b5563">2 instrucciones</text>
+  <text x="24" y="190" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Qué significa load/store en la práctica</text>
+  <text x="40" y="214" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">RISC:  a = b + c  ⇒  LOAD R1,b  ·  LOAD R2,c  ·  ADD R3,R1,R2  ·  STORE a,R3   (4 instrucciones)</text>
+  <text x="40" y="236" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">CISC:  a = b + c  ⇒  ADD [a],[b],[c]                                            (1 instrucción, varios ciclos)</text>
+  <text x="40" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#15803d">Ventaja del load/store: todas las operaciones son entre registros ⇒ duración pareja ⇒ el pipeline no se traba esperando memoria.</text>
+  <text x="40" y="282" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Costo: más instrucciones y más registros (se necesitan 32 o más para no estar yendo y viniendo a memoria).</text>
+  <rect x="24" y="300" width="872" height="84" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">El número que cierra el argumento: vector de 100 elementos ⇒ CISC 500 instrucciones × CPI 3 = 1 500 ciclos contra RISC 800 × 1,1 = 880.</text>
+  <text x="40" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">RISC gana 1,7× con 60 % más instrucciones: importa el CPI, no la cantidad de instrucciones.</text>
+  <text x="40" y="366" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Y por eso la UC cableada (unidad 6) va con RISC: si cada instrucción es simple, no hace falta microcódigo para resolverla.</text>
+</svg>

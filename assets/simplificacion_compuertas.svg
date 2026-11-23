@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Simplificar es sacar compuertas: la misma función con menos hardware</text>
+  <text x="24" y="52" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#1f2937">Sin simplificar:  Y = A'·B·C + A·B·C + A·B·C'</text>
+  <path d="M50,72 L86.0,72 A28.0,28.0 0 0 1 86.0,128 L50,128 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="32" y1="86.0" x2="50" y2="86.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="27" y="90.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">A'</text>
+  <line x1="32" y1="100.0" x2="50" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="27" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="32" y1="114.0" x2="50" y2="114.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="27" y="118.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">C</text>
+  <line x1="114" y1="100.0" x2="132" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="137" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1d4ed8">p1</text>
+  <path d="M215,72 L251.0,72 A28.0,28.0 0 0 1 251.0,128 L215,128 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="197" y1="86.0" x2="215" y2="86.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="192" y="90.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="197" y1="100.0" x2="215" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="192" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="197" y1="114.0" x2="215" y2="114.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="192" y="118.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">C</text>
+  <line x1="279" y1="100.0" x2="297" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="302" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1d4ed8">p2</text>
+  <path d="M380,72 L416.0,72 A28.0,28.0 0 0 1 416.0,128 L380,128 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="362" y1="86.0" x2="380" y2="86.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="357" y="90.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="362" y1="100.0" x2="380" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="357" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="362" y1="114.0" x2="380" y2="114.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="357" y="118.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">C'</text>
+  <line x1="444" y1="100.0" x2="462" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="467" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1d4ed8">p3</text>
+  <path d="M560,84 C579.24,84 614.76,91.6 634,122.0 C614.76,152.4 579.24,160 560,160 C573.32,134.16 573.32,109.84 560,84 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="546" y1="103.0" x2="568" y2="103.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="107.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937"></text>
+  <line x1="546" y1="122.0" x2="568" y2="122.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="126.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937"></text>
+  <line x1="546" y1="141.0" x2="568" y2="141.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="541" y="145.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937"></text>
+  <line x1="634" y1="122.0" x2="656" y2="122.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="661" y="126.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="680" y="104" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="400" text-anchor="start" fill="#7c2d12">p1 = A'BC   p2 = ABC   p3 = ABC'</text>
+  <text x="680" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#b91c1c">3 AND de 3 entradas + 1 OR de 3 + 2 NOT</text>
+  <text x="680" y="146" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#b91c1c">⇒ 14 compuertas</text>
+  <text x="24" y="200" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#1f2937">Simplificada:  Y = B·C + A·B</text>
+  <path d="M100,232 L140.0,232 A24.0,24.0 0 0 1 140.0,280 L100,280 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="78" y1="248.0" x2="100" y2="248.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="73" y="252.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="78" y1="264.0" x2="100" y2="264.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="73" y="268.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">C</text>
+  <line x1="164" y1="256.0" x2="186" y2="256.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="191" y="260.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">B·C</text>
+  <path d="M100,306 L140.0,306 A24.0,24.0 0 0 1 140.0,354 L100,354 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="78" y1="322.0" x2="100" y2="322.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="73" y="326.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="78" y1="338.0" x2="100" y2="338.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="73" y="342.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="164" y1="330.0" x2="186" y2="330.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="191" y="334.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A·B</text>
+  <path d="M320,254 C339.24,254 374.76,260.4 394,286.0 C374.76,311.6 339.24,318 320,318 C333.32,296.24 333.32,275.76 320,254 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="306" y1="275.3333333333333" x2="328" y2="275.3333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="301" y="279.3333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937"></text>
+  <line x1="306" y1="296.6666666666667" x2="328" y2="296.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="301" y="300.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937"></text>
+  <line x1="394" y1="286.0" x2="416" y2="286.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="421" y="290.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="460" y="240" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="start" fill="#0f766e">Y = B·C + A·B</text>
+  <text x="460" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#15803d">3 compuertas de 2 entradas ⇒ 1 circuito integrado</text>
+  <text x="460" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">La función es la MISMA: la tabla de verdad no cambia.</text>
+  <text x="460" y="312" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Chequeo: A=1,B=1 ⇒ Y=1 · A=0,B=1,C=1 ⇒ Y=1 · A=1,B=0 ⇒ Y=0.</text>
+  <text x="24" y="384" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">Simplificar no cambia qué hace el circuito: cambia su costo (compuertas, retardos, consumo y tamaño del chip).</text>
+  <text x="24" y="406" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#4b5563">El Karnaugh es el método sistemático para llegar a esta versión; la simplificación analítica usa postulados y DeMorgan.</text>
+</svg>

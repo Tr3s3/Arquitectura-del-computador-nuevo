@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Speedup: tiende a k y nunca lo alcanza</text>
+  <text x="24" y="52" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#0f766e">S(n) = k·n / (k + n − 1)  →  k   cuando n → ∞</text>
+  <line x1="50" y1="250" x2="440" y2="250" stroke="#1f2937" stroke-width="1.4"/>
+  <line x1="50" y1="250" x2="50" y2="84" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="44" y="88" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#1f2937">5</text>
+  <text x="44" y="254" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#1f2937">0</text>
+  <line x1="54" y1="90" x2="440" y2="90" stroke="#b91c1c" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="96" y="80" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#b91c1c">techo = k = 5</text>
+  <rect x="70" y="181.51999999999998" width="40" height="68.48" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="90" y="175.51999999999998" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">2.14</text>
+  <text x="90" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">3</text>
+  <rect x="130" y="149.84" width="40" height="100.16" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="150" y="143.84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">3.13</text>
+  <text x="150" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">5</text>
+  <rect x="190" y="135.76" width="40" height="114.24" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="210" y="129.76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">3.57</text>
+  <text x="210" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">10</text>
+  <rect x="250" y="116.56" width="40" height="133.44" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="270" y="110.56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">4.17</text>
+  <text x="270" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">25</text>
+  <rect x="310" y="96.08000000000001" width="40" height="153.92" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="330" y="90.08000000000001" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">4.81</text>
+  <text x="330" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">100</text>
+  <rect x="370" y="90.63999999999999" width="40" height="159.36" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="390" y="84.63999999999999" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#7c2d12">4.98</text>
+  <text x="390" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">1000</text>
+  <text x="180" y="284" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">n (instrucciones)</text>
+  <text x="24" y="300" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Con k = 5 etapas: S(3) = 2,14 · S(100) = 4,81 · S(1000) = 4,98. Nunca llega a 5.</text>
+  <text x="24" y="320" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Por qué: hay que llenar el pipeline (k − 1 ciclos) y ese costo se reparte entre n instrucciones.</text>
+  <rect x="470" y="70" width="426" height="180" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="486" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Ejemplo con penalidades (el del final)</text>
+  <text x="486" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">5 etapas · 100 instrucciones · 20 load-use · 15 saltos</text>
+  <text x="486" y="138" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">serie:        5 × 100 = 500 ciclos</text>
+  <text x="486" y="158" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#15803d">ideal:        5 + 99 = 104 ciclos</text>
+  <text x="486" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">+ 20 stalls = 124      ⇒ S = 4,03</text>
+  <text x="486" y="198" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#b91c1c">+ 15 por saltos = 139  ⇒ S = 3,60</text>
+  <text x="486" y="218" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#b91c1c">CPI = 139/100 = 1,39   (ideal 1,00)</text>
+  <text x="486" y="240" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">La diferencia entre 5 y 3,60 es lo que 'cuesta' la realidad.</text>
+  <text x="24" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">Qué se pregunta: ciclos ideales, ciclos reales, speedup ideal y real, CPI. Y siempre el techo: no se puede superar k.</text>
+  <text x="24" y="378" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Truco para no equivocarse: la penalidad se SUMA a los ciclos, aparte del k + (n − 1). Nunca se resta ni se promedia.</text>
+</svg>

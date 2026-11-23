@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Encadenamiento (chaining) en el pipeline aritmético</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">Sin encadenamiento: cada operación espera el resultado completo de la anterior</text>
+  <rect x="60" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="115" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 1</text>
+  <rect x="190" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="245" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 2</text>
+  <rect x="320" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="375" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 3</text>
+  <rect x="450" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="505" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 4</text>
+  <rect x="580" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="635" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 5</text>
+  <rect x="710" y="72" width="110" height="26" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="765" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#1f2937">suma 6</text>
+  <text x="24" y="118" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#b91c1c">cada suma ocupa 4 ciclos de la etapa de suma ⇒ 6 sumas = 24 ciclos</text>
+  <text x="24" y="152" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">Con encadenamiento: el resultado parcial se pasa a la etapa siguiente sin esperar</text>
+  <rect x="60" y="172" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="115" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 1</text>
+  <rect x="180" y="172" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="235" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 2</text>
+  <rect x="300" y="172" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="355" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 3</text>
+  <rect x="60" y="198" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="115" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 4</text>
+  <rect x="180" y="198" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="235" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 5</text>
+  <rect x="300" y="198" width="110" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="355" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#1f2937">suma 6</text>
+  <text x="24" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#15803d">los resultados se pasan de etapa en etapa: se solapan varias sumas a la vez</text>
+  <rect x="470" y="160" width="426" height="112" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="486" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">El cálculo</text>
+  <text x="486" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">k etapas de suma de t ciclos, n operaciones:</text>
+  <text x="486" y="224" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">T = k·t + (n − 1)·t      S = k·n / (k + n − 1)</text>
+  <text x="486" y="246" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">Con k = 4, t = 1, n = 100 ⇒ T = 103, S = 3,88</text>
+  <text x="24" y="300" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Diferencia con el pipeline de instrucciones: ahí se solapan INSTRUCCIONES; acá se solapan ETAPAS de una misma operación vectorial.</text>
+  <text x="24" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Es lo que hace un procesador vectorial: una instrucción de suma procesa 64 elementos, y el encadenamiento aprovecha la etapa libre.</text>
+  <text x="24" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Limitación: sólo sirve si las operaciones son independientes y la etapa es segmentable (suma sí, división casi no).</text>
+  <text x="24" y="366" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Sin encadenamiento el resultado del vector tarda n × latencia; con encadenamiento, n + k − 1 pasos.</text>
+</svg>

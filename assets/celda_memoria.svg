@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">La celda de memoria: SRAM (6 transistores) y DRAM (1 transistor + 1 capacitor)</text>
+  <text x="24" y="50" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">SRAM: biestable de 2 inversores cruzados — guarda mientras haya alimentación</text>
+  <rect x="70" y="72" width="150" height="96" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.6"/>
+  <polygon points="110,100 110,140 172,120.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="177" cy="120.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <rect x="300" y="72" width="150" height="96" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.6"/>
+  <polygon points="340,100 340,140 402,120.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="407" cy="120.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="222" y1="104" x2="298" y2="104" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="298" y1="104" x2="289.7780908812166" y2="100.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="298" y1="104" x2="289.7780908812166" y2="107.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="258" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">Q</text>
+  <line x1="298" y1="136" x2="222" y2="136" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="222" y1="136" x2="230.2219091187834" y2="139.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="222" y1="136" x2="230.2219091187834" y2="132.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="258" y="152" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">Q'</text>
+  <text x="250" y="188" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">realimentación cruzada = 1 bit estable</text>
+  <text x="24" y="214" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Para leer/escribir se agregan 2 transistores de acceso que conectan la celda a las líneas de bit (BL y BL').</text>
+  <text x="24" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Total: 6 transistores · no necesita refresco · rápida (ns) · ocupa mucho ⇒ se usa en la caché.</text>
+  <text x="24" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">DRAM: un transistor de acceso + un capacitor — guarda como carga eléctrica</text>
+  <rect x="430" y="286" width="80" height="46" rx="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="470" y="314" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">MOS</text>
+  <line x1="430" y1="300" x2="400" y2="300" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="396" y="304" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#4b5563">palabra (fila)</text>
+  <line x1="470" y1="332" x2="470" y2="352" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="452" y1="352" x2="488" y2="352" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="452" y1="362" x2="488" y2="362" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="496" y="360" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">capacitor C</text>
+  <text x="540" y="290" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">El transistor conecta el capacitor a la línea de bit cuando la fila está activa.</text>
+  <text x="540" y="308" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">1 bit = 1 transistor ⇒ altísima densidad, pero la carga se ESCAPA.</text>
+  <text x="540" y="326" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#b91c1c">Por eso hay que REFRESCAR cada celda cada ~64 ms: leer y reescribir.</text>
+  <text x="540" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">La lectura es destructiva: descarga el capacitor y hay que reescribirlo.</text>
+  <text x="24" y="386" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Celda = unidad mínima que guarda 1 bit. La matriz las ordena en filas (palabra) y columnas (bit); el decodificador de fila elige la palabra.</text>
+  <text x="24" y="404" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">SRAM = rápida y cara (caché) · DRAM = densa y barata, con refresco (memoria principal).</text>
+</svg>

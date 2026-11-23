@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">La máquina IAS: el primer computador con programa almacenado</text>
+  <rect x="50" y="70" width="210" height="90" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="66" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">UNIDAD DE CONTROL</text>
+  <text x="66" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">ejecuta el ciclo</text>
+  <text x="66" y="134" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">búsqueda → ejecución</text>
+  <rect x="50" y="200" width="210" height="120" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="66" y="224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">UNIDAD ARITMÉTICA</text>
+  <text x="66" y="246" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">AC (acumulador)</text>
+  <text x="66" y="266" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">MQ (cociente)</text>
+  <text x="66" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">suma, resta,</text>
+  <text x="66" y="306" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">multiplicación, división</text>
+  <rect x="330" y="70" width="250" height="250" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="346" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">MEMORIA PRINCIPAL</text>
+  <text x="346" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">1 000 palabras de 40 bits</text>
+  <text x="346" y="138" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">cada palabra: 20 bits de</text>
+  <text x="346" y="154" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">izquierda + 20 de derecha</text>
+  <rect x="346" y="170" width="218" height="26" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="455" y="188" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">0 0 0 … 0  0 0 … 0</text>
+  <rect x="346" y="200" width="218" height="26" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="455" y="218" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">1 0 0 … 1  0 1 … 1</text>
+  <text x="455" y="246" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#b91c1c">instrucciones y datos</text>
+  <text x="455" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#b91c1c">en la MISMA memoria</text>
+  <rect x="650" y="130" width="240" height="130" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="666" y="154" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">REGISTROS</text>
+  <text x="666" y="176" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">IR: instrucción en curso</text>
+  <text x="666" y="196" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">IBR: operando derecho</text>
+  <text x="666" y="216" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">PC: próxima instrucción</text>
+  <text x="666" y="236" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">MAR: dirección de memoria</text>
+  <text x="666" y="252" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">MBR: dato leído/escrito</text>
+  <line x1="260" y1="115" x2="328" y2="115" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="328" y1="115" x2="319.7780908812166" y2="111.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="328" y1="115" x2="319.7780908812166" y2="118.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="260" y1="260" x2="328" y2="220" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="328" y1="220" x2="319.05724223835057" y2="221.01345133896928" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="328" y1="220" x2="322.7692681948553" y2="227.3238954650273" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="580" y1="160" x2="648" y2="170" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="648" y1="170" x2="640.3981787387262" y2="165.18208411119028" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="648" y1="170" x2="639.3329794676579" y2="172.42543915445444" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="648" y1="210" x2="580" y2="200" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="580" y1="200" x2="587.6018212612738" y2="204.81791588880972" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="580" y1="200" x2="588.6670205323421" y2="197.57456084554556" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="350" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">La idea central (1946): las instrucciones se guardan en la MISMA memoria que los datos ⇒ el programa se puede cargar, cambiar y hasta tratar como dato.</text>
+  <text x="24" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Eso es el modelo von Neumann (unidad 7.4). El IAS ya tenía la estructura que se repite en toda la materia: UC + ALU + memoria + registros.</text>
+  <text x="24" y="394" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Direccionamiento: 10 bits para 1 000 palabras; el bit de la izquierda dice si la palabra es una instrucción (0) o un dato (1).</text>
+</svg>

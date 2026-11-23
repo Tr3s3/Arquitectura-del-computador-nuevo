@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">NAND, NOR, XOR y XNOR: símbolo, ecuación y tabla</text>
+  <rect x="24" y="44" width="222" height="286" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="36" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#1d4ed8">NAND</text>
+  <path d="M76,78 L117.0,78 A23.0,23.0 0 0 1 117.0,124 L76,124 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="145" cy="101.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="50" y1="93.33333333333333" x2="76" y2="93.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="45" y="97.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="50" y1="108.66666666666667" x2="76" y2="108.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="45" y="112.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="150" y1="101.0" x2="176" y2="101.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="181" y="105.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="36" y="152" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#0f766e">Y = (A · B)'</text>
+  <text x="36" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">A B | Y</text>
+  <text x="36" y="196" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 0 | 1</text>
+  <text x="36" y="214" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 1 | 1</text>
+  <text x="36" y="232" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 0 | 1</text>
+  <text x="36" y="250" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 1 | 0</text>
+  <text x="36" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">AND negada: sale 0 sólo con todo 1</text>
+  <rect x="259" y="44" width="222" height="286" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="271" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#1d4ed8">NOR</text>
+  <path d="M311,78 C327.64,78 358.36,82.6 375,101.0 C358.36,119.4 327.64,124 311,124 C322.52,108.36 322.52,93.64 311,78 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="380" cy="101.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="293" y1="93.33333333333333" x2="319" y2="93.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="288" y="97.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="293" y1="108.66666666666667" x2="319" y2="108.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="288" y="112.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="385" y1="101.0" x2="411" y2="101.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="416" y="105.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="271" y="152" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#0f766e">Y = (A + B)'</text>
+  <text x="271" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">A B | Y</text>
+  <text x="271" y="196" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 0 | 1</text>
+  <text x="271" y="214" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 1 | 0</text>
+  <text x="271" y="232" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 0 | 0</text>
+  <text x="271" y="250" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 1 | 0</text>
+  <text x="271" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">OR negada: sale 1 sólo con todo 0</text>
+  <rect x="494" y="44" width="222" height="286" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="506" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#1d4ed8">XOR</text>
+  <path d="M546,78 C562.64,78 593.36,82.6 610,101.0 C593.36,119.4 562.64,124 546,124 C557.52,108.36 557.52,93.64 546,78 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <path d="M537,78 C551.76,93.64 551.76,108.36 537,124" fill="none" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="528" y1="93.33333333333333" x2="554" y2="93.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="523" y="97.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="528" y1="108.66666666666667" x2="554" y2="108.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="523" y="112.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="610" y1="101.0" x2="636" y2="101.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="641" y="105.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="506" y="152" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#0f766e">Y = A ⊕ B</text>
+  <text x="506" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">A B | Y</text>
+  <text x="506" y="196" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 0 | 0</text>
+  <text x="506" y="214" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 1 | 1</text>
+  <text x="506" y="232" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 0 | 1</text>
+  <text x="506" y="250" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 1 | 0</text>
+  <text x="506" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">1 si son distintos (paridad impar)</text>
+  <rect x="729" y="44" width="222" height="286" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="741" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#1d4ed8">XNOR</text>
+  <path d="M781,78 C797.64,78 828.36,82.6 845,101.0 C828.36,119.4 797.64,124 781,124 C792.52,108.36 792.52,93.64 781,78 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <path d="M772,78 C786.76,93.64 786.76,108.36 772,124" fill="none" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="850" cy="101.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="763" y1="93.33333333333333" x2="789" y2="93.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="758" y="97.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="763" y1="108.66666666666667" x2="789" y2="108.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="758" y="112.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="855" y1="101.0" x2="881" y2="101.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="886" y="105.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">Y</text>
+  <text x="741" y="152" font-family="Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" text-anchor="start" fill="#0f766e">Y = (A ⊕ B)'</text>
+  <text x="741" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#1f2937">A B | Y</text>
+  <text x="741" y="196" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 0 | 1</text>
+  <text x="741" y="214" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">0 1 | 0</text>
+  <text x="741" y="232" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 0 | 0</text>
+  <text x="741" y="250" font-family="Consolas, 'Courier New', monospace" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">1 1 | 1</text>
+  <text x="741" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">1 si son iguales (comparador)</text>
+  <text x="24" y="356" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">Las cuatro son de 2 entradas y una salida. NAND y NOR son universales (con ellas se arma cualquier función);</text>
+  <text x="24" y="376" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#4b5563">XOR y XNOR son imprescindibles para sumar (S = A⊕B⊕Cin) y para comparar si dos palabras son iguales.</text>
+</svg>

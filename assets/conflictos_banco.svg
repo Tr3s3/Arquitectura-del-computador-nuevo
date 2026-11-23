@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Memoria entrelazada: dirección módulo bancos y conflictos de banco</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Cuatro bancos: dirección módulo 4 decide el banco</text>
+  <rect x="60" y="76" width="180" height="60" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="150" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">BANCO 0</text>
+  <text x="150" y="120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">direcciones ≡ 0 (mod 4)</text>
+  <rect x="260" y="76" width="180" height="60" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="350" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">BANCO 1</text>
+  <text x="350" y="120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">direcciones ≡ 1 (mod 4)</text>
+  <rect x="460" y="76" width="180" height="60" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="550" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">BANCO 2</text>
+  <text x="550" y="120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">direcciones ≡ 2 (mod 4)</text>
+  <rect x="660" y="76" width="180" height="60" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="750" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">BANCO 3</text>
+  <text x="750" y="120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">direcciones ≡ 3 (mod 4)</text>
+  <text x="24" y="166" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#15803d">Sin conflicto: direcciones 0, 1, 2, 3 ⇒ un elemento por banco ⇒ los 4 en un ciclo</text>
+  <rect x="60" y="182" width="180" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="150" y="201" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">dir 0</text>
+  <rect x="260" y="182" width="180" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="350" y="201" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">dir 1</text>
+  <rect x="460" y="182" width="180" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="550" y="201" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">dir 2</text>
+  <rect x="660" y="182" width="180" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="750" y="201" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">dir 3</text>
+  <text x="24" y="236" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#b91c1c">Con conflicto: 0, 4, 8, 12 ⇒ todos caen en el banco 0 ⇒ se atienden de a uno (4 ciclos)</text>
+  <rect x="60" y="252" width="80" height="28" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="100" y="271" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">dir 0</text>
+  <rect x="148" y="252" width="80" height="28" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="188" y="271" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">dir 4</text>
+  <rect x="236" y="252" width="80" height="28" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="276" y="271" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">dir 8</text>
+  <rect x="324" y="252" width="80" height="28" rx="3" fill="#fecaca" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="364" y="271" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">dir 12</text>
+  <line x1="420" y1="266" x2="470" y2="266" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="470" y1="266" x2="461.7780908812166" y2="262.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="470" y1="266" x2="461.7780908812166" y2="269.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="474" y="252" width="90" height="28" rx="3" fill="#fecaca" stroke="{STROKE}" stroke-width="1.2"/>
+  <text x="519" y="271" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">banco 0 ×4</text>
+  <text x="580" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#b91c1c">⇒ 4 ciclos en vez de 1 (cuatro veces más lento)</text>
+  <text x="580" y="282" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">Pasa con matrices accedidas por columnas: stride = tamaño de la fila.</text>
+  <rect x="24" y="300" width="872" height="84" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="322" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Ancho de banda con b bancos de w bytes: B = (b × w) / t_ciclo. Cuatro bancos de 8 B cada 10 ns ⇒ 3,2 GB/s.</text>
+  <text x="40" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Solución al conflicto: elegir el stride coprimo con el número de bancos, o rellenar filas (padding) para que no coincidan.</text>
+  <text x="40" y="364" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Es la misma idea del tema 7.4: varios caminos en paralelo para que no haya que esperar turno. Y alimenta al pipeline aritmético del 8.1.</text>
+</svg>

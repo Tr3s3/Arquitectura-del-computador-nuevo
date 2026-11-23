@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Multiplicación de matrices con SIMD: el ejemplo clásico de paralelismo de datos</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">C = A × B: cada elemento de C es un producto escalar (fila de A · columna de B)</text>
+  <text x="40" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">A (fila i)</text>
+  <rect x="60" y="92" width="50" height="30" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="85" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">a0</text>
+  <rect x="114" y="92" width="50" height="30" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="139" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">a1</text>
+  <rect x="168" y="92" width="50" height="30" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="193" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">a2</text>
+  <text x="280" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">B (columna j)</text>
+  <rect x="300" y="92" width="50" height="30" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="325" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">b0</text>
+  <rect x="300" y="126" width="50" height="30" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="325" y="146" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">b1</text>
+  <rect x="300" y="160" width="50" height="30" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="325" y="180" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="middle" fill="#1f2937">b2</text>
+  <text x="400" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">producto escalar: multiplicar y acumular</text>
+  <text x="400" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#15803d">⇒ con SIMD se multiplican los 3 pares a la vez</text>
+  <text x="400" y="170" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#15803d">⇒ 1 instrucción vectorial en vez de 3 (o 8, o 16)</text>
+  <rect x="24" y="196" width="872" height="88" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="218" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Cómo se paraleliza en la práctica</text>
+  <text x="40" y="240" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1 · por elementos de C: cada lane calcula un C[i][j] distinto (mismo patrón, datos distintos ⇒ SIMD/SIMT perfecto).</text>
+  <text x="40" y="258" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">2 · por bloques (tiling): se traen submatrices que entran en caché y se reutilizan ⇒ menos accesos a memoria.</text>
+  <text x="40" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">3 · con varios núcleos: se reparten filas de C (memoria compartida o paso de mensajes).</text>
+  <text x="24" y="310" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Costo: para un N×N hay N³ multiplicaciones, pero sólo N² resultados ⇒ mucha operación por cada dato (por eso la GPU gana: tiene miles de lanes).</text>
+  <text x="24" y="332" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Ejemplo de cuenta: matriz de 100×100 ⇒ 1 000 000 de multiplicaciones. Con 4 lanes SIMD ⇒ 250 000 ciclos de multiplicación (ideal).</text>
+  <text x="24" y="354" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Y eso sin contar los accesos a memoria: si los datos no están en caché, el cuello de botella deja de ser la ALU y pasa a ser la memoria.</text>
+  <text x="24" y="376" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Es el mismo argumento del tema 2.5 (localidad) llevado al paralelismo: primero los datos, después las operaciones.</text>
+</svg>

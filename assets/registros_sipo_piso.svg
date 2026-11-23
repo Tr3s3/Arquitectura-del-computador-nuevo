@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Registro SIPO (serie → paralelo) y PISO (paralelo → serie)</text>
+  <text x="24" y="50" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">SIPO: entra bit a bit, sale todo junto — el receptor de un enlace serie</text>
+  <rect x="70" y="80" width="88" height="64" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="114" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF0</text>
+  <line x1="114" y1="146" x2="114" y2="166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="114" y1="166" x2="117.6606297876822" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="114" y1="166" x2="110.3393702123178" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="114" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="middle" fill="#1d4ed8">Q0</text>
+  <rect x="220" y="80" width="88" height="64" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="264" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF1</text>
+  <line x1="264" y1="146" x2="264" y2="166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="264" y1="166" x2="267.6606297876822" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="264" y1="166" x2="260.3393702123178" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="264" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="middle" fill="#1d4ed8">Q1</text>
+  <line x1="160" y1="110" x2="218" y2="110" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="218" y1="110" x2="209.7780908812166" y2="106.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="218" y1="110" x2="209.7780908812166" y2="113.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="370" y="80" width="88" height="64" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="414" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF2</text>
+  <line x1="414" y1="146" x2="414" y2="166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="414" y1="166" x2="417.6606297876822" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="414" y1="166" x2="410.3393702123178" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="414" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="middle" fill="#1d4ed8">Q2</text>
+  <line x1="310" y1="110" x2="368" y2="110" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="368" y1="110" x2="359.7780908812166" y2="106.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="368" y1="110" x2="359.7780908812166" y2="113.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="520" y="80" width="88" height="64" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="564" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF3</text>
+  <line x1="564" y1="146" x2="564" y2="166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="564" y1="166" x2="567.6606297876822" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="564" y1="166" x2="560.3393702123178" y2="157.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="564" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="middle" fill="#1d4ed8">Q3</text>
+  <line x1="460" y1="110" x2="518" y2="110" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="518" y1="110" x2="509.7780908812166" y2="106.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="518" y1="110" x2="509.7780908812166" y2="113.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="8" y1="110" x2="68" y2="110" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="68" y1="110" x2="59.77809088121659" y2="106.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="68" y1="110" x2="59.77809088121659" y2="113.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="8" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="700" text-anchor="start" fill="#b91c1c">entrada</text>
+  <text x="8" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="700" text-anchor="start" fill="#b91c1c">serie</text>
+  <text x="24" y="206" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Después de 4 pulsos los 4 bits están en paralelo: eso hace la UART cuando recibe un byte.</text>
+  <text x="24" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">PISO: entra todo junto, sale bit a bit — el transmisor</text>
+  <rect x="70" y="286" width="88" height="64" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="114" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF0</text>
+  <line x1="114" y1="268" x2="114" y2="284" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="114" y1="284" x2="117.6606297876822" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="114" y1="284" x2="110.3393702123178" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="114" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">D0</text>
+  <rect x="220" y="286" width="88" height="64" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="264" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF1</text>
+  <line x1="264" y1="268" x2="264" y2="284" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="264" y1="284" x2="267.6606297876822" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="264" y1="284" x2="260.3393702123178" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="264" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">D1</text>
+  <line x1="160" y1="316" x2="218" y2="316" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="218" y1="316" x2="209.7780908812166" y2="312.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="218" y1="316" x2="209.7780908812166" y2="319.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="370" y="286" width="88" height="64" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="414" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF2</text>
+  <line x1="414" y1="268" x2="414" y2="284" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="414" y1="284" x2="417.6606297876822" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="414" y1="284" x2="410.3393702123178" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="414" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">D2</text>
+  <line x1="310" y1="316" x2="368" y2="316" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="368" y1="316" x2="359.7780908812166" y2="312.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="368" y1="316" x2="359.7780908812166" y2="319.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="520" y="286" width="88" height="64" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="564" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">FF3</text>
+  <line x1="564" y1="268" x2="564" y2="284" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="564" y1="284" x2="567.6606297876822" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="564" y1="284" x2="560.3393702123178" y2="275.7780908812166" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="564" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#1f2937">D3</text>
+  <line x1="460" y1="316" x2="518" y2="316" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="518" y1="316" x2="509.7780908812166" y2="312.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="518" y1="316" x2="509.7780908812166" y2="319.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="700" y1="316" x2="742" y2="316" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="746" y="320" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="700" text-anchor="start" fill="#1d4ed8">salida serie</text>
+  <text x="24" y="374" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Primero se carga el byte (LOAD en paralelo) y después se desplaza: un bit por pulso hacia la salida.</text>
+  <rect x="24" y="382" width="872" height="30" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="402" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Para qué sirven: convertir entre el mundo paralelo (bus de datos) y el serie (un cable). Son la base de las UART del tema 10.4.</text>
+</svg>

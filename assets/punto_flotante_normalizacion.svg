@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Punto flotante: signo, exponente y mantissa — y por qué hay que normalizar</text>
+  <text x="24" y="52" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="start" fill="#0f766e">Formato: (−1)^S × 1.M × 2^(E − exceso)</text>
+  <rect x="60" y="80" width="80" height="44" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="100" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1f2937">S</text>
+  <rect x="140" y="80" width="200" height="44" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="240" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">E (exponente)</text>
+  <rect x="340" y="80" width="300" height="44" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="490" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1f2937">M (mantissa / fracción)</text>
+  <text x="660" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">Exceso 127 en simple:</text>
+  <text x="660" y="112" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">así se comparan como enteros.</text>
+  <text x="24" y="156" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Normalizar = dejar la mantissa como 1,xxx (un solo 1 antes de la coma) y acomodar el exponente</text>
+  <text x="40" y="182" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="400" text-anchor="start" fill="#7c2d12">Ejemplo: 1011,01  ⇒  1,01101 × 2³</text>
+  <text x="40" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Se corrió la coma 3 lugares a la izquierda ⇒ el exponente sube 3.</text>
+  <text x="40" y="226" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="400" text-anchor="start" fill="#7c2d12">Ejemplo: 0,00101 ⇒ 1,01 × 2⁻³</text>
+  <text x="40" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Se corrió la coma 3 lugares a la derecha ⇒ el exponente baja 3.</text>
+  <text x="40" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Cero y desnormalizados: E = 0 ⇒ sin el 1 implícito (números muy chicos).</text>
+  <rect x="500" y="170" width="396" height="106" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="516" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Las operaciones, en orden</text>
+  <text x="516" y="214" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">1 · alinear exponentes (el menor se corre)</text>
+  <text x="516" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">2 · sumar/restar mantissas</text>
+  <text x="516" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">3 · normalizar y redondear</text>
+  <text x="516" y="268" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">4 · revisar sobreflujo / subflujo del exponente</text>
+  <text x="24" y="318" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Por qué punto flotante y no coma fija: con 32 bits, la coma fija llega a ~2·10⁹ y no puede con 10⁻²⁰ ni con 10³⁰; el flotante cubre ambos a costa de precisión.</text>
+  <text x="24" y="340" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">El costo: no todos los números se representan exactos (0,1 no es exacto en binario) ⇒ los errores de redondeo se acumulan al sumar muchas veces números muy distintos.</text>
+  <text x="24" y="362" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">En la máquina de la cátedra (BLUE) no hay punto flotante: se hace por software o con la FPU del 8087 en el 8086/8088.</text>
+  <text x="24" y="384" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Y siempre: normalizar primero ⇒ más precisión con la misma cantidad de bits (la mantissa no desperdicia ceros a la izquierda).</text>
+</svg>

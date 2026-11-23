@@ -9,7 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 292 notas · 34 diagramas SVG · ~245.000 palabras · 3.135 enlaces internos, 0 rotos.
+**Estado:** 293 notas · **97 diagramas SVG** · ~248.000 palabras · 3.246 enlaces internos, 0 rotos.
+**Cobertura gráfica:** los **104 subtemas** de `02 Materia/` tienen su diagrama ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]).
 **Materia en detalle:** las **10 unidades completas** (45 temas, **104 subtemas**) con una `00 Síntesis` por unidad.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
@@ -86,8 +87,8 @@ adentro: el nombre de la carpeta lo dice).
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
 04 Práctica/                     prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
-assets/                          diagramas SVG (generados con tools/diagramas.py)
-tools/                           generador de los diagramas
+assets/                          97 diagramas SVG (generados con tools/)
+tools/                           diagramas.py (34) + diagramas_2.py (63): el generador de los SVG
 ```
 
 > **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**: adentro está la

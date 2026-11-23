@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Control cableado vs control microprogramado, lado a lado</text>
+  <rect x="24" y="46" width="424" height="230" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.4"/>
+  <text x="40" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="start" fill="#1d4ed8">CABLEADA (hardwired)</text>
+  <text x="40" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Compuertas y biestables fijos.</text>
+  <text x="40" y="118" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#15803d">· velocidad: máxima (sin leer memoria)</text>
+  <text x="40" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">· costo: crece con la complejidad</text>
+  <text x="40" y="162" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#b91c1c">· cambiar el repertorio = rediseñar</text>
+  <text x="40" y="184" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">· difícil de depurar y de corregir</text>
+  <text x="40" y="206" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">· se usa en RISC, con repertorio chico</text>
+  <text x="40" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">La UC cableada es una función combinacional:</text>
+  <text x="40" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">señal = f(estado, pulso, opcode).</text>
+  <rect x="472" y="46" width="424" height="230" rx="6" fill="#dcfce7" stroke="#86efac" stroke-width="1.4"/>
+  <text x="488" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="start" fill="#15803d">MICROPROGRAMADA</text>
+  <text x="488" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Una ROM con microinstrucciones.</text>
+  <text x="488" y="118" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">· velocidad: menor (1 lectura por paso)</text>
+  <text x="488" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#15803d">· costo: fijo (la ROM)</text>
+  <text x="488" y="162" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#15803d">· cambiar el repertorio = reprogramar</text>
+  <text x="488" y="184" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#15803d">· fácil de corregir y de emular</text>
+  <text x="488" y="206" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">· se usa en CISC y en máquinas complejas</text>
+  <text x="488" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">Cada microinstrucción es una palabra de la ROM:</text>
+  <text x="488" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">señales + control del microPC.</text>
+  <rect x="24" y="292" width="872" height="96" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="314" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Cómo decidir: si el repertorio es simple y fijo (RISC) ⇒ cableada; si es grande, irregular o tiene que poder corregirse (CISC) ⇒ microprogramada.</text>
+  <text x="40" y="336" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">En la práctica se combinan: el 8086 tiene microcódigo para las instrucciones complejas y lógica cableada para las simples.</text>
+  <text x="40" y="358" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Dato de la cátedra: la ROM de control del 8088 es de 504 palabras × 21 bits ⇒ 10 584 bits de microcódigo.</text>
+  <text x="24" y="400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Es el mismo compromiso de CISC vs RISC (unidad 7.3): complejo en el hardware o complejo en el microcódigo.</text>
+</svg>

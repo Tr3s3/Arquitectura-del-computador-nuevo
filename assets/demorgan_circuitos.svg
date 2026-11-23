@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">DeMorgan dibujado:  (A·B)' = A' + B'   y   (A+B)' = A'·B'</text>
+  <rect x="24" y="40" width="892" height="170" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">Primera ley: NAND = OR de los negados</text>
+  <path d="M60,84 L106.0,84 A24.0,24.0 0 0 1 106.0,132 L60,132 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="135" cy="108.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="34" y1="100.0" x2="60" y2="100.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="29" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="34" y1="116.0" x2="60" y2="116.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="29" y="120.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="140" y1="108.0" x2="166" y2="108.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="171" y="112.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">(A·B)'</text>
+  <text x="216" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1d4ed8">≡</text>
+  <polygon points="252,78 252,114 288,96.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="293" cy="96.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="236" y1="96.0" x2="252" y2="96.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="231" y="100.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <polygon points="252,128 252,164 288,146.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="293" cy="146.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="236" y1="146.0" x2="252" y2="146.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="231" y="150.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <path d="M366,92 C385.24,92 420.76,97.0 440,117.0 C420.76,137.0 385.24,142 366,142 C379.32,125.0 379.32,109.0 366,92 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="354" y1="108.66666666666667" x2="374" y2="108.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="349" y="112.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A'</text>
+  <line x1="354" y1="125.33333333333334" x2="374" y2="125.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="349" y="129.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B'</text>
+  <line x1="440" y1="117.0" x2="460" y2="117.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="465" y="121.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A' + B'</text>
+  <text x="520" y="96" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">A B | (A·B)' | A' + B'</text>
+  <text x="520" y="114" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 0 0 |    1    |    1</text>
+  <text x="520" y="130" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 0 1 |    1    |    1</text>
+  <text x="520" y="146" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 1 0 |    1    |    1</text>
+  <text x="520" y="162" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 1 1 |    0    |    0</text>
+  <text x="680" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Las dos columnas son iguales:</text>
+  <text x="680" y="166" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">misma tabla, mismas compuertas.</text>
+  <rect x="24" y="224" width="892" height="150" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">Segunda ley: NOR = AND de los negados</text>
+  <path d="M60,266 C78.2,266 111.8,270.8 130,290.0 C111.8,309.2 78.2,314 60,314 C72.6,297.68 72.6,282.32 60,266 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="135" cy="290.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="42" y1="282.0" x2="68" y2="282.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="37" y="286.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="42" y1="298.0" x2="68" y2="298.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="37" y="302.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="140" y1="290.0" x2="166" y2="290.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="171" y="294.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">(A+B)'</text>
+  <text x="216" y="296" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1d4ed8">≡</text>
+  <polygon points="252,260 252,296 288,278.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="293" cy="278.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="236" y1="278.0" x2="252" y2="278.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="231" y="282.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <polygon points="252,310 252,346 288,328.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="293" cy="328.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="236" y1="328.0" x2="252" y2="328.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="231" y="332.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <path d="M366,274 L415.0,274 A25.0,25.0 0 0 1 415.0,324 L366,324 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="346" y1="290.6666666666667" x2="366" y2="290.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="341" y="294.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A'</text>
+  <line x1="346" y1="307.3333333333333" x2="366" y2="307.3333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="341" y="311.3333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B'</text>
+  <line x1="440" y1="299.0" x2="460" y2="299.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="465" y="303.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A' · B'</text>
+  <text x="520" y="278" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">A B | (A+B)' | A' · B'</text>
+  <text x="520" y="296" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 0 0 |    1    |    1</text>
+  <text x="520" y="312" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 0 1 |    0    |    0</text>
+  <text x="520" y="328" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 1 0 |    0    |    0</text>
+  <text x="520" y="344" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937"> 1 1 |    0    |    0</text>
+  <text x="24" y="396" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#7c2d12">Regla para simplificar sin equivocarse: al negar cambia AND↔OR y se niega cada término (también los literales sueltos).</text>
+</svg>

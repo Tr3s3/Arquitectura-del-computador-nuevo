@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">NAND como compuerta universal: NOT, AND, OR y XOR armados sólo con NAND</text>
+  <text x="30" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">1 · NOT con NAND</text>
+  <path d="M60,66 L103.0,66 A23.0,23.0 0 0 1 103.0,112 L60,112 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="131" cy="89.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="32" y1="81.33333333333333" x2="60" y2="81.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="27" y="85.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="32" y1="96.66666666666667" x2="60" y2="96.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="27" y="100.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="136" y1="89.0" x2="164" y2="89.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="169" y="93.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A'</text>
+  <text x="30" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Uniendo las dos entradas:</text>
+  <text x="30" y="156" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">(A·A)' = A' ⇒ inversor.</text>
+  <text x="330" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">2 · AND = dos NAND</text>
+  <path d="M348,66 L383.0,66 A23.0,23.0 0 0 1 383.0,112 L348,112 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="411" cy="89.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="328" y1="81.33333333333333" x2="348" y2="81.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="323" y="85.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="328" y1="96.66666666666667" x2="348" y2="96.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="323" y="100.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="416" y1="89.0" x2="436" y2="89.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="441" y="93.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">N1</text>
+  <path d="M496,66 L529.0,66 A23.0,23.0 0 0 1 529.0,112 L496,112 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="557" cy="89.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="484" y1="81.33333333333333" x2="496" y2="81.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="479" y="85.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N1</text>
+  <line x1="484" y1="96.66666666666667" x2="496" y2="96.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="479" y="100.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N1</text>
+  <line x1="562" y1="89.0" x2="574" y2="89.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="579" y="93.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A·B</text>
+  <text x="330" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">La primera da (A·B)' y la segunda</text>
+  <text x="330" y="156" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">lo invierte: A·B.</text>
+  <text x="660" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">3 · OR = NAND de negados</text>
+  <path d="M700,66 L741.0,66 A23.0,23.0 0 0 1 741.0,112 L700,112 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="769" cy="89.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="676" y1="81.33333333333333" x2="700" y2="81.33333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="671" y="85.33333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A'</text>
+  <line x1="676" y1="96.66666666666667" x2="700" y2="96.66666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="671" y="100.66666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B'</text>
+  <line x1="774" y1="89.0" x2="798" y2="89.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="803" y="93.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A + B</text>
+  <text x="660" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">DeMorgan: (A'·B')' = A + B.</text>
+  <text x="660" y="156" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Necesita dos inversores.</text>
+  <rect x="24" y="186" width="892" height="228" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="212" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">4 · XOR con 4 NAND (el circuito que se pregunta)</text>
+  <path d="M60,260 L101.0,260 A23.0,23.0 0 0 1 101.0,306 L60,306 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="129" cy="283.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="36" y1="275.3333333333333" x2="60" y2="275.3333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="31" y="279.3333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="36" y1="290.6666666666667" x2="60" y2="290.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="31" y="294.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="134" y1="283.0" x2="158" y2="283.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="163" y="287.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">N1</text>
+  <path d="M250,232 L289.0,232 A23.0,23.0 0 0 1 289.0,278 L250,278 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="317" cy="255.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="226" y1="247.33333333333334" x2="250" y2="247.33333333333334" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="221" y="251.33333333333334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">A</text>
+  <line x1="226" y1="262.6666666666667" x2="250" y2="262.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="221" y="266.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N1</text>
+  <line x1="322" y1="255.0" x2="346" y2="255.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="351" y="259.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">N2</text>
+  <path d="M250,312 L289.0,312 A23.0,23.0 0 0 1 289.0,358 L250,358 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="317" cy="335.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="226" y1="327.3333333333333" x2="250" y2="327.3333333333333" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="221" y="331.3333333333333" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N1</text>
+  <line x1="226" y1="342.6666666666667" x2="250" y2="342.6666666666667" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="221" y="346.6666666666667" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">B</text>
+  <line x1="322" y1="335.0" x2="346" y2="335.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="351" y="339.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">N3</text>
+  <path d="M440,272 L482.0,272 A24.0,24.0 0 0 1 482.0,320 L440,320 Z" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <circle cx="511" cy="296.0" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.7"/>
+  <line x1="418" y1="288.0" x2="440" y2="288.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="413" y="292.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N2</text>
+  <line x1="418" y1="304.0" x2="440" y2="304.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="413" y="308.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="end" fill="#1f2937">N3</text>
+  <line x1="516" y1="296.0" x2="538" y2="296.0" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="543" y="300.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1d4ed8">A ⊕ B</text>
+  <text x="612" y="254" font-family="Consolas, 'Courier New', monospace" font-size="10.4" font-weight="400" text-anchor="start" fill="#7c2d12">N1 = (A·B)'</text>
+  <text x="612" y="276" font-family="Consolas, 'Courier New', monospace" font-size="10.4" font-weight="400" text-anchor="start" fill="#7c2d12">N2 = (A·N1)' = A' + A·B</text>
+  <text x="612" y="298" font-family="Consolas, 'Courier New', monospace" font-size="10.4" font-weight="400" text-anchor="start" fill="#7c2d12">N3 = (N1·B)' = A·B' + B'</text>
+  <text x="612" y="320" font-family="Consolas, 'Courier New', monospace" font-size="10.4" font-weight="700" text-anchor="start" fill="#0f766e">salida = (N2·N3)' = A·B' + A'·B = A ⊕ B</text>
+  <text x="40" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Las entradas N1, N2 y N3 son nombres de señales: no hace falta dibujar cada cable, basta con escribir el nombre.</text>
+  <text x="40" y="392" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Un XOR cuesta 4 compuertas (4 NAND o 4 NOR): ése es el argumento de 'universal' — un solo tipo de chip arma todo.</text>
+</svg>

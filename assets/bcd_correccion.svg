@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Suma BCD: por qué hay que sumar 6 y cuándo</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">BCD: cada dígito decimal ocupa 4 bits (0-9). Sumar en binario no alcanza.</text>
+  <text x="24" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#15803d">Caso 1 · sin corrección:  12 + 34 = 46</text>
+  <text x="40" y="108" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">0001 0010  (12)</text>
+  <text x="40" y="126" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">+ 0011 0100  (34)</text>
+  <text x="40" y="148" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#15803d">= 0100 0110  ⇒ 4 y 6: los dos dígitos son ≤ 9 ⇒ 46  ✓</text>
+  <text x="24" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="700" text-anchor="start" fill="#b91c1c">Caso 2 · hace falta corrección:  27 + 35 = 62</text>
+  <text x="40" y="210" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">0010 0111  (27)</text>
+  <text x="40" y="228" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">+ 0011 0101  (35)</text>
+  <text x="40" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#b91c1c">= 0101 1100   ⇒ las unidades dan 1100 = 12 &gt; 9  ✗ no es un dígito BCD</text>
+  <text x="40" y="272" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">+      0110   ⇒ sumar 6 a ese dígito</text>
+  <text x="40" y="294" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#15803d">= 0110 0010   ⇒ 6 y 2  ⇒ 62  ✓  (el acarreo pasa al dígito siguiente)</text>
+  <rect x="560" y="76" width="336" height="230" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="576" y="98" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">La regla</text>
+  <text x="576" y="122" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">Después de sumar cada dígito BCD:</text>
+  <text x="576" y="144" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">si el resultado es &gt; 9  ó  hubo</text>
+  <text x="576" y="160" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">acarreo ⇒ sumar 0110 (6).</text>
+  <text x="576" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">Por qué 6: hay 6 combinaciones</text>
+  <text x="576" y="202" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">binarias (1010 a 1111) que no son</text>
+  <text x="576" y="218" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">dígitos decimales ⇒ hay que saltarlas.</text>
+  <text x="576" y="244" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">Y por qué sigue sirviendo: el acarreo</text>
+  <text x="576" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">que se genera ES la decena que hay</text>
+  <text x="576" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">que pasar al dígito siguiente.</text>
+  <text x="24" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Es la corrección que hace la instrucción DAA (decimal adjust) del 8086: el programador suma en binario y la CPU corrige.</text>
+  <text x="24" y="352" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Resta BCD: se resta 6 (o se suma 1010) cuando hay préstamo; el razonamiento es el mismo con acarreo invertido.</text>
+  <text x="24" y="374" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Para qué se usa: calculadoras, relojes, contadores de display, cualquier cosa que tenga que mostrar decimales exactos (el punto flotante no garantiza el dígito).</text>
+  <text x="24" y="396" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Costo: 4 bits por dígito ⇒ se desperdicia el 37,5 % de las combinaciones (6 de 16).</text>
+</svg>

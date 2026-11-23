@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Serie vs paralelo: el desfasaje (skew) que mató al paralelo</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">En paralelo, cada línea llega a su tiempo: con períodos cortos, se mezclan dos envíos</text>
+  <text x="30" y="88" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">D0</text>
+  <line x1="60" y1="84" x2="380" y2="84" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="100" y="76" width="90" height="14" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="390" y="88" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="start" fill="#4b5563">llega +0.0 ns</text>
+  <text x="30" y="114" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">D1</text>
+  <line x1="60" y1="110" x2="380" y2="110" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="122" y="102" width="90" height="14" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="390" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="start" fill="#b91c1c">llega +0.5 ns</text>
+  <text x="30" y="140" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">D2</text>
+  <line x1="60" y1="136" x2="380" y2="136" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="144" y="128" width="90" height="14" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="390" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="start" fill="#b91c1c">llega +1.0 ns</text>
+  <text x="30" y="166" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">D3</text>
+  <line x1="60" y1="162" x2="380" y2="162" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="166" y="154" width="90" height="14" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="390" y="166" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="start" fill="#b91c1c">llega +1.5 ns</text>
+  <text x="60" y="200" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#b91c1c">Se pisan: no se puede leer la palabra sin esperar al más lento.</text>
+  <text x="24" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">En serie, un solo carril: no hay desfasaje y la frecuencia puede subir mucho</text>
+  <line x1="60" y1="268" x2="380" y2="268" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="100" y="258" width="26" height="14" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="113" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <rect x="132" y="258" width="26" height="14" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="145" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <rect x="164" y="258" width="26" height="14" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="177" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <rect x="196" y="258" width="26" height="14" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="209" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <rect x="228" y="258" width="26" height="14" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="241" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <rect x="260" y="258" width="26" height="14" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="273" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <rect x="292" y="258" width="26" height="14" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="305" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">1</text>
+  <rect x="324" y="258" width="26" height="14" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="337" y="269" font-family="Consolas, 'Courier New', monospace" font-size="7.6" font-weight="400" text-anchor="middle" fill="#1f2937">0</text>
+  <text x="60" y="292" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#15803d">bits uno detrás del otro, con el reloj embebido en la propia señal (o diferencial: dos cables con la señal invertida).</text>
+  <rect x="470" y="76" width="426" height="180" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="486" y="98" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Las cuentas que se preguntan</text>
+  <text x="486" y="120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">Centronics (paralelo): ~150 kB/s</text>
+  <text x="486" y="138" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">RS-232: 115 200 bps ÷ 10 ≈ 11,5 kB/s</text>
+  <text x="486" y="156" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">USB 2.0: 480 Mb/s = 60 MB/s</text>
+  <text x="486" y="174" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#7c2d12">SATA 6 Gb/s × 8/10 ÷ 8 = 600 MB/s</text>
+  <text x="486" y="192" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">PCIe 4.0 x4: ≈ 7,9 GB/s</text>
+  <text x="486" y="216" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">100 MB: USB 2.0 ⇒ 1,67 s · SATA ⇒ 0,17 s</text>
+  <text x="486" y="234" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">RS-232 ⇒ ≈ 2,4 horas</text>
+  <rect x="24" y="272" width="872" height="94" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="294" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Conclusión para el final: 'serie' no es 'lento'. El paralelo perdió por el skew y por el costo de pines; el serie gana frecuencia y llega más lejos.</text>
+  <text x="40" y="316" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">El paralelo sigue vivo donde las distancias son cortas: dentro del chip y en el bus de memoria (64-512 bits).</text>
+  <text x="40" y="338" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Al pasar de bits/s a MB/s: dividir por 8 y descontar el codificado (8b/10b ⇒ ×0,8). Olvidar eso es el error más común en esta pregunta.</text>
+  <text x="40" y="358" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Y siempre: el cuello real puede ser el disco (100 MB/s) antes que el enlace (600 MB/s) ⇒ mirar la cadena completa.</text>
+</svg>

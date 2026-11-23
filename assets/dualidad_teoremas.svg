@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Postulados y dualidad: cada identidad tiene su gemela con AND↔OR y 0↔1</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">La regla de dualidad: se cambia AND por OR, se cambia 0 por 1, y la identidad sigue valiendo</text>
+  <text x="40" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">con OR</text>
+  <text x="320" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#0f766e">su dual con AND</text>
+  <text x="640" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">nombre</text>
+  <rect x="32" y="90" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + 0 = A</text>
+  <text x="320" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · 1 = A</text>
+  <text x="640" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">neutro</text>
+  <text x="40" y="130" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + 1 = 1</text>
+  <text x="320" y="130" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · 0 = 0</text>
+  <text x="640" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">dominante</text>
+  <rect x="32" y="138" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="154" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + A = A</text>
+  <text x="320" y="154" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · A = A</text>
+  <text x="640" y="154" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">idempotencia</text>
+  <text x="40" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + A' = 1</text>
+  <text x="320" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · A' = 0</text>
+  <text x="640" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">complemento</text>
+  <rect x="32" y="186" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="202" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">(A')' = A</text>
+  <text x="320" y="202" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">(A')' = A</text>
+  <text x="640" y="202" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">involución</text>
+  <text x="40" y="226" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + A·B = A</text>
+  <text x="320" y="226" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · (A + B) = A</text>
+  <text x="640" y="226" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">absorción</text>
+  <rect x="32" y="234" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + A'·B = A + B</text>
+  <text x="320" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · (A' + B) = A·B</text>
+  <text x="640" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">absorción 2</text>
+  <text x="40" y="274" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A + B = B + A</text>
+  <text x="320" y="274" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A · B = B · A</text>
+  <text x="640" y="274" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">conmutativa</text>
+  <rect x="32" y="282" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="298" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A+(B+C) = (A+B)+C</text>
+  <text x="320" y="298" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A·(B·C) = (A·B)·C</text>
+  <text x="640" y="298" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">asociativa</text>
+  <text x="40" y="322" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">A·(B+C) = A·B + A·C</text>
+  <text x="320" y="322" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">A+(B·C) = (A+B)·(A+C)</text>
+  <text x="640" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">distributiva</text>
+  <rect x="32" y="330" width="856" height="22" rx="3" fill="#f8fafc"/>
+  <text x="40" y="346" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">(A·B)' = A' + B'</text>
+  <text x="320" y="346" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#0f766e">(A+B)' = A'·B'</text>
+  <text x="640" y="346" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">DeMorgan</text>
+  <text x="760" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">Y en compuertas:</text>
+  <text x="760" y="126" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">AND ↔ OR</text>
+  <text x="760" y="146" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">0 ↔ 1</text>
+  <text x="760" y="166" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">NAND ↔ NOR</text>
+  <rect x="24" y="380" width="872" height="14" rx="4" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="40" y="392" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">Para qué sirve: demostrar una identidad y usar la dual sin volver a probarla · y simplificar cambiando de forma (SOP ↔ POS).</text>
+</svg>

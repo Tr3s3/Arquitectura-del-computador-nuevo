@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">El 8086: BIU y EU trabajando en paralelo con la cola de instrucciones</text>
+  <rect x="50" y="70" width="300" height="120" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="66" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">BIU (unidad de interfaz con el bus)</text>
+  <text x="66" y="118" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">calcula direcciones físicas</text>
+  <text x="66" y="136" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">CS:IP · DS · SS:SP · ES</text>
+  <text x="66" y="158" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#b91c1c">busca instrucciones ADELANTÁNDOSE</text>
+  <text x="66" y="176" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#b91c1c">y las apila en la cola</text>
+  <rect x="50" y="240" width="300" height="100" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="66" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">EU (unidad de ejecución)</text>
+  <text x="66" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">decodifica y ejecuta</text>
+  <text x="66" y="306" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">ALU, flags, registros AX/BX/CX/DX</text>
+  <text x="66" y="324" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#15803d">NO toca el bus de memoria</text>
+  <rect x="440" y="96" width="300" height="46" rx="4" fill="#fef3c7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="590" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">COLA DE 6 BYTES</text>
+  <text x="590" y="134" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="middle" fill="#4b5563">FIFO: la BIU llena, la EU vacía</text>
+  <line x1="350" y1="120" x2="436" y2="120" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="436" y1="120" x2="427.7780908812166" y2="116.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="436" y1="120" x2="427.7780908812166" y2="123.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="360" y="112" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#b91c1c">instrucciones</text>
+  <line x1="440" y1="202" x2="352" y2="244" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="352" y1="244" x2="360.9968586278172" y2="243.7622294570989" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="352" y1="244" x2="357.84337552034833" y2="237.1549315176403" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="358" y="268" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#15803d">la EU lee de la cola (no del bus)</text>
+  <rect x="790" y="96" width="110" height="46" rx="6" ry="6" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="845.0" y="123.55" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MEMORIA</text>
+  <line x1="744" y1="120" x2="786" y2="120" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="786" y1="120" x2="777.7780908812166" y2="116.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="786" y1="120" x2="777.7780908812166" y2="123.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="786" y1="134" x2="744" y2="134" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="744" y1="134" x2="752.2219091187834" y2="137.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="744" y1="134" x2="752.2219091187834" y2="130.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="366" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Es el primer pipeline comercial: mientras la EU ejecuta una instrucción, la BIU ya trajo las siguientes. Si la EU salta, la cola se descarta (penalidad).</text>
+  <text x="24" y="388" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Segmentación: dir. física = segmento × 16 + desplazamiento (20 bits = 1 MB con registros de 16 bits). Ver 5.6.1 y la señal BREQ del tema de buses.</text>
+</svg>

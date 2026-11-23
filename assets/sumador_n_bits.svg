@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="420" viewBox="0 0 950 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Sumador de n bits en cascada, la resta A + B' + 1 y la bandera V</text>
+  <text x="28" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Sumador de 4 bits (acarreo en cascada): el Cout de cada etapa es el Cin de la siguiente</text>
+  <rect x="40" y="70" width="150" height="96" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="115" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">SUMADOR</text>
+  <text x="115" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">completo 0</text>
+  <text x="54" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="start" fill="#1f2937">A0  B0</text>
+  <text x="54" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cin</text>
+  <text x="176" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="end" fill="#1d4ed8">S0</text>
+  <text x="176" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#b91c1c">Cout</text>
+  <line x1="190" y1="148" x2="240" y2="148" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="240" y1="148" x2="231.7780908812166" y2="144.3393702123178" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="240" y1="148" x2="231.7780908812166" y2="151.6606297876822" stroke="#b91c1c" stroke-width="1.6"/>
+  <rect x="245" y="70" width="150" height="96" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="320" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">SUMADOR</text>
+  <text x="320" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">completo 1</text>
+  <text x="259" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="start" fill="#1f2937">A1  B1</text>
+  <text x="259" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cin</text>
+  <text x="381" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="end" fill="#1d4ed8">S1</text>
+  <text x="381" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#b91c1c">Cout</text>
+  <line x1="395" y1="148" x2="445" y2="148" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="445" y1="148" x2="436.7780908812166" y2="144.3393702123178" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="445" y1="148" x2="436.7780908812166" y2="151.6606297876822" stroke="#b91c1c" stroke-width="1.6"/>
+  <rect x="450" y="70" width="150" height="96" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="525" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">SUMADOR</text>
+  <text x="525" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">completo 2</text>
+  <text x="464" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="start" fill="#1f2937">A2  B2</text>
+  <text x="464" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cin</text>
+  <text x="586" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="end" fill="#1d4ed8">S2</text>
+  <text x="586" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#b91c1c">Cout</text>
+  <line x1="600" y1="148" x2="650" y2="148" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="650" y1="148" x2="641.7780908812166" y2="144.3393702123178" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="650" y1="148" x2="641.7780908812166" y2="151.6606297876822" stroke="#b91c1c" stroke-width="1.6"/>
+  <rect x="655" y="70" width="150" height="96" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="730" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">SUMADOR</text>
+  <text x="730" y="106" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">completo 3</text>
+  <text x="669" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="start" fill="#1f2937">A3  B3</text>
+  <text x="669" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cin</text>
+  <text x="791" y="134" font-family="Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" text-anchor="end" fill="#1d4ed8">S3</text>
+  <text x="791" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#b91c1c">Cout</text>
+  <line x1="34" y1="148" x2="36" y2="148" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="36" y1="148" x2="27.778090881216592" y2="144.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="36" y1="148" x2="27.778090881216592" y2="151.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="14" y="136" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">C0</text>
+  <line x1="805" y1="148" x2="851" y2="148" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="851" y1="148" x2="842.7780908812166" y2="144.3393702123178" stroke="#b91c1c" stroke-width="1.6"/>
+  <line x1="851" y1="148" x2="842.7780908812166" y2="151.6606297876822" stroke="#b91c1c" stroke-width="1.6"/>
+  <text x="853" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#b91c1c">C4</text>
+  <text x="28" y="196" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">C4 = acarreo de salida (bandera C).  Con 4 sumadores: 4 bits, retardo ≈ 4 × 2 compuertas de acarreo.</text>
+  <rect x="24" y="216" width="902" height="128" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="240" font-family="Consolas, 'Courier New', monospace" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">La resta como suma:  A − B = A + B' + 1   (complemento a 2)</text>
+  <text x="40" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">B' = complemento bit a bit (4 inversores)   ·   el +1 entra como C0 = 1   ·   se usa el mismo sumador</text>
+  <text x="40" y="284" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="400" text-anchor="start" fill="#7c2d12">Ejemplo: 9 − 5 = 1001 + 1010 + 1 = 1001 + 1011 = 10100 ⇒ se descarta C4 ⇒ 0100 = +4 ✓</text>
+  <text x="40" y="306" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="400" text-anchor="start" fill="#7c2d12">9 − 12 = 1001 + 0011 + 1 = 1001 + 0100 = 1101 = −3 (en complemento a 2) ✓   ·  el resultado negativo se lee así</text>
+  <text x="40" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#b91c1c">V (desborde) = C3 ⊕ C4: se calcula con el acarreo que ENTRA al bit de signo y el que SALE de él — nunca restando los signos.</text>
+  <text x="28" y="374" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#1f2937">n bits en cascada: el retardo crece con n; por eso existe el acarreo anticipado (G y P), que lo calcula en paralelo.</text>
+  <text x="28" y="396" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#4b5563">Cada etapa hace S = A⊕B⊕Cin y Cout = A·B + Cin·(A⊕B). Con el mismo bloque de n etapas se suman enteros de n bits.</text>
+</svg>

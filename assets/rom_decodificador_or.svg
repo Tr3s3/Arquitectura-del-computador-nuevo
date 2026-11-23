@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">ROM = decodificador de direcciones + matriz OR de datos</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.8" font-weight="700" text-anchor="start" fill="#1f2937">Ejemplo: ROM de 4 palabras × 3 bits (direcciones de 2 bits)</text>
+  <rect x="50" y="90" width="110" height="110" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="105" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="middle" fill="#1f2937">DECODIF.</text>
+  <text x="105" y="132" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="middle" fill="#4b5563">2 → 4</text>
+  <line x1="30" y1="120" x2="50" y2="120" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="116" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#1f2937">A1</text>
+  <line x1="30" y1="160" x2="50" y2="160" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="24" y="164" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="end" fill="#1f2937">A0</text>
+  <line x1="160" y1="104" x2="210" y2="104" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="214" y="108" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1d4ed8">m0</text>
+  <line x1="160" y1="130" x2="210" y2="130" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="214" y="134" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1d4ed8">m1</text>
+  <line x1="160" y1="156" x2="210" y2="156" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="214" y="160" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1d4ed8">m2</text>
+  <line x1="160" y1="182" x2="210" y2="182" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="214" y="186" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1d4ed8">m3</text>
+  <rect x="330" y="96" width="150" height="52" rx="5" fill="#dcfce7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="405" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">OR 0</text>
+  <line x1="480" y1="122" x2="520" y2="122" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="524" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1d4ed8">D0</text>
+  <rect x="330" y="162" width="150" height="52" rx="5" fill="#dcfce7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="405" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">OR 1</text>
+  <line x1="480" y1="188" x2="520" y2="188" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="524" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1d4ed8">D1</text>
+  <rect x="330" y="228" width="150" height="52" rx="5" fill="#dcfce7" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="405" y="258" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">OR 2</text>
+  <line x1="480" y1="254" x2="520" y2="254" stroke="#1f2937" stroke-width="1.6"/>
+  <text x="524" y="258" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1d4ed8">D2</text>
+  <text x="560" y="110" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cada línea de palabra (m_i) se conecta</text>
+  <text x="560" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">a las OR que deben dar 1 en esa fila.</text>
+  <text x="560" y="152" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Contenido grabado (ejemplo):</text>
+  <text x="560" y="172" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">m0 → 1 0 1</text>
+  <text x="560" y="188" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">m1 → 0 1 1</text>
+  <text x="560" y="204" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">m2 → 1 1 0</text>
+  <text x="560" y="220" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">m3 → 0 0 1</text>
+  <text x="560" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cambiar el contenido = cambiar</text>
+  <text x="560" y="264" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">las conexiones de la matriz.</text>
+  <rect x="24" y="286" width="852" height="96" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="308" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Por qué 'decodificador + OR': la dirección elige UNA fila (minterm) y la matriz OR dice qué bits de salida se activan en esa fila.</text>
+  <text x="40" y="330" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Tamaño: n bits de dirección ⇒ 2ⁿ palabras × m bits de datos. Ejemplo: 4×3 = 12 celdas; una ROM de 1 K×8 tiene 1024 × 8 = 8192 celdas.</text>
+  <text x="40" y="352" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Es un circuito combinacional: sin reloj. Cualquier tabla de verdad se puede fabricar como ROM sin simplificar nada.</text>
+  <text x="40" y="370" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Se usa en decodificadores de instrucciones, tablas de senos, microcódigo (unidad 6) y arranque del sistema (BIOS).</text>
+</svg>

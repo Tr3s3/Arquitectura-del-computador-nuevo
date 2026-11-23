@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Ley de Amdahl y coherencia de caché en multiprocesadores</text>
+  <text x="24" y="52" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="700" text-anchor="start" fill="#0f766e">S = 1 / ((1 − p) + p/N)   —  p: fracción paralelizable, N: procesadores</text>
+  <line x1="60" y1="250" x2="420" y2="250" stroke="#1f2937" stroke-width="1.4"/>
+  <line x1="60" y1="250" x2="60" y2="90" stroke="#1f2937" stroke-width="1.4"/>
+  <text x="46" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="end" fill="#1f2937">8×</text>
+  <text x="46" y="254" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="end" fill="#1f2937">0</text>
+  <line x1="56" y1="230" x2="60" y2="230" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="210" x2="60" y2="210" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="190" x2="60" y2="190" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="170" x2="60" y2="170" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="150" x2="60" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="130" x2="60" y2="130" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="110" x2="60" y2="110" stroke="#1f2937" stroke-width="1"/>
+  <line x1="56" y1="90" x2="60" y2="90" stroke="#1f2937" stroke-width="1"/>
+  <polyline points="60,230.0 82,211.9047619047619 104,195.45454545454547 126,180.43478260869566 148,166.66666666666669 170,154.00000000000003 192,142.30769230769232 214,131.48148148148152 236,121.42857142857147 258,112.06896551724142 280,103.33333333333337 302,95.1612903225807 324,87.50000000000003 346,80.30303030303034 368,73.52941176470594 390,67.14285714285722" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+  <text x="410" y="61.142857142857224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="end" fill="#1d4ed8">p = 95 %</text>
+  <polyline points="60,230.0 82,213.63636363636363 104,200.0 126,188.46153846153845 148,178.57142857142856 170,170.0 192,162.5 214,155.88235294117646 236,150.0 258,144.73684210526315 280,140.0 302,135.71428571428572 324,131.8181818181818 346,128.26086956521738 368,124.99999999999999 390,121.99999999999997" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round"/>
+  <text x="410" y="115.99999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="end" fill="#0f766e">p = 90 %</text>
+  <polyline points="60,230.0 82,223.33333333333334 104,220.0 126,218.0 148,216.66666666666666 170,215.71428571428572 192,215.0 214,214.44444444444446 236,214.0 258,213.63636363636363 280,213.33333333333331 302,213.07692307692307 324,212.85714285714286 346,212.66666666666666 368,212.5 390,212.35294117647058" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linejoin="round"/>
+  <text x="410" y="206.35294117647058" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="end" fill="#b91c1c">p = 50 %</text>
+  <text x="210" y="272" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">N procesadores (1 a 16)</text>
+  <text x="24" y="268" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">Con p = 90 % el techo es S = 10 aunque haya infinitas CPUs; con p = 50 %, el techo es 2.</text>
+  <rect x="470" y="70" width="426" height="180" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="486" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Coherencia de caché</text>
+  <text x="486" y="114" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">Cada núcleo tiene su L1: si dos escriben la misma</text>
+  <text x="486" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">variable, uno ve datos viejos.</text>
+  <text x="486" y="152" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">Protocolos: MESI (Modified, Exclusive, Shared,</text>
+  <text x="486" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#1f2937">Invalid), snooping en el bus o directorio.</text>
+  <text x="486" y="190" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">Costo: invalidar y refrescar líneas ⇒ el</text>
+  <text x="486" y="206" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">paralelismo real nunca es N×.</text>
+  <text x="486" y="230" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" text-anchor="start" fill="#7c2d12">Amdahl + coherencia = por qué 64 núcleos no dan 64×.</text>
+  <text x="24" y="292" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Ejemplo: p = 90 % con N = 4 ⇒ S = 1/(0,1 + 0,225) = 3,08 (no 4). Con N = 16 ⇒ 5,93. Con N = ∞ ⇒ 10.</text>
+  <text x="24" y="314" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">La parte secuencial (1 − p) es la que manda: si es el 10 %, ningún número de núcleos pasa de 10×.</text>
+  <text x="24" y="336" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Multicore (memoria compartida) vs cluster (memoria distribuida, paso de mensajes): más núcleos y más barato, pero comunicar cuesta.</text>
+  <text x="24" y="358" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Y siempre: más núcleos = más consumo y más calor ⇒ por eso la industria también sube vías y frecuencia (tema 7.2).</text>
+  <text x="24" y="380" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Este es el techo que explica por qué el paralelismo no reemplaza al pipeline: atacan cosas distintas.</text>
+</svg>

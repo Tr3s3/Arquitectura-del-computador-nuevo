@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Multiplicación sin signo: sumar y desplazar (13 × 11 = 143)</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Tres registros: M (multiplicando), Q (multiplicador), A (acumulador)</text>
+  <rect x="60" y="78" width="130" height="44" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="125.0" y="97.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">M</text>
+  <text x="125.0" y="114.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">multiplicando</text>
+  <text x="200" y="104" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">= 1101 (13)</text>
+  <rect x="60" y="134" width="130" height="44" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="125.0" y="153.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Q</text>
+  <text x="125.0" y="170.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">multiplicador</text>
+  <text x="200" y="160" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">= 1011 (11)</text>
+  <rect x="60" y="190" width="130" height="44" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="125.0" y="209.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">A</text>
+  <text x="125.0" y="226.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">acumulador</text>
+  <text x="200" y="216" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">= 0000</text>
+  <text x="24" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">Regla en cada paso: si Q0 = 1 ⇒ A ← A + M. Después, desplazar a la derecha el par (A,Q).</text>
+  <text x="24" y="282" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Se repite n veces (n = número de bits). El producto queda en A:Q.</text>
+  <text x="470" y="84" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="700" text-anchor="start" fill="#1f2937">paso</text>
+  <text x="540" y="84" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="700" text-anchor="start" fill="#1f2937">A</text>
+  <text x="610" y="84" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="700" text-anchor="start" fill="#1f2937">Q</text>
+  <text x="680" y="84" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="700" text-anchor="start" fill="#1f2937">qué pasó</text>
+  <text x="470" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#15803d">inicio</text>
+  <text x="540" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#15803d">0000</text>
+  <text x="610" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#15803d">1011</text>
+  <text x="680" y="106" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#15803d">—</text>
+  <text x="470" y="128" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1</text>
+  <text x="540" y="128" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">0110</text>
+  <text x="610" y="128" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1101</text>
+  <text x="680" y="128" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Q0=1 ⇒ A+M</text>
+  <text x="470" y="150" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">2</text>
+  <text x="540" y="150" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1001</text>
+  <text x="610" y="150" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1110</text>
+  <text x="680" y="150" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Q0=1 ⇒ A+M</text>
+  <text x="470" y="172" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">3</text>
+  <text x="540" y="172" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">0100</text>
+  <text x="610" y="172" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1111</text>
+  <text x="680" y="172" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Q0=0 ⇒ no suma</text>
+  <text x="470" y="194" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">4</text>
+  <text x="540" y="194" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1000</text>
+  <text x="610" y="194" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">1111</text>
+  <text x="680" y="194" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Q0=1 ⇒ A+M</text>
+  <rect x="460" y="204" width="440" height="32" rx="4" fill="#dcfce7" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="470" y="226" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="start" fill="#0f766e">producto = A:Q = 1000 1111 = 143  ✓ (13 × 11)</text>
+  <rect x="24" y="300" width="872" height="92" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Por qué funciona: 13 × 11 = 13 × (8 + 2 + 1) = 13×8 + 13×2 + 13×1 ⇒ multiplicar es sumar copias desplazadas.</text>
+  <text x="40" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">El desplazamiento a la derecha del par (A,Q) equivale a multiplicar por 2 el registro y desplazar la coma del producto.</text>
+  <text x="40" y="364" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Costo: n sumas de n bits + n desplazamientos ⇒ O(n²) para un producto de 2n bits. El arreglo multiplicador (9.2.3) lo hace en un solo paso combinacional.</text>
+  <text x="24" y="406" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">Con signo: se toma el valor absoluto, se multiplica así y se pone el signo del resultado (regla de los signos). Booth evita el paso de los valores absolutos.</text>
+</svg>

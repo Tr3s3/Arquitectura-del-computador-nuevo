@@ -58,6 +58,11 @@ prioridad: maxima
 > de la unidad que entra; para el final, por
 > [[00 Índice — el final resuelto|el modelo de final resuelto]].
 
+> [!tip] Todos los subtemas traen su diagrama
+> Los **104 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico):
+> **106 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en
+> [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]].
+
 ## Las 10 unidades
 
 | Unidad | Tema | Índice | Qué se estudia |

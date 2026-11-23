@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Prioridad de interrupciones: encadenado de ACK y tabla de vectores</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Encadenado de ACK (daisy chain): el más cercano a la CPU gana</text>
+  <rect x="40" y="80" width="110" height="54" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="95.0" y="111.55" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">CPU</text>
+  <rect x="210" y="80" width="140" height="54" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="280.0" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">disp. 0</text>
+  <text x="280.0" y="121.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">prioridad 1</text>
+  <line x1="184" y1="100" x2="206" y2="100" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="206" y1="100" x2="197.7780908812166" y2="96.3393702123178" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="206" y1="100" x2="197.7780908812166" y2="103.6606297876822" stroke="#1d4ed8" stroke-width="1.6"/>
+  <rect x="380" y="80" width="140" height="54" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="450.0" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">disp. 1</text>
+  <text x="450.0" y="121.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">prioridad 2</text>
+  <line x1="354" y1="100" x2="376" y2="100" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="376" y1="100" x2="367.7780908812166" y2="96.3393702123178" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="376" y1="100" x2="367.7780908812166" y2="103.6606297876822" stroke="#1d4ed8" stroke-width="1.6"/>
+  <rect x="550" y="80" width="140" height="54" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="620.0" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">disp. 2</text>
+  <text x="620.0" y="121.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">prioridad 3</text>
+  <line x1="524" y1="100" x2="546" y2="100" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="546" y1="100" x2="537.7780908812166" y2="96.3393702123178" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="546" y1="100" x2="537.7780908812166" y2="103.6606297876822" stroke="#1d4ed8" stroke-width="1.6"/>
+  <rect x="720" y="80" width="140" height="54" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="790.0" y="104.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">disp. 3</text>
+  <text x="790.0" y="121.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">prioridad 4</text>
+  <line x1="694" y1="100" x2="716" y2="100" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="716" y1="100" x2="707.7780908812166" y2="96.3393702123178" stroke="#1d4ed8" stroke-width="1.6"/>
+  <line x1="716" y1="100" x2="707.7780908812166" y2="103.6606297876822" stroke="#1d4ed8" stroke-width="1.6"/>
+  <text x="210" y="154" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">ACK recorre la cadena: el primero que pidió se la queda y no la pasa.</text>
+  <text x="40" y="176" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Alternativa: controlador de prioridades (8259) con 8 entradas, máscara por bit y vector programable.</text>
+  <text x="24" y="214" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Tabla de vectores del 8086: 256 entradas de 4 bytes en 00000H–003FFH</text>
+  <rect x="40" y="232" width="120" height="20" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="100" y="246" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">IRQ0 → INT 08H</text>
+  <rect x="200" y="232" width="150" height="20" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="275" y="246" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">entrada 8H × 4 = 20H</text>
+  <text x="360" y="246" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#4b5563">→ IP + CS de la rutina</text>
+  <rect x="40" y="256" width="120" height="20" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="100" y="270" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">IRQ1 → INT 09H</text>
+  <rect x="200" y="256" width="150" height="20" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="275" y="270" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">entrada 9H × 4 = 24H</text>
+  <text x="360" y="270" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#4b5563">→ IP + CS de la rutina</text>
+  <rect x="40" y="280" width="120" height="20" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="100" y="294" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">IRQ2 → INT 010H</text>
+  <rect x="200" y="280" width="150" height="20" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="275" y="294" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">entrada 10H × 4 = 28H</text>
+  <text x="360" y="294" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#4b5563">→ IP + CS de la rutina</text>
+  <rect x="40" y="304" width="120" height="20" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <text x="100" y="318" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">IRQ3 → INT 011H</text>
+  <rect x="200" y="304" width="150" height="20" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="275" y="318" font-family="Consolas, 'Courier New', monospace" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">entrada 11H × 4 = 2CH</text>
+  <text x="360" y="318" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#4b5563">→ IP + CS de la rutina</text>
+  <text x="40" y="336" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#7c2d12">IRQ0 = timer (INT 08H) · IRQ1 = teclado (INT 09H) · NMI = INT 02H (no enmascarable) · IRQ5 ⇒ 0DH × 4 = 34H</text>
+  <rect x="24" y="352" width="872" height="42" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#1f2937">Ventaja de vectorizar: un solo salto indirecto en vez de preguntar bandera por bandera (con 8 dispositivos, hasta 8 consultas).</text>
+  <text x="40" y="388" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">Y la prioridad deja de depender del orden del programa: la fija el hardware (posición en la cadena o programación del 8259).</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="390" viewBox="0 0 920 390">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">División con signo y sobreflujo</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Regla de los signos: el signo del cociente es XOR de los signos; el resto tiene el signo del dividendo</text>
+  <rect x="40" y="76" width="200" height="76" rx="5" fill="#dcfce7" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="140" y="100" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#1f2937">+ / +</text>
+  <text x="140" y="122" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="middle" fill="#1f2937">cociente positivo</text>
+  <text x="140" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">resto positivo</text>
+  <rect x="255" y="76" width="200" height="76" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="355" y="100" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#1f2937">− / +</text>
+  <text x="355" y="122" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="middle" fill="#1f2937">cociente negativo</text>
+  <text x="355" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">resto negativo</text>
+  <rect x="470" y="76" width="200" height="76" rx="5" fill="#fef3c7" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="570" y="100" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#1f2937">+ / −</text>
+  <text x="570" y="122" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="middle" fill="#1f2937">cociente negativo</text>
+  <text x="570" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">resto positivo</text>
+  <rect x="685" y="76" width="200" height="76" rx="5" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="785" y="100" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#1f2937">− / −</text>
+  <text x="785" y="122" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="middle" fill="#1f2937">cociente positivo</text>
+  <text x="785" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#4b5563">resto negativo</text>
+  <text x="24" y="180" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Cómo se hace en la práctica</text>
+  <text x="40" y="202" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">1 · tomar valores absolutos y dividir sin signo (como en 9.3.1).</text>
+  <text x="40" y="222" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">2 · aplicar el XOR de los signos al cociente y el signo del dividendo al resto.</text>
+  <text x="40" y="242" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">3 · el resto SIEMPRE cumple: dividendo = cociente × divisor + resto (con su signo).</text>
+  <rect x="24" y="262" width="872" height="106" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="284" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#b91c1c">Sobreflujo (overflow) de la división: pasa cuando el cociente no entra en n bits, es decir cuando |dividendo| ≥ |divisor| × 2ⁿ⁻¹.</text>
+  <text x="40" y="306" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">Ejemplo con 4 bits: 8 ÷ 1 = 8, pero el máximo positivo representable es +7 ⇒ desborde. Se detecta ANTES, comparando los bits altos.</text>
+  <text x="40" y="328" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">División por cero: no se puede representar ⇒ la CPU dispara una excepción (interrupción interna, tema 10.2).</text>
+  <text x="40" y="350" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Y el caso −8 ÷ −1 = +8 tampoco entra en 4 bits: es el único sobreflujo que hay que memorizar.</text>
+  <text x="24" y="382" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">El resto con signo es la diferencia con la división entera de la matemática: −7 ÷ 3 da cociente −2 y resto −1 (no resto +2).</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Dirección efectiva: qué se suma y cuántos accesos a memoria cuesta</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" fill="#1f2937">EA = lo que hay que calcular para saber DÓNDE está el operando</text>
+  <text x="40" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Modo</text>
+  <text x="230" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Qué hace</text>
+  <text x="620" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Fórmula</text>
+  <text x="800" y="82" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Accesos</text>
+  <rect x="32" y="90" width="862" height="26" rx="3" fill="#f8fafc"/>
+  <text x="40" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Inmediato</text>
+  <text x="230" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">el operando es el dato</text>
+  <text x="620" y="108" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = —</text>
+  <text x="808" y="108" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">0</text>
+  <text x="40" y="136" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Directo (absoluto)</text>
+  <text x="230" y="136" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">la instrucción trae la dirección</text>
+  <text x="620" y="136" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = D</text>
+  <text x="808" y="136" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">1</text>
+  <rect x="32" y="146" width="862" height="26" rx="3" fill="#f8fafc"/>
+  <text x="40" y="164" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Indirecto</text>
+  <text x="230" y="164" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">la instrucción trae la dirección de la dirección</text>
+  <text x="620" y="164" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = M[D]</text>
+  <text x="808" y="164" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">2</text>
+  <text x="40" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Por registro</text>
+  <text x="230" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">el operando está en un registro</text>
+  <text x="620" y="192" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = R</text>
+  <text x="808" y="192" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">0</text>
+  <rect x="32" y="202" width="862" height="26" rx="3" fill="#f8fafc"/>
+  <text x="40" y="220" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Indexado</text>
+  <text x="230" y="220" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">dirección base + índice</text>
+  <text x="620" y="220" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = D + R</text>
+  <text x="808" y="220" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">1</text>
+  <text x="40" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Base + desplazamiento</text>
+  <text x="230" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">posición del registro + desplazamiento</text>
+  <text x="620" y="248" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = R + d</text>
+  <text x="808" y="248" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">1</text>
+  <rect x="32" y="258" width="862" height="26" rx="3" fill="#f8fafc"/>
+  <text x="40" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Relativo al PC</text>
+  <text x="230" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">posición actual + desplazamiento</text>
+  <text x="620" y="276" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = PC + d</text>
+  <text x="808" y="276" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">1</text>
+  <text x="40" y="304" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1f2937">Pila (implícito)</text>
+  <text x="230" y="304" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">el SP ya dice dónde</text>
+  <text x="620" y="304" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">EA = SP</text>
+  <text x="808" y="304" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">1</text>
+  <text x="24" y="350" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Costo = accesos a memoria para traer el operando (más 1 para la búsqueda de la instrucción). El indirecto es el más caro: 2 o 3 accesos.</text>
+  <text x="24" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">El indexado es el que hace posible recorrer un vector: cambia el índice, no la instrucción (es el bucle FOR del hardware). ¡Por eso la BLUE indexada tiene 24 pulsos!</text>
+  <text x="24" y="394" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Regla: más modos = más flexibilidad y menos instrucciones, pero más bits de modo y más ciclos de cálculo de dirección.</text>
+</svg>

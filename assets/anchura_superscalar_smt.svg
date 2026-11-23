@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Más ancho, más hilos, más núcleos: cuatro formas de ir más rápido</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">1 · Escalar</text>
+  <rect x="190" y="44" width="44" height="18" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="44" width="44" height="18" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="44" width="44" height="18" rx="2" fill="#dbeafe" stroke="#1f2937" stroke-width="1"/>
+  <text x="360" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">1 instrucción por ciclo</text>
+  <text x="24" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">2 · Superscalar</text>
+  <rect x="190" y="86" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="86" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="86" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="190" y="108" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="108" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="108" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="190" y="130" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="130" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="130" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="190" y="152" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="152" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="152" width="44" height="18" rx="2" fill="#dcfce7" stroke="#1f2937" stroke-width="1"/>
+  <text x="360" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="start" fill="#15803d">4 vías ⇒ CPI ideal 0,25</text>
+  <text x="24" y="190" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">3 · SMT</text>
+  <rect x="190" y="176" width="44" height="18" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="176" width="44" height="18" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="176" width="44" height="18" rx="2" fill="#fef3c7" stroke="#1f2937" stroke-width="1"/>
+  <rect x="190" y="198" width="44" height="18" rx="2" fill="#fce7f3" stroke="#1f2937" stroke-width="1"/>
+  <rect x="242" y="198" width="44" height="18" rx="2" fill="#fce7f3" stroke="#1f2937" stroke-width="1"/>
+  <rect x="294" y="198" width="44" height="18" rx="2" fill="#fce7f3" stroke="#1f2937" stroke-width="1"/>
+  <text x="360" y="196" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="start" fill="#7c2d12">2 hilos: llena huecos de memoria</text>
+  <text x="24" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1f2937">4 · Multicore</text>
+  <rect x="190" y="248" width="50" height="46" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="215" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#1f2937">CPU0</text>
+  <rect x="246" y="248" width="50" height="46" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="271" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#1f2937">CPU1</text>
+  <rect x="302" y="248" width="50" height="46" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="327" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#1f2937">CPU2</text>
+  <rect x="358" y="248" width="50" height="46" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="383" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.2" font-weight="400" text-anchor="middle" fill="#1f2937">CPU3</text>
+  <text x="430" y="276" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="start" fill="#4b5563">n núcleos, cada uno con su L1/L2</text>
+  <rect x="620" y="44" width="276" height="250" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="636" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Los números del ejemplo</text>
+  <text x="636" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#4b5563">4 núcleos × 2 vías × 2 hilos</text>
+  <text x="636" y="110" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" text-anchor="start" fill="#1d4ed8">= 16 instrucciones por ciclo</text>
+  <text x="636" y="132" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">a 3 GHz ⇒ 48·10⁹ instr/s teóricas</text>
+  <text x="636" y="156" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#b91c1c">En la práctica: la mitad o menos.</text>
+  <text x="636" y="182" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#1f2937">Por qué no se cumple:</text>
+  <text x="636" y="200" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">· dependencias entre instrucciones</text>
+  <text x="636" y="216" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">· fallos de caché y de predicción</text>
+  <text x="636" y="232" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">· leyes de Amdahl y de rendimientos</text>
+  <text x="636" y="246" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">  decrecientes</text>
+  <text x="636" y="266" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">· coherencia de caché entre núcleos</text>
+  <text x="24" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#1f2937">Superpipeline (más etapas) ataca la FRECUENCIA; superscalar, la ANCHURA; SMT, los HUECOS; multicore, el PARALELISMO de programa.</text>
+  <text x="24" y="352" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Cada técnica tiene un costo: más etapas ⇒ más penalidad por salto; más vías ⇒ más hardware y más lógica de detección de dependencias.</text>
+  <text x="24" y="374" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">De ahí el techo real: 4 núcleos × 4 vías no dan 16× porque el programa no tiene tanto paralelismo disponible (ver Amdahl en 8.4.1).</text>
+</svg>

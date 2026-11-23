@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Un programa en la memoria de la BLUE: instrucciones y datos mezclados</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="700" text-anchor="start" fill="#1f2937">Programa: sumar los números de las posiciones 10, 11 y 12 y guardar el total en 13</text>
+  <rect x="40" y="80" width="70" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="75" y="99" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">0</text>
+  <rect x="110" y="80" width="120" height="28" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="170" y="99" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">LDA 10</text>
+  <text x="242" y="99" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">AC ← M[10]</text>
+  <rect x="40" y="114" width="70" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="75" y="133" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">1</text>
+  <rect x="110" y="114" width="120" height="28" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="170" y="133" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">ADD 11</text>
+  <text x="242" y="133" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">AC ← AC + M[11]</text>
+  <rect x="40" y="148" width="70" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="75" y="167" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">2</text>
+  <rect x="110" y="148" width="120" height="28" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="170" y="167" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">ADD 12</text>
+  <text x="242" y="167" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">AC ← AC + M[12]</text>
+  <rect x="40" y="182" width="70" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="75" y="201" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">3</text>
+  <rect x="110" y="182" width="120" height="28" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="170" y="201" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">STA 13</text>
+  <text x="242" y="201" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">M[13] ← AC</text>
+  <rect x="40" y="216" width="70" height="28" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="75" y="235" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">4</text>
+  <rect x="110" y="216" width="120" height="28" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="170" y="235" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">HLT</text>
+  <text x="242" y="235" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="start" fill="#4b5563">detiene la máquina</text>
+  <rect x="440" y="80" width="70" height="28" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="475" y="99" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">10</text>
+  <rect x="510" y="80" width="80" height="28" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="550" y="99" font-family="monospace" font-size="10" font-weight="400" text-anchor="middle" fill="#1f2937">5</text>
+  <rect x="440" y="114" width="70" height="28" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="475" y="133" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">11</text>
+  <rect x="510" y="114" width="80" height="28" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="550" y="133" font-family="monospace" font-size="10" font-weight="400" text-anchor="middle" fill="#1f2937">7</text>
+  <rect x="440" y="148" width="70" height="28" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="475" y="167" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">12</text>
+  <rect x="510" y="148" width="80" height="28" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="550" y="167" font-family="monospace" font-size="10" font-weight="400" text-anchor="middle" fill="#1f2937">9</text>
+  <rect x="440" y="182" width="70" height="28" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="475" y="201" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#1f2937">13</text>
+  <rect x="510" y="182" width="80" height="28" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="1.2"/>
+  <text x="550" y="201" font-family="monospace" font-size="10" font-weight="400" text-anchor="middle" fill="#1f2937">—</text>
+  <text x="440" y="236" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.4" font-weight="400" text-anchor="start" fill="#7c2d12">datos</text>
+  <text x="620" y="92" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Primero se carga el programa en memoria (a mano, con</text>
+  <text x="620" y="110" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">las llaves o un cargador) y después se pone PC = 0.</text>
+  <text x="620" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#15803d">Ejecución: 5 → 12 → 21 ⇒ M[13] = 21.</text>
+  <text x="620" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Cada instrucción ocupa UNA celda de 16 bits:</text>
+  <text x="620" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">4 bits de opcode + 4 de dirección (+12 sin usar</text>
+  <text x="620" y="204" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">o para formatos extendidos).</text>
+  <rect x="24" y="280" width="872" height="112" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="302" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">Lo importante: el programa ES dato. La misma memoria guarda instrucciones en las celdas 0-4 y datos en 10-13.</text>
+  <text x="40" y="324" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Por eso el PC puede apuntar a cualquier celda y por eso un error de direccionamiento puede terminar 'ejecutando datos'.</text>
+  <text x="40" y="346" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Si el programa se equivoca y sigue de largo, la BLUE ejecuta lo que haya después (no hay protección de memoria).</text>
+  <text x="40" y="368" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="400" text-anchor="start" fill="#4b5563">Costos: LDA y ADD son de 2 ciclos (16 pulsos); HLT, de 1 ciclo (8 pulsos). Contar pulsos = sumar por instrucción.</text>
+</svg>

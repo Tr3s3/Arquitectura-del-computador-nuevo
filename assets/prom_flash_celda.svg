@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="390" viewBox="0 0 900 390">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">De la ROM grabada a la Flash: qué se puede cambiar y cuántas veces</text>
+  <text x="30" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Tipo</text>
+  <text x="210" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Cómo guarda el bit</text>
+  <text x="430" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Cómo se borra</text>
+  <text x="620" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Ciclos</text>
+  <text x="720" y="60" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Uso típico</text>
+  <rect x="22" y="72" width="856" height="34" rx="4" fill="#f8fafc"/>
+  <text x="30" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Máscara (ROM)</text>
+  <text x="210" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">grabada en fábrica</text>
+  <text x="430" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">no se puede</text>
+  <text x="620" y="90" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">0</text>
+  <text x="720" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">grandes volúmenes</text>
+  <text x="30" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">PROM</text>
+  <text x="210" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">fusible que se quema</text>
+  <text x="430" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">una sola vez</text>
+  <text x="620" y="130" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">1</text>
+  <text x="720" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">prototipos viejos</text>
+  <rect x="22" y="152" width="856" height="34" rx="4" fill="#f8fafc"/>
+  <text x="30" y="170" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">EPROM</text>
+  <text x="210" y="170" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">celda flotante + luz UV</text>
+  <text x="430" y="170" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">con UV, ~100 veces</text>
+  <text x="620" y="170" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">100</text>
+  <text x="720" y="170" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">borrado lento</text>
+  <text x="30" y="210" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">EEPROM</text>
+  <text x="210" y="210" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">celda flotante eléctrica</text>
+  <text x="430" y="210" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">byte a byte, 10⁵-10⁶</text>
+  <text x="620" y="210" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">1 000 000</text>
+  <text x="720" y="210" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">configuración</text>
+  <rect x="22" y="232" width="856" height="34" rx="4" fill="#f8fafc"/>
+  <text x="30" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#1f2937">Flash</text>
+  <text x="210" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">celda flotante por bloques</text>
+  <text x="430" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">por bloques, 10⁴-10⁵</text>
+  <text x="620" y="250" font-family="Consolas, 'Courier New', monospace" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">100 000</text>
+  <text x="720" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">SSD, USB, BIOS</text>
+  <rect x="30" y="266" width="852" height="106" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="46" y="288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">La celda flotante (la clave de la EPROM/EEPROM/Flash):</text>
+  <text x="46" y="310" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#1f2937">Un transistor MOS con una 'isla' de silicio sin conexión (compuerta flotante). Si se le inyectan electrones, cambia su tensión umbral:</text>
+  <text x="46" y="328" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#7c2d12">con carga NO conduce (bit 0) y sin carga SÍ conduce (bit 1). La carga queda atrapada aunque se corte la alimentación ⇒ NO volátil.</text>
+  <text x="46" y="350" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Borrar = sacar los electrones (UV en la EPROM, campo eléctrico en la EEPROM/Flash). Por eso el borrado desgasta: cada ciclo daña el óxido.</text>
+  <text x="30" y="392" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="400" text-anchor="start" fill="#4b5563">Flash = EEPROM organizada en bloques: se borra un bloque entero y se escribe página por página (eso explica el SSD del tema 10.4).</text>
+</svg>
