@@ -88,6 +88,20 @@ ret               ; termina: vuelve al sistema (que ejecuta INT 20h)
 - Confundir **offset** (posición dentro del segmento, 16 bits) con **dirección física** (20 bits).
 - Pensar que `ret` termina el programa: **retorna**; quien termina es `INT 20h`.
 
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Introducción al uso del Emu8086](https://www.youtube.com/watch?v=6Dv2RVFH-vM) | Delgado Miguel Ángel |
+| 📁 | [Material del TP en Google Drive](https://drive.google.com/file/d/1WJBJFrOIoJn9GwHm3EtbM2gDHFS-ANtZ/view) | — |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+
 ## Relacionado
 [[El 8086 como CPU convencional (TP21)]] · [[00 Índice de TPs y qué aporta cada uno]] ·
 [[Registros de la CPU]] · [[Lenguaje máquina y clasificación de instrucciones]] ·

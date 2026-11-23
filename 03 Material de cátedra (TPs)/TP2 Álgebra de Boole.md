@@ -50,3 +50,21 @@ No alcanza con enunciar: la cátedra pide **demostrar** cada ley con **tabla de 
 ## Enlaces
 Desarrollo: [[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]]
 Siguiente: [[TP3 Simplificación analítica]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Leyes básicas del álgebra de Boole](https://www.youtube.com/watch?v=4vQdCfCmVoc) | Clases en Línea |
+| ▶️ | [Reglas 1 a 9 del álgebra de Boole](https://www.youtube.com/watch?v=Buk8kMQ3XjM) | Clases en Línea |
+| ▶️ | [Reglas 10, 11 y 12 con demostración](https://www.youtube.com/watch?v=OjsO6Uqr-ms) | Clases en Línea |
+| ▶️ | [1.er teorema de DeMorgan](https://www.youtube.com/watch?v=VL5v4et23oc) | Estudia con Marisol |
+| ▶️ | [2.º teorema de DeMorgan](https://www.youtube.com/watch?v=VSGAyg8xOmM) | Estudia con Marisol |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

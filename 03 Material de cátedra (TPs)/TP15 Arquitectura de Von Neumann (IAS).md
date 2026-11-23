@@ -63,3 +63,17 @@ Es el mismo esquema de [[Estructura básica de un computador]] con más registro
 ## Enlaces
 Desarrollo: [[Estructura básica de un computador]] · [[Registros de la CPU]]
 Siguiente: [[TP16 Ciclo de instrucción básico]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Arquitectura de von Neumann](https://www.youtube.com/watch?v=McA-9_qgq4Y) | FNE Profesor |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

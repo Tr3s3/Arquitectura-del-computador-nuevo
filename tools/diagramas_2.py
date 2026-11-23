@@ -1907,6 +1907,113 @@ def d_dualidad_teoremas():
     s.text(40, 392, "Para qué sirve: demostrar una identidad y usar la dual sin volver a probarla · y simplificar cambiando de forma (SOP ↔ POS).", size=9)
     s.save("dualidad_teoremas.svg")
 
+# ══════════════════════════ CÓDIGOS Y ERRORES (Fase 12) ══════════════════════════
+def d_codigos_ponderados():
+    s = Svg(920, 430, "Códigos binarios: el mismo 5 se escribe distinto en cada código")
+    s.text(24, 52, "Ponderados (cada bit vale un peso) y no ponderados (una regla, sin pesos)", size=10.6, weight="700")
+    cols = [("dec", 40), ("natural  8-4-2-1", 110), ("AIKEN  2-4-2-1", 300), ("Exceso 3  (n + 3)", 510), ("BCD empaq. (2 díg. / byte)", 700)]
+    for tit, x in cols:
+        s.text(x, 82, tit, size=9.6, weight="700", color=ACCENT)
+    filas = [
+        ("0", "0000", "0000", "0011", ""),
+        ("1", "0001", "0001", "0100", ""),
+        ("2", "0010", "0010", "0101", ""),
+        ("3", "0011", "0011", "0110", ""),
+        ("4", "0100", "0100", "0111", ""),
+        ("5", "0101", "1011", "1000", ""),
+        ("6", "0110", "1100", "1001", ""),
+        ("7", "0111", "1101", "1010", ""),
+        ("8", "1000", "1110", "1011", "27 = 0010 0111"),
+        ("9", "1001", "1111", "1100", "62 = 0110 0010"),
+    ]
+    for i, (d, nat, aik, exc, bcd) in enumerate(filas):
+        y = 106 + i * 22
+        if i % 2 == 0:
+            s.raw(f'<rect x="32" y="{y-15}" width="856" height="21" rx="3" fill="#f8fafc"/>')
+        s.text(40, y, d, size=9.6, family=MONO, weight="700")
+        s.text(110, y, nat, size=9.6, family=MONO)
+        s.text(300, y, aik, size=9.6, family=MONO, color="#0f766e" if d in ("5","6","7","8","9") else STROKE)
+        s.text(510, y, exc, size=9.6, family=MONO)
+        if bcd:
+            s.text(700, y, bcd, size=9.4, family=MONO, color="#7c2d12")
+    s.line(20, 340, 900, 340, w=1, color="#d1d5db")
+    s.text(24, 358, "Natural: pesos 8-4-2-1 · AIKEN: 2-4-2-1 (el 5 es 1011: 4+0+1) · Exceso 3: al binario puro se le suma 3 (autocomplementario)", size=9.2, color="#4b5563")
+    s.text(24, 374, "BCD empaquetado: un dígito decimal por nible, dos por byte · BCD desempaquetado: un dígito por byte (el otro nible en 0)", size=9.2, color="#4b5563")
+    s.note(24, 396, ["Para qué sirve el exceso 3: el complemento a 9 se obtiene invirtiendo los bits, y no tiene la combinación 0000",
+                     "(un cable roto no parece un 0). Por eso se usa en transmisión."], size=9.2)
+    s.save("codigos_ponderados.svg")
+
+def d_codigos_continuos():
+    s = Svg(920, 430, "Códigos continuos y cíclicos: cambia un solo bit entre números seguidos")
+    s.text(24, 52, "Continuo = combinaciones consecutivas adyacentes · cíclico = además la última es adyacente a la primera", size=10.4, weight="700")
+    # Gray
+    s.text(30, 86, "Gray (reflejado): 2, 3 y 4 bits", size=9.8, weight="700", color=ACCENT)
+    g2 = ["00","01","11","10"]; g3 = ["000","001","011","010","110","111","101","100"]
+    g4 = ["0000","0001","0011","0010","0110","0111","0101","0100","1100","1101","1111","1110","1010","1011","1001","1000"]
+    for i, v in enumerate(g2):
+        x = 40 + i * 52
+        s.box(x, 100, 46, 24, v, size=9.4)
+    for i, v in enumerate(g3):
+        x = 40 + i * 46
+        s.box(x, 146, 42, 24, v, size=9.2)
+    for i, v in enumerate(g4):
+        x = 40 + (i % 8) * 46
+        y = 192 + (i // 8) * 34
+        s.box(x, y, 42, 26, v, size=9.2)
+    s.text(300, 118, "el 3 (010) y el 4 (110) difieren en 1 bit", size=9, color=RED)
+    s.text(430, 210, "16 combinaciones, un bit por paso,", size=9, color="#4b5563")
+    s.text(430, 226, "y del 1111 se vuelve a 1000 sin saltos.", size=9, color="#4b5563")
+    # Johnson
+    s.text(30, 306, "Johnson (5 bits): 10 combinaciones, cíclico", size=9.8, weight="700", color="#0f766e")
+    j = ["00000","00001","00011","00111","01111","11111","11110","11100","11000","10000"]
+    for i, v in enumerate(j):
+        x = 40 + (i % 5) * 86
+        y = 320 + (i // 5) * 34
+        s.box(x, y, 80, 26, v, size=9.2, fill="#ecfdf5")
+    s.note(520, 322, ["Dónde aparecen: el Gray en codificadores y en convertidores",
+                      "rápidos (un solo bit cambia ⇒ menos error). El Johnson se arma",
+                      "con un registro de desplazamiento realimentado y da 2n estados",
+                      "con n biestables (10 con 5 bits)."], size=9)
+    s.save("codigos_continuos.svg")
+
+def d_deteccion_errores():
+    s = Svg(920, 470, "Detección y corrección de errores: paridad, Hamming, LRC y CRC")
+    s.text(24, 52, "Se agregan bits redundantes: sirven para DETECTAR (paridad, LRC, CRC) o para CORREGIR (Hamming)", size=10.4, weight="700")
+    # paridad
+    s.text(30, 86, "1. Paridad", size=9.8, weight="700", color=ACCENT)
+    s.box(30, 96, 400, 78, "", fill="#f8fafc")
+    s.text(40, 116, "dato  1 0 1 1 0 0 1 0   →  tres unos ⇒ impar", size=9.2, family=MONO)
+    s.text(40, 134, "paridad PAR  ⇒ P = 1  (queda 4 unos: par)", size=9.2, family=MONO, color="#0f766e")
+    s.text(40, 152, "paridad IMPAR ⇒ P = 0  (queda 3 unos: impar)", size=9.2, family=MONO, color="#0f766e")
+    s.text(40, 168, "Detecta 1 bit mal; con 2 bits mal no ve nada.", size=8.8, color="#4b5563")
+    # Hamming
+    s.text(470, 86, "2. Hamming: los bits de control van en las potencias de 2", size=9.8, weight="700", color="#0f766e")
+    pos = ["1","2","3","4","5","6","7","8","9","10","11","12"]
+    tipo = ["P1","P2","D1","P4","D2","D3","D4","P8","D5","D6","D7","D8"]
+    for i, (p, t) in enumerate(zip(pos, tipo)):
+        x = 470 + i * 33
+        ctrl = t.startswith("P")
+        s.box(x, 100, 30, 26, t, fill="#fef3c7" if ctrl else "#ecfdf5", size=8.8)
+        s.text(x + 15, 140, p, size=8.4, anchor="middle", color="#4b5563")
+    s.text(470, 160, "P1 cubre 1,3,5,7,9,11 · P2 cubre 2,3,6,7,10,11 · P4 cubre 4,5,6,7,12 · P8 cubre 8..12", size=8.8, family=MONO, color="#7c2d12")
+    s.text(470, 176, "El patrón de fallas da la posición del bit con error (síndrome): 101 = 5 ⇒ se invierte el bit 5.", size=8.8, color="#4b5563")
+    s.text(470, 192, "Cuesta log₂(n)+1 bits extra: con 8 de datos, 4 de control (12,8).", size=8.8, color="#4b5563")
+    # LRC
+    s.text(30, 224, "3. LRC (bloque)", size=9.8, weight="700", color=ACCENT)
+    s.text(30, 242, "Se suman los bytes en hexadecimal y se toma el complemento a 2:", size=9.2)
+    s.text(40, 262, "01 + 08 + 00 + 00 + 61 + 62 = CC  →  C2 = 34", size=9.2, family=MONO, color="#0f766e")
+    s.text(30, 280, "El receptor suma todo (datos + LRC): si el total no da 00, hubo error.", size=8.8, color="#4b5563")
+    # CRC
+    s.text(470, 224, "4. CRC (polinomio)", size=9.8, weight="700", color="#0f766e")
+    s.text(470, 242, "El bloque es un polinomio D(X); se lo divide por G(X) y se", size=9.2)
+    s.text(470, 258, "agrega el RESTO. En el receptor, el resto debe dar 0.", size=9.2)
+    s.text(470, 276, "CRC-8 = X⁸+X⁵+X⁴+1   ·   CRC-16 = X¹⁶+X¹⁵+X²+1", size=9, family=MONO, color="#7c2d12")
+    s.note(30, 306, ["Regla de oro para el final: paridad, LRC y CRC DETECTAN (no saben dónde está el error).",
+                     "Hamming DETECTA y CORRIGE un bit, porque el síndrome dice la posición."], size=9)
+    s.text(24, 366, "En el 8088 y en las PC: la paridad se usaba en los módulos de memoria (9 bits por byte), y el CRC en discos, redes y ZIP.", size=9, color="#4b5563")
+    s.text(24, 384, "Hamming se usa en memorias con ECC: 72 bits por línea = 64 de datos + 8 de control.", size=9, color="#4b5563")
+    s.save("deteccion_errores.svg")
+
 TODAS_U2 = [d_flipflop_d_t_tiempos, d_flipflop_jk_ecuaciones, d_registros_pipo_siso, d_registros_sipo_piso,
             d_contadores_modulo, d_celda_memoria, d_sram_dram_refresco, d_rom_decodificador_or,
             d_prom_flash_celda, d_amat_cache, d_memoria_virtual_tlb, d_memoria_asociativa_cam,
@@ -1920,7 +2027,7 @@ TODAS_U2 = [d_flipflop_d_t_tiempos, d_flipflop_jk_ecuaciones, d_registros_pipo_s
             d_multiusuario_escalabilidad,
             d_complemento2_rango, d_multiplicacion_registros, d_booth_traza, d_division_restauracion,
             d_division_signo, d_punto_flotante_normalizacion, d_ieee754_campos, d_bcd_correccion,
-            d_handshake_tiempos, d_vector_prioridad, d_serie_paralelo_skew, d_dualidad_teoremas]
+            d_handshake_tiempos, d_vector_prioridad, d_serie_paralelo_skew, d_dualidad_teoremas, d_codigos_ponderados, d_codigos_continuos, d_deteccion_errores]
 
 TODAS = [d_compuertas_nand_nor_xor, d_nand_universal, d_demorgan_circuitos, d_simplificacion_compuertas,
          d_mintterminos_canonica, d_karnaugh_dontcare, d_sumador_n_bits] + TODAS_U2

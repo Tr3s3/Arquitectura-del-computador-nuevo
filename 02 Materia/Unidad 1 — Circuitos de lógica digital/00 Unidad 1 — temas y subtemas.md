@@ -36,7 +36,8 @@ Unidad 1 — Circuitos de lógica digital/
 │   ├── 1.4.2 Codificador
 │   ├── 1.4.3 Multiplexor
 │   └── 1.4.4 Demultiplexor
-└── Tema 1.5 Aritmética combinacional/
+├── Tema 1.5 Aritmética combinacional/
+└── Tema 1.6 Códigos binarios/
     ├── 1.5.1 Semisumador y sumador completo
     └── 1.5.2 Sumador de n bits y resta en complemento a 2
 ```
@@ -49,6 +50,7 @@ Unidad 1 — Circuitos de lógica digital/
 | **1.2 Álgebra de Boole** | [[1.2.1 Postulados, dualidad y teoremas]] · [[1.2.2 Leyes de DeMorgan]] · [[1.2.3 Simplificación analítica]] | [[00 Tema 1.2 — índice]] |
 | **1.3 Formas canónicas y Karnaugh** | [[1.3.1 Mintérminos y maxtérminos]] · [[1.3.2 Mapa de Karnaugh de 2, 3 y 4 variables]] · [[1.3.3 Don't care y criterios de agrupación]] | [[00 Tema 1.3 — índice]] |
 | **1.4 Bloques combinacionales** | [[1.4.1 Decodificador]] · [[1.4.2 Codificador]] · [[1.4.3 Multiplexor]] · [[1.4.4 Demultiplexor]] | [[00 Tema 1.4 — índice]] |
+| **1.6 Códigos binarios** | [[1.6.1 Códigos ponderados y no ponderados]] · [[1.6.2 Códigos continuos y cíclicos]] | [[00 Tema 1.6 — índice]] |
 | **1.5 Aritmética combinacional** | [[1.5.1 Semisumador y sumador completo]] · [[1.5.2 Sumador de n bits y resta en complemento a 2]] | [[00 Tema 1.5 — índice]] |
 
 ---

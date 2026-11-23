@@ -58,3 +58,19 @@ prioridad: alta
 ## Enlaces
 Desarrollo: [[Flip-Flops SR, D, JK y T]] · Aplicación: [[Registros]] · [[Contadores]]
 Siguiente: [[TP10 Registros PIPO y SISO]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Flip-flop D en 6 minutos](https://www.youtube.com/watch?v=Gpliq_1qxh0&t=24s) | Les Ingenieurs |
+| ▶️ | [Flip-flop JK: cómo funciona](https://www.youtube.com/watch?v=M9toqPQghaA&t=13s) | Les Ingenieurs |
+| ▶️ | [Flip-flop T: funcionamiento y diseño](https://www.youtube.com/watch?v=QIs4lorH3G4) | Les Ingenieurs |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

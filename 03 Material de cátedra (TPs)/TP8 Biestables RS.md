@@ -69,3 +69,17 @@ El problema del 1-1 prohibido sigue existiendo.
 ## Enlaces
 Desarrollo: [[Flip-Flops SR, D, JK y T]] · Dibujo: [[Cómo dibujar los circuitos (checklist de pizarrón)]]
 Siguiente: [[TP9 Biestables D, JK y T]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Flip-flop RS con reloj](https://www.youtube.com/watch?v=ShQwsahdLOc&t=322s) | Les Ingenieurs |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

@@ -68,3 +68,17 @@ consecutivas**.
 ## Enlaces
 Desarrollo: [[Formato de la instrucción (4 formatos)]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]]
 Siguiente: [[TP18 Direccionamiento de memoria]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Formato básico de instrucciones y código de operación](https://www.youtube.com/watch?v=FtzdL81PgrQ) | FNE Profesor |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

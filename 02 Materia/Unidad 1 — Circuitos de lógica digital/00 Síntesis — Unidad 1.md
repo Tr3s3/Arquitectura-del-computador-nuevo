@@ -155,6 +155,23 @@ signo que dan signo contrario).
 
 ---
 
+## 7bis. Códigos binarios
+
+| Código | Tipo | Regla | El 5 | El 9 |
+|---|---|---|---|---|
+| **Binario natural** | ponderado `8-4-2-1` | suma de pesos | `0101` | `1001` |
+| **AIKEN** | ponderado `2-4-2-1` | pesos en otro orden | `1011` | `1111` |
+| **Exceso 3** | **no** ponderado | binario puro **+ 3** | `1000` | `1100` |
+| **BCD** | binario natural por dígito | 1 dígito = 4 bits | `0101` | `1001` |
+| **Gray** | **continuo y cíclico** | cambia 1 bit por paso | `0111` (4 bits) | — |
+| **Johnson** | continuo y cíclico | `2n` estados con `n` bits | `00111` (5 bits) | `10000` |
+
+- **BCD empaquetado**: 2 dígitos por byte (`62` = `0110 0010`); desempaquetado: 1 por byte.
+- **Por qué el exceso 3**: es autocomplementario (complemento a 9 = invertir bits) y no usa `0000`.
+- **Por qué el Gray**: no hay transiciones intermedias falsas ⇒ se usa en codificadores y en el **orden de las
+  filas del Karnaugh** (`00 01 11 10`).
+- **Conversión binario → Gray**: `G = B ⊕ (B >> 1)`.
+
 ## 8. Recetas de examen
 
 > [!important] Los cuatro movimientos de cualquier ejercicio de esta unidad

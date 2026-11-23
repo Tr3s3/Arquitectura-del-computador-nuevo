@@ -9,9 +9,9 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 295 notas · **97 SVG propios + 100 figuras de libro** · ~253.000 palabras · 3.349 enlaces internos, 0 rotos.
-**Cobertura gráfica:** los **104 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **100 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]).
-**Materia en detalle:** las **10 unidades completas** (45 temas, **104 subtemas**) con una `00 Síntesis` por unidad.
+**Estado:** 299 notas · **100 SVG propios + 100 figuras de libro** · ~265.000 palabras · 3.399 enlaces internos, 0 rotos.
+**Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **100 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]).
+**Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**) con una `00 Síntesis` por unidad.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -87,7 +87,7 @@ adentro: el nombre de la carpeta lo dice).
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
 04 Práctica/                     prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
-assets/                          97 SVG propios + 100 PNG de los libros
+assets/                          100 SVG propios + 100 PNG de los libros
 tools/                           diagramas.py, diagramas_2.py (SVG) y extraer_figuras.py (figuras de PDF)
 ```
 

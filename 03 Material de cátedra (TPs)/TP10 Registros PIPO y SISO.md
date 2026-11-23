@@ -69,3 +69,18 @@ en el pizarrón, la tabla pulso a pulso es la respuesta**: se ve el corrimiento.
 
 ## Enlaces
 Desarrollo: [[Registros]] · Siguiente: [[TP11 Registros SIPO y PISO]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Registros paralelo-paralelo (9.1)](https://www.youtube.com/watch?v=bqQJoTB6P4Q) | Diego Sales Lérida |
+| ▶️ | [Registros serie-serie (9.2)](https://www.youtube.com/watch?v=3sJe6I9-L5E) | Diego Sales Lérida |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

@@ -91,3 +91,18 @@ UC (que dio las señales) y la ALU (en la suma)."
 ## Enlaces
 Desarrollo: [[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]]
 Siguiente: [[TP17 Formato básico de instrucciones]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Ciclo de instrucción básico: búsqueda, decodificación y ejecución](https://www.youtube.com/watch?v=_eUYql5ZcuU) | FNE Profesor |
+| 📁 | [Material del TP en Google Drive](https://drive.google.com/file/d/1c9usGi9vXG7pNomx8gtdUj77sX9jSJen/view) | — |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

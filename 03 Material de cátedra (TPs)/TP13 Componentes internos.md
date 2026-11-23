@@ -33,3 +33,23 @@ lo coordina el chipset; los periféricos entran por interfaces que se comportan 
 ## Enlaces
 Desarrollo: [[Estructura básica de un computador]] · Buses: [[TP14 Buses]]
 Siguiente: [[TP14 Buses]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Cómo funciona una computadora](https://www.youtube.com/watch?v=bwrG6Sdow14) | HelderC |
+| ▶️ | [Componentes de una computadora](https://www.youtube.com/watch?v=6fz1Mjv_VHc) | HelderC |
+| ▶️ | [CPU: el procesador](https://www.youtube.com/watch?v=aCUHp1KLX7E) | HelderC |
+| ▶️ | [Memoria principal](https://www.youtube.com/watch?v=VPvVvy5ahAU) | HelderC |
+| ▶️ | [Tarjeta madre](https://www.youtube.com/watch?v=PCMpxIzqEO4) | Leonardo Duarte |
+| ▶️ | [Periféricos de entrada y salida](https://www.youtube.com/watch?v=unyZ8yNpBV8) | HelderC |
+| ▶️ | [Almacenamiento secundario](https://www.youtube.com/watch?v=e27trfKcuBA) | HelderC |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

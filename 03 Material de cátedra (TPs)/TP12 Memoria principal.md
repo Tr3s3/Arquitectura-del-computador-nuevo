@@ -53,3 +53,20 @@ por conjuntos), su **política de escritura** (write-through / write-back) y su 
 ## Enlaces
 Desarrollo: [[Memoria RAM 8x3]] · [[Memoria ROM y sus tipos]] · [[Memoria caché]] · [[Jerarquía de memorias]]
 Siguiente: [[TP13 Componentes internos]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Memoria principal](https://www.youtube.com/watch?v=VPvVvy5ahAU) | HelderC |
+| ▶️ | [RAM, ROM y caché](https://www.youtube.com/watch?v=YMR5IdezPv4) | Aprende conmigo Informática |
+| ▶️ | [Memorias ROM y RAM explicadas](https://www.youtube.com/watch?v=swOCvouHeAg) | MindMachineTV |
+| ▶️ | [Video complementario del TP](https://www.youtube.com/watch?v=ONa_M3bKX7A) | — |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

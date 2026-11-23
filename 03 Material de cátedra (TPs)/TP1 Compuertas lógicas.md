@@ -45,3 +45,18 @@ XOR/NXOR son la base de la **suma sin acarreo** ([[Semisumador]]) y de los **com
 ## Enlaces
 Desarrollo: [[Compuertas lógicas]] · Para el oral: [[Tablas de verdad de memoria]] ·
 Siguiente: [[TP2 Álgebra de Boole]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Compuertas lógicas básicas: NOT, AND y OR](https://www.youtube.com/watch?v=e57dl0yB6Ec) | Clases en Línea |
+| ▶️ | [NAND, NOR, XOR y XNOR](https://www.youtube.com/watch?v=793BPwWgBjc) | Clases en Línea |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Detección y corrección de errores: paridad, Hamming, LRC y CRC</text>
+  <text x="24" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" text-anchor="start" fill="#1f2937">Se agregan bits redundantes: sirven para DETECTAR (paridad, LRC, CRC) o para CORREGIR (Hamming)</text>
+  <text x="30" y="86" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1d4ed8">1. Paridad</text>
+  <rect x="30" y="96" width="400" height="78" rx="6" ry="6" fill="#f8fafc" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="40" y="116" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">dato  1 0 1 1 0 0 1 0   →  tres unos ⇒ impar</text>
+  <text x="40" y="134" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#0f766e">paridad PAR  ⇒ P = 1  (queda 4 unos: par)</text>
+  <text x="40" y="152" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#0f766e">paridad IMPAR ⇒ P = 0  (queda 3 unos: impar)</text>
+  <text x="40" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">Detecta 1 bit mal; con 2 bits mal no ve nada.</text>
+  <text x="470" y="86" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#0f766e">2. Hamming: los bits de control van en las potencias de 2</text>
+  <rect x="470" y="100" width="30" height="26" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="485.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">P1</text>
+  <text x="485" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">1</text>
+  <rect x="503" y="100" width="30" height="26" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="518.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">P2</text>
+  <text x="518" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">2</text>
+  <rect x="536" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="551.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D1</text>
+  <text x="551" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">3</text>
+  <rect x="569" y="100" width="30" height="26" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="584.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">P4</text>
+  <text x="584" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">4</text>
+  <rect x="602" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="617.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D2</text>
+  <text x="617" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">5</text>
+  <rect x="635" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="650.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D3</text>
+  <text x="650" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">6</text>
+  <rect x="668" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="683.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D4</text>
+  <text x="683" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">7</text>
+  <rect x="701" y="100" width="30" height="26" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="716.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">P8</text>
+  <text x="716" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">8</text>
+  <rect x="734" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="749.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D5</text>
+  <text x="749" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">9</text>
+  <rect x="767" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="782.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D6</text>
+  <text x="782" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">10</text>
+  <rect x="800" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="815.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D7</text>
+  <text x="815" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">11</text>
+  <rect x="833" y="100" width="30" height="26" rx="6" ry="6" fill="#ecfdf5" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="848.0" y="116.08" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="600" text-anchor="middle" fill="#1f2937">D8</text>
+  <text x="848" y="140" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.4" font-weight="400" text-anchor="middle" fill="#4b5563">12</text>
+  <text x="470" y="160" font-family="Consolas, 'Courier New', monospace" font-size="8.8" font-weight="400" text-anchor="start" fill="#7c2d12">P1 cubre 1,3,5,7,9,11 · P2 cubre 2,3,6,7,10,11 · P4 cubre 4,5,6,7,12 · P8 cubre 8..12</text>
+  <text x="470" y="176" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">El patrón de fallas da la posición del bit con error (síndrome): 101 = 5 ⇒ se invierte el bit 5.</text>
+  <text x="470" y="192" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">Cuesta log₂(n)+1 bits extra: con 8 de datos, 4 de control (12,8).</text>
+  <text x="30" y="224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#1d4ed8">3. LRC (bloque)</text>
+  <text x="30" y="242" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">Se suman los bytes en hexadecimal y se toma el complemento a 2:</text>
+  <text x="40" y="262" font-family="Consolas, 'Courier New', monospace" font-size="9.2" font-weight="400" text-anchor="start" fill="#0f766e">01 + 08 + 00 + 00 + 61 + 62 = CC  →  C2 = 34</text>
+  <text x="30" y="280" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.8" font-weight="400" text-anchor="start" fill="#4b5563">El receptor suma todo (datos + LRC): si el total no da 00, hubo error.</text>
+  <text x="470" y="224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" text-anchor="start" fill="#0f766e">4. CRC (polinomio)</text>
+  <text x="470" y="242" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">El bloque es un polinomio D(X); se lo divide por G(X) y se</text>
+  <text x="470" y="258" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.2" font-weight="400" text-anchor="start" fill="#1f2937">agrega el RESTO. En el receptor, el resto debe dar 0.</text>
+  <text x="470" y="276" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="400" text-anchor="start" fill="#7c2d12">CRC-8 = X⁸+X⁵+X⁴+1   ·   CRC-16 = X¹⁶+X¹⁵+X²+1</text>
+  <text x="30" y="306" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">Regla de oro para el final: paridad, LRC y CRC DETECTAN (no saben dónde está el error).</text>
+  <text x="30" y="321" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">Hamming DETECTA y CORRIGE un bit, porque el síndrome dice la posición.</text>
+  <text x="24" y="366" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">En el 8088 y en las PC: la paridad se usaba en los módulos de memoria (9 bits por byte), y el CRC en discos, redes y ZIP.</text>
+  <text x="24" y="384" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" text-anchor="start" fill="#4b5563">Hamming se usa en memorias con ECC: 72 bits por línea = 64 de datos + 8 de control.</text>
+</svg>

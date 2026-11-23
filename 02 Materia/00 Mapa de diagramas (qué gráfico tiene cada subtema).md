@@ -4,15 +4,14 @@ tipo: indice
 # Mapa de diagramas: qué gráfico tiene cada subtema
 
 > [!abstract] Qué es esta nota
-> Los **104 subtemas** de `02 Materia/` con los gráficos que trae cada uno: el **diagrama propio**
-> (dibujado a mano en SVG para esta bóveda) y la **figura del libro** copiada de la bibliografía.
-> En total: **106 diagramas propios** sobre 97 SVG y **99 figuras de libro** (Quiroga y Stallings).
+> Los **107 subtemas** de `02 Materia/` con los gráficos que trae cada uno: el **diagrama propio** (dibujado
+> en SVG para esta bóveda) y la **figura del libro** copiada de la bibliografía. En total: **109 diagramas propios**
+> y **100 figuras de libro** (Quiroga y Stallings).
 
 > [!tip] Cómo usarlo
 > 1. Elegí la unidad que estás estudiando.
 > 2. El **diagrama propio** es el que conviene reproducir a mano (está simplificado a lo que se pregunta).
 > 3. La **figura del libro** es la fuente: sirve para ver el detalle real y para citar de dónde sale.
-> 4. Si el subtema no te sale de memoria, ése es el que hay que repasar.
 
 ## Índice
 1. [[#Unidad 1 — Circuitos de lógica digital]]
@@ -47,6 +46,8 @@ tipo: indice
 | [[1.4.4 Demultiplexor]] | `demux_1x4` | — |
 | [[1.5.1 Semisumador y sumador completo]] | `semisumador` · `sumador_completo` | `quiroga-f5-17` |
 | [[1.5.2 Sumador de n bits y resta en complemento a 2]] | `sumador_n_bits` | `quiroga-f5-19` |
+| [[1.6.1 Códigos ponderados y no ponderados]] | `codigos_ponderados` | — |
+| [[1.6.2 Códigos continuos y cíclicos]] | `codigos_continuos` | — |
 
 ---
 
@@ -64,6 +65,7 @@ tipo: indice
 | [[2.3.1 Celda elemental de memoria]] | `celda_memoria` | `quiroga-f9-4` |
 | [[2.3.2 SRAM y DRAM]] | `sram_dram_refresco` | `stallings-f5-3` |
 | [[2.3.3 Matriz, expansión y RAM 8x3]] | `ram_8x3` | `stallings-f5-5` |
+| [[2.3.4 Detección y corrección de errores (paridad, LRC, CRC y Hamming)]] | `deteccion_errores` | `stallings-f5-11` |
 | [[2.4.1 ROM = decodificador + OR]] | `rom_decodificador_or` | `quiroga-f6-23` |
 | [[2.4.2 PROM, EPROM, EEPROM y Flash]] | `prom_flash_celda` | — |
 | [[2.5.1 Jerarquía y localidad]] | `jerarquia_memorias` | `stallings-f4-1` |
@@ -71,7 +73,7 @@ tipo: indice
 | [[2.5.3 AMAT y cálculo de mejora]] | `amat_cache` | `stallings-f4-5` |
 | [[2.6.1 Memoria virtual y paginación]] | `memoria_virtual_tlb` | `quiroga-f14-1` · `stallings-f8-18` |
 | [[2.6.2 Memoria auxiliar y memoria asociativa]] | `memoria_asociativa_cam` | `stallings-f8-19` |
-| [[2.7.1 Bits de dirección igual a log2 de celdas]] | `bits_direccion` | `quiroga-f9-11` |
+| [[2.7.1 Bits de dirección igual a log2 de celdas]] | `bits_direccion` | `quiroga-f7-7` |
 | [[2.7.2 CodOp vs campo de dirección]] | `codop_vs_direccion` | — |
 
 ---
@@ -207,14 +209,9 @@ tipo: indice
 | Archivo | Qué hace |
 |---|---|
 | `tools/diagramas.py` | los 34 diagramas propios de la primera tanda |
-| `tools/diagramas_2.py` | los 63 de la segunda tanda: uno por subtema que faltaba |
-| `tools/extraer_figuras.py` | **extrae las figuras de un PDF** (escaneado o vectorial) buscando el epígrafe `Fig. N.N` y recortando el bloque de contenido que está encima |
+| `tools/diagramas_2.py` | el resto: uno por subtema (incluye códigos y errores) |
+| `tools/extraer_figuras.py` | **extrae las figuras de un PDF** buscando el epígrafe `Fig. N.N` y recortando el bloque de contenido que está encima |
 | `python3 diagramas_2.py` | regenera los SVG propios en `assets/` |
-| `python3 tools/extraer_figuras.py libro.pdf salida/ prefijo_` | vuelve a sacar las figuras de un libro |
-
-Los diagramas propios son SVG escritos con una API mínima (`Svg`, `box`, `gate`, `arrow`…): se leen y se
-corrigen. Las figuras de libro son recortes PNG a 200 dpi de los PDF de la bibliografía, con la cita de
-figura y página al pie; si el recorte sale mal, se vuelve a correr el extractor con otra franja.
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Cómo usar esta bóveda]] · [[00 Figuras de los libros (índice)]]
+[[00 Índice de la materia (las 10 unidades)]] · [[00 Figuras de los libros (índice)]] · [[00 Cómo usar esta bóveda]]

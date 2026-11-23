@@ -67,3 +67,18 @@ a derecha, con un [[Multiplexor]] de 4 canales por cada flip-flop.
 ## Enlaces
 Desarrollo: [[Registros]] · Aplicación: [[Interrupciones y entrada-salida]] (transmisión serie)
 Siguiente: [[TP12 Memoria principal]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Registros serie-paralelo (9.3)](https://www.youtube.com/watch?v=Ghns0mXBPgw) | Diego Sales Lérida |
+| ▶️ | [Registros paralelo-serie (9.4)](https://www.youtube.com/watch?v=3l9zZpWqADE) | Diego Sales Lérida |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

@@ -104,3 +104,7 @@ Todas las notas de concepto respetan el mismo esqueleto:
 
 Si la cátedra entrega nuevos apuntes (o un final viejo), agregá una nota nueva y enlazala desde
 [[Banco de preguntas del final]]. La bóveda está pensada para crecer por preguntas, no por capítulos.
+> [!tip] ¿Dudás de si falta algo?
+> En [[06 Validación de contenido (resúmenes, TPs y claridad)]] está la auditoría contra los resúmenes de la
+> cátedra y los TPs, con los huecos que se encontraron y cómo se cerraron.
+

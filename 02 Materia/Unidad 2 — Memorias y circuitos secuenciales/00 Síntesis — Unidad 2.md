@@ -225,6 +225,20 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
 
 ---
 
+## Errores: detectar y corregir
+
+| Método | Agrega | Detecta | Corrige |
+|---|---|---|---|
+| **Paridad** | 1 bit | 1 bit (no ve 2) | no |
+| **LRC** | 1 byte por bloque | una ráfaga de 1 byte | no |
+| **CRC** | 8 / 12 / 16 bits | ráfagas largas | no |
+| **Hamming** | `k` bits (`2ᵏ ≥ n+k+1`) | 1 bit (2 con SEC-DED) | **1 bit** (el síndrome da la posición) |
+
+- **LRC**: suma hexadecimal de los datos + complemento a 2 (`01+08+00+00+61+62 = CC` ⇒ `LRC = 34`).
+- **CRC**: la trama es un polinomio `D(X)`, se divide por `G(X)` y se manda el resto; en el receptor debe dar **0**.
+- **Hamming**: los controles van en las potencias de 2; `P1` cubre 1,3,5,7,9,11 · `P2` cubre 2,3,6,7,10,11 ·
+  `P4` cubre 4,5,6,7,12 · `P8` cubre 8 a 12. En memorias con ECC: **72 bits = 64 + 8**.
+
 ## Relacionado
 [[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.1 — índice]] · [[00 Tema 2.3 — índice]] ·
 [[00 Tema 2.5 — índice]] · [[00 Tema 2.7 — índice]] · [[00 Síntesis — Unidad 1]] ·

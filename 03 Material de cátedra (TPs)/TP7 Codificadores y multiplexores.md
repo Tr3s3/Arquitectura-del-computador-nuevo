@@ -78,3 +78,18 @@ corresponde.
 ## Enlaces
 Desarrollo: [[Codificador]] · [[Multiplexor]] · Uso en la CPU: [[Flujo de información en BLUE (datos y direcciones)]]
 Siguiente: [[TP8 Biestables RS]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Codificadores 4x2 y 8x3: funcionamiento y diseño](https://www.youtube.com/watch?v=sz7W2u1THdQ) | Les Ingenieurs |
+| ▶️ | [Multiplexor 4x1](https://www.youtube.com/watch?v=gTcU-FrRioM) | Les Ingenieurs |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

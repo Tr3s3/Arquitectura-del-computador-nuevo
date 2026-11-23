@@ -98,3 +98,6 @@ todo el desarrollo). Los índices de unidad están en `02 Materia/Unidad N — �
 - [[Guion de respuestas — preguntas principales]] ← qué decir y qué dibujar en el oral
 - [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]]
 - [[Prácticas resueltas]] · [[Autoevaluación]]
+## Validación
+[[06 Validación de contenido (resúmenes, TPs y claridad)]]: qué se auditó contra los resúmenes y los TPs, y qué se agregó.
+

@@ -40,8 +40,8 @@ prioridad: maxima
 
 | Unidad | Temas | Subtemas | Estado | Síntesis |
 |---|---|---|---|---|
-| **1** Circuitos de lógica digital | 5 | 15 | ✅ **desarrollada** | [[00 Síntesis — Unidad 1]] |
-| **2** Memorias y circuitos secuenciales | 7 | 19 | ✅ **desarrollada** | [[00 Síntesis — Unidad 2]] |
+| **1** Circuitos de lógica digital | 6 | 17 | ✅ **desarrollada** | [[00 Síntesis — Unidad 1]] |
+| **2** Memorias y circuitos secuenciales | 7 | 20 | ✅ **desarrollada** | [[00 Síntesis — Unidad 2]] |
 | **3** Transferencia de registros y microoperaciones | 3 | 7 | ✅ **desarrollada** | [[00 Síntesis — Unidad 3]] |
 | **4** Organización y diseño básico | 4 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 4]] |
 | **5** Programación básica y CPU convencional | 6 | 13 | ✅ **desarrollada** | [[00 Síntesis — Unidad 5]] |
@@ -50,17 +50,17 @@ prioridad: maxima
 | **8** Paralelismo | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 8]] |
 | **9** Hardware aritmético | 5 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 9]] |
 | **10** Entrada y Salida | 4 | 7 | ✅ **desarrollada** | [[00 Síntesis — Unidad 10]] |
-| **Total** | **45** | **104** | **104 subtemas escritos** | **10 de 10** ✅ |
+| **Total** | **46** | **107** | **107 subtemas escritos** | **10 de 10** ✅ |
 
 > [!success] Materia completa
-> Las **10 unidades** están desarrolladas: **45 temas**, **104 subtemas** en carpetas `Unidad → Tema → Subtema` y
+> Las **10 unidades** están desarrolladas: **46 temas**, **107 subtemas** en carpetas `Unidad → Tema → Subtema` y
 > **una `00 Síntesis — Unidad N` por unidad** con todo el contenido junto. Para el parcial, empezar por la síntesis
 > de la unidad que entra; para el final, por
 > [[00 Índice — el final resuelto|el modelo de final resuelto]].
 
 > [!tip] Todos los subtemas traen su diagrama
-> Los **104 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico):
-> **106 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en
+> Los **107 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico):
+> **107 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en
 > [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], y las **100 figuras de los libros**
 > (Quiroga y Stallings) con su cita de página, en [[00 Figuras de los libros (índice)]].
 

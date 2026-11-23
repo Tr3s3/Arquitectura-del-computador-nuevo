@@ -87,3 +87,18 @@ Ocho sumadores completos encadenados.
 ## Enlaces
 Desarrollo: [[Semisumador]] · [[Sumador completo]] · Dibujo: [[Cómo dibujar los circuitos (checklist de pizarrón)]]
 Siguiente: [[TP6 Decodificadores y demultiplexores]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| ▶️ | [Semisumador y sumador completo](https://www.youtube.com/watch?v=pZfp3wuIirY) | Clases en Línea |
+| ▶️ | [Sumador de 4 bits en paralelo y en cascada](https://www.youtube.com/watch?v=Ak_uHvpquJI&t=112s) | Clases en Línea |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+

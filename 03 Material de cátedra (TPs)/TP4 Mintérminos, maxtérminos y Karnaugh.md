@@ -52,3 +52,17 @@ tipo: tp
 ## Enlaces
 Desarrollo: [[Mintérminos y maxtérminos]] · Práctica: [[Prácticas resueltas]]
 Siguiente: [[TP5 Sumadores]]
+
+## Videos del TP
+
+Los videos que la cátedra dejó en la consigna del TP, con el título real de cada uno:
+
+| | Recurso | Canal / fuente |
+|---|---|---|
+| 🎬 | [Lista de reproducción del TP (mintérminos y Karnaugh)](https://www.youtube.com/playlist?list=PLF0o5Yzo4mCO6t4_1FYE699RobND3bZs6) | — |
+
+> [!tip] Cómo usarlos
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
+> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
+> toma en el parcial).
+
