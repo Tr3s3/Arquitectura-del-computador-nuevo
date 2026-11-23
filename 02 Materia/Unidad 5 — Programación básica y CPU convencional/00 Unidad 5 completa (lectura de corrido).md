@@ -8,7 +8,7 @@ unidad: 5
 > [!abstract] Qué es este archivo
 > **La Unidad 5 completa en un solo archivo**: los **13 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **9.342 palabras** y **6 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **10.199 palabras** y **6 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 5]].
@@ -356,6 +356,17 @@ Calcular `X = A + B` en los cuatro formatos:
 Más direcciones ⇒ **menos instrucciones** pero **cada una más larga**. La BLUE usa el de **1 dirección** porque su
 palabra es de 16 bits: 4 de opcode + 12 de dirección.
 
+#### Figura de clase
+
+##### La comparación en cuatro renglones: qué se elimina al bajar de formato.
+
+![Comparación de los cuatro formatos: direcciones incluidas y qué elimina cada uno.](../../assets/catedra-said-formatos-comparacion.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 33.*
+
+> [!tip] Qué mirar
+> La tabla que responde «¿qué se pierde al pasar de 4 a 1 dirección?»: **4 direcciones** incluye todo (operandos, resultado y próxima instrucción); **3** elimina la próxima instrucción (la resuelve el `PC`); **2** elimina la dirección del resultado (se sobrescribe un operando); **1** elimina también el primer operando (queda implícito en el `AC`). Cada eliminación acorta la instrucción y **alarga el programa**, que es el compromiso que se pregunta.
+
 #### Figura del libro
 
 ![Comparación de tres programas para el mismo cálculo.](../../assets/libro-stallings-f10-15.png)
@@ -677,6 +688,17 @@ los índices, la instrucción **no se toca**: sólo cambian los registros.
 > - Confundir el registro base con el `BP` del 8086 (aquél es de marco de pila).
 > - Olvidar que la dirección sigue siendo de 12 bits **después** de la suma (con vuelta al principio si se pasa).
 
+#### Figura de clase
+
+##### Todo el modelo indexado en una figura: los tres registros, el sumador y los dos decodificadores.
+
+![Esquema completo de la BLUE indexada: RB, RIF y RID, sumador de direcciones, memoria de 65 536 posiciones y la unidad de control con dos decodificadores.](../../assets/catedra-said-blue-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 36.*
+
+> [!tip] Qué mirar
+> Es el plano general de la unidad 5.4: el **campo de dirección** de la instrucción entra al **sumador de direcciones** junto con **RB** (siempre) y con **RIF** o **RID** (según los bits `W` y `X` del modificador); el resultado va al `MAR` y de ahí a una memoria de **65 536 posiciones** (`16` bits de dirección). Los registros **`W`** y **`X`** que aparecen en el sumador son los dos bits del **modificador**. Abajo hay **dos** decodificadores: el de instrucciones (opcode de 5 bits, 32 instrucciones) y el **del campo modificador** — esa segunda decodificación es la que no existe en la BLUE original.
+
 #### Relacionado
 [[5.4.2 Modificador de 2 bits y los 24 pulsos]] · [[BLUE indexada (RIF, RID, nuevo formato)]] ·
 [[Registros base e índice]] · [[5.3.1 Los 7 modos]] · [[Glosario — Unidad 5]]
@@ -750,6 +772,53 @@ instrucciones baja mucho más.
 > - Confundir los 2 bits del modificador con los 4 del opcode.
 > - Sumar `RIF` cuando el modificador es `00` (no se suma nada).
 > - Decir que la palabra sigue siendo de 16 bits (son **dos**).
+
+#### Figura de clase
+
+##### La instrucción indexada ocupa dos palabras: 5 + 2 + 9 y 16 bits de dirección.
+
+![Formato de la instrucción indexada: 5 bits de código de operación, 2 de modificador y 16 de dirección.](../../assets/catedra-said-formato-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 34.*
+
+> [!tip] Qué mirar
+> La instrucción deja de ser de **una** palabra: son **dos** (32 bits en total). La primera lleva el **opcode de 5 bits** (`32` instrucciones), el **modificador de 2 bits** y **9 bits** que el ejemplo no usa; la segunda, los **16 bits de dirección**. De ahí sale la cuenta de los 24 pulsos: leer **dos** palabras de instrucción ya cuesta **dos ciclos de búsqueda** (16 pulsos) antes de ejecutar.
+
+##### Los cuatro modos, en una tabla de cuatro renglones.
+
+![Los cuatro modos del modificador: 00 directo, 01 indirecto, 10 indexado RIF y 11 indexado RID.](../../assets/catedra-said-modos-modificador.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 35.*
+
+> [!tip] Qué mirar
+> El modificador es un menú de **cuatro** opciones (`2 bits ⇒ 2² = 4`): `00` **directo** (usa el campo tal cual), `01` **indirecto** (el campo apunta a la dirección real: un acceso más, **32 pulsos**), `10` **indexado RIF** (suma el índice de fuente) y `11` **indexado RID** (suma el índice de destino). El **base** no aparece acá porque **se suma siempre**, en los cuatro modos.
+
+##### `LDA 3` (indexada): dos ciclos de ejecución después de las dos búsquedas.
+
+![Los dos ciclos de ejecución de `LDA 3` en la BLUE indexada.](../../assets/catedra-said-lda3-ejecucion.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 37.*
+
+> [!tip] Qué mirar
+> El caso completo de los **24 pulsos**, pulso por pulso: **dos** ciclos de búsqueda iguales (traer la palabra 1 y la palabra 2 de la instrucción) y **dos** ciclos de ejecución, uno para calcular la dirección efectiva (`Σ` = campo + RIF + RB, que va al `MAR`) y otro para traer el dato de memoria al `AC`. Comparalo con `LDA` en la BLUE original, que necesita **un solo** ciclo de ejecución.
+
+##### Los ciclos de máquina según el modo: la tabla que se pregunta.
+
+![Ciclos de máquina por instrucción y modo en la BLUE indexada.](../../assets/catedra-said-ciclos-por-modo.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 41.*
+
+> [!tip] Qué mirar
+> Los números para el final: **LDA directo 3**, **LDA indirecto 4**, **LDA indexado 3**, **INI 2** y **ENI 2**. Ojo con el directo: en la BLUE **original** `LDA` directo son **2** ciclos (16 pulsos), pero en la **indexada** son **3** (24 pulsos) porque la instrucción ocupa **dos palabras** y hay que buscarlas a las dos. El indirecto agrega un ciclo más: primero se obtiene la dirección real del operando y **después** se accede al dato.
+
+##### La BLUE original contra la indexada, característica por característica.
+
+![Comparación entre la BLUE original y la BLUE indexada: registros, direccionamiento, opcode, campo de dirección, modificador, memoria y ciclos.](../../assets/catedra-said-original-vs-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 42.*
+
+> [!tip] Qué mirar
+> La tabla de cierre de la unidad, ideal para el «compará las dos versiones»: **registros** (se agregan `RIF`, `RID`, `RB`, `W` y `X`), **direccionamiento** (directo e indirecto → directo, indirecto e indexado), **opcode** (4 → 5 bits, 16 → 32 instrucciones), **campo de dirección** (12 → 16 bits, 4 096 → 65 536 posiciones), **modificador** (no existía → 2 bits, 4 modos), **ciclos** (2 → 3 o 4) y **programación** (más simple y lineal contra vectores, arreglos y programas reubicables).
 
 #### Figura del libro
 

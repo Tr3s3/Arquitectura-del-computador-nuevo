@@ -8,7 +8,7 @@ unidad: 4
 > [!abstract] Qué es este archivo
 > **La Unidad 4 completa en un solo archivo**: los **10 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **8.367 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **8.979 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 4]].
@@ -193,6 +193,17 @@ idea.
 > - Confundir el **modelo** con la **máquina IAS** (la IAS es una implementación concreta del modelo).
 > - Olvidar el `IBR`: sin él no se explica cómo la IAS tiene 2 instrucciones por palabra y un `PC` por palabra.
 
+#### Figura de clase
+
+##### Los dos formatos de la palabra de 40 bits de la IAS.
+
+![Formato de la palabra de la IAS: instrucción (8 bits de opcode y dos direcciones) o dato de 40 bits.](../../assets/catedra-said-formato-palabra-ias.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 20.*
+
+> [!tip] Qué mirar
+> La IAS usa **una sola** palabra de **40 bits** para todo, y distingue qué es qué mirando el **bit de la izquierda**: si es `0` es un **dato** (`1` bit de signo + `39` de magnitud, punto fijo) y si es `1` es una **instrucción** (`8` de opcode + `12` + `12` de dirección = `20` bits usados, el resto sobra). Esa es la consecuencia más fuerte del programa almacenado: **el mismo formato de memoria guarda código y datos**, y el hardware no sabe cuál es hasta que lo decodifica.
+
 #### Figura del libro
 
 ![Estructura del computador IAS.](../../assets/libro-stallings-f2-1.png)
@@ -322,6 +333,17 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
   **cualquier** palabra de la memoria.
 - Tiempo: 8 pulsos de 125 ns = **1 µs** por ciclo de máquina ⇒ **1 000 000** de ciclos por segundo.
 
+#### Figura de clase
+
+##### La consola completa: seis pulsadores, 16 leds y 16 llaves binarias.
+
+![Panel frontal de la BLUE: 16 llaves binarias, 16 leds y los seis pulsadores.](../../assets/catedra-said-panel-frontal-blue.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 21.*
+
+> [!tip] Qué mirar
+> Los seis pulsadores con el nombre que se usa en el oral (**START, STOP, LOAD PC, EXAMINE, DEPOSIT, RESET**), la fila de **16 leds** de estado y las **16 llaves binarias** de tres posiciones (arriba `1`, centro sin efecto, abajo `0`). Con esto alcanza para explicar la **carga manual** de un programa sin sistema operativo: llaves → `DEPOSIT` → el `PC` avanza solo → `LOAD PC` al inicio → `START`.
+
 #### Figura del libro
 
 ![Ejemplo de ejecución de un programa con la memoria y los registros de la CPU.](../../assets/libro-stallings-f3-5.png)
@@ -426,6 +448,26 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 > - Confundir `JMA` (absoluto) con `JMP` (indirecto) y `SRJ` (relativo).
 > - Contar `08` como opcode.
 > - Decir que `LDA` es de un ciclo: **necesita dos** (buscar la instrucción y después el dato).
+
+#### Figura de clase
+
+##### El corte exacto de la instrucción: 15..12 opcode y 11..0 dirección.
+
+![Registro de instrucción de la BLUE: bits 15 a 12 código de operación, bits 11 a 0 direccionamiento.](../../assets/catedra-said-formato-ri.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 23.*
+
+> [!tip] Qué mirar
+> Los dos campos, con sus límites: **`15..12`** = código de operación (**4 bits ⇒ 16 instrucciones**) y **`11..0`** = direccionamiento (**12 bits ⇒ 4 096 posiciones**). Un opcode de 4 bits es exactamente un **dígito octal**, y por eso los nemónicos se escriben del `00` al `17`.
+
+##### Los 16 nombres en castellano, con el nemónico de cada uno.
+
+![Las 16 instrucciones de la BLUE con el nombre que usa la cátedra y su nemónico.](../../assets/catedra-said-16-instrucciones-nombres.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 23.*
+
+> [!tip] Qué mirar
+> Es la tabla que conviene tener memorizada con **los dos** nombres, porque en el final se piden en castellano: **HALT** (parar), **ADD** (sumar), **SUB** (restar), **STA** (almacenar), **LDA** (cargar), **INP** (leer), **OUT** (escribir), **SKF** (saltar si bandera), **JMP** (salto incondicional), **JMA** (salto absoluto), **JSR** (salto a subrutina), **RET** (volver de subrutina), **SRJ** (saltar y retornar), **RAL** (rotar a la izquierda), **CSA** (cambio de signo) y **NOP** (no opera).
 
 #### Figura del libro
 
@@ -786,6 +828,17 @@ Usan **`TRA`** (transferencia en curso) y la señal **`R`** (periférico listo):
 > - Poner el resultado de la ALU en el `MBR` (va al `AC`).
 > - Olvidar que en `STA` la **escritura** ocurre en el **CP4**, no en el CP5.
 > - Contar 8 pulsos para `LDA` (son 16).
+
+#### Figura de clase
+
+##### La entrada/salida completa: 8 líneas de dato, 6 de selección y 64 dispositivos.
+
+![Entrada/salida de la BLUE: 8 líneas de datos, 6 de selección, los dispositivos 0 a 63 y las señales TRA y R.](../../assets/catedra-said-es-blue.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 30.*
+
+> [!tip] Qué mirar
+> Lo que hay que poder dibujar de memoria: **8 líneas de datos** (un byte) y **6 líneas de selección** ⇒ `2⁶ =` **64 dispositivos**, numerados del `0` al **63**. La selección sale de `IR5..IR0` (por eso el dispositivo es un campo de la propia instrucción `INP`/`OUT`) y la unidad de control habilita la transferencia con **`TRA`**, un biestable que se pone al decodificar `INP`/`OUT` y se borra con `R` cuando el dispositivo terminó. Fijate que los periféricos se conectan al **bus de datos**, no a los registros internos: entre ellos están los buffers.
 
 #### Figura del libro
 

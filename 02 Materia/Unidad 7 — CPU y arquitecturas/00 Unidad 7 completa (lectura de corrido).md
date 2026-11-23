@@ -8,7 +8,7 @@ unidad: 7
 > [!abstract] Qué es este archivo
 > **La Unidad 7 completa en un solo archivo**: los **9 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **8.503 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **8.615 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 7]].
@@ -131,6 +131,17 @@ salto mal predicho.
 > - Olvidar los **registros de etapa** al explicar por qué la latencia empeora.
 > - Poner etapas que usan **el mismo** recurso (imposible solapar).
 > - Contar el pipeline como MIMD en Flynn (es **SISD**).
+
+#### Figura de clase
+
+##### Las cinco etapas con su sigla y su función.
+
+![Las cinco etapas del pipeline (IF, ID, EX, MEM y WB) con su función.](../../assets/catedra-said-etapas-pipeline.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 42.*
+
+> [!tip] Qué mirar
+> Las etapas con las **siglas** que se piden al enumerarlas: **IF** (búsqueda: trae la instrucción), **ID** (decodificación: la interpreta), **EX** (ejecución: opera), **MEM** (memoria: accede si hace falta) y **WB** (escritura: guarda el resultado). La figura también resume el balance del tema en dos líneas: **ventaja**, se solapan varias instrucciones y sube el rendimiento; **desventaja**, hace falta hardware adicional (los registros de etapa y el control de los riesgos).
 
 #### Figura del libro
 

@@ -89,7 +89,7 @@ tipo: materia-completa
 ## Unidad 1 — Circuitos de lógica digital
 
 > [!info] Unidad 1
-> 17 subtemas · 11.444 palabras ·
+> 17 subtemas · 11.574 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 1]] · archivo de la unidad: [[00 Unidad 1 completa (lectura de corrido)]]
 
 ### 1.1 Compuertas lógicas
@@ -957,6 +957,17 @@ MUX **4 → 1** con `S1 S0 = 01`: la salida es `F = D1`. Con `D0 = 0, D1 = 1, D2
 - Su función canónica es `F = S1'S0'·D0 + S1'S0·D1 + S1S0'·D2 + S1S0·D3`.
 - Un MUX **8 → 1** necesita **3** bits de selección (y 2 MUX de 4→1 + 1 de 2→1 lo arman).
 
+##### Figura de clase
+
+###### El mismo multiplexor, pero como integrado: cuatro canales, dos selectores y una salida.
+
+![El multiplexor 4 a 1, dibujado como integrado: canales 0 a 3, selectores S1 y S0, salida A.](../assets/catedra-said-mux-integrado.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 8.*
+
+> [!tip] Qué mirar
+> El bloque tiene **cuatro entradas de canal** (`0` a `3`), **dos entradas de selección** (`S1 S0`) y **una** salida `A`: no hay que confundir las líneas de dato con las de control. Con `S1 S0 = 00, 01, 10, 11` se habilita un canal por vez, así que los cuatro datos comparten la salida sin pelearse. Es la forma en que aparece en el TP y en el integrado real (un 74LS153 trae dos multiplexores de estos por encapsulado).
+
 ##### Figura del libro
 
 ![Diagrama de bloque de un multiplexor para cuatro entradas.](../assets/libro-quiroga-f6-20.png)
@@ -1404,7 +1415,7 @@ Se ven las dos mitades: primero **entran unos** por la izquierda, después **ent
 ## Unidad 2 — Memorias y circuitos secuenciales
 
 > [!info] Unidad 2
-> 20 subtemas · 14.622 palabras ·
+> 20 subtemas · 14.748 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 2]] · archivo de la unidad: [[00 Unidad 2 completa (lectura de corrido)]]
 
 ### 2.1 Biestables y flip-flops
@@ -1464,6 +1475,17 @@ La salida "recuerda" el último pulso que la tocó.
 > - Invertir la polaridad: en NOR, `S=1` **pone** a 1; en NAND, `S=0` pone a 1 (activo bajo).
 > - Decir que con `S=R=0` la salida es 0: en NOR **mantiene**.
 > - Olvidar que `Q⁺` depende de `Q`: no es una tabla de verdad combinacional, es una **tabla de estados**.
+
+##### Figura de clase
+
+###### El árbol del que cuelga todo el tema: asíncronos contra sincrónicos.
+
+![Clasificación de los biestables: asíncronos y sincrónicos.](../assets/catedra-said-clasificacion-biestables.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 6.*
+
+> [!tip] Qué mirar
+> La **primera división** del tema, la que se pregunta antes de cualquier tabla: **asíncronos** = el estado cambia con el **nivel** de la entrada (el RS armado con NOR o con NAND); **sincrónicos** = el estado **sólo** cambia en el **flanco** del reloj. Todo lo que sigue en la unidad 2 es la rama de la derecha. Ojo: en el resumen la figura queda cortada en «activados por nivel / por flancos»; las hojas de abajo (RS, D, JK y T) son las que desarrollan 2.1.1 a 2.1.3.
 
 ##### Figura del libro
 
@@ -3654,7 +3676,7 @@ Cambiar `RIF` recorre el arreglo **sin reescribir** la instrucción: eso es el a
 ## Unidad 4 — Organización y diseño básico
 
 > [!info] Unidad 4
-> 10 subtemas · 8.367 palabras ·
+> 10 subtemas · 8.979 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 4]] · archivo de la unidad: [[00 Unidad 4 completa (lectura de corrido)]]
 
 ### 4.1 Estructura y modelo von Neumann
@@ -3810,6 +3832,17 @@ idea.
 > - Confundir el **modelo** con la **máquina IAS** (la IAS es una implementación concreta del modelo).
 > - Olvidar el `IBR`: sin él no se explica cómo la IAS tiene 2 instrucciones por palabra y un `PC` por palabra.
 
+##### Figura de clase
+
+###### Los dos formatos de la palabra de 40 bits de la IAS.
+
+![Formato de la palabra de la IAS: instrucción (8 bits de opcode y dos direcciones) o dato de 40 bits.](../assets/catedra-said-formato-palabra-ias.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 20.*
+
+> [!tip] Qué mirar
+> La IAS usa **una sola** palabra de **40 bits** para todo, y distingue qué es qué mirando el **bit de la izquierda**: si es `0` es un **dato** (`1` bit de signo + `39` de magnitud, punto fijo) y si es `1` es una **instrucción** (`8` de opcode + `12` + `12` de dirección = `20` bits usados, el resto sobra). Esa es la consecuencia más fuerte del programa almacenado: **el mismo formato de memoria guarda código y datos**, y el hardware no sabe cuál es hasta que lo decodifica.
+
 ##### Figura del libro
 
 ![Estructura del computador IAS.](../assets/libro-stallings-f2-1.png)
@@ -3939,6 +3972,17 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
   **cualquier** palabra de la memoria.
 - Tiempo: 8 pulsos de 125 ns = **1 µs** por ciclo de máquina ⇒ **1 000 000** de ciclos por segundo.
 
+##### Figura de clase
+
+###### La consola completa: seis pulsadores, 16 leds y 16 llaves binarias.
+
+![Panel frontal de la BLUE: 16 llaves binarias, 16 leds y los seis pulsadores.](../assets/catedra-said-panel-frontal-blue.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 21.*
+
+> [!tip] Qué mirar
+> Los seis pulsadores con el nombre que se usa en el oral (**START, STOP, LOAD PC, EXAMINE, DEPOSIT, RESET**), la fila de **16 leds** de estado y las **16 llaves binarias** de tres posiciones (arriba `1`, centro sin efecto, abajo `0`). Con esto alcanza para explicar la **carga manual** de un programa sin sistema operativo: llaves → `DEPOSIT` → el `PC` avanza solo → `LOAD PC` al inicio → `START`.
+
 ##### Figura del libro
 
 ![Ejemplo de ejecución de un programa con la memoria y los registros de la CPU.](../assets/libro-stallings-f3-5.png)
@@ -4043,6 +4087,26 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 > - Confundir `JMA` (absoluto) con `JMP` (indirecto) y `SRJ` (relativo).
 > - Contar `08` como opcode.
 > - Decir que `LDA` es de un ciclo: **necesita dos** (buscar la instrucción y después el dato).
+
+##### Figura de clase
+
+###### El corte exacto de la instrucción: 15..12 opcode y 11..0 dirección.
+
+![Registro de instrucción de la BLUE: bits 15 a 12 código de operación, bits 11 a 0 direccionamiento.](../assets/catedra-said-formato-ri.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 23.*
+
+> [!tip] Qué mirar
+> Los dos campos, con sus límites: **`15..12`** = código de operación (**4 bits ⇒ 16 instrucciones**) y **`11..0`** = direccionamiento (**12 bits ⇒ 4 096 posiciones**). Un opcode de 4 bits es exactamente un **dígito octal**, y por eso los nemónicos se escriben del `00` al `17`.
+
+###### Los 16 nombres en castellano, con el nemónico de cada uno.
+
+![Las 16 instrucciones de la BLUE con el nombre que usa la cátedra y su nemónico.](../assets/catedra-said-16-instrucciones-nombres.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 23.*
+
+> [!tip] Qué mirar
+> Es la tabla que conviene tener memorizada con **los dos** nombres, porque en el final se piden en castellano: **HALT** (parar), **ADD** (sumar), **SUB** (restar), **STA** (almacenar), **LDA** (cargar), **INP** (leer), **OUT** (escribir), **SKF** (saltar si bandera), **JMP** (salto incondicional), **JMA** (salto absoluto), **JSR** (salto a subrutina), **RET** (volver de subrutina), **SRJ** (saltar y retornar), **RAL** (rotar a la izquierda), **CSA** (cambio de signo) y **NOP** (no opera).
 
 ##### Figura del libro
 
@@ -4404,6 +4468,17 @@ Usan **`TRA`** (transferencia en curso) y la señal **`R`** (periférico listo):
 > - Olvidar que en `STA` la **escritura** ocurre en el **CP4**, no en el CP5.
 > - Contar 8 pulsos para `LDA` (son 16).
 
+##### Figura de clase
+
+###### La entrada/salida completa: 8 líneas de dato, 6 de selección y 64 dispositivos.
+
+![Entrada/salida de la BLUE: 8 líneas de datos, 6 de selección, los dispositivos 0 a 63 y las señales TRA y R.](../assets/catedra-said-es-blue.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 30.*
+
+> [!tip] Qué mirar
+> Lo que hay que poder dibujar de memoria: **8 líneas de datos** (un byte) y **6 líneas de selección** ⇒ `2⁶ =` **64 dispositivos**, numerados del `0` al **63**. La selección sale de `IR5..IR0` (por eso el dispositivo es un campo de la propia instrucción `INP`/`OUT`) y la unidad de control habilita la transferencia con **`TRA`**, un biestable que se pone al decodificar `INP`/`OUT` y se borra con `R` cuando el dispositivo terminó. Fijate que los periféricos se conectan al **bus de datos**, no a los registros internos: entre ellos están los buffers.
+
 ##### Figura del libro
 
 ![Fase execute LDA.](../assets/libro-quiroga-f7-13.png)
@@ -4614,7 +4689,7 @@ La BLUE usa cableada: son pocas instrucciones y siempre las mismas.
 ## Unidad 5 — Programación básica y CPU convencional
 
 > [!info] Unidad 5
-> 13 subtemas · 9.342 palabras ·
+> 13 subtemas · 10.199 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 5]] · archivo de la unidad: [[00 Unidad 5 completa (lectura de corrido)]]
 
 ### 5.1 Lenguaje máquina
@@ -4925,6 +5000,17 @@ Calcular `X = A + B` en los cuatro formatos:
 
 Más direcciones ⇒ **menos instrucciones** pero **cada una más larga**. La BLUE usa el de **1 dirección** porque su
 palabra es de 16 bits: 4 de opcode + 12 de dirección.
+
+##### Figura de clase
+
+###### La comparación en cuatro renglones: qué se elimina al bajar de formato.
+
+![Comparación de los cuatro formatos: direcciones incluidas y qué elimina cada uno.](../assets/catedra-said-formatos-comparacion.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 33.*
+
+> [!tip] Qué mirar
+> La tabla que responde «¿qué se pierde al pasar de 4 a 1 dirección?»: **4 direcciones** incluye todo (operandos, resultado y próxima instrucción); **3** elimina la próxima instrucción (la resuelve el `PC`); **2** elimina la dirección del resultado (se sobrescribe un operando); **1** elimina también el primer operando (queda implícito en el `AC`). Cada eliminación acorta la instrucción y **alarga el programa**, que es el compromiso que se pregunta.
 
 ##### Figura del libro
 
@@ -5247,6 +5333,17 @@ los índices, la instrucción **no se toca**: sólo cambian los registros.
 > - Confundir el registro base con el `BP` del 8086 (aquél es de marco de pila).
 > - Olvidar que la dirección sigue siendo de 12 bits **después** de la suma (con vuelta al principio si se pasa).
 
+##### Figura de clase
+
+###### Todo el modelo indexado en una figura: los tres registros, el sumador y los dos decodificadores.
+
+![Esquema completo de la BLUE indexada: RB, RIF y RID, sumador de direcciones, memoria de 65 536 posiciones y la unidad de control con dos decodificadores.](../assets/catedra-said-blue-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 36.*
+
+> [!tip] Qué mirar
+> Es el plano general de la unidad 5.4: el **campo de dirección** de la instrucción entra al **sumador de direcciones** junto con **RB** (siempre) y con **RIF** o **RID** (según los bits `W` y `X` del modificador); el resultado va al `MAR` y de ahí a una memoria de **65 536 posiciones** (`16` bits de dirección). Los registros **`W`** y **`X`** que aparecen en el sumador son los dos bits del **modificador**. Abajo hay **dos** decodificadores: el de instrucciones (opcode de 5 bits, 32 instrucciones) y el **del campo modificador** — esa segunda decodificación es la que no existe en la BLUE original.
+
 ##### Relacionado
 [[5.4.2 Modificador de 2 bits y los 24 pulsos]] · [[BLUE indexada (RIF, RID, nuevo formato)]] ·
 [[Registros base e índice]] · [[5.3.1 Los 7 modos]] · [[Glosario — Unidad 5]]
@@ -5320,6 +5417,53 @@ instrucciones baja mucho más.
 > - Confundir los 2 bits del modificador con los 4 del opcode.
 > - Sumar `RIF` cuando el modificador es `00` (no se suma nada).
 > - Decir que la palabra sigue siendo de 16 bits (son **dos**).
+
+##### Figura de clase
+
+###### La instrucción indexada ocupa dos palabras: 5 + 2 + 9 y 16 bits de dirección.
+
+![Formato de la instrucción indexada: 5 bits de código de operación, 2 de modificador y 16 de dirección.](../assets/catedra-said-formato-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 34.*
+
+> [!tip] Qué mirar
+> La instrucción deja de ser de **una** palabra: son **dos** (32 bits en total). La primera lleva el **opcode de 5 bits** (`32` instrucciones), el **modificador de 2 bits** y **9 bits** que el ejemplo no usa; la segunda, los **16 bits de dirección**. De ahí sale la cuenta de los 24 pulsos: leer **dos** palabras de instrucción ya cuesta **dos ciclos de búsqueda** (16 pulsos) antes de ejecutar.
+
+###### Los cuatro modos, en una tabla de cuatro renglones.
+
+![Los cuatro modos del modificador: 00 directo, 01 indirecto, 10 indexado RIF y 11 indexado RID.](../assets/catedra-said-modos-modificador.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 35.*
+
+> [!tip] Qué mirar
+> El modificador es un menú de **cuatro** opciones (`2 bits ⇒ 2² = 4`): `00` **directo** (usa el campo tal cual), `01` **indirecto** (el campo apunta a la dirección real: un acceso más, **32 pulsos**), `10` **indexado RIF** (suma el índice de fuente) y `11` **indexado RID** (suma el índice de destino). El **base** no aparece acá porque **se suma siempre**, en los cuatro modos.
+
+###### `LDA 3` (indexada): dos ciclos de ejecución después de las dos búsquedas.
+
+![Los dos ciclos de ejecución de `LDA 3` en la BLUE indexada.](../assets/catedra-said-lda3-ejecucion.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 37.*
+
+> [!tip] Qué mirar
+> El caso completo de los **24 pulsos**, pulso por pulso: **dos** ciclos de búsqueda iguales (traer la palabra 1 y la palabra 2 de la instrucción) y **dos** ciclos de ejecución, uno para calcular la dirección efectiva (`Σ` = campo + RIF + RB, que va al `MAR`) y otro para traer el dato de memoria al `AC`. Comparalo con `LDA` en la BLUE original, que necesita **un solo** ciclo de ejecución.
+
+###### Los ciclos de máquina según el modo: la tabla que se pregunta.
+
+![Ciclos de máquina por instrucción y modo en la BLUE indexada.](../assets/catedra-said-ciclos-por-modo.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 41.*
+
+> [!tip] Qué mirar
+> Los números para el final: **LDA directo 3**, **LDA indirecto 4**, **LDA indexado 3**, **INI 2** y **ENI 2**. Ojo con el directo: en la BLUE **original** `LDA` directo son **2** ciclos (16 pulsos), pero en la **indexada** son **3** (24 pulsos) porque la instrucción ocupa **dos palabras** y hay que buscarlas a las dos. El indirecto agrega un ciclo más: primero se obtiene la dirección real del operando y **después** se accede al dato.
+
+###### La BLUE original contra la indexada, característica por característica.
+
+![Comparación entre la BLUE original y la BLUE indexada: registros, direccionamiento, opcode, campo de dirección, modificador, memoria y ciclos.](../assets/catedra-said-original-vs-indexada.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 42.*
+
+> [!tip] Qué mirar
+> La tabla de cierre de la unidad, ideal para el «compará las dos versiones»: **registros** (se agregan `RIF`, `RID`, `RB`, `W` y `X`), **direccionamiento** (directo e indirecto → directo, indirecto e indexado), **opcode** (4 → 5 bits, 16 → 32 instrucciones), **campo de dirección** (12 → 16 bits, 4 096 → 65 536 posiciones), **modificador** (no existía → 2 bits, 4 modos), **ciclos** (2 → 3 o 4) y **programación** (más simple y lineal contra vectores, arreglos y programas reubicables).
 
 ##### Figura del libro
 
@@ -6285,7 +6429,7 @@ CP: búsqueda (microprograma común, una sola vez por instrucción)
 ## Unidad 7 — CPU y arquitecturas
 
 > [!info] Unidad 7
-> 9 subtemas · 8.503 palabras ·
+> 9 subtemas · 8.615 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 7]] · archivo de la unidad: [[00 Unidad 7 completa (lectura de corrido)]]
 
 ### 7.1 Pipeline
@@ -6380,6 +6524,17 @@ salto mal predicho.
 > - Olvidar los **registros de etapa** al explicar por qué la latencia empeora.
 > - Poner etapas que usan **el mismo** recurso (imposible solapar).
 > - Contar el pipeline como MIMD en Flynn (es **SISD**).
+
+##### Figura de clase
+
+###### Las cinco etapas con su sigla y su función.
+
+![Las cinco etapas del pipeline (IF, ID, EX, MEM y WB) con su función.](../assets/catedra-said-etapas-pipeline.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 42.*
+
+> [!tip] Qué mirar
+> Las etapas con las **siglas** que se piden al enumerarlas: **IF** (búsqueda: trae la instrucción), **ID** (decodificación: la interpreta), **EX** (ejecución: opera), **MEM** (memoria: accede si hace falta) y **WB** (escritura: guarda el resultado). La figura también resume el balance del tema en dos líneas: **ventaja**, se solapan varias instrucciones y sube el rendimiento; **desventaja**, hace falta hardware adicional (los registros de etapa y el control de los riesgos).
 
 ##### Figura del libro
 

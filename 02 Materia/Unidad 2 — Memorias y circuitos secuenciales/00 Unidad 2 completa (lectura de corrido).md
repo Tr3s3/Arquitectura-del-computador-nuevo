@@ -8,7 +8,7 @@ unidad: 2
 > [!abstract] Qué es este archivo
 > **La Unidad 2 completa en un solo archivo**: los **20 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **14.622 palabras** y **7 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **14.748 palabras** y **7 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 2]].
@@ -113,6 +113,17 @@ La salida "recuerda" el último pulso que la tocó.
 > - Invertir la polaridad: en NOR, `S=1` **pone** a 1; en NAND, `S=0` pone a 1 (activo bajo).
 > - Decir que con `S=R=0` la salida es 0: en NOR **mantiene**.
 > - Olvidar que `Q⁺` depende de `Q`: no es una tabla de verdad combinacional, es una **tabla de estados**.
+
+#### Figura de clase
+
+##### El árbol del que cuelga todo el tema: asíncronos contra sincrónicos.
+
+![Clasificación de los biestables: asíncronos y sincrónicos.](../../assets/catedra-said-clasificacion-biestables.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 6.*
+
+> [!tip] Qué mirar
+> La **primera división** del tema, la que se pregunta antes de cualquier tabla: **asíncronos** = el estado cambia con el **nivel** de la entrada (el RS armado con NOR o con NAND); **sincrónicos** = el estado **sólo** cambia en el **flanco** del reloj. Todo lo que sigue en la unidad 2 es la rama de la derecha. Ojo: en el resumen la figura queda cortada en «activados por nivel / por flancos»; las hojas de abajo (RS, D, JK y T) son las que desarrollan 2.1.1 a 2.1.3.
 
 #### Figura del libro
 

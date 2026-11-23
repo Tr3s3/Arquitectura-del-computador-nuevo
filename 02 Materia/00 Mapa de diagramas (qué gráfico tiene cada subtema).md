@@ -5,14 +5,17 @@ tipo: indice
 
 > [!abstract] Qué es esta nota
 > Los **107 subtemas** de `02 Materia/` con los gráficos que trae cada uno: el **diagrama propio** (dibujado
-> en SVG para esta bóveda) y la **figura del libro** copiada de la bibliografía. En total: **100 diagramas propios**
-> y **132 figuras de libro** (Quiroga y Stallings), en **98 de los 107** subtemas: los 9 que no tienen son temas
-> que no están en la bibliografía y quedan con el diagrama propio.
+> en SVG para esta bóveda), la **figura del libro** copiada de la bibliografía y la **figura de clase** sacada del
+> resumen de Said. En total: **100 diagramas propios**, **132 figuras de libro** (Quiroga y Stallings) y **15
+> figuras de clase**, en **99 de los 107** subtemas: los 8 que no tienen figura externa son temas que no están ni
+> en la bibliografía ni en el resumen, y quedan con el diagrama propio.
 
 > [!tip] Cómo usarlo
 > 1. Elegí la unidad que estás estudiando.
 > 2. El **diagrama propio** es el que conviene reproducir a mano (está simplificado a lo que se pregunta).
 > 3. La **figura del libro** es la fuente: sirve para ver el detalle real y para citar de dónde sale.
+> 4. La **figura de clase** (si la hay) es la que se parece al pizarrón: el esquema del profesor y la tabla del
+>    TP. Va después de la del libro, en el mismo subtema.
 
 ## Índice
 1. [[#Unidad 1 — Circuitos de lógica digital]]
@@ -204,6 +207,34 @@ tipo: indice
 | [[10.4.2 Interfaces serie y paralelo]] | `serie_paralelo_skew` | S 5.13 |
 
 ---
+
+## Figuras de clase (resumen de Said)
+
+Las **15 figuras** del resumen de cátedra que aportaban algo que ni los libros ni el diagrama propio daban: el
+árbol de clasificación de biestables, el panel frontal de la BLUE, la tabla de los 16 nombres de instrucciones,
+el esquema de E/S con sus 64 dispositivos y toda la unidad de la BLUE indexada (formato, modos, ciclos y la
+comparación con la original). Están en `assets/catedra-said-*.png`, con la página del PDF en el pie.
+
+| Subtema | Figura de clase | Qué aporta |
+|---|---|---|
+| [[1.4.3 Multiplexor]] | `catedra-said-mux-integrado` | el MUX 4:1 dibujado como integrado: cuatro canales, dos selectores y una salida |
+| [[2.1.1 Biestable RS (NOR y NAND)]] | `catedra-said-clasificacion-biestables` | el árbol asíncronos / sincrónicos que ordena toda la unidad 2 |
+| [[4.1.2 IAS y el programa almacenado]] | `catedra-said-formato-palabra-ias` | los dos formatos de la palabra de 40 bits: dato contra instrucción |
+| [[4.2.1 Especificación, registros y 4096x16]] | `catedra-said-panel-frontal-blue` | la consola completa con sus seis pulsadores y sus 16 llaves |
+| [[4.2.2 Los 16 opcodes octales]] | `catedra-said-formato-ri` · `catedra-said-16-instrucciones-nombres` | el corte 15..12 / 11..0 y los 16 nombres en castellano |
+| [[4.3.3 Ejecución instrucción por instrucción]] | `catedra-said-es-blue` | la E/S de la BLUE: 8 líneas de dato, 6 de selección y 64 dispositivos |
+| [[5.2.1 Los 4 formatos y el campo único de dirección]] | `catedra-said-formatos-comparacion` | qué elimina cada formato al bajar de 4 a 1 dirección |
+| [[5.4.1 RIF, RID y RB]] | `catedra-said-blue-indexada` | el plano completo: los tres registros, el sumador y los dos decodificadores |
+| [[5.4.2 Modificador de 2 bits y los 24 pulsos]] | `catedra-said-formato-indexada` · `catedra-said-modos-modificador` · `catedra-said-lda3-ejecucion` · `catedra-said-ciclos-por-modo` · `catedra-said-original-vs-indexada` | las dos palabras, los cuatro modos, los ciclos por modo y la comparación con la original |
+| [[7.1.1 Etapas y diagrama en escalera]] | `catedra-said-etapas-pipeline` | las cinco etapas IF-ID-EX-MEM-WB con su función |
+
+> [!note] Las 53 que no se usaron
+> De las **68 imágenes** del resumen, **15** quedaron en la bóveda y **53** no: son **capturas de texto**
+> (enunciados, listas, definiciones) o **tablas y dibujos que ya estaban mejor resueltos** en el diagrama propio
+> del subtema (compuertas, DeMorgan, semisumador, sumador completo, flip-flops, pirámide de memorias, mapeos de
+> caché, buses, pulsos de la búsqueda, los cuatro formatos en bloque, CISC contra RISC). Una captura de 500 px no
+> mejora un SVG que dice lo mismo **y** está explicado en el texto de al lado, así que **no se borró ningún
+> diagrama propio**: la comparación está archivada en el detalle de M4, en [[07 Plan de mejoras pendientes]].
 
 ## Cómo se generan los dos tipos
 

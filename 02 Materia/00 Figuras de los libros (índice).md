@@ -18,6 +18,10 @@ tipo: indice
 > de Quiroga se pasó de **49 a 122 figuras** detectadas, y de ahí salieron casi todas las que faltaban en las
 > unidades 1, 2, 4 y 5.
 
+> [!note] Las de clase no están en esta nota
+> Acá sólo se catalogan las figuras de la **bibliografía**. Las **15 figuras del resumen de cátedra** (resumen de
+> Said) están catalogadas en [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], al final.
+
 ## Quiroga — *Arquitectura de computadoras* (Alfaomega)
 
 | Fig. | Página | Qué muestra | Subtema |

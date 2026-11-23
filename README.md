@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 311 notas · **100 SVG propios + 132 figuras de libro** · ~294.000 palabras · 0 enlaces e imágenes rotas.
-**Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **132 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]).
+**Estado:** 311 notas · **100 SVG propios + 132 figuras de libro + 15 figuras de clase** · ~295.000 palabras · 0 enlaces e imágenes rotas.
+**Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **99 de los 107** suman además figura externa: **132 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]) y **15 del resumen de cátedra**.
 **Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**), con una `00 Síntesis` por unidad.
 **Para leer de corrido:** cada unidad tiene un `00 Unidad N completa (lectura de corrido)` —todos sus subtemas pegados
 en un archivo, con diagramas y figuras— y está **[[00 Materia completa (las 10 unidades en un archivo)]]** con las 10
@@ -90,7 +90,7 @@ adentro: el nombre de la carpeta lo dice).
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
 04 Práctica/                     prácticas resueltas, checklist de dibujo, tablas de verdad, autoevaluación
-assets/                          100 SVG propios + 100 PNG de los libros
+assets/                          100 SVG propios + 132 PNG de los libros + 15 PNG de clase
 tools/                           diagramas.py, diagramas_2.py (SVG) y extraer_figuras.py (figuras de PDF)
 ```
 

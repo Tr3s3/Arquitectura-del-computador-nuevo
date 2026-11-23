@@ -8,7 +8,7 @@ unidad: 1
 > [!abstract] Qué es este archivo
 > **La Unidad 1 completa en un solo archivo**: los **17 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **11.444 palabras** y **6 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **11.574 palabras** y **6 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 1]].
@@ -915,6 +915,17 @@ MUX **4 → 1** con `S1 S0 = 01`: la salida es `F = D1`. Con `D0 = 0, D1 = 1, D2
 `S = 00 → F = 0` · `S = 01 → F = 1` · `S = 10 → F = 1` · `S = 11 → F = 0`.
 - Su función canónica es `F = S1'S0'·D0 + S1'S0·D1 + S1S0'·D2 + S1S0·D3`.
 - Un MUX **8 → 1** necesita **3** bits de selección (y 2 MUX de 4→1 + 1 de 2→1 lo arman).
+
+#### Figura de clase
+
+##### El mismo multiplexor, pero como integrado: cuatro canales, dos selectores y una salida.
+
+![El multiplexor 4 a 1, dibujado como integrado: canales 0 a 3, selectores S1 y S0, salida A.](../../assets/catedra-said-mux-integrado.png)
+
+*Figura de clase — Resumen «Arquitectura final» (Said), p. 8.*
+
+> [!tip] Qué mirar
+> El bloque tiene **cuatro entradas de canal** (`0` a `3`), **dos entradas de selección** (`S1 S0`) y **una** salida `A`: no hay que confundir las líneas de dato con las de control. Con `S1 S0 = 00, 01, 10, 11` se habilita un canal por vez, así que los cuatro datos comparten la salida sin pelearse. Es la forma en que aparece en el TP y en el integrado real (un 74LS153 trae dos multiplexores de estos por encapsulado).
 
 #### Figura del libro
 

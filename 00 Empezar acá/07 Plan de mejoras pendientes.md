@@ -10,7 +10,7 @@ tipo: indice
 
 > [!success] Punto de partida (nada de esto bloquea el estudio)
 > **107 subtemas** completos · **107/107** con ejemplo resuelto y error típico · **0 enlaces rotos** ·
-> **0 imágenes rotas** · **100 diagramas propios + 132 figuras de libro**. Todo lo de abajo es **mejora**, no
+> **0 imágenes rotas** · **100 diagramas propios + 132 figuras de libro + 15 figuras de clase**. Todo lo de abajo es **mejora**, no
 > reparación: la bóveda hoy se puede estudiar de punta a punta.
 
 ## La lista, de una
@@ -20,7 +20,7 @@ tipo: indice
 | ~~**M1**~~ | ~~**Glosario**: fichas desarrolladas por unidad~~ ✅ **hecho** (180 fichas) | — | — | — | **cerrado** |
 | ~~**M2**~~ | ~~**Figuras de libro en los 34 subtemas que no tenían**~~ ✅ **hecho** (98 de 107 subtemas con figura) | mejora | alto | **1 sesión** | **cerrado** |
 | **M3** | **Banco de autoevaluación**: 107 preguntas (hoy hay ~16) | mejora | **muy alto** | 3-4 sesiones | **P1** |
-| **M4** | **Figuras de los TPs y de los resúmenes**: circuitos resueltos de los 21 PDF + las **68 imágenes** del resumen de Said (es la única fuente para los 9 subtemas sin figura) | mejora | alto | 1-2 sesiones | P2 |
+| ~~**M4**~~ | ~~**Figuras de los TPs y de los resúmenes**~~ ✅ **hecho con el resumen de Said**: 68 imágenes revisadas, **15 incorporadas** en 10 subtemas, **0 diagramas propios borrados** (detalle abajo). Los circuitos manuscritos de los 21 TPs siguen abiertos como **M4b** | mejora | alto | 1 sesión | **cerrado (Said)** |
 | **M5** | **Recortar las 493 oraciones de más de 35 palabras** (U2 81, U1 60, U5 60, U9 53) | mejora | medio | 2-3 sesiones | P2 |
 | **M6** | **30 ejercicios resueltos estilo examen** en `04 Práctica` (3 por unidad) | mejora | alto | 2 sesiones | P2 |
 | **M7** | **Ficha de repaso de una página por unidad** (10 tarjetas) | mejora | medio | 1-2 sesiones | P2 |
@@ -74,15 +74,16 @@ ahí estaban todos los decodificadores, codificadores, MUX/DEMUX y códigos que 
 | 1.6.2 Códigos continuos y cíclicos | Quiroga no trae Gray ni Johnson en figura | no hay fuente: queda el diagrama propio |
 | 2.2.2 Registros SIPO y PISO | Quiroga sólo trae PIPO (Fig. 6.35) | **TP11 Registros SIPO-PISO** (es M4) |
 | 2.4.2 PROM, EPROM, EEPROM y Flash | el libro trae ROM y PAL/PLA, no los tipos de ROM programable | **TP12 Memoria principal** (M4) |
-| 5.4.1 RIF, RID y RB | la BLUE indexada es propia de la cátedra | **`uploads/blue.pdf`** (M4) |
+| 5.4.1 RIF, RID y RB | la BLUE indexada es propia de la cátedra | ✅ **figura de clase del resumen de Said** (M4) |
 | 8.2.1 SIMD, GPU | Stallings no cubre GPU | no hay fuente: queda el diagrama propio |
 | 8.2.3 Multiplicación de matrices | no hay figura en ninguno de los dos libros | no hay fuente: queda el diagrama propio |
 | 9.2.3 Arreglo multiplicador | Stallings trae el algoritmo (9.9-9.13), no el arreglo | no hay fuente: queda el diagrama propio |
 | 9.3.2 Sobreflujo y división con signo | la figura de división (9.15/9.16) ya está en 9.3.1 | no hay fuente: queda el diagrama propio |
 | 9.5.1 Suma decimal corregida | el libro no trae la suma BCD con corrección +6 | no hay fuente: queda el diagrama propio |
 
-**Terminado cuando:** los 5 que dependen de los TPs se resuelvan en **M4**; los otros 4 no tienen fuente en la
-bibliografía y ya están cubiertos con diagrama propio.
+**Terminado cuando:** los que dependen de los TPs se resuelvan en **M4b**; 5.4.1 ya se cerró con la figura de
+clase del resumen de Said y los 4 restantes no tienen fuente ni en la bibliografía ni en el resumen: quedan con el
+diagrama propio.
 
 ### M3 · Banco de autoevaluación: 107 preguntas — P1, 3-4 sesiones
 **Estado:** `04 Práctica/Autoevaluación.md` tiene **16 preguntas** para 107 subtemas.
@@ -91,13 +92,39 @@ enlazadas a la nota.
 **Cómo:** 3 tandas de ~35 preguntas, cada una con respuesta de 2 líneas + "si no te salió, volvé a *este* subtema".
 **Terminado cuando:** cada subtema tiene al menos una pregunta y el banco se puede rendir de corrido en ~40 min.
 
-### M4 · Figuras de los TPs — P2, 1-2 sesiones
-**Estado:** los 19 TPs resueltos (PDF) tienen los **circuitos hechos a mano** de decodificadores, MUX, DEMUX,
-Karnaugh y biestables: la única fuente real para esos subtemas.
-**Cómo:** correr `tools/extraer_figuras.py` adaptado (los TPs no tienen epígrafe `Fig. N.N`: hay que recortar por
-**página completa del ejercicio** o por bloques de tinta) y guardar como `tp-fNN-pXX.png`.
-**Riesgo:** son manuscritos ⇒ algunos recortes salen torcidos; hay que revisar con hoja de contactos como se hizo
-con los libros.
+### M4 · Figuras de clase (resumen de Said) — ✅ HECHO
+**Cómo se hizo:** `fitz` sobre el PDF del resumen (44 páginas) ⇒ **68 imágenes** extraídas a una carpeta de trabajo
+con su página, su caja y su tamaño (`w·h ≥ 4000`, que descarta viñetas y logos), hoja de contactos de 12 por hoja y
+**revisión una por una** contra el subtema que le correspondía.
+
+**Resultado: 15 figuras incorporadas en 10 subtemas** (`assets/catedra-said-*.png`, con la página del PDF en el pie
+y un `[!tip] Qué mirar`, igual que las del libro):
+
+| Subtema | Figuras | Por qué entra |
+|---|---|---|
+| 1.4.3 Multiplexor | `mux-integrado` | el MUX como **integrado** (canales, selectores, una salida): el libro sólo trae el bloque |
+| 2.1.1 Biestable RS | `clasificacion-biestables` | el **árbol asíncrono / sincrónico**, que no estaba dibujado en ningún lado |
+| 4.1.2 IAS | `formato-palabra-ias` | los **dos formatos de la palabra de 40 bits** (dato contra instrucción) |
+| 4.2.1 BLUE | `panel-frontal-blue` | la **consola** completa: 6 pulsadores, 16 leds, 16 llaves |
+| 4.2.2 Opcodes | `formato-ri` · `16-instrucciones-nombres` | el corte 15..12 / 11..0 y los **nombres en castellano** del final |
+| 4.3.3 Ejecución | `es-blue` | la **E/S con los 64 dispositivos**, `TRA` y `R`: la figura que confirma el dato de 6 bits |
+| 5.2.1 Formatos | `formatos-comparacion` | **qué elimina** cada formato de 4 a 1 dirección |
+| 5.4.1 RIF/RID/RB | `blue-indexada` | el **plano completo** de la indexada: era uno de los 9 subtemas sin figura |
+| 5.4.2 24 pulsos | `formato-indexada` · `modos-modificador` · `lda3-ejecucion` · `ciclos-por-modo` · `original-vs-indexada` | la unidad entera: dos palabras, 4 modos, ciclos por modo y la comparación con la original |
+| 7.1.1 Pipeline | `etapas-pipeline` | las etapas **IF-ID-EX-MEM-WB** con su función |
+
+**Las otras 53 se descartaron**, y esto es lo importante del ítem: son **capturas de texto** (enunciados, listas,
+definiciones) o **dibujos que el diagrama propio ya resolvía mejor** — compuertas, DeMorgan, semisumador, sumador
+completo, los cuatro flip-flops, la pirámide de memorias, los mapeos de caché, el esquema con los tres buses, los
+pulsos de la búsqueda, los cuatro formatos en bloque y CISC contra RISC. En esos casos se comparó la captura
+(≈500 px, texto de 6 pt) contra el SVG propio (vectorial, con la explicación al lado en prosa) y **el SVG gana
+siempre**: por eso **no se borró ningún diagrama propio**. El criterio de borrado quedó aplicado y el resultado fue
+"no hay nada que borrar"; lo que sí faltaba era **agregar** las 15 que aportan algo nuevo.
+
+**Lo que queda abierto (M4b):** los **circuitos manuscritos de los 21 TPs** (decodificadores, MUX, DEMUX, Karnaugh,
+biestables resueltos a mano). No tienen epígrafe `Fig. N.N`: hay que recortar por página del ejercicio o por bloques
+de tinta y revisar con hoja de contactos. Es de **prioridad baja**: los 9 subtemas que no tienen figura de libro ya
+quedaron cubiertos con diagrama propio, y uno (5.4.1) se cubrió con la figura de clase de Said.
 
 ### M5 · Recortar 493 oraciones largas — P2, 2-3 sesiones
 **Estado:** **493 de 2 505** oraciones pasan de 35 palabras (**20 %**), repartidas así: U2 **81**, U1 **60**,
