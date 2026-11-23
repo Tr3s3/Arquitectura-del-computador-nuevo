@@ -8,13 +8,15 @@ unidad: 2
 > [!abstract] Qué es este archivo
 > **La Unidad 2 completa en un solo archivo**: los **20 subtemas** pegados uno detrás de otro,
 > con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **14.303 palabras** y **7 temas**. Está pensado para **leer de corrido** y para
+> típicos. Son **14.622 palabras** y **7 temas**. Está pensado para **leer de corrido** y para
 > **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 2]].
 > - **Buscar un punto**: el índice de abajo o el de la unidad, [[00 Unidad 2 — temas y subtemas]].
 > - Cada subtema conserva su número (`1.4.1`), así coincide con el índice y con las preguntas del final.
 > - **Todo junto, las 10 unidades**: [[00 Materia completa (las 10 unidades en un archivo)]].
+>
+> *Archivo generado con `tools/unir_unidades.py`: no editarlo a mano, editar el subtema y regenerar.*
 
 ## Contenido
 
@@ -766,6 +768,30 @@ acceso normal: de ahí vienen los "ciclos robados" y parte de la latencia de la 
 Esa mezcla es la base de la **jerarquía de memorias** ([[2.5.1 Jerarquía y localidad]]): lo rápido y caro cerca de
 la CPU, lo lento y barato lejos.
 
+#### El ejemplo de chip: SRAM 1024 × 1 (Intel 2102)
+
+La SRAM que se usa como ejemplo en la materia es la **2102**: **1024 palabras de 1 bit** (1024 bits en total).
+
+| Dato | Valor | Cuenta |
+|---|---|---|
+| Capacidad | 1024 × 1 | `2¹⁰` palabras ⇒ **10 bits de dirección** |
+| Celda | 1 flip-flop (6 transistores) | no necesita refresco |
+| Salida | 1 bit | para armar 8 bits se ponen **8 chips en paralelo**, todos con la misma dirección |
+| Tiempo de acceso | del orden de decenas de ns | más rápida que la DRAM, más cara por bit |
+
+#### Tipo de acceso (cómo se clasifican las memorias)
+
+| Tipo de acceso | Qué significa | Ejemplos |
+|---|---|---|
+| **Aleatorio** (*random*) | cualquier posición tarda **lo mismo** | RAM (SRAM/DRAM), ROM |
+| **En serie** o secuencial | el tiempo depende de **dónde esté** la palabra: hay que pasar por las anteriores | cinta magnética |
+| **Directo** | salta al bloque y dentro busca en serie | disco, SSD (por bloques) |
+| **Asociativo** | se busca **por contenido**, no por dirección | memoria asociativa / CAM |
+
+> [!warning] Lo que se confunde
+> "RAM" no significa "memoria" sino **Random Access Memory**: lo que la define es el **acceso aleatorio**, no que sea
+> volátil. Una ROM también es de acceso aleatorio; un disco, no.
+
 #### Otras tecnologías que aparecen
 | Tecnología | Celda | Rasgo |
 |---|---|---|
@@ -846,6 +872,11 @@ módulos. Lo que se pregunta de esto es el **nombre y la diferencia**, no el nú
 | **Control** | `L/E` (0 = leer, 1 = escribir) · `CS`/`EN` (chip select) |
 
 ![RAM de 8 palabras por 3 bits](../../assets/ram_8x3.svg)
+
+> [!warning] Ojo con el nombre: 8×3 o 3×8
+> La misma memoria se nombra de las dos formas según el libro o el profesor: **8 × 3** (8 palabras de 3 bits) o
+> **3 × 8** (3 bits por cada una de las 8 posiciones). **Es la misma máquina**: 8 filas y 3 columnas. Si en el final
+> te dicen "RAM 3×8", contá 8 posiciones × 3 bits y no te trabes con el orden.
 
 #### Cómo se escribe una palabra (ejemplo: dirección 5, dato 101)
 1. `A2A1A0 = 101`; el decodificador activa **sólo** la salida 5.

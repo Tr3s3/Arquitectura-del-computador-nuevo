@@ -15,6 +15,8 @@ unidad: 6
 > - **Buscar un punto**: el índice de abajo o el de la unidad, [[00 Unidad 6 — temas y subtemas]].
 > - Cada subtema conserva su número (`1.4.1`), así coincide con el índice y con las preguntas del final.
 > - **Todo junto, las 10 unidades**: [[00 Materia completa (las 10 unidades en un archivo)]].
+>
+> *Archivo generado con `tools/unir_unidades.py`: no editarlo a mano, editar el subtema y regenerar.*
 
 ## Contenido
 

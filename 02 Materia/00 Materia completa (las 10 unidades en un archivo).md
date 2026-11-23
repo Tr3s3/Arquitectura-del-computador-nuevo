@@ -13,6 +13,8 @@ tipo: materia-completa
 > - **Si es la primera lectura**: leé unidad por unidad; cada una termina con su cierre.
 > - **Si querés una unidad sola**: [[00 Índice de la materia (las 10 unidades)]] tiene el archivo «Unidad N completa».
 > - Los números (`3.2.1`, `5.5.2`…) son los mismos del índice y del modelo de final.
+>
+> *Archivo generado con `tools/unir_unidades.py`: no editarlo a mano, editar el subtema y regenerar.*
 
 ## Contenido
 
@@ -1402,7 +1404,7 @@ Se ven las dos mitades: primero **entran unos** por la izquierda, después **ent
 ## Unidad 2 — Memorias y circuitos secuenciales
 
 > [!info] Unidad 2
-> 20 subtemas · 14.303 palabras ·
+> 20 subtemas · 14.622 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 2]] · archivo de la unidad: [[00 Unidad 2 completa (lectura de corrido)]]
 
 ### 2.1 Biestables y flip-flops
@@ -2117,6 +2119,30 @@ acceso normal: de ahí vienen los "ciclos robados" y parte de la latencia de la 
 Esa mezcla es la base de la **jerarquía de memorias** ([[2.5.1 Jerarquía y localidad]]): lo rápido y caro cerca de
 la CPU, lo lento y barato lejos.
 
+##### El ejemplo de chip: SRAM 1024 × 1 (Intel 2102)
+
+La SRAM que se usa como ejemplo en la materia es la **2102**: **1024 palabras de 1 bit** (1024 bits en total).
+
+| Dato | Valor | Cuenta |
+|---|---|---|
+| Capacidad | 1024 × 1 | `2¹⁰` palabras ⇒ **10 bits de dirección** |
+| Celda | 1 flip-flop (6 transistores) | no necesita refresco |
+| Salida | 1 bit | para armar 8 bits se ponen **8 chips en paralelo**, todos con la misma dirección |
+| Tiempo de acceso | del orden de decenas de ns | más rápida que la DRAM, más cara por bit |
+
+##### Tipo de acceso (cómo se clasifican las memorias)
+
+| Tipo de acceso | Qué significa | Ejemplos |
+|---|---|---|
+| **Aleatorio** (*random*) | cualquier posición tarda **lo mismo** | RAM (SRAM/DRAM), ROM |
+| **En serie** o secuencial | el tiempo depende de **dónde esté** la palabra: hay que pasar por las anteriores | cinta magnética |
+| **Directo** | salta al bloque y dentro busca en serie | disco, SSD (por bloques) |
+| **Asociativo** | se busca **por contenido**, no por dirección | memoria asociativa / CAM |
+
+> [!warning] Lo que se confunde
+> "RAM" no significa "memoria" sino **Random Access Memory**: lo que la define es el **acceso aleatorio**, no que sea
+> volátil. Una ROM también es de acceso aleatorio; un disco, no.
+
 ##### Otras tecnologías que aparecen
 | Tecnología | Celda | Rasgo |
 |---|---|---|
@@ -2197,6 +2223,11 @@ módulos. Lo que se pregunta de esto es el **nombre y la diferencia**, no el nú
 | **Control** | `L/E` (0 = leer, 1 = escribir) · `CS`/`EN` (chip select) |
 
 ![RAM de 8 palabras por 3 bits](../assets/ram_8x3.svg)
+
+> [!warning] Ojo con el nombre: 8×3 o 3×8
+> La misma memoria se nombra de las dos formas según el libro o el profesor: **8 × 3** (8 palabras de 3 bits) o
+> **3 × 8** (3 bits por cada una de las 8 posiciones). **Es la misma máquina**: 8 filas y 3 columnas. Si en el final
+> te dicen "RAM 3×8", contá 8 posiciones × 3 bits y no te trabes con el orden.
 
 ##### Cómo se escribe una palabra (ejemplo: dirección 5, dato 101)
 1. `A2A1A0 = 101`; el decodificador activa **sólo** la salida 5.
@@ -3623,7 +3654,7 @@ Cambiar `RIF` recorre el arreglo **sin reescribir** la instrucción: eso es el a
 ## Unidad 4 — Organización y diseño básico
 
 > [!info] Unidad 4
-> 10 subtemas · 8.018 palabras ·
+> 10 subtemas · 8.367 palabras ·
 > síntesis de una página: [[00 Síntesis — Unidad 4]] · archivo de la unidad: [[00 Unidad 4 completa (lectura de corrido)]]
 
 ### 4.1 Estructura y modelo von Neumann
@@ -3827,8 +3858,31 @@ idea.
 | Reloj | pulso de **125 ns** | 8 MHz |
 | Ciclo de máquina | **8 pulsos = 1 µs** | 1 000 000 de ciclos/s |
 | Instrucciones | **16** | ver [[4.2.2 Los 16 opcodes octales]] |
+| Números | **punto fijo**, complemento a dos | 16 bits = **15 de magnitud + 1 de signo** (rango −32 768 a +32 767) |
+| E/S | **64 dispositivos** (6 bits) | dato de **8 bits** por transferencia |
 
 ![Flujo de información en la máquina](../assets/blue_flujo.svg)
+
+##### La consola (lo que el operador manipula)
+
+La BLUE se opera desde un panel: 16 llaves para escribir, 16 luces para ver y seis pulsadores. Esto **se pregunta**
+en el oral porque explica cómo se carga un programa sin sistema operativo.
+
+| Elemento | Función |
+|---|---|
+| **Registro de llaves** (16 llaves de 3 posiciones) | escribe un valor: **arriba = 1**, **centro = sin efecto**, **abajo = 0** |
+| **16 leds** | muestran el contenido de los registros (luces encendidas = 1) |
+| **START** (arranque) | pone `RUN = 1`: la máquina empieza a buscar instrucciones desde el `PC` |
+| **STOP** (parada) | detiene la ejecución al terminar el ciclo en curso |
+| **LOAD PC** (cargar PC) | copia los 12 bits bajos del registro de llaves en el `PC` |
+| **DEPOSIT** (depositar) | escribe en la celda apuntada por el `PC` el valor de las llaves, y **suma 1 al `PC`** |
+| **EXAMINE** (examinar) | trae a la consola la celda apuntada por el `PC` (va al `IR`/luces) y **suma 1 al `PC`** |
+| **MASTER CLEAR / RESET** | borrado total: deja la máquina en el estado inicial de alistamiento |
+
+> [!tip] Cómo se carga un programa a mano
+> 1. **LOAD PC** con la primera dirección del programa. 2. Escribir la instrucción con las llaves. 3. **DEPOSIT**
+> (la guarda y avanza el `PC`). 4. Repetir 2 y 3 con cada palabra. 5. **LOAD PC** otra vez al inicio y **START**.
+> Para verificar lo cargado: **LOAD PC** + **EXAMINE** repetidos.
 
 ##### Los registros
 
@@ -3852,8 +3906,10 @@ idea.
 ##### Direccionamiento
 La instrucción trae **12 bits de dirección**, que se usan de dos formas:
 - **Directa**: `EA = campo` (la dirección tal cual).
-- **Para E/S**: los 8 bits bajos identifican el dispositivo (`YY`), por eso `INP`/`OUT` llevan un número de
-  dispositivo de 0 a 255.
+- **Para E/S**: los **6 bits bajos del IR** (`IR5–IR0`) se mandan por las líneas de selección de dispositivo ⇒
+  **64 dispositivos** (0 a 63). El campo de dirección de `INP`/`OUT` se escribe `XXYY`: la parte `XX` se ignora y
+  `YY` es el número de dispositivo. El **dato** que se transfiere es de **8 bits** (los 8 bajos del `AC` al entrar,
+  los 8 altos al salir).
 
 La BLUE **básica no tiene indexación**: para recorrer un arreglo hay que **modificar la instrucción** (auto
 modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE indexada** (24 pulsos).

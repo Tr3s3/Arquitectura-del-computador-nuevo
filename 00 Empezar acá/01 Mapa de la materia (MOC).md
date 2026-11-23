@@ -108,4 +108,5 @@ características y en qué subtema se estudia). Índice alfabético + los 23 par
 ## Validación y mejoras
 [[06 Validación de contenido (resúmenes, TPs y claridad)]]: qué se auditó contra los resúmenes y los TPs, y qué se agregó.
 [[07 Plan de mejoras pendientes]]: el backlog con prioridades, esfuerzo y cómo se haría cada mejora.
+[[08 Comparación con el resumen de Said (qué agregarle)]]: qué cubre ese resumen, qué le faltaba a la bóveda y qué se agregó.
 

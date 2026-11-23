@@ -20,7 +20,7 @@ tipo: indice
 | ~~**M1**~~ | ~~**Glosario**: fichas desarrolladas por unidad~~ ✅ **hecho** (180 fichas) | — | — | — | **cerrado** |
 | ~~**M2**~~ | ~~**Figuras de libro en los 34 subtemas que no tenían**~~ ✅ **hecho** (98 de 107 subtemas con figura) | mejora | alto | **1 sesión** | **cerrado** |
 | **M3** | **Banco de autoevaluación**: 107 preguntas (hoy hay ~16) | mejora | **muy alto** | 3-4 sesiones | **P1** |
-| **M4** | **Figuras de los TPs**: extraer los circuitos resueltos de los 21 PDF (es la única fuente para U1 combinacional) | mejora | alto | 1-2 sesiones | P2 |
+| **M4** | **Figuras de los TPs y de los resúmenes**: circuitos resueltos de los 21 PDF + las **68 imágenes** del resumen de Said (es la única fuente para los 9 subtemas sin figura) | mejora | alto | 1-2 sesiones | P2 |
 | **M5** | **Recortar las 493 oraciones de más de 35 palabras** (U2 81, U1 60, U5 60, U9 53) | mejora | medio | 2-3 sesiones | P2 |
 | **M6** | **30 ejercicios resueltos estilo examen** en `04 Práctica` (3 por unidad) | mejora | alto | 2 sesiones | P2 |
 | **M7** | **Ficha de repaso de una página por unidad** (10 tarjetas) | mejora | medio | 1-2 sesiones | P2 |
@@ -136,6 +136,12 @@ pero nada impide que un cambio futuro las rompa.
 ### M11 · Ampliar el modelo de final — P3, 2 sesiones
 **Estado:** el modelo de final tiene **3 tandas**; las unidades **8, 9 y 10** están flojas de preguntas.
 **Falta:** 2 preguntas por unidad nueva, con la carpeta `Apoyo a la pregunta/` como las demás.
+
+## Agregados de la comparación con el resumen de Said
+Ver [[08 Comparación con el resumen de Said (qué agregarle)]]. De los 40 puntos que cubre ese resumen, la bóveda ya
+tenía 35; se agregaron **4** (consola de la BLUE, punto fijo 15 + signo, SRAM 1024×1 — Intel 2102, tipos de acceso a
+memoria), se aclaró la notación **3×8 / 8×3** y se **corrigió un error**: los dispositivos de E/S de la BLUE son
+**64 (6 bits)**, no 256.
 
 ## Si tuvieras que elegir: el orden que yo seguiría
 
