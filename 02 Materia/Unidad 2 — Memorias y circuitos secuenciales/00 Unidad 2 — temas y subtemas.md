@@ -39,7 +39,7 @@ Unidad 2 — Memorias y circuitos secuenciales/
 │   └── 2.4.2 PROM, EPROM, EEPROM y Flash
 ├── Tema 2.5 Jerarquía y caché/
 │   ├── 2.5.1 Jerarquía y localidad
-│   ├── 2.5.2 Caché: mapeos y políticas
+│   ├── 2.5.2 Caché, mapeos y políticas
 │   └── 2.5.3 AMAT y cálculo de mejora
 ├── Tema 2.6 Memorias complementarias/
 │   ├── 2.6.1 Memoria virtual y paginación
@@ -57,7 +57,7 @@ Unidad 2 — Memorias y circuitos secuenciales/
 | **2.2 Registros y contadores** | [[2.2.1 Registros PIPO y SISO]] · [[2.2.2 Registros SIPO y PISO]] · [[2.2.3 Contadores binarios y módulo N]] | [[00 Tema 2.2 — índice]] |
 | **2.3 La celda y el chip de memoria** | [[2.3.1 Celda elemental de memoria]] · [[2.3.2 SRAM y DRAM]] · [[2.3.3 Matriz, expansión y RAM 8x3]] · [[2.3.4 Detección y corrección de errores (paridad, LRC, CRC y Hamming)]] | [[00 Tema 2.3 — índice]] |
 | **2.4 ROM y memorias no volátiles** | [[2.4.1 ROM = decodificador + OR]] · [[2.4.2 PROM, EPROM, EEPROM y Flash]] | [[00 Tema 2.4 — índice]] |
-| **2.5 Jerarquía y caché** | [[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché: mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] | [[00 Tema 2.5 — índice]] |
+| **2.5 Jerarquía y caché** | [[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché, mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] | [[00 Tema 2.5 — índice]] |
 | **2.6 Memorias complementarias** | [[2.6.1 Memoria virtual y paginación]] · [[2.6.2 Memoria auxiliar y memoria asociativa]] | [[00 Tema 2.6 — índice]] |
 | **2.7 Dimensionar memorias** | [[2.7.1 Bits de dirección igual a log2 de celdas]] · [[2.7.2 CodOp vs campo de dirección]] | [[00 Tema 2.7 — índice]] |
 

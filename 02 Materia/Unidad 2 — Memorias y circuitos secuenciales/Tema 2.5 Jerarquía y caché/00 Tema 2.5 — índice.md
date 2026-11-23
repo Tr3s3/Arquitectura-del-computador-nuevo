@@ -11,7 +11,7 @@ tema: "2.5"
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
 | **2.5.1** Jerarquía y localidad | por qué funciona tener niveles | [[2.5.1 Jerarquía y localidad]] |
-| **2.5.2** Caché: mapeos y políticas | dónde se guarda cada bloque y qué se descarta | [[2.5.2 Caché: mapeos y políticas]] |
+| **2.5.2** Caché: mapeos y políticas | dónde se guarda cada bloque y qué se descarta | [[2.5.2 Caché, mapeos y políticas]] |
 | **2.5.3** AMAT y cálculo de mejora | cuantificar la ganancia con números | [[2.5.3 AMAT y cálculo de mejora]] |
 
 > [!important] Las dos localidades

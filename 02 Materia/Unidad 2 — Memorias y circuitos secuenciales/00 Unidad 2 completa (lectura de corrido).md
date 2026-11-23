@@ -55,7 +55,7 @@ unidad: 2
 
 - [[#2.5.1 Jerarquía y localidad]]
 
-- [[#2.5.2 Caché: mapeos y políticas]]
+- [[#2.5.2 Caché, mapeos y políticas]]
 
 - [[#2.5.3 AMAT y cálculo de mejora]]
 
@@ -1169,9 +1169,9 @@ Un bucle que recorre un arreglo de **1000 enteros** de 4 bytes, uno detrás del 
 - Ésa es toda la jerarquía: registros (1 ciclo) → caché (3-10) → memoria (100) → disco (millones).
 
 #### Relacionado
-[[2.5.2 Caché: mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] · [[2.3.2 SRAM y DRAM]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
+[[2.5.2 Caché, mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] · [[2.3.2 SRAM y DRAM]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
 
-### 2.5.2 Caché: mapeos y políticas
+### 2.5.2 Caché, mapeos y políticas
 
 > [!abstract] En una frase
 > La caché es una memoria rápida y chica que guarda **copias de bloques** de la RAM. Para saber si un dato está (y dónde), la dirección se parte en **etiqueta / índice / desplazamiento**; el **mapeo** decide en qué línea puede ir cada bloque, y las **políticas** deciden qué escribir y qué expulsar.
@@ -1324,7 +1324,7 @@ Caché de 1 ns, tasa de aciertos 95 %, penalidad 100 ns: `AMAT = 1 + 0,05 × 100
 *Fig. 4.5 — Operación de lectura de caché.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 135.
 
 #### Relacionado
-[[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché: mapeos y políticas]] · [[Memoria caché]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
+[[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché, mapeos y políticas]] · [[Memoria caché]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
 
 ## 2.6 Memorias complementarias
 
@@ -1414,7 +1414,7 @@ Dirección **virtual de 32 bits** y páginas de **4 KB**:
 - Costo: si el marco no está en el `TLB`, la traducción cuesta **1 acceso extra a memoria** por cada acceso.
 
 #### Relacionado
-[[2.6.2 Memoria auxiliar y memoria asociativa]] · [[2.5.2 Caché: mapeos y políticas]] · [[2.5.1 Jerarquía y localidad]] · [[Memoria virtual y administración de memoria]] · [[Glosario — Unidad 2]]
+[[2.6.2 Memoria auxiliar y memoria asociativa]] · [[2.5.2 Caché, mapeos y políticas]] · [[2.5.1 Jerarquía y localidad]] · [[Memoria virtual y administración de memoria]] · [[Glosario — Unidad 2]]
 
 ### 2.6.2 Memoria auxiliar y memoria asociativa
 

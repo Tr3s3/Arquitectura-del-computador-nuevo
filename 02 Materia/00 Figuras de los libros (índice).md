@@ -85,8 +85,8 @@ tipo: indice
 | 3.19 | 106 | Fig. 3.19 — Temporización síncrona de las operaciones de bus | [[3.1.3 Buses de datos, de direcciones y de control]] |
 | 4.1 | 130 | Fig. 4.1 — Jerarquía de memoria | [[2.5.1 Jerarquía y localidad]] |
 | 4.5 | 135 | Fig. 4.5 — Operación de lectura de caché | [[2.5.3 AMAT y cálculo de mejora]] |
-| 4.8 | 141 | Fig. 4.8 — Ejemplo de correspondencia directa | [[2.5.2 Caché: mapeos y políticas]] |
-| 4.12 | 147 | Fig. 4.12 — Ejemplo de correspondencia asociativa por conjuntos de dos vías | [[2.5.2 Caché: mapeos y políticas]] |
+| 4.8 | 141 | Fig. 4.8 — Ejemplo de correspondencia directa | [[2.5.2 Caché, mapeos y políticas]] |
+| 4.12 | 147 | Fig. 4.12 — Ejemplo de correspondencia asociativa por conjuntos de dos vías | [[2.5.2 Caché, mapeos y políticas]] |
 | 5.3 | 178 | Fig. 5.3 — DRAM típica de 16 megabits (4M 4) | [[2.3.2 SRAM y DRAM]] |
 | 5.5 | 181 | Fig. 5.5 — Organización de una memoria de 256 KB | [[2.3.3 Matriz, expansión y RAM 8x3]] |
 | 5.11 | 186 | Fig. 5.11 — Código SEC-DED de Hamming | [[2.3.4 Detección y corrección de errores (paridad, LRC, CRC y Hamming)]] |

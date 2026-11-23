@@ -40,7 +40,7 @@ tipo: materia-completa
 
 - 2.4 ROM y memorias no volátiles: [[#2.4.1 ROM = decodificador + OR]] · [[#2.4.2 PROM, EPROM, EEPROM y Flash]]
 
-- 2.5 Jerarquía y caché: [[#2.5.1 Jerarquía y localidad]] · [[#2.5.2 Caché: mapeos y políticas]] · [[#2.5.3 AMAT y cálculo de mejora]]
+- 2.5 Jerarquía y caché: [[#2.5.1 Jerarquía y localidad]] · [[#2.5.2 Caché, mapeos y políticas]] · [[#2.5.3 AMAT y cálculo de mejora]]
 
 - 2.6 Memorias complementarias: [[#2.6.1 Memoria virtual y paginación]] · [[#2.6.2 Memoria auxiliar y memoria asociativa]]
 
@@ -2488,9 +2488,9 @@ Un bucle que recorre un arreglo de **1000 enteros** de 4 bytes, uno detrás del 
 - Ésa es toda la jerarquía: registros (1 ciclo) → caché (3-10) → memoria (100) → disco (millones).
 
 ##### Relacionado
-[[2.5.2 Caché: mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] · [[2.3.2 SRAM y DRAM]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
+[[2.5.2 Caché, mapeos y políticas]] · [[2.5.3 AMAT y cálculo de mejora]] · [[2.3.2 SRAM y DRAM]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
 
-#### 2.5.2 Caché: mapeos y políticas
+#### 2.5.2 Caché, mapeos y políticas
 
 > [!abstract] En una frase
 > La caché es una memoria rápida y chica que guarda **copias de bloques** de la RAM. Para saber si un dato está (y dónde), la dirección se parte en **etiqueta / índice / desplazamiento**; el **mapeo** decide en qué línea puede ir cada bloque, y las **políticas** deciden qué escribir y qué expulsar.
@@ -2643,7 +2643,7 @@ Caché de 1 ns, tasa de aciertos 95 %, penalidad 100 ns: `AMAT = 1 + 0,05 × 100
 *Fig. 4.5 — Operación de lectura de caché.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 135.
 
 ##### Relacionado
-[[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché: mapeos y políticas]] · [[Memoria caché]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
+[[2.5.1 Jerarquía y localidad]] · [[2.5.2 Caché, mapeos y políticas]] · [[Memoria caché]] · [[Jerarquía de memorias]] · [[TP12 Memoria principal]] · [[Glosario — Unidad 2]]
 
 ### 2.6 Memorias complementarias
 
@@ -2733,7 +2733,7 @@ Dirección **virtual de 32 bits** y páginas de **4 KB**:
 - Costo: si el marco no está en el `TLB`, la traducción cuesta **1 acceso extra a memoria** por cada acceso.
 
 ##### Relacionado
-[[2.6.2 Memoria auxiliar y memoria asociativa]] · [[2.5.2 Caché: mapeos y políticas]] · [[2.5.1 Jerarquía y localidad]] · [[Memoria virtual y administración de memoria]] · [[Glosario — Unidad 2]]
+[[2.6.2 Memoria auxiliar y memoria asociativa]] · [[2.5.2 Caché, mapeos y políticas]] · [[2.5.1 Jerarquía y localidad]] · [[Memoria virtual y administración de memoria]] · [[Glosario — Unidad 2]]
 
 #### 2.6.2 Memoria auxiliar y memoria asociativa
 
@@ -6931,7 +6931,7 @@ Todo lo que se gana con etapas más rápidas se pierde **esperando el bus**. Se 
 > Un **solo** juego de colectores (buses) entre la CPU y la memoria, y por ahí pasan tanto las instrucciones como los datos. Ese es el cuello de botella que Harvard evita separando memorias y buses.
 
 ##### Relacionado
-[[7.4.2 Buses internos y externos]] · [[7.1.2 Hazards y sus soluciones]] · [[4.1.1 Unidades funcionales de una computadora]] · [[2.5.2 Caché: mapeos y políticas]] · [[5.6.1 BIU, EU y segmentación]] · [[Glosario — Unidad 7]]
+[[7.4.2 Buses internos y externos]] · [[7.1.2 Hazards y sus soluciones]] · [[4.1.1 Unidades funcionales de una computadora]] · [[2.5.2 Caché, mapeos y políticas]] · [[5.6.1 BIU, EU y segmentación]] · [[Glosario — Unidad 7]]
 
 #### 7.4.2 Buses internos y externos
 
@@ -7664,7 +7664,7 @@ A[i][j]  está en la dirección  i·n + j
 > Es entrelazado llevado al extremo: los canales se reparten las direcciones y transmiten a la vez. El patrón de acceso decide si el paralelismo se aprovecha o si todos los pedidos caen en el mismo canal (conflicto).
 
 ##### Relacionado
-[[8.3.1 Bancos de memoria y ancho de banda]] · [[8.2.3 Multiplicación de matrices]] · [[2.5.2 Caché: mapeos y políticas]] · [[Jerarquía de memorias]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
+[[8.3.1 Bancos de memoria y ancho de banda]] · [[8.2.3 Multiplicación de matrices]] · [[2.5.2 Caché, mapeos y políticas]] · [[Jerarquía de memorias]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
 
 ### 8.4 Multiprocesadores
 
@@ -7775,7 +7775,7 @@ Un problema **grande** escala mejor que uno chico (la parte secuencial pesa meno
 *Fig. 18.5 — Organización de multiprocesador simétrico.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 697.
 
 ##### Relacionado
-[[8.4.2 Monousuario vs multiusuario]] · [[8.3.1 Bancos de memoria y ancho de banda]] · [[2.5.2 Caché: mapeos y políticas]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
+[[8.4.2 Monousuario vs multiusuario]] · [[8.3.1 Bancos de memoria y ancho de banda]] · [[2.5.2 Caché, mapeos y políticas]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
 
 #### 8.4.2 Monousuario vs multiusuario
 

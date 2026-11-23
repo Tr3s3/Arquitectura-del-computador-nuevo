@@ -79,7 +79,7 @@ tipo: indice
 | [[2.4.1 ROM = decodificador + OR]] | `rom_decodificador_or` | Q 6.23 |
 | [[2.4.2 PROM, EPROM, EEPROM y Flash]] | `prom_flash_celda` | — |
 | [[2.5.1 Jerarquía y localidad]] | `jerarquia_memorias` | S 4.1 |
-| [[2.5.2 Caché: mapeos y políticas]] | `cache_mapeos` | S 4.8 + S 4.12 |
+| [[2.5.2 Caché, mapeos y políticas]] | `cache_mapeos` | S 4.8 + S 4.12 |
 | [[2.5.3 AMAT y cálculo de mejora]] | `amat_cache` | S 4.5 |
 | [[2.6.1 Memoria virtual y paginación]] | `memoria_virtual_tlb` | Q 14.1 + S 8.18 |
 | [[2.6.2 Memoria auxiliar y memoria asociativa]] | `memoria_asociativa_cam` | S 8.19 |
