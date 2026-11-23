@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 266 notas · 29 diagramas SVG · ~224.200 palabras · 2.963 enlaces internos, 0 rotos.
-**Materia en detalle:** unidades 1 a 6, 8 y 9 completas (37 temas, 89 subtemas) con sus `00 Síntesis`; **falta desarrollar la 7** y la 10 tiene la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 280 notas · 31 diagramas SVG · ~234.800 palabras · 3.056 enlaces internos, 0 rotos.
+**Materia en detalle:** unidades 1 a 9 completas (41 temas, 98 subtemas) con sus `00 Síntesis`; sólo la 10 tiene la estructura `Unidad → Tema → Subtema` definida.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -69,7 +69,9 @@ adentro: el nombre de la carpeta lo dice).
 ├── Unidad 6 — Control microprogramado/   ✅ desarrollada (3 temas / 5 subtemas)
 │   ├── 00 Síntesis — Unidad 6
 │   └── Tema 6.1 Control cableado/ · Tema 6.2 Control microprogramado/ · Tema 6.3 Comparación y caso real/
-├── Unidad 7 — CPU y arquitecturas/        ⏳ estructura definida (4 temas / 8 subtemas)
+├── Unidad 7 — CPU y arquitecturas/        ✅ desarrollada (4 temas / 9 subtemas)
+│   ├── 00 Síntesis — Unidad 7
+│   └── Tema 7.1 Pipeline/ · … · Tema 7.4 Arquitecturas y buses/
 ├── Unidad 8 — Paralelismo/               ✅ desarrollada (4 temas / 9 subtemas)
 │   ├── 00 Síntesis — Unidad 8
 │   └── Tema 8.1 Pipeline aritmético/ · … · Tema 8.4 Multiprocesadores/

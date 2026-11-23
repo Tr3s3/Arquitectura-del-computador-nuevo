@@ -1029,6 +1029,65 @@ def d_arreglo_multiplicador():
     s.save("arreglo_multiplicador.svg")
 
 
+def d_von_neumann_harvard():
+    """von Neumann vs Harvard, y el esquema hibrido (caches separadas)."""
+    s = Svg(900, 410, "von Neumann vs Harvard: una memoria o dos")
+    # von Neumann
+    s.text(40, 56, "von NEUMANN: una sola memoria", size=10.8, weight="700")
+    s.box(60, 70, 150, 50, "CPU", "UC + ALU + regs", fill="#dbeafe")
+    s.box(60, 168, 150, 50, "MEMORIA única", "instrucciones + datos", fill="#e0e7ff")
+    s.arrow(120, 120, 120, 168)
+    s.arrow(160, 168, 160, 120)
+    s.text(180, 148, "un solo bus ⇒ se turnan", size=9.5, color=RED)
+    s.text(40, 244, "Cuello de botella: no puede buscar la instrucción", size=9.6, color="#4b5563")
+    s.text(40, 260, "y leer el dato al mismo tiempo.", size=9.6, color="#4b5563")
+    s.text(40, 280, "Ventaja: memoria única, simple y barata.", size=9.6, color="#4b5563")
+    # Harvard
+    s.text(480, 56, "HARVARD: memoria y bus separados", size=10.8, weight="700")
+    s.box(575, 70, 150, 50, "CPU", "UC + ALU + regs", fill="#dcfce7")
+    s.box(470, 168, 150, 50, "INSTRUCCIONES", "su bus", fill="#dbeafe")
+    s.box(680, 168, 150, 50, "DATOS", "su bus", fill="#fef3c7")
+    s.arrow(620, 120, 560, 168)
+    s.arrow(690, 120, 745, 168)
+    s.text(470, 244, "Puede buscar la instrucción y leer el dato", size=9.6, color="#15803d")
+    s.text(470, 260, "en el MISMO ciclo.", size=9.6, color="#15803d")
+    s.text(470, 280, "Costo: dos memorias. Se usa en DSP y en L1.", size=9.6, color="#4b5563")
+    s.raw(f'<rect x="40" y="300" width="820" height="96" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 322, "Híbrido (lo que hay en una PC):", size=10.4, weight="600")
+    s.text(56, 344, "Caché L1 separada (I y D) = Harvard por dentro · memoria principal y L2 unificadas = von Neumann por fuera.", size=10.1)
+    s.text(56, 364, "Así se evita el conflicto estructural del pipeline: búsqueda y datos no pelean por el mismo recurso.", size=10.1, color="#4b5563")
+    s.text(56, 384, "La máquina BLUE es von Neumann pura: un solo bus, un solo camino a la memoria.", size=10.1, color="#7c2d12")
+    s.save("von_neumann_harvard.svg")
+
+
+def d_buses():
+    """Buses internos y externos, con el calculo de ancho de banda."""
+    s = Svg(900, 430, "Buses: interno (dentro del chip) y externo (del sistema), con sus tres grupos de líneas")
+    s.box(40, 60, 210, 190, "", "", fill="#dbeafe")
+    s.text(56, 84, "CPU", size=11, weight="700")
+    s.text(60, 104, "registros · ALU · UC", size=9.6, color="#4b5563")
+    s.box(80, 120, 130, 40, "bus interno", "muy corto, muy ancho", fill="#e0e7ff")
+    s.box(80, 180, 130, 44, "caché L1/L2", "", fill="#dcfce7")
+    s.box(330, 60, 250, 190, "", "", fill="#fef3c7")
+    s.text(344, 86, "bus del sistema (externo)", size=10.4, weight="700")
+    s.text(344, 116, "direcciones (un solo sentido)", size=9.4, family=MONO, color="#7c2d12")
+    s.text(344, 142, "datos (bidireccional, n bits)", size=9.4, family=MONO, color="#7c2d12")
+    s.text(344, 168, "control (Read/Write, IRQ…)", size=9.4, family=MONO, color="#7c2d12")
+    s.text(344, 202, "arbitraje: quién es dueño del bus", size=9.4, color="#4b5563")
+    s.text(344, 222, "(la CPU, el DMA o un periférico)", size=9.4, color="#4b5563")
+    s.box(650, 60, 200, 84, "MEMORIA", "DRAM", fill="#e0e7ff")
+    s.box(650, 166, 200, 84, "E/S", "disco · red · USB", fill="#e0e7ff")
+    s.arrow(290, 155, 330, 155)
+    s.arrow(570, 100, 650, 100)
+    s.arrow(570, 200, 650, 200)
+    s.raw(f'<rect x="40" y="270" width="820" height="112" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 292, "Ancho de banda del bus = (bits del bus de datos / 8) × frecuencia de transferencia", size=10.6, weight="600", family=MONO)
+    s.text(56, 314, "Ejemplo: 64 bits a 200 MHz = 8 B × 200·10⁶ = 1,6 GB/s  ⇒  transferir 1 MB tarda 1 MB / 1,6 GB/s ≈ 0,62 ms", size=10.2, family=MONO, color="#7c2d12")
+    s.text(56, 340, "En la BLUE el bus es ÚNICO: memoria, CPU y periféricos comparten un solo camino ⇒ todo va de a una operación.", size=10.2, color="#4b5563")
+    s.text(56, 360, "Jerarquía real: bus interno (registros) → bus del sistema → bus de E/S (PCIe, USB, SATA).", size=10.2, color="#4b5563")
+    s.save("buses_interno_externo.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -1059,3 +1118,5 @@ if __name__ == "__main__":
     d_flynn()
     d_sumador_cla()
     d_arreglo_multiplicador()
+    d_von_neumann_harvard()
+    d_buses()

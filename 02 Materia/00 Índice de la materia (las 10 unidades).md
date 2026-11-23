@@ -46,16 +46,11 @@ prioridad: maxima
 | **4** Organización y diseño básico | 4 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 4]] |
 | **5** Programación básica y CPU convencional | 6 | 13 | ✅ **desarrollada** | [[00 Síntesis — Unidad 5]] |
 | **6** Control microprogramado | 3 | 5 | ✅ **desarrollada** | [[00 Síntesis — Unidad 6]] |
-| **7** CPU y arquitecturas | 4 | 8 | ⏳ estructura definida | — |
+| **7** CPU y arquitecturas | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 7]] |
 | **8** Paralelismo | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 8]] |
 | **9** Hardware aritmético | 5 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 9]] |
 | **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **103** | **89 subtemas escritos** | **8 de 10** |
-
-> [!warning] Unidad 7 pendiente
-> La **7 (CPU y arquitecturas)** quedó salteada: se desarrolló la 8 a pedido. Sus 8 subtemas están definidos en
-> [[00 Unidad 7 — temas y subtemas]] y su material de examen ya está escrito ([[Pipeline]], [[CISC y RISC]],
-> [[Técnicas para aumentar la velocidad]]), pero **falta la versión de programa** en carpetas.
+| **Total** | **45** | **104** | **98 subtemas escritos** | **9 de 10** |
 
 > [!note] Mientras una unidad no está desarrollada
 > No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya
