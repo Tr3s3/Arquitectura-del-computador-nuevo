@@ -973,6 +973,62 @@ def d_flynn():
     s.save("flynn.svg")
 
 
+def d_sumador_cla():
+    """Acarreo anticipado: G y P, y el retardo frente al ripple carry."""
+    s = Svg(920, 470, "Acarreo anticipado: G = A·B, P = A⊕B, C(i+1) = G + P·C(i)")
+    s.text(40, 58, "Del acarreo en cadena al acarreo anticipado", size=12.5, weight="700")
+    # ripple
+    s.text(40, 86, "RIPPLE CARRY: el acarreo atraviesa 4 etapas", size=10.6, weight="600", color="#b91c1c")
+    for k in range(4):
+        x = 40 + k * 200
+        s.box(x, 96, 150, 56, f"FA {k}", "espera el acarreo", fill="#fee2e2")
+        if k < 3:
+            s.arrow(x + 150, 124, x + 190, 124)
+            s.text(x + 170, 116, "C", size=8.5, anchor="middle", color="#b91c1c")
+    s.text(40, 172, "retardo total ≈ 4 × (retardo del FA) = 8 niveles de compuerta", size=10, color="#4b5563")
+    # cla
+    s.text(40, 208, "ACARREO ANTICIPADO: todos los acarreos se calculan a la vez", size=10.6, weight="600", color="#15803d")
+    s.box(40, 220, 200, 92, "G(i) = A(i) · B(i)", "genera acarreo", fill="#dcfce7")
+    s.box(280, 220, 200, 92, "P(i) = A(i) ⊕ B(i)", "propaga acarreo", fill="#dcfce7")
+    s.box(520, 220, 360, 92, "C(i+1) = G(i) + P(i) · C(i)", "con 2 niveles por acarreo", fill="#fef3c7")
+    s.arrow(240, 266, 280, 266)
+    s.arrow(480, 266, 520, 266)
+    # ecuaciones
+    s.raw(f'<rect x="40" y="330" width="840" height="122" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 352, "Desarrollo para 4 bits (C0 = acarreo de entrada):", size=10.4, weight="600")
+    s.text(56, 374, "C1 = G0 + P0·C0", size=10.6, family=MONO)
+    s.text(56, 394, "C2 = G1 + P1·G0 + P1·P0·C0", size=10.6, family=MONO)
+    s.text(56, 414, "C3 = G2 + P2·G1 + P2·P1·G0 + P2·P1·P0·C0", size=10.6, family=MONO)
+    s.text(56, 434, "C4 = G3 + P3·G2 + P3·P2·G1 + P3·P2·P1·G0 + P3·P2·P1·P0·C0", size=10.6, family=MONO, color=RED)
+    s.text(600, 374, "Suma: S(i) = P(i) ⊕ C(i)", size=10.4, family=MONO, color=ACCENT)
+    s.text(600, 398, "Cascada en bloques de 4:", size=10.4, weight="600")
+    s.text(600, 418, "cada bloque calcula su G* y P*", size=10.2, color="#4b5563")
+    s.text(600, 436, "y se pasa el acarreo de grupo", size=10.2, color="#4b5563")
+    s.save("sumador_acarreo_anticipado.svg")
+
+
+def d_arreglo_multiplicador():
+    """Multiplicador de arreglo: productos parciales sumados en una matriz de FA."""
+    s = Svg(860, 470, "Multiplicador de arreglo: n² celdas suman todos los productos parciales a la vez")
+    s.text(40, 58, "4 × 4: cada fila es un producto parcial; cada celda es un sumador completo", size=11, weight="600")
+    x0, y0, w, h = 130, 90, 130, 52
+    etiquetas = ["PP0 = M·b0", "PP1 = M·b1", "PP2 = M·b2", "PP3 = M·b3"]
+    for k in range(4):
+        y = y0 + k * (h + 14)
+        s.text(40, y + 30, etiquetas[k], size=9.8, family=MONO, color="#7c2d12")
+        for j in range(4):
+            x = x0 + j * w
+            s.raw(f'<rect x="{x}" y="{y}" width="{w - 10}" height="{h}" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>')
+            s.text(x + (w - 10) / 2, y + 22, f"a{k}{j}", size=9.4, anchor="middle", family=MONO)
+            s.text(x + (w - 10) / 2, y + 38, "+", size=11, anchor="middle", weight="700", color="#15803d")
+    s.raw(f'<rect x="40" y="356" width="780" height="94" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 376, "Cada 'a' es un sumador completo (o un sumador con acarreo guardado: carry-save).", size=10.2, color="#374151")
+    s.text(56, 398, "Ventaja: es COMBINACIONAL — el producto aparece en el retardo de la matriz (≈ 2n niveles), sin reloj ni ciclos.", size=10.4, weight="600")
+    s.text(56, 420, "Costo: n² celdas (un multiplicador de 32 × 32 pide 1024 sumadores) y muchísimos transistores.", size=10.4, color="#4b5563")
+    s.text(56, 440, "Alternativa secuencial: sumas y desplazamientos ⇒ n ciclos de reloj, pero con un solo sumador.", size=10.4, color="#4b5563")
+    s.save("arreglo_multiplicador.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -1001,3 +1057,5 @@ if __name__ == "__main__":
     d_pipeline_aritmetico()
     d_memoria_entrelazada()
     d_flynn()
+    d_sumador_cla()
+    d_arreglo_multiplicador()

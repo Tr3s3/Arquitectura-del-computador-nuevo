@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 250 notas · 27 diagramas SVG · ~212.600 palabras · 2.865 enlaces internos, 0 rotos.
-**Materia en detalle:** unidades 1 a 6 y 8 completas (32 temas, 79 subtemas) con sus `00 Síntesis`; **falta desarrollar la 7** y las 9 y 10 tienen la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 266 notas · 29 diagramas SVG · ~224.200 palabras · 2.963 enlaces internos, 0 rotos.
+**Materia en detalle:** unidades 1 a 6, 8 y 9 completas (37 temas, 89 subtemas) con sus `00 Síntesis`; **falta desarrollar la 7** y la 10 tiene la estructura `Unidad → Tema → Subtema` definida.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -73,7 +73,10 @@ adentro: el nombre de la carpeta lo dice).
 ├── Unidad 8 — Paralelismo/               ✅ desarrollada (4 temas / 9 subtemas)
 │   ├── 00 Síntesis — Unidad 8
 │   └── Tema 8.1 Pipeline aritmético/ · … · Tema 8.4 Multiprocesadores/
-└── Unidad 9 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
+├── Unidad 9 — Hardware aritmético/       ✅ desarrollada (5 temas / 10 subtemas)
+│   ├── 00 Síntesis — Unidad 9
+│   └── Tema 9.1 Suma y resta/ · … · Tema 9.5 Aritmética BCD/
+└── Unidad 10 — Entrada y Salida/          ⏳ estructura definida (4 temas / 7 subtemas)
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada

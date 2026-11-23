@@ -48,9 +48,9 @@ prioridad: maxima
 | **6** Control microprogramado | 3 | 5 | ✅ **desarrollada** | [[00 Síntesis — Unidad 6]] |
 | **7** CPU y arquitecturas | 4 | 8 | ⏳ estructura definida | — |
 | **8** Paralelismo | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 8]] |
-| **9** Hardware aritmético | 5 | 8 | ⏳ estructura definida | — |
+| **9** Hardware aritmético | 5 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 9]] |
 | **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **101** | **79 subtemas escritos** | **7 de 10** |
+| **Total** | **45** | **103** | **89 subtemas escritos** | **8 de 10** |
 
 > [!warning] Unidad 7 pendiente
 > La **7 (CPU y arquitecturas)** quedó salteada: se desarrolló la 8 a pedido. Sus 8 subtemas están definidos en

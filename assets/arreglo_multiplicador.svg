@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Multiplicador de arreglo: n² celdas suman todos los productos parciales a la vez</text>
+  <text x="40" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" text-anchor="start" fill="#1f2937">4 × 4: cada fila es un producto parcial; cada celda es un sumador completo</text>
+  <text x="40" y="120" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">PP0 = M·b0</text>
+  <rect x="130" y="90" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="190.0" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a00</text>
+  <text x="190.0" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="260" y="90" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="320.0" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a01</text>
+  <text x="320.0" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="390" y="90" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="450.0" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a02</text>
+  <text x="450.0" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="520" y="90" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="580.0" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a03</text>
+  <text x="580.0" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <text x="40" y="186" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">PP1 = M·b1</text>
+  <rect x="130" y="156" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="190.0" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a10</text>
+  <text x="190.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="260" y="156" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="320.0" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a11</text>
+  <text x="320.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="390" y="156" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="450.0" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a12</text>
+  <text x="450.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="520" y="156" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="580.0" y="178" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a13</text>
+  <text x="580.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <text x="40" y="252" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">PP2 = M·b2</text>
+  <rect x="130" y="222" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="190.0" y="244" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a20</text>
+  <text x="190.0" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="260" y="222" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="320.0" y="244" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a21</text>
+  <text x="320.0" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="390" y="222" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="450.0" y="244" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a22</text>
+  <text x="450.0" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="520" y="222" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="580.0" y="244" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a23</text>
+  <text x="580.0" y="260" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <text x="40" y="318" font-family="Consolas, 'Courier New', monospace" font-size="9.8" font-weight="400" text-anchor="start" fill="#7c2d12">PP3 = M·b3</text>
+  <rect x="130" y="288" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="190.0" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a30</text>
+  <text x="190.0" y="326" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="260" y="288" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="320.0" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a31</text>
+  <text x="320.0" y="326" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="390" y="288" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="450.0" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a32</text>
+  <text x="450.0" y="326" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="520" y="288" width="120" height="52" rx="4" fill="#dbeafe" stroke="#1f2937" stroke-width="1.3"/>
+  <text x="580.0" y="310" font-family="Consolas, 'Courier New', monospace" font-size="9.4" font-weight="400" text-anchor="middle" fill="#1f2937">a33</text>
+  <text x="580.0" y="326" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#15803d">+</text>
+  <rect x="40" y="356" width="780" height="94" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="56" y="376" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#374151">Cada 'a' es un sumador completo (o un sumador con acarreo guardado: carry-save).</text>
+  <text x="56" y="398" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" text-anchor="start" fill="#1f2937">Ventaja: es COMBINACIONAL — el producto aparece en el retardo de la matriz (≈ 2n niveles), sin reloj ni ciclos.</text>
+  <text x="56" y="420" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">Costo: n² celdas (un multiplicador de 32 × 32 pide 1024 sumadores) y muchísimos transistores.</text>
+  <text x="56" y="440" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">Alternativa secuencial: sumas y desplazamientos ⇒ n ciclos de reloj, pero con un solo sumador.</text>
+</svg>
