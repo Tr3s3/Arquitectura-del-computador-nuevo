@@ -10,7 +10,7 @@ tipo: indice
 
 > [!success] Punto de partida (nada de esto bloquea el estudio)
 > **107 subtemas** completos · **107/107** con ejemplo resuelto y error típico · **0 enlaces rotos** ·
-> **0 imágenes rotas** · **100 diagramas propios + 100 figuras de libro**. Todo lo de abajo es **mejora**, no
+> **0 imágenes rotas** · **100 diagramas propios + 132 figuras de libro**. Todo lo de abajo es **mejora**, no
 > reparación: la bóveda hoy se puede estudiar de punta a punta.
 
 ## La lista, de una
@@ -18,7 +18,7 @@ tipo: indice
 | # | Mejora | Tipo | Impacto | Esfuerzo | Prioridad |
 |---|---|---|---|---|---|
 | ~~**M1**~~ | ~~**Glosario**: fichas desarrolladas por unidad~~ ✅ **hecho** (180 fichas) | — | — | — | **cerrado** |
-| **M2** | **Figuras de libro en los 34 subtemas que no tienen** (usar las **108 ya extraídas** que quedaron sin usar) | mejora | alto | **1 sesión** | **P1** |
+| ~~**M2**~~ | ~~**Figuras de libro en los 34 subtemas que no tenían**~~ ✅ **hecho** (98 de 107 subtemas con figura) | mejora | alto | **1 sesión** | **cerrado** |
 | **M3** | **Banco de autoevaluación**: 107 preguntas (hoy hay ~16) | mejora | **muy alto** | 3-4 sesiones | **P1** |
 | **M4** | **Figuras de los TPs**: extraer los circuitos resueltos de los 21 PDF (es la única fuente para U1 combinacional) | mejora | alto | 1-2 sesiones | P2 |
 | **M5** | **Recortar las 493 oraciones de más de 35 palabras** (U2 81, U1 60, U5 60, U9 53) | mejora | medio | 2-3 sesiones | P2 |
@@ -49,37 +49,40 @@ final de **23 pares que se confunden** (`C` vs `V`, paridad vs Hamming, caché v
 **Si se quiere seguir:** los términos de la sección "Términos que se confunden" podrían tener ficha propia, y
 faltaría un diagrama por ficha (hoy cada una remite al diagrama del subtema).
 
-### M2 · Figuras de libro en los 34 subtemas que no tienen — P1, 1 sesión
-**Estado:** **73 de 107** subtemas tienen figura de libro; **34** no. De las **208 figuras extraídas**, **108
-quedaron sin usar** en `_figs/`.
-**Falta:** asignarlas. Propuesta concreta (las que ya tienen candidato claro):
+### M2 · Figuras de libro — ✅ HECHO (quedan 9 sin figura en los libros)
+**Cómo quedó:** **98 de 107** subtemas tienen figura de libro (antes 73), con **132 figuras** pegadas (antes 100).
+Se agregaron **25 subtemas** y **32 figuras**: decodificadores, codificadores, MUX/DEMUX, DeMorgan, códigos
+(exceso 3 y Aiken), Karnaugh, biestable RS, conversión de biestables, formato de instrucción, Von Neumann y los
+formatos de PDP-11, MIPS y las tres formas de programar.
 
-| Subtema sin figura | Figura disponible |
+| Lo que se agregó | Figuras |
 |---|---|
-| 1.2.2 DeMorgan | Quiroga **6.27** (diagrama con compuertas NOR) |
-| 1.2.3 Simplificación | Quiroga **6.17** (diagrama de lógica) |
-| 1.3.1 Mintérminos | Quiroga **6.11** (diagrama de lógica de F3) |
-| 2.1.1 Biestable RS | Quiroga **6.31** (diagramas de bloque) |
-| 2.1.4 Conversión de biestables | Quiroga **6.2** (semisumador, otra opción) |
-| 2.7.2 CodOp vs dirección | Stallings **11.6** (formatos del PDP-11) |
-| 4.2.1 Especificación de la BLUE | Stallings **3.5** (ejecución de un programa) |
-| 4.2.2 Los 16 opcodes | Stallings **11.7** (ejemplos de instrucciones del VAX) |
-| 4.2.3 Programar en BLUE | Stallings **10.15** (tres programas equivalentes) |
-| 5.1.2 Clasificación de instrucciones | Stallings **10.6** (instrucciones de bifurcación) |
-| 5.2.1 Los 4 formatos | Stallings **13.8** (formatos del MIPS) |
-| 5.2.2 Cálculo del CodOp | Stallings **13.13** (formatos del SPARC) |
-| 7.4.1 von Neumann vs Harvard | Stallings **1.4** (estructura del nivel superior) |
-| 8.2.1 SIMD y registros vectoriales | Stallings **15.7** (registros de aplicación IA-64) |
-| 8.2.2 Flynn | Stallings **18.4** (multiprocesador genérico) |
-| 8.3.1 Bancos de memoria | Stallings **5.12** (SDRAM) |
-| 8.3.2 Entrelazado | Stallings **5.14** (estructura RDRAM) |
-| 9.2.3 Arreglo multiplicador | Stallings **9.9** (flujo de la multiplicación) |
-| 9.5.1 Suma decimal corregida | Quiroga **6.8** (convertidor de código) |
-| 2.4.2 PROM/EPROM/Flash | Quiroga **9.11** (inserción de chip y módulo) |
+| **Unidad 1** (8 subtemas) | Q 5.8, 5.9, 5.12, 6.7, 6.8, 6.10, 6.11, 6.13, 6.15, 6.18, 6.19, 6.20, 3.5, 3.6 + 2 mapas de Karnaugh recortados a mano |
+| **Unidad 2** (3) | Q 6.27 (RS con NOR), Q 6.31 (conversión T→J-K), Q 7.9 (código de instrucción) |
+| **Unidad 4** (3) | S 3.5 (ejecución paso a paso), Q 7.6 (formato 4+12), Q 8.2 (ciclo de las n instrucciones) |
+| **Unidad 5** (3) | S 10.6 (bifurcación), S 10.15 (tres programas), S 13.8 (MIPS), S 11.6 (PDP-11) |
+| **Unidades 7, 8 y 9** (5) | Q 1.3 (von Neumann), S 18.4 (multiprocesador), S 5.12 (SDRAM), S 5.14 (RDRAM), Q 4.1 y Q 5.16 (acarreo serie) |
 
-**Los 14 que quedan sin candidato** (1.3.2 Karnaugh, 1.3.3 don't care, 1.4.1 a 1.4.4, 1.6.1, 1.6.2, 2.2.2,
-5.4.1, 8.2.3, 9.1.2, 9.3.2) **no tienen figura en los libros**: son temas que en la bibliografía están resueltos
-con ejemplos resueltos, no con láminas. Para ésos va **M4**.
+**El descubrimiento de la sesión:** el extractor fallaba cuando **figura y epígrafe estaban pegados** en el mismo
+bloque de tinta (por eso había 49 figuras de Quiroga). Corregido, Quiroga pasó de **49 a 122 figuras detectadas**:
+ahí estaban todos los decodificadores, codificadores, MUX/DEMUX y códigos que faltaban.
+
+**Los 9 que quedan sin figura de libro** (los libros no los traen, o el tema es propio de la cátedra):
+
+| Subtema | Por qué no hay | De dónde podría salir |
+|---|---|---|
+| 1.6.2 Códigos continuos y cíclicos | Quiroga no trae Gray ni Johnson en figura | no hay fuente: queda el diagrama propio |
+| 2.2.2 Registros SIPO y PISO | Quiroga sólo trae PIPO (Fig. 6.35) | **TP11 Registros SIPO-PISO** (es M4) |
+| 2.4.2 PROM, EPROM, EEPROM y Flash | el libro trae ROM y PAL/PLA, no los tipos de ROM programable | **TP12 Memoria principal** (M4) |
+| 5.4.1 RIF, RID y RB | la BLUE indexada es propia de la cátedra | **`uploads/blue.pdf`** (M4) |
+| 8.2.1 SIMD, GPU | Stallings no cubre GPU | no hay fuente: queda el diagrama propio |
+| 8.2.3 Multiplicación de matrices | no hay figura en ninguno de los dos libros | no hay fuente: queda el diagrama propio |
+| 9.2.3 Arreglo multiplicador | Stallings trae el algoritmo (9.9-9.13), no el arreglo | no hay fuente: queda el diagrama propio |
+| 9.3.2 Sobreflujo y división con signo | la figura de división (9.15/9.16) ya está en 9.3.1 | no hay fuente: queda el diagrama propio |
+| 9.5.1 Suma decimal corregida | el libro no trae la suma BCD con corrección +6 | no hay fuente: queda el diagrama propio |
+
+**Terminado cuando:** los 5 que dependen de los TPs se resuelvan en **M4**; los otros 4 no tienen fuente en la
+bibliografía y ya están cubiertos con diagrama propio.
 
 ### M3 · Banco de autoevaluación: 107 preguntas — P1, 3-4 sesiones
 **Estado:** `04 Práctica/Autoevaluación.md` tiene **16 preguntas** para 107 subtemas.
@@ -138,7 +141,7 @@ pero nada impide que un cambio futuro las rompa.
 
 | Momento | Qué hacer | Para qué |
 |---|---|---|
-| **Una tarde** | **M1 + M2** (glosario + figuras que ya están extraídas) | deja el material **parejo**: ningún subtema sin figura |
+| ~~Una tarde~~ ✅ | ~~**M1 + M2**~~ · hechos: glosario de 180 fichas y figuras en 98 de 107 subtemas | el material quedó parejo |
 | **Un fin de semana** | **M3** (banco de 107 preguntas) | es lo que más cambia la forma de estudiar: pasás de leer a **rendir** |
 | **La semana antes del parcial** | **M7 + M8** (fichas de una página y test de cuentas) | repaso rápido y confianza en los números |
 | **Después del parcial** | **M4 + M5 + M6** | completar figuras de TPs, aligerar el texto y sumar ejercicios |
@@ -147,8 +150,10 @@ pero nada impide que un cambio futuro las rompa.
 ## Lo que NO está pendiente
 - Contenido de las **10 unidades**: cerrado (46 temas, 107 subtemas, 10 síntesis).
 - Diagrama propio en cada subtema: **107/107**.
+- Figura de libro: **98 de 107** subtemas (**132 figuras**); los 9 que faltan no están en los libros (5 podrían salir de los TPs en M4).
 - Ejemplo resuelto y error típico en cada subtema: **107/107**.
 - Enlaces e imágenes: **0 rotos**.
+- Glosario: **180 fichas** en 10 notas, con índice alfabético (M1 cerrado).
 - Videos de los TPs: listados y verificados (2 muertos quitados).
 - Auditoría contra los resúmenes: hecha, con los 6 huecos cerrados.
 

@@ -10,7 +10,7 @@ tipo: indice
 
 > [!success] Resultado en una línea
 > **107 subtemas** cubiertos, **107/107 con ejemplo resuelto y con caja de error típico**, **100 diagramas propios
-> + 100 figuras de libro**, **0 enlaces y 0 imágenes rotas**, y **6 temas que sólo estaban en los resúmenes** que se
+> + 132 figuras de libro**, **0 enlaces y 0 imágenes rotas**, y **6 temas que sólo estaban en los resúmenes** que se
 > agregaron como contenido nuevo.
 
 ## 1. Método
