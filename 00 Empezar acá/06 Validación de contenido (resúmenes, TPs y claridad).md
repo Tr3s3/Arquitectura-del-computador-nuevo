@@ -109,5 +109,5 @@ liviano.
 5. **Cierre:** `04 Práctica/Autoevaluación` y el `01 Modelo de final resuelto` para las preguntas orales.
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]] ·
+[[07 Plan de mejoras pendientes]] (el backlog con prioridades) · [[00 Índice de la materia (las 10 unidades)]] · [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]] ·
 [[00 Figuras de los libros (índice)]] · [[00 Índice de TPs y qué aporta cada uno]] · [[02 Plan de estudio — las 10 unidades]]
