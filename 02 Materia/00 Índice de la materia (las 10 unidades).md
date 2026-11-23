@@ -45,12 +45,12 @@ prioridad: maxima
 | **3** Transferencia de registros y microoperaciones | 3 | 7 | ✅ **desarrollada** | [[00 Síntesis — Unidad 3]] |
 | **4** Organización y diseño básico | 4 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 4]] |
 | **5** Programación básica y CPU convencional | 6 | 13 | ✅ **desarrollada** | [[00 Síntesis — Unidad 5]] |
-| **6** Control microprogramado | 3 | 5 | ⏳ estructura definida | — |
+| **6** Control microprogramado | 3 | 5 | ✅ **desarrollada** | [[00 Síntesis — Unidad 6]] |
 | **7** CPU y arquitecturas | 4 | 8 | ⏳ estructura definida | — |
 | **8** Paralelismo | 4 | 4 | ⏳ estructura definida | — |
 | **9** Hardware aritmético | 5 | 8 | ⏳ estructura definida | — |
 | **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **96** | **65 subtemas escritos** | **5 de 10** |
+| **Total** | **45** | **96** | **70 subtemas escritos** | **6 de 10** |
 
 > [!note] Mientras una unidad no está desarrollada
 > No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya

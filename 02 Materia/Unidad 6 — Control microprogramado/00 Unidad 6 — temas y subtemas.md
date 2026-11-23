@@ -12,46 +12,52 @@ unidad: 6
 
 ```
 Unidad 6 — Control microprogramado/
-├── 6.1 Control cableado/
+├── Tema 6.1 Control cableado/
 │   └── 6.1.1 Circuito, compuertas y señales
-├── 6.2 Control microprogramado/
+├── Tema 6.2 Control microprogramado/
 │   ├── 6.2.1 Memoria de control y microinstrucción
 │   └── 6.2.2 Secuenciamiento y microPC
-└── 6.3 Comparación y caso real/
+└── Tema 6.3 Comparación y caso real/
     ├── 6.3.1 Cableada vs microprogramada
-    └── 6.3.2 El 8088: ROM de control 504×21
+    ├── 6.3.2 El 8088: ROM de control 504×21
+    └── Unidad de control cableada y microprogramada   (nota de desarrollo de examen)
 ```
 
-**3 temas y 5 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
-y al terminar la unidad se genera **`00 Síntesis — Unidad 6`** con todo el contenido junto (como ya está hecho en
-[[00 Síntesis — Unidad 1|la Unidad 1]]).
+**3 temas y 5 subtemas.** Cada subtema es **una nota** dentro de la carpeta de su tema. La unidad está **cerrada**
+y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 6]]**.
 
 | Tema | Subtemas | Estado |
 |---|---|---|
-| **6.1 Control cableado** | 6.1.1 Circuito, compuertas y señales | ⏳ a desarrollar |
-| **6.2 Control microprogramado** | 6.2.1 Memoria de control y microinstrucción · 6.2.2 Secuenciamiento y microPC | ⏳ a desarrollar |
-| **6.3 Comparación y caso real** | 6.3.1 Cableada vs microprogramada · 6.3.2 El 8088: ROM de control 504×21 | ⏳ a desarrollar |
+| **6.1 Control cableado** | 6.1.1 Circuito, compuertas y señales | ✅ |
+| **6.2 Control microprogramado** | 6.2.1 Memoria de control y microinstrucción · 6.2.2 Secuenciamiento y microPC | ✅ |
+| **6.3 Comparación y caso real** | 6.3.1 Cableada vs microprogramada · 6.3.2 El 8088: ROM de control 504×21 | ✅ |
 
-> [!note] Qué hay ya de esta unidad
-> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
-> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
-> tema, con el detalle de la cursada y los TPs.
+## Los 3 temas, de un vistazo
 
-## Material ya disponible de esta unidad
-| Tema | Subtemas | Dónde está el desarrollo |
+| Tema | Índice | La idea en una línea |
 |---|---|---|
-| **6.1 Control cableado** | lógica combinacional · señales `estado·pulso·instrucción` · rápido pero rígido | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] · carpeta `Tanda 1/1.6` y su `Apoyo a la pregunta/` |
-| **6.2 Control microprogramado** | memoria de control (**ROM**) · microinstrucción y sus campos · microprograma · secuenciamiento (microPC) · PLA vs ROM | [[Unidad de control cableada y microprogramada]] · [[Cómo se implementa la Unidad de Control]] |
-| **6.3 Comparación** | velocidad · flexibilidad · costo · relación con **CISC y RISC** | [[CISC y RISC]] · carpeta `Tanda 2/2.6` |
-| **6.4 El caso real** | el 8088: ROM de control 504×21 · ~90 microprocedimientos · microinstrucción de 5+5+3+4+3+1 | [[El 8086 como CPU convencional (TP21)]] · [[Cómo se implementa la Unidad de Control]] |
+| **6.1** | [[00 Tema 6.1 — índice]] | `señal = estado · pulso · instrucción`, con AND y OR |
+| **6.2** | [[00 Tema 6.2 — índice]] | el opcode **elige una dirección** de la ROM, no enciende compuertas |
+| **6.3** | [[00 Tema 6.3 — índice]] | rápida y rígida vs lenta y flexible · 504 × 21 bits |
+
+## Material de examen ya disponible de esta unidad
+| Tema | Nota | Dónde está además |
+|---|---|---|
+| **Todo el tema** | [[Cómo se implementa la Unidad de Control]] | `Tanda 1/1.6` + `Apoyo a la pregunta/` |
+| **Microprogramación** | [[Unidad de control cableada y microprogramada]] | `Tema 6.3 Comparación y caso real/` |
+| **Control de la UC** | [[Unidad de Control]] | `Tanda 1/1.6/Apoyo a la pregunta/` |
+| **CISC vs RISC** | [[CISC y RISC]] | `Tanda 2/2.6` |
+| **El 8088 real** | [[El 8086 como CPU convencional (TP21)]] | Unidad 5 · `Tema 5.6 El 8086/` |
 
 ---
 
 ## Qué hay que saber hacer al terminar la unidad
-1. **Dibujar** el esquema de una UC cableada: decodificador de opcode + FF de estado + compuertas OR.
-2. **Escribir** una microinstrucción con sus campos y explicar para qué sirve cada uno.
-3. Decir **cuándo conviene** cada tipo (complejo y cambiante → microprogramado; simple y rápido → cableado).
-4. Relacionarlo con **CISC (microprogramado) y RISC (cableado)**.
+1. **Dibujar** el esquema de una UC cableada: decodificador + FF de estado + compuertas AND/OR.
+2. **Escribir la ecuación** de una señal de control y explicar el papel de las familias `REF` / `ARITH` / `DTA`.
+3. **Escribir** una microinstrucción con sus campos y explicar para qué sirve cada uno.
+4. Explicar los **cuatro mecanismos de secuenciamiento** (incremento, condicional, mapeo, microsubrutina).
+5. Decir **cuándo conviene** cada tipo y relacionarlo con **CISC y RISC**.
+6. Manejar los **números del 8088**: 504 × 21 bits, ~90 microprocedimientos, microPC de 9 bits.
 
 ## TPs de la unidad
 No tiene TP propio: se estudia con [[TP16 Ciclo de instrucción básico]] y el cierre del
@@ -66,4 +72,4 @@ Apuntes **Unidad 5** (sección del 8088: memoria de control, PLA, microMAR) · `
 
 ## Relacionado
 [[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 5 — temas y subtemas]] ·
-[[00 Unidad 7 — temas y subtemas]]
+[[00 Unidad 7 — temas y subtemas]] · [[00 Síntesis — Unidad 6]]

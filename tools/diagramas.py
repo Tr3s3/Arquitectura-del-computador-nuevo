@@ -829,6 +829,75 @@ def d_karnaugh_3var():
     s.save("karnaugh_3var.svg")
 
 
+
+def d_uc_cableada():
+    """UC cableada: entradas (opcode, estado, reloj) -> AND -> OR -> senales."""
+    s = Svg(920, 490, "Unidad de control cableada: las AND eligen, las OR juntan")
+    s.box(20, 52, 168, 52, "IR 15..12", "opcode de 4 bits")
+    s.box(20, 122, 168, 52, "1 → 16", "una línea por instrucción", fill="#dbeafe")
+    s.box(20, 192, 168, 52, "FF STATE · RUN · TRA", "F/E · corriendo · E/S")
+    s.box(20, 262, 168, 52, "reloj maestro", "CP1 … CP8")
+    # colector
+    s.wire([(188, 78), (216, 78), (216, 288), (188, 288)])
+    for y in (78, 148, 218, 288):
+        s.dot(216, y)
+    s.arrow(216, 183, 250, 183)
+    s.box(250, 148, 190, 70, "compuertas AND", "una por señal", fill="#fef3c7")
+    s.arrow(440, 183, 474, 183)
+    s.box(474, 148, 156, 70, "compuertas OR", "las que dan el mismo efecto", fill="#dcfce7")
+    s.arrow(630, 183, 664, 183)
+    s.box(664, 132, 236, 102, "señales de control", "Send X · Load Y · Read / Write", fill="#ffffff")
+    s.note(680, 214, ["(a los registros, la ALU, la memoria)"], size=9.5, lh=13)
+
+    # ejemplo de expansion
+    s.raw(f'<rect x="20" y="330" width="880" height="142" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(34, 352, "Por dentro: cada AND dice «en este estado, en este pulso, con esta instrucción», y la OR junta las que producen la misma señal", size=10.6, weight="600")
+    filas = [("F · CP1", "Send PC, Load MAR"),
+             ("E · CP2 · ARITH", "Send A, Load Z"),
+             ("E · CP6 · LDA", "Send MBR, Load A")]
+    for k, (a, b) in enumerate(filas):
+        y = 384 + k * 26
+        s.text(44, y, a, size=10.2, family=MONO, color="#7c2d12")
+        s.text(250, y, "→", size=11, color="#1f2937")
+        s.text(274, y, b, size=10.2, family=MONO, color=ACCENT)
+    s.text(640, 392, "ARITH = ADD + XOR + AND + IOR", size=10.2, family=MONO, color="#4b5563")
+    s.text(640, 416, "REF  = LDA + STA + ARITH", size=10.2, family=MONO, color="#4b5563")
+    s.text(640, 440, "MBR_in = F·CP5 + E·CP5·REF", size=10.2, family=MONO, color=RED)
+    s.text(34, 456, "La UC cableada es un combinacional gigante: tabla de verdad → función → compuertas.", size=10.2, color="#4b5563")
+    s.save("uc_cableada.svg")
+
+
+def d_uc_microprogramada():
+    """UC microprogramada: opcode -> PLA -> microMAR -> ROM de control -> senales + secuenciador."""
+    s = Svg(920, 430, "Unidad de control microprogramada: el opcode elige una dirección de la memoria de control")
+    s.box(20, 70, 130, 56, "IR 15..12", "opcode")
+    s.box(190, 70, 130, 56, "PLA", "opcode → dirección", fill="#dbeafe")
+    s.box(360, 70, 130, 56, "microMAR", "apunta a la μ-instr.", fill="#e0e7ff")
+    s.box(530, 58, 190, 84, "ROM de control", "504 × 21 bits (8088)", fill="#fef3c7")
+    s.box(530, 230, 190, 64, "Registro de control", "21 bits = las señales", fill="#dcfce7")
+    s.box(760, 58, 140, 84, "señales", "Send / Load / R-W")
+    s.box(360, 230, 130, 64, "secuenciador", "μPC + SR / μ-pila", fill="#fde68a")
+    s.box(190, 230, 130, 64, "condición", "flag · R · opcode")
+    s.arrow(150, 98, 190, 98)
+    s.arrow(320, 98, 360, 98)
+    s.arrow(490, 98, 530, 98)
+    s.arrow(720, 100, 760, 100)
+    s.arrow(625, 142, 625, 230)
+    s.arrow(530, 262, 490, 262)
+    s.arrow(360, 262, 320, 262)
+    s.arrowpath([(255, 230), (255, 162), (330, 162), (330, 130)])
+    s.arrow(425, 230, 425, 128)
+    s.text(436, 200, "próxima dirección", size=9.5, color="#4b5563")
+    s.text(436, 214, "(μPC ← …)", size=9.5, family=MONO, color="#4b5563")
+    s.note(20, 330, [
+        "El opcode NO enciende compuertas: elige (por la PLA) la dirección inicial de su microprograma en la ROM.",
+        "Cada pulso se lee una microinstrucción; sus bits SON las señales de control de ese pulso.",
+        "El secuenciador decide la próxima dirección: +1 (secuencia), la del SR (retorno) o la de un salto condicional.",
+        "Microinstrucción del 8088: fuente 5 · destino 5 · tipo 3 · ALU 4 · registro 3 · condición 1 = 21 bits.",
+    ], size=10.4, lh=17)
+    s.save("uc_microprogramada.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -852,3 +921,5 @@ if __name__ == "__main__":
     d_compuertas()
     d_codificador_8x3()
     d_karnaugh_3var()
+    d_uc_cableada()
+    d_uc_microprogramada()
