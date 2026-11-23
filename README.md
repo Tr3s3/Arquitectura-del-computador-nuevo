@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 207 notas · 22 diagramas SVG · ~184.000 palabras · 2.602 enlaces internos, 0 rotos.
-**Materia en detalle:** unidades 1 a 4 completas (19 temas, 51 subtemas) con sus `00 Síntesis`; unidades 5 a 10 con la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 227 notas · 22 diagramas SVG · ~195.500 palabras · 2.720 enlaces internos, 0 rotos.
+**Materia en detalle:** unidades 1 a 5 completas (25 temas, 65 subtemas) con sus `00 Síntesis`; unidades 6 a 10 con la estructura `Unidad → Tema → Subtema` definida.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -63,8 +63,10 @@ adentro: el nombre de la carpeta lo dice).
 ├── Unidad 4 — Organización y diseño básico/   ✅ desarrollada (4 temas / 10 subtemas)
 │   ├── 00 Síntesis — Unidad 4
 │   └── Tema 4.1 … Tema 4.4 (BLUE, ciclo de instrucción, UC)
-└── Unidad 5 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
-│   └── Tema 2.2 Registros y contadores/  etc. (una carpeta por tema)
+├── Unidad 5 — Programación básica y CPU convencional/  ✅ desarrollada (6 temas / 13 subtemas)
+│   ├── 00 Síntesis — Unidad 5
+│   └── Tema 5.1 Lenguaje máquina/ · Tema 5.2 Formato de la instrucción/ · … · Tema 5.6 El 8086/
+└── Unidad 6 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada
