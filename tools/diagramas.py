@@ -898,6 +898,81 @@ def d_uc_microprogramada():
     s.save("uc_microprogramada.svg")
 
 
+def d_pipeline_aritmetico():
+    """Pipeline aritmetico de 4 etapas con suma de vectores."""
+    s = Svg(920, 430, "Pipeline aritmético: 4 etapas, un elemento de vector por ciclo")
+    etapas = [("E1", "alineación", "de exponentes"), ("E2", "suma", "de mantisas"),
+              ("E3", "normalización", "del resultado"), ("E4", "redondeo", "y escritura")]
+    x = 40
+    for i, (n, t, sub) in enumerate(etapas):
+        s.box(x, 60, 180, 64, n + " · " + t, sub, fill=["#dbeafe", "#e0e7ff", "#dcfce7", "#fef3c7"][i])
+        if i < 3:
+            s.arrow(x + 180, 92, x + 210, 92)
+        x += 210
+    s.text(40, 152, "Cada etapa tiene su propio hardware: la suma C[i] = A[i] + B[i] puede entrar cuando la anterior ya avanzó.", size=10.4, color="#4b5563")
+    # escalera
+    s.text(40, 186, "Diagrama en escalera (n = 5 elementos del vector)", size=11.5, weight="700")
+    x0, y0, w, h = 60, 200, 74, 26
+    cols = ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"]
+    for j, c in enumerate(cols):
+        s.text(x0 + j * w + w / 2, y0 - 6, c, size=9.5, anchor="middle", color="#4b5563")
+        s.raw(f'<rect x="{x0 + j * w}" y="{y0}" width="{w}" height="{4 * h}" fill="none" stroke="#e5e7eb" stroke-width="1"/>')
+    for k in range(5):
+        for e in range(4):
+            cx = x0 + (k + e) * w
+            cy = y0 + e * h
+            fill = ["#dbeafe", "#e0e7ff", "#dcfce7", "#fef3c7"][e]
+            s.raw(f'<rect x="{cx + 3}" y="{cy + 3}" width="{w - 6}" height="{h - 6}" rx="3" fill="{fill}" stroke="#1f2937" stroke-width="1.1"/>')
+            s.text(cx + w / 2, cy + h / 2 + 4, f"c{k+1} E{e+1}", size=8.6, anchor="middle")
+    s.text(x0, y0 + 4 * h + 18, "El primer resultado sale en el ciclo 4; desde ahí, uno por ciclo ⇒ 4 + (5 − 1) = 8 ciclos para 5 elementos (en serie serían 20).", size=10.4, color="#4b5563")
+    s.raw(f'<rect x="40" y="356" width="840" height="54" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 378, "sin pipeline: k · n     ·     con pipeline: k + (n − 1)     ·     speedup = k·n / (k + n − 1) → k", size=11, family=MONO, weight="600", color="#7c2d12")
+    s.text(56, 398, "La latencia de UNA operación no baja (sigue siendo 4 ciclos). Lo que sube es el rendimiento: elementos por unidad de tiempo.", size=10.2, color="#4b5563")
+    s.save("pipeline_aritmetico.svg")
+
+
+def d_memoria_entrelazada():
+    """Memoria entrelazada: direcciones consecutivas en bancos distintos."""
+    s = Svg(900, 420, "Memoria entrelazada: las direcciones consecutivas caen en bancos distintos")
+    s.box(30, 70, 150, 50, "dirección", "d = 0, 1, 2, …", fill="#e0e7ff")
+    s.text(30, 150, "d mod 4 ⇒ banco", size=10.2, family=MONO, color="#4b5563")
+    bx = [240, 400, 560, 720]
+    for b in range(4):
+        s.box(bx[b], 60, 140, 46, f"banco {b}", "su propio bus", fill="#dbeafe")
+    for d in range(12):
+        b = d % 4
+        y = 130 + (d // 4) * 34
+        s.raw(f'<rect x="{bx[b] + 10}" y="{y}" width="120" height="26" rx="3" fill="#f8fafc" stroke="#1f2937" stroke-width="1"/>')
+        s.text(bx[b] + 70, y + 17, f"dir {d}", size=9.6, anchor="middle", family=MONO)
+    s.wire([(180, 95), (215, 95), (215, 40), (790, 40)])
+    for cx in (310, 470, 630, 790):
+        s.arrow(cx, 40, cx, 58)
+    s.text(222, 300, "un acceso por banco, en el MISMO ciclo", size=10.2, color=ACCENT, weight="600")
+    s.raw(f'<rect x="30" y="330" width="840" height="72" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(46, 352, "Sin entrelazar: 4 palabras en serie = 4 × t.   Entrelazada: las 4 salen a la vez = 1 × t  ⇒  4× ancho de banda.", size=10.6, weight="600")
+    s.text(46, 374, "ancho de banda = (nº de bancos × bytes por palabra) / tiempo de ciclo     ·     ej.: 4 bancos × 8 B / 10 ns = 3,2 GB/s", size=10.4, family=MONO, color="#7c2d12")
+    s.text(46, 392, "Ojo: si el paso (stride) es múltiplo del nº de bancos, todas las direcciones caen en el mismo banco ⇒ conflicto y no hay ganancia.", size=10.2, color="#b91c1c")
+    s.save("memoria_entrelazada.svg")
+
+
+def d_flynn():
+    """Clasificacion de Flynn en 2x2."""
+    s = Svg(840, 420, "Clasificación de Flynn: cuántos flujos de instrucciones y cuántos de datos")
+    s.text(200, 62, "1 instrucción", size=11, weight="700", anchor="middle", color=ACCENT)
+    s.text(520, 62, "muchas instrucciones", size=11, weight="700", anchor="middle", color=ACCENT)
+    s.text(96, 190, "1 dato", size=11, weight="700", anchor="middle", color=ACCENT)
+    s.text(96, 330, "muchos", size=11, weight="700", anchor="middle", color=ACCENT)
+    celdas = [(200, 80, "SISD", "CPU escalar · BLUE", "#dbeafe"),
+              (520, 80, "MISD", "casi no existe (tolerancia a fallas)", "#f3f4f6"),
+              (200, 230, "SIMD", "vectorial · GPU · SSE/AVX", "#dcfce7"),
+              (520, 230, "MIMD", "multicore · clústeres", "#fef3c7")]
+    for x, y, t, sub, col in celdas:
+        s.box(x, y, 250, 110, t, sub, fill=col)
+    s.note(200, 372, ["La unidad 8 vive en la fila de abajo: SIMD (paralelismo de datos) y MIMD (varios flujos).",
+                      "El pipeline de la unidad 7 no aparece en Flynn: es paralelismo temporal DENTRO de un flujo SISD."], size=10.3, lh=17)
+    s.save("flynn.svg")
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -923,3 +998,6 @@ if __name__ == "__main__":
     d_karnaugh_3var()
     d_uc_cableada()
     d_uc_microprogramada()
+    d_pipeline_aritmetico()
+    d_memoria_entrelazada()
+    d_flynn()

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Pipeline aritmético: 4 etapas, un elemento de vector por ciclo</text>
+  <rect x="40" y="60" width="180" height="64" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="130.0" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">E1 · alineación</text>
+  <text x="130.0" y="106.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">de exponentes</text>
+  <line x1="220" y1="92" x2="250" y2="92" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="250" y1="92" x2="241.7780908812166" y2="88.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="250" y1="92" x2="241.7780908812166" y2="95.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="250" y="60" width="180" height="64" rx="6" ry="6" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="340.0" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">E2 · suma</text>
+  <text x="340.0" y="106.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">de mantisas</text>
+  <line x1="430" y1="92" x2="460" y2="92" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="460" y1="92" x2="451.7780908812166" y2="88.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="460" y1="92" x2="451.7780908812166" y2="95.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="460" y="60" width="180" height="64" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="550.0" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">E3 · normalización</text>
+  <text x="550.0" y="106.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">del resultado</text>
+  <line x1="640" y1="92" x2="670" y2="92" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="670" y1="92" x2="661.7780908812166" y2="88.3393702123178" stroke="#1f2937" stroke-width="1.6"/>
+  <line x1="670" y1="92" x2="661.7780908812166" y2="95.6606297876822" stroke="#1f2937" stroke-width="1.6"/>
+  <rect x="670" y="60" width="180" height="64" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="760.0" y="89.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">E4 · redondeo</text>
+  <text x="760.0" y="106.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">y escritura</text>
+  <text x="40" y="152" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">Cada etapa tiene su propio hardware: la suma C[i] = A[i] + B[i] puede entrar cuando la anterior ya avanzó.</text>
+  <text x="40" y="186" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" text-anchor="start" fill="#1f2937">Diagrama en escalera (n = 5 elementos del vector)</text>
+  <text x="97.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c1</text>
+  <rect x="60" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="171.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c2</text>
+  <rect x="134" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="245.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c3</text>
+  <rect x="208" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="319.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c4</text>
+  <rect x="282" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="393.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c5</text>
+  <rect x="356" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="467.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c6</text>
+  <rect x="430" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="541.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c7</text>
+  <rect x="504" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="615.0" y="194" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">c8</text>
+  <rect x="578" y="200" width="74" height="104" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="63" y="203" width="68" height="20" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="97.0" y="217.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c1 E1</text>
+  <rect x="137" y="229" width="68" height="20" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="171.0" y="243.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c1 E2</text>
+  <rect x="211" y="255" width="68" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="245.0" y="269.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c1 E3</text>
+  <rect x="285" y="281" width="68" height="20" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="319.0" y="295.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c1 E4</text>
+  <rect x="137" y="203" width="68" height="20" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="171.0" y="217.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c2 E1</text>
+  <rect x="211" y="229" width="68" height="20" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="245.0" y="243.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c2 E2</text>
+  <rect x="285" y="255" width="68" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="319.0" y="269.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c2 E3</text>
+  <rect x="359" y="281" width="68" height="20" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="393.0" y="295.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c2 E4</text>
+  <rect x="211" y="203" width="68" height="20" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="245.0" y="217.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c3 E1</text>
+  <rect x="285" y="229" width="68" height="20" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="319.0" y="243.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c3 E2</text>
+  <rect x="359" y="255" width="68" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="393.0" y="269.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c3 E3</text>
+  <rect x="433" y="281" width="68" height="20" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="467.0" y="295.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c3 E4</text>
+  <rect x="285" y="203" width="68" height="20" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="319.0" y="217.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c4 E1</text>
+  <rect x="359" y="229" width="68" height="20" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="393.0" y="243.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c4 E2</text>
+  <rect x="433" y="255" width="68" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="467.0" y="269.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c4 E3</text>
+  <rect x="507" y="281" width="68" height="20" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="541.0" y="295.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c4 E4</text>
+  <rect x="359" y="203" width="68" height="20" rx="3" fill="#dbeafe" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="393.0" y="217.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c5 E1</text>
+  <rect x="433" y="229" width="68" height="20" rx="3" fill="#e0e7ff" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="467.0" y="243.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c5 E2</text>
+  <rect x="507" y="255" width="68" height="20" rx="3" fill="#dcfce7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="541.0" y="269.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c5 E3</text>
+  <rect x="581" y="281" width="68" height="20" rx="3" fill="#fef3c7" stroke="#1f2937" stroke-width="1.1"/>
+  <text x="615.0" y="295.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="400" text-anchor="middle" fill="#1f2937">c5 E4</text>
+  <text x="60" y="322" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="400" text-anchor="start" fill="#4b5563">El primer resultado sale en el ciclo 4; desde ahí, uno por ciclo ⇒ 4 + (5 − 1) = 8 ciclos para 5 elementos (en serie serían 20).</text>
+  <rect x="40" y="356" width="840" height="54" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="56" y="378" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" text-anchor="start" fill="#7c2d12">sin pipeline: k · n     ·     con pipeline: k + (n − 1)     ·     speedup = k·n / (k + n − 1) → k</text>
+  <text x="56" y="398" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="400" text-anchor="start" fill="#4b5563">La latencia de UNA operación no baja (sigue siendo 4 ciclos). Lo que sube es el rendimiento: elementos por unidad de tiempo.</text>
+</svg>

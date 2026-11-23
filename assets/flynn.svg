@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="420" viewBox="0 0 840 420">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1f2937">Clasificación de Flynn: cuántos flujos de instrucciones y cuántos de datos</text>
+  <text x="200" y="62" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1d4ed8">1 instrucción</text>
+  <text x="520" y="62" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1d4ed8">muchas instrucciones</text>
+  <text x="96" y="190" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1d4ed8">1 dato</text>
+  <text x="96" y="330" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1d4ed8">muchos</text>
+  <rect x="200" y="80" width="250" height="110" rx="6" ry="6" fill="#dbeafe" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="325.0" y="132.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SISD</text>
+  <text x="325.0" y="149.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">CPU escalar · BLUE</text>
+  <rect x="520" y="80" width="250" height="110" rx="6" ry="6" fill="#f3f4f6" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="645.0" y="132.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MISD</text>
+  <text x="645.0" y="149.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">casi no existe (tolerancia a fallas)</text>
+  <rect x="200" y="230" width="250" height="110" rx="6" ry="6" fill="#dcfce7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="325.0" y="282.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SIMD</text>
+  <text x="325.0" y="299.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">vectorial · GPU · SSE/AVX</text>
+  <rect x="520" y="230" width="250" height="110" rx="6" ry="6" fill="#fef3c7" stroke="#1f2937" stroke-width="1.7"/>
+  <text x="645.0" y="282.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MIMD</text>
+  <text x="645.0" y="299.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" text-anchor="middle" fill="#4b5563">multicore · clústeres</text>
+  <text x="200" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.3" font-weight="400" text-anchor="start" fill="#4b5563">La unidad 8 vive en la fila de abajo: SIMD (paralelismo de datos) y MIMD (varios flujos).</text>
+  <text x="200" y="389" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.3" font-weight="400" text-anchor="start" fill="#4b5563">El pipeline de la unidad 7 no aparece en Flynn: es paralelismo temporal DENTRO de un flujo SISD.</text>
+</svg>
