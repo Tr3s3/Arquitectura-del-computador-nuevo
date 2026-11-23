@@ -61,7 +61,8 @@ prioridad: maxima
 > [!tip] Todos los subtemas traen su diagrama
 > Los **104 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico):
 > **106 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en
-> [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]].
+> [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], y las **100 figuras de los libros**
+> (Quiroga y Stallings) con su cita de página, en [[00 Figuras de los libros (índice)]].
 
 ## Las 10 unidades
 
