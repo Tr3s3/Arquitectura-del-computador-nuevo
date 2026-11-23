@@ -76,3 +76,8 @@ Computadoras digitales · compuertas lógicas · álgebra booleana · circuitos 
 
 ## Unidad 10 — Entrada/Salida
 - [ ] [[Interrupciones y entrada-salida]] — transmisión serie/paralela, puertos, interfaces, controladores
+- [ ] [[00 Síntesis — Unidad 10]] — **la unidad entera en un archivo** (polling, interrupciones, DMA, discos)
+
+> [!success] Las 10 unidades están desarrolladas en `02 Materia/`
+> Cada unidad tiene sus carpetas `Tema N.M/` con los subtemas y su **`00 Síntesis — Unidad N`**. Esta lista sirve
+> como **orden de estudio**; el desarrollo completo de cada renglón está en el índice de su unidad.

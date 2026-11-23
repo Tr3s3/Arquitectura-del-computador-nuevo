@@ -1088,6 +1088,90 @@ def d_buses():
     s.save("buses_interno_externo.svg")
 
 
+def d_es_modos():
+    """Los tres modos de E/S: polling, interrupcion y DMA."""
+    s = Svg(960, 400, "Los tres modos de entrada/salida: quién espera a quién")
+    cols = [
+        (30, "1 · E/S PROGRAMADA (polling)", "#fef3c7", "la CPU espera",
+         ["La CPU pregunta en un lazo:", "LEA Flag / CPF / JMP si no", "",
+          "Costo: ciclos tirados a la basura.", "Si el periférico se cuelga,", "la CPU espera para siempre."]),
+        (345, "2 · POR INTERRUPCIONES", "#dbeafe", "el periférico avisa",
+         ["La CPU lanza la operación y", "sigue con su programa.", "",
+          "El periférico pone IRQ = 1.", "Se atiende en CP8, tras la", "instrucción en curso."]),
+        (660, "3 · DMA", "#dcfce7", "el controlador mueve",
+         ["El DMA transfiere bloques", "memoria - periférico solo.", "",
+          "La CPU sólo lo programa y", "recibe una interrupción al", "terminar el bloque."]),
+    ]
+    for x, tit, fill, tag, notas in cols:
+        s.box(x, 44, 270, 232, "", "", fill=fill)
+        s.text(x + 12, 66, tit, size=10.6, weight="700")
+        s.text(x + 12, 88, tag, size=9.4, color="#4b5563")
+        s.box(x + 14, 98, 100, 36, "CPU", "", fill="#ffffff", size=11.5)
+        s.box(x + 148, 98, 108, 36, "PERIFÉRICO", "", fill="#ffffff", size=9.6)
+        s.arrow(x + 116, 108, x + 146, 108)
+        s.arrow(x + 146, 124, x + 116, 124)
+        for i, l in enumerate(notas):
+            s.text(x + 14, 168 + i * 15, l, size=9.1, color="#374151")
+    s.raw('<rect x="30" y="292" width="900" height="88" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(46, 314, "Cuánto se pierde: un periférico tarda milisegundos; una instrucción de la CPU, ~1 µs ⇒ 1000 veces más rápido.", size=10.1)
+    s.text(46, 336, "Polling: la CPU pregunta N veces y pierde ~N ciclos.  Interrupción: pierde sólo el tiempo de la ISR (~decenas de ciclos).", size=10.1, color="#4b5563")
+    s.text(46, 358, "DMA: la CPU pierde sólo la programación inicial y el reconocimiento final; el bloque lo mueve el controlador.", size=10.1, color="#4b5563")
+    s.save("es_modos.svg")
+
+
+def d_dma():
+    """Controlador de DMA: camino de datos y robo de ciclo en la linea de tiempo."""
+    s = Svg(940, 420, "DMA: el controlador mueve el bloque y le roba ciclos al bus")
+    s.box(40, 60, 150, 52, "CPU", "dueña normal del bus", fill="#dbeafe")
+    s.box(40, 160, 150, 52, "MEMORIA", "DRAM", fill="#e0e7ff")
+    s.box(40, 260, 150, 52, "PERIFÉRICO", "disco · red", fill="#e0e7ff")
+    s.box(280, 150, 210, 90, "CONTROLADOR", "de DMA", fill="#dcfce7")
+    s.arrow(190, 78, 336, 150)
+    s.text(238, 136, "programar", size=9.2, color="#4b5563")
+    s.arrow(278, 174, 194, 174)
+    s.arrow(194, 198, 278, 198)
+    s.wire([(276, 240), (276, 302)])
+    s.arrow(194, 264, 276, 264)
+    s.arrow(276, 288, 194, 288)
+    s.text(500, 172, "1. La CPU programa: dirección, cantidad, sentido", size=10, color="#374151")
+    s.text(500, 192, "2. El DMA pide el bus (Bus Request) y lo obtiene (Bus Grant)", size=10, color="#374151")
+    s.text(500, 212, "3. Transfiere palabra por palabra o en ráfaga", size=10, color="#374151")
+    s.text(500, 232, "4. Al terminar, interrumpe: 'bloque listo'", size=10, color="#374151")
+    s.text(40, 344, "ROBO DE CICLO (cycle stealing): la CPU y el DMA se turnan el bus", size=10.6, weight="700")
+    x0, y0 = 40, 360
+    for i in range(14):
+        x = x0 + i * 62
+        es_dma = i % 3 == 1
+        s.raw(f'<rect x="{x}" y="{y0}" width="56" height="26" rx="3" fill="{"#dcfce7" if es_dma else "#dbeafe"}" stroke="{STROKE}" stroke-width="1.2"/>')
+        s.text(x + 28, y0 + 18, "DMA" if es_dma else "CPU", size=8.6, anchor="middle", weight="600")
+    s.text(40, 40, "En ráfaga, el DMA toma el bus varios ciclos seguidos (más rápido, la CPU se frena).", size=9.8, color="#4b5563")
+    s.save("dma.svg")
+
+
+def d_disco_latencias():
+    """Latencia de un disco: busqueda + rotacion + transferencia, con el ejemplo resuelto."""
+    s = Svg(940, 400, "Disco rígido: de dónde sale la latencia de milisegundos")
+    s.text(40, 56, "Tiempo de acceso = búsqueda (seek) + latencia rotacional + transferencia", size=10.8, weight="700", family=MONO)
+    tramos = [(40, 250, "#dbeafe", "BÚSQUEDA", "mover el cabezal"),
+              (290, 180, "#fef3c7", "ROTACIONAL", "esperar el sector"),
+              (470, 150, "#dcfce7", "TRANSFERENCIA", "leer el dato")]
+    for x, w, col, lab, sub in tramos:
+        s.raw(f'<rect x="{x}" y="76" width="{w}" height="56" rx="4" fill="{col}" stroke="{STROKE}" stroke-width="1.4"/>')
+        s.text(x + w / 2, 100, lab, size=10.4, weight="700", anchor="middle")
+        s.text(x + w / 2, 118, sub, size=8.8, anchor="middle", color="#4b5563")
+    s.text(40, 156, "HDD típico: 7200 rpm · seek 9 ms · 100 MB/s", size=9.8, color="#374151")
+    s.raw('<rect x="40" y="176" width="860" height="76" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>')
+    s.text(56, 198, "7200 rpm ⇒ 7200/60 = 120 vueltas/s ⇒ una vuelta = 8,33 ms ⇒ rotacional promedio = 8,33/2 ≈ 4,17 ms", size=9.8, family=MONO)
+    s.text(56, 220, "Leer 4 KB a 100 MB/s = 4096 / 100·10⁶ ≈ 0,04 ms", size=9.8, family=MONO)
+    s.text(56, 242, "Total ≈ 9 + 4,17 + 0,04 ≈ 13,2 ms por bloque ⇒ ≈ 76 operaciones por segundo (IOPS).", size=9.8, family=MONO, color="#7c2d12")
+    s.text(40, 286, "Un SSD no tiene cabezal ni plato: ≈ 0,1 ms por acceso ⇒ ≈ 10 000 IOPS.", size=10.2, color="#15803d")
+    s.text(40, 308, "Con 4 KB por acceso: HDD ≈ 0,3 MB/s 'al azar' contra ≈ 40 MB/s del SSD.", size=10.2, color="#15803d")
+    s.text(40, 336, "Por eso el disco es el ÚLTIMO nivel de la jerarquía y por eso existen la caché de disco y la paginación.", size=10.1, color="#4b5563")
+    s.text(40, 358, "Cinta: secuencial, minutos para llegar a un dato ⇒ sólo para respaldo, nunca para acceso aleatorio.", size=10.1, color="#4b5563")
+    s.save("disco_latencias.svg")
+
+
+
 if __name__ == "__main__":
     d_semisumador()
     d_sumador_completo()
@@ -1120,3 +1204,6 @@ if __name__ == "__main__":
     d_arreglo_multiplicador()
     d_von_neumann_harvard()
     d_buses()
+    d_es_modos()
+    d_dma()
+    d_disco_latencias()

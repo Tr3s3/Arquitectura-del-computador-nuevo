@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 280 notas · 31 diagramas SVG · ~234.800 palabras · 3.056 enlaces internos, 0 rotos.
-**Materia en detalle:** unidades 1 a 9 completas (41 temas, 98 subtemas) con sus `00 Síntesis`; sólo la 10 tiene la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 292 notas · 34 diagramas SVG · ~245.000 palabras · 3.135 enlaces internos, 0 rotos.
+**Materia en detalle:** las **10 unidades completas** (45 temas, **104 subtemas**) con una `00 Síntesis` por unidad.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -78,7 +78,10 @@ adentro: el nombre de la carpeta lo dice).
 ├── Unidad 9 — Hardware aritmético/       ✅ desarrollada (5 temas / 10 subtemas)
 │   ├── 00 Síntesis — Unidad 9
 │   └── Tema 9.1 Suma y resta/ · … · Tema 9.5 Aritmética BCD/
-└── Unidad 10 — Entrada y Salida/          ⏳ estructura definida (4 temas / 7 subtemas)
+└── Unidad 10 — Entrada y Salida/          ✅ desarrollada (4 temas / 7 subtemas)
+    ├── 00 Síntesis — Unidad 10
+    └── Tema 10.1 Entrada y salida programada/ · Tema 10.2 Interrupciones/ · Tema 10.3 DMA/ ·
+        Tema 10.4 Dispositivos y almacenamiento/
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
 03 Material de cátedra (TPs)/    los 21 TPs: consigna, qué hay que saber y respuesta sintetizada

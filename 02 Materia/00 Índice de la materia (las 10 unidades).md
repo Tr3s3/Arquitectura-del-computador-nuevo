@@ -49,13 +49,14 @@ prioridad: maxima
 | **7** CPU y arquitecturas | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 7]] |
 | **8** Paralelismo | 4 | 9 | ✅ **desarrollada** | [[00 Síntesis — Unidad 8]] |
 | **9** Hardware aritmético | 5 | 10 | ✅ **desarrollada** | [[00 Síntesis — Unidad 9]] |
-| **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **104** | **98 subtemas escritos** | **9 de 10** |
+| **10** Entrada y Salida | 4 | 7 | ✅ **desarrollada** | [[00 Síntesis — Unidad 10]] |
+| **Total** | **45** | **104** | **104 subtemas escritos** | **10 de 10** ✅ |
 
-> [!note] Mientras una unidad no está desarrollada
-> No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya
-> disponible", los enlaces al **desarrollo de examen** que cubre cada tema. Así se puede estudiar el tema hoy y,
-> cuando se desarrolle el subtema, queda en la carpeta de su tema.
+> [!success] Materia completa
+> Las **10 unidades** están desarrolladas: **45 temas**, **104 subtemas** en carpetas `Unidad → Tema → Subtema` y
+> **una `00 Síntesis — Unidad N` por unidad** con todo el contenido junto. Para el parcial, empezar por la síntesis
+> de la unidad que entra; para el final, por
+> [[00 Índice — el final resuelto|el modelo de final resuelto]].
 
 ## Las 10 unidades
 

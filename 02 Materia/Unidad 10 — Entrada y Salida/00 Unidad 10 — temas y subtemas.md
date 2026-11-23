@@ -5,69 +5,98 @@ unidad: 10
 # Unidad 10 — Entrada y Salida
 
 > [!abstract] Qué pide la unidad
-> Cómo la CPU **habla con el mundo**: E/S **programada** (polling), por **interrupciones** y por **DMA**; puertos,
-> interfaces y dispositivos. Cierra la materia con el mecanismo que ya usaste en la 1.ª tanda (INP/OUT de BLUE) y
-> en la 2.ª (interrupciones, peso 9).
+> Cómo la CPU **habla con el mundo**: E/S **programada** (*polling*), por **interrupciones** y por **DMA**; qué
+> son **puertos**, **interfaces** y **handshake**; cómo se identifican y priorizan las interrupciones; y de dónde
+> salen los **milisegundos** de un disco y los **GB/s** de un bus serie.
+
+> [!important] El hilo de la unidad
+> `la CPU espera` → `el periférico avisa` → `un controlador mueve`. Cada modo existe porque el anterior
+> **desperdicia** algo; y el último eslabón (el dispositivo) explica **por qué** existe toda la jerarquía de
+> memoria de las unidades 2 y 7.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
 ```
 Unidad 10 — Entrada y Salida/
-├── 10.1 E/S programada/
+├── 00 Unidad 10 — temas y subtemas
+├── 00 Síntesis — Unidad 10
+├── Tema 10.1 Entrada y salida programada/
 │   ├── 10.1.1 Polling y sus límites
 │   └── 10.1.2 Puertos, interfaces y handshake
-├── 10.2 Interrupciones/
+├── Tema 10.2 Interrupciones/
 │   ├── 10.2.1 Mecanismo completo
 │   └── 10.2.2 Interrupciones vectorizadas y prioridad
-├── 10.3 DMA/
+├── Tema 10.3 DMA/
 │   └── 10.3.1 Controlador, robo de ciclo y transferencia de bloques
-└── 10.4 Dispositivos y almacenamiento/
+└── Tema 10.4 Dispositivos y almacenamiento/
     ├── 10.4.1 Discos, SSD y latencias
     └── 10.4.2 Interfaces serie y paralelo
 ```
 
-**4 temas y 7 subtemas.** Cada subtema va a ser **una nota** dentro de la carpeta de su tema,
-y al terminar la unidad se genera **`00 Síntesis — Unidad 10`** con todo el contenido junto (como ya está hecho en
-[[00 Síntesis — Unidad 1|la Unidad 1]]).
+**4 temas y 7 subtemas.** Cada subtema es **una nota** dentro de la carpeta de su tema. La unidad está **cerrada**
+y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 10]]**.
 
 | Tema | Subtemas | Estado |
 |---|---|---|
-| **10.1 E/S programada** | 10.1.1 Polling y sus límites · 10.1.2 Puertos, interfaces y handshake | ⏳ a desarrollar |
-| **10.2 Interrupciones** | 10.2.1 Mecanismo completo · 10.2.2 Interrupciones vectorizadas y prioridad | ⏳ a desarrollar |
-| **10.3 DMA** | 10.3.1 Controlador, robo de ciclo y transferencia de bloques | ⏳ a desarrollar |
-| **10.4 Dispositivos y almacenamiento** | 10.4.1 Discos, SSD y latencias · 10.4.2 Interfaces serie y paralelo | ⏳ a desarrollar |
+| **10.1 Entrada y salida programada** | 10.1.1 Polling y sus límites · 10.1.2 Puertos, interfaces y handshake | ✅ |
+| **10.2 Interrupciones** | 10.2.1 Mecanismo completo · 10.2.2 Interrupciones vectorizadas y prioridad | ✅ |
+| **10.3 DMA** | 10.3.1 Controlador, robo de ciclo y transferencia de bloques | ✅ |
+| **10.4 Dispositivos y almacenamiento** | 10.4.1 Discos, SSD y latencias · 10.4.2 Interfaces serie y paralelo | ✅ |
 
-> [!note] Qué hay ya de esta unidad
-> El **desarrollo de examen** de casi todos estos temas ya está escrito (está enlazado más abajo, en la tabla de
-> material disponible). Lo que falta es la **versión de programa**: el subtema desarrollado en la carpeta de su
-> tema, con el detalle de la cursada y los TPs.
+> [!note] Cómo creció el árbol
+> El árbol original tenía **7 subtemas** en 4 temas. Se mantiene igual: el tema 10.1 se llama **"Entrada y salida
+> programada"** (no "E/S programada") porque **una barra en el nombre de la carpeta crearía dos niveles** y el
+> enlace de Obsidian no resolvería.
 
-## Material ya disponible de esta unidad
-| Tema | Subtemas | Dónde está el desarrollo |
+## Los 4 temas, de un vistazo
+
+| Tema | Índice | La idea en una línea |
 |---|---|---|
-| **10.1 E/S programada (polling)** | la CPU pregunta en un lazo · desperdicia tiempo · INP/OUT de la BLUE | [[Interrupciones y entrada-salida]] · carpeta `Tanda 2/2.8` |
-| **10.2 E/S por interrupciones** | `IRQ·SI·CP8` · polling del flag · máscara (EMR) · pila y RTI · vectorizadas | [[Interrupciones y entrada-salida]] · carpeta `Tanda 2/2.8` |
-| **10.3 DMA** | el controlador mueve bloques sin la CPU · robo de ciclo · handshake | [[Interrupciones y entrada-salida]] (sección comparativa) · [[Técnicas para aumentar la velocidad]] |
-| **10.4 Puertos e interfaces** | puerto paralelo vs serie · handshake · buffers · memorias auxiliares | [[Memoria auxiliar y memoria asociativa]] · [[TP12 Memoria principal]] |
-| **10.5 Dispositivos y jerarquía** | discos, SSD, cintas · latencias · por qué el disco es el último nivel | [[Jerarquía de memorias]] · carpeta `Tanda 2/2.4` |
+| **10.1** | [[00 Tema 10.1 — índice]] | la CPU pregunta y espera: simple, pero **quema** el procesador |
+| **10.2** | [[00 Tema 10.2 — índice]] | el periférico avisa; la CPU atiende al final de la instrucción |
+| **10.3** | [[00 Tema 10.3 — índice]] | un controlador mueve el bloque; la CPU sólo programa y espera el aviso |
+| **10.4** | [[00 Tema 10.4 — índice]] | el disco tarda **13 ms** por posicionarse; el SSD, 0,1 ms |
+
+## Los tres modos de E/S, en una tabla
+| | **Polling** | **Interrupciones** | **DMA** |
+|---|---|---|---|
+| Quién inicia | CPU | CPU (avisa el periférico) | CPU programa; el DMA ejecuta |
+| Quién copia | CPU | CPU | **el controlador** |
+| Costo por byte | espera | ISR (≈ 20 µs) | ≈ 0 |
+| Cuándo | periférico rápido y predecible | eventos esporádicos | bloques grandes |
+
+## Material de examen ya disponible de esta unidad
+| Tema | Nota | Dónde está además |
+|---|---|---|
+| **Interrupciones (todas)** | [[Interrupciones y entrada-salida]] | `Tanda 2/2.8` + `Apoyo a la pregunta/` |
+| **Interrupciones en la BLUE** | [[5.5.1 IRQ, SI y CP8]] · [[5.5.2 Máscara, pila y RTI]] | Unidad 5 |
+| **E/S de la BLUE (`INP`/`OUT`)** | [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | Unidad 4 |
+| **DMA y bus** | [[Técnicas para aumentar la velocidad]] · [[7.4.2 Buses internos y externos]] | Unidad 7 |
+| **Jerarquía y memoria auxiliar** | [[Jerarquía de memorias]] · [[2.6.2 Memoria auxiliar y memoria asociativa]] | Unidad 2 |
+| **Bus, maestro/esclavo** | [[3.1.2 Bus único y buffers de 3 estados]] · [[TP14 Buses]] | Unidad 3 · TP |
 
 ---
 
-## Qué hay que saber hacer
-1. **Comparar** polling, interrupciones y DMA en una tabla (quién inicia, quién ocupa la CPU, para qué sirve).
-2. Explicar **el problema de las interrupciones anidadas** y cómo lo resuelve la máscara.
-3. Decir **qué guarda la pila** al entrar a una interrupción y qué restaura `RTI`.
-4. Justificar **para qué está el DMA** (bloques grandes, sin gastar la CPU).
+## Qué hay que saber hacer al terminar la unidad
+1. **Comparar** polling, interrupciones y DMA (quién inicia, quién copia, costo, cuándo conviene).
+2. Calcular **cuánto tiempo pierde** la CPU con polling (vueltas × duración del lazo).
+3. Explicar los **10 pasos** de una interrupción y **qué guarda** el contexto.
+4. Distinguir **polling de identificación** de **vectorización**, y **prioridad** de **máscara**.
+5. Calcular la **dirección de la tabla de vectores** del 8086 (`vector × 4`).
+6. Explicar el **DMA**: registros, `BR`/`BG`, **robo de ciclo** vs **ráfaga**, y el ahorro en µs.
+7. Calcular el **tiempo de acceso** de un disco (seek + ½ vuelta + transferencia) y sus **IOPS**.
+8. Pasar de **bits/s a MB/s** descontando el **codificado** (8b/10b) y explicar por qué **ganó el serie**.
 
 ## TPs de la unidad
-No hay TP propio: se estudia con [[TP16 Ciclo de instrucción básico]] (ciclo de E/S) y la parte de E/S de
-[[TP17 Formato básico de instrucciones]].
+No tiene TP propio: se estudia con [[TP14 Buses]] (líneas de control, maestros y esclavos, DMA) y
+[[TP16 Ciclo de instrucción básico]] (el ciclo con `INP`/`OUT` y la espera del periférico).
 
 ## Fuente de la cátedra
-Apuntes **Unidad 10** · `blue.pdf` (E/S de la máquina elemental) · Stallings (E/S) · Tanenbaum (E/S).
+Apuntes **Unidad 10** · `blue.pdf` (E/S por consulta) · `El_manual_del_Microprocesador.pdf` ·
+Stallings (E/S, DMA, discos) · Tanenbaum (E/S) · Hamacher (buses y E/S) · Brey (interrupciones del 8086).
 
 ---
 
 ## Relacionado
 [[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 9 — temas y subtemas]] ·
-[[00 Índice — el final resuelto]]
+[[00 Síntesis — Unidad 10]] · [[Interrupciones y entrada-salida]]
