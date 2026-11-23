@@ -154,6 +154,9 @@ pero nada impide que un cambio futuro las rompa.
 - Ejemplo resuelto y error típico en cada subtema: **107/107**.
 - Enlaces e imágenes: **0 rotos**.
 - Glosario: **180 fichas** en 10 notas, con índice alfabético (M1 cerrado).
+- **Archivos de lectura de corrido:** `00 Unidad N completa` en cada una de las 10 unidades y
+  **[[00 Materia completa (las 10 unidades en un archivo)]]** con los 107 subtemas en un solo archivo
+  (85.000 palabras, diagramas y figuras incluidos).
 - Videos de los TPs: listados y verificados (2 muertos quitados).
 - Auditoría contra los resúmenes: hecha, con los 6 huecos cerrados.
 

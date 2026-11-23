@@ -240,6 +240,6 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
   `P4` cubre 4,5,6,7,12 · `P8` cubre 8 a 12. En memorias con ECC: **72 bits = 64 + 8**.
 
 ## Relacionado
-[[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.1 — índice]] · [[00 Tema 2.3 — índice]] ·
+[[00 Unidad 2 completa (lectura de corrido)]] · [[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.1 — índice]] · [[00 Tema 2.3 — índice]] ·
 [[00 Tema 2.5 — índice]] · [[00 Tema 2.7 — índice]] · [[00 Síntesis — Unidad 1]] ·
 [[00 Tanda 2 — índice]] · [[00 Índice de la materia (las 10 unidades)]]

@@ -9,9 +9,12 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 299 notas · **100 SVG propios + 132 figuras de libro** · ~265.000 palabras · 3.399 enlaces internos, 0 rotos.
+**Estado:** 311 notas · **100 SVG propios + 132 figuras de libro** · ~294.000 palabras · 0 enlaces e imágenes rotas.
 **Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **132 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]).
-**Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**) con una `00 Síntesis` por unidad.
+**Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**), con una `00 Síntesis` por unidad.
+**Para leer de corrido:** cada unidad tiene un `00 Unidad N completa (lectura de corrido)` —todos sus subtemas pegados
+en un archivo, con diagramas y figuras— y está **[[00 Materia completa (las 10 unidades en un archivo)]]** con las 10
+unidades en un solo archivo (85.000 palabras).
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.

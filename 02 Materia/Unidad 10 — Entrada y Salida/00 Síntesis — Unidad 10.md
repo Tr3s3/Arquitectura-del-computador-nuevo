@@ -287,5 +287,5 @@ SSD **0,1 ms** y **10 000 IOPS** · `IRQ5 → 0DH → 34H`.
 ---
 
 ## Relacionado
-[[00 Unidad 10 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] ·
+[[00 Unidad 10 completa (lectura de corrido)]] · [[00 Unidad 10 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]] · [[Interrupciones y entrada-salida]] · [[Jerarquía de memorias]]

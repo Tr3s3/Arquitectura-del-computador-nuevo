@@ -299,5 +299,5 @@ ancho de banda = (bits del bus de datos / 8) × frecuencia
 ---
 
 ## Relacionado
-[[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] ·
+[[00 Unidad 7 completa (lectura de corrido)]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]] · [[Pipeline]] · [[CISC y RISC]]

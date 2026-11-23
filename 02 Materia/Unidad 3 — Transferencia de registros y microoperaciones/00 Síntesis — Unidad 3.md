@@ -183,5 +183,5 @@ EA = RB + campo [+ RIF o RID]
 ---
 
 ## Relacionado
-[[00 Unidad 3 — temas y subtemas]] · [[00 Tema 3.1 — índice]] · [[00 Tema 3.2 — índice]] · [[00 Tema 3.3 — índice]] ·
+[[00 Unidad 3 completa (lectura de corrido)]] · [[00 Unidad 3 — temas y subtemas]] · [[00 Tema 3.1 — índice]] · [[00 Tema 3.2 — índice]] · [[00 Tema 3.3 — índice]] ·
 [[00 Síntesis — Unidad 2]] · [[00 Unidad 4 — temas y subtemas]] · [[00 Tanda 1 — índice]]

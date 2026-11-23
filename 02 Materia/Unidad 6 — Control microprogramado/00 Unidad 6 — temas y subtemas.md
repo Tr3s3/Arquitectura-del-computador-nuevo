@@ -8,6 +8,12 @@ unidad: 6
 > Cómo se construye la **Unidad de Control**: con **compuertas (cableada)** o con un **microprograma guardado en
 > una ROM (microprogramada)**. La BLUE usa cableada; el 8088, microprogramada con una ROM de **504 × 21 bits**.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 6 completa (lectura de corrido)]]**: los **5 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 6]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
 ```

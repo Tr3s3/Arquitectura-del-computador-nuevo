@@ -8,7 +8,7 @@ tipo: guia
 > Cada pregunta del modelo tiene (1) una nota de concepto que la explica desde cero, con
 > gráficos, y (2) un guion para responderla oralmente. Estudiás por concepto, pero rendís por pregunta.
 
-## Los cuatro recorridos
+## Los recorridos
 
 | Si estás… | Empezá por | Después |
 |---|---|---|
@@ -16,6 +16,7 @@ tipo: guia
 | **Con poco tiempo** (1 semana) | [[03 Ruta de estudio para el final]] | [[Banco de preguntas del final]] |
 | **Repasando** (2 días antes) | [[04 Resumen integrador de la materia]] | [[Guion de respuestas — preguntas principales]] |
 | **El día antes, oral** | [[Guion de respuestas — preguntas principales]] + [[Cómo dibujar los circuitos (checklist de pizarrón)]] | [[Tablas de verdad de memoria]] · [[Autoevaluación]] |
+| **Leer todo de corrido**, sin saltar de nota en nota | [[00 Materia completa (las 10 unidades en un archivo)]] (107 subtemas en un archivo) | o una unidad sola: `00 Unidad N completa (lectura de corrido)` |
 
 > [!important] El final es oral, y en la práctica se aprueba **dibujando**
 > La mesa pide **circuitos en el pizarrón y la explicación de sus tablas de verdad**. Por eso cada nota

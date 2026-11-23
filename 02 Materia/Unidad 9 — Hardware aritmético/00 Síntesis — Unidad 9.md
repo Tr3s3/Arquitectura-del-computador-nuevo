@@ -323,5 +323,5 @@ si (dígito > 1001)  o  (hubo acarreo)  ⇒  sumar 0110  y propagar acarreo
 ---
 
 ## Relacionado
-[[00 Unidad 9 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 10 — temas y subtemas]] ·
+[[00 Unidad 9 completa (lectura de corrido)]] · [[00 Unidad 9 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 10 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]] · [[Hardware aritmético (resumen)]]

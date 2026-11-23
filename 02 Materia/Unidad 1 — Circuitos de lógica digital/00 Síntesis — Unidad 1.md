@@ -217,6 +217,6 @@ signo que dan signo contrario).
 ---
 
 ## Relacionado
-[[00 Unidad 1 — temas y subtemas]] · [[00 Tema 1.1 — índice]] · [[00 Tema 1.2 — índice]] ·
+[[00 Unidad 1 completa (lectura de corrido)]] · [[00 Unidad 1 — temas y subtemas]] · [[00 Tema 1.1 — índice]] · [[00 Tema 1.2 — índice]] ·
 [[00 Tema 1.3 — índice]] · [[00 Tema 1.4 — índice]] · [[00 Tema 1.5 — índice]] ·
 [[00 Tanda 3 — índice]] · [[00 Índice de la materia (las 10 unidades)]]

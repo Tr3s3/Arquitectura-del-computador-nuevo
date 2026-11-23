@@ -16,6 +16,7 @@ tipo: moc
 |---|---|---|
 | **preparar el final** (las 27 preguntas de la matriz) | [[00 Índice — el final resuelto]] | `Tanda 1\|2\|3` → `N. Pregunta/` → los archivos de esa pregunta |
 | **estudiar la materia completa** (las 10 unidades) | [[00 Índice de la materia (las 10 unidades)]] | `Unidad N — nombre/` → `Tema/` → subtemas |
+| **leer de corrido** (todo junto, sin navegar) | [[00 Materia completa (las 10 unidades en un archivo)]] | los 107 subtemas en orden, uno detrás de otro |
 
 Las unidades de abajo son el **orden lógico** de la materia; cada una lista las notas y, entre paréntesis, la
 carpeta donde vive cada una (la mayoría está en `01 Modelo de final resuelto/`, porque el final se lleva casi

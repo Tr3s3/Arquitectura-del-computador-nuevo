@@ -9,6 +9,12 @@ unidad: 5
 > direccionamiento, la **BLUE indexada** (con registros índice y base), interrupciones, y el salto a una **CPU
 > real** (el 8086 del TP21).
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 5 completa (lectura de corrido)]]**: los **13 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 5]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
 ```

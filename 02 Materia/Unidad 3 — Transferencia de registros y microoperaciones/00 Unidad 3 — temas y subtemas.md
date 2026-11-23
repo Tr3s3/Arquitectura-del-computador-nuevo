@@ -9,9 +9,15 @@ unidad: 3
 > **microoperación**, todas viajan por **un bus** (con buffers de tres estados), las cuentas las hace la **ALU** y
 > los datos viven en **registros**. Es la unidad que después hace posible entender el ciclo de instrucción.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 3 completa (lectura de corrido)]]**: los **7 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 3]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
 > [!success] Unidad desarrollada
-> Los **3 temas** y sus **7 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
-> **[[00 Síntesis — Unidad 3]]**. Estado: ✅ completa.
+> Los **3 temas** y sus **7 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**:
+> el resumen de una página (**[[00 Síntesis — Unidad 3]]**) y el desarrollo completo para leer de corrido
+> (**[[00 Unidad 3 completa (lectura de corrido)]]**). Estado: ✅ completa.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
@@ -19,6 +25,7 @@ unidad: 3
 Unidad 3 — Transferencia de registros y microoperaciones/
 ├── 00 Unidad 3 — temas y subtemas   (esta nota)
 ├── 00 Síntesis — Unidad 3           (toda la unidad en un solo archivo)
+├── 00 Unidad 3 completa (lectura de corrido)   ← los subtemas pegados, para leer de corrido
 ├── Tema 3.1 Microoperaciones y bus/
 │   ├── 3.1.1 Notación de transferencia entre registros
 │   ├── 3.1.2 Bus único y buffers de 3 estados

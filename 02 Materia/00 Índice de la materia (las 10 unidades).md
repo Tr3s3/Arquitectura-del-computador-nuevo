@@ -10,6 +10,11 @@ prioridad: maxima
 > está **el mapa que conecta todo**, incluidas las notas que están guardadas en
 > [[00 Índice — el final resuelto|Modelo de final resuelto]].
 
+> [!tip] ¿Lo querés leer todo de corrido?
+> **[[00 Materia completa (las 10 unidades en un archivo)]]**: las 10 unidades y los **107 subtemas** pegados en
+> un solo archivo (85.000 palabras, con todos los diagramas y figuras). Y cada unidad tiene el suyo:
+> **`00 Unidad N completa (lectura de corrido)`**, dentro de su carpeta.
+
 > [!important] Cómo está armada
 > ```
 > 02 Materia/

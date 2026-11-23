@@ -9,6 +9,12 @@ unidad: 9
 > **multiplicación** (sumas y desplazamientos, Booth, arreglo), **división** (restas y desplazamientos) y **punto
 > flotante** (alinear, normalizar, redondear). Cierra con la aritmética **decimal (BCD)**.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 9 completa (lectura de corrido)]]**: los **10 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 9]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 > [!important] El hilo de toda la unidad
 > **Todo es un sumador.** La resta es una suma (`B' + 1`); la multiplicación son sumas desplazadas; la división son
 > restas desplazadas; el punto flotante es una suma de mantisas más lógica de exponentes. Si entendés 9.1, el resto

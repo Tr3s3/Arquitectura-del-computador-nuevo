@@ -355,5 +355,5 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 ---
 
 ## Relacionado
-[[00 Unidad 5 — temas y subtemas]] · [[00 Síntesis — Unidad 4]] · [[00 Unidad 6 — temas y subtemas]] ·
+[[00 Unidad 5 completa (lectura de corrido)]] · [[00 Unidad 5 — temas y subtemas]] · [[00 Síntesis — Unidad 4]] · [[00 Unidad 6 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]]

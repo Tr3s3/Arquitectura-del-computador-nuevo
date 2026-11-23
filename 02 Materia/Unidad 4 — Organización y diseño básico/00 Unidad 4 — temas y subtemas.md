@@ -9,9 +9,15 @@ unidad: 4
 > **máquina BLUE**, el **ciclo de instrucción** en 8 pulsos gobernado por la **Unidad de Control**. Es el corazón de
 > la 1.ª tanda del final.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 4 completa (lectura de corrido)]]**: los **10 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 4]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
 > [!success] Unidad desarrollada
-> Los **4 temas** y sus **10 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
-> **[[00 Síntesis — Unidad 4]]**. Estado: ✅ completa.
+> Los **4 temas** y sus **10 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**:
+> el resumen de una página (**[[00 Síntesis — Unidad 4]]**) y el desarrollo completo para leer de corrido
+> (**[[00 Unidad 4 completa (lectura de corrido)]]**). Estado: ✅ completa.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
@@ -19,6 +25,7 @@ unidad: 4
 Unidad 4 — Organización y diseño básico/
 ├── 00 Unidad 4 — temas y subtemas   (esta nota)
 ├── 00 Síntesis — Unidad 4           (toda la unidad en un solo archivo)
+├── 00 Unidad 4 completa (lectura de corrido)   ← los subtemas pegados, para leer de corrido
 ├── Tema 4.1 Estructura y modelo von Neumann/
 │   ├── 4.1.1 Unidades funcionales de una computadora
 │   └── 4.1.2 IAS y el programa almacenado

@@ -9,9 +9,15 @@ unidad: 1
 > simplificación (Karnaugh) → circuitos combinacionales (decodificadores, MUX, sumadores). Todo lo de esta unidad
 > se rinde **dibujando**.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 1 completa (lectura de corrido)]]**: los **17 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 1]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
 > [!success] Unidad desarrollada
-> Los **5 temas** y sus **15 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
-> **[[00 Síntesis — Unidad 1]]**. Estado: ✅ completa.
+> Los **6 temas** y sus **17 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**:
+> el resumen de una página (**[[00 Síntesis — Unidad 1]]**) y el desarrollo completo para leer de corrido
+> (**[[00 Unidad 1 completa (lectura de corrido)]]**). Estado: ✅ completa.
 
 ## La estructura de la unidad
 
@@ -19,6 +25,7 @@ unidad: 1
 Unidad 1 — Circuitos de lógica digital/
 ├── 00 Unidad 1 — temas y subtemas   (esta nota)
 ├── 00 Síntesis — Unidad 1           (toda la unidad en un solo archivo)
+├── 00 Unidad 1 completa (lectura de corrido)   ← los subtemas pegados, para leer de corrido
 ├── Tema 1.1 Compuertas lógicas/
 │   ├── 1.1.1 Compuerta AND, OR y NOT
 │   ├── 1.1.2 NAND, NOR, XOR y XNOR

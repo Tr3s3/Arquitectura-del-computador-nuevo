@@ -9,6 +9,12 @@ unidad: 10
 > son **puertos**, **interfaces** y **handshake**; cómo se identifican y priorizan las interrupciones; y de dónde
 > salen los **milisegundos** de un disco y los **GB/s** de un bus serie.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 10 completa (lectura de corrido)]]**: los **7 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 10]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 > [!important] El hilo de la unidad
 > `la CPU espera` → `el periférico avisa` → `un controlador mueve`. Cada modo existe porque el anterior
 > **desperdicia** algo; y el último eslabón (el dispositivo) explica **por qué** existe toda la jerarquía de
@@ -20,6 +26,7 @@ unidad: 10
 Unidad 10 — Entrada y Salida/
 ├── 00 Unidad 10 — temas y subtemas
 ├── 00 Síntesis — Unidad 10
+├── 00 Unidad 10 completa (lectura de corrido)   ← los subtemas pegados, para leer de corrido
 ├── Tema 10.1 Entrada y salida programada/
 │   ├── 10.1.1 Polling y sus límites
 │   └── 10.1.2 Puertos, interfaces y handshake

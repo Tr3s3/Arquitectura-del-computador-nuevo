@@ -280,5 +280,5 @@ S(n) = 1 / ((1 − f) + f/n)
 ---
 
 ## Relacionado
-[[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] ·
+[[00 Unidad 8 completa (lectura de corrido)]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]] · [[Paralelismo y procesamiento vectorial]]

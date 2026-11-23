@@ -8,9 +8,15 @@ unidad: 2
 > Pasar de lo **combinacional** a lo que **recuerda**: biestables y flip-flops → registros y contadores → la
 > memoria (celda, chip, jerarquía). Es la unidad más larga del programa y la que más circuitos hace dibujar.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 2 completa (lectura de corrido)]]**: los **20 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 2]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
 > [!success] Unidad desarrollada
-> Los **7 temas** y sus **19 subtemas** están escritos, y hay un **archivo síntesis** con toda la unidad junta:
-> **[[00 Síntesis — Unidad 2]]**. Estado: ✅ completa.
+> Los **7 temas** y sus **20 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**:
+> el resumen de una página (**[[00 Síntesis — Unidad 2]]**) y el desarrollo completo para leer de corrido
+> (**[[00 Unidad 2 completa (lectura de corrido)]]**). Estado: ✅ completa.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
@@ -18,6 +24,7 @@ unidad: 2
 Unidad 2 — Memorias y circuitos secuenciales/
 ├── 00 Unidad 2 — temas y subtemas   (esta nota)
 ├── 00 Síntesis — Unidad 2           (toda la unidad en un solo archivo)
+├── 00 Unidad 2 completa (lectura de corrido)   ← los subtemas pegados, para leer de corrido
 ├── Tema 2.1 Biestables y flip-flops/
 │   ├── 2.1.1 Biestable RS (NOR y NAND)
 │   ├── 2.1.2 Flip-flops D y T

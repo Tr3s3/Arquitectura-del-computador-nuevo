@@ -9,6 +9,12 @@ unidad: 8
 > **memoria entrelazada** y **multiprocesadores**. Es la continuación del pipeline de instrucciones de la Unidad 7,
 > pero acá el paralelismo es por **datos** y por **unidades**.
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 8 completa (lectura de corrido)]]**: los **9 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 8]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 > [!important] Cómo se lee la unidad
 > Hay **tres** formas de paralelismo y cada tema es una:
 > **tiempo** (pipeline aritmético, 8.1) · **ancho** (vectorial/SIMD, 8.2) · **unidades** (bancos y núcleos, 8.3-8.4).

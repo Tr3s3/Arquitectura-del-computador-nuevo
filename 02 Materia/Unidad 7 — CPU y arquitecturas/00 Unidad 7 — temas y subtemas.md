@@ -9,6 +9,12 @@ unidad: 7
 > (**superscalar, superpipeline, SMT, multicore, caché, predicción**), las dos filosofías de repertorio
 > (**CISC y RISC**) y la estructura de memoria y buses (**von Neumann/Harvard**, buses internos y externos).
 
+> [!tip] Para leer la unidad de corrido
+> **[[00 Unidad 7 completa (lectura de corrido)]]**: los **9 subtemas** pegados en un solo archivo,
+> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 7]]) es el
+> resumen de una página; el archivo completo es el desarrollo entero.
+
+
 > [!important] El hilo de la unidad
 > `pipeline` → los conflictos que lo frenan → las técnicas que los tapan → **RISC** como arquitectura pensada para
 > el pipeline → la **estructura** (memorias y buses) que lo hace posible.

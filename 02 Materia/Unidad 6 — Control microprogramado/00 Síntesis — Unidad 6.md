@@ -295,5 +295,5 @@ híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado 
 ---
 
 ## Relacionado
-[[00 Unidad 6 — temas y subtemas]] · [[00 Síntesis — Unidad 5]] · [[00 Unidad 7 — temas y subtemas]] ·
+[[00 Unidad 6 completa (lectura de corrido)]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Síntesis — Unidad 5]] · [[00 Unidad 7 — temas y subtemas]] ·
 [[00 Índice de la materia (las 10 unidades)]] · [[Cómo se implementa la Unidad de Control]]

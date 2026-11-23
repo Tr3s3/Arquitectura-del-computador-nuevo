@@ -200,5 +200,5 @@ MBR_in = F·CP5 + E·CP5·(ADD + XOR + AND + IOR + LDA + STA)
 ---
 
 ## Relacionado
-[[00 Unidad 4 — temas y subtemas]] · [[00 Tema 4.2 — índice]] · [[00 Tema 4.3 — índice]] · [[00 Tema 4.4 — índice]] ·
+[[00 Unidad 4 completa (lectura de corrido)]] · [[00 Unidad 4 — temas y subtemas]] · [[00 Tema 4.2 — índice]] · [[00 Tema 4.3 — índice]] · [[00 Tema 4.4 — índice]] ·
 [[00 Síntesis — Unidad 3]] · [[00 Unidad 5 — temas y subtemas]] · [[00 Tanda 1 — índice]]
