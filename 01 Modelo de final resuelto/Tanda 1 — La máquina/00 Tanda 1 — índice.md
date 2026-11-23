@@ -5,9 +5,7 @@ prioridad: maxima
 # Tanda 1 — La máquina (8 preguntas)
 
 > [!abstract] Cómo está armada esta tanda
-> Cada **pregunta** tiene su **carpeta** con los archivos que le corresponden: primero el **desarrollo
-> principal** (la nota que responde la pregunta) y después los **subtemas** que hay que saber para poder
-> contestarla. Todo está en la misma carpeta: no hay que buscar nada afuera.
+> Cada **pregunta** tiene su **carpeta** con los archivos que le corresponden: primero el **desarrollo principal** (la nota que responde la pregunta) y después los **subtemas** que hay que saber para poder contestarla. Todo está en la misma carpeta: no hay que buscar nada afuera.
 
 | # | Pregunta | Carpeta | Archivos que corresponden |
 |---|---|---|---|
@@ -21,28 +19,30 @@ prioridad: maxima
 | 1.8 | **Ciclo de máquina y ciclo de instrucción** | `1.8 Ciclo de máquina y ciclo de instrucción/` | [[Ciclo de máquina]] · *en `Apoyo a la pregunta/`:* [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Proceso de manejo de una instrucción]] |
 
 > [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
-> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**: la lista de los
-> archivos que hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos que viven en
-> otras tandas. La nota principal de la pregunta lo resume en un bloque al principio, así que nunca hay que
-> adivinar qué leer antes.
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**: la lista de los archivos que hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas. La nota principal de la pregunta lo resume en un bloque al principio, así que nunca hay que adivinar qué leer antes.
 
 ---
 
 ## El orden en que conviene estudiarla
 
 1. **1.5 Estructura básica** — qué piezas tiene una computadora (si no sabés esto, el resto no cierra).
+
 2. **1.1 Flujo de información** — cómo viaja un dato por el bus único.
+
 3. **1.7 Formato de la instrucción** — cómo se parte la palabra de 16 bits.
+
 4. **1.8 Ciclo de máquina** — los 8 pulsos y las 5 fases.
+
 5. **1.4 Memoria RAM 8×3** — el circuito que se dibuja.
+
 6. **1.6 Implementación de la UC** — quién genera las señales.
+
 7. **1.2 BLUE vs indexada** — qué se agrega y qué cambia.
+
 8. **1.3 LDA indexada (24 pulsos)** — el caso completo, pulso por pulso.
 
 > [!tip] Lo que se dibuja de esta tanda
-> La RAM 8×3 (con decodificador y biestables) · el diagrama de bloques con el bus único · el ciclo de búsqueda
-> en 8 pulsos · la tabla pulso por pulso de la LDA indexada. Práctica:
-> [[Cómo dibujar los circuitos (checklist de pizarrón)]].
+> La RAM 8×3 (con decodificador y biestables) · el diagrama de bloques con el bus único · el ciclo de búsqueda en 8 pulsos · la tabla pulso por pulso de la LDA indexada. Práctica: [[Cómo dibujar los circuitos (checklist de pizarrón)]].
 
 ---
 
@@ -62,5 +62,4 @@ prioridad: maxima
 ---
 
 ## Relacionado
-[[00 Índice — el final resuelto]] · [[00 Tanda 2 — índice]] · [[00 Tanda 3 — índice]] ·
-[[00 Matriz del final — las 3 tandas]] · [[02 Chequeo de los 12 temas]]
+[[00 Índice — el final resuelto]] · [[00 Tanda 2 — índice]] · [[00 Tanda 3 — índice]] · [[00 Matriz del final — las 3 tandas]] · [[02 Chequeo de los 12 temas]]

@@ -7,22 +7,13 @@ prioridad: maxima
 # Jerarquía de memorias
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) · [[Memoria virtual y administración de memoria]] (Materia · Unidad 2) · [[Memoria auxiliar y memoria asociativa]] (Materia · Unidad 2)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.4 Jerarquía de memorias]].
-
+> **En otra tanda o unidad:** [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) · [[Memoria virtual y administración de memoria]] (Materia · Unidad 2) · [[Memoria auxiliar y memoria asociativa]] (Materia · Unidad 2) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.4 Jerarquía de memorias]].
 
 > [!abstract] En una frase
-> La **jerarquía de memoria** es la organización en **pisos** de las memorias de un computador: **registros → L1 →
-> L2/L3 → RAM → disco/SSD → cinta**, donde **arriba** hay poca capacidad, altísima velocidad y altísimo costo por
-> bit, y **abajo** mucha capacidad, baja velocidad y bajo costo. Funciona porque los programas tienen
-> **localidad**, y el objetivo es que el **tiempo promedio** se parezca al de arriba y el **costo** al de abajo.
+> La **jerarquía de memoria** es la organización en **pisos** de las memorias de un computador: **registros → L1 → L2/L3 → RAM → disco/SSD → cinta**, donde **arriba** hay poca capacidad, altísima velocidad y altísimo costo por bit, y **abajo** mucha capacidad, baja velocidad y bajo costo. Funciona porque los programas tienen **localidad**, y el objetivo es que el **tiempo promedio** se parezca al de arriba y el **costo** al de abajo.
 
 > [!note] Si es la primera vez que ves esto
-> Hay un triángulo imposible: queremos memorias **grandes** (para guardar mucho), **rápidas** (para no esperar) y
-> **baratas**. Ninguna tecnología es las tres. La solución es usar **varias a la vez, ordenadas**: la heladera
-> chica de la cocina (rápida, chica) y el depósito del fondo (lento, enorme). El sistema funciona porque **casi
-> siempre** lo que necesitás está en la heladera. Ese "casi siempre" tiene un nombre técnico: **localidad**, y es
-> lo que hace que la informática sea posible.
+> Hay un triángulo imposible: queremos memorias **grandes** (para guardar mucho), **rápidas** (para no esperar) y **baratas**. Ninguna tecnología es las tres. La solución es usar **varias a la vez, ordenadas**: la heladera chica de la cocina (rápida, chica) y el depósito del fondo (lento, enorme). El sistema funciona porque **casi siempre** lo que necesitás está en la heladera. Ese "casi siempre" tiene un nombre técnico: **localidad**, y es lo que hace que la informática sea posible.
 
 ---
 
@@ -53,8 +44,7 @@ prioridad: maxima
 | **Temporal** | lo que se usó se vuelve a usar pronto | los lazos y las variables calientes se quedan arriba |
 | **Espacial** | lo vecino se usa pronto | se traen **bloques** (líneas de caché, páginas) y no datos sueltos |
 
-Sin localidad, la jerarquía **no serviría**: cada acceso iría al nivel de abajo y el promedio sería el del disco.
-Con localidad, el 90–99 % de los accesos se resuelven arriba.
+Sin localidad, la jerarquía **no serviría**: cada acceso iría al nivel de abajo y el promedio sería el del disco. Con localidad, el 90–99 % de los accesos se resuelven arriba.
 
 ---
 
@@ -70,8 +60,7 @@ Con localidad, el 90–99 % de los accesos se resuelven arriba.
   Con L1 (95 %) y L2 (del 5 % que falla, el 80 % acierta en L2 a 20 ns):
                   1 + 0,05 × (20 + 0,20 × 100) = 1 + 0,05 × 40 = 3 ns
 ```
-Cada piso que se agrega mejora el promedio, siempre que la **tasa de acierto sea alta**. Si la tasa de acierto
-fuera baja, agregar niveles **no sirve** (y además cuesta).
+Cada piso que se agrega mejora el promedio, siempre que la **tasa de acierto sea alta**. Si la tasa de acierto fuera baja, agregar niveles **no sirve** (y además cuesta).
 
 ---
 
@@ -85,18 +74,18 @@ fuera baja, agregar niveles **no sirve** (y además cuesta).
 | Disco ↔ cinta | archivos / imágenes | el **operador** | lo que se respalde |
 
 > [!tip] La idea que une todo (y que impresiona en el oral)
-> **Es el mismo mecanismo repetido tres veces**: guardar arriba lo que se usa, traer de a bloques y reemplazar lo
-> que no se usa. Cambia el **tamaño del bloque** (palabra, línea, página), **quién lo administra** (compilador,
-> hardware, SO) y **qué pasa si falta** (esperar unos ns, decenas de ns, o milisegundos).
+> **Es el mismo mecanismo repetido tres veces**: guardar arriba lo que se usa, traer de a bloques y reemplazar lo que no se usa. Cambia el **tamaño del bloque** (palabra, línea, página), **quién lo administra** (compilador, hardware, SO) y **qué pasa si falta** (esperar unos ns, decenas de ns, o milisegundos).
 
 ---
 
 ## 5. Ejemplo resuelto: por qué se nota en la práctica
 
 Programa que suma un arreglo de 1 000 000 de enteros (4 MB):
+
 - **Sin caché**: cada acceso cuesta ~100 ns ⇒ 100 000 000 ns ≈ **0,1 s** sólo en esperas de memoria.
-- **Con caché** (localidad espacial: los 4 MB se recorren en orden, 64 bytes por línea ⇒ 16 enteros por línea,
-  y la línea se trae una vez): ~1 acceso a RAM cada 16 elementos ⇒ ~6 ns promedio ⇒ **0,006 s**.
+
+- **Con caché** (localidad espacial: los 4 MB se recorren en orden, 64 bytes por línea ⇒ 16 enteros por línea, y la línea se trae una vez): ~1 acceso a RAM cada 16 elementos ⇒ ~6 ns promedio ⇒ **0,006 s**.
+
 - **Diferencia**: ~**16 veces** más rápido, sin cambiar una línea de código. Eso es la jerarquía.
 
 ---
@@ -115,22 +104,18 @@ Programa que suma un arreglo de 1 000 000 de enteros (4 MB):
 
 ## 7. Cómo responderlo en el final (3 minutos)
 
-**Movimiento 1 — definición (20 s).** "Es la organización de las memorias en niveles: registros, caché, RAM,
-disco y respaldo, de más rápida y cara a más lenta y barata."
+**Movimiento 1 — definición (20 s).** "Es la organización de las memorias en niveles: registros, caché, RAM, disco y respaldo, de más rápida y cara a más lenta y barata."
 
-**Movimiento 2 — la pirámide dibujada (40 s).** Con los cinco niveles, poniendo al costado **tiempo** y
-**capacidad**.
+**Movimiento 2 — la pirámide dibujada (40 s).** Con los cinco niveles, poniendo al costado **tiempo** y **capacidad**.
 
-**Movimiento 3 — el porqué (40 s).** **Localidad temporal y espacial**; y que cada nivel es la caché del de
-abajo.
+**Movimiento 3 — el porqué (40 s).** **Localidad temporal y espacial**; y que cada nivel es la caché del de abajo.
 
-**Movimiento 4 — la cuenta (40 s).** `1 + 0,05 × 100 = 6 ns`: el promedio se acerca al de arriba. Mencionar que
-cada salto lo administra alguien distinto (compilador, hardware, SO).
+**Movimiento 4 — la cuenta (40 s).** `1 + 0,05 × 100 = 6 ns`: el promedio se acerca al de arriba. Mencionar que cada salto lo administra alguien distinto (compilador, hardware, SO).
 
-**Movimiento 5 — cierre (20 s).** "El objetivo de la jerarquía no es que todo sea rápido, sino que el **tiempo
-promedio** se parezca al nivel de arriba con el **costo** del de abajo."
+**Movimiento 5 — cierre (20 s).** "El objetivo de la jerarquía no es que todo sea rápido, sino que el **tiempo promedio** se parezca al nivel de arriba con el **costo** del de abajo."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Por qué no todo es SRAM? | Porque es **carísima** y ocupa mucho lugar por bit: 1 GB de SRAM costaría una fortuna |
@@ -144,12 +129,16 @@ promedio** se parezca al nivel de arriba con el **costo** del de abajo."
 ---
 
 ## 8. Errores típicos
+
 - Poner el **disco** arriba de la RAM (¡la pirámide está al revés en la cabeza de muchos!).
+
 - Decir que la jerarquía "hace que la memoria sea más rápida": hace que el **promedio** sea mejor.
+
 - Olvidar que los **registros** son el primer nivel (y el más rápido).
+
 - Confundir **capacidad** con **velocidad**: crecen en sentidos opuestos.
-- Decir que la memoria virtual "es otra memoria física": es un **mecanismo** que usa el disco como si fuera
-  memoria.
+
+- Decir que la memoria virtual "es otra memoria física": es un **mecanismo** que usa el disco como si fuera memoria.
 
 ---
 
@@ -170,6 +159,4 @@ promedio** se parezca al nivel de arriba con el **costo** del de abajo."
 ---
 
 ## Relacionado
-[[Memoria caché]] · [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]] ·
-[[Celda elemental de memoria]] · [[Memoria RAM 8x3]] · [[Memoria ROM y sus tipos]] ·
-[[Técnicas para aumentar la velocidad]]
+[[Memoria caché]] · [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]] · [[Celda elemental de memoria]] · [[Memoria RAM 8x3]] · [[Memoria ROM y sus tipos]] · [[Técnicas para aumentar la velocidad]]

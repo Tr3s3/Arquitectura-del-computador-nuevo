@@ -7,30 +7,21 @@ prioridad: maxima
 # Sumador completo (full adder)
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En `Apoyo a la pregunta/`:** [[Semisumador]]
-> **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3) · [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Hardware aritmético (resumen)]] (Materia · Unidad 9)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.8 Sumadores]].
-
+> **En `Apoyo a la pregunta/`:** [[Semisumador]] **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3) · [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Hardware aritmético (resumen)]] (Materia · Unidad 9) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.8 Sumadores]].
 
 > [!abstract] En una frase
-> El **sumador completo** suma **tres bits** (A, B y el acarreo de entrada **Cin**) y entrega **suma `S`** y
-> **acarreo `Cout`**: **`S = A ⊕ B ⊕ Cin`** · **`Cout = A·B + Cin·(A⊕B)`**. Es la celda que, repetida n veces y
-> encadenando los acarreos, suma palabras de n bits.
+> El **sumador completo** suma **tres bits** (A, B y el acarreo de entrada **Cin**) y entrega **suma `S`** y **acarreo `Cout`**: **`S = A ⊕ B ⊕ Cin`** · **`Cout = A·B + Cin·(A⊕B)`**. Es la celda que, repetida n veces y encadenando los acarreos, suma palabras de n bits.
 
 > [!note] Si es la primera vez que ves esto
-> La computadora **sólo sabe sumar**: restar es sumar el complemento, multiplicar es sumar varias veces, dividir
-> es restar varias veces. Así que la pieza más importante de la máquina es **la que suma**.
+> La computadora **sólo sabe sumar**: restar es sumar el complemento, multiplicar es sumar varias veces, dividir es restar varias veces. Así que la pieza más importante de la máquina es **la que suma**.
 >
-> El [[Semisumador]] suma dos bits, pero **no recibe** el "me llevo uno" de la columna anterior. Cuando en papel
-> sumás
+> El [[Semisumador]] suma dos bits, pero **no recibe** el "me llevo uno" de la columna anterior. Cuando en papel sumás
 > ```
 >    1 0 1 1
 >  + 0 1 1 0
 >  ───────────
 > ```
-> la segunda columna recibe el acarreo de la primera. Entonces la celda real necesita **tres entradas**: A, B y
-> el acarreo que viene. Eso es el **sumador completo**. Con 4 de ellos encadenados se suma un nibble; con 32, la
-> palabra de una computadora de 32 bits.
+> la segunda columna recibe el acarreo de la primera. Entonces la celda real necesita **tres entradas**: A, B y el acarreo que viene. Eso es el **sumador completo**. Con 4 de ellos encadenados se suma un nibble; con 32, la palabra de una computadora de 32 bits.
 
 ---
 
@@ -48,12 +39,13 @@ prioridad: maxima
 | 1 | 1 | 1 | **1** | **1** |
 
 **Lectura rápida (memorizala así):**
+
 - **S = 1** cuando hay un **número impar de unos** (1 o 3).
+
 - **Cout = 1** cuando hay **dos o tres unos** (es decir: "la suma dio 2 o más").
 
 > [!tip] Verificación mental en 3 segundos
-> `A = 1, B = 1, Cin = 1` ⇒ 1+1+1 = **3** ⇒ binario `11` ⇒ **S = 1, Cout = 1**. ✔
-> Con eso podés reconstruir la tabla entera sin memorizarla: cada fila es una suma aritmética de tres bits.
+> `A = 1, B = 1, Cin = 1` ⇒ 1+1+1 = **3** ⇒ binario `11` ⇒ **S = 1, Cout = 1**. ✔ Con eso podés reconstruir la tabla entera sin memorizarla: cada fila es una suma aritmética de tres bits.
 
 ---
 
@@ -73,8 +65,7 @@ prioridad: maxima
    AB=11  │  0  │  1  │   ← m7
    AB=10  │  1  │  0  │   ← m4, m5
 ```
-Los unos quedan **en damero**: **ningún par es vecino** ⇒ **no se puede simplificar** ⇒ `S = A ⊕ B ⊕ Cin`.
-(La S se reconoce como "paridad de 3 bits": la XOR de los tres.)
+Los unos quedan **en damero**: **ningún par es vecino** ⇒ **no se puede simplificar** ⇒ `S = A ⊕ B ⊕ Cin`. (La S se reconoce como "paridad de 3 bits": la XOR de los tres.)
 
 **Mapa de Karnaugh de Cout:**
 ```
@@ -85,8 +76,11 @@ Los unos quedan **en damero**: **ningún par es vecino** ⇒ **no se puede simpl
    AB=10  │  0  │  1  │   ← m5
 ```
 Tres grupos de 2:
+
 - `AB = 11`, con Cin cualquiera ⇒ **`A·B`**
+
 - `AB = 01` y `Cin = 1` ⇒ **`A'·B·Cin`**
+
 - `AB = 10` y `Cin = 1` ⇒ **`A·B'·Cin`**
 
 `Cout = A·B + A'BCin + AB'Cin = A·B + Cin·(A'B + AB')` ⇒ **`Cout = A·B + Cin·(A ⊕ B)`**
@@ -136,11 +130,10 @@ Se conectan n sumadores completos y **el `Cout` de cada uno va al `Cin` del sigu
 ```
 
 - Se llama **sumador con acarreo en cascada** (*ripple carry*).
-- **Retardo**: el bit más significativo tiene que esperar a que el acarreo atraviese **todas** las etapas ⇒ el
-  retardo crece **linealmente** con n (n × retardo de un FA).
-- **Solución**: **acarreo anticipado** (*carry look-ahead*): con los `G` y `P` de cada etapa se calculan **todos**
-  los Ci en paralelo (`C1 = G0 + P0·C0`, `C2 = G1 + P1·G0 + P1·P0·C0`, …). Más compuertas, **mucho menos**
-  retardo.
+
+- **Retardo**: el bit más significativo tiene que esperar a que el acarreo atraviese **todas** las etapas ⇒ el retardo crece **linealmente** con n (n × retardo de un FA).
+
+- **Solución**: **acarreo anticipado** (*carry look-ahead*): con los `G` y `P` de cada etapa se calculan **todos** los Ci en paralelo (`C1 = G0 + P0·C0`, `C2 = G1 + P1·G0 + P1·P0·C0`, …). Más compuertas, **mucho menos** retardo.
 
 > [!example] Ejercicio resuelto (el típico del TP5)
 > Sumar **1101 + 0111** con un sumador de 4 bits (Cin = 0):
@@ -152,8 +145,7 @@ Se conectan n sumadores completos y **el `Cout` de cada uno va al `Cin` del sigu
 | 2 | 1 | 1 | 1 | **1** | 1 |
 | 3 | 1 | 0 | 1 | **0** | 1 |
 
-> Resultado: `Cout S3 S2 S1 S0` = **1 0100** = **20**.
-> Verificación decimal: 13 + 7 = 20. ✔ (¡Ojo con el error clásico de escribir `1 1100`!)
+> Resultado: `Cout S3 S2 S1 S0` = **1 0100** = **20**. Verificación decimal: 13 + 7 = 20. ✔ (¡Ojo con el error clásico de escribir `1 1100`!)
 
 ---
 
@@ -167,35 +159,28 @@ Se conectan n sumadores completos y **el `Cout` de cada uno va al `Cin` del sigu
 **Un solo circuito suma y resta**, y eso es exactamente lo que hace la [[ALU]].
 
 ### Desbordamiento (overflow)
-Con números **con signo** (complemento a 2), hay desbordamiento cuando **el acarreo que entra al último bit es
-distinto del que sale**:
+Con números **con signo** (complemento a 2), hay desbordamiento cuando **el acarreo que entra al último bit es distinto del que sale**:
 ```
    Overflow = Cout(n−1) ⊕ Cin(n−1)      (o, equivalentemente, si dos positivos dan negativo)
 ```
-En un sumador **sin signo**, en cambio, `Cout = 1` del último bit es simplemente el **acarreo** (bit 33 de la
-suma).
+En un sumador **sin signo**, en cambio, `Cout = 1` del último bit es simplemente el **acarreo** (bit 33 de la suma).
 
 ---
 
 ## 6. Cómo responderlo en el final (4 minutos)
 
-**Movimiento 1 — definición (20 s).** "Suma tres bits (A, B, Cin) y entrega S y Cout; es la celda del sumador de
-n bits."
+**Movimiento 1 — definición (20 s).** "Suma tres bits (A, B, Cin) y entrega S y Cout; es la celda del sumador de n bits."
 
-**Movimiento 2 — tabla (50 s).** Dibujar las 8 filas, leyendo "S = impar de unos, Cout = dos o más unos", y
-verificar una fila en voz alta (1+1+1 = 11).
+**Movimiento 2 — tabla (50 s).** Dibujar las 8 filas, leyendo "S = impar de unos, Cout = dos o más unos", y verificar una fila en voz alta (1+1+1 = 11).
 
-**Movimiento 3 — funciones (60 s).** `S = Σm(1,2,4,7) = A⊕B⊕Cin` (justificando con el **mapa en damero** que no
-simplifica) y `Cout = A·B + Cin(A⊕B)`, presentando **G** y **P**.
+**Movimiento 3 — funciones (60 s).** `S = Σm(1,2,4,7) = A⊕B⊕Cin` (justificando con el **mapa en damero** que no simplifica) y `Cout = A·B + Cin(A⊕B)`, presentando **G** y **P**.
 
-**Movimiento 4 — circuito (70 s).** Los 5 pasos con los cables nombrados, o la versión **dos semisumadores + OR**.
-Marcar de dónde sale cada salida.
+**Movimiento 4 — circuito (70 s).** Los 5 pasos con los cables nombrados, o la versión **dos semisumadores + OR**. Marcar de dónde sale cada salida.
 
-**Movimiento 5 — cierre (40 s).** "n sumadores encadenados por el acarreo = sumador de n bits; el retardo se
-arregla con **carry look-ahead**; y con un **XOR** en B el mismo circuito **resta** (complemento a 2). Ésa es la
-ALU."
+**Movimiento 5 — cierre (40 s).** "n sumadores encadenados por el acarreo = sumador de n bits; el retardo se arregla con **carry look-ahead**; y con un **XOR** en B el mismo circuito **resta** (complemento a 2). Ésa es la ALU."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuántas filas tiene la tabla? | **8** (2³, tres entradas) |
@@ -212,12 +197,15 @@ ALU."
 ---
 
 ## 7. Errores típicos
-- Escribir `S = A + B + Cin` (eso es un OR: `1+1+1` daría 1 en vez de 1 con acarreo… y en `A=1,B=1,Cin=0` daría 1
-  cuando la suma es 0).
+
+- Escribir `S = A + B + Cin` (eso es un OR: `1+1+1` daría 1 en vez de 1 con acarreo… y en `A=1,B=1,Cin=0` daría 1 cuando la suma es 0).
+
 - Poner `Cout = A·B·Cin` ⇒ se pierden los acarreos de "dos unos".
+
 - Encadenar al revés: el `Cout` va al `Cin` del **siguiente** (el de más peso).
-- Decir que el acarreo del último bit siempre es error: en **sin signo** es el bit n; en **con signo** es
-  desbordamiento.
+
+- Decir que el acarreo del último bit siempre es error: en **sin signo** es el bit n; en **con signo** es desbordamiento.
+
 - Olvidar nombrar los cables intermedios en el dibujo (después no se puede explicar).
 
 ---
@@ -237,5 +225,4 @@ ALU."
 ---
 
 ## Relacionado
-[[Semisumador]] · [[ALU]] · [[Hardware aritmético (resumen)]] · [[Compuertas lógicas]] ·
-[[Mintérminos y maxtérminos]] · [[Álgebra de Boole — postulados y teoremas]]
+[[Semisumador]] · [[ALU]] · [[Hardware aritmético (resumen)]] · [[Compuertas lógicas]] · [[Mintérminos y maxtérminos]] · [[Álgebra de Boole — postulados y teoremas]]

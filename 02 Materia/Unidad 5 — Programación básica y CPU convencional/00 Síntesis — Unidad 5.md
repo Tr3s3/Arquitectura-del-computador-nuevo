@@ -5,9 +5,7 @@ unidad: 5
 # Síntesis — Unidad 5: Programación básica y CPU convencional
 
 > [!abstract] Qué es este archivo
-> **Toda la Unidad 5 en un solo lugar**: los 6 temas y sus 13 subtemas, con las tablas, las fórmulas, las recetas de
-> examen y las preguntas de autoevaluación. Sirve para **repasar antes del parcial** sin abrir 13 notas. Si algo
-> necesita más detalle, cada sección enlaza a su subtema.
+> **Toda la Unidad 5 en un solo lugar**: los 6 temas y sus 13 subtemas, con las tablas, las fórmulas, las recetas de examen y las preguntas de autoevaluación. Sirve para **repasar antes del parcial** sin abrir 13 notas. Si algo necesita más detalle, cada sección enlaza a su subtema.
 
 > [!tip] Cómo usarlo
 > 1. Leer las **§1 a §7** de corrido (30 minutos).
@@ -16,26 +14,38 @@ unidad: 5
 > 4. Contestar las **§13 preguntas** sin mirar.
 
 ## Índice
+
 1. [[#1. La instrucción: opcode y operandos]]
+
 2. [[#2. Clasificación de las instrucciones]]
+
 3. [[#3. Registros de la CPU]]
+
 4. [[#4. Formato de la instrucción y cálculo de CodOp]]
+
 5. [[#5. Modos de direccionamiento]]
+
 6. [[#6. La BLUE indexada (RIF, RID, RB) y los 24 pulsos]]
+
 7. [[#7. Interrupciones]]
+
 8. [[#8. El 8086: segmentación y BIU/EU]]
+
 9. [[#9. La pila]]
+
 10. [[#10. Tablas de memoria rápida]]
+
 11. [[#11. Recetas de examen]]
+
 12. [[#12. Errores que cuestan puntos]]
+
 13. [[#13. Autoevaluación]]
 
 ---
 
 ## 1. La instrucción: opcode y operandos
 
-Una instrucción tiene **dos partes**: el **opcode** (qué hacer, un número que la UC decodifica) y los **operandos**
-(con qué: direcciones, registros o valores).
+Una instrucción tiene **dos partes**: el **opcode** (qué hacer, un número que la UC decodifica) y los **operandos** (con qué: direcciones, registros o valores).
 
 ```
 ┌──────────────┬───────────────┬───────────────┬───────────────┐
@@ -50,9 +60,7 @@ Una instrucción tiene **dos partes**: el **opcode** (qué hacer, un número que
 | **Operando implícito** | lo pone el hardware (`AC` en `ADD 100` ⇒ `AC ← AC + M[100]`) |
 | **Arquitectura de acumulador** | todo pasa por el `AC`: instrucción corta, programa largo |
 
-En la **BLUE**: `15..12` opcode (4 bits) · `11..0` dirección (12 bits) ⇒ **16 instrucciones**, **4096 celdas**, **1
-operando explícito**.
-👉 [[5.1.1 Instrucción, opcode y operandos]]
+En la **BLUE**: `15..12` opcode (4 bits) · `11..0` dirección (12 bits) ⇒ **16 instrucciones**, **4096 celdas**, **1 operando explícito**. 👉 [[5.1.1 Instrucción, opcode y operandos]]
 
 ## 2. Clasificación de las instrucciones
 
@@ -66,13 +74,12 @@ operando explícito**.
 | **Desplazamiento** | `RAL` | `SHL`, `SHR`, `ROL`, `ROR` | mueve bits |
 | **Control del sistema** | `HLT`, `NOP`, `CSA` | `HLT`, `NOP`, `INT`, `IRET` | estado de la máquina |
 
-**Condicionales:** la BLUE no tiene; las arma con `CSA` + `JMA`. El 8086 tiene saltos que miran los **flags**
-(`JZ`, `JNZ`, `JC`…).
-👉 [[5.1.2 Clasificación de las instrucciones]]
+**Condicionales:** la BLUE no tiene; las arma con `CSA` + `JMA`. El 8086 tiene saltos que miran los **flags** (`JZ`, `JNZ`, `JC`…). 👉 [[5.1.2 Clasificación de las instrucciones]]
 
 ## 3. Registros de la CPU
 
 ### Los 14 del 8086 (todos de 16 bits)
+
 | Grupo | Registros | Para qué |
 |---|---|---|
 | Propósito general | `AX`, `BX`, `CX`, `DX` | datos (acumulador, base, contador, auxiliar); se parten en `H`/`L` |
@@ -83,6 +90,7 @@ operando explícito**.
 | Estado | `FLAGS` | `Z, C, S, O, P, I, D` |
 
 ### Comparación
+
 | | BLUE | 8086 | RISC |
 |---|---|---|---|
 | Cantidad | 5 + estado | **14** | ~32 |
@@ -95,6 +103,7 @@ operando explícito**.
 ## 4. Formato de la instrucción y cálculo de CodOp
 
 ### Los 4 formatos (mismo cálculo `X = A + B`)
+
 | Formato | Cómo | Instrucciones | Máquina |
 |---|---|---|---|
 | **4 dir.** | `ADD X, A, B, próxima` | 1 | teórico |
@@ -108,6 +117,7 @@ operando explícito**.
 ```
 d = log₂(celdas)        CodOp = palabra − d        instrucciones = 2^CodOp
 ```
+
 | Memoria | Celda | `d` | Palabra | `CodOp` | Instr. |
 |---|---|---|---|---|---|
 | **4096 (BLUE)** | 16 bits | 12 | 16 | **4** | **16** |
@@ -115,8 +125,7 @@ d = log₂(celdas)        CodOp = palabra − d        instrucciones = 2^CodOp
 | 1 GB | 4 B | 28 | 32 | 4 | 16 |
 | 256 KB | 2 B | 17 | 24 | 7 | 128 |
 
-Si no alcanza: palabra más larga · **formato variable** · registros índice · segmentos · banco de registros.
-👉 [[5.2.1 Los 4 formatos y el campo único de dirección]] · [[5.2.2 Cálculo de CodOp según el tamaño de memoria]]
+Si no alcanza: palabra más larga · **formato variable** · registros índice · segmentos · banco de registros. 👉 [[5.2.1 Los 4 formatos y el campo único de dirección]] · [[5.2.2 Cálculo de CodOp según el tamaño de memoria]]
 
 ## 5. Modos de direccionamiento
 
@@ -132,6 +141,7 @@ Si no alcanza: palabra más larga · **formato variable** · registros índice �
 
 ### Ejemplo con los mismos datos
 `M[30] = 50` · `M[50] = 0042` · `R1 = 0030` · `R2 = 100` · `RIF = 100` · `M[100] = 0042`
+
 | Modo | Cuenta | Resultado |
 |---|---|---|
 | Inmediato `LDI 30` | — | `AC = 30` |
@@ -142,9 +152,7 @@ Si no alcanza: palabra más larga · **formato variable** · registros índice �
 | Indexado `LDA 2(RIF)` | `EA = 102` | `AC = M[102]` |
 | Pila `POP` | `EA = SP` | dato del tope |
 
-**Para qué:** constante ⇒ inmediato · global ⇒ directo · puntero/lista ⇒ indirecto · **arreglo** ⇒ indexado ·
-**subrutina** ⇒ pila.
-👉 [[5.3.1 Los 7 modos]] · [[5.3.2 Dirección efectiva y costo en accesos]]
+**Para qué:** constante ⇒ inmediato · global ⇒ directo · puntero/lista ⇒ indirecto · **arreglo** ⇒ indexado · **subrutina** ⇒ pila. 👉 [[5.3.1 Los 7 modos]] · [[5.3.2 Dirección efectiva y costo en accesos]]
 
 ## 6. La BLUE indexada (RIF, RID, RB) y los 24 pulsos
 
@@ -152,6 +160,7 @@ Si no alcanza: palabra más larga · **formato variable** · registros índice �
 ```
 EA = RB + campo [+ RIF | RID | RIF + RID]
 ```
+
 | Registro | Se suma | Para qué |
 |---|---|---|
 | **RB** | **siempre** | reubicar el programa (lo maneja el sistema) |
@@ -159,6 +168,7 @@ EA = RB + campo [+ RIF | RID | RIF + RID]
 | **RID** | según modificador | recorrer el arreglo de **destino** (escritura) |
 
 ### El modificador de 2 bits
+
 | Mod | EA |
 |---|---|
 | `00` | `RB + campo` |
@@ -170,22 +180,21 @@ EA = RB + campo [+ RIF | RID | RIF + RID]
 `5 opcode` + `2 mod` + `9 campo (desplazamiento)` + `16 dirección` ⇒ **32 instrucciones**, **64 K** de memoria.
 
 ### Los costos en pulsos
+
 | Tipo de instrucción | Básica | Indexada | Indexada index. | Indexada indirecta |
 |---|---|---|---|---|
 | Sin memoria (HLT, NOP, NOT, RAL…) | 8 | 16 | 16 | — |
 | Con memoria (ADD, LDA, STA) | **16** | 16 | **24** | **32** |
 
-**Los 24 pulsos** = 8 (búsqueda 1.ª palabra) + 8 (búsqueda 2.ª palabra + cálculo de la EA) + 8 (ejecución).
-**Se paga 50 % más de tiempo por instrucción** para tener arreglos sin auto modificación, 64 K y 32 instrucciones.
-👉 [[5.4.1 RIF, RID y RB]] · [[5.4.2 Modificador de 2 bits y los 24 pulsos]]
+**Los 24 pulsos** = 8 (búsqueda 1.ª palabra) + 8 (búsqueda 2.ª palabra + cálculo de la EA) + 8 (ejecución). **Se paga 50 % más de tiempo por instrucción** para tener arreglos sin auto modificación, 64 K y 32 instrucciones. 👉 [[5.4.1 RIF, RID y RB]] · [[5.4.2 Modificador de 2 bits y los 24 pulsos]]
 
 ## 7. Interrupciones
 
 ### La señal
-`IRQ` (pide el periférico) · `SI` (habilita la CPU) · `CP8` (recién al final de la instrucción)
-⇒ **`IRQ · SI · CP8 = 1`** ⇒ se atiende.
+`IRQ` (pide el periférico) · `SI` (habilita la CPU) · `CP8` (recién al final de la instrucción) ⇒ **`IRQ · SI · CP8 = 1`** ⇒ se atiende.
 
 ### Polling vs interrupción
+
 | | Consulta (polling) | Interrupción |
 |---|---|---|
 | Quién avisa | la CPU pregunta (`INP` en un lazo) | el periférico (`IRQ`) |
@@ -198,14 +207,14 @@ CP8: IRQ·SI = 1  →  guardar PC (y estado)  →  PC ← dirección de la ISR
                  →  SI ← 0 automático  →  ejecutar la rutina
                  →  limpiar el flag del periférico  →  POP estado  →  RTI (POP PC, SI ← 1)
 ```
-**Máscara:** cada línea tiene su bit; en 0 se ignora. **Prioridad:** si llegan dos, gana la más alta.
-👉 [[5.5.1 IRQ, SI y CP8]] · [[5.5.2 Máscara, pila y RTI]]
+**Máscara:** cada línea tiene su bit; en 0 se ignora. **Prioridad:** si llegan dos, gana la más alta. 👉 [[5.5.1 IRQ, SI y CP8]] · [[5.5.2 Máscara, pila y RTI]]
 
 ## 8. El 8086: segmentación y BIU/EU
 
 ```
 dirección física (20 bits) = segmento × 16 + desplazamiento
 ```
+
 | Par | Apunta a |
 |---|---|
 | `CS:IP` | código |
@@ -220,8 +229,7 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 | **BIU** | calcula la dirección física, trae instrucciones a la **cola de 6 bytes** | `CS`, `DS`, `SS`, `ES`, `IP` |
 | **EU** | decodifica y ejecuta | `AX`-`DX`, `SP`, `BP`, `SI`, `DI`, `FLAGS` |
 
-**BIU + EU en paralelo = primer prefetch del x86** (semilla del pipeline).
-👉 [[5.6.1 BIU, EU y segmentación]]
+**BIU + EU en paralelo = primer prefetch del x86** (semilla del pipeline). 👉 [[5.6.1 BIU, EU y segmentación]]
 
 ## 9. La pila
 
@@ -232,14 +240,12 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 | `PUSH AX` | `SP ← SP − 2`; `M[SS:SP] ← AX` | decrece |
 | `POP AX` | `AX ← M[SS:SP]`; `SP ← SP + 2` | crece |
 
-**Usos:** subrutinas (`CALL` apila `IP`, `RET` lo saca) · interrupciones (`INT`/`IRET`) · variables locales (con
-`BP` como marco).
-**Errores:** desbordamiento (más `PUSH` que espacio) · subdesbordamiento (más `POP` que datos) · no hay protección.
-👉 [[5.6.2 La pila y el registro SP]]
+**Usos:** subrutinas (`CALL` apila `IP`, `RET` lo saca) · interrupciones (`INT`/`IRET`) · variables locales (con `BP` como marco). **Errores:** desbordamiento (más `PUSH` que espacio) · subdesbordamiento (más `POP` que datos) · no hay protección. 👉 [[5.6.2 La pila y el registro SP]]
 
 ## 10. Tablas de memoria rápida
 
 ### Los 16 opcodes de la BLUE (octal) y sus ciclos
+
 | Op | Instrucción | Ciclos | Pulsos |
 |---|---|---|---|
 | `00` | `HLT` | 1 | 8 |
@@ -260,6 +266,7 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 | `17` | `NOP` | 1 | 8 |
 
 ### Los números de la BLUE
+
 | Dato | Valor |
 |---|---|
 | Memoria | 4096 × 16 |
@@ -270,6 +277,7 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 | Palabra indexada | 32 bits (2 palabras) |
 
 ### Fórmulas de la unidad
+
 | Qué | Fórmula |
 |---|---|
 | Bits de dirección | `d = log₂ celdas` |
@@ -338,22 +346,32 @@ dirección física (20 bits) = segmento × 16 + desplazamiento
 ## 13. Autoevaluación
 
 1. ¿Qué dos partes tiene toda instrucción? ¿Cuál es implícita en la BLUE y por qué?
+
 2. Nombrá las **cinco familias** de instrucciones con dos ejemplos de la BLUE en total.
+
 3. ¿Cuántos registros tiene el 8086 y cómo se agrupan? ¿Cuáles son de 16 bits y se parten en dos?
+
 4. Escribí `X = A + B` en los **cuatro formatos**. ¿Cuál usa la BLUE y cuántas instrucciones necesita?
-5. Una memoria de 512 MB con celdas de 4 B y palabra de 32 bits: ¿cuántos bits de dirección, cuántos de opcode y
-   cuántas instrucciones admite?
+
+5. Una memoria de 512 MB con celdas de 4 B y palabra de 32 bits: ¿cuántos bits de dirección, cuántos de opcode y cuántas instrucciones admite?
+
 6. Enumerá los **7 modos** de direccionamiento con su fórmula de `EA` y su cantidad de accesos.
+
 7. Diferencia **directo / indirecto** y **de registro / registro indirecto** con un ejemplo cada uno.
+
 8. ¿Qué suma **siempre** la BLUE indexada? ¿Y qué suma sólo a veces? ¿Para qué sirve cada cosa?
+
 9. Explicá **por qué** una `LDA` indexada cuesta **24 pulsos** y una básica **16**. ¿Qué se gana a cambio?
+
 10. ¿Qué tres condiciones hacen falta para que se atienda una interrupción? ¿En qué pulso se evalúa y por qué?
+
 11. ¿Qué pasa si la rutina de servicio no limpia el flag del periférico? ¿Y si vuelve con `RET`?
+
 12. Calculá la dirección física de `CS = 2000h`, `IP = 0140h`. ¿Cuántos bytes abarca un segmento?
+
 13. ¿Por qué `PUSH` **decrementa** `SP`? ¿Qué guarda `CALL` y qué guarda `INT`?
 
 ---
 
 ## Relacionado
-[[00 Unidad 5 completa (lectura de corrido)]] · [[00 Unidad 5 — temas y subtemas]] · [[00 Síntesis — Unidad 4]] · [[00 Unidad 6 — temas y subtemas]] ·
-[[00 Índice de la materia (las 10 unidades)]]
+[[00 Unidad 5 completa (lectura de corrido)]] · [[00 Unidad 5 — temas y subtemas]] · [[00 Síntesis — Unidad 4]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Índice de la materia (las 10 unidades)]]

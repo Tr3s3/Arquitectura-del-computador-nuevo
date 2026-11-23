@@ -5,9 +5,7 @@ pregunta: "1.4"
 # Apoyos de la pregunta 1.4 Memoria RAM 8x3
 
 > [!abstract] Para qué sirve esta carpeta
-> Acá está **todo lo que hace falta para responder 1.4 Memoria RAM 8x3**: lo que vive en esta misma pregunta (arriba, en
-> la carpeta) y los **apoyos que viven en otras tandas**, que no se mueven de su lugar pero quedan enlazados
-> con su ubicación exacta. La nota principal, al principio, dice qué necesitás usar.
+> Acá está **todo lo que hace falta para responder 1.4 Memoria RAM 8x3**: lo que vive en esta misma pregunta (arriba, en la carpeta) y los **apoyos que viven en otras tandas**, que no se mueven de su lugar pero quedan enlazados con su ubicación exacta. La nota principal, al principio, dice qué necesitás usar.
 
 ## Apoyos que viven en esta carpeta
 
@@ -26,10 +24,12 @@ Ninguno: la nota principal de esta pregunta se explica sola.
 ---
 
 ## Cómo usar esto en el examen
+
 1. Leé primero la nota principal de la carpeta: **[[Memoria RAM 8x3]]**.
+
 2. Si en el guion aparece algo que no ubicás, volvé acá: cada apoyo dice **para qué** lo necesitás.
-3. De los apoyos externos, alcanza con saber **la frase que aporta** (no hace falta desarrollarlos enteros:
-   tienen su propia pregunta).
+
+3. De los apoyos externos, alcanza con saber **la frase que aporta** (no hace falta desarrollarlos enteros: tienen su propia pregunta).
 
 ## Relacionado
 [[Memoria RAM 8x3]] · [[00 Índice — el final resuelto]] · [[02 Chequeo de los 12 temas]]

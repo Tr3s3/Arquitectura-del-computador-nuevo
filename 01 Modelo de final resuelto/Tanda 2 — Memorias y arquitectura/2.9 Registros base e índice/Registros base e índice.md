@@ -7,20 +7,13 @@ prioridad: maxima
 # Registros base e índice
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[BLUE vs BLUE indexada — qué cambia y por qué]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Modos de direccionamiento]] (Tanda 2 · 2.10 Modos de direccionamiento)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.9 Registros base e índice]].
-
+> **En otra tanda o unidad:** [[BLUE indexada (RIF, RID, nuevo formato)]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[BLUE vs BLUE indexada — qué cambia y por qué]] (Tanda 1 · 1.2 BLUE vs BLUE indexada) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Modos de direccionamiento]] (Tanda 2 · 2.10 Modos de direccionamiento) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.9 Registros base e índice]].
 
 > [!abstract] En una frase
-> Los **registros índice** (RIF y RID en la BLUE indexada) son registros que el **programador** usa como
-> punteros: su contenido **se suma al campo de dirección** sólo cuando la instrucción lo pide, y sirven para
-> recorrer arreglos y tablas con un solo código. El **registro base** (RB) también se suma a la dirección,
-> pero **siempre** —el programador común no lo controla— y sirve para **reubicar** el programa completo en
-> memoria sin tocar una sola instrucción.
+> Los **registros índice** (RIF y RID en la BLUE indexada) son registros que el **programador** usa como punteros: su contenido **se suma al campo de dirección** sólo cuando la instrucción lo pide, y sirven para recorrer arreglos y tablas con un solo código. El **registro base** (RB) también se suma a la dirección, pero **siempre** —el programador común no lo controla— y sirve para **reubicar** el programa completo en memoria sin tocar una sola instrucción.
 
 ## Partamos de cero: el problema que resuelven
-Supongamos que hay que sumar 100 números que están guardados a partir de la dirección 1000. Sin registros
-índice, en la BLUE original, hay que escribir:
+Supongamos que hay que sumar 100 números que están guardados a partir de la dirección 1000. Sin registros índice, en la BLUE original, hay que escribir:
 
 ```
 ADD 1000
@@ -31,19 +24,20 @@ ADD 1099      ← 100 instrucciones, 100 palabras de memoria
 ```
 
 Tres problemas:
+
 1. **Ocupa mucha memoria** (100 palabras para algo que es siempre lo mismo).
+
 2. **No sirve para otro arreglo**: cambiás la posición inicial y hay que reescribir todo.
+
 3. **No sirve para otro tamaño**: 200 números ⇒ otro programa.
 
-La causa es que la dirección está **"incrustada" en la instrucción**. La solución: guardar la **parte que
-cambia** (la posición) en un **registro**, y dejar en la instrucción sólo la **parte fija** (el
-desplazamiento). La dirección real se calcula **sumando** las dos cosas justo antes de ir a memoria.
+La causa es que la dirección está **"incrustada" en la instrucción**. La solución: guardar la **parte que cambia** (la posición) en un **registro**, y dejar en la instrucción sólo la **parte fija** (el desplazamiento). La dirección real se calcula **sumando** las dos cosas justo antes de ir a memoria.
 
 > [!important] La idea en una línea
-> **Índice = "cuánto me muevo desde el principio" + "dónde está el principio".** El desplazamiento lo dice
-> la instrucción; el principio lo dice el registro; la suma la hace un **sumador de direcciones** dedicado.
+> **Índice = "cuánto me muevo desde el principio" + "dónde está el principio".** El desplazamiento lo dice la instrucción; el principio lo dice el registro; la suma la hace un **sumador de direcciones** dedicado.
 
 ## Los registros índice de la BLUE indexada
+
 | Registro | Bits | Para qué |
 |---|---|---|
 | **RIF** — Registro Índice Fuente | 16 | puntero al arreglo de **origen** (de donde leo) |
@@ -51,15 +45,14 @@ desplazamiento). La dirección real se calcula **sumando** las dos cosas justo a
 | **RB** — Registro Base | 16 | desplazamiento global del programa (lo carga el sistema) |
 | **W** y **X** | 16 | registros temporales, **entradas del sumador de direcciones** (no los ve el programador) |
 
-**Ojo con W y X**: no son registros índice. Son la "mesa de trabajo" del sumador de direcciones: en el ciclo
-de ejecución, **W** recibe el campo de dirección leído de memoria y **X** recibe el índice (o el 0 del modo
-directo). La suma `W + X` es la **dirección efectiva**.
+**Ojo con W y X**: no son registros índice. Son la "mesa de trabajo" del sumador de direcciones: en el ciclo de ejecución, **W** recibe el campo de dirección leído de memoria y **X** recibe el índice (o el 0 del modo directo). La suma `W + X` es la **dirección efectiva**.
 
 ## Los dos modos indexados (modificador 2 y 3)
 ```
   instrucción:  LDA 2, 1000      →  EA = 1000 + RIF
   instrucción:  LDA 3, 1000      →  EA = 1000 + RID
 ```
+
 | Modificador | Modo | Dirección efectiva |
 |---|---|---|
 | `0` | directo | `EA = campo de dirección` |
@@ -70,6 +63,7 @@ directo). La suma `W + X` es la **dirección efectiva**.
 Y en toda referencia a memoria, **además**: `dirección física = EA + RB`.
 
 ## Las instrucciones que los manejan
+
 | Instrucción | Qué hace |
 |---|---|
 | `ENI Reg, valor16` | carga **un valor entero** en el registro (`ENI RID, 1000` ⇒ RID = 1000) |
@@ -80,9 +74,7 @@ Y en toda referencia a memoria, **además**: `dirección física = EA + RB`.
 | `ENI RB, valor16` | carga el registro base (**instrucción privada**: sólo el sistema) |
 
 > [!warning] Detalle que vale puntos
-> `LIX RIF, X` **no** tiene modo indexado. ¿Por qué? Porque sería "auto-indexado": estaría usando el registro
-> que justamente va a cargar. En el final, si preguntan "¿todos los modos aplican a todas las instrucciones?",
-> la respuesta es **no**.
+> `LIX RIF, X` **no** tiene modo indexado. ¿Por qué? Porque sería "auto-indexado": estaría usando el registro que justamente va a cargar. En el final, si preguntan "¿todos los modos aplican a todas las instrucciones?", la respuesta es **no**.
 
 ## El arreglo con índice, dibujado
 ```
@@ -110,20 +102,18 @@ lazo:   LDA  2, 0              ; AC ← M[0 + RIF]  (el lazo siempre dice "0"!)
         IJP  RID, lazo        ; si no terminó, vuelve
 ```
 
-Lo importante: **la instrucción del lazo no cambia nunca**; lo que cambia es el registro. Diez líneas sirven
-para 100 o para 10 000 elementos.
+Lo importante: **la instrucción del lazo no cambia nunca**; lo que cambia es el registro. Diez líneas sirven para 100 o para 10 000 elementos.
 
 ## El registro base y la reubicación (para qué existe)
 Un programa se escribe pensando que empieza en la dirección 0. Pero en un sistema real:
+
 - puede haber **varios programas** en memoria a la vez (multiprogramación), y no todos pueden empezar en 0;
+
 - las primeras direcciones suelen estar reservadas (vector de interrupciones, tablas del sistema);
+
 - el **monitor** del sistema puede necesitar **mover** un programa ya cargado para juntar hueco libre.
 
-Si hay que mover el programa, hay que **corregir todas las direcciones** de sus instrucciones… pero **no sus
-constantes** (un 5 es un 5, no una dirección). Ese era el trabajo del *Relocating Loader*: distinguir una cosa
-de la otra instrucción por instrucción. **El registro base elimina ese trabajo**: se carga en RB la dirección
-donde empezó el programa y el hardware **suma RB a toda referencia a memoria**. Las constantes quedan intactas
-porque no son referencias a memoria.
+Si hay que mover el programa, hay que **corregir todas las direcciones** de sus instrucciones… pero **no sus constantes** (un 5 es un 5, no una dirección). Ese era el trabajo del *Relocating Loader*: distinguir una cosa de la otra instrucción por instrucción. **El registro base elimina ese trabajo**: se carga en RB la dirección donde empezó el programa y el hardware **suma RB a toda referencia a memoria**. Las constantes quedan intactas porque no son referencias a memoria.
 
 > [!example] El ejemplo de la cátedra
 > Programa pensado desde 0:
@@ -131,11 +121,10 @@ porque no son referencias a memoria.
 > 0000  ENI RID, 1000     ; constante 1000
 > 0001  LDA 3, 1234       ; M[1234 + 1000] = M[2234]
 > ```
-> Si el programa se carga a partir de **5000**, con RB = 5000 la segunda instrucción accede a
-> `M[1234 + 1000 + 5000]` **sin que nadie modifique la instrucción 5001**. El programa quedó reubicado
-> **sin tocar el código**.
+> Si el programa se carga a partir de **5000**, con RB = 5000 la segunda instrucción accede a `M[1234 + 1000 + 5000]` **sin que nadie modifique la instrucción 5001**. El programa quedó reubicado **sin tocar el código**.
 
 ## Índice vs base: la diferencia en un cuadro (pregunta típica)
+
 | | **Registro índice (RIF/RID)** | **Registro base (RB)** |
 |---|---|---|
 | Quién lo controla | el **programador** (con ENI/INI/LIX) | el **sistema** (instrucción privada) |
@@ -146,8 +135,7 @@ porque no son referencias a memoria.
 | Cuántos hay | 2 (fuente y destino) | 1 |
 
 > [!tip] Frase para el oral
-> "El índice dice **por dónde voy**; el base dice **dónde empieza todo**. El índice lo maneja el programador y
-> se suma cuando la instrucción lo pide; el base lo maneja el sistema y se suma siempre."
+> "El índice dice **por dónde voy**; el base dice **dónde empieza todo**. El índice lo maneja el programador y se suma cuando la instrucción lo pide; el base lo maneja el sistema y se suma siempre."
 
 ## El hardware que los involucra
 ```
@@ -159,20 +147,24 @@ porque no son referencias a memoria.
                                                    │
                                        (suma del base, permanente)
 ```
+
 - **Sumador de direcciones**: dedicado, no gasta tiempo de ALU.
-- **Multiplexor**: elige qué entra en X: `0` (directo), `RIF` o `RID` — lo manda el **decodificador del campo
-  modificador**.
+
+- **Multiplexor**: elige qué entra en X: `0` (directo), `RIF` o `RID` — lo manda el **decodificador del campo modificador**.
+
 - El **RB** se suma a la dirección efectiva en toda referencia a memoria.
 
 ## Cómo responderlo en el final (2–3 minutos)
+
 1. **Definición**: qué es un registro índice y para qué está (recorrer arreglos con un lazo).
-2. **Dibujo**: memoria a la izquierda con el arreglo, el registro con una flecha al sumador, y la instrucción
-   con su desplazamiento fijo.
-3. **Modos**: `EA = campo + RIF/RID` (modificador 2/3) y las instrucciones `ENI`, `INI`, `LIX`, `SIX`, `RXT`,
-   `IJP`.
+
+2. **Dibujo**: memoria a la izquierda con el arreglo, el registro con una flecha al sumador, y la instrucción con su desplazamiento fijo.
+
+3. **Modos**: `EA = campo + RIF/RID` (modificador 2/3) y las instrucciones `ENI`, `INI`, `LIX`, `SIX`, `RXT`, `IJP`.
+
 4. **Base**: `EA + RB` siempre; reubicación; el ejemplo 1000 → 5000.
-5. **Cierre**: la diferencia índice/base (tabla de arriba) y el beneficio: **el mismo código sirve para
-   cualquier posición y tamaño**.
+
+5. **Cierre**: la diferencia índice/base (tabla de arriba) y el beneficio: **el mismo código sirve para cualquier posición y tamaño**.
 
 ## Para ampliar: qué leer y qué buscar
 
@@ -189,13 +181,14 @@ porque no son referencias a memoria.
 | **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **modos de direccionamiento** | indexado, autoincremento y registro base | Notación formal |
 
 ## Errores típicos
+
 - Decir que el índice se suma siempre: se suma **sólo en los modos 2 y 3**.
+
 - Confundir **W y X** con registros índice: son temporales del sumador de direcciones.
-- Confundir **registro índice** con **registro de índice en un arreglo de C**: acá es hardware, un registro
-  real de 16 bits dentro de la CPU.
+
+- Confundir **registro índice** con **registro de índice en un arreglo de C**: acá es hardware, un registro real de 16 bits dentro de la CPU.
+
 - Decir que el RB cambia las constantes: no; sólo las **referencias a memoria**.
 
 ## Relacionado
-[[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Ciclo de LDA indexada (los 24 pulsos)]] ·
-[[Modos de direccionamiento]] · [[Registros de la CPU]] · [[TP19 Modos de direccionamiento]] ·
-[[Espacio de direccionamiento y cálculo de CodOp-Dirección]]
+[[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Ciclo de LDA indexada (los 24 pulsos)]] · [[Modos de direccionamiento]] · [[Registros de la CPU]] · [[TP19 Modos de direccionamiento]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]]

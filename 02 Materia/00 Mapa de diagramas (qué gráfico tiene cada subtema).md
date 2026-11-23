@@ -4,11 +4,7 @@ tipo: indice
 # Mapa de diagramas: qué gráfico tiene cada subtema
 
 > [!abstract] Qué es esta nota
-> Los **107 subtemas** de `02 Materia/` con los gráficos que trae cada uno: el **diagrama propio** (dibujado
-> en SVG para esta bóveda), la **figura del libro** copiada de la bibliografía y la **figura de clase** sacada del
-> resumen de Said. En total: **100 diagramas propios**, **132 figuras de libro** (Quiroga y Stallings) y **15
-> figuras de clase**, en **99 de los 107** subtemas: los 8 que no tienen figura externa son temas que no están ni
-> en la bibliografía ni en el resumen, y quedan con el diagrama propio.
+> Los **107 subtemas** de `02 Materia/` con los gráficos que trae cada uno: el **diagrama propio** (dibujado en SVG para esta bóveda), la **figura del libro** copiada de la bibliografía y la **figura de clase** sacada del resumen de Said. En total: **100 diagramas propios**, **132 figuras de libro** (Quiroga y Stallings) y **15 figuras de clase**, en **99 de los 107** subtemas: los 8 que no tienen figura externa son temas que no están ni en la bibliografía ni en el resumen, y quedan con el diagrama propio.
 
 > [!tip] Cómo usarlo
 > 1. Elegí la unidad que estás estudiando.
@@ -18,15 +14,25 @@ tipo: indice
 >    TP. Va después de la del libro, en el mismo subtema.
 
 ## Índice
+
 1. [[#Unidad 1 — Circuitos de lógica digital]]
+
 2. [[#Unidad 2 — Memorias y circuitos secuenciales]]
+
 3. [[#Unidad 3 — Transferencia de registros y microoperaciones]]
+
 4. [[#Unidad 4 — Organización y diseño básico]]
+
 5. [[#Unidad 5 — Programación básica y CPU convencional]]
+
 6. [[#Unidad 6 — Control microprogramado]]
+
 7. [[#Unidad 7 — CPU y arquitecturas]]
+
 8. [[#Unidad 8 — Paralelismo]]
+
 9. [[#Unidad 9 — Hardware aritmético]]
+
 10. [[#Unidad 10 — Entrada y Salida]]
 
 ---
@@ -210,10 +216,7 @@ tipo: indice
 
 ## Figuras de clase (resumen de Said)
 
-Las **15 figuras** del resumen de cátedra que aportaban algo que ni los libros ni el diagrama propio daban: el
-árbol de clasificación de biestables, el panel frontal de la BLUE, la tabla de los 16 nombres de instrucciones,
-el esquema de E/S con sus 64 dispositivos y toda la unidad de la BLUE indexada (formato, modos, ciclos y la
-comparación con la original). Están en `assets/catedra-said-*.png`, con la página del PDF en el pie.
+Las **15 figuras** del resumen de cátedra que aportaban algo que ni los libros ni el diagrama propio daban: el árbol de clasificación de biestables, el panel frontal de la BLUE, la tabla de los 16 nombres de instrucciones, el esquema de E/S con sus 64 dispositivos y toda la unidad de la BLUE indexada (formato, modos, ciclos y la comparación con la original). Están en `assets/catedra-said-*.png`, con la página del PDF en el pie.
 
 | Subtema | Figura de clase | Qué aporta |
 |---|---|---|
@@ -229,12 +232,7 @@ comparación con la original). Están en `assets/catedra-said-*.png`, con la pá
 | [[7.1.1 Etapas y diagrama en escalera]] | `catedra-said-etapas-pipeline` | las cinco etapas IF-ID-EX-MEM-WB con su función |
 
 > [!note] Las 53 que no se usaron
-> De las **68 imágenes** del resumen, **15** quedaron en la bóveda y **53** no: son **capturas de texto**
-> (enunciados, listas, definiciones) o **tablas y dibujos que ya estaban mejor resueltos** en el diagrama propio
-> del subtema (compuertas, DeMorgan, semisumador, sumador completo, flip-flops, pirámide de memorias, mapeos de
-> caché, buses, pulsos de la búsqueda, los cuatro formatos en bloque, CISC contra RISC). Una captura de 500 px no
-> mejora un SVG que dice lo mismo **y** está explicado en el texto de al lado, así que **no se borró ningún
-> diagrama propio**: la comparación está archivada en el detalle de M4, en [[07 Plan de mejoras pendientes]].
+> De las **68 imágenes** del resumen, **15** quedaron en la bóveda y **53** no: son **capturas de texto** (enunciados, listas, definiciones) o **tablas y dibujos que ya estaban mejor resueltos** en el diagrama propio del subtema (compuertas, DeMorgan, semisumador, sumador completo, flip-flops, pirámide de memorias, mapeos de caché, buses, pulsos de la búsqueda, los cuatro formatos en bloque, CISC contra RISC). Una captura de 500 px no mejora un SVG que dice lo mismo **y** está explicado en el texto de al lado, así que **no se borró ningún diagrama propio**: la comparación está archivada en el detalle de M4, en [[07 Plan de mejoras pendientes]].
 
 ## Cómo se generan los dos tipos
 

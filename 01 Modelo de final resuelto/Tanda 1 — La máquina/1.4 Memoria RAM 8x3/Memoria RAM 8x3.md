@@ -7,28 +7,16 @@ prioridad: maxima
 # Memoria RAM 8x3
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) · [[Estructura básica de un computador]] (Tanda 1 · 1.5 Estructura básica del computador) · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos))
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.4 Memoria RAM 8x3]].
-
+> **En otra tanda o unidad:** [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) · [[Estructura básica de un computador]] (Tanda 1 · 1.5 Estructura básica del computador) · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.4 Memoria RAM 8x3]].
 
 > [!abstract] En una frase
-> Una RAM de **8 × 3** es una memoria con **8 posiciones (direcciones) de 3 bits cada una**: capacidad
-> **24 bits**, **3 bits de dirección** (000 a 111) y **3 bits de dato**; internamente tiene una **matriz de
-> 8 celdas de 3 bits**, un **decodificador 3→8** que elige la fila, y las señales de control **CS** (selección
-> del chip) y **L/E** o `R/W'` (lectura o escritura).
+> Una RAM de **8 × 3** es una memoria con **8 posiciones (direcciones) de 3 bits cada una**: capacidad **24 bits**, **3 bits de dirección** (000 a 111) y **3 bits de dato**; internamente tiene una **matriz de 8 celdas de 3 bits**, un **decodificador 3→8** que elige la fila, y las señales de control **CS** (selección del chip) y **L/E** o `R/W'` (lectura o escritura).
 
 > [!note] Si es la primera vez que ves esto
-> Una memoria es **un mueble con cajones numerados**. Cada cajón (celda o palabra) tiene un número (la
-> dirección) y guarda algo de tamaño fijo (el dato). La RAM 8×3 es el mueble más chico que sirve para explicar
-> todo: **8 cajones de 3 bits**. Para usarla hacen falta tres cosas: **decir qué cajón** (3 bits de dirección →
-> decodificador), **decir qué hacer** (leer o escribir) y **llevar o traer el dato** (3 bits por el bus de
-> datos). Todo lo grande —una RAM de 8 GB, una caché, una ROM— es **este mismo esquema repetido y ensanchado**.
+> Una memoria es **un mueble con cajones numerados**. Cada cajón (celda o palabra) tiene un número (la dirección) y guarda algo de tamaño fijo (el dato). La RAM 8×3 es el mueble más chico que sirve para explicar todo: **8 cajones de 3 bits**. Para usarla hacen falta tres cosas: **decir qué cajón** (3 bits de dirección → decodificador), **decir qué hacer** (leer o escribir) y **llevar o traer el dato** (3 bits por el bus de datos). Todo lo grande —una RAM de 8 GB, una caché, una ROM— es **este mismo esquema repetido y ensanchado**.
 
 > [!tip] "8×3" o "3×8": las dos formas
-> En la **matriz del final** aparece como **"RAM 3×8"** y en los apuntes como **8×3**. Es el mismo circuito con
-> dos convenciones: **8 palabras de 3 bits** (8 filas × 3 columnas) o **3 bits × 8 posiciones**. En el oral
-> decilo así: *"8 posiciones, cada una de 3 bits; capacidad total 8 × 3 = 24 bits"*, y seguí el orden que use
-> el profesor sin corregirlo.
+> En la **matriz del final** aparece como **"RAM 3×8"** y en los apuntes como **8×3**. Es el mismo circuito con dos convenciones: **8 palabras de 3 bits** (8 filas × 3 columnas) o **3 bits × 8 posiciones**. En el oral decilo así: *"8 posiciones, cada una de 3 bits; capacidad total 8 × 3 = 24 bits"*, y seguí el orden que use el profesor sin corregirlo.
 
 ---
 
@@ -41,8 +29,7 @@ prioridad: maxima
 | **Tiempo de acceso** | lo que tarda leer o escribir una palabra desde que se la direcciona | (dato de la tecnología; en la BLUE, 1 µs) |
 | **Tipo de acceso** | si todas las posiciones tardan lo mismo | **aleatorio** (RAM): da igual si es la celda 0 o la 7 |
 
-Y dos palabras más que hay que manejar: **palabra** = el conjunto de bits que se leen juntos (3 bits acá) y
-**dirección** = el número de la palabra (de 000 a 111 acá).
+Y dos palabras más que hay que manejar: **palabra** = el conjunto de bits que se leen juntos (3 bits acá) y **dirección** = el número de la palabra (de 000 a 111 acá).
 
 ---
 
@@ -94,23 +81,31 @@ Y dos palabras más que hay que manejar: **palabra** = el conjunto de bits que s
 ![Memoria RAM 8x3: matriz, decodificador y control](../../../assets/ram_8x3.svg)
 
 ## 4. Lectura, paso a paso
+
 1. La CPU pone la **dirección** en el bus de direcciones (ej. `101`).
+
 2. El **decodificador** activa la línea 5; las demás quedan en 0.
+
 3. La CPU pone **CS = 1** (este chip es el elegido) y **L/E = 1** (lectura).
+
 4. Las celdas de la fila 5 entregan sus 3 bits a los **buffers**.
+
 5. Los buffers, habilitados en modo salida, ponen el dato en el **bus de datos**.
+
 6. La CPU lo lee (en la BLUE: pasa al **MBR**, y de ahí al AC o al IR).
 
 ## 5. Escritura, paso a paso
+
 1. Dirección en el bus de direcciones ⇒ el decodificador selecciona la fila.
+
 2. La CPU pone el **dato** en el bus de datos y **CS = 1**, con **L/E = 0** (escritura).
+
 3. Los buffers se ponen en modo **entrada** y el dato entra a las celdas de la fila elegida.
+
 4. **Se pierde el contenido anterior** de esa palabra (la escritura es destructiva *en esa celda*).
 
 > [!important] Las lecturas no destruyen, las escrituras sí
-> Leer una celda **no la cambia** (en semiconductores). Escribir **reemplaza** el contenido. Ese es el
-> argumento para explicar por qué la memoria de **ferrita** de la BLUE original necesitaba un pulso extra: en
-> esa tecnología **leer borraba** y había que reescribir ([[Ciclo de búsqueda (7 y 8 pulsos)]]).
+> Leer una celda **no la cambia** (en semiconductores). Escribir **reemplaza** el contenido. Ese es el argumento para explicar por qué la memoria de **ferrita** de la BLUE original necesitaba un pulso extra: en esa tecnología **leer borraba** y había que reescribir ([[Ciclo de búsqueda (7 y 8 pulsos)]]).
 
 ---
 
@@ -127,8 +122,7 @@ Y dos palabras más que hay que manejar: **palabra** = el conjunto de bits que s
 | `110` | `0 0 0` |
 | `111` | `1 0 1` |
 
-Los contenidos son **inventados**: sirven para mostrar que la memoria **no interpreta** lo que guarda (puede
-ser un dato o una instrucción).
+Los contenidos son **inventados**: sirven para mostrar que la memoria **no interpreta** lo que guarda (puede ser un dato o una instrucción).
 
 ---
 
@@ -141,8 +135,7 @@ ser un dato o una instrucción).
 | Ventaja | simple y rápida | **decodificadores más chicos** ⇒ menos hardware en memorias grandes |
 | Se usa en | memorias chicas / didácticas | memorias grandes reales |
 
-Con 8 palabras, un decodificador de 8 líneas es trivial. Con **65 536** palabras, un decodificador de 65 536
-líneas sería imposible: por eso las memorias reales usan **2D/3D con decodificadores partidos**.
+Con 8 palabras, un decodificador de 8 líneas es trivial. Con **65 536** palabras, un decodificador de 65 536 líneas sería imposible: por eso las memorias reales usan **2D/3D con decodificadores partidos**.
 
 ---
 
@@ -154,46 +147,51 @@ líneas sería imposible: por eso las memorias reales usan **2D/3D con decodific
        ── MEMR / MEMW (control) ───►
        ── CS (selección) ──────────►
 ```
-- El **ancho del bus de direcciones de la memoria** es 3: la CPU sólo usa esos 3 bits (los demás, si tiene más,
-  sirven para **seleccionar el chip** — ver abajo).
+
+- El **ancho del bus de direcciones de la memoria** es 3: la CPU sólo usa esos 3 bits (los demás, si tiene más, sirven para **seleccionar el chip** — ver abajo).
+
 - **MEMR** (lectura) y **MEMW** (escritura) son las líneas de control.
-- **CS** se activa con un decodificador de direcciones de la CPU: cuando la dirección cae en el rango de este
-  chip, se lo habilita.
+
+- **CS** se activa con un decodificador de direcciones de la CPU: cuando la dirección cae en el rango de este chip, se lo habilita.
 
 **Expansión (pregunta clásica): "¿cómo hago una RAM 16×6 con chips 8×3?"**
-- Necesito **16 palabras** ⇒ 4 bits de dirección ⇒ **dos bancos** de 8 palabras: se eligen con un bit
-  (A3) y un decodificador 1→2 que activa el **CS** de cada banco.
-- Necesito **6 bits por palabra** ⇒ **dos chips en paralelo** por banco, cada uno aportando 3 bits; juntos
-  cubren D0…D5.
-- Total: **4 chips 8×3** = 2 (palabras) × 2 (bits). El de la izquierda aporta los bits 0-2 y el de la derecha
-  los bits 3-5; los dos comparten dirección, CS y control.
+
+- Necesito **16 palabras** ⇒ 4 bits de dirección ⇒ **dos bancos** de 8 palabras: se eligen con un bit (A3) y un decodificador 1→2 que activa el **CS** de cada banco.
+
+- Necesito **6 bits por palabra** ⇒ **dos chips en paralelo** por banco, cada uno aportando 3 bits; juntos cubren D0…D5.
+
+- Total: **4 chips 8×3** = 2 (palabras) × 2 (bits). El de la izquierda aporta los bits 0-2 y el de la derecha los bits 3-5; los dos comparten dirección, CS y control.
 
 ---
 
 ## 9. Cómo dibujarla en el pizarrón (orden de trazo, 90 segundos)
+
 1. **Las 8 filas** (rectángulos alargados) a la derecha, rotuladas `000`…`111`, con 3 casilleros cada una.
+
 2. **El decodificador 3→8** a la izquierda, con A2 A1 A0 entrando y 8 líneas saliendo (una por fila).
+
 3. **Las 3 líneas de dato** saliendo a la derecha (D2 D1 D0), unidas a un bus vertical.
+
 4. **Los buffers de 3 estados** entre las celdas y el bus de datos.
+
 5. **CS** arriba y **L/E** abajo del bloque.
+
 6. Rotular los números: `8 palabras`, `3 bits`, `24 bits`, `2³ = 8`.
 
 ---
 
 ## 10. Cómo responderlo en el final (3–4 minutos)
 
-**Movimiento 1 — los números (20 s).** "8 posiciones de 3 bits: 24 bits de capacidad, 3 bits de dirección y 3
-de dato."
+**Movimiento 1 — los números (20 s).** "8 posiciones de 3 bits: 24 bits de capacidad, 3 bits de dirección y 3 de dato."
 
 **Movimiento 2 — el dibujo (60 s).** Matriz + decodificador + buffers + señales CS y L/E.
 
-**Movimiento 3 — el funcionamiento (80 s).** Leer una dirección concreta (`101`) paso a paso; después la
-escritura, marcando que **escribe sobre la fila seleccionada y borra lo anterior**.
+**Movimiento 3 — el funcionamiento (80 s).** Leer una dirección concreta (`101`) paso a paso; después la escritura, marcando que **escribe sobre la fila seleccionada y borra lo anterior**.
 
-**Movimiento 4 — el cierre con la generalización (20 s).** "Con 12 bits de dirección y 16 de dato es la misma
-memoria de la BLUE: 4096 × 16. Cambian los anchos, no el esquema."
+**Movimiento 4 — el cierre con la generalización (20 s).** "Con 12 bits de dirección y 16 de dato es la misma memoria de la BLUE: 4096 × 16. Cambian los anchos, no el esquema."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Para qué sirve el decodificador si yo ya mando la dirección? | Porque la memoria necesita **activar una sola fila**; el decodificador convierte el número en "una línea encendida" |
@@ -207,11 +205,15 @@ memoria de la BLUE: 4096 × 16. Cambian los anchos, no el esquema."
 ---
 
 ## 11. Errores típicos
+
 - Decir "8×3 = 24 palabras" (son **24 bits**, y **8 palabras**).
-- Confundir bits de **dirección** (3) con bits de **dato** (3): acá coinciden, y eso confunde; en una 4096×16 son
-  12 y 16.
+
+- Confundir bits de **dirección** (3) con bits de **dato** (3): acá coinciden, y eso confunde; en una 4096×16 son 12 y 16.
+
 - Olvidar el **CS**: sin selección del chip, al expandir no se sabe quién responde.
+
 - Decir que la memoria "decide" si lee o escribe: eso lo dice la **línea de control**.
+
 - Dibujar el decodificador **sin** numerar las líneas de salida: en el pizarrón, sin los números, no se entiende.
 
 ---
@@ -233,6 +235,4 @@ memoria de la BLUE: 4096 × 16. Cambian los anchos, no el esquema."
 ---
 
 ## Relacionado
-[[Celda elemental de memoria]] · [[Memoria ROM y sus tipos]] · [[Jerarquía de memorias]] ·
-[[Memoria caché]] · [[Decodificador]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] ·
-[[Estructura básica de un computador]]
+[[Celda elemental de memoria]] · [[Memoria ROM y sus tipos]] · [[Jerarquía de memorias]] · [[Memoria caché]] · [[Decodificador]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] · [[Estructura básica de un computador]]

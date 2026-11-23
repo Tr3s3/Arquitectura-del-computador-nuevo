@@ -7,24 +7,15 @@ prioridad: maxima
 # Multiplexor (MUX)
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.3 Multiplexores]].
-
+> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Mintérminos y maxtérminos]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[ALU]] (Materia · Unidad 3) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.3 Multiplexores]].
 
 > [!abstract] En una frase
-> Un **multiplexor de 2ⁿ a 1** tiene **2ⁿ entradas de dato**, **n entradas de selección** y **una sola salida**:
-> la salida **copia** la entrada cuyo número indican las líneas de selección. `Y = S1'·S0'·I0 + S1'·S0·I1 +
-> S1·S0'·I2 + S1·S0·I3` (para 4 a 1).
+> Un **multiplexor de 2ⁿ a 1** tiene **2ⁿ entradas de dato**, **n entradas de selección** y **una sola salida**: la salida **copia** la entrada cuyo número indican las líneas de selección. `Y = S1'·S0'·I0 + S1'·S0·I1 + S1·S0'·I2 + S1·S0·I3` (para 4 a 1).
 
 > [!note] Si es la primera vez que ves esto
-> Es una **llave de paso de 4 caños con una sola canilla de salida**: girás la palanca (las líneas de selección)
-> y elegís **cuál** de los cuatro caños pasa. O, mejor: es el **selector de canales del control remoto** — hay
-> muchas señales entrando y **una** sale hacia la pantalla, la que elegiste.
+> Es una **llave de paso de 4 caños con una sola canilla de salida**: girás la palanca (las líneas de selección) y elegís **cuál** de los cuatro caños pasa. O, mejor: es el **selector de canales del control remoto** — hay muchas señales entrando y **una** sale hacia la pantalla, la que elegiste.
 >
-> ¿Para qué sirve? Para **compartir un solo cable** entre varios que hablan de a uno: un **bus**. En la BLUE, el
-> bus común lleva el contenido de **un** registro por vez, y eso lo decide un multiplexor. Además tiene un uso
-> elegante que siempre cae en el final: **un multiplexor puede implementar cualquier función lógica** (se pone la
-> tabla de verdad en las entradas de dato).
+> ¿Para qué sirve? Para **compartir un solo cable** entre varios que hablan de a uno: un **bus**. En la BLUE, el bus común lleva el contenido de **un** registro por vez, y eso lo decide un multiplexor. Además tiene un uso elegante que siempre cae en el final: **un multiplexor puede implementar cualquier función lógica** (se pone la tabla de verdad en las entradas de dato).
 
 ---
 
@@ -37,9 +28,7 @@ prioridad: maxima
 
 **Función:** `Y = S'·I0 + S·I1` ⇒ **2 AND + 1 OR + 1 NOT** (o 3 compuertas si se arma con NAND).
 
-**Lectura:** si `S = 0`, el primer AND deja pasar `I0` (porque `S' = 1`) y el segundo queda en 0; el OR deja
-pasar el que sobrevivió. Con `S = 1`, al revés. Los AND son "**puertas**" que se abren o cierran con la
-selección.
+**Lectura:** si `S = 0`, el primer AND deja pasar `I0` (porque `S' = 1`) y el segundo queda en 0; el OR deja pasar el que sobrevivió. Con `S = 1`, al revés. Los AND son "**puertas**" que se abren o cierran con la selección.
 
 ---
 
@@ -67,22 +56,18 @@ Cada término es un **mintérmino de la selección multiplicado por el dato** co
         ▲
    S1,S0 (y sus negados) abren un solo AND a la vez
 ```
-**Compuertas:** 2 inversores (S1', S0') + **4 AND de 3 entradas** + **1 OR de 4 entradas** = **7 compuertas**.
-(En un chip real se implementa más chico, pero **así se dibuja**.)
+**Compuertas:** 2 inversores (S1', S0') + **4 AND de 3 entradas** + **1 OR de 4 entradas** = **7 compuertas**. (En un chip real se implementa más chico, pero **así se dibuja**.)
 
 ![Multiplexor 4 a 1](../../../assets/mux_4x1.svg)
 
 > [!tip] La fórmula general
-> MUX de **2ⁿ a 1** ⇒ **n líneas de selección**, **2ⁿ AND de (n+1) entradas** (n selecciones + 1 dato) y
-> **1 OR de 2ⁿ entradas**. Y el dato: **2ⁿ a 1 es lo mismo que "un decodificador de n → 2ⁿ que habilita el AND
-> de cada entrada"**.
+> MUX de **2ⁿ a 1** ⇒ **n líneas de selección**, **2ⁿ AND de (n+1) entradas** (n selecciones + 1 dato) y **1 OR de 2ⁿ entradas**. Y el dato: **2ⁿ a 1 es lo mismo que "un decodificador de n → 2ⁿ que habilita el AND de cada entrada"**.
 
 ---
 
 ## 3. El MUX como generador de funciones (el uso que impresiona)
 
-Un MUX puede **implementar cualquier función lógica** de n variables: se pone la **tabla de verdad en las
-entradas de dato** y las **variables en la selección**.
+Un MUX puede **implementar cualquier función lógica** de n variables: se pone la **tabla de verdad en las entradas de dato** y las **variables en la selección**.
 
 > [!example] Implementar `F(A,B,C) = Σm(1,2,5,7)` con un MUX 8→1
 > ```
@@ -98,8 +83,7 @@ entradas de dato** y las **variables en la selección**.
 > ```
 > Listo: **no hace falta simplificar ni dibujar compuertas**. El MUX **es** la tabla de verdad.
 >
-> **Versión con menos hardware (4→1 y dos variables en la selección):** se usan A y B como selección y cada
-> entrada de dato se conecta a `0`, `1`, `C` o `C'` según la columna:
+> **Versión con menos hardware (4→1 y dos variables en la selección):** se usan A y B como selección y cada entrada de dato se conecta a `0`, `1`, `C` o `C'` según la columna:
 > | A B | F en función de C | I |
 > |---|---|---|
 > | 0 0 | `C` | `I0 = C` |
@@ -107,17 +91,15 @@ entradas de dato** y las **variables en la selección**.
 > | 1 0 | `C` | `I2 = C` |
 > | 1 1 | `1` | `I3 = 1` |
 >
-> Así una función de 3 variables se hace con **un MUX 4→1** (más barato que 8→1). Éste es el ejercicio que
-> combina Karnaugh + MUX y que suele estar en el TP.
+> Así una función de 3 variables se hace con **un MUX 4→1** (más barato que 8→1). Éste es el ejercicio que combina Karnaugh + MUX y que suele estar en el TP.
 
 ---
 
 ## 4. Expansión: armar MUX más grandes
 
-- **8 → 1 con dos 4 → 1**: las dos salidas entran a un **MUX 2 → 1** final, gobernado por el bit de mayor peso
-  (S2). Es el mismo truco de expansión del decodificador ([[Decodificador]]).
-- **MUX en árbol**: 16 → 1 con cinco 4 → 1 en dos niveles. El retardo crece con los **niveles**, no con la
-  cantidad de entradas.
+- **8 → 1 con dos 4 → 1**: las dos salidas entran a un **MUX 2 → 1** final, gobernado por el bit de mayor peso (S2). Es el mismo truco de expansión del decodificador ([[Decodificador]]).
+
+- **MUX en árbol**: 16 → 1 con cinco 4 → 1 en dos niveles. El retardo crece con los **niveles**, no con la cantidad de entradas.
 
 ---
 
@@ -133,9 +115,7 @@ entradas de dato** y las **variables en la selección**.
 | **Selección de fuente de reloj / de señal** | elegir entre dos relojes o dos sensores |
 
 > [!example] El dato de la BLUE
-> En cada pulso, **quién** pone la información en el bus lo decide un **multiplexor** (o un conjunto de buffers
-> de 3 estados con decodificador). El par **MUX (salida) + DEMUX (destino)** es el modelo conceptual del **bus
-> común**: uno elige quién habla, el otro a quién le llega.
+> En cada pulso, **quién** pone la información en el bus lo decide un **multiplexor** (o un conjunto de buffers de 3 estados con decodificador). El par **MUX (salida) + DEMUX (destino)** es el modelo conceptual del **bus común**: uno elige quién habla, el otro a quién le llega.
 
 ---
 
@@ -155,22 +135,18 @@ entradas de dato** y las **variables en la selección**.
 
 ## 7. Cómo responderlo en el final (3–4 minutos)
 
-**Movimiento 1 — definición (20 s).** "2ⁿ entradas de dato, n de selección, una salida; la salida copia la
-entrada seleccionada."
+**Movimiento 1 — definición (20 s).** "2ⁿ entradas de dato, n de selección, una salida; la salida copia la entrada seleccionada."
 
-**Movimiento 2 — tabla y función (60 s).** Tabla del **4→1** y la función
-`Y = S1'S0'I0 + S1'S0I1 + S1S0'I2 + S1S0I3`.
+**Movimiento 2 — tabla y función (60 s).** Tabla del **4→1** y la función `Y = S1'S0'I0 + S1'S0I1 + S1S0'I2 + S1S0I3`.
 
-**Movimiento 3 — el circuito (60 s).** Dibujar los **4 AND que se abren de a uno** + el **OR**; contar compuertas
-y explicar que las selecciones funcionan como "llaves".
+**Movimiento 3 — el circuito (60 s).** Dibujar los **4 AND que se abren de a uno** + el **OR**; contar compuertas y explicar que las selecciones funcionan como "llaves".
 
-**Movimiento 4 — el uso fuerte (60 s).** "Cualquier función se implementa con un MUX: la tabla de verdad va en las
-entradas de dato." Dar el ejemplo de `Σm(1,2,5,7)` con un 8→1, y mencionar la versión con 4→1 usando `C` y `C'`.
+**Movimiento 4 — el uso fuerte (60 s).** "Cualquier función se implementa con un MUX: la tabla de verdad va en las entradas de dato." Dar el ejemplo de `Σm(1,2,5,7)` con un 8→1, y mencionar la versión con 4→1 usando `C` y `C'`.
 
-**Movimiento 5 — cierre (20 s).** "Es el bloque que permite **compartir un bus**: en la BLUE, el bus común lleva
-a un solo registro por vez, y eso lo decide un MUX."
+**Movimiento 5 — cierre (20 s).** "Es el bloque que permite **compartir un bus**: en la BLUE, el bus común lleva a un solo registro por vez, y eso lo decide un MUX."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuántas líneas de selección para 16 entradas? | **4** (2⁴ = 16) |
@@ -186,10 +162,15 @@ a un solo registro por vez, y eso lo decide un MUX."
 ---
 
 ## 8. Errores típicos
+
 - Confundir **entradas de dato** con **entradas de selección** (y por lo tanto dibujar mal el número de AND).
+
 - Escribir `Y = I0 + I1 + I2 + I3` (eso sería un OR de todo, no un MUX).
+
 - Olvidar que cada AND necesita **todas** las selecciones (negadas o no) ⇒ AND de `n+1` entradas.
+
 - Decir que el MUX "tiene 2ⁿ salidas" (tiene **una**; el que tiene 2ⁿ salidas es el demultiplexor).
+
 - Al usarlo como generador de funciones, equivocar el **orden** de la selección (S2 = bit más significativo).
 
 ---
@@ -209,5 +190,4 @@ a un solo registro por vez, y eso lo decide un MUX."
 ---
 
 ## Relacionado
-[[Decodificador]] · [[Codificador]] · [[Demultiplexor]] · [[Mintérminos y maxtérminos]] · [[Compuertas lógicas]] ·
-[[ALU]] · [[Flujo de información en BLUE (datos y direcciones)]]
+[[Decodificador]] · [[Codificador]] · [[Demultiplexor]] · [[Mintérminos y maxtérminos]] · [[Compuertas lógicas]] · [[ALU]] · [[Flujo de información en BLUE (datos y direcciones)]]

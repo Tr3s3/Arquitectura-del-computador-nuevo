@@ -7,23 +7,13 @@ prioridad: maxima
 # Interrupciones y entrada/salida
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Registros de la CPU]] (Materia · Unidad 5) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.8 Interrupciones]].
-
+> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Registros de la CPU]] (Materia · Unidad 5) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.8 Interrupciones]].
 
 > [!abstract] En una frase
-> Una **interrupción** es un pedido de atención que **rompe la secuencia** del programa: la CPU **termina la
-> instrucción en curso**, **guarda el contexto**, salta a una **rutina de servicio**, la ejecuta y **retorna**
-> como si nada hubiera pasado. Existe porque la CPU es **millones de veces más rápida** que un periférico:
-> esperarlo (E/S por consulta, *polling*) es desperdiciarla.
+> Una **interrupción** es un pedido de atención que **rompe la secuencia** del programa: la CPU **termina la instrucción en curso**, **guarda el contexto**, salta a una **rutina de servicio**, la ejecuta y **retorna** como si nada hubiera pasado. Existe porque la CPU es **millones de veces más rápida** que un periférico: esperarlo (E/S por consulta, *polling*) es desperdiciarla.
 
 > [!note] Si es la primera vez que ves esto
-> Imaginá que estás estudiando (tu programa) y suena el timbre (el periférico). Tenés dos maneras de atender:
-> **(a)** cada dos renglones levantás la cabeza y mirás la puerta —eso es *polling*: no te perdés nada, pero
-> perdés medio estudio—; **(b)** seguís estudiando y cuando suena el timbre dejás el marcador en el libro, abrís,
-> volvés y seguís desde el marcador —eso es **interrupción**: no perdés tiempo, pero necesitás el marcador (el
-> **contexto**) y una regla para que no te interrumpan dos veces a la vez (la **máscara** y las **prioridades**).
-> Ese marcador es el **PC**; la rutina que atendés es la **ISR**; volver al libro es el **RTI**.
+> Imaginá que estás estudiando (tu programa) y suena el timbre (el periférico). Tenés dos maneras de atender: **(a)** cada dos renglones levantás la cabeza y mirás la puerta —eso es *polling*: no te perdés nada, pero perdés medio estudio—; **(b)** seguís estudiando y cuando suena el timbre dejás el marcador en el libro, abrís, volvés y seguís desde el marcador —eso es **interrupción**: no perdés tiempo, pero necesitás el marcador (el **contexto**) y una regla para que no te interrumpan dos veces a la vez (la **máscara** y las **prioridades**). Ese marcador es el **PC**; la rutina que atendés es la **ISR**; volver al libro es el **RTI**.
 
 ---
 
@@ -35,12 +25,9 @@ prioridad: maxima
 | Un periférico lento (teclado, cinta, disco) | milisegundos |
 | Diferencia | **~1000 a 1 000 000 veces** |
 
-Si la CPU espera al periférico con una instrucción `INP` que no termina hasta que el dispositivo esté listo
-(como hace la BLUE, ver [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]), **se queda
-inmovilizada** miles de ciclos haciendo nada. Y peor: si el periférico se rompe, **espera para siempre**.
+Si la CPU espera al periférico con una instrucción `INP` que no termina hasta que el dispositivo esté listo (como hace la BLUE, ver [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]), **se queda inmovilizada** miles de ciclos haciendo nada. Y peor: si el periférico se rompe, **espera para siempre**.
 
-**La solución**: que el periférico **avise** cuando esté listo, y que la CPU siga trabajando mientras tanto.
-Eso es una interrupción.
+**La solución**: que el periférico **avise** cuando esté listo, y que la CPU siga trabajando mientras tanto. Eso es una interrupción.
 
 > [!important] La diferencia clave con la E/S por consulta
 > | | **E/S por consulta (polling)** | **E/S por interrupción** |
@@ -70,53 +57,55 @@ Eso es una interrupción.
 
 ## 3. La secuencia de atención, paso a paso (la respuesta que se espera)
 
-1. **El periférico pide**: pone su línea de pedido en 1 (en la BLUE, la bandera del dispositivo va a la **OR**
-   que produce `IRQ`).
-2. **La CPU termina la instrucción en curso**: la interrupción se acepta **al final** de la instrucción, nunca
-   en el medio (si no, se perdería un estado intermedio).
-3. **Verifica que esté habilitada**: hace falta que el flip-flop de habilitación esté en 1 (`SI` en la BLUE, el
-   flag **IF** en el 8086).
+1. **El periférico pide**: pone su línea de pedido en 1 (en la BLUE, la bandera del dispositivo va a la **OR** que produce `IRQ`).
+
+2. **La CPU termina la instrucción en curso**: la interrupción se acepta **al final** de la instrucción, nunca en el medio (si no, se perdería un estado intermedio).
+
+3. **Verifica que esté habilitada**: hace falta que el flip-flop de habilitación esté en 1 (`SI` en la BLUE, el flag **IF** en el 8086).
+
 4. **Reconoce el pedido**: genera la señal de reconocimiento (`INTACK` / `ACK`).
-5. **Guarda el contexto**: al menos el **PC** (la dirección de la próxima instrucción, que ya está calculada) y,
-   en máquinas reales, los **flags** y los registros que la rutina vaya a usar.
-6. **Identifica la fuente**: por *polling* (la rutina pregunta bandera por bandera) o por **vector** (el
-   dispositivo entrega un número que indexa una **tabla de vectores**; hay un salto **indirecto**).
+
+5. **Guarda el contexto**: al menos el **PC** (la dirección de la próxima instrucción, que ya está calculada) y, en máquinas reales, los **flags** y los registros que la rutina vaya a usar.
+
+6. **Identifica la fuente**: por *polling* (la rutina pregunta bandera por bandera) o por **vector** (el dispositivo entrega un número que indexa una **tabla de vectores**; hay un salto **indirecto**).
+
 7. **Salta a la rutina de servicio (ISR)**.
+
 8. **La rutina atiende**: lee o escribe el registro de datos del periférico y **baja el pedido**.
-9. **Restaura el contexto** y ejecuta el **retorno de interrupción** (`RTI` / `IRET`), que vuelve a habilitar las
-   interrupciones.
+
+9. **Restaura el contexto** y ejecuta el **retorno de interrupción** (`RTI` / `IRET`), que vuelve a habilitar las interrupciones.
+
 10. **El programa sigue** exactamente donde estaba.
 
 > [!tip] La frase que resume por qué es "transparente"
-> "La interrupción es útil **sólo si es invisible**: el programa principal no puede notar que lo interrumpieron.
-> Por eso lo crítico es guardar y restaurar **el PC, que ya apunta a la instrucción siguiente**."
+> "La interrupción es útil **sólo si es invisible**: el programa principal no puede notar que lo interrumpieron. Por eso lo crítico es guardar y restaurar **el PC, que ya apunta a la instrucción siguiente**."
 
 ---
 
 ## 4. Prioridades, máscara y anidamiento
 
 **Prioridad** — si dos periféricos piden a la vez, hay que decidir a quién atender primero. Dos formas:
-- **Por software**: el **orden en que la rutina consulta las banderas ES la prioridad** (el que se pregunta
-  primero gana).
-- **Por hardware**: un **codificador con prioridad** o el **encadenado de ACK** (el dispositivo más cercano a la
-  CPU en la cadena tiene prioridad).
+
+- **Por software**: el **orden en que la rutina consulta las banderas ES la prioridad** (el que se pregunta primero gana).
+
+- **Por hardware**: un **codificador con prioridad** o el **encadenado de ACK** (el dispositivo más cercano a la CPU en la cadena tiene prioridad).
 
 **Máscara** — un registro donde cada bit habilita o tapa un pedido. Sirve para:
+
 - que ciertas interrupciones no molesten en momentos críticos,
+
 - **cambiar dinámicamente la prioridad**,
+
 - que una rutina de mayor prioridad no sea interrumpida por una de menor.
 
-**Anidamiento** — atender una interrupción **dentro** de otra. Requiere guardar el contexto en una **pila (LIFO)**
-con un **puntero de pila (SP)**: sin pila, la segunda interrupción **pisaría** la dirección de retorno de la
-primera. Con pila: se apila todo, se atiende, y cada retorno va desapilando.
+**Anidamiento** — atender una interrupción **dentro** de otra. Requiere guardar el contexto en una **pila (LIFO)** con un **puntero de pila (SP)**: sin pila, la segunda interrupción **pisaría** la dirección de retorno de la primera. Con pila: se apila todo, se atiende, y cada retorno va desapilando.
 
 ---
 
 ## 5. El sistema de interrupciones que agrega la cátedra a la BLUE indexada
 
 > [!note] Dato que conviene decir primero
-> **La BLUE original no tiene interrupciones** (el apunte de Foster lo dice expresamente: no tiene registros
-> índice, ni direccionamiento indirecto, ni interrupciones). La cátedra las **agrega** sobre la BLUE indexada.
+> **La BLUE original no tiene interrupciones** (el apunte de Foster lo dice expresamente: no tiene registros índice, ni direccionamiento indirecto, ni interrupciones). La cátedra las **agrega** sobre la BLUE indexada.
 
 | Elemento | Función |
 |---|---|
@@ -130,10 +119,10 @@ primera. Con pila: se apila todo, se atiende, y cada retorno va desapilando.
 | **SP** | puntero de pila (permite **anidamiento**) |
 | **ACK** | reconocimiento, encadenado entre dispositivos (vectorizadas) |
 
-**Cuándo se acepta**: con `IRQ = 1`, `SI = 1` y **CP8 estando en estado E**. Es decir: **al final de la
-instrucción**, nunca en el medio.
+**Cuándo se acepta**: con `IRQ = 1`, `SI = 1` y **CP8 estando en estado E**. Es decir: **al final de la instrucción**, nunca en el medio.
 
 **El ciclo de interrupción (8 pulsos)**:
+
 | Pulso | Acción | Para qué |
 |---|---|---|
 | CP1 | **SI ← 0** | se deshabilita: evita que otra interrupción lo interrumpa |
@@ -143,8 +132,7 @@ instrucción**, nunca en el medio.
 | CP5-CP7 | — | la rutina ya corre (guardar contexto, identificar la fuente) |
 | CP8 | **I ← 0** | termina el reconocimiento |
 
-**La rutina hace tres cosas**: guarda el contexto, **determina quién interrumpió** (polling con `SKF`/`JMP`),
-atiende al dispositivo. Al final, **RTI**: `PC ← M[0]` y `SI ← 1`.
+**La rutina hace tres cosas**: guarda el contexto, **determina quién interrumpió** (polling con `SKF`/`JMP`), atiende al dispositivo. Al final, **RTI**: `PC ← M[0]` y `SI ← 1`.
 
 **Polling en la rutina**:
 ```
@@ -156,9 +144,7 @@ JMP Rutina2
 ```
 **El orden de las consultas es la prioridad.**
 
-**Vectorizadas**: cada dispositivo tiene un **vector** (dirección); cuando la CPU da **ACK**, el dispositivo
-**pone el vector en el bus** y se hace un **salto indirecto** a través de la tabla de vectores. Es **más rápido**
-que el polling, y la prioridad la resuelve el **encadenado de ACK**.
+**Vectorizadas**: cada dispositivo tiene un **vector** (dirección); cuando la CPU da **ACK**, el dispositivo **pone el vector en el bus** y se hace un **salto indirecto** a través de la tabla de vectores. Es **más rápido** que el polling, y la prioridad la resuelve el **encadenado de ACK**.
 
 ---
 
@@ -173,34 +159,34 @@ que el polling, y la prioridad la resuelve el **encadenado de ACK**.
 | **E/S aislada (puertos)** | hay un espacio de direcciones aparte para los puertos (instrucciones `IN`/`OUT`) |
 | **Transmisión paralela vs serie** | todos los bits a la vez (rápida, corta distancia) o bit a bit (lenta, larga distancia) |
 
-En la BLUE: **E/S aislada**, por acumulador, con `INP` (8 bits al AC) y `OUT` (8 bits altos del AC), **6 líneas
-de selección de dispositivo** (hasta 64 periféricos) y la línea **R** (ready).
+En la BLUE: **E/S aislada**, por acumulador, con `INP` (8 bits al AC) y `OUT` (8 bits altos del AC), **6 líneas de selección de dispositivo** (hasta 64 periféricos) y la línea **R** (ready).
 
 ---
 
 ## 7. Cómo responderlo en el final (3–4 minutos)
 
-**Movimiento 1 — el porqué (20 s).** "La CPU es miles de veces más rápida que el periférico. Esperar
-(polling) es desperdiciarla; la interrupción permite que el periférico avise cuando terminó."
+**Movimiento 1 — el porqué (20 s).** "La CPU es miles de veces más rápida que el periférico. Esperar (polling) es desperdiciarla; la interrupción permite que el periférico avise cuando terminó."
 
-**Movimiento 2 — el dibujo (60 s).** La línea `IRQ` entrando a la CPU; el flip-flop `SI`; la caja "guardar
-contexto"; la rutina; el `RTI`. Y los tres estados **F / E / I**.
+**Movimiento 2 — el dibujo (60 s).** La línea `IRQ` entrando a la CPU; el flip-flop `SI`; la caja "guardar contexto"; la rutina; el `RTI`. Y los tres estados **F / E / I**.
 
-**Movimiento 3 — la secuencia (90 s).** Los 10 pasos, recalcando: **se acepta al final de la instrucción**,
-**se guarda el PC**, **se identifica la fuente** (polling o vector), **se atiende**, **se restaura**, **`RTI`**.
+**Movimiento 3 — la secuencia (90 s).** Los 10 pasos, recalcando: **se acepta al final de la instrucción**, **se guarda el PC**, **se identifica la fuente** (polling o vector), **se atiende**, **se restaura**, **`RTI`**.
 
 **Movimiento 4 — los extras que suben nota (40 s).**
+
 1. **Prioridades**: por orden de consulta (software) o por codificador/ACK encadenado (hardware).
+
 2. **Máscara**: permite tapar pedidos y cambiar prioridades.
+
 3. **Anidamiento**: requiere **pila**; sin pila se pierde la dirección de retorno.
-4. **En la BLUE de la cátedra**: `SI`, `IRQ`, posición CERO para el PC, rutina en 1, `SKF`, `EMR`, `RTI`,
-   ciclo de interrupción de 8 pulsos.
+
+4. **En la BLUE de la cátedra**: `SI`, `IRQ`, posición CERO para el PC, rutina en 1, `SKF`, `EMR`, `RTI`, ciclo de interrupción de 8 pulsos.
+
 5. **En el 8086**: flag `IF`, vector de interrupciones, `IRET`, NMI.
 
-**Movimiento 5 — cierre (20 s).** "Lo que hace útil a la interrupción es ser **transparente**: el programa
-principal no se entera. Y lo que la hace posible es guardar y restaurar el **contexto**."
+**Movimiento 5 — cierre (20 s).** "Lo que hace útil a la interrupción es ser **transparente**: el programa principal no se entera. Y lo que la hace posible es guardar y restaurar el **contexto**."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Puede interrumpirse en medio de una instrucción? | **No**: se acepta al final (CP8 del estado E). Si no, se perdería un estado intermedio |
@@ -215,12 +201,17 @@ principal no se entera. Y lo que la hace posible es guardar y restaurar el **con
 ---
 
 ## 8. Errores típicos
+
 - Decir que la interrupción "corta" la instrucción en el medio.
+
 - Olvidar **guardar el PC** (o guardar el PC **antes** de incrementarlo).
-- Confundir **polling** (la CPU pregunta) con **interrupción** (el periférico avisa); y confundir el *polling de
-  identificación* dentro de la rutina con la *E/S por consulta*.
+
+- Confundir **polling** (la CPU pregunta) con **interrupción** (el periférico avisa); y confundir el *polling de identificación* dentro de la rutina con la *E/S por consulta*.
+
 - Decir que la máscara "elimina" la interrupción: la **posterga / no le da curso**.
+
 - Pensar que en la BLUE original hay interrupciones: **no las tiene**, las agrega la cátedra.
+
 - Confundir **RTI** (retorno de interrupción, restaura flags y habilita) con **RET** (retorno de subrutina).
 
 ---
@@ -243,6 +234,4 @@ principal no se entera. Y lo que la hace posible es guardar y restaurar el **con
 ---
 
 ## Relacionado
-[[Estructura básica de un computador]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
-[[Ciclo de máquina]] · [[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Unidad de Control]] ·
-[[El 8086 como CPU convencional (TP21)]] · [[Técnicas para aumentar la velocidad]]
+[[Estructura básica de un computador]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de máquina]] · [[BLUE vs BLUE indexada — qué cambia y por qué]] · [[Unidad de Control]] · [[El 8086 como CPU convencional (TP21)]] · [[Técnicas para aumentar la velocidad]]

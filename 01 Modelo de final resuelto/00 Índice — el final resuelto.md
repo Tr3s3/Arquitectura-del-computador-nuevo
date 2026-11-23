@@ -5,9 +5,7 @@ prioridad: maxima
 # El final resuelto — las 3 tandas
 
 > [!abstract] Qué es esta carpeta
-> El **modelo de final resuelto**: las **27 preguntas** de la matriz, cada una en su carpeta, con el
-> **desarrollo completo** (tabla, dibujo, función, guion oral, repreguntas y qué leer para ampliar) y los
-> **subtemas** que hacen falta para responderla. Si estás preparando el final, **esta es tu carpeta**.
+> El **modelo de final resuelto**: las **27 preguntas** de la matriz, cada una en su carpeta, con el **desarrollo completo** (tabla, dibujo, función, guion oral, repreguntas y qué leer para ampliar) y los **subtemas** que hacen falta para responderla. Si estás preparando el final, **esta es tu carpeta**.
 
 > [!tip] Tres clics y estás estudiando
 > 1. [[00 Matriz del final — las 3 tandas]] → **qué cae y con qué peso**.
@@ -33,9 +31,7 @@ prioridad: maxima
     └── 3.0 … 3.9
 ```
 
-**La regla:** en cada carpeta de pregunta, el **primer archivo** (el que tiene el nombre de la pregunta) es el
-**desarrollo principal**; los demás son **subtemas**. Y cada nota tiene, al final, su sección *"Para ampliar: qué
-leer y qué buscar"*.
+**La regla:** en cada carpeta de pregunta, el **primer archivo** (el que tiene el nombre de la pregunta) es el **desarrollo principal**; los demás son **subtemas**. Y cada nota tiene, al final, su sección *"Para ampliar: qué leer y qué buscar"*.
 
 ---
 
@@ -62,16 +58,15 @@ leer y qué buscar"*.
 ## Cómo se estudia este bloque (3 pasadas)
 
 1. **Decir sin mirar** (60-90 s por pregunta) usando la columna "lo decisivo" del [[02 Chequeo de los 12 temas]].
-2. **Dibujar**: RAM 8×3, mapa de Karnaugh, pipeline, ciclo de búsqueda, LDA 24 pulsos, los 4 modos de la
-   indexada. Práctica: [[Cómo dibujar los circuitos (checklist de pizarrón)]].
+
+2. **Dibujar**: RAM 8×3, mapa de Karnaugh, pipeline, ciclo de búsqueda, LDA 24 pulsos, los 4 modos de la indexada. Práctica: [[Cómo dibujar los circuitos (checklist de pizarrón)]].
+
 3. **Cruzar con la cátedra**: leer el *"Para ampliar"* de cada nota y abrir la fuente indicada.
 
 > [!tip] Los cinco temas que definen la nota
-> **Tanda 3 (12)** · **CISC/RISC (10)** · **pipeline (10)** · **RAM 8×3 (10)** · **interrupciones (9)**.
-> Con esos cinco sólidos ya estás arriba de la mitad del examen.
+> **Tanda 3 (12)** · **CISC/RISC (10)** · **pipeline (10)** · **RAM 8×3 (10)** · **interrupciones (9)**. Con esos cinco sólidos ya estás arriba de la mitad del examen.
 
 ---
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Cómo usar esta bóveda]] ·
-[[03 Ruta de estudio para el final]] · [[04 Resumen integrador de la materia]]
+[[00 Índice de la materia (las 10 unidades)]] · [[00 Cómo usar esta bóveda]] · [[03 Ruta de estudio para el final]] · [[04 Resumen integrador de la materia]]

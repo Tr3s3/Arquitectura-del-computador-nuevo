@@ -5,15 +5,16 @@ unidad: 2
 # 00 Síntesis — Unidad 2 (todo en un solo lugar)
 
 > [!abstract] Qué es este archivo
-> **Toda la Unidad 2 en una sola nota**: biestables con sus ecuaciones, registros y contadores, la celda y el chip
-> de memoria, ROM y no volátiles, jerarquía y caché con el AMAT, memoria virtual y asociativa, y las dos cuentas de
-> dimensionamiento. Sirve para **repasar antes del final** y para **imprimir**.
-> Detalle completo de cada punto, en los subtemas: [[00 Unidad 2 — temas y subtemas]].
+> **Toda la Unidad 2 en una sola nota**: biestables con sus ecuaciones, registros y contadores, la celda y el chip de memoria, ROM y no volátiles, jerarquía y caché con el AMAT, memoria virtual y asociativa, y las dos cuentas de dimensionamiento. Sirve para **repasar antes del final** y para **imprimir**. Detalle completo de cada punto, en los subtemas: [[00 Unidad 2 — temas y subtemas]].
 
 ## Contenido
+
 1. [[#1. Los cuatro biestables]] · 2. [[#2. Conversión entre biestables]] · 3. [[#3. Registros]] ·
+
 4. [[#4. Contadores]] · 5. [[#5. La celda y el chip]] · 6. [[#6. ROM y no volátiles]] ·
+
 7. [[#7. Jerarquía y caché]] · 8. [[#8. Memorias complementarias]] · 9. [[#9. Las dos cuentas]] ·
+
 10. [[#10. Recetas de examen]] · 11. [[#11. Errores que cuestan puntos]] · 12. [[#12. Autoevaluación]]
 
 ---
@@ -44,11 +45,9 @@ unidad: 2
 
 ## 2. Conversión entre biestables
 
-**Procedimiento:** tabla de estados del objetivo + tabla de excitación del disponible → minimizar con Karnaugh →
-agregar compuertas.
+**Procedimiento:** tabla de estados del objetivo + tabla de excitación del disponible → minimizar con Karnaugh → agregar compuertas.
 
-**RS → JK (la que se toma):** `S = J·Q'` y `R = K·Q` ⇒ **2 AND** (+ el inversor de Q que ya se tiene).
-Verificación: con `J=K=1` nunca se llega a `S=R=1` (si `Q=0` ⇒ set; si `Q=1` ⇒ reset).
+**RS → JK (la que se toma):** `S = J·Q'` y `R = K·Q` ⇒ **2 AND** (+ el inversor de Q que ya se tiene). Verificación: con `J=K=1` nunca se llega a `S=R=1` (si `Q=0` ⇒ set; si `Q=1` ⇒ reset).
 
 | Conversión | Resultado |
 |---|---|
@@ -76,18 +75,19 @@ Verificación: con `J=K=1` nunca se llega a `S=R=1` (si `Q=0` ⇒ set; si `Q=1` 
 
 ## 4. Contadores
 
-- **Asíncrono:** T flip-flops encadenados (el reloj de uno es `Q` del anterior). Cuenta `2ⁿ` estados; tiene
-  retardo acumulado y glitches (`0111 → 1000`).
+- **Asíncrono:** T flip-flops encadenados (el reloj de uno es `Q` del anterior). Cuenta `2ⁿ` estados; tiene retardo acumulado y glitches (`0111 → 1000`).
+
 - **Síncrono:** mismo `CLK` para todos; `T0 = 1`, `T1 = Q0`, `T2 = Q0·Q1`, `T3 = Q0·Q1·Q2`.
+
 - **Módulo N:** se detecta el estado `N` con una AND y se resetea. BCD (módulo 10): detecta `Q3·Q1` (= 1010).
+
 - **Cuántos flip-flops:** `2ⁿ ≥ N` (módulo 100 ⇒ n = 7).
 
 ---
 
 ## 5. La celda y el chip
 
-**Celda = 4 bloques:** biestable + selección + `L/E` + **buffer de 3 estados** (0, 1, **Z**).
-El buffer es lo que permite que miles de celdas compartan el bus de datos.
+**Celda = 4 bloques:** biestable + selección + `L/E` + **buffer de 3 estados** (0, 1, **Z**). El buffer es lo que permite que miles de celdas compartan el bus de datos.
 
 | | **SRAM** | **DRAM** |
 |---|---|---|
@@ -99,18 +99,15 @@ El buffer es lo que permite que miles de celdas compartan el bus de datos.
 
 Ambas son **volátiles**.
 
-**Chip = matriz + decodificador + L/E + buffers.** RAM 8×3: `A2A1A0` → decodificador 3→8 → una fila de 3 celdas;
-bus de datos de 3 bits; 24 celdas en total; `L/E` (0 leer, 1 escribir) y `CS`.
+**Chip = matriz + decodificador + L/E + buffers.** RAM 8×3: `A2A1A0` → decodificador 3→8 → una fila de 3 celdas; bus de datos de 3 bits; 24 celdas en total; `L/E` (0 leer, 1 escribir) y `CS`.
 
-**Expansión:** más **palabras** ⇒ chips en paralelo con `CS` distintos (bits altos al decodificador) · más
-**ancho** ⇒ chips en paralelo con el mismo `CS`, cada uno aporta sus bits.
+**Expansión:** más **palabras** ⇒ chips en paralelo con `CS` distintos (bits altos al decodificador) · más **ancho** ⇒ chips en paralelo con el mismo `CS`, cada uno aporta sus bits.
 
 ---
 
 ## 6. ROM y no volátiles
 
-**ROM = decodificador + `m` compuertas OR**: cada bit de salida es la **suma de mintérminos** de las direcciones
-donde vale 1. Es una tabla de verdad hecha hardware; no necesita biestables ⇒ **no volátil**.
+**ROM = decodificador + `m` compuertas OR**: cada bit de salida es la **suma de mintérminos** de las direcciones donde vale 1. Es una tabla de verdad hecha hardware; no necesita biestables ⇒ **no volátil**.
 
 | Tipo | Borrado | Veces | Uso |
 |---|---|---|---|
@@ -128,11 +125,9 @@ Celda física: **transistor de compuerta flotante** (carga atrapada = estado).
 
 ![Pirámide de la jerarquía](../../assets/jerarquia_memorias.svg)
 
-**Pirámide:** registros → L1 → L2/L3 → RAM → SSD/disco → cinta. Al bajar: ×10 tamaño, ×10 latencia, ÷10 costo.
-**Sostén:** localidad **temporal** y **espacial**.
+**Pirámide:** registros → L1 → L2/L3 → RAM → SSD/disco → cinta. Al bajar: ×10 tamaño, ×10 latencia, ÷10 costo. **Sostén:** localidad **temporal** y **espacial**.
 
-**Dirección vista por la caché:** `ETIQUETA | ÍNDICE | DESPLAZAMIENTO`, con
-`desplazamiento = log₂(línea)`, `índice = log₂(líneas/vías)`, `etiqueta = el resto`.
+**Dirección vista por la caché:** `ETIQUETA | ÍNDICE | DESPLAZAMIENTO`, con `desplazamiento = log₂(línea)`, `índice = log₂(líneas/vías)`, `etiqueta = el resto`.
 
 | Mapeo | Puede ir a | Contra |
 |---|---|---|
@@ -140,9 +135,7 @@ Celda física: **transistor de compuerta flotante** (carga atrapada = estado).
 | Totalmente asociativo | cualquiera | comparar todas |
 | Asociativo por conjuntos | 1 de n vías | intermedio |
 
-**Escritura:** write-through (caché + RAM) · write-back (+ bit *dirty*) · write-allocate / no-write-allocate.
-**Reemplazo:** LRU · FIFO · aleatorio · LFU.
-**Fallas:** frío (compulsorio) · conflicto · capacidad.
+**Escritura:** write-through (caché + RAM) · write-back (+ bit *dirty*) · write-allocate / no-write-allocate. **Reemplazo:** LRU · FIFO · aleatorio · LFU. **Fallas:** frío (compulsorio) · conflicto · capacidad.
 
 **AMAT = h + m × P** ⇒ `1 + 0,05 × 100 = ` **6 ns** (vs 100 ns sin caché). Con L2 se anida.
 
@@ -150,14 +143,11 @@ Celda física: **transistor de compuerta flotante** (carga atrapada = estado).
 
 ## 8. Memorias complementarias
 
-**Memoria virtual:** direcciones **virtuales** → **físicas** por **páginas** (4 KB). Campos: `página | desplazamiento`
-→ tabla de páginas → `marco | desplazamiento`. El desplazamiento **no** se traduce. Da aislamiento, más memoria que la
-física, reubicación y protección. **TLB** = caché de traducciones.
+**Memoria virtual:** direcciones **virtuales** → **físicas** por **páginas** (4 KB). Campos: `página | desplazamiento` → tabla de páginas → `marco | desplazamiento`. El desplazamiento **no** se traduce. Da aislamiento, más memoria que la física, reubicación y protección. **TLB** = caché de traducciones.
 
 **Auxiliar:** HDD (5-10 ms), SSD Flash (0,1-0,2 ms), cinta, óptico. Se accede **por bloque**, no por byte.
 
-**Asociativa (CAM):** se busca **por contenido**, todas las posiciones comparan en paralelo. Cara y chica; se usa
-en la **TLB**, caché asociativa y routers.
+**Asociativa (CAM):** se busca **por contenido**, todas las posiciones comparan en paralelo. Cara y chica; se usa en la **TLB**, caché asociativa y routers.
 
 ---
 
@@ -181,11 +171,7 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
 ## 10. Recetas de examen
 
 > [!important] Los movimientos de cada tipo de ejercicio
-> **Biestable:** tabla de estados (con Q) → mapa → ecuación → circuito → verificar una transición.
-> **Conversión:** tabla de excitación → mapas → compuertas → verificar el caso `J=K=1`.
-> **Celda/RAM:** dibujar los 4 bloques → decodificador → `L/E` → contar celdas y bits.
-> **Caché:** partir la dirección en 3 campos → decir acierto/fallo → aplicar `AMAT`.
-> **Dimensionar:** tamaño → celdas → `log₂` → restar de la palabra.
+> **Biestable:** tabla de estados (con Q) → mapa → ecuación → circuito → verificar una transición. **Conversión:** tabla de excitación → mapas → compuertas → verificar el caso `J=K=1`. **Celda/RAM:** dibujar los 4 bloques → decodificador → `L/E` → contar celdas y bits. **Caché:** partir la dirección en 3 campos → decir acierto/fallo → aplicar `AMAT`. **Dimensionar:** tamaño → celdas → `log₂` → restar de la palabra.
 
 | Si te piden… | Qué mostrar sí o sí |
 |---|---|
@@ -200,12 +186,19 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
 ## 11. Errores que cuestan puntos
 
 - Olvidar el **buffer de 3 estados** en la celda.
+
 - Decir que SRAM es **no volátil** (las dos son volátiles).
+
 - Usar la tabla de **estados** en lugar de la de **excitación** al convertir.
+
 - Decir que un contador de 4 bits cuenta hasta 16 (cuenta **0-15**).
+
 - Sumar mal los bits de la caché (etiqueta + índice + desplazamiento = total).
+
 - Usar la tasa de **aciertos** en el AMAT en lugar de la de **fallos**.
+
 - Olvidar dividir por el **tamaño de celda** al calcular bits de dirección.
+
 - Decir que la EPROM se borra eléctricamente (es **UV**).
 
 ---
@@ -213,14 +206,23 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
 ## 12. Autoevaluación (con respuesta)
 
 1. `Q⁺` del JK con `J=1, K=1, Q=0` → *1* (toggle).
+
 2. RS → JK: ¿qué compuertas? → *2 AND: `S=JQ'`, `R=KQ`*.
+
 3. ¿Cuántos flip-flops para un contador módulo 12? → *4* (`2⁴ = 16 ≥ 12`).
+
 4. Celda de DRAM: ¿qué la forma? → *1 transistor + 1 capacitor, con refresco*.
+
 5. RAM 8×3: ¿cuántas celdas y bits de dirección? → *24 celdas, 3 bits*.
+
 6. ROM de 4×4: ¿qué la compone? → *decodificador 2→4 + 4 OR*.
+
 7. Caché 1 ns, 95 % aciertos, penalidad 100 ns → *AMAT = 6 ns*.
+
 8. 1 GB con celdas de 4 B y palabra de 32 bits → *28 bits de dirección, CodOp 4*.
+
 9. Diferencia TLB / caché → *la TLB traduce direcciones; la caché guarda datos*.
+
 10. ¿Qué memoria se direcciona por **contenido**? → *la asociativa (CAM)*.
 
 ---
@@ -235,11 +237,10 @@ bits de CodOp     = palabra − bits de dirección      instrucciones = 2^CodOp
 | **Hamming** | `k` bits (`2ᵏ ≥ n+k+1`) | 1 bit (2 con SEC-DED) | **1 bit** (el síndrome da la posición) |
 
 - **LRC**: suma hexadecimal de los datos + complemento a 2 (`01+08+00+00+61+62 = CC` ⇒ `LRC = 34`).
+
 - **CRC**: la trama es un polinomio `D(X)`, se divide por `G(X)` y se manda el resto; en el receptor debe dar **0**.
-- **Hamming**: los controles van en las potencias de 2; `P1` cubre 1,3,5,7,9,11 · `P2` cubre 2,3,6,7,10,11 ·
-  `P4` cubre 4,5,6,7,12 · `P8` cubre 8 a 12. En memorias con ECC: **72 bits = 64 + 8**.
+
+- **Hamming**: los controles van en las potencias de 2; `P1` cubre 1,3,5,7,9,11 · `P2` cubre 2,3,6,7,10,11 · `P4` cubre 4,5,6,7,12 · `P8` cubre 8 a 12. En memorias con ECC: **72 bits = 64 + 8**.
 
 ## Relacionado
-[[00 Unidad 2 completa (lectura de corrido)]] · [[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.1 — índice]] · [[00 Tema 2.3 — índice]] ·
-[[00 Tema 2.5 — índice]] · [[00 Tema 2.7 — índice]] · [[00 Síntesis — Unidad 1]] ·
-[[00 Tanda 2 — índice]] · [[00 Índice de la materia (las 10 unidades)]]
+[[00 Unidad 2 completa (lectura de corrido)]] · [[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.1 — índice]] · [[00 Tema 2.3 — índice]] · [[00 Tema 2.5 — índice]] · [[00 Tema 2.7 — índice]] · [[00 Síntesis — Unidad 1]] · [[00 Tanda 2 — índice]] · [[00 Índice de la materia (las 10 unidades)]]

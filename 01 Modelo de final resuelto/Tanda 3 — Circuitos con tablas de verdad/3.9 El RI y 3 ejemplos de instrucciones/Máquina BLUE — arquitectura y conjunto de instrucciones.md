@@ -7,16 +7,13 @@ prioridad: maxima
 # Máquina BLUE — arquitectura y conjunto de instrucciones
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Programar en BLUE — ejemplos]] (Materia · Unidad 4)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.9 El RI]].
-
+> **En otra tanda o unidad:** [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) · [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Registros de la CPU]] (Materia · Unidad 5) · [[Programar en BLUE — ejemplos]] (Materia · Unidad 4) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.9 El RI]].
 
 > [!abstract] En una frase
-> BLUE es la **computadora didáctica** de la cátedra: 4096 palabras de 16 bits, 5 registros visibles
-> (PC, IR, MAR, MBR, AC), un bus único y 16 instrucciones de 4 bits de código + 12 bits de dirección.
-> Sirve para que todo lo que dicen los libros se pueda ver en un diagrama de 20 cm.
+> BLUE es la **computadora didáctica** de la cátedra: 4096 palabras de 16 bits, 5 registros visibles (PC, IR, MAR, MBR, AC), un bus único y 16 instrucciones de 4 bits de código + 12 bits de dirección. Sirve para que todo lo que dicen los libros se pueda ver en un diagrama de 20 cm.
 
 ## Especificación
+
 | Parámetro | Valor | Consecuencia |
 |---|---|---|
 | Palabra | 16 bits | el bus de datos es de 16 bits |
@@ -53,29 +50,17 @@ La tabla **oficial** es la del apunte de Foster (el que usa la cátedra), en **o
 | `17` | **NOP** | no hace nada | — | 8 |
 
 > [!important] Por qué HLT es `00` y NOP es `17`
-> Fue **a propósito**: si la máquina salta por error a una zona de memoria **borrada (todo 0)**, encuentra un
-> **HLT** y se detiene en vez de seguir ejecutando basura. Y si ejecuta una palabra **toda de unos** (la
-> palabra de detención típica), encuentra un **NOP** y no rompe nada. Es una decisión de **diseño defensivo**
-> que vale la pena mencionar: suma puntos y demuestra que entendiste el conjunto, no que lo memorizaste.
+> Fue **a propósito**: si la máquina salta por error a una zona de memoria **borrada (todo 0)**, encuentra un **HLT** y se detiene en vez de seguir ejecutando basura. Y si ejecuta una palabra **toda de unos** (la palabra de detención típica), encuentra un **NOP** y no rompe nada. Es una decisión de **diseño defensivo** que vale la pena mencionar: suma puntos y demuestra que entendiste el conjunto, no que lo memorizaste.
 
 > [!warning] Ojo con el simulador del TP16
-> El **simulador** del [[TP16 Ciclo de instrucción básico|TP16]] usa una numeración **decimal y simplificada**
-> (`1` cargar, `2`/`3` almacenar, `5` sumar, `C` parar) que **no** es la tabla de la máquina. En el oral decí
-> "según el simulador del TP…" y "según la tabla octal de la máquina…", y seguí con las microoperaciones:
-> **lo que se evalúa es la secuencia de pulsos**. Detalle en
-> [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]].
+> El **simulador** del [[TP16 Ciclo de instrucción básico|TP16]] usa una numeración **decimal y simplificada** (`1` cargar, `2`/`3` almacenar, `5` sumar, `C` parar) que **no** es la tabla de la máquina. En el oral decí "según el simulador del TP…" y "según la tabla octal de la máquina…", y seguí con las microoperaciones: **lo que se evalúa es la secuencia de pulsos**. Detalle en [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]].
 
 ## El RI: el registro que sostiene la instrucción
 
 > [!note] Si es la primera vez que ves esto
-> **RI** = **Registro de Instrucción** (en los apuntes también aparece como **IR**, *Instruction Register*).
-> Es un registro de **16 bits** cuya única misión es **guardar la instrucción que se está ejecutando**. Es la
-> memoria de trabajo de la Unidad de Control: mientras la instrucción está en el RI, la UC la puede mirar
-> **todas las veces que quiera** (en cada uno de los 8 pulsos) sin volver a la memoria.
+> **RI** = **Registro de Instrucción** (en los apuntes también aparece como **IR**, *Instruction Register*). Es un registro de **16 bits** cuya única misión es **guardar la instrucción que se está ejecutando**. Es la memoria de trabajo de la Unidad de Control: mientras la instrucción está en el RI, la UC la puede mirar **todas las veces que quiera** (en cada uno de los 8 pulsos) sin volver a la memoria.
 
-**Por qué es imprescindible:** al final del ciclo de búsqueda, el dato que llegó por el bus es **la
-instrucción**. Si no se guardara en algún lado, en el pulso siguiente el bus ya tendría otra cosa y la máquina
-"se olvidaría" de qué estaba haciendo. El RI es el que **conserva la orden** durante los 8 pulsos.
+**Por qué es imprescindible:** al final del ciclo de búsqueda, el dato que llegó por el bus es **la instrucción**. Si no se guardara en algún lado, en el pulso siguiente el bus ya tendría otra cosa y la máquina "se olvidaría" de qué estaba haciendo. El RI es el que **conserva la orden** durante los 8 pulsos.
 
 **Cómo se parte (esto es lo que se pregunta):**
 
@@ -96,19 +81,16 @@ instrucción**. Si no se guardara en algún lado, en el pulso siguiente el bus y
 | **RI11–RI0** (dirección) | **MAR** (en CP1 del 2.º ciclo) | es la dirección del operando |
 | **RI5–RI0** (en `INP`/`OUT`) | al **selector de dispositivo** | elige el periférico |
 
-**Cómo se carga:** en el ciclo de búsqueda, **CP6**: `strobe MBR` ⇒ el contenido del MBR pasa al RI. Es el
-último pulso útil de la búsqueda (en CP7 se decodifica y en CP8 se decide si hace falta un segundo ciclo).
+**Cómo se carga:** en el ciclo de búsqueda, **CP6**: `strobe MBR` ⇒ el contenido del MBR pasa al RI. Es el último pulso útil de la búsqueda (en CP7 se decodifica y en CP8 se decide si hace falta un segundo ciclo).
 
 > [!important] La frase que ordena toda la 1.ª tanda
-> **El RI es el que convierte "un dato que pasó por el bus" en "una instrucción que la máquina ejecuta".**
-> Sin RI no hay decodificación posible: la UC no tiene qué decodificar.
+> **El RI es el que convierte "un dato que pasó por el bus" en "una instrucción que la máquina ejecuta".** Sin RI no hay decodificación posible: la UC no tiene qué decodificar.
 
 ---
 
 ## Tres ejemplos de instrucciones, paso a paso
 
-Los tres casos que conviene tener aceitados: uno de **transferencia** (`LDA`), uno de **ALU** (`ADD`) y uno de
-**control de flujo** (`JMP`). Todos arrancan con el **mismo ciclo de búsqueda** (CP1 a CP8).
+Los tres casos que conviene tener aceitados: uno de **transferencia** (`LDA`), uno de **ALU** (`ADD`) y uno de **control de flujo** (`JMP`). Todos arrancan con el **mismo ciclo de búsqueda** (CP1 a CP8).
 
 ### Ejemplo 1 — `LDA XXXX` (opcode `06`): cargar el AC desde memoria
 
@@ -128,9 +110,7 @@ Los tres casos que conviene tener aceitados: uno de **transferencia** (`LDA`), u
 | | CP6–CP7 | — | — |
 | | CP8 | `MBR → AC` | `CP·E·LDA` |
 
-**Cómo contarlo en 20 segundos:** "Trae la instrucción (8 pulsos), y en el segundo ciclo pone la dirección del
-RI en el MAR, espera la memoria y copia el MBR al AC. Son **16 pulsos**: la mitad para saber qué hacer, la otra
-mitad para hacerlo."
+**Cómo contarlo en 20 segundos:** "Trae la instrucción (8 pulsos), y en el segundo ciclo pone la dirección del RI en el MAR, espera la memoria y copia el MBR al AC. Son **16 pulsos**: la mitad para saber qué hacer, la otra mitad para hacerlo."
 
 ### Ejemplo 2 — `ADD XXXX` (opcode `01`): sumar un valor de memoria al AC
 
@@ -146,9 +126,7 @@ mitad para hacerlo."
 | | CP8 | **`SUM → AC`** | la ALU suma Z + Y y el resultado vuelve al AC |
 
 > [!tip] Lo que hay que remarcar
-> En **CP2** la máquina ya está preparando la ALU (`AC → Z`) mientras la memoria todavía está buscando el dato.
-> Eso es **solapamiento**: el mismo truco del `PC+1` en la búsqueda. La suma no ocurre antes de CP8 porque
-> recién ahí está el segundo operando.
+> En **CP2** la máquina ya está preparando la ALU (`AC → Z`) mientras la memoria todavía está buscando el dato. Eso es **solapamiento**: el mismo truco del `PC+1` en la búsqueda. La suma no ocurre antes de CP8 porque recién ahí está el segundo operando.
 
 ### Ejemplo 3 — `JMP XXXX` (opcode `12`): salto incondicional
 
@@ -160,29 +138,25 @@ mitad para hacerlo."
 | | CP7 | decodifica: ya se sabe que es `JMP` |
 | | **CP8** | **`IR(11–0) → PC`** ⇒ el salto ocurre **en el mismo ciclo de búsqueda** |
 
-**Por qué es de un solo ciclo:** no hay **nada** que buscar en memoria. La dirección del salto ya está en el RI;
-basta con copiarla al PC. Por eso `JMP`, `JMA`, `SRJ`, `HLT`, `NOP`, `NOT`, `RAL` y `CSA` son de **8 pulsos**
-(ver [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]).
+**Por qué es de un solo ciclo:** no hay **nada** que buscar en memoria. La dirección del salto ya está en el RI; basta con copiarla al PC. Por eso `JMP`, `JMA`, `SRJ`, `HLT`, `NOP`, `NOT`, `RAL` y `CSA` son de **8 pulsos** (ver [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]]).
 
-**Contraste que conviene decir:** "`JMP` no necesita un segundo ciclo porque no accede a memoria; `LDA` y `ADD`
-sí, porque tienen que ir a buscar el operando. Ésa es la regla: **1 ciclo = 8 pulsos** si no hay referencia a
-memoria; **2 ciclos = 16 pulsos** si la hay."
+**Contraste que conviene decir:** "`JMP` no necesita un segundo ciclo porque no accede a memoria; `LDA` y `ADD` sí, porque tienen que ir a buscar el operando. Ésa es la regla: **1 ciclo = 8 pulsos** si no hay referencia a memoria; **2 ciclos = 16 pulsos** si la hay."
 
 ## Los tres grupos funcionales (los 16 opcodes reales)
+
 1. **Transferencia de datos** (`LDA`, `STA`): el AC habla con la memoria.
+
 2. **Operaciones con la ALU** (`ADD`, `XOR`, `AND`, `IOR`, `NOT`): operan sobre el AC.
+
 3. **Control de flujo** (`JMP`, `JMA`, `SRJ`, `HLT`, `NOP`, `RAL`, `CSA`) y **E/S** (`INP`, `OUT`).
 
 > [!warning] Cuidado con los nombres
-> En BLUE **no hay** `SUB` (se resta sumando el complemento a dos: `NOT` + `ADD`), ni `JZ`/`JC` (el salto
-> condicional es **`JMA`**, que salta si el AC es negativo: mira `A15`), ni `IN`/`OUT` (son **`INP`**/**`OUT`**).
-> Si el oral te sale con los nombres del 8086, aclaralo: "en BLUE el equivalente es…".
+> En BLUE **no hay** `SUB` (se resta sumando el complemento a dos: `NOT` + `ADD`), ni `JZ`/`JC` (el salto condicional es **`JMA`**, que salta si el AC es negativo: mira `A15`), ni `IN`/`OUT` (son **`INP`**/**`OUT`**). Si el oral te sale con los nombres del 8086, aclaralo: "en BLUE el equivalente es…".
 
-**Sin instrucciones de registro a registro**: como hay un solo AC, todo operando de la ALU sale del AC y
-vuelve al AC. Eso es lo que hace que BLUE sea "una dirección" (ver
-[[Formato de la instrucción (4 formatos)]]) y lo que después la indexada mejora.
+**Sin instrucciones de registro a registro**: como hay un solo AC, todo operando de la ALU sale del AC y vuelve al AC. Eso es lo que hace que BLUE sea "una dirección" (ver [[Formato de la instrucción (4 formatos)]]) y lo que después la indexada mejora.
 
 ## Estados y señales propias de BLUE
+
 | Elemento | Función |
 |---|---|
 | **RUN** | 1 = ejecutando; `HLT` lo apaga |
@@ -206,23 +180,24 @@ Ver más en [[Programar en BLUE — ejemplos]].
 ## Cómo responderlo en el final (4–5 minutos)
 
 > [!warning] El ítem de la 3.ª tanda dice
-> "**Conjunto de instrucciones: el RI y 3 ejemplos de instrucciones**". O sea: no alcanza con leer la tabla;
-> hay que **explicar el RI** y **desarrollar tres instrucciones**.
+> "**Conjunto de instrucciones: el RI y 3 ejemplos de instrucciones**". O sea: no alcanza con leer la tabla; hay que **explicar el RI** y **desarrollar tres instrucciones**.
 
 1. **Definición (20 s).** BLUE: máquina didáctica de von Neumann, bus único, programa almacenado.
-2. **Especificación (40 s).** 4096 × 16, 12 bits de dirección, instrucción de 16 = **4 opcode + 12 dirección**,
-   16 opcodes, registros PC/MAR (12) y MBR/IR/AC (16).
+
+2. **Especificación (40 s).** 4096 × 16, 12 bits de dirección, instrucción de 16 = **4 opcode + 12 dirección**, 16 opcodes, registros PC/MAR (12) y MBR/IR/AC (16).
+
 3. **Diagrama (60 s).** Dibujar los bloques y el bus único; aclarar que **por pulso pasa una sola transferencia**.
-4. **El RI (40 s).** "Registro de Instrucción, 16 bits: los 4 de arriba van al decodificador 4→16 y los 12 de
-   abajo al MAR. Se carga en CP6 con `strobe MBR`. Es lo que conserva la orden durante los 8 pulsos."
-5. **La tabla por grupos (40 s).** Transferencia / ALU / control de flujo y E/S, con los **nombres reales**
-   (`IOR`, `JMA`, `INP`).
-6. **Los tres ejemplos (90 s).** `LDA` (16 pulsos: CP1 al MAR, CP8 MBR→AC), `ADD` (16: CP2 AC→Z, CP6 MBR→Y,
-   CP8 SUM→AC) y `JMP` (**8**: CP8 IR→PC).
-7. **Cierre (20 s).** "La regla es simple: **sin referencia a memoria, 8 pulsos; con referencia, 16**. Y todo
-   está gobernado por `estado · pulso · instrucción`."
+
+4. **El RI (40 s).** "Registro de Instrucción, 16 bits: los 4 de arriba van al decodificador 4→16 y los 12 de abajo al MAR. Se carga en CP6 con `strobe MBR`. Es lo que conserva la orden durante los 8 pulsos."
+
+5. **La tabla por grupos (40 s).** Transferencia / ALU / control de flujo y E/S, con los **nombres reales** (`IOR`, `JMA`, `INP`).
+
+6. **Los tres ejemplos (90 s).** `LDA` (16 pulsos: CP1 al MAR, CP8 MBR→AC), `ADD` (16: CP2 AC→Z, CP6 MBR→Y, CP8 SUM→AC) y `JMP` (**8**: CP8 IR→PC).
+
+7. **Cierre (20 s).** "La regla es simple: **sin referencia a memoria, 8 pulsos; con referencia, 16**. Y todo está gobernado por `estado · pulso · instrucción`."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Qué es el RI y para qué sirve? | Registro de Instrucción: guarda la instrucción en ejecución para que la UC la decodifique pulso a pulso |
@@ -235,8 +210,6 @@ Ver más en [[Programar en BLUE — ejemplos]].
 | ¿Y las de 16? | `LDA`, `STA`, `ADD`, `XOR`, `AND`, `IOR` (y `INP`/`OUT`, que además usan la E/S) |
 | ¿Dónde está el RI en el diagrama? | Entre el MBR y la UC: recibe del bus y alimenta al decodificador y al MAR |
 | ¿El RI es lo mismo que el PC? | **No**: el PC dice **dónde está** la próxima instrucción; el RI tiene **la instrucción actual** |
-
-
 
 ## Para ampliar: qué leer y qué buscar
 
@@ -253,9 +226,13 @@ Ver más en [[Programar en BLUE — ejemplos]].
 | **Stallings, *Organización y arquitectura de computadores*** | capítulos de **ciclo de instrucción** y **repertorio** | el papel del IR y del PC en el ciclo | Contexto |
 
 ## Errores típicos
+
 - Decir que la instrucción tiene 16 bits de opcode (son 16 **combinaciones** de 4 bits).
+
 - Confundir el AC (dato) con el IR (instrucción).
+
 - Olvidar que `NOT`, `NOP`, `HLT` no necesitan dirección (usan los 16 bits completos o los ignoran).
+
 - Decir que BLUE tiene registros de propósito general (¡tiene uno solo: el AC!).
 
 ## Relacionado

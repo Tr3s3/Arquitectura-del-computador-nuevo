@@ -7,42 +7,27 @@ prioridad: maxima
 # Arquitectura CISC y RISC
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Unidad de control cableada y microprogramada]] (Materia · Unidad 6) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.6 CISC y RISC]].
-
+> **En otra tanda o unidad:** [[Cómo se implementa la Unidad de Control]] (Tanda 1 · 1.6 Implementación de la Unidad de Control) · [[Unidad de control cableada y microprogramada]] (Materia · Unidad 6) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[El 8086 como CPU convencional (TP21)]] (Materia · Unidad 5) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.6 CISC y RISC]].
 
 > [!abstract] En una frase
-> Son dos filosofías para diseñar el **repertorio de instrucciones** de una CPU. **CISC** (*Complex Instruction
-> Set Computer*): **pocas instrucciones pero complejas**, de longitud variable, que pueden operar directamente
-> sobre memoria y se implementan con **control microprogramado** (ej.: x86). **RISC** (*Reduced Instruction Set
-> Computer*): **muchas instrucciones pero simples**, todas del mismo largo, con acceso a memoria **sólo** por
-> `load`/`store`, muchos registros y **control cableado**, lo que permite **pipeline** (ej.: ARM, MIPS).
+> Son dos filosofías para diseñar el **repertorio de instrucciones** de una CPU. **CISC** (*Complex Instruction Set Computer*): **pocas instrucciones pero complejas**, de longitud variable, que pueden operar directamente sobre memoria y se implementan con **control microprogramado** (ej.: x86). **RISC** (*Reduced Instruction Set Computer*): **muchas instrucciones pero simples**, todas del mismo largo, con acceso a memoria **sólo** por `load`/`store`, muchos registros y **control cableado**, lo que permite **pipeline** (ej.: ARM, MIPS).
 
 > [!note] Si es la primera vez que ves esto
-> Es la diferencia entre un **cuchillo multiuso** y un **juego de cuchillos especializados**. El multiuso hace de
-> todo con un solo objeto (y por eso está en el bolsillo de todos = menos instrucciones, cada una hace mucho). El
-> juego de especializados tiene una pieza para cada cosa: si sabés cuál agarrar, cortás **más rápido y mejor**,
-> pero tenés que saber cuál (más instrucciones, cada una hace poquito). Las CPUs actuales son **híbridas**: por
-> fuera hablan "multiuso" (x86) y por dentro trabajan con "especializados" (micro-operaciones tipo RISC).
+> Es la diferencia entre un **cuchillo multiuso** y un **juego de cuchillos especializados**. El multiuso hace de todo con un solo objeto (y por eso está en el bolsillo de todos = menos instrucciones, cada una hace mucho). El juego de especializados tiene una pieza para cada cosa: si sabés cuál agarrar, cortás **más rápido y mejor**, pero tenés que saber cuál (más instrucciones, cada una hace poquito). Las CPUs actuales son **híbridas**: por fuera hablan "multiuso" (x86) y por dentro trabajan con "especializados" (micro-operaciones tipo RISC).
 
 ---
 
 ## 1. De dónde salen las dos ideas (contexto)
 
-**Los años 60-70: el repertorio crece sin freno.** Cada nueva función se agregaba como una instrucción nueva. La
-justificación era la **"brecha semántica"**: acercar el lenguaje de máquina al de alto nivel, para que el
-compilador tenga menos trabajo y el programa ocupe menos memoria (que era **carísima**). Así aparecen
-instrucciones complejas, de longitud variable, con muchos modos de direccionamiento, que operan directamente
-sobre memoria. Esa es la línea **CISC**.
+**Los años 60-70: el repertorio crece sin freno.** Cada nueva función se agregaba como una instrucción nueva. La justificación era la **"brecha semántica"**: acercar el lenguaje de máquina al de alto nivel, para que el compilador tenga menos trabajo y el programa ocupe menos memoria (que era **carísima**). Así aparecen instrucciones complejas, de longitud variable, con muchos modos de direccionamiento, que operan directamente sobre memoria. Esa es la línea **CISC**.
 
 **Los años 80: la reacción RISC.** Dos observaciones cambiaron todo:
-1. Los compiladores **casi no usaban** las instrucciones complejas (usaban el 20 % del repertorio en el 80 % del
-   código).
+
+1. Los compiladores **casi no usaban** las instrucciones complejas (usaban el 20 % del repertorio en el 80 % del código).
+
 2. Las instrucciones complejas **tardaban muchos ciclos** y hacían imposible el **pipeline** prolijo.
 
-La propuesta: repertorio **chico y regular**, instrucciones simples, **load/store**, muchos registros,
-**control cableado**: cada instrucción en **un ciclo** y todas del **mismo tamaño**, que es justo lo que el
-pipeline necesita.
+La propuesta: repertorio **chico y regular**, instrucciones simples, **load/store**, muchos registros, **control cableado**: cada instrucción en **un ciclo** y todas del **mismo tamaño**, que es justo lo que el pipeline necesita.
 
 ---
 
@@ -77,8 +62,7 @@ Objetivo: **sumar a la posición de memoria `[BX + SI + 4]` el contenido de `AX`
 ADD [BX+SI+4], AX     ; calcula la dirección (base + índice + desplazamiento)
                       ; lee de memoria, suma, escribe en memoria
 ```
-Una instrucción, **una línea de código**, pero: largo variable, un modo de direccionamiento complicado, **dos
-accesos a memoria** (leer y escribir), y en el chip se ejecuta como **varias microoperaciones**.
+Una instrucción, **una línea de código**, pero: largo variable, un modo de direccionamiento complicado, **dos accesos a memoria** (leer y escribir), y en el chip se ejecuta como **varias microoperaciones**.
 
 **RISC (tipo MIPS)** — hay que hacerlo con tres instrucciones simples:
 ```asm
@@ -86,12 +70,10 @@ LW   R1, 4(R2)        ; carga: R1 ← M[R2 + 4]     (acceso a memoria permitido)
 ADD  R3, R1, R4       ; suma registro con registro (sin memoria)
 SW   4(R2), R3        ; guarda: M[R2 + 4] ← R3
 ```
-Tres instrucciones, **más código**, pero: todas del mismo largo, todas en un ciclo, y cada una se puede solapar
-con las otras en el pipeline.
+Tres instrucciones, **más código**, pero: todas del mismo largo, todas en un ciclo, y cada una se puede solapar con las otras en el pipeline.
 
 > [!important] Lo que hay que saber decir de este ejemplo
-> "El CISC gasta **menos memoria** y **menos instrucciones**; el RISC gasta **más instrucciones** pero las
-> ejecuta **más rápido y en paralelo**. Ninguno es mejor en todo: es un **compromiso**."
+> "El CISC gasta **menos memoria** y **menos instrucciones**; el RISC gasta **más instrucciones** pero las ejecuta **más rápido y en paralelo**. Ninguno es mejor en todo: es un **compromiso**."
 
 ---
 
@@ -102,46 +84,58 @@ con las otras en el pipeline.
 | Por qué | con instrucciones complejas, "cablear" cada caso sería un circuito enorme e ingobernable; el microcódigo lo ordena y permite **cambiar el repertorio** con otra ROM | con instrucciones simples y regulares, la lógica es chica ⇒ se puede **cablear** y es **más rápida** |
 | Costo | cada microinstrucción cuesta un acceso a la memoria de control ⇒ más lento | más rápido, pero repertorio **fijo** |
 
-Desarrollo de la UC: [[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]].
-El **8088** es el ejemplo de la cátedra: UC **microprogramada** con **ROM de 504 × 21 bits** y ~90
-microprocedimientos.
+Desarrollo de la UC: [[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]]. El **8088** es el ejemplo de la cátedra: UC **microprogramada** con **ROM de 504 × 21 bits** y ~90 microprocedimientos.
 
 ---
 
 ## 5. Ventajas y desventajas (lo que piden los TPs)
 
 **CISC**
+
 - ✅ **Densidad de código**: programa más chico (importante cuando la memoria era cara).
+
 - ✅ **Menos instrucciones** por tarea ⇒ menos búsquedas de instrucción.
+
 - ✅ **Compatibilidad**: los repertorios crecen sin romper lo anterior (por eso x86 sigue vivo).
+
 - ✅ Mejor para tareas **complejas y poco repetitivas** (sistemas embebidos chicos, código compacto).
+
 - ❌ Instrucciones de **duración variable** ⇒ pipeline difícil.
+
 - ❌ Control microprogramado ⇒ **más lento** por microorden.
+
 - ❌ Hardware **complejo** y difícil de verificar.
 
 **RISC**
+
 - ✅ **Un ciclo por instrucción** ⇒ pipeline eficiente ⇒ **más rendimiento**.
+
 - ✅ Hardware **simple y regular** ⇒ más fácil de diseñar, escalar y verificar; **menos consumo**.
+
 - ✅ **Muchos registros** ⇒ menos accesos a memoria.
+
 - ✅ Compilador más simple (pocas formas de hacer lo mismo).
+
 - ❌ **Más instrucciones** y programa más grande (más presión sobre la caché de instrucciones).
+
 - ❌ Depende del **compilador** para optimizar (registros, programación del pipeline).
+
 - ❌ Peor densidad de código (problema en sistemas muy chicos).
 
 > [!tip] El argumento que cierra la respuesta
-> "Con compiladores optimizadores y memorias baratas, el costo del CISC (código grande) dejó de importar; y con
-> la necesidad de velocidad, el pipeline del RISC pasó a mandar. Por eso **hoy casi todo es RISC por dentro**."
+> "Con compiladores optimizadores y memorias baratas, el costo del CISC (código grande) dejó de importar; y con la necesidad de velocidad, el pipeline del RISC pasó a mandar. Por eso **hoy casi todo es RISC por dentro**."
 
 ---
 
 ## 6. El presente: híbridos
 
-- **x86 (CISC)** moderno: el hardware **traduce** cada instrucción compleja a **micro-operaciones** simples y las
-  ejecuta con un núcleo **tipo RISC** (superscalar, con pipeline). Es decir: **CISC por fuera, RISC por dentro**.
+- **x86 (CISC)** moderno: el hardware **traduce** cada instrucción compleja a **micro-operaciones** simples y las ejecuta con un núcleo **tipo RISC** (superscalar, con pipeline). Es decir: **CISC por fuera, RISC por dentro**.
+
 - **ARM (RISC)**: domina móviles y servidores; eficiencia energética.
+
 - **RISC-V**: repertorio abierto, muy usado para enseñar (es el "MIPS de hoy").
-- En la cátedra, el ejemplo de CPU real es el **8088**, que es **CISC microprogramado**
-  ([[El 8086 como CPU convencional (TP21)]]).
+
+- En la cátedra, el ejemplo de CPU real es el **8088**, que es **CISC microprogramado** ([[El 8086 como CPU convencional (TP21)]]).
 
 ---
 
@@ -149,18 +143,16 @@ microprocedimientos.
 
 **Movimiento 1 — definición (20 s).** Las dos siglas y la idea: pocas instrucciones complejas vs muchas simples.
 
-**Movimiento 2 — la tabla (60 s).** Los 6 ejes que importan: **cantidad y longitud**, **modos y acceso a
-memoria**, **registros**, **unidad de control**, **pipeline/CPI**, **densidad de código**.
+**Movimiento 2 — la tabla (60 s).** Los 6 ejes que importan: **cantidad y longitud**, **modos y acceso a memoria**, **registros**, **unidad de control**, **pipeline/CPI**, **densidad de código**.
 
-**Movimiento 3 — el ejemplo (60 s).** `ADD [BX+SI+4], AX` (CISC) contra `LW + ADD + SW` (RISC), y decir el
-compromiso de cada uno.
+**Movimiento 3 — el ejemplo (60 s).** `ADD [BX+SI+4], AX` (CISC) contra `LW + ADD + SW` (RISC), y decir el compromiso de cada uno.
 
 **Movimiento 4 — el porqué del control (40 s).** Complejo ⇒ **microprogramado**; simple ⇒ **cableado** y pipeline.
 
-**Movimiento 5 — cierre (20 s).** "Hoy son **híbridos**: x86 es CISC por fuera y RISC por dentro; ARM y RISC-V
-son RISC. La tendencia fue hacia RISC porque el rendimiento lo exige."
+**Movimiento 5 — cierre (20 s).** "Hoy son **híbridos**: x86 es CISC por fuera y RISC por dentro; ARM y RISC-V son RISC. La tendencia fue hacia RISC porque el rendimiento lo exige."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuál es mejor? | **Ninguno**: CISC gana en densidad de código y compatibilidad; RISC en velocidad, consumo y pipeline |
@@ -175,13 +167,15 @@ son RISC. La tendencia fue hacia RISC porque el rendimiento lo exige."
 ---
 
 ## 8. Errores típicos
-- Decir "RISC = menos instrucciones". Es **al revés**: RISC tiene **instrucciones más simples** (y suele tener más
-  cantidad de instrucciones distintas).
+
+- Decir "RISC = menos instrucciones". Es **al revés**: RISC tiene **instrucciones más simples** (y suele tener más cantidad de instrucciones distintas).
+
 - Decir que RISC "no usa memoria": usa memoria, pero **sólo** con load/store.
-- Confundir **longitud fija** con "instrucciones de un byte": fija quiere decir **todas iguales** (4 bytes, por
-  ejemplo).
-- Decir que el CISC es "viejo y obsoleto": el x86 factura más que nunca; lo que cambió es **cómo se ejecuta por
-  dentro**.
+
+- Confundir **longitud fija** con "instrucciones de un byte": fija quiere decir **todas iguales** (4 bytes, por ejemplo).
+
+- Decir que el CISC es "viejo y obsoleto": el x86 factura más que nunca; lo que cambió es **cómo se ejecuta por dentro**.
+
 - Olvidar el compromiso de la **densidad de código** (es la ventaja histórica del CISC).
 
 ---
@@ -203,6 +197,4 @@ son RISC. La tendencia fue hacia RISC porque el rendimiento lo exige."
 ---
 
 ## Relacionado
-[[Pipeline]] · [[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]] ·
-[[Lenguaje máquina y clasificación de instrucciones]] · [[Técnicas para aumentar la velocidad]] ·
-[[El 8086 como CPU convencional (TP21)]] · [[Formato de la instrucción (4 formatos)]]
+[[Pipeline]] · [[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[Lenguaje máquina y clasificación de instrucciones]] · [[Técnicas para aumentar la velocidad]] · [[El 8086 como CPU convencional (TP21)]] · [[Formato de la instrucción (4 formatos)]]

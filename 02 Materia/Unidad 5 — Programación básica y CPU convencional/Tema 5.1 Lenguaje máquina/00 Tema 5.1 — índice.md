@@ -6,8 +6,7 @@ tema: "5.1"
 # Tema 5.1 — Lenguaje máquina
 
 > [!abstract] Qué se estudia acá
-> Cómo se le dice a la máquina qué hacer: qué es una **instrucción** (opcode + operandos), cómo se **clasifican** y
-> en qué **registros** trabaja una CPU convencional.
+> Cómo se le dice a la máquina qué hacer: qué es una **instrucción** (opcode + operandos), cómo se **clasifican** y en qué **registros** trabaja una CPU convencional.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -16,8 +15,7 @@ tema: "5.1"
 | **5.1.3** Registros de la CPU | qué registros tiene una CPU real (8086) y para qué | [[5.1.3 Registros de la CPU]] |
 
 > [!important] La definición que se pide
-> **Instrucción = código de operación (qué) + operandos (con qué)**. El opcode se decodifica; los operandos se
-> **direccionan** (tema 5.3).
+> **Instrucción = código de operación (qué) + operandos (con qué)**. El opcode se decodifica; los operandos se **direccionan** (tema 5.3).
 
 ## Nota de desarrollo ampliado
 En esta carpeta: **[[Lenguaje máquina y clasificación de instrucciones]]** y **[[Registros de la CPU]]**.

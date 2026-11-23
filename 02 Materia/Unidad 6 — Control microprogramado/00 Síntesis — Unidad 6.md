@@ -5,9 +5,7 @@ unidad: 6
 # Síntesis — Unidad 6: Control microprogramado
 
 > [!abstract] Qué es este archivo
-> **Toda la Unidad 6 en un solo lugar**: la UC **cableada** (compuertas, estado, reloj, señales), la UC
-> **microprogramada** (memoria de control, microinstrucción, secuenciador) y la **comparación** con el caso real
-> del **8088 (504 × 21 bits)**. Con recetas de examen, errores que cuestan puntos y autoevaluación.
+> **Toda la Unidad 6 en un solo lugar**: la UC **cableada** (compuertas, estado, reloj, señales), la UC **microprogramada** (memoria de control, microinstrucción, secuenciador) y la **comparación** con el caso real del **8088 (504 × 21 bits)**. Con recetas de examen, errores que cuestan puntos y autoevaluación.
 
 > [!tip] Cómo usarlo
 > 1. Leer **§1 a §6** de corrido (25 minutos).
@@ -16,24 +14,34 @@ unidad: 6
 > 4. Contestar las **§11 preguntas** sin mirar.
 
 ## Índice
+
 1. [[#1. Qué hace la Unidad de Control]]
+
 2. [[#2. La UC cableada: estado, reloj y decodificación]]
+
 3. [[#3. La generación de señales]]
+
 4. [[#4. La UC microprogramada: memoria de control y microinstrucción]]
+
 5. [[#5. El secuenciamiento]]
+
 6. [[#6. Cableada vs microprogramada]]
+
 7. [[#7. El caso real: el 8088]]
+
 8. [[#8. Tablas de memoria rápida]]
+
 9. [[#9. Recetas de examen]]
+
 10. [[#10. Errores que cuestan puntos]]
+
 11. [[#11. Autoevaluación]]
 
 ---
 
 ## 1. Qué hace la Unidad de Control
 
-Los registros, la ALU y la memoria **no hacen nada solos**: la UC es la que **aprieta los botones en orden y a
-tiempo**.
+Los registros, la ALU y la memoria **no hacen nada solos**: la UC es la que **aprieta los botones en orden y a tiempo**.
 
 | Función | Qué hace | Con qué |
 |---|---|---|
@@ -42,12 +50,12 @@ tiempo**.
 | **Secuenciar** | búsqueda o ejecución | FF `STATE`, FF `RUN`, FF `TRA` |
 | **Generar** | activa las señales | compuertas AND / OR |
 
-**La UC no calcula: manda.** Las cuentas las hace la ALU; la UC elige **qué salida** de la ALU se habilita.
-👉 [[6.1.1 Circuito, compuertas y señales]]
+**La UC no calcula: manda.** Las cuentas las hace la ALU; la UC elige **qué salida** de la ALU se habilita. 👉 [[6.1.1 Circuito, compuertas y señales]]
 
 ## 2. La UC cableada: estado, reloj y decodificación
 
 ### Los tres flip-flops
+
 | FF | A 1 con | A 0 con | Para qué |
 |---|---|---|---|
 | **`RUN`** | `START` | `STOP`, `HLT`, **overflow** | enciende la máquina |
@@ -55,12 +63,10 @@ tiempo**.
 | **`TRA`** | `F · CP7 · (INP + OUT)` | fin de la E/S | E/S en curso |
 
 ### El reloj
-Cadena de **8 retardos de 125 ns** ⇒ `CP1…CP8`, con **realimentación** al final.
-**1 ciclo de máquina = 8 pulsos = 1 µs.**
+Cadena de **8 retardos de 125 ns** ⇒ `CP1…CP8`, con **realimentación** al final. **1 ciclo de máquina = 8 pulsos = 1 µs.**
 
 ### El decodificador
-`IR15..12` → **1→16** = **4 NOT + 16 AND de 4 entradas**, una línea activa por instrucción
-(`HLT`=0000 … `NOP`=1111).
+`IR15..12` → **1→16** = **4 NOT + 16 AND de 4 entradas**, una línea activa por instrucción (`HLT`=0000 … `NOP`=1111).
 
 ![UC cableada: entradas, AND, OR y salidas](../../assets/uc_cableada.svg)
 
@@ -90,13 +96,12 @@ REF   = LDA + STA + ADD + XOR + AND + IOR
 ARITH = ADD + XOR + AND + IOR
 DTA   = REF
 ```
+
 ### La OR
 ```
 MBR_in = F·CP5  +  E·CP5·REF
 ```
-**Los AND eligen, las OR juntan.** La UC cableada es una **suma de productos** (tabla de verdad → función →
-compuertas).
-👉 [[6.1.1 Circuito, compuertas y señales]]
+**Los AND eligen, las OR juntan.** La UC cableada es una **suma de productos** (tabla de verdad → función → compuertas). 👉 [[6.1.1 Circuito, compuertas y señales]]
 
 ## 4. La UC microprogramada: memoria de control y microinstrucción
 
@@ -132,6 +137,7 @@ IR (opcode) ─► PLA ─► microMAR ─► MEMORIA DE CONTROL ─► registro
 ```
 
 ### Horizontal vs vertical
+
 | | Horizontal | Vertical |
 |---|---|---|
 | Bits por señal | **1 = 1 señal** | codificados |
@@ -140,6 +146,7 @@ IR (opcode) ─► PLA ─► microMAR ─► MEMORIA DE CONTROL ─► registro
 | Microprograma | corto | largo |
 
 ### El microprograma de la búsqueda
+
 | µdir | Microoperación | Señales |
 |---|---|---|
 | 0 | `MAR ← PC` | `PCout`, `MARin` |
@@ -158,11 +165,9 @@ IR (opcode) ─► PLA ─► microMAR ─► MEMORIA DE CONTROL ─► registro
 | 3 | **Mapeo** | al empezar la ejecución | **PLA**: `µdir = f(opcode)` |
 | 4 | **Microsubrutina** | rutinas comunes (búsqueda) | registro **`SR`** o micro-pila |
 
-**Truco del mapeo mínimo:** meter el opcode en la dirección ⇒ `µdir = base + (opcode << 2)`.
-Con `opcode = 0110` (`LDA`) y `base = 64`: `64 + 24 = 88`.
+**Truco del mapeo mínimo:** meter el opcode en la dirección ⇒ `µdir = base + (opcode << 2)`. Con `opcode = 0110` (`LDA`) y `base = 64`: `64 + 24 = 88`.
 
-**`SR`** guarda **una** dirección de retorno (un nivel); la micro-pila permite anidar.
-👉 [[6.2.2 Secuenciamiento y microPC]]
+**`SR`** guarda **una** dirección de retorno (un nivel); la micro-pila permite anidar. 👉 [[6.2.2 Secuenciamiento y microPC]]
 
 ## 6. Cableada vs microprogramada
 
@@ -177,8 +182,7 @@ Con `opcode = 0110` (`LDA`) y `base = 64`: `64 + 24 = 88`.
 | Instrucciones complejas | difíciles | naturales |
 | Uso | **RISC**, BLUE | **CISC**, 8088 |
 
-**Cierre:** cableada = **rápida y rígida** (RISC) · microprogramada = **lenta y flexible** (CISC) · **hoy:
-híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado con pipeline).
+**Cierre:** cableada = **rápida y rígida** (RISC) · microprogramada = **lenta y flexible** (CISC) · **hoy: híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado con pipeline).
 
 👉 [[6.3.1 Cableada vs microprogramada]]
 
@@ -199,6 +203,7 @@ híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado 
 ## 8. Tablas de memoria rápida
 
 ### Los nombres, de menor a mayor
+
 | Escala | Nombre |
 |---|---|
 | 1 señal | microorden |
@@ -207,6 +212,7 @@ híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado 
 | toda la ROM | memoria de control |
 
 ### Las fórmulas de la unidad
+
 | Qué | Fórmula |
 |---|---|
 | Señal de control | `señal = estado · pulso · instrucción` |
@@ -277,23 +283,36 @@ híbrido** (el x86 traduce a microoperaciones y ejecuta con un núcleo cableado 
 ## 11. Autoevaluación
 
 1. ¿Cuáles son las **cuatro funciones** de la UC y con qué bloque cumple cada una?
+
 2. Nombrá los **tres flip-flops** de la BLUE y qué los pone en 1 y en 0.
+
 3. ¿Cuántos pulsos tiene un ciclo de máquina y cuánto dura? ¿Cómo se generan los pulsos?
+
 4. ¿Cuántas compuertas necesita el decodificador 1→16 de la BLUE y por qué esa cantidad?
+
 5. Escribí la ecuación de `Send MBR, Load IR` y la de `Send IR, Load MAR`. ¿Qué cambia entre las dos?
+
 6. ¿Qué son `REF`, `ARITH` y `DTA` y para qué sirven al diseñar?
+
 7. ¿Por qué una señal que aparece en varios casos se implementa con **OR** y no con un cable por caso?
+
 8. Definí **microorden**, **microinstrucción**, **microprograma** y **memoria de control**, de menor a mayor.
+
 9. ¿Qué hace el **registro de control** a la salida de la memoria de control y qué pasaría sin él?
+
 10. Enumerá los **cuatro mecanismos de secuenciamiento** y un ejemplo de cada uno.
+
 11. ¿Qué guarda el **`SR`** y en qué se diferencia del `PC`?
+
 12. El 8088 tiene 504 palabras de 21 bits: ¿cuántos bits de ROM son y cuántos bits necesita el microPC?
+
 13. ¿Por qué el 8088 es **microprogramado** y la BLUE **cableada**? Relacionarlo con CISC y RISC.
+
 14. ¿Cuándo conviene cada tipo de UC? Dame dos criterios en conflicto.
+
 15. Explicá el **híbrido actual**: ¿por qué un x86 es CISC por fuera y RISC por dentro?
 
 ---
 
 ## Relacionado
-[[00 Unidad 6 completa (lectura de corrido)]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Síntesis — Unidad 5]] · [[00 Unidad 7 — temas y subtemas]] ·
-[[00 Índice de la materia (las 10 unidades)]] · [[Cómo se implementa la Unidad de Control]]
+[[00 Unidad 6 completa (lectura de corrido)]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Síntesis — Unidad 5]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Índice de la materia (las 10 unidades)]] · [[Cómo se implementa la Unidad de Control]]

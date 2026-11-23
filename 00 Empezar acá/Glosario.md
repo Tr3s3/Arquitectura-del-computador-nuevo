@@ -4,10 +4,10 @@ tipo: glosario
 # Glosario
 
 > [!abstract] Uso
-> Término → definición de una línea → nota donde se desarrolla. Sirve para el repaso rápido y para no
-> quedar en blanco con una sigla en el oral.
+> Término → definición de una línea → nota donde se desarrolla. Sirve para el repaso rápido y para no quedar en blanco con una sigla en el oral.
 
 ## A – C
+
 | Término | Definición | Nota |
 |---|---|---|
 | **AC** (acumulador) | registro que guarda un operando y el resultado de la ALU | [[Registros de la CPU]] |
@@ -22,6 +22,7 @@ tipo: glosario
 | **Contador** | registro que recorre una secuencia con cada pulso | [[Contadores]] |
 
 ## D – L
+
 | Término | Definición | Nota |
 |---|---|---|
 | **Decodificador** | n entradas → 2ⁿ salidas; activa una sola | [[Decodificador]] |
@@ -36,6 +37,7 @@ tipo: glosario
 | **Localidad** | propiedad por la que se reutilizan datos/instrucciones cercanos | [[Jerarquía de memorias]] |
 
 ## M – R
+
 | Término | Definición | Nota |
 |---|---|---|
 | **MAR** | registro de dirección de memoria | [[Registros de la CPU]] |
@@ -53,6 +55,7 @@ tipo: glosario
 | **RISC** | arquitectura de instrucciones reducidas (ARM) | [[CISC y RISC]] |
 
 ## S – Z
+
 | Término | Definición | Nota |
 |---|---|---|
 | **SRAM** | RAM estática (latch), no necesita refresco | [[Celda elemental de memoria]] |

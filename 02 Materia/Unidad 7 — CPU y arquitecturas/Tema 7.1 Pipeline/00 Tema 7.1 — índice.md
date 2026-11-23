@@ -6,9 +6,7 @@ tema: "7.1"
 # Tema 7.1 — Pipeline
 
 > [!abstract] Qué se estudia acá
-> El **paralelismo a nivel de instrucciones**: partir la ejecución en **etapas fijas** que trabajan sobre
-> instrucciones distintas al mismo tiempo. Con `k` etapas y `n` instrucciones se tarda **`k + (n − 1)`** ciclos en
-> vez de `k·n`, pero aparecen los **tres conflictos** que recortan la ganancia.
+> El **paralelismo a nivel de instrucciones**: partir la ejecución en **etapas fijas** que trabajan sobre instrucciones distintas al mismo tiempo. Con `k` etapas y `n` instrucciones se tarda **`k + (n − 1)`** ciclos en vez de `k·n`, pero aparecen los **tres conflictos** que recortan la ganancia.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|

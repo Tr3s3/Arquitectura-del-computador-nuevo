@@ -6,8 +6,7 @@ tema: "2.3"
 # Tema 2.3 — La celda y el chip de memoria
 
 > [!abstract] Qué se estudia acá
-> Cómo se pasa del **flip-flop** (un bit) a la **memoria** (miles de bits): qué tiene una **celda**, en qué se
-> diferencian **SRAM** y **DRAM**, y cómo se organizan en una **matriz** con decodificador, selección y expansión.
+> Cómo se pasa del **flip-flop** (un bit) a la **memoria** (miles de bits): qué tiene una **celda**, en qué se diferencian **SRAM** y **DRAM**, y cómo se organizan en una **matriz** con decodificador, selección y expansión.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -24,5 +23,4 @@ tema: "2.3"
 [[TP12 Memoria principal]] · [[TP13 Componentes internos]]
 
 ## Relacionado
-[[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.2 — índice]] · [[00 Tema 2.4 — índice]] ·
-[[Celda elemental de memoria]] · [[Memoria RAM 8x3]]
+[[00 Unidad 2 — temas y subtemas]] · [[00 Tema 2.2 — índice]] · [[00 Tema 2.4 — índice]] · [[Celda elemental de memoria]] · [[Memoria RAM 8x3]]

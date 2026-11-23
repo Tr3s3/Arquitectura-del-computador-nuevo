@@ -4,10 +4,7 @@ tipo: informe
 # Comparación con el resumen de Said — qué se le podía agregar
 
 > [!abstract] Qué es esta nota
-> Comparé el resumen **«RESUMEN ARQUI FINAL SAID»** (44 páginas, 8.218 palabras, 68 imágenes) contra toda la bóveda,
-> punto por punto. Resultado: **cubría las unidades 1 a 5** y de esos temas la bóveda ya tenía **35 de 40 puntos**.
-> De los 5 restantes, **4 se agregaron** y **1 destapó un error** que la bóveda tenía y ya está corregido.
-> Todo lo que se cambió está al final, con el archivo donde quedó.
+> Comparé el resumen **«RESUMEN ARQUI FINAL SAID»** (44 páginas, 8.218 palabras, 68 imágenes) contra toda la bóveda, punto por punto. Resultado: **cubría las unidades 1 a 5** y de esos temas la bóveda ya tenía **35 de 40 puntos**. De los 5 restantes, **4 se agregaron** y **1 destapó un error** que la bóveda tenía y ya está corregido. Todo lo que se cambió está al final, con el archivo donde quedó.
 
 ## Qué trae el resumen de Said
 
@@ -83,10 +80,7 @@ tipo: informe
 | **Tipo de acceso**: aleatorio, en serie, directo, asociativo | **agregado**: tabla + el aviso de que "RAM" no significa "memoria" |
 | **Notación RAM 3×8 vs 8×3** | **agregado** como aviso: es la misma memoria, 8 filas × 3 columnas |
 
-**Y un error de la bóveda que destapó el resumen:** la bóveda decía que `INP`/`OUT` usan *los 8 bits bajos* para
-identificar el dispositivo (0 a 255). **Es 6 bits ⇒ 64 dispositivos.** Lo verifiqué en `uploads/blue.pdf`, que dice
-literalmente *"Transmite IR 5-0 a través de las líneas de selección de dispositivo"* y *"se pueden conectar más de
-64 dispositivos"*. **Corregido** en [[4.2.1 Especificación, registros y 4096x16]].
+**Y un error de la bóveda que destapó el resumen:** la bóveda decía que `INP`/`OUT` usan *los 8 bits bajos* para identificar el dispositivo (0 a 255). **Es 6 bits ⇒ 64 dispositivos.** Lo verifiqué en `uploads/blue.pdf`, que dice literalmente *"Transmite IR 5-0 a través de las líneas de selección de dispositivo"* y *"se pueden conectar más de 64 dispositivos"*. **Corregido** en [[4.2.1 Especificación, registros y 4096x16]].
 
 ## Lo que la bóveda tiene y el resumen de Said no
 
@@ -107,14 +101,11 @@ No hace falta agregarlo desde Said (ya está), pero conviene saberlo para no com
 
 ## Lo que sí valdría la pena tomar de este resumen
 
-1. **Sus 68 imágenes** son capturas de clase (circuitos y ciclos de la BLUE dibujados por la cátedra). Podrían
-   entrar como figuras de cátedra en los 9 subtemas que no tienen figura de libro — es exactamente la **M4** del
-   [[07 Plan de mejoras pendientes]].
-2. **Su forma de escribir**: definición de tres líneas + tabla + figura. Sirve como molde para la **M7** (ficha de
-   una página por unidad).
-3. **Nada más**: en contenido, la bóveda lo cubre y lo excede; el valor de este resumen es que confirma **qué
-   recorta la cátedra** para el final (U1–U5) y con qué palabras lo dice.
+1. **Sus 68 imágenes** son capturas de clase (circuitos y ciclos de la BLUE dibujados por la cátedra). Podrían entrar como figuras de cátedra en los 9 subtemas que no tienen figura de libro — es exactamente la **M4** del [[07 Plan de mejoras pendientes]].
+
+2. **Su forma de escribir**: definición de tres líneas + tabla + figura. Sirve como molde para la **M7** (ficha de una página por unidad).
+
+3. **Nada más**: en contenido, la bóveda lo cubre y lo excede; el valor de este resumen es que confirma **qué recorta la cátedra** para el final (U1–U5) y con qué palabras lo dice.
 
 ## Relacionado
-[[06 Validación de contenido (resúmenes, TPs y claridad)]] · [[07 Plan de mejoras pendientes]] ·
-[[05 Fuentes y qué aporta cada una]] · [[01 Mapa de la materia (MOC)]]
+[[06 Validación de contenido (resúmenes, TPs y claridad)]] · [[07 Plan de mejoras pendientes]] · [[05 Fuentes y qué aporta cada una]] · [[01 Mapa de la materia (MOC)]]

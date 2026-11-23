@@ -1,38 +1,26 @@
 # Bóveda de estudio — Arquitectura de Computadoras (UCASAL)
 
-Bóveda de Obsidian para preparar el final de **Arquitectura / Organización de Computadoras**
-(plan de 10 unidades, cátedra UCASAL). Está armada a partir del **plan de estudios**, del
-**modelo de final** y de los **20 trabajos prácticos** entregados por la cátedra: cada pregunta del
-modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y el guion de respuesta.
+Bóveda de Obsidian para preparar el final de **Arquitectura / Organización de Computadoras** (plan de 10 unidades, cátedra UCASAL). Está armada a partir del **plan de estudios**, del **modelo de final** y de los **20 trabajos prácticos** entregados por la cátedra: cada pregunta del modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y el guion de respuesta.
 
-**El final es oral** y, en la práctica, se rinde **dibujando circuitos y explicando sus tablas de
-verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
-cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
+**El final es oral** y, en la práctica, se rinde **dibujando circuitos y explicando sus tablas de verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo → cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 311 notas · **100 SVG propios + 132 figuras de libro + 15 figuras de clase** · ~295.000 palabras · 0 enlaces e imágenes rotas.
-**Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **99 de los 107** suman además figura externa: **132 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]) y **15 del resumen de cátedra**.
-**Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**), con una `00 Síntesis` por unidad.
-**Para leer de corrido:** cada unidad tiene un `00 Unidad N completa (lectura de corrido)` —todos sus subtemas pegados
-en un archivo, con diagramas y figuras— y está **[[00 Materia completa (las 10 unidades en un archivo)]]** con las 10
-unidades en un solo archivo (85.000 palabras).
+**Estado:** 311 notas · **100 SVG propios + 132 figuras de libro + 15 figuras de clase** · ~295.000 palabras · 0 enlaces e imágenes rotas. **Cobertura gráfica:** los **107 subtemas** de `02 Materia/` tienen su diagrama propio ([[00 Mapa de diagramas (qué gráfico tiene cada subtema)]]) y **99 de los 107** suman además figura externa: **132 figuras extraídas de la bibliografía** ([[00 Figuras de los libros (índice)]]) y **15 del resumen de cátedra**. **Materia en detalle:** las **10 unidades completas** (46 temas, **107 subtemas**), con una `00 Síntesis` por unidad. **Para leer de corrido:** cada unidad tiene un `00 Unidad N completa (lectura de corrido)` —todos sus subtemas pegados en un archivo, con diagramas y figuras— y está **[[00 Materia completa (las 10 unidades en un archivo)]]** con las 10 unidades en un solo archivo (85.000 palabras).
 
-**Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
-pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
-Cada unidad tiene su nota índice `00 Unidad N — temas y subtemas`.
+**Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**. Cada unidad tiene su nota índice `00 Unidad N — temas y subtemas`.
 
 ## Cómo abrirla
 
 1. Descargá o cloná este repositorio.
+
 2. En Obsidian: **Abrir carpeta como bóveda** → elegí esta carpeta.
+
 3. Empezá por `00 Empezar acá/00 Cómo usar esta bóveda.md`.
 
-No necesita plugins. Los diagramas son SVG dentro de `assets/` (se ven en Obsidian y en
-GitHub); algunos esquemas usan **Mermaid**, que Obsidian renderiza de forma nativa.
+No necesita plugins. Los diagramas son SVG dentro de `assets/` (se ven en Obsidian y en GitHub); algunos esquemas usan **Mermaid**, que Obsidian renderiza de forma nativa.
 
 ## Estructura
 
-Dos carpetas grandes, con jerarquía **explícita en carpetas** (no hay que abrir un índice para saber qué hay
-adentro: el nombre de la carpeta lo dice).
+Dos carpetas grandes, con jerarquía **explícita en carpetas** (no hay que abrir un índice para saber qué hay adentro: el nombre de la carpeta lo dice).
 
 ```
 01 Modelo de final resuelto/      las 27 preguntas del final, cada una resuelta
@@ -94,18 +82,11 @@ assets/                          100 SVG propios + 132 PNG de los libros + 15 PN
 tools/                           diagramas.py, diagramas_2.py (SVG) y extraer_figuras.py (figuras de PDF)
 ```
 
-> **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**: adentro está la
-> **nota principal** y la carpeta **`Apoyo a la pregunta/`** con su nota `00 Apoyos — N.M …` (qué archivos hacen
-> falta, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas) más los archivos de
-> apoyo propios de esa pregunta. La nota principal **abre diciendo qué apoyos necesita**. En `02 Materia/` la
-> cadena es `Unidad → Tema → Subtemas`. Cada nota vive en un solo lugar: lo que sirve a dos preguntas se
-> enlaza, no se duplica.
+> **La regla:** en `01 Modelo de final resuelto/` cada carpeta es **una pregunta**: adentro está la **nota principal** y la carpeta **`Apoyo a la pregunta/`** con su nota `00 Apoyos — N.M …` (qué archivos hacen falta, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas) más los archivos de apoyo propios de esa pregunta. La nota principal **abre diciendo qué apoyos necesita**. En `02 Materia/` la cadena es `Unidad → Tema → Subtemas`. Cada nota vive en un solo lugar: lo que sirve a dos preguntas se enlaza, no se duplica.
 
 ## Escrita para aprender desde cero
 
-Las notas troncales arrancan con un bloque **"Si es la primera vez que ves esto"**: la analogía y el problema
-que resuelve el concepto, antes de cualquier definición. Después vienen el desarrollo con tablas y diagramas,
-el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin otro material al lado.
+Las notas troncales arrancan con un bloque **"Si es la primera vez que ves esto"**: la analogía y el problema que resuelve el concepto, antes de cualquier definición. Después vienen el desarrollo con tablas y diagramas, el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin otro material al lado.
 
 ## Por dónde empezar
 
@@ -125,28 +106,15 @@ el **guion oral** y los **errores típicos**. La idea es que puedas estudiar sin
 
 ## Fuentes
 
-La bóveda está construida sobre el material de la cátedra: el apunte base (**Foster, *Computer
-Architecture***, capítulo de la máquina elemental "BLUE"), los **apuntes de las Unidades 1 a 5**, la **matriz
-del final**, los **21 TPs**, los resúmenes de clase y el material de memorias semiconductoras. El detalle de
-qué aporta cada fuente (y cómo se resolvieron los conflictos entre ellas) está en
-`00 Empezar acá/05 Fuentes y qué aporta cada una.md`.
+La bóveda está construida sobre el material de la cátedra: el apunte base (**Foster, *Computer Architecture***, capítulo de la máquina elemental "BLUE"), los **apuntes de las Unidades 1 a 5**, la **matriz del final**, los **21 TPs**, los resúmenes de clase y el material de memorias semiconductoras. El detalle de qué aporta cada fuente (y cómo se resolvieron los conflictos entre ellas) está en `00 Empezar acá/05 Fuentes y qué aporta cada una.md`.
 
 ## Avisos sobre el material de cátedra
 
-Algunos TPs tienen **desarrollos sólo en imágenes**, errores de tipeo o números que no cierran. La
-bóveda respeta la consigna original, marca la diferencia con un `> [!warning]` y explica el criterio
-correcto (por ejemplo: `1101 + 0111 = 1 0100`, no `1 1100`; 1 GB con celdas de 4 B = 2²⁸ celdas ⇒ 28
-bits de dirección). También queda documentada la **discrepancia de códigos de operación** entre el
-simulador de los TPs y el mapa de 16 opcodes de la máquina BLUE: se muestran ambos y se explica cuál
-usar según la fuente.
+Algunos TPs tienen **desarrollos sólo en imágenes**, errores de tipeo o números que no cierran. La bóveda respeta la consigna original, marca la diferencia con un `> [!warning]` y explica el criterio correcto (por ejemplo: `1101 + 0111 = 1 0100`, no `1 1100`; 1 GB con celdas de 4 B = 2²⁸ celdas ⇒ 28 bits de dirección). También queda documentada la **discrepancia de códigos de operación** entre el simulador de los TPs y el mapa de 16 opcodes de la máquina BLUE: se muestran ambos y se explica cuál usar según la fuente.
 
 ## Aviso importante sobre los números de pulsos
 
-Los **ciclos de la máquina BLUE** (búsqueda de 7/8 pulsos, LDA de 24 pulsos, etc.) están
-desarrollados con un esquema **coherente y razonado**: se explica *qué* microoperación debe
-ocurrir en cada pulso y *por qué*. La cuenta exacta de pulsos puede variar un poco según la
-versión del apunte de la cátedra; lo que se evalúa es que puedas **justificar la cuenta**.
-Las notas marcan con `> [!warning]` los puntos a contrastar con el apunte.
+Los **ciclos de la máquina BLUE** (búsqueda de 7/8 pulsos, LDA de 24 pulsos, etc.) están desarrollados con un esquema **coherente y razonado**: se explica *qué* microoperación debe ocurrir en cada pulso y *por qué*. La cuenta exacta de pulsos puede variar un poco según la versión del apunte de la cátedra; lo que se evalúa es que puedas **justificar la cuenta**. Las notas marcan con `> [!warning]` los puntos a contrastar con el apunte.
 
 ## Regenerar los diagramas
 

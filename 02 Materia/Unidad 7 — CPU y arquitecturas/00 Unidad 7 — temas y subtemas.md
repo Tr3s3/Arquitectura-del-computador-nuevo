@@ -5,19 +5,13 @@ unidad: 7
 # Unidad 7 — CPU y arquitecturas
 
 > [!abstract] Qué pide la unidad
-> Cómo se hace **rápido** un procesador: **pipeline** (y sus conflictos), las técnicas que lo empujan
-> (**superscalar, superpipeline, SMT, multicore, caché, predicción**), las dos filosofías de repertorio
-> (**CISC y RISC**) y la estructura de memoria y buses (**von Neumann/Harvard**, buses internos y externos).
+> Cómo se hace **rápido** un procesador: **pipeline** (y sus conflictos), las técnicas que lo empujan (**superscalar, superpipeline, SMT, multicore, caché, predicción**), las dos filosofías de repertorio (**CISC y RISC**) y la estructura de memoria y buses (**von Neumann/Harvard**, buses internos y externos).
 
 > [!tip] Para leer la unidad de corrido
-> **[[00 Unidad 7 completa (lectura de corrido)]]**: los **9 subtemas** pegados en un solo archivo,
-> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 7]]) es el
-> resumen de una página; el archivo completo es el desarrollo entero.
-
+> **[[00 Unidad 7 completa (lectura de corrido)]]**: los **9 subtemas** pegados en un solo archivo, con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 7]]) es el resumen de una página; el archivo completo es el desarrollo entero.
 
 > [!important] El hilo de la unidad
-> `pipeline` → los conflictos que lo frenan → las técnicas que los tapan → **RISC** como arquitectura pensada para
-> el pipeline → la **estructura** (memorias y buses) que lo hace posible.
+> `pipeline` → los conflictos que lo frenan → las técnicas que los tapan → **RISC** como arquitectura pensada para el pipeline → la **estructura** (memorias y buses) que lo hace posible.
 
 ## La estructura de la unidad (Unidad → Tema → Subtema)
 
@@ -39,8 +33,7 @@ Unidad 7 — CPU y arquitecturas/
     └── 7.4.2 Buses internos y externos
 ```
 
-**4 temas y 9 subtemas.** Cada subtema es **una nota** dentro de la carpeta de su tema. La unidad está **cerrada**
-y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 7]]**.
+**4 temas y 9 subtemas.** Cada subtema es **una nota** dentro de la carpeta de su tema. La unidad está **cerrada** y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 7]]**.
 
 | Tema | Subtemas | Estado |
 |---|---|---|
@@ -50,8 +43,7 @@ y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 7]]**.
 | **7.4 Arquitecturas y buses** | 7.4.1 von Neumann vs Harvard · 7.4.2 Buses internos y externos | ✅ |
 
 > [!note] Cómo creció el árbol
-> El árbol original tenía **8 subtemas**. Se desdobló 7.1.2 ("Hazards y cálculo de speedup") en **dos**: los
-> conflictos (7.1.2) y el cálculo del speedup **real** con penalidades (7.1.3), que es lo que más se toma.
+> El árbol original tenía **8 subtemas**. Se desdobló 7.1.2 ("Hazards y cálculo de speedup") en **dos**: los conflictos (7.1.2) y el cálculo del speedup **real** con penalidades (7.1.3), que es lo que más se toma.
 
 ## Los 4 temas, de un vistazo
 
@@ -63,6 +55,7 @@ y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 7]]**.
 | **7.4** | [[00 Tema 7.4 — índice]] | una memoria o dos · el bus y su ancho de banda |
 
 ## Material de examen ya disponible de esta unidad
+
 | Tema | Nota | Dónde está además |
 |---|---|---|
 | **Pipeline** | [[Pipeline]] | `Tanda 2/2.7` + `Apoyo a la pregunta/` |
@@ -75,26 +68,30 @@ y todo su contenido quedó reunido en **[[00 Síntesis — Unidad 7]]**.
 ---
 
 ## Qué hay que saber hacer al terminar la unidad
+
 1. **Dibujar** el diagrama en escalera y calcular ciclos y speedup ideal (`k + n − 1`).
+
 2. Nombrar los **tres conflictos** con su ejemplo y su solución (caché I/D, forwarding, predicción).
+
 3. Calcular el **speedup real** y el **CPI** sumando stalls y saltos.
+
 4. Explicar **superscalar, superpipeline, SMT y multicore** y por qué no dan la ganancia teórica.
+
 5. Calcular `AMAT` y el **costo de un salto mal predicho**.
+
 6. Armar la **tabla CISC vs RISC** y justificar por qué RISC es cableado y `load/store`.
+
 7. Distinguir **von Neumann de Harvard** (y el híbrido de las cachés).
+
 8. Calcular **ancho de banda** de un bus y explicar el arbitraje.
 
 ## TPs de la unidad
-No tiene TP propio: se apoya en [[TP21 intro al emu8086]] (BIU/EU y cola de instrucciones) y en
-[[TP16 Ciclo de instrucción básico]].
+No tiene TP propio: se apoya en [[TP21 intro al emu8086]] (BIU/EU y cola de instrucciones) y en [[TP16 Ciclo de instrucción básico]].
 
 ## Fuente de la cátedra
-Apuntes de la **Unidad 7** (CPU y arquitecturas) · Stallings (pipeline y arquitecturas) ·
-Patterson & Hennessy (ILP, CISC/RISC, memoria) · Hamacher (buses y estructura) ·
-`El_manual_del_Microprocesador.pdf`.
+Apuntes de la **Unidad 7** (CPU y arquitecturas) · Stallings (pipeline y arquitecturas) · Patterson & Hennessy (ILP, CISC/RISC, memoria) · Hamacher (buses y estructura) · `El_manual_del_Microprocesador.pdf`.
 
 ---
 
 ## Relacionado
-[[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 6 — temas y subtemas]] ·
-[[00 Unidad 8 — temas y subtemas]] · [[00 Síntesis — Unidad 7]]
+[[00 Índice de la materia (las 10 unidades)]] · [[00 Unidad 6 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Síntesis — Unidad 7]]

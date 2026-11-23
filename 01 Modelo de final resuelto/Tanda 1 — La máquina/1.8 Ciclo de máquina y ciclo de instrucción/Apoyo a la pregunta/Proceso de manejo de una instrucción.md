@@ -7,20 +7,12 @@ prioridad: maxima
 # Proceso de manejo de una instrucción (y en qué unidad se usa)
 
 > [!abstract] En una frase
-> **Manejar una instrucción** es ejecutar el **ciclo de instrucción**: **búsqueda (fetch) → decodificación →
-> búsqueda de operandos → ejecución → escritura del resultado**. La instrucción se trae de memoria, se guarda en
-> el **RI**, y **la Unidad de Control** es la que la decodifica y emite las **señales de control** que ordenan
-> cada transferencia; la **ALU** hace los cálculos y la **memoria** guarda datos e instrucciones.
+> **Manejar una instrucción** es ejecutar el **ciclo de instrucción**: **búsqueda (fetch) → decodificación → búsqueda de operandos → ejecución → escritura del resultado**. La instrucción se trae de memoria, se guarda en el **RI**, y **la Unidad de Control** es la que la decodifica y emite las **señales de control** que ordenan cada transferencia; la **ALU** hace los cálculos y la **memoria** guarda datos e instrucciones.
 
 > [!note] Si es la primera vez que ves esto
-> Pensá en un **restaurante**. Hay un **cliente** (el programa) que pide platos, una **comanda escrita** (la
-> instrucción: "mesa 4, milanesa"), un **mozo** que lleva la comanda a la cocina (el bus), un **jefe de cocina**
-> que la lee y reparte el trabajo (la **Unidad de Control**) y **cocineros** que ejecutan (la **ALU** y la
-> memoria).
+> Pensá en un **restaurante**. Hay un **cliente** (el programa) que pide platos, una **comanda escrita** (la instrucción: "mesa 4, milanesa"), un **mozo** que lleva la comanda a la cocina (el bus), un **jefe de cocina** que la lee y reparte el trabajo (la **Unidad de Control**) y **cocineros** que ejecutan (la **ALU** y la memoria).
 >
-> "Manejar la instrucción" es todo ese recorrido: **traerla → leerla → conseguir los ingredientes → cocinar →
-> servir**. Y hay algo clave: **nadie improvisa**. El jefe de cocina siempre hace lo mismo, en el mismo orden:
-> por eso se dice que el ciclo es **fijo** y que una computadora es una máquina **secuencial**.
+> "Manejar la instrucción" es todo ese recorrido: **traerla → leerla → conseguir los ingredientes → cocinar → servir**. Y hay algo clave: **nadie improvisa**. El jefe de cocina siempre hace lo mismo, en el mismo orden: por eso se dice que el ciclo es **fijo** y que una computadora es una máquina **secuencial**.
 >
 > Y hay tres cosas distintas que se confunden todo el tiempo:
 > | Concepto | Qué es | Ejemplo |
@@ -54,11 +46,7 @@ prioridad: maxima
 | **5. Escritura** | el resultado va al destino | **UC** (señal de `LOAD`/`Write`) | `resultado → AC` o `MBR → MEM` |
 
 > [!important] La respuesta corta a "¿en qué unidad se usa?"
-> **El proceso lo dirige la Unidad de Control** (es su razón de existir): ella **decodifica** la instrucción del
-> RI, **secuencia** las fases y **genera** las señales. Los cálculos los hace la **ALU**; el almacenamiento,
-> la **memoria**; y la **E/S** se ocupa de los periféricos.
-> En la BLUE: la UC está formada por los flip-flops **RUN**, **STATE** y **TRA**, un **decodificador 1 → 16** (por
-> el opcode) y compuertas que combinan `estado · pulso · instrucción`.
+> **El proceso lo dirige la Unidad de Control** (es su razón de existir): ella **decodifica** la instrucción del RI, **secuencia** las fases y **genera** las señales. Los cálculos los hace la **ALU**; el almacenamiento, la **memoria**; y la **E/S** se ocupa de los periféricos. En la BLUE: la UC está formada por los flip-flops **RUN**, **STATE** y **TRA**, un **decodificador 1 → 16** (por el opcode) y compuertas que combinan `estado · pulso · instrucción`.
 
 ---
 
@@ -71,22 +59,19 @@ prioridad: maxima
 | **3. Generar señales** | activar `PC→MAR`, `Read`, `strobe MBR`, `SUM→AC`… en el momento exacto | fases 1-5 |
 | **4. Controlar el estado** | manejar el *RUN* (encendido), avanzar el *STATE* y atender interrupciones | transición entre ciclos |
 
-**El "programa" de la UC** no está escrito en memoria: está **cableado** en compuertas (en la BLUE). Cada señal
-se arma con la misma fórmula:
+**El "programa" de la UC** no está escrito en memoria: está **cableado** en compuertas (en la BLUE). Cada señal se arma con la misma fórmula:
 
 ```
    señal =  (estado: F o E)  ·  (pulso: CP1…CP8)  ·  (instrucción: LDA, ADD, …)
 ```
 
-Ejemplo: `MBR → AC` en un `LDA` se activa con **`E · CP8 · LDA`**. Es decir: **estamos en ejecución** (E), es
-**el octavo pulso** y **la instrucción es LDA**. Ver [[Cómo se implementa la Unidad de Control]].
+Ejemplo: `MBR → AC` en un `LDA` se activa con **`E · CP8 · LDA`**. Es decir: **estamos en ejecución** (E), es **el octavo pulso** y **la instrucción es LDA**. Ver [[Cómo se implementa la Unidad de Control]].
 
 ---
 
 ## 3. El proceso en la BLUE, con los pulsos
 
-La BLUE hace todo con **8 pulsos por ciclo** (cada pulso = 125 ns). El manejo de una instrucción usa **uno o dos
-ciclos**:
+La BLUE hace todo con **8 pulsos por ciclo** (cada pulso = 125 ns). El manejo de una instrucción usa **uno o dos ciclos**:
 
 | Instrucción | Ciclos | Pulsos | Por qué |
 |---|---|---|---|
@@ -108,8 +93,7 @@ ciclos**:
 | **CP8** | `E → State` | pasa a ejecución (o ejecuta directo si es de 1 ciclo) |
 
 > [!tip] El detalle que hace la diferencia
-> **Mientras la memoria busca la instrucción (CP2-CP5), la ALU incrementa el PC.** Eso es **solapamiento**: la
-> máquina hace dos cosas a la vez, y es el primer ejemplo de pipeline de la materia ([[Pipeline]]).
+> **Mientras la memoria busca la instrucción (CP2-CP5), la ALU incrementa el PC.** Eso es **solapamiento**: la máquina hace dos cosas a la vez, y es el primer ejemplo de pipeline de la materia ([[Pipeline]]).
 
 ---
 
@@ -125,51 +109,40 @@ ciclos**:
 | 4 | **Ejecución** | (no hay cálculo: LDA no opera, sólo copia) | — |
 | 5 | **Escritura** | CP8: `MBR → AC` | UC (señal `E·CP8·LDA`) |
 
-**Y al terminar** ⇒ `STATE ← F` y se vuelve a buscar. El PC ya apuntaba a la instrucción siguiente desde CP4: por
-eso el programa **avanza solo**.
+**Y al terminar** ⇒ `STATE ← F` y se vuelve a buscar. El PC ya apuntaba a la instrucción siguiente desde CP4: por eso el programa **avanza solo**.
 
 ### Variante con cálculo: `ADD 500`
-Igual, pero en la fase 4: CP2 `AC → Z`, CP6 `MBR → Y`, CP8 `SUM → AC`. Es decir, **la misma estructura** cambia
-sólo en las microoperaciones de la fase de ejecución. Eso es lo que hay que decir: **el esqueleto es común; lo
-que varía es la fase de ejecución**. Detalle completo en [[Ciclo de ejecución — todas las operaciones]].
+Igual, pero en la fase 4: CP2 `AC → Z`, CP6 `MBR → Y`, CP8 `SUM → AC`. Es decir, **la misma estructura** cambia sólo en las microoperaciones de la fase de ejecución. Eso es lo que hay que decir: **el esqueleto es común; lo que varía es la fase de ejecución**. Detalle completo en [[Ciclo de ejecución — todas las operaciones]].
 
 ---
 
 ## 5. ¿Qué pasa con las instrucciones de un solo ciclo?
 
-`JMP 700` no necesita ir a memoria a buscar nada: la dirección **ya está** en el RI. Entonces el proceso se corta
-en la **fase 2**:
+`JMP 700` no necesita ir a memoria a buscar nada: la dirección **ya está** en el RI. Entonces el proceso se corta en la **fase 2**:
 
 ```
    CP1-CP6:  búsqueda normal (trae el JMP al RI)
    CP7:      decodifica
    CP8:      IR11-0 → PC      ← ¡el salto ya ocurrió, dentro de la búsqueda!
 ```
-Por eso `JMP`, `JMA`, `SRJ`, `NOP`, `HLT`, `NOT`, `RAL` y `CSA` **no tienen ciclo de ejecución**: se "ejecutan"
-en el octavo pulso de la búsqueda. Es la respuesta a "¿por qué algunas tardan 8 y otras 16?".
+Por eso `JMP`, `JMA`, `SRJ`, `NOP`, `HLT`, `NOT`, `RAL` y `CSA` **no tienen ciclo de ejecución**: se "ejecutan" en el octavo pulso de la búsqueda. Es la respuesta a "¿por qué algunas tardan 8 y otras 16?".
 
 ---
 
 ## 6. Cómo responderlo en el final (4 minutos)
 
-**Movimiento 1 — definición (20 s).** "Manejar una instrucción es el ciclo de instrucción: buscarla,
-decodificarla, obtener los operandos, ejecutarla y guardar el resultado. Es fijo y lo repite la máquina con cada
-instrucción del programa."
+**Movimiento 1 — definición (20 s).** "Manejar una instrucción es el ciclo de instrucción: buscarla, decodificarla, obtener los operandos, ejecutarla y guardar el resultado. Es fijo y lo repite la máquina con cada instrucción del programa."
 
-**Movimiento 2 — las fases con las unidades (60 s).** La tabla de las cinco fases diciendo, en cada una, **qué
-unidad actúa**: memoria (búsqueda y operandos), **UC** (decodificación y señales), **ALU** (ejecución).
+**Movimiento 2 — las fases con las unidades (60 s).** La tabla de las cinco fases diciendo, en cada una, **qué unidad actúa**: memoria (búsqueda y operandos), **UC** (decodificación y señales), **ALU** (ejecución).
 
-**Movimiento 3 — qué son las cosas (40 s).** Distinguir **instrucción** (la orden), **microoperación** (la
-transferencia) y **señal de control** (`estado·pulso·instrucción`).
+**Movimiento 3 — qué son las cosas (40 s).** Distinguir **instrucción** (la orden), **microoperación** (la transferencia) y **señal de control** (`estado·pulso·instrucción`).
 
-**Movimiento 4 — en la BLUE (60 s).** Los 8 pulsos de la búsqueda con sus microoperaciones (`PC→MAR`, `PC+1`,
-`MBR→IR` en CP6, `E→State` en CP8) y la regla **8 pulsos = 1 ciclo** (sin memoria) / **16 pulsos = 2 ciclos**
-(con memoria).
+**Movimiento 4 — en la BLUE (60 s).** Los 8 pulsos de la búsqueda con sus microoperaciones (`PC→MAR`, `PC+1`, `MBR→IR` en CP6, `E→State` en CP8) y la regla **8 pulsos = 1 ciclo** (sin memoria) / **16 pulsos = 2 ciclos** (con memoria).
 
-**Movimiento 5 — ejemplo y cierre (40 s).** `LDA 500` de punta a punta (16 pulsos) y decir: "**la UC es la que
-maneja el proceso**; el RI guarda la instrucción, el PC apunta a la próxima y la ALU ejecuta".
+**Movimiento 5 — ejemplo y cierre (40 s).** `LDA 500` de punta a punta (16 pulsos) y decir: "**la UC es la que maneja el proceso**; el RI guarda la instrucción, el PC apunta a la próxima y la ALU ejecuta".
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuál es el orden de las fases? | **Búsqueda → decodificación → operandos → ejecución → escritura** |
@@ -185,12 +158,17 @@ maneja el proceso**; el RI guarda la instrucción, el PC apunta a la próxima y 
 ---
 
 ## 7. Errores típicos
+
 - Decir que la UC "ejecuta" la instrucción: **la UC ordena**, la que opera es la **ALU**.
+
 - Confundir **instrucción** con **microoperación** y con **señal de control**.
-- Olvidar la fase de **búsqueda de operandos** (en las instrucciones con memoria hay **dos** accesos: uno para la
-  instrucción y otro para el dato).
+
+- Olvidar la fase de **búsqueda de operandos** (en las instrucciones con memoria hay **dos** accesos: uno para la instrucción y otro para el dato).
+
 - Decir que el PC apunta a la instrucción **actual**: apunta a la **próxima** (se incrementa en CP4).
+
 - Creer que todas las instrucciones tardan lo mismo: **8 o 16 pulsos** según haya referencia a memoria.
+
 - Decir que el decodificador "es la UC": es **una parte** de la UC.
 
 ---
@@ -213,6 +191,4 @@ maneja el proceso**; el RI guarda la instrucción, el PC apunta a la próxima y 
 ---
 
 ## Relacionado
-[[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] ·
-[[Unidad de Control]] · [[Cómo se implementa la Unidad de Control]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] ·
-[[Registros de la CPU]] · [[Flujo de información en BLUE (datos y direcciones)]]
+[[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Unidad de Control]] · [[Cómo se implementa la Unidad de Control]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · [[Registros de la CPU]] · [[Flujo de información en BLUE (datos y direcciones)]]

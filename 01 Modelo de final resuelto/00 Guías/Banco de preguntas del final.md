@@ -4,27 +4,18 @@ tipo: examen
 # Banco de preguntas del final
 
 > [!abstract] Cómo usar esta nota
-> Es el **índice maestro**: las preguntas tal como vienen en el modelo, cada una con su nota de desarrollo
-> y la **respuesta mínima** (30 segundos) que tenés que poder decir sin pensar. Si una respuesta no te sale
-> en 30 segundos, entrá a la nota.
+> Es el **índice maestro**: las preguntas tal como vienen en el modelo, cada una con su nota de desarrollo y la **respuesta mínima** (30 segundos) que tenés que poder decir sin pensar. Si una respuesta no te sale en 30 segundos, entrá a la nota.
 >
-> Para el **oral**: la matriz real del final (las 3 tandas, con los pesos que anotó el profesor) está en
-> [[00 Matriz del final — las 3 tandas]]; el guion hablado de las 8 principales, en
-> [[Guion de respuestas — preguntas principales]]; la vista de pájaro, en
-> [[04 Resumen integrador de la materia]]; el trazo de los circuitos, en
-> [[Cómo dibujar los circuitos (checklist de pizarrón)]].
+> Para el **oral**: la matriz real del final (las 3 tandas, con los pesos que anotó el profesor) está en [[00 Matriz del final — las 3 tandas]]; el guion hablado de las 8 principales, en [[Guion de respuestas — preguntas principales]]; la vista de pájaro, en [[04 Resumen integrador de la materia]]; el trazo de los circuitos, en [[Cómo dibujar los circuitos (checklist de pizarrón)]].
 
 > [!tip] Material de consulta por pregunta
-> Si querés **ampliar** cada tema (o saber de dónde sale cada dato), usá
-> [[01 Qué leer para cada pregunta principal]]: tiene, para cada pregunta, la fuente de la cátedra con la sección
-> exacta y la ampliación bibliográfica recomendada.
+> Si querés **ampliar** cada tema (o saber de dónde sale cada dato), usá [[01 Qué leer para cada pregunta principal]]: tiene, para cada pregunta, la fuente de la cátedra con la sección exacta y la ampliación bibliográfica recomendada.
 
 > [!important] Empezá por la matriz
-> Si tenés poco tiempo, no leas este banco de arriba a abajo: abrí [[00 Matriz del final — las 3 tandas]],
-> elegí una tanda y respondé en voz alta con lo que linkea cada ítem. Este banco sirve como índice general
-> de temas; la matriz dice **qué cae junto y con qué peso**.
+> Si tenés poco tiempo, no leas este banco de arriba a abajo: abrí [[00 Matriz del final — las 3 tandas]], elegí una tanda y respondé en voz alta con lo que linkea cada ítem. Este banco sirve como índice general de temas; la matriz dice **qué cae junto y con qué peso**.
 
 ## Preguntas principales (valen la nota)
+
 | # | Pregunta | Nota de desarrollo | Respuesta mínima |
 |---|---|---|---|
 | 1 | **Flujo de información (dato y direcciones)** | [[Flujo de información en BLUE (datos y direcciones)]] | Bus único: por pulso, una fuente habilita su salida de tres estados y un destino carga. Direcciones (12 bits) van por PC/IR → MAR → memoria; datos (16 bits) van memoria → MBR → IR/AC o AC → MBR → memoria |
@@ -37,6 +28,7 @@ tipo: examen
 | 8 | **Interrupciones** | [[Interrupciones y entrada-salida]] | Pedido de atención que rompe la secuencia: termina la instrucción, guarda contexto (PC/flags), salta a la rutina de servicio, atiende, restaura y retorna. Polling vs vectorizadas; prioridades; en BLUE: SI, INT, INTACK, estados F/E/I |
 
 ## Preguntas secundarias
+
 | # | Pregunta | Nota | Respuesta mínima |
 |---|---|---|---|
 | 1 | Memoria RAM: **celda elemental** | [[Celda elemental de memoria]] | 1 bit + línea de selección + R/W' + buffer de tres estados. SRAM = latch; DRAM = capacitor con refresco |
@@ -53,8 +45,7 @@ tipo: examen
 | 12 | **Operaciones de máquina BLUE y qué hace cada una** | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] | 16 opcodes: LDA, STA, ADD, SUB, AND, OR, XOR, NOT, JMP, JZ, JC, IN, OUT, NOP, HLT (+1). Recorrer la tabla diciendo la microoperación de cada una |
 
 ## Preguntas que se desprenden de los TPs (cayeron o pueden caer)
-El modelo no las enumera, pero están **explícitas** en los trabajamientos prácticos de la cátedra; si la mesa
-abre cualquiera de estos temas, esto es lo que hay que decir.
+El modelo no las enumera, pero están **explícitas** en los trabajamientos prácticos de la cátedra; si la mesa abre cualquiera de estos temas, esto es lo que hay que decir.
 
 | Tema | Nota | Respuesta mínima | TP |
 |---|---|---|---|
@@ -74,6 +65,7 @@ abre cualquiera de estos temas, esto es lo que hay que decir.
 | **Codificadores** | [[Codificador]] | Inverso del decodificador: `2ⁿ` entradas → `n` salidas; una OR por bit | [[TP7 Codificadores y multiplexores]] |
 
 ## Prácticas (se resuelven en el pizarrón)
+
 | # | Práctica | Nota | Qué hay que entregar |
 |---|---|---|---|
 | 1 | **Sumador completo** | [[Sumador completo]] | Tabla de verdad (8 filas), funciones simplificadas y gráfico |
@@ -85,15 +77,23 @@ abre cualquiera de estos temas, esto es lo que hay que decir.
 | 7 | **Celda elemental y caché** | [[Celda elemental de memoria]] + [[Memoria caché]] | Celda de 1 bit + mapeos/asociatividad/escritura de la caché |
 
 ## Temas del plan que pueden caer "de arrastre"
+
 - [[Memoria virtual y administración de memoria]] · [[Memoria auxiliar y memoria asociativa]]
+
 - [[Unidad de control cableada y microprogramada]]
+
 - [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Hardware aritmético (resumen)]]
+
 - [[Registros]] · [[Contadores]] · [[Codificador]] · [[Jerarquía de memorias]]
 
 ## Plan de acción de la última semana
+
 1. Respondé en voz alta las **8 principales** mirando sólo la columna "respuesta mínima".
+
 2. Hacé las **7 prácticas** en hoja en blanco, cronometradas (10 min cada una).
+
 3. Pasá por [[Autoevaluación]] y volvé a las notas de lo que falles.
-4. El día previo: [[Guion de respuestas — preguntas principales]] + una leída a
-   [[04 Resumen integrador de la materia]].
+
+4. El día previo: [[Guion de respuestas — preguntas principales]] + una leída a [[04 Resumen integrador de la materia]].
+
 5. Si queda tiempo muerto: [[00 Índice de TPs y qué aporta cada uno]] sirve de repaso rápido de los 20 TPs.

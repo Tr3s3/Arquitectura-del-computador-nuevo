@@ -7,20 +7,12 @@ prioridad: maxima
 # Leyes de DeMorgan
 
 > [!abstract] En una frase
-> **DeMorgan** son **dos teoremas** que dicen cómo se **niega** una operación:
-> **`(A + B)' = A' · B'`** y **`(A · B)' = A' + B'`**. En palabras: **negar un "o" da un "y" de negaciones**, y
-> **negar un "y" da un "o" de negaciones**. Regla práctica: **cuando una barra grande se rompe, cambia el signo y
-> se niega todo lo que estaba abajo**.
+> **DeMorgan** son **dos teoremas** que dicen cómo se **niega** una operación: **`(A + B)' = A' · B'`** y **`(A · B)' = A' + B'`**. En palabras: **negar un "o" da un "y" de negaciones**, y **negar un "y" da un "o" de negaciones**. Regla práctica: **cuando una barra grande se rompe, cambia el signo y se niega todo lo que estaba abajo**.
 
 > [!note] Si es la primera vez que ves esto
-> Es lógica de todos los días. "**No** es cierto que (*llueva* **y** *haga frío*)" equivale a decir
-> "**no** llueve **o** no hace frío". Y "**no** es cierto que (*tenga plata* **o** *tenga tiempo*)" equivale a
-> "no tengo plata **y** no tengo tiempo".
+> Es lógica de todos los días. "**No** es cierto que (*llueva* **y** *haga frío*)" equivale a decir "**no** llueve **o** no hace frío". Y "**no** es cierto que (*tenga plata* **o** *tenga tiempo*)" equivale a "no tengo plata **y** no tengo tiempo".
 >
-> Fijate lo que pasó: al entrar la negación **adentro**, el **Y** se convirtió en **O** (y al revés) y **cada**
-> condición quedó negada. Eso es exactamente DeMorgan. Suena obvio, pero es la herramienta que permite
-> **cambiar un circuito de AND a OR sin cambiar lo que hace** y, sobre todo, **pasar todo a NAND** (o todo a
-> NOR), que es como se fabrican los chips de verdad.
+> Fijate lo que pasó: al entrar la negación **adentro**, el **Y** se convirtió en **O** (y al revés) y **cada** condición quedó negada. Eso es exactamente DeMorgan. Suena obvio, pero es la herramienta que permite **cambiar un circuito de AND a OR sin cambiar lo que hace** y, sobre todo, **pasar todo a NAND** (o todo a NOR), que es como se fabrican los chips de verdad.
 
 ---
 
@@ -31,8 +23,7 @@ prioridad: maxima
 | 1 | **`(A + B)' = A' · B'`** | negación del OR | "no (A o B)" = "ni A ni B" |
 | 2 | **`(A · B)' = A' + B'`** | negación del AND | "no (A y B)" = "falla al menos uno" |
 
-Son **duales** entre sí (cambiando `·↔+`), como todo en Boole ([[Álgebra de Boole — postulados y teoremas]]).
-Y **se generalizan a cualquier número de variables**:
+Son **duales** entre sí (cambiando `·↔+`), como todo en Boole ([[Álgebra de Boole — postulados y teoremas]]). Y **se generalizan a cualquier número de variables**:
 
 ```
    (A + B + C + D)' = A' · B' · C' · D'
@@ -52,6 +43,7 @@ Y **se generalizan a cualquier número de variables**:
 ## 2. Demostración por tabla de verdad (lo que se pide)
 
 ### Teorema 1 — `(A + B)' = A' · B'`
+
 | A | B | A + B | **(A+B)'** | A' | B' | **A'·B'** |
 |---|---|---|---|---|---|---|
 | 0 | 0 | 0 | **1** | 1 | 1 | **1** |
@@ -62,6 +54,7 @@ Y **se generalizan a cualquier número de variables**:
 Las dos columnas marcadas son **idénticas** en las 4 filas ⇒ los teoremas son equivalentes. ✔
 
 ### Teorema 2 — `(A · B)' = A' + B'`
+
 | A | B | A · B | **(A·B)'** | A' | B' | **A' + B'** |
 |---|---|---|---|---|---|---|
 | 0 | 0 | 0 | **1** | 1 | 1 | **1** |
@@ -72,10 +65,7 @@ Las dos columnas marcadas son **idénticas** en las 4 filas ⇒ los teoremas son
 Idénticas ⇒ válido. ✔
 
 > [!tip] Cómo se demuestra "elegante" sin tabla
-> Por **dualidad y complemento**: `(A+B)·(A+B)' = 0` y `(A+B) + (A+B)' = 1`. Si probás que
-> `(A+B)·(A'·B') = A·A'·B' + B·A'·B' = 0` y que `(A+B) + A'·B' = (A + A' + B')(B + A' + B') = 1·1 = 1`,
-> entonces `A'·B'` cumple **exactamente** la definición de complemento de `(A+B)`, y el complemento es único.
-> Con eso alcanza; la tabla es el camino corto y seguro.
+> Por **dualidad y complemento**: `(A+B)·(A+B)' = 0` y `(A+B) + (A+B)' = 1`. Si probás que `(A+B)·(A'·B') = A·A'·B' + B·A'·B' = 0` y que `(A+B) + A'·B' = (A + A' + B')(B + A' + B') = 1·1 = 1`, entonces `A'·B'` cumple **exactamente** la definición de complemento de `(A+B)`, y el complemento es único. Con eso alcanza; la tabla es el camino corto y seguro.
 
 ---
 
@@ -87,8 +77,7 @@ F = (A'·B)'                 = A + B'            ← DeMorgan 2
 F = ((A + B)·C)'            = (A+B)' + C' = A'·B' + C'
 F = (A·B' + C)'             = (A·B')' · C' = (A' + B)·C'
 ```
-Fijate el patrón: al romper la barra, **los productos se vuelven sumas y las sumas, productos**, y **todas** las
-variables cambian de estado de negación. Olvidarse de negar **una** variable es el error más común.
+Fijate el patrón: al romper la barra, **los productos se vuelven sumas y las sumas, productos**, y **todas** las variables cambian de estado de negación. Olvidarse de negar **una** variable es el error más común.
 
 ### Uso 2 — Pasar todo a NAND (o todo a NOR): por qué existe el chip real
 Toda función en forma **suma de productos** (AND-OR) se implementa con **sólo compuertas NAND**:
@@ -107,8 +96,7 @@ El **complemento** de una función intercambia mintérminos y maxtérminos:
 ```
    Si  F(A,B) = Σm(0, 2)   ⇒   F' = Σm(1, 3) = ΠM(0, 2)
 ```
-O sea: `F'` tiene los mintérminos que **faltaban**, y `F` escrita como producto de maxterms usa **esos mismos
-índices**. Se ve en [[Mintérminos y maxtérminos]].
+O sea: `F'` tiene los mintérminos que **faltaban**, y `F` escrita como producto de maxterms usa **esos mismos índices**. Se ve en [[Mintérminos y maxtérminos]].
 
 ---
 
@@ -130,9 +118,7 @@ Paso 4 — agrupo los que tienen B':
      = B' + A'·C'                       ← identidad
 ```
 
-**Circuito simplificado**: 1 NOT (A'), 1 AND (A'·C') y 1 OR de 2 entradas ⇒ **3 compuertas**.
-El original tenía 2 AND + 1 OR + 1 NOT + 1 OR = **5 compuertas**. Y si querés todo con NAND, se puede:
-`F = B' + A'C'` ⇒ `F = (B · (A + C))'` (aplicando DeMorgan al revés) ⇒ **1 AND + 1 OR + 1 NAND**.
+**Circuito simplificado**: 1 NOT (A'), 1 AND (A'·C') y 1 OR de 2 entradas ⇒ **3 compuertas**. El original tenía 2 AND + 1 OR + 1 NOT + 1 OR = **5 compuertas**. Y si querés todo con NAND, se puede: `F = B' + A'C'` ⇒ `F = (B · (A + C))'` (aplicando DeMorgan al revés) ⇒ **1 AND + 1 OR + 1 NAND**.
 
 ---
 
@@ -146,8 +132,7 @@ El original tenía 2 AND + 1 OR + 1 NOT + 1 OR = **5 compuertas**. Y si querés 
 | `(A + B')' = A' + B` | `= A'·B` | Si el término ya estaba negado, al romper la barra **se le saca** la negación |
 
 > [!warning] La versión con "ni"
-> "**Ni** A **ni** B" se escribe `A'·B'` **y** es igual a `(A + B)'`. Si en el oral decís "no A o no B" para
-> `(A·B)'`, está perfecto; si decís "no A y no B" para `(A·B)'`, es un error de operador.
+> "**Ni** A **ni** B" se escribe `A'·B'` **y** es igual a `(A + B)'`. Si en el oral decís "no A o no B" para `(A·B)'`, está perfecto; si decís "no A y no B" para `(A·B)'`, es un error de operador.
 
 ---
 
@@ -155,16 +140,14 @@ El original tenía 2 AND + 1 OR + 1 NOT + 1 OR = **5 compuertas**. Y si querés 
 
 **Movimiento 1 — enunciado (20 s).** Las dos fórmulas, con el ejemplo del "llueve y hace frío".
 
-**Movimiento 2 — demostración (50 s).** Tabla de verdad de 4 filas para `(A+B)' = A'·B'`, mostrando que las
-columnas coinciden.
+**Movimiento 2 — demostración (50 s).** Tabla de verdad de 4 filas para `(A+B)' = A'·B'`, mostrando que las columnas coinciden.
 
-**Movimiento 3 — la regla (20 s).** "Barra larga se rompe: cambia el operador y se niega todo lo de adentro", y
-generalización a n variables.
+**Movimiento 3 — la regla (20 s).** "Barra larga se rompe: cambia el operador y se niega todo lo de adentro", y generalización a n variables.
 
-**Movimiento 4 — aplicación (40 s).** Simplificar `((A+B)·C)' = A'B' + C'` y decir que **DeMorgan permite pasar
-toda función AND-OR a NAND-NAND** (o OR-AND a NOR-NOR), que es como se fabrica en la práctica.
+**Movimiento 4 — aplicación (40 s).** Simplificar `((A+B)·C)' = A'B' + C'` y decir que **DeMorgan permite pasar toda función AND-OR a NAND-NAND** (o OR-AND a NOR-NOR), que es como se fabrica en la práctica.
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuántos teoremas son? | **Dos**, y son **duales** |
@@ -192,5 +175,4 @@ toda función AND-OR a NAND-NAND** (o OR-AND a NOR-NOR), que es como se fabrica 
 ---
 
 ## Relacionado
-[[Álgebra de Boole — postulados y teoremas]] · [[Mintérminos y maxtérminos]] · [[Compuertas lógicas]] ·
-[[Multiplexor]] · [[Decodificador]] · [[Sumador completo]]
+[[Álgebra de Boole — postulados y teoremas]] · [[Mintérminos y maxtérminos]] · [[Compuertas lógicas]] · [[Multiplexor]] · [[Decodificador]] · [[Sumador completo]]

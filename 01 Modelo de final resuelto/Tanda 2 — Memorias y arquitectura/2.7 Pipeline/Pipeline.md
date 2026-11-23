@@ -7,22 +7,13 @@ prioridad: maxima
 # Pipeline (segmentación de instrucciones)
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[CISC y RISC]] (Tanda 2 · 2.6 CISC y RISC) · [[Paralelismo y procesamiento vectorial]] (Materia · Unidad 8) · [[Técnicas para aumentar la velocidad]] (Materia · Unidad 7)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.7 Pipeline]].
-
+> **En otra tanda o unidad:** [[Ciclo de máquina]] (Tanda 1 · 1.8 Ciclo de máquina y ciclo de instrucción) · [[Memoria caché]] (Tanda 2 · 2.3 Memoria caché) · [[CISC y RISC]] (Tanda 2 · 2.6 CISC y RISC) · [[Paralelismo y procesamiento vectorial]] (Materia · Unidad 8) · [[Técnicas para aumentar la velocidad]] (Materia · Unidad 7) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.7 Pipeline]].
 
 > [!abstract] En una frase
-> El **pipeline** es una técnica de **paralelismo a nivel de instrucciones**: se parte la ejecución en **etapas
-> fijas** (búsqueda, decodificación, cálculo de direcciones, búsqueda de operandos, ejecución) y cada etapa
-> trabaja **en una instrucción distinta al mismo tiempo**. El resultado: con `k` etapas y `n` instrucciones se
-> tardan `k + (n − 1)` ciclos en lugar de `k·n`, y el **speedup** tiende a `k`.
+> El **pipeline** es una técnica de **paralelismo a nivel de instrucciones**: se parte la ejecución en **etapas fijas** (búsqueda, decodificación, cálculo de direcciones, búsqueda de operandos, ejecución) y cada etapa trabaja **en una instrucción distinta al mismo tiempo**. El resultado: con `k` etapas y `n` instrucciones se tardan `k + (n − 1)` ciclos en lugar de `k·n`, y el **speedup** tiende a `k`.
 
 > [!note] Si es la primera vez que ves esto
-> Pensá en una **lavandería** con una sola persona: lavar 30 min, secar 30, doblar 30. Si hace todo sola, cada
-> carga le cuesta 90 min. Con **tres personas** (una lava, otra seca, otra dobla), la primera carga tarda igual
-> 90 min en salir, pero **una carga nueva sale cada 30 min**. El tiempo de **una** tarea no mejora; mejora el
-> **ritmo de producción**. Eso es exactamente el pipeline: no hace más rápida una instrucción, hace que se
-> **terminen más por unidad de tiempo**.
+> Pensá en una **lavandería** con una sola persona: lavar 30 min, secar 30, doblar 30. Si hace todo sola, cada carga le cuesta 90 min. Con **tres personas** (una lava, otra seca, otra dobla), la primera carga tarda igual 90 min en salir, pero **una carga nueva sale cada 30 min**. El tiempo de **una** tarea no mejora; mejora el **ritmo de producción**. Eso es exactamente el pipeline: no hace más rápida una instrucción, hace que se **terminen más por unidad de tiempo**.
 
 ---
 
@@ -37,9 +28,7 @@ prioridad: maxima
 | **5. Ejecución** | hacer la operación y escribir el resultado | CP8 (`SUM/XOR/AND/OR → A`) |
 
 > [!tip] Por qué las etapas se eligen así
-> Porque cada etapa la puede hacer **un bloque de hardware distinto** (memoria, decodificador, sumador, ALU).
-> Si dos etapas usaran **el mismo** recurso, no podrían trabajar a la vez: eso es un **conflicto estructural**
-> (y es la razón por la que existe la caché separada de instrucciones y datos).
+> Porque cada etapa la puede hacer **un bloque de hardware distinto** (memoria, decodificador, sumador, ALU). Si dos etapas usaran **el mismo** recurso, no podrían trabajar a la vez: eso es un **conflicto estructural** (y es la razón por la que existe la caché separada de instrucciones y datos).
 
 ---
 
@@ -85,10 +74,7 @@ prioridad: maxima
 | **De control** | no se sabe cuál es la próxima instrucción hasta resolver un **salto** | un `JMP` o un `JZ` | **predicción** de saltos, **retardo** del salto (llenar con instrucciones útiles), *branch target buffer* |
 
 > [!important] El conflicto de datos explicado como la cátedra
-> "D = A + B + C: para calcular D necesito el resultado de C. El problema es **discernir cuándo** necesito el
-> resultado de la operación anterior." Si no está listo ⇒ **stall** (burbuja en el pipeline) o **NOP** insertado
-> por el compilador. El **forwarding** es mejor: en vez de esperar, se **adelanta** el dato por un camino
-> lateral.
+> "D = A + B + C: para calcular D necesito el resultado de C. El problema es **discernir cuándo** necesito el resultado de la operación anterior." Si no está listo ⇒ **stall** (burbuja en el pipeline) o **NOP** insertado por el compilador. El **forwarding** es mejor: en vez de esperar, se **adelanta** el dato por un camino lateral.
 
 ---
 
@@ -102,15 +88,13 @@ prioridad: maxima
 | **Acceso a memoria sólo load/store** | la etapa de memoria es simple y corta | operar sobre memoria alarga la etapa |
 | **Muchos registros** | menos accesos a memoria, menos espera | pocos registros ⇒ más tráfico |
 
-Por eso: **RISC nació para poder hacer pipeline**, y por eso los x86 (CISC) **traducen** sus instrucciones a
-micro-operaciones simples para poder segmentarlas ([[CISC y RISC]]).
+Por eso: **RISC nació para poder hacer pipeline**, y por eso los x86 (CISC) **traducen** sus instrucciones a micro-operaciones simples para poder segmentarlas ([[CISC y RISC]]).
 
 ---
 
 ## 5. Ejemplo resuelto con tabla de tiempo (para el pizarrón)
 
-Cuatro etapas: **B** (búsqueda), **D** (decodificación), **O** (operandos), **E** (ejecución). Tres
-instrucciones: `I1`, `I2`, `I3`.
+Cuatro etapas: **B** (búsqueda), **D** (decodificación), **O** (operandos), **E** (ejecución). Tres instrucciones: `I1`, `I2`, `I3`.
 
 | Ciclo | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
@@ -119,7 +103,9 @@ instrucciones: `I1`, `I2`, `I3`.
 | **I3** | | | B | D | O | E |
 
 - **Fin de I1**: ciclo 4 (igual que sin pipeline, ¡ojo!).
+
 - **Fin de I3**: ciclo 6. Sin pipeline habría sido el ciclo 12.
+
 - **A partir del ciclo 4, sale una instrucción por ciclo** (el "ritmo de producción").
 
 ---
@@ -133,30 +119,24 @@ instrucciones: `I1`, `I2`, `I3`.
 | **Ejecución fuera de orden** | el hardware reordena para no esperar |
 | **Multihilo (SMT/Hyper-Threading)** | dos flujos de instrucciones compartiendo el mismo núcleo |
 
-**Los límites prácticos**: dependencias entre instrucciones, saltos, y que **el pipeline sólo ayuda si hay muchas
-instrucciones seguidas** que se puedan solapar. Además, un pipeline profundo castiga mucho cuando hay un salto
-mal predicho (se tira todo lo que estaba en vuelo).
+**Los límites prácticos**: dependencias entre instrucciones, saltos, y que **el pipeline sólo ayuda si hay muchas instrucciones seguidas** que se puedan solapar. Además, un pipeline profundo castiga mucho cuando hay un salto mal predicho (se tira todo lo que estaba en vuelo).
 
 ---
 
 ## 7. Cómo responderlo en el final (3–4 minutos)
 
-**Movimiento 1 — definición (20 s).** "Paralelismo a nivel de instrucciones: etapas fijas que trabajan en
-simultáneo sobre instrucciones distintas."
+**Movimiento 1 — definición (20 s).** "Paralelismo a nivel de instrucciones: etapas fijas que trabajan en simultáneo sobre instrucciones distintas."
 
-**Movimiento 2 — el dibujo (60 s).** Las **5 etapas** en columnas y el **diagrama de tiempo** con I1, I2, I3
-"bajando en escalera". Marcar que **una instrucción no se hace más rápido**: se hacen más por unidad de tiempo.
+**Movimiento 2 — el dibujo (60 s).** Las **5 etapas** en columnas y el **diagrama de tiempo** con I1, I2, I3 "bajando en escalera". Marcar que **una instrucción no se hace más rápido**: se hacen más por unidad de tiempo.
 
-**Movimiento 3 — la cuenta (40 s).** `k + (n − 1)` contra `k·n`, y el speedup que tiende a `k`. Con el ejemplo de
-la cátedra (8 pulsos, 3 operaciones).
+**Movimiento 3 — la cuenta (40 s).** `k + (n − 1)` contra `k·n`, y el speedup que tiende a `k`. Con el ejemplo de la cátedra (8 pulsos, 3 operaciones).
 
-**Movimiento 4 — los conflictos (60 s).** Estructural / de datos / de control, con su solución (caché I-D,
-forwarding y stalls, predicción).
+**Movimiento 4 — los conflictos (60 s).** Estructural / de datos / de control, con su solución (caché I-D, forwarding y stalls, predicción).
 
-**Movimiento 5 — cierre (20 s).** "El pipeline es la razón por la que **RISC ganó** y por la que un x86 moderno
-traduce a micro-operaciones: el rendimiento hoy se gana **solapando**, no haciendo instrucciones más complejas."
+**Movimiento 5 — cierre (20 s).** "El pipeline es la razón por la que **RISC ganó** y por la que un x86 moderno traduce a micro-operaciones: el rendimiento hoy se gana **solapando**, no haciendo instrucciones más complejas."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Una instrucción tarda menos? | **No**: tarda lo mismo (o más por el overhead de los registros de etapa). Lo que mejora es el **rendimiento global** |
@@ -171,10 +151,15 @@ traduce a micro-operaciones: el rendimiento hoy se gana **solapando**, no hacien
 ---
 
 ## 8. Errores típicos
+
 - Decir que el pipeline **reduce la latencia** de una instrucción (reduce el **tiempo por instrucción promedio**).
+
 - Olvidar los conflictos: "con pipeline todo es k veces más rápido" (falso: por hazards y llenado).
+
 - Confundir **pipeline** (etapas de una instrucción) con **paralelismo de datos** (procesar varios datos a la vez).
+
 - Decir que un salto no afecta: cada salto mal predicho **vacía** el pipeline.
+
 - Confundir **stall** con **NOP**: el NOP es una instrucción que no hace nada; el stall es detener la etapa.
 
 ---
@@ -196,6 +181,4 @@ traduce a micro-operaciones: el rendimiento hoy se gana **solapando**, no hacien
 ---
 
 ## Relacionado
-[[CISC y RISC]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] ·
-[[Ciclo de máquina]] · [[Cómo se implementa la Unidad de Control]] · [[Memoria caché]] ·
-[[Jerarquía de memorias]]
+[[CISC y RISC]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Ciclo de máquina]] · [[Cómo se implementa la Unidad de Control]] · [[Memoria caché]] · [[Jerarquía de memorias]]

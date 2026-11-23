@@ -6,9 +6,7 @@ tema: "3.1"
 # Tema 3.1 — Microoperaciones y bus
 
 > [!abstract] Qué se estudia acá
-> El **idioma** con el que se describe lo que hace la máquina pulso por pulso: la **notación de transferencia
-> entre registros** (RTL), y el medio físico por el que circulan los datos: el **bus** con sus **buffers de tres
-> estados**. Es la base para leer el ciclo de instrucción de cualquier máquina.
+> El **idioma** con el que se describe lo que hace la máquina pulso por pulso: la **notación de transferencia entre registros** (RTL), y el medio físico por el que circulan los datos: el **bus** con sus **buffers de tres estados**. Es la base para leer el ciclo de instrucción de cualquier máquina.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -17,8 +15,7 @@ tema: "3.1"
 | **3.1.3** Buses de datos, de direcciones y de control | qué lleva cada bus y de qué tamaño es | [[3.1.3 Buses de datos, de direcciones y de control]] |
 
 > [!important] La regla de oro de la unidad
-> Con **un solo bus**, en cada pulso se puede hacer **una** transferencia. Todo lo demás (sumar un 1 al PC,
-> traer un dato y sumarlo) son **varias** microoperaciones, es decir, varios pulsos.
+> Con **un solo bus**, en cada pulso se puede hacer **una** transferencia. Todo lo demás (sumar un 1 al PC, traer un dato y sumarlo) son **varias** microoperaciones, es decir, varios pulsos.
 
 ## TPs y práctica
 [[TP14 Buses]] · (apoyo) [[TP13 Componentes internos]]

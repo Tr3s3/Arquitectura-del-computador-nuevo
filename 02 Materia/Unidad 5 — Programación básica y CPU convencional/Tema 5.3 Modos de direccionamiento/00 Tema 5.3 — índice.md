@@ -6,8 +6,7 @@ tema: "5.3"
 # Tema 5.3 — Modos de direccionamiento
 
 > [!abstract] Qué se estudia acá
-> Las **siete formas** de decirle a la máquina *dónde está el operando*, y cuánto cuesta cada una en **accesos a
-> memoria**. Es el tema que explica por qué existen los registros índice y el modo indirecto.
+> Las **siete formas** de decirle a la máquina *dónde está el operando*, y cuánto cuesta cada una en **accesos a memoria**. Es el tema que explica por qué existen los registros índice y el modo indirecto.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -18,5 +17,4 @@ tema: "5.3"
 > **Inmediato · directo · indirecto · de registro · registro indirecto · de desplazamiento (indexado) · de pila.**
 
 ## Relacionado
-[[00 Unidad 5 — temas y subtemas]] · [[00 Tema 5.2 — índice]] · [[00 Tema 5.4 — índice]] ·
-[[Modos de direccionamiento]] · [[TP19 Modos de direccionamiento]]
+[[00 Unidad 5 — temas y subtemas]] · [[00 Tema 5.2 — índice]] · [[00 Tema 5.4 — índice]] · [[Modos de direccionamiento]] · [[TP19 Modos de direccionamiento]]

@@ -6,9 +6,7 @@ tema: "5.4"
 # Tema 5.4 — La BLUE indexada
 
 > [!abstract] Qué estudia
-> La evolución de la BLUE: se le agregan **RIF** (índice de fuente), **RID** (índice de destino), **RB** (base), un
-> **sumador de direcciones** y un **modificador de 2 bits**. Con eso aparecen los modos indexados… a cambio de
-> **24 pulsos** por instrucción.
+> La evolución de la BLUE: se le agregan **RIF** (índice de fuente), **RID** (índice de destino), **RB** (base), un **sumador de direcciones** y un **modificador de 2 bits**. Con eso aparecen los modos indexados… a cambio de **24 pulsos** por instrucción.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -19,5 +17,4 @@ tema: "5.4"
 > `EA = RB + campo [+ RIF o RID]`. El **base** se suma **siempre**; los índices, **sólo si la instrucción lo pide**.
 
 ## Relacionado
-[[00 Unidad 5 — temas y subtemas]] · [[00 Tema 5.3 — índice]] · [[00 Tema 5.5 — índice]] ·
-[[BLUE indexada (RIF, RID, nuevo formato)]]
+[[00 Unidad 5 — temas y subtemas]] · [[00 Tema 5.3 — índice]] · [[00 Tema 5.5 — índice]] · [[BLUE indexada (RIF, RID, nuevo formato)]]

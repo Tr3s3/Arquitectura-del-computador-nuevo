@@ -7,21 +7,13 @@ prioridad: maxima
 # Memoria caché
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Jerarquía de memorias]] (Tanda 2 · 2.4 Jerarquía de memorias) · [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Memoria ROM y sus tipos]] (Tanda 2 · 2.2 Memoria ROM y sus tipos) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.3 Memoria caché]].
-
+> **En otra tanda o unidad:** [[Jerarquía de memorias]] (Tanda 2 · 2.4 Jerarquía de memorias) · [[Celda elemental de memoria]] (Tanda 2 · 2.1 Celda elemental de memoria) · [[Memoria ROM y sus tipos]] (Tanda 2 · 2.2 Memoria ROM y sus tipos) · [[Pipeline]] (Tanda 2 · 2.7 Pipeline) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 2.3 Memoria caché]].
 
 > [!abstract] En una frase
-> La **caché** es una memoria **chica y rapidísima** (SRAM) puesta entre la CPU y la RAM para guardar **lo último
-> que se usó**, apostando a que se va a volver a usar. Cuando la CPU pide un dato, primero mira la caché: si está
-> (**acierto / hit**), sigue a toda velocidad; si no está (**fallo / miss**), va a la RAM y **deja copia**.
+> La **caché** es una memoria **chica y rapidísima** (SRAM) puesta entre la CPU y la RAM para guardar **lo último que se usó**, apostando a que se va a volver a usar. Cuando la CPU pide un dato, primero mira la caché: si está (**acierto / hit**), sigue a toda velocidad; si no está (**fallo / miss**), va a la RAM y **deja copia**.
 
 > [!note] Si es la primera vez que ves esto
-> El problema: la CPU ejecuta una instrucción en ~1 ns y la RAM tarda ~50–100 ns en entregar un dato. Si la CPU
-> pide todo a la RAM, pasa el **90 % del tiempo esperando**. La solución es la misma que usás en la cocina: tenés
-> una **heladera chica** al lado de la mesada (caché) con lo que estás usando, y un **depósito grande** en el
-> fondo (RAM). Ir al depósito es lento, pero vas pocas veces porque **lo que usás está cerca**. La caché no
-> "adivina el futuro": apuesta a una regularidad de los programas que se llama **localidad**.
+> El problema: la CPU ejecuta una instrucción en ~1 ns y la RAM tarda ~50–100 ns en entregar un dato. Si la CPU pide todo a la RAM, pasa el **90 % del tiempo esperando**. La solución es la misma que usás en la cocina: tenés una **heladera chica** al lado de la mesada (caché) con lo que estás usando, y un **depósito grande** en el fondo (RAM). Ir al depósito es lento, pero vas pocas veces porque **lo que usás está cerca**. La caché no "adivina el futuro": apuesta a una regularidad de los programas que se llama **localidad**.
 
 ---
 
@@ -32,13 +24,10 @@ prioridad: maxima
 | **Temporal** | si usaste un dato, es probable que lo vuelvas a usar pronto | el contador de un lazo, una variable de suma |
 | **Espacial** | si usaste una posición, es probable que uses las **vecinas** | recorrer un arreglo; las instrucciones se ejecutan **en secuencia** |
 
-Gracias a la localidad, **un caché chica puede capturar la mayoría de los accesos**: en la práctica, las cachés
-tienen tasas de acierto del 90–99 %.
+Gracias a la localidad, **un caché chica puede capturar la mayoría de los accesos**: en la práctica, las cachés tienen tasas de acierto del 90–99 %.
 
 > [!important] El principio del promedio
-> Aunque **cada fallo** cueste muchísimo (ir a la RAM), si los aciertos son el 95 %, el **tiempo promedio** se
-> parece al de la caché. Eso es todo el truco de la jerarquía de memoria
-> ([[Jerarquía de memorias]]).
+> Aunque **cada fallo** cueste muchísimo (ir a la RAM), si los aciertos son el 95 %, el **tiempo promedio** se parece al de la caché. Eso es todo el truco de la jerarquía de memoria ([[Jerarquía de memorias]]).
 
 ---
 
@@ -53,12 +42,10 @@ tienen tasas de acierto del 90–99 %.
 ```
   AMAT = 1 ns + 0,05 × 100 ns = 1 + 5 = 6 ns
 ```
-Sin caché serían **100 ns**. Es decir: **seis veces más rápido** con una memoria chiquita. Y si la tasa de
-acierto sube al 99 %: `1 + 0,01 × 100 = 2 ns` ⇒ **cincuenta veces** más rápido.
+Sin caché serían **100 ns**. Es decir: **seis veces más rápido** con una memoria chiquita. Y si la tasa de acierto sube al 99 %: `1 + 0,01 × 100 = 2 ns` ⇒ **cincuenta veces** más rápido.
 
 > [!tip] Qué se pregunta de esto
-> No hace falta memorizar la fórmula: hace falta saber decir **"el promedio mejora porque los aciertos son
-> mayoría"** y saber hacer la cuenta con dos números dados.
+> No hace falta memorizar la fórmula: hace falta saber decir **"el promedio mejora porque los aciertos son mayoría"** y saber hacer la cuenta con dos números dados.
 
 ---
 
@@ -80,13 +67,14 @@ La CPU manda una **dirección** (por ejemplo de 16 bits) y la caché la interpre
 | **Etiqueta** (tag) | dice **si el dato que está ahí es el que busco** (se guarda junto al dato) |
 | **Desplazamiento** (offset) | dice **qué palabra** del bloque traído |
 
-Con eso, la búsqueda es: **mirar el casillero del índice, comparar la etiqueta**; si coincide ⇒ **acierto**; si no
-⇒ **fallo** (y hay que traer el bloque desde la RAM y escribir la etiqueta nueva).
+Con eso, la búsqueda es: **mirar el casillero del índice, comparar la etiqueta**; si coincide ⇒ **acierto**; si no ⇒ **fallo** (y hay que traer el bloque desde la RAM y escribir la etiqueta nueva).
 
 **Conceptos que acompañan**:
-- **Bloque (o línea)**: la unidad que se trae de la RAM de una vez (por ejemplo 16 o 64 bytes). Traer más que un
-  dato aprovecha la **localidad espacial**.
+
+- **Bloque (o línea)**: la unidad que se trae de la RAM de una vez (por ejemplo 16 o 64 bytes). Traer más que un dato aprovecha la **localidad espacial**.
+
 - **Bit de validez**: indica si el casillero tiene un dato real (al encender, la caché está llena de basura).
+
 - **Política de escritura**: qué hacer cuando la CPU escribe (abajo).
 
 ---
@@ -113,20 +101,21 @@ Con eso, la búsqueda es: **mirar el casillero del índice, comparar la etiqueta
 ## 5. Políticas: qué hacer al escribir y a quién expulsar
 
 **Al escribir** (la CPU modifica un dato):
+
 | Política | Cómo funciona | Ventaja | Desventaja |
 |---|---|---|---|
 | **Write-through** (escritura directa) | se escribe **en la caché y en la RAM a la vez** | la RAM siempre está actualizada; simple | **más tráfico** a memoria, más lento |
 | **Write-back** (post-escritura) | se escribe **sólo en la caché** y se marca la línea como **"sucia"**; se baja a la RAM cuando la expulsan | menos tráfico, más rápido | la RAM queda desactualizada; más complejo (bit *dirty*) |
 
 **Al reemplazar** (cuando el conjunto está lleno, hay que sacar una línea):
+
 | Política | Criterio |
 |---|---|
 | **LRU** (*least recently used*) | se expulsa la que **hace más tiempo** que no se usa (la mejor, y la más cara de implementar) |
 | **FIFO** | se expulsa la **más antigua** |
 | **Aleatoria** | cualquiera (sorprendentemente funciona bien y es baratísima) |
 
-**Inicialización**: al encender, la caché tiene **basura**. Por eso cada línea tiene un **bit de validez**: si está
-en 0, el contenido se ignora (se trata como fallo).
+**Inicialización**: al encender, la caché tiene **basura**. Por eso cada línea tiene un **bit de validez**: si está en 0, el contenido se ignora (se trata como fallo).
 
 ---
 
@@ -139,34 +128,26 @@ en 0, el contenido se ignora (se trata como fallo).
 | **L3** | varios MB | más lenta que L2, más rápida que RAM | compartida entre núcleos |
 
 > [!important] El detalle "Harvard por dentro"
-> Que L1 esté **separada en instrucciones y datos** es lo que hace que las CPUs modernas sean **Harvard por
-> dentro y von Neumann por fuera** ([[Estructura básica de un computador]]): se pueden buscar la instrucción y el
-> dato **al mismo tiempo**, sin pelear por un bus.
+> Que L1 esté **separada en instrucciones y datos** es lo que hace que las CPUs modernas sean **Harvard por dentro y von Neumann por fuera** ([[Estructura básica de un computador]]): se pueden buscar la instrucción y el dato **al mismo tiempo**, sin pelear por un bus.
 
-Y una mención que suma: **coherencia de caché** — cuando hay varios núcleos, cada uno con su L1/L2, hay que
-mantener las copias sincronizadas (protocolos tipo MESI). Y **memoria virtual**: la misma idea aplicada al disco
-([[Memoria virtual y administración de memoria]]).
+Y una mención que suma: **coherencia de caché** — cuando hay varios núcleos, cada uno con su L1/L2, hay que mantener las copias sincronizadas (protocolos tipo MESI). Y **memoria virtual**: la misma idea aplicada al disco ([[Memoria virtual y administración de memoria]]).
 
 ---
 
 ## 7. Cómo responderlo en el final (3 minutos)
 
-**Movimiento 1 — el problema (20 s).** "La CPU es mucho más rápida que la RAM; la caché tapa esa diferencia
-guardando lo último usado."
+**Movimiento 1 — el problema (20 s).** "La CPU es mucho más rápida que la RAM; la caché tapa esa diferencia guardando lo último usado."
 
-**Movimiento 2 — por qué funciona (30 s).** **Localidad temporal y espacial** + la cuenta del AMAT
-(`1 + 0,05 × 100 = 6 ns`).
+**Movimiento 2 — por qué funciona (30 s).** **Localidad temporal y espacial** + la cuenta del AMAT (`1 + 0,05 × 100 = 6 ns`).
 
-**Movimiento 3 — el dibujo (60 s).** La **dirección partida** en etiqueta / índice / desplazamiento y los **tres
-mapeos** (directo, asociativo por conjuntos, totalmente asociativo).
+**Movimiento 3 — el dibujo (60 s).** La **dirección partida** en etiqueta / índice / desplazamiento y los **tres mapeos** (directo, asociativo por conjuntos, totalmente asociativo).
 
-**Movimiento 4 — políticas (40 s).** Escritura: **write-through vs write-back** (con el bit *dirty*). Reemplazo:
-**LRU / FIFO / aleatoria**. **Bit de validez** al inicializar.
+**Movimiento 4 — políticas (40 s).** Escritura: **write-through vs write-back** (con el bit *dirty*). Reemplazo: **LRU / FIFO / aleatoria**. **Bit de validez** al inicializar.
 
-**Movimiento 5 — cierre (20 s).** "L1 dentro del núcleo y partida en I/D (Harvard por dentro), L2 por núcleo, L3
-compartida. Y el remate: **la caché no reduce el tiempo de un acceso, reduce el tiempo promedio**."
+**Movimiento 5 — cierre (20 s).** "L1 dentro del núcleo y partida en I/D (Harvard por dentro), L2 por núcleo, L3 compartida. Y el remate: **la caché no reduce el tiempo de un acceso, reduce el tiempo promedio**."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Qué pasa en un fallo? | Se trae el **bloque** completo desde la RAM, se guarda con su etiqueta y se marca válido |
@@ -180,12 +161,17 @@ compartida. Y el remate: **la caché no reduce el tiempo de un acceso, reduce el
 ---
 
 ## 8. Errores típicos
+
 - Decir que la caché "guarda todo": guarda **lo último usado**, es chica.
+
 - Confundir **acierto** con "el dato está en la RAM" (es al revés: **no hace falta** ir a la RAM).
-- Decir que write-back es "peor" porque la RAM queda desactualizada: es un **compromiso**, y en la práctica es
-  más rápido.
+
+- Decir que write-back es "peor" porque la RAM queda desactualizada: es un **compromiso**, y en la práctica es más rápido.
+
 - Olvidar el **bit de validez** y el problema de la inicialización.
+
 - Confundir **bloque** (lo que se trae) con **palabra** (lo que pide la CPU).
+
 - Decir que el mapeo directo "no tiene desventajas": tiene **conflictos**.
 
 ---
@@ -207,6 +193,4 @@ compartida. Y el remate: **la caché no reduce el tiempo de un acceso, reduce el
 ---
 
 ## Relacionado
-[[Jerarquía de memorias]] · [[Celda elemental de memoria]] · [[Memoria RAM 8x3]] · [[Memoria ROM y sus tipos]] ·
-[[Memoria virtual y administración de memoria]] · [[Técnicas para aumentar la velocidad]] ·
-[[Pipeline]] · [[Estructura básica de un computador]]
+[[Jerarquía de memorias]] · [[Celda elemental de memoria]] · [[Memoria RAM 8x3]] · [[Memoria ROM y sus tipos]] · [[Memoria virtual y administración de memoria]] · [[Técnicas para aumentar la velocidad]] · [[Pipeline]] · [[Estructura básica de un computador]]

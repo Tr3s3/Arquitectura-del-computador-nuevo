@@ -5,15 +5,10 @@ prioridad: maxima
 # La materia completa — las 10 unidades
 
 > [!abstract] Qué es esta carpeta
-> El **programa de la cátedra**, unidad por unidad, para estudiarlo **de punta a punta**. Acá viven las notas que
-> el final no pregunta (registros, contadores, memoria virtual, ALU, paralelismo, 8086, microprogramación) y acá
-> está **el mapa que conecta todo**, incluidas las notas que están guardadas en
-> [[00 Índice — el final resuelto|Modelo de final resuelto]].
+> El **programa de la cátedra**, unidad por unidad, para estudiarlo **de punta a punta**. Acá viven las notas que el final no pregunta (registros, contadores, memoria virtual, ALU, paralelismo, 8086, microprogramación) y acá está **el mapa que conecta todo**, incluidas las notas que están guardadas en [[00 Índice — el final resuelto|Modelo de final resuelto]].
 
 > [!tip] ¿Lo querés leer todo de corrido?
-> **[[00 Materia completa (las 10 unidades en un archivo)]]**: las 10 unidades y los **107 subtemas** pegados en
-> un solo archivo (85.000 palabras, con todos los diagramas y figuras). Y cada unidad tiene el suyo:
-> **`00 Unidad N completa (lectura de corrido)`**, dentro de su carpeta.
+> **[[00 Materia completa (las 10 unidades en un archivo)]]**: las 10 unidades y los **107 subtemas** pegados en un solo archivo (85.000 palabras, con todos los diagramas y figuras). Y cada unidad tiene el suyo: **`00 Unidad N completa (lectura de corrido)`**, dentro de su carpeta.
 
 > [!important] Cómo está armada
 > ```
@@ -27,8 +22,7 @@ prioridad: maxima
 > │   └── Tema 2.6 Memorias complementarias/
 > ├── Unidad 3 … Unidad 10
 > ```
-> **Cada nota vive en un solo lugar.** La mayoría de los temas del programa coinciden con preguntas del final,
-> así que su nota está en `01 Modelo de final resuelto/`; desde el índice de cada unidad **se llega igual**.
+> **Cada nota vive en un solo lugar.** La mayoría de los temas del programa coinciden con preguntas del final, así que su nota está en `01 Modelo de final resuelto/`; desde el índice de cada unidad **se llega igual**.
 
 ---
 
@@ -58,16 +52,10 @@ prioridad: maxima
 | **Total** | **46** | **107** | **107 subtemas escritos** | **10 de 10** ✅ |
 
 > [!success] Materia completa
-> Las **10 unidades** están desarrolladas: **46 temas**, **107 subtemas** en carpetas `Unidad → Tema → Subtema` y
-> **una `00 Síntesis — Unidad N` por unidad** con todo el contenido junto. Para el parcial, empezar por la síntesis
-> de la unidad que entra; para el final, por
-> [[00 Índice — el final resuelto|el modelo de final resuelto]].
+> Las **10 unidades** están desarrolladas: **46 temas**, **107 subtemas** en carpetas `Unidad → Tema → Subtema` y **una `00 Síntesis — Unidad N` por unidad** con todo el contenido junto. Para el parcial, empezar por la síntesis de la unidad que entra; para el final, por [[00 Índice — el final resuelto|el modelo de final resuelto]].
 
 > [!tip] Todos los subtemas traen su diagrama
-> Los **107 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico):
-> **107 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en
-> [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], y las **132 figuras de los libros**
-> (Quiroga y Stallings) con su cita de página, en [[00 Figuras de los libros (índice)]].
+> Los **107 subtemas** tienen al menos **un diagrama** (circuito, formato de instrucción, tabla, traza o gráfico): **107 diagramas** sobre **97 SVG** en `assets/`. La lista completa, subtema por subtema, está en [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], y las **132 figuras de los libros** (Quiroga y Stallings) con su cita de página, en [[00 Figuras de los libros (índice)]].
 
 ## Las 10 unidades
 
@@ -95,13 +83,9 @@ prioridad: maxima
 | **3. Lo avanzado** | 6 a 10 | microprogramación, pipeline, CISC/RISC, paralelismo, aritmética, E/S |
 
 > [!tip] Regla de oro
-> Por cada tema: (1) leé la nota, (2) **dibujá el circuito o el esquema sin mirar**, (3) resolvé el **TP** de esa
-> unidad, (4) contá en voz alta qué resuelve ese concepto. Si hacés las cuatro, el tema es tuyo.
-> Los TPs están en [[00 Índice de TPs y qué aporta cada uno]].
+> Por cada tema: (1) leé la nota, (2) **dibujá el circuito o el esquema sin mirar**, (3) resolvé el **TP** de esa unidad, (4) contá en voz alta qué resuelve ese concepto. Si hacés las cuatro, el tema es tuyo. Los TPs están en [[00 Índice de TPs y qué aporta cada uno]].
 
 ---
 
 ## Relacionado
-[[00 Índice — el final resuelto]] · [[01 Mapa de la materia (MOC)]] ·
-[[02 Plan de estudio — las 10 unidades]] · [[04 Resumen integrador de la materia]] ·
-[[05 Fuentes y qué aporta cada una]]
+[[00 Índice — el final resuelto]] · [[01 Mapa de la materia (MOC)]] · [[02 Plan de estudio — las 10 unidades]] · [[04 Resumen integrador de la materia]] · [[05 Fuentes y qué aporta cada una]]

@@ -5,24 +5,15 @@ prioridad: maxima
 # Matriz del final — las 3 tandas (foto del profesor)
 
 > [!abstract] Qué es esta nota
-> Es la **matriz real** que reparte el final en tres tandas, tal como está en la foto que pasaste.
-> Cada ítem tiene al lado un número (el peso o la frecuencia con que cae según la cátedra) y cada uno
-> está enlazado a la nota donde está desarrollado **y dibujado**.
+> Es la **matriz real** que reparte el final en tres tandas, tal como está en la foto que pasaste. Cada ítem tiene al lado un número (el peso o la frecuencia con que cae según la cátedra) y cada uno está enlazado a la nota donde está desarrollado **y dibujado**.
 >
-> **Cómo se rinde:** la 1.ª tanda son 8 preguntas de la máquina BLUE (la columna vertebral); la 2.ª tanda
-> son 10 temas de memoria y arquitectura; la 3.ª tanda es **todo con gráficos, tablas de verdad paso a paso
-> y funciones**. Es un oral: se aprueba **dibujando y explicando el dibujo**.
+> **Cómo se rinde:** la 1.ª tanda son 8 preguntas de la máquina BLUE (la columna vertebral); la 2.ª tanda son 10 temas de memoria y arquitectura; la 3.ª tanda es **todo con gráficos, tablas de verdad paso a paso y funciones**. Es un oral: se aprueba **dibujando y explicando el dibujo**.
 
 > [!tip] Cada nota tiene su sección **"Para ampliar"**
-> Al final de cada nota maestra hay una tabla de **qué material de consulta leer** para ese tema (qué fuente, en
-> qué parte y qué buscar). El conjunto está reunido en
-> [[01 Qué leer para cada pregunta principal]] — es el mapa de bibliografía del final.
+> Al final de cada nota maestra hay una tabla de **qué material de consulta leer** para ese tema (qué fuente, en qué parte y qué buscar). El conjunto está reunido en [[01 Qué leer para cada pregunta principal]] — es el mapa de bibliografía del final.
 
 > [!important] Regla de oro que se desprende de la matriz
-> La 3.ª tanda dice literalmente *"todo esto con gráficos y tablas de verdad paso a paso y funciones"*.
-> Es decir: **no alcanza con decir la definición**. De cada circuito hay que entregar
-> **tabla de verdad → funciones (simplificadas) → circuito dibujado**. Si practicás eso, las tres tandas
-> se resuelven igual.
+> La 3.ª tanda dice literalmente *"todo esto con gráficos y tablas de verdad paso a paso y funciones"*. Es decir: **no alcanza con decir la definición**. De cada circuito hay que entregar **tabla de verdad → funciones (simplificadas) → circuito dibujado**. Si practicás eso, las tres tandas se resuelven igual.
 
 ---
 
@@ -57,9 +48,7 @@ prioridad: maxima
 ## 3.ª tanda — circuitos con tabla de verdad, funciones y gráfico (peso 12)
 
 > [!warning] Lo que se corrige en esta tanda
-> Cada ítem se resuelve **en este orden**: (1) tabla de verdad, (2) función o funciones, (3) simplificación
-> si se pide, (4) **circuito dibujado** con las compuertas. Si falta el circuito o la función, la tabla sola
-> no alcanza.
+> Cada ítem se resuelve **en este orden**: (1) tabla de verdad, (2) función o funciones, (3) simplificación si se pide, (4) **circuito dibujado** con las compuertas. Si falta el circuito o la función, la tabla sola no alcanza.
 
 | # | Pregunta | Nota | Entregable |
 |---|---|---|---|
@@ -74,13 +63,7 @@ prioridad: maxima
 | + | **Conjunto de instrucciones: el RI y 3 ejemplos de instrucciones** | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] + [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] | La tabla de opcodes, qué hace el IR y 3 instrucciones explicadas paso a paso |
 
 > [!tip] Estado del desarrollo en la bóveda
-> Los **8 ítems** de esta tanda están desarrollados a nivel **maestro** (contexto desde cero → **tabla de
-> verdad** → **función canónica** → **mapa de Karnaugh** → **circuito** → guion oral → repreguntas → "Para
-> ampliar"). Empezá por [[Mintérminos y maxtérminos]] (la herramienta que usan los ítems 5, 6 y 7) y seguí con
-> [[Decodificador]], [[Codificador]], [[Multiplexor]], [[Demultiplexor]], [[Flip-Flops SR, D, JK y T]],
-> [[Conversión entre biestables (RS, JK, D, T)]], [[Álgebra de Boole — postulados y teoremas]],
-> [[Leyes de DeMorgan]], [[Semisumador]], [[Sumador completo]] y, para el ítem del RI,
-> [[Máquina BLUE — arquitectura y conjunto de instrucciones]].
+> Los **8 ítems** de esta tanda están desarrollados a nivel **maestro** (contexto desde cero → **tabla de verdad** → **función canónica** → **mapa de Karnaugh** → **circuito** → guion oral → repreguntas → "Para ampliar"). Empezá por [[Mintérminos y maxtérminos]] (la herramienta que usan los ítems 5, 6 y 7) y seguí con [[Decodificador]], [[Codificador]], [[Multiplexor]], [[Demultiplexor]], [[Flip-Flops SR, D, JK y T]], [[Conversión entre biestables (RS, JK, D, T)]], [[Álgebra de Boole — postulados y teoremas]], [[Leyes de DeMorgan]], [[Semisumador]], [[Sumador completo]] y, para el ítem del RI, [[Máquina BLUE — arquitectura y conjunto de instrucciones]].
 
 ---
 
@@ -95,20 +78,19 @@ prioridad: maxima
 | 5 | **Simulacro**: respondé la matriz en voz alta sacando 2 preguntas al azar de cada tanda | 3 h |
 
 > [!tip] Orden de los pesos
-> Sumando los números que anotó el profesor: **3.ª tanda (12) > RISC/CISC y pipeline (10) > RAM 3×8 (10) >
-> interrupciones (9) > BLUE vs indexada, LDA 24 pulsos, formato, base e índice, modos (8) > UC, flujo (7) >
-> ciclo de máquina, 16 instrucciones (6-7) > estructura, celda, ROM, caché, jerarquía (4-5)**.
-> Los cinco temas de peso 8-10 son: **RAM 3×8, RISC/CISC, pipeline, interrupciones y los circuitos de la 3.ª tanda**.
+> Sumando los números que anotó el profesor: **3.ª tanda (12) > RISC/CISC y pipeline (10) > RAM 3×8 (10) > interrupciones (9) > BLUE vs indexada, LDA 24 pulsos, formato, base e índice, modos (8) > UC, flujo (7) > ciclo de máquina, 16 instrucciones (6-7) > estructura, celda, ROM, caché, jerarquía (4-5)**. Los cinco temas de peso 8-10 son: **RAM 3×8, RISC/CISC, pipeline, interrupciones y los circuitos de la 3.ª tanda**.
 
 ## Lo que la matriz NO pregunta pero necesitás para responderla
+
 - [[04 Resumen integrador de la materia]] — el mapa general (leelo primero).
+
 - [[Compuertas lógicas]] — sin compuertas no hay circuito que dibujar.
+
 - [[Flip-Flops SR, D, JK y T]] — base del punto 5 y 6 de la 3.ª tanda.
+
 - [[Registros de la CPU]] — PC, MAR, MBR, IR, AC: aparecen en todas las respuestas.
+
 - [[Unidad de Control]] — para el punto 6 de la 1.ª tanda.
 
 ## Relacionado
-[[02 Chequeo de los 12 temas]] · [[01 Qué leer para cada pregunta principal]]
-[[01 Qué leer para cada pregunta principal]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] ·
-[[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]] ·
-[[00 Índice de TPs y qué aporta cada uno]]
+[[02 Chequeo de los 12 temas]] · [[01 Qué leer para cada pregunta principal]] [[01 Qué leer para cada pregunta principal]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] · [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]] · [[00 Índice de TPs y qué aporta cada uno]]

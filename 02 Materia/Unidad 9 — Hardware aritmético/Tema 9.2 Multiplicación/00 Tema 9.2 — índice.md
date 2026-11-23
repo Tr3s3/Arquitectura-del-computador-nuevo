@@ -6,8 +6,7 @@ tema: "9.2"
 # Tema 9.2 — Multiplicación
 
 > [!abstract] Qué se estudia acá
-> La multiplicación como **sumas y desplazamientos** (secuencial, `n` ciclos), el **algoritmo de Booth** (para
-> operandos **con signo**, sin separar el signo) y el **multiplicador de arreglo** (combinacional, `n²` celdas).
+> La multiplicación como **sumas y desplazamientos** (secuencial, `n` ciclos), el **algoritmo de Booth** (para operandos **con signo**, sin separar el signo) y el **multiplicador de arreglo** (combinacional, `n²` celdas).
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -16,9 +15,7 @@ tema: "9.2"
 | **9.2.3** Arreglo multiplicador | el extremo rápido y caro | [[9.2.3 Arreglo multiplicador]] |
 
 > [!important] La comparación
-> **Sumas y desplazamientos:** `n` ciclos, 1 sumador. **Booth:** menos sumas cuando hay rachas de 1. **Arreglo:**
-> sin ciclos, `n²` celdas.
+> **Sumas y desplazamientos:** `n` ciclos, 1 sumador. **Booth:** menos sumas cuando hay rachas de 1. **Arreglo:** sin ciclos, `n²` celdas.
 
 ## Relacionado
-[[00 Unidad 9 — temas y subtemas]] · [[00 Tema 9.1 — índice]] · [[00 Tema 9.3 — índice]] ·
-[[Hardware aritmético (resumen)]]
+[[00 Unidad 9 — temas y subtemas]] · [[00 Tema 9.1 — índice]] · [[00 Tema 9.3 — índice]] · [[Hardware aritmético (resumen)]]

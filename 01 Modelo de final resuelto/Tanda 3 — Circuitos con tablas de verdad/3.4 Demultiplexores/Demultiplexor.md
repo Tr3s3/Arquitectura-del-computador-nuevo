@@ -7,23 +7,15 @@ prioridad: maxima
 # Demultiplexor (DEMUX)
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.4 Demultiplexores]].
-
+> **En otra tanda o unidad:** [[Decodificador]] (Tanda 3 · 3.1 Decodificadores) · [[Compuertas lógicas]] (Tanda 3 · 3.0 Herramientas (Karnaugh y compuertas)) · [[Memoria RAM 8x3]] (Tanda 1 · 1.4 Memoria RAM 8x3) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.4 Demultiplexores]].
 
 > [!abstract] En una frase
-> Un **demultiplexor de 1 a 2ⁿ** recibe **un dato** y **n líneas de selección**, y **envía el dato a una sola**
-> de sus **2ⁿ salidas** (las demás quedan en 0): `Yi = D · mi`. Es, literalmente, **un decodificador con el dato
-> como habilitación**.
+> Un **demultiplexor de 1 a 2ⁿ** recibe **un dato** y **n líneas de selección**, y **envía el dato a una sola** de sus **2ⁿ salidas** (las demás quedan en 0): `Yi = D · mi`. Es, literalmente, **un decodificador con el dato como habilitación**.
 
 > [!note] Si es la primera vez que ves esto
-> Es la **cañería con una llave de derivación**: entra agua por un caño (el dato) y, según cómo gires la palanca
-> (la selección), el agua sale por **una** de las cuatro bocas; las otras tres quedan secas.
+> Es la **cañería con una llave de derivación**: entra agua por un caño (el dato) y, según cómo gires la palanca (la selección), el agua sale por **una** de las cuatro bocas; las otras tres quedan secas.
 >
-> Es el **repartidor** del sistema: el dato llega a la entrada y el DEMUX decide **a qué destino va**. En un bus,
-> el MUX elige **quién habla** y el DEMUX (o el decodificador de escritura) decide **quién escucha**. Juntos son
-> el modelo del **bus común** de la BLUE. Y tiene un uso muy concreto en memoria: escribir en **una** celda o en
-> **un chip** de los varios que comparten el bus de datos.
+> Es el **repartidor** del sistema: el dato llega a la entrada y el DEMUX decide **a qué destino va**. En un bus, el MUX elige **quién habla** y el DEMUX (o el decodificador de escritura) decide **quién escucha**. Juntos son el modelo del **bus común** de la BLUE. Y tiene un uso muy concreto en memoria: escribir en **una** celda o en **un chip** de los varios que comparten el bus de datos.
 
 ---
 
@@ -36,8 +28,7 @@ prioridad: maxima
 | 1 | 0 | **1** | 0 |
 | 1 | 1 | 0 | **1** |
 
-**Funciones:** `Y0 = D · S'`  ·  `Y1 = D · S`
-**Circuito:** 1 NOT (para `S'`) + 2 AND de 2 entradas.
+**Funciones:** `Y0 = D · S'`  ·  `Y1 = D · S` **Circuito:** 1 NOT (para `S'`) + 2 AND de 2 entradas.
 
 ---
 
@@ -58,15 +49,12 @@ prioridad: maxima
 ```
 O sea: **`Yi = D · mi`** — el dato multiplicado por el mintérmino de la selección.
 
-**Circuito: 2 inversores + 4 AND de 3 entradas** (las 2 selecciones + el dato). ¡Idéntico al decodificador 2→4,
-con el dato agregado a cada AND!
+**Circuito: 2 inversores + 4 AND de 3 entradas** (las 2 selecciones + el dato). ¡Idéntico al decodificador 2→4, con el dato agregado a cada AND!
 
 ![Demultiplexor 1 a 4](../../../assets/demux_1x4.svg)
 
 > [!important] La relación que hay que decir
-> **DEMUX = decodificador con EN = dato.** Si al 74LS138 (decodificador 3→8) le conectás el dato en la entrada
-> de *enable*, obtenés un demultiplexor 1→8. Por eso en los apuntes y en los TPs los dos bloques aparecen juntos:
-> **es el mismo circuito visto de dos maneras**.
+> **DEMUX = decodificador con EN = dato.** Si al 74LS138 (decodificador 3→8) le conectás el dato en la entrada de *enable*, obtenés un demultiplexor 1→8. Por eso en los apuntes y en los TPs los dos bloques aparecen juntos: **es el mismo circuito visto de dos maneras**.
 
 ---
 
@@ -102,10 +90,7 @@ con el dato agregado a cada AND!
 | **Serial → paralelo** | el mismo dato entra y se va depositando en distintas salidas (el inverso de multiplexar) |
 
 > [!example] En la BLUE, con nombres propios
-> En CP1 se activa `PC → MAR` y `Read`; en CP5, `strobe MBR`; en CP8, `E → State`. Ese "dirigir el dato a un
-> destino distinto en cada pulso" es exactamente lo que hace un **demultiplexor**, aunque en el circuito se
-> implemente con **buffers de 3 estados + decodificador**. Ver
-> [[Flujo de información en BLUE (datos y direcciones)]] y [[Cómo se implementa la Unidad de Control]].
+> En CP1 se activa `PC → MAR` y `Read`; en CP5, `strobe MBR`; en CP8, `E → State`. Ese "dirigir el dato a un destino distinto en cada pulso" es exactamente lo que hace un **demultiplexor**, aunque en el circuito se implemente con **buffers de 3 estados + decodificador**. Ver [[Flujo de información en BLUE (datos y direcciones)]] y [[Cómo se implementa la Unidad de Control]].
 
 ---
 
@@ -128,18 +113,16 @@ con el dato agregado a cada AND!
 
 **Movimiento 1 — definición (20 s).** "Un dato, n selecciones, 2ⁿ salidas; el dato va a una sola salida."
 
-**Movimiento 2 — tabla y funciones (60 s).** Tabla del **1→4** (filtrando por `D`) y las cuatro funciones
-`Yi = D·S1'·S0'`, etc.
+**Movimiento 2 — tabla y funciones (60 s).** Tabla del **1→4** (filtrando por `D`) y las cuatro funciones `Yi = D·S1'·S0'`, etc.
 
-**Movimiento 3 — el circuito y la clave (60 s).** 2 inversores + 4 AND de 3 entradas, y la frase que lo cierra:
-**"es un decodificador con EN = dato"**.
+**Movimiento 3 — el circuito y la clave (60 s).** 2 inversores + 4 AND de 3 entradas, y la frase que lo cierra: **"es un decodificador con EN = dato"**.
 
 **Movimiento 4 — comparación (40 s).** Cuadro decodificador / MUX / DEMUX: señala, elige, reparte.
 
-**Movimiento 5 — cierre (20 s).** "Se usa para **rutear**: elegir el chip de memoria a escribir, el registro
-destino, o repartir el dato por el bus."
+**Movimiento 5 — cierre (20 s).** "Se usa para **rutear**: elegir el chip de memoria a escribir, el registro destino, o repartir el dato por el bus."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuántas entradas de selección para 8 salidas? | **3** |
@@ -153,10 +136,15 @@ destino, o repartir el dato por el bus."
 ---
 
 ## 8. Errores típicos
+
 - Confundir **demultiplexor** con **decodificador** (el DEMUX tiene el dato; el decodificador no).
+
 - Decir que reparte el dato a **varias** salidas a la vez (a **una** sola; las demás en 0).
+
 - Poner el dato como **entrada de selección**: el dato va **en serie con todos los AND**.
+
 - Confundir el sentido: **MUX = muchos a uno**, **DEMUX = uno a muchos**.
+
 - Olvidar el `EN` cuando se compara con el chip comercial.
 
 ---
@@ -175,5 +163,4 @@ destino, o repartir el dato por el bus."
 ---
 
 ## Relacionado
-[[Decodificador]] · [[Multiplexor]] · [[Codificador]] · [[Compuertas lógicas]] · [[Memoria RAM 8x3]] ·
-[[Flujo de información en BLUE (datos y direcciones)]]
+[[Decodificador]] · [[Multiplexor]] · [[Codificador]] · [[Compuertas lógicas]] · [[Memoria RAM 8x3]] · [[Flujo de información en BLUE (datos y direcciones)]]

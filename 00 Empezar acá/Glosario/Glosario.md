@@ -4,9 +4,7 @@ tipo: glosario
 # Glosario
 
 > [!abstract] Qué es esta nota
-> El glosario completo de la materia: **180 conceptos**, cada uno con una **ficha** que explica **qué es**, **para
-> qué sirve**, **cuáles son sus características** y **en qué subtema se estudia**. Acá está el **índice
-> alfabético** (cada concepto enlaza a su ficha); las fichas están en diez notas, una por unidad.
+> El glosario completo de la materia: **180 conceptos**, cada uno con una **ficha** que explica **qué es**, **para qué sirve**, **cuáles son sus características** y **en qué subtema se estudia**. Acá está el **índice alfabético** (cada concepto enlaza a su ficha); las fichas están en diez notas, una por unidad.
 
 > [!tip] Cómo usarlo
 > 1. **Si te trabaste con una palabra en el oral:** buscala acá (Ctrl+F) y hacé clic para ir a la ficha.

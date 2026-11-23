@@ -6,10 +6,7 @@ unidad: 8
 # Unidad 8 — Paralelismo
 
 > [!abstract] Qué es este archivo
-> **La Unidad 8 completa en un solo archivo**: los **9 subtemas** pegados uno detrás de otro,
-> con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **7.500 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
-> **imprimir**: no hace falta abrir ninguna otra nota.
+> **La Unidad 8 completa en un solo archivo**: los **9 subtemas** pegados uno detrás de otro, con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores típicos. Son **7.443 palabras** y **4 temas**. Está pensado para **leer de corrido** y para **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 8]].
 > - **Buscar un punto**: el índice de abajo o el de la unidad, [[00 Unidad 8 — temas y subtemas]].
@@ -21,20 +18,29 @@ unidad: 8
 ## Contenido
 
 **8.1 Pipeline aritmético**
+
 - [[#8.1.1 Etapas segmentadas y suma de vectores]]
+
 - [[#8.1.2 Encadenamiento y speedup]]
 
 **8.2 Procesamiento vectorial y SIMD**
+
 - [[#8.2.1 SIMD, registros vectoriales y GPU]]
+
 - [[#8.2.2 Flynn, arreglos SIMD y conectados]]
+
 - [[#8.2.3 Multiplicación de matrices]]
 
 **8.3 Memoria entrelazada**
+
 - [[#8.3.1 Bancos de memoria y ancho de banda]]
+
 - [[#8.3.2 Patrón de entrelazado y conflictos de banco]]
 
 **8.4 Multiprocesadores**
+
 - [[#8.4.1 Multicore, coherencia de caché y ley de Amdahl]]
+
 - [[#8.4.2 Monousuario vs multiusuario]]
 
 ---
@@ -44,13 +50,10 @@ unidad: 8
 ### 8.1.1 Etapas segmentadas y suma de vectores
 
 > [!abstract] En una frase
-> Un **pipeline aritmético** parte una operación larga (una suma en punto flotante, una multiplicación) en **k
-> etapas** con hardware propio, y acepta **un elemento nuevo por ciclo**: así `n` operaciones se hacen en
-> **`k + (n − 1)`** ciclos en lugar de `k·n`.
+> Un **pipeline aritmético** parte una operación larga (una suma en punto flotante, una multiplicación) en **k etapas** con hardware propio, y acepta **un elemento nuevo por ciclo**: así `n` operaciones se hacen en **`k + (n − 1)`** ciclos en lugar de `k·n`.
 
 > [!note] Si la primera vez que ves esto
-> Es la **línea de montaje** de una fábrica: el primer auto tarda 4 estaciones en salir, pero después **sale uno
-> por estación**. La primera operación no se hace más rápido; lo que cambia es el **ritmo**.
+> Es la **línea de montaje** de una fábrica: el primer auto tarda 4 estaciones en salir, pero después **sale uno por estación**. La primera operación no se hace más rápido; lo que cambia es el **ritmo**.
 
 #### Las 4 etapas de una suma en punto flotante
 
@@ -61,8 +64,7 @@ unidad: 8
 | **E3 · normalización** | corre la coma para que quede en 1,xxx | contar ceros, desplazar |
 | **E4 · redondeo** | ajusta el último bit y escribe el resultado | lógica de redondeo |
 
-Cada etapa tiene **su propio hardware**. Eso es lo que permite que trabajen a la vez: si dos etapas compartieran
-un bloque, no se podría solapar (**conflicto estructural**).
+Cada etapa tiene **su propio hardware**. Eso es lo que permite que trabajen a la vez: si dos etapas compartieran un bloque, no se podría solapar (**conflicto estructural**).
 
 ![Pipeline aritmético de 4 etapas con la suma de dos vectores](../../assets/pipeline_aritmetico.svg)
 
@@ -77,7 +79,9 @@ un bloque, no se podría solapar (**conflicto estructural**).
 | **C[4]** | | | | | E1 | E2 | E3 | E4 |
 
 - **C[0] sale en el ciclo 4** (igual que sin pipeline).
+
 - **C[4] sale en el ciclo 8**; en serie habría sido el ciclo **20**.
+
 - Desde el ciclo 4, **sale un resultado por ciclo**.
 
 #### La cuenta general
@@ -95,8 +99,7 @@ speedup:        S = k·n / (k + n − 1)     →  k  cuando n ≫ k
 | 8 | 100 | 800 | 107 | **7,48** |
 
 > [!important] El límite es `k`, no más
-> El speedup **tiende** a `k` (la cantidad de etapas) y nunca lo supera: en el límite, cada ciclo entrega **un**
-> elemento. Para ir más allá hay que **duplicar el pipeline** (superescalar) o **ensanchar** el vector (SIMD).
+> El speedup **tiende** a `k` (la cantidad de etapas) y nunca lo supera: en el límite, cada ciclo entrega **un** elemento. Para ir más allá hay que **duplicar el pipeline** (superescalar) o **ensanchar** el vector (SIMD).
 
 #### Diferencia con el pipeline de instrucciones
 
@@ -109,12 +112,14 @@ speedup:        S = k·n / (k + n − 1)     →  k  cuando n ≫ k
 | Clasificación de Flynn | **SIMD** | sigue siendo **SISD** (paralelismo temporal) |
 
 #### Ejemplo resuelto (el que se toma)
-> "Se suman dos vectores de 60 elementos en un pipeline aritmÉtico de 4 etapas que funciona a 200 MHz. ¿Cuánto
-> tarda y qué speedup se obtiene?"
+> "Se suman dos vectores de 60 elementos en un pipeline aritmÉtico de 4 etapas que funciona a 200 MHz. ¿Cuánto tarda y qué speedup se obtiene?"
 
 1. Ciclos con pipeline: `4 + (60 − 1) = 63`.
+
 2. Tiempo: `63 / 200 MHz = 63 × 5 ns = 315 ns`.
+
 3. Ciclos en serie: `4 × 60 = 240` ⇒ `240 × 5 ns = 1 200 ns`.
+
 4. `Speedup = 240 / 63 = 3,81` (cerca del máximo teórico, 4).
 
 **Verificación:** `3,81 < 4` ✔ y el tiempo baja al 26 % del original ✔.
@@ -137,20 +142,15 @@ speedup:        S = k·n / (k + n − 1)     →  k  cuando n ≫ k
 *Fig. 18.15 — Alternativas para la computación vectorial.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 729.
 
 #### Relacionado
-[[8.1.2 Encadenamiento y speedup]] · [[Pipeline]] · [[Paralelismo y procesamiento vectorial]] ·
-[[TP5 Sumadores]] · [[4.3.1 Ciclo de reloj, de máquina y de instrucción]] · [[Glosario — Unidad 8]]
+[[8.1.2 Encadenamiento y speedup]] · [[Pipeline]] · [[Paralelismo y procesamiento vectorial]] · [[TP5 Sumadores]] · [[4.3.1 Ciclo de reloj, de máquina y de instrucción]] · [[Glosario — Unidad 8]]
 
 ### 8.1.2 Encadenamiento y speedup
 
 > [!abstract] En una frase
-> El **encadenamiento** (*chaining*) conecta la **salida** de una etapa con la **entrada** de la siguiente operación
-> **sin pasar por los registros**: así una cadena de operaciones sobre vectores (`C = (A+B)·D`) avanza al ritmo de
-> la etapa más lenta, no al de la operación completa.
+> El **encadenamiento** (*chaining*) conecta la **salida** de una etapa con la **entrada** de la siguiente operación **sin pasar por los registros**: así una cadena de operaciones sobre vectores (`C = (A+B)·D`) avanza al ritmo de la etapa más lenta, no al de la operación completa.
 
 > [!note] Si la primera vez que ves esto
-> Sin encadenamiento, cada resultado espera a "guardarse en la caja" antes de que lo use la etapa siguiente. Con
-> encadenamiento, el resultado **sale por la ventana** y la etapa siguiente lo toma al vuelo, como en una cadena de
-> montaje donde el auto pasa directo al siguiente puesto.
+> Sin encadenamiento, cada resultado espera a "guardarse en la caja" antes de que lo use la etapa siguiente. Con encadenamiento, el resultado **sale por la ventana** y la etapa siguiente lo toma al vuelo, como en una cadena de montaje donde el auto pasa directo al siguiente puesto.
 
 #### Encadenar etapas
 
@@ -162,8 +162,7 @@ sin encadenamiento:   E1→E2→E3→E4 → [registro] → E1→E2→E3→E4
 con encadenamiento:   E1→E2→E3→E4 ─────────────► E1→E2→E3→E4
                                     (el dato sale de E4 y entra a E1 sin esperar)
 ```
-En un procesador vectorial, **cada etapa de una operación puede alimentar la etapa equivalente de la otra**:
-`A+B` en E4 pasa a la multiplicación en su E1 mientras los elementos siguientes siguen entrando.
+En un procesador vectorial, **cada etapa de una operación puede alimentar la etapa equivalente de la otra**: `A+B` en E4 pasa a la multiplicación en su E1 mientras los elementos siguientes siguen entrando.
 
 #### El speedup, con sus tres límites
 
@@ -176,6 +175,7 @@ En un procesador vectorial, **cada etapa de una operación puede alimentar la et
 ```
 S(n) = k·n / (k + n − 1)
 ```
+
 | n con k = 4 | S | Comentario |
 |---|---|---|
 | 4 | 2,29 | el llenado pesa tanto como el trabajo |
@@ -184,25 +184,20 @@ S(n) = k·n / (k + n − 1)
 | ∞ | **4** | techo |
 
 > [!important] La consecuencia práctica
-> Un pipeline aritmético **sólo vale la pena con vectores largos**. Por eso el procesamiento vectorial (8.2) usa
-> vectores de cientos o miles de elementos y "**strip mining**": cortar un vector enorme en bloques del ancho del
-> registro.
+> Un pipeline aritmético **sólo vale la pena con vectores largos**. Por eso el procesamiento vectorial (8.2) usa vectores de cientos o miles de elementos y "**strip mining**": cortar un vector enorme en bloques del ancho del registro.
 
 #### Ejemplo resuelto: `C[i] = (A[i] + B[i]) · D[i]`
-> Pipeline de 4 etapas para la suma y 4 para el producto, a 250 MHz (4 ns por ciclo), vector de 100 elementos.
-> ¿Cuánto tarda sin encadenamiento y con encadenamiento?
+> Pipeline de 4 etapas para la suma y 4 para el producto, a 250 MHz (4 ns por ciclo), vector de 100 elementos. ¿Cuánto tarda sin encadenamiento y con encadenamiento?
 
 | Caso | Qué pasa | Ciclos | Tiempo |
 |---|---|---|---|
 | **Sin encadenamiento** | el producto **no arranca** hasta que la suma terminó **todo** el vector | `(4+99) + (4+99) = 206` | `206 × 4 ns =` **824 ns** |
 | **Con encadenamiento** | el producto toma el primer resultado de la suma y avanza de a uno | `4 + 4 + (100−1) = 107` | `107 × 4 ns =` **428 ns** |
 
-`Speedup = 206 / 107 = 1,93` — casi el doble, **sin agregar hardware**: sólo dejando que el dato pase de una
-unidad a la otra sin esperar a que se escriba el registro.
+`Speedup = 206 / 107 = 1,93` — casi el doble, **sin agregar hardware**: sólo dejando que el dato pase de una unidad a la otra sin esperar a que se escriba el registro.
 
 > [!tip] La regla
-> Sin encadenamiento se paga **dos veces el llenado y dos veces el vaciado** del vector. Con encadenamiento se paga
-> **un llenado** (`k1 + k2 − 2` ciclos de arranque) y después un elemento por ciclo.
+> Sin encadenamiento se paga **dos veces el llenado y dos veces el vaciado** del vector. Con encadenamiento se paga **un llenado** (`k1 + k2 − 2` ciclos de arranque) y después un elemento por ciclo.
 
 #### Producto punto: el caso donde se ve
 ```
@@ -210,10 +205,13 @@ escalar:     AC ← 0 ;  para i: AC ← AC + A[i]·B[i]
 vectorial:   multiplicar el vector A por el B (pipeline de producto)
              y encadenar con el sumador de acumulación (árbol de suma)
 ```
+
 - Sin encadenamiento: cada `A[i]·B[i]` debe **terminar** para sumarse ⇒ 1 elemento cada 8 ciclos.
+
 - Con encadenamiento y **suma en árbol**: se suman 4 productos a la vez ⇒ 1 elemento cada ciclo o mejor.
 
 #### Cómo se relaciona con lo demás
+
 | Técnica | Qué agrega sobre el pipeline simple |
 |---|---|
 | **Encadenamiento** | solapa operaciones **distintas** sobre datos distintos |
@@ -235,21 +233,17 @@ vectorial:   multiplicar el vector A por el B (pipeline de producto)
 *Fig. 18.19 — Programas alternativos de computación vectorial.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 734.
 
 #### Relacionado
-[[8.1.1 Etapas segmentadas y suma de vectores]] · [[8.2.1 SIMD, registros vectoriales y GPU]] ·
-[[8.2.3 Multiplicación de matrices]] · [[Pipeline]] · [[Técnicas para aumentar la velocidad]] · [[Glosario — Unidad 8]]
+[[8.1.1 Etapas segmentadas y suma de vectores]] · [[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.2.3 Multiplicación de matrices]] · [[Pipeline]] · [[Técnicas para aumentar la velocidad]] · [[Glosario — Unidad 8]]
 
 ## 8.2 Procesamiento vectorial y SIMD
 
 ### 8.2.1 SIMD, registros vectoriales y GPU
 
 > [!abstract] En una frase
-> **SIMD** = *Single Instruction, Multiple Data*: **una instrucción** que opera sobre **muchos datos a la vez**.
-> Se implementa con **registros vectoriales** anchos (64 a 512 bits) y con muchas unidades de ejecución en
-> paralelo; es la base del procesamiento vectorial, de SSE/AVX y de las **GPU**.
+> **SIMD** = *Single Instruction, Multiple Data*: **una instrucción** que opera sobre **muchos datos a la vez**. Se implementa con **registros vectoriales** anchos (64 a 512 bits) y con muchas unidades de ejecución en paralelo; es la base del procesamiento vectorial, de SSE/AVX y de las **GPU**.
 
 > [!note] Si la primera vez que ves esto
-> En vez de decirle al pintor "pintá esta pared", "pintá esta otra", "pintá esta otra" (una instrucción por pared),
-> le das **un rodillo ancho** y dice "pintá estas cuatro a la vez". La orden es una; el trabajo, cuádruple.
+> En vez de decirle al pintor "pintá esta pared", "pintá esta otra", "pintá esta otra" (una instrucción por pared), le das **un rodillo ancho** y dice "pintá estas cuatro a la vez". La orden es una; el trabajo, cuádruple.
 
 #### Lanes en un registro
 
@@ -277,25 +271,23 @@ vectorial:  VADD C, A, B                             ← 1 instrucción, n opera
 | AVX-512 | 512 bits | 16 |
 | Vectorial clásico (Cray) | 64 × 64 bits | 64 (¡registros de 4 kbit!) |
 
-**Cuenta rápida:** un registro de **256 bits** con enteros de **32 bits** guarda `256 / 32 = 8` elementos ⇒ procesar
-un vector de **1 000** elementos pide `1000 / 8 = 125` instrucciones.
+**Cuenta rápida:** un registro de **256 bits** con enteros de **32 bits** guarda `256 / 32 = 8` elementos ⇒ procesar un vector de **1 000** elementos pide `1000 / 8 = 125` instrucciones.
 
 #### Las tres formas de implementarlo
+
 | Forma | Cómo | Costo |
 |---|---|---|
 | **Unidad vectorial segmentada** | un pipeline aritmético ancho que procesa el vector elemento por elemento (Cray) | hardware caro, muy eficiente con vectores largos |
 | **Extensiones SIMD del ISA** | registros anchos + una ALU por `lane` (SSE, AVX, NEON) | se agrega a una CPU normal |
 | **GPU** | miles de hilos SIMT, cada uno con su ALU, agrupados en *warps* de 32 | enorme throughput, mala latencia individual |
 
-**SIMT** (*Single Instruction, Multiple Threads*) es el SIMD de las GPU: el programador escribe **un** programa por
-hilo y el hardware ejecuta los 32 hilos del *warp* con la misma instrucción.
+**SIMT** (*Single Instruction, Multiple Threads*) es el SIMD de las GPU: el programador escribe **un** programa por hilo y el hardware ejecuta los 32 hilos del *warp* con la misma instrucción.
 
 > [!important] Por qué la GPU gana en lo suyo
-> No porque cada núcleo sea más rápido (son **más lentos** que un núcleo de CPU), sino porque hay **miles**. Sirve
-> para tareas **paralelas de datos**: píxeles, vértices, multiplicación de matrices, redes neuronales. Falla en
-> tareas con dependencias en cadena (un solo hilo que decide todo).
+> No porque cada núcleo sea más rápido (son **más lentos** que un núcleo de CPU), sino porque hay **miles**. Sirve para tareas **paralelas de datos**: píxeles, vértices, multiplicación de matrices, redes neuronales. Falla en tareas con dependencias en cadena (un solo hilo que decide todo).
 
 #### Lo que se gana y lo que no
+
 | Se gana | No se gana |
 |---|---|
 | Throughput: elementos por segundo | **latencia**: un elemento solo no va más rápido |
@@ -304,17 +296,14 @@ hilo y el hardware ejecuta los 32 hilos del *warp* con la misma instrucción.
 | Se aprovecha el pipeline aritmético | Datos no contiguos ⇒ hay que reordenarlos (`gather`/`scatter`) |
 
 #### Ejemplo resuelto
-> "Un procesador con AVX-512 (16 enteros de 32 bits por registro) suma dos vectores de 10 000 enteros. El `VADD`
-> tarda 1 ciclo y la frecuencia es 3 GHz. Comparar con el escalar (1 `ADD` por ciclo, más 2 ciclos de búsqueda por
-> instrucción)."
+> "Un procesador con AVX-512 (16 enteros de 32 bits por registro) suma dos vectores de 10 000 enteros. El `VADD` tarda 1 ciclo y la frecuencia es 3 GHz. Comparar con el escalar (1 `ADD` por ciclo, más 2 ciclos de búsqueda por instrucción)."
 
 | | Instrucciones | Ciclos | Tiempo |
 |---|---|---|---|
 | **Escalar** | 10 000 | `10 000 × (1 + 2) = 30 000` | `10 µs` |
 | **Vectorial** | `10 000 / 16 = 625` | `625 × (1 + 2) = 1 875` | `0,625 µs` |
 
-**Speedup ≈ 16×** — exactamente el ancho del registro, porque el trabajo por elemento es el mismo y la
-decodificación se amortiza.
+**Speedup ≈ 16×** — exactamente el ancho del registro, porque el trabajo por elemento es el mismo y la decodificación se amortiza.
 
 > [!warning] Errores típicos
 > - Decir que SIMD **baja la latencia**: baja el **tiempo total** (throughput).
@@ -324,19 +313,15 @@ decodificación se amortiza.
 > - Confundir SIMD (una instrucción, muchos datos) con el pipeline aritmético (mismo dato fluyendo por etapas).
 
 #### Relacionado
-[[8.2.2 Flynn, arreglos SIMD y conectados]] · [[8.2.3 Multiplicación de matrices]] ·
-[[8.1.1 Etapas segmentadas y suma de vectores]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
+[[8.2.2 Flynn, arreglos SIMD y conectados]] · [[8.2.3 Multiplicación de matrices]] · [[8.1.1 Etapas segmentadas y suma de vectores]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
 
 ### 8.2.2 Flynn, arreglos SIMD y conectados
 
 > [!abstract] En una frase
-> Flynn clasifica las arquitecturas por **cuántos flujos de instrucciones** y **cuántos flujos de datos** tienen
-> (SISD, SIMD, MISD, MIMD); dentro del SIMD, un **arreglo de procesadores** pone **un PE por dato** y, si además los
-> PE están **interconectados**, se convierte en un **arreglo conectado**.
+> Flynn clasifica las arquitecturas por **cuántos flujos de instrucciones** y **cuántos flujos de datos** tienen (SISD, SIMD, MISD, MIMD); dentro del SIMD, un **arreglo de procesadores** pone **un PE por dato** y, si además los PE están **interconectados**, se convierte en un **arreglo conectado**.
 
 > [!note] Si la primera vez que ves esto
-> Un **arreglo SIMD** es un aula donde todos los alumnos (PE) hacen **la misma consigna** con **su propia** hoja.
-> Un **arreglo conectado** es la misma aula, pero además los alumnos **se pasan papelitos** entre bancos vecinos.
+> Un **arreglo SIMD** es un aula donde todos los alumnos (PE) hacen **la misma consigna** con **su propia** hoja. Un **arreglo conectado** es la misma aula, pero además los alumnos **se pasan papelitos** entre bancos vecinos.
 
 #### La clasificación de Flynn
 
@@ -350,9 +335,7 @@ decodificación se amortiza.
 | **MIMD** | muchas | muchos | multicore, multiprocesadores, clústeres | 8.4 |
 
 > [!important] El pipeline no está en Flynn
-> El pipeline de instrucciones es paralelismo **temporal dentro de un flujo**: sigue siendo **SISD**. Metros de
-> gente lo responde como "MIMD" porque "hace varias cosas a la vez"; **no**: hay una sola instrucción por ciclo
-> saliendo por el cauce, no muchas.
+> El pipeline de instrucciones es paralelismo **temporal dentro de un flujo**: sigue siendo **SISD**. Metros de gente lo responde como "MIMD" porque "hace varias cosas a la vez"; **no**: hay una sola instrucción por ciclo saliendo por el cauce, no muchas.
 
 #### Arreglo SIMD (sin conexión)
 ```
@@ -364,8 +347,11 @@ decodificación se amortiza.
       └─────┘      └─────┘      └─────┘      └─────┘      └─────┘
        dato 0       dato 1       dato 2       dato 3       dato n
 ```
+
 - **Un PE** (*processing element*) = una ALU chica + su memoria local.
+
 - Todos reciben **la misma instrucción** y trabajan sobre **su** dato.
+
 - **Ejemplo típico:** procesar los píxeles de una imagen (un PE por píxel), aplicar un filtro, umbralizar.
 
 #### Arreglo conectado (con red de interconexión)
@@ -386,10 +372,10 @@ decodificación se amortiza.
 | **Procesamiento de imágenes** (convolución) | cada píxel se calcula con su entorno 3×3 |
 
 > [!important] La diferencia que se pregunta
-> **Arreglo SIMD** = mismos datos distintos, **sin** comunicación. **Arreglo conectado** = lo mismo **+ red** entre
-> PE. La red es lo que permite resolver problemas con **dependencia espacial**.
+> **Arreglo SIMD** = mismos datos distintos, **sin** comunicación. **Arreglo conectado** = lo mismo **+ red** entre PE. La red es lo que permite resolver problemas con **dependencia espacial**.
 
 #### El problema del arreglo: el tamaño
+
 | Situación | Qué se hace |
 |---|---|
 | El problema es **más chico** que el arreglo | se apagan PE (desperdicio) |
@@ -407,8 +393,7 @@ decodificación se amortiza.
 | Se mide con | tiempo de respuesta | trabajos por unidad de tiempo |
 | Ejemplo | Ryzen de 8 núcleos | clúster, mainframe, granja de servidores |
 
-**La misma idea de SIMD aplica distinto:** en un PC sirve para acelerar **un** programa (juegos, video); en un
-servidor, para atender **muchos** usuarios a la vez.
+**La misma idea de SIMD aplica distinto:** en un PC sirve para acelerar **un** programa (juegos, video); en un servidor, para atender **muchos** usuarios a la vez.
 
 > [!warning] Errores típicos
 > - Confundir SIMD con MIMD (una instrucción vs muchas).
@@ -418,10 +403,7 @@ servidor, para atender **muchos** usuarios a la vez.
 > - Olvidar que MISD casi no existe.
 
 > [!example] Flynn con ejemplos
-> **SISD**: la BLUE (una instrucción, un dato). **SIMD**: una GPU sumando un vector (una instrucción, 32 datos).
-> **MISD**: casi no existe (aviónica redundante). **MIMD**: un multicore o un cluster (cada núcleo con su
-> instrucción y su dato). Para clasificar cualquier máquina alcanza con contar **cuántas instrucciones** y
-> **cuántos datos** procesa por vez.
+> **SISD**: la BLUE (una instrucción, un dato). **SIMD**: una GPU sumando un vector (una instrucción, 32 datos). **MISD**: casi no existe (aviónica redundante). **MIMD**: un multicore o un cluster (cada núcleo con su instrucción y su dato). Para clasificar cualquier máquina alcanza con contar **cuántas instrucciones** y **cuántos datos** procesa por vez.
 
 #### Figura del libro
 
@@ -433,18 +415,15 @@ servidor, para atender **muchos** usuarios a la vez.
 > Varios procesadores, una memoria principal y una red de interconexión común: es la clase **MIMD** con acoplamiento fuerte (memoria compartida). En un cluster la memoria no se comparte y la red es externa.
 
 #### Relacionado
-[[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.2.3 Multiplicación de matrices]] · [[8.4.2 Monousuario vs multiusuario]] ·
-[[Paralelismo y procesamiento vectorial]] · [[CISC y RISC]] · [[Glosario — Unidad 8]]
+[[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.2.3 Multiplicación de matrices]] · [[8.4.2 Monousuario vs multiusuario]] · [[Paralelismo y procesamiento vectorial]] · [[CISC y RISC]] · [[Glosario — Unidad 8]]
 
 ### 8.2.3 Multiplicación de matrices
 
 > [!abstract] En una frase
-> `C = A · B` con matrices de `n × n` necesita **`n³`** multiplicaciones y **`n³`** sumas; el procesamiento
-> vectorial ataca el **lazo interno** (producto punto) y por eso es **el** benchmark clásico del paralelismo.
+> `C = A · B` con matrices de `n × n` necesita **`n³`** multiplicaciones y **`n³`** sumas; el procesamiento vectorial ataca el **lazo interno** (producto punto) y por eso es **el** benchmark clásico del paralelismo.
 
 > [!note] Si la primera vez que ves esto
-> Cada elemento de `C` es el **producto punto** de una fila de `A` con una columna de `B`: multiplicar de a pares y
-> sumar todo. Ese "multiplicar de a pares y sumar" es justo lo que el hardware vectorial hace en un ciclo.
+> Cada elemento de `C` es el **producto punto** de una fila de `A` con una columna de `B`: multiplicar de a pares y sumar todo. Ese "multiplicar de a pares y sumar" es justo lo que el hardware vectorial hace en un ciclo.
 
 #### Matrices con SIMD
 
@@ -467,13 +446,10 @@ escalar (3 lazos anidados):
 | **Vectorial** (producto punto vectorial) | el lazo **interno** `k` se hace de a `w` elementos | ≈ `w` (ancho del registro) |
 | **Vectorial + encadenamiento + bloqueo** | además se encadena `mult` con `suma` y se corta la matriz en bloques que entran en los registros | hasta `w` con mejor uso del pipeline |
 
-**Bloqueo (*blocking*):** en lugar de recorrer `k` de 1 en 1, se toman bloques de `w` (el ancho vectorial) para que
-cada dato traído de memoria se use `w` veces.
+**Bloqueo (*blocking*):** en lugar de recorrer `k` de 1 en 1, se toman bloques de `w` (el ancho vectorial) para que cada dato traído de memoria se use `w` veces.
 
 > [!important] El cuello de botella real: la memoria
-> La cuenta dice `n³` operaciones, pero la **memoria** es lo que manda: para `n = 1000` haría falta mover del orden
-> de **cientos de MB** por cada pasada si se recorre mal. Por eso se combina con **memoria entrelazada** (8.3) y con
-> **caché** (reutilizar bloques). Sin eso, el pipeline se queda esperando datos.
+> La cuenta dice `n³` operaciones, pero la **memoria** es lo que manda: para `n = 1000` haría falta mover del orden de **cientos de MB** por cada pasada si se recorre mal. Por eso se combina con **memoria entrelazada** (8.3) y con **caché** (reutilizar bloques). Sin eso, el pipeline se queda esperando datos.
 
 #### Ejemplo resuelto 2 × 2 (a mano, para el pizarrón)
 ```
@@ -488,9 +464,7 @@ C[1][1] = 3·6 + 4·8 = 18 + 32 = 50
 C = ┌ 19 22 ┐
     └ 43 50 ┘
 ```
-**Verificación con la traza:** `tr(C) = 69` y `tr(A)·tr(B) = 5 × 13 = 65`; no tienen por qué coincidir (el
-producto de trazas no es la traza del producto) ⇒ **no** sirve como control. El control correcto es **recalcular
-un elemento** por la definición: `C[1][1] = 43` ✔.
+**Verificación con la traza:** `tr(C) = 69` y `tr(A)·tr(B) = 5 × 13 = 65`; no tienen por qué coincidir (el producto de trazas no es la traza del producto) ⇒ **no** sirve como control. El control correcto es **recalcular un elemento** por la definición: `C[1][1] = 43` ✔.
 
 #### Cuánto cuesta
 
@@ -500,12 +474,14 @@ un elemento** por la definición: `C[1][1] = 43` ✔.
 | 100 | 1 000 000 | 125 000 | ~250 000 |
 | 1 000 | 1 000 000 000 | 125 000 000 | — |
 
-**Comparación de tiempo (n = 100, 1 ciclo por operación vectorial a 3 GHz):** `125 000 / 3·10⁹ ≈ 42 µs` contra
-`1 000 000 / 3·10⁹ ≈ 333 µs` del escalar ⇒ **8×** (el ancho del registro).
+**Comparación de tiempo (n = 100, 1 ciclo por operación vectorial a 3 GHz):** `125 000 / 3·10⁹ ≈ 42 µs` contra `1 000 000 / 3·10⁹ ≈ 333 µs` del escalar ⇒ **8×** (el ancho del registro).
 
 #### Por qué es *el* benchmark
+
 - Es **regular**: mismo trabajo para todos los elementos (SIMD lo ama).
+
 - Es **paralelizable** por filas: cada fila de `C` es independiente ⇒ se reparte entre núcleos (MIMD).
+
 - Mide **cómputo + memoria + red** a la vez ⇒ **LINPACK** y el ranking **TOP500** se basan en esto.
 
 > [!warning] Errores típicos
@@ -516,22 +492,17 @@ un elemento** por la definición: `C[1][1] = 43` ✔.
 >   amigable (**por eso las bibliotecas reales transponen**).
 
 #### Relacionado
-[[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.3.1 Bancos de memoria y ancho de banda]] ·
-[[8.1.2 Encadenamiento y speedup]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
+[[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.3.1 Bancos de memoria y ancho de banda]] · [[8.1.2 Encadenamiento y speedup]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
 
 ## 8.3 Memoria entrelazada
 
 ### 8.3.1 Bancos de memoria y ancho de banda
 
 > [!abstract] En una frase
-> La **memoria entrelazada** divide la memoria en **bancos independientes** que atienden accesos **al mismo
-> tiempo**; si las direcciones consecutivas caen en bancos distintos, el **ancho de banda se multiplica por la
-> cantidad de bancos** sin que baje el tiempo de acceso de cada palabra.
+> La **memoria entrelazada** divide la memoria en **bancos independientes** que atienden accesos **al mismo tiempo**; si las direcciones consecutivas caen en bancos distintos, el **ancho de banda se multiplica por la cantidad de bancos** sin que baje el tiempo de acceso de cada palabra.
 
 > [!note] Si la primera vez que ves esto
-> Un supermercado con **una** caja: cada cliente espera lo mismo. Con **cuatro** cajas y la gente repartida, en el
-> tiempo de una atención salen cuatro clientes. El tiempo **de cada** cliente no cambió; la **cantidad por hora**,
-> sí. Eso es ancho de banda.
+> Un supermercado con **una** caja: cada cliente espera lo mismo. Con **cuatro** cajas y la gente repartida, en el tiempo de una atención salen cuatro clientes. El tiempo **de cada** cliente no cambió; la **cantidad por hora**, sí. Eso es ancho de banda.
 
 #### El esquema
 
@@ -546,8 +517,7 @@ dir 2 → banco 2        dir 6 → banco 2
 dir 3 → banco 3        dir 7 → banco 3
 ```
 
-Cada banco tiene **su propio** decodificador y su propio registro de datos: se accede a los cuatro **en el mismo
-ciclo**.
+Cada banco tiene **su propio** decodificador y su propio registro de datos: se accede a los cuatro **en el mismo ciclo**.
 
 #### Tiempo de acceso vs ancho de banda
 
@@ -572,6 +542,7 @@ ancho de banda = (nº de bancos × bytes por palabra) / tiempo de ciclo
 **Verificación:** `4 × 8 = 32 B` por ciclo de 10 ns ⇒ `32 / 10·10⁻⁹ = 3,2·10⁹ B/s` ✔
 
 #### Para qué sirve en la práctica
+
 | Consumidor | Por qué lo necesita |
 |---|---|
 | **Procesador vectorial** | pide **un elemento por ciclo**: sin bancos, se queda esperando |
@@ -581,18 +552,22 @@ ancho de banda = (nº de bancos × bytes por palabra) / tiempo de ciclo
 | **DRAM moderna** | los *channels* y los *banks* internos del chip son exactamente esto |
 
 #### Las dos formas de repartir
+
 | Forma | Cómo | Cuándo conviene |
 |---|---|---|
 | **Entrelazado por bits bajos** (*low-order*) | `banco = dirección mod n` (los bits bajos eligen el banco) | accesos **consecutivos** (vectores, código) |
 | **Entrelazado por bits altos** (*high-order*) | los bits altos eligen el banco (cada banco es un rango contiguo) | varios **procesos** trabajando en zonas distintas |
 
-El caso normal en un procesador vectorial es el **low-order**: es el que hace que `A[0], A[1], A[2], A[3]` estén en
-cuatro bancos distintos.
+El caso normal en un procesador vectorial es el **low-order**: es el que hace que `A[0], A[1], A[2], A[3]` estén en cuatro bancos distintos.
 
 #### Lo que hay que decir junto a esto
+
 1. **El entrelazado no reduce la latencia**: sólo mejora el caudal.
+
 2. **Necesita accesos independientes**: si el programa pide la misma dirección, no hay paralelismo que valga.
+
 3. **Se combina con la caché**: la caché evita el acceso; el entrelazado hace que, cuando hay que ir, vaya rápido.
+
 4. **Cuesta hardware**: más decodificadores, más buses, más pines.
 
 > [!warning] Errores típicos
@@ -611,19 +586,15 @@ cuatro bancos distintos.
 > Cada chip aporta una parte del dato y todos se direccionan a la vez: así se arma el **ancho** de la memoria. El ancho de banda sube con la cantidad de bancos que pueden trabajar en paralelo.
 
 #### Relacionado
-[[8.3.2 Patrón de entrelazado y conflictos de banco]] · [[2.3.3 Matriz, expansión y RAM 8x3]] ·
-[[2.5.3 AMAT y cálculo de mejora]] · [[Jerarquía de memorias]] · [[Técnicas para aumentar la velocidad]] · [[Glosario — Unidad 8]]
+[[8.3.2 Patrón de entrelazado y conflictos de banco]] · [[2.3.3 Matriz, expansión y RAM 8x3]] · [[2.5.3 AMAT y cálculo de mejora]] · [[Jerarquía de memorias]] · [[Técnicas para aumentar la velocidad]] · [[Glosario — Unidad 8]]
 
 ### 8.3.2 Patrón de entrelazado y conflictos de banco
 
 > [!abstract] En una frase
-> El entrelazado sólo da ganancia si los accesos **caen en bancos distintos**: cuando el **paso** (*stride*) es
-> **múltiplo del número de bancos**, todas las direcciones van al **mismo banco** ⇒ **conflicto de banco** y la
-> ganancia desaparece.
+> El entrelazado sólo da ganancia si los accesos **caen en bancos distintos**: cuando el **paso** (*stride*) es **múltiplo del número de bancos**, todas las direcciones van al **mismo banco** ⇒ **conflicto de banco** y la ganancia desaparece.
 
 > [!note] Si la primera vez que ves esto
-> Cuatro cajas y todos los clientes con el número de ticket par: van **todos a la misma caja**. La culpa no es del
-> supermercado, es del **patrón** de llegada. Acá pasa igual: la culpa es del paso del lazo.
+> Cuatro cajas y todos los clientes con el número de ticket par: van **todos a la misma caja**. La culpa no es del supermercado, es del **patrón** de llegada. Acá pasa igual: la culpa es del paso del lazo.
 
 #### Módulo bancos
 
@@ -640,17 +611,17 @@ cuatro bancos distintos.
 | **3** | 0, 3, 6, 9 | 0, 3, 2, 1 | 4 en paralelo ✔ (3 y 4 son coprimos) |
 
 > [!important] La regla
-> Con `B` bancos, hay conflicto si `stride` y `B` **comparten divisores**. Lo ideal: `stride` **coprimo** con `B`
-> (por ejemplo `B` primo o impar).
+> Con `B` bancos, hay conflicto si `stride` y `B` **comparten divisores**. Lo ideal: `stride` **coprimo** con `B` (por ejemplo `B` primo o impar).
 
 #### Dónde aparece en la práctica (el caso de la matriz)
 Recorrer una matriz `n × n` guardada **por filas**:
 ```
 A[i][j]  está en la dirección  i·n + j
 ```
+
 - Recorrer **por filas** (lazo `j` interno): `stride = 1` ⇒ **sin conflicto**.
-- Recorrer **por columnas** (lazo `i` interno): `stride = n`. Si `n = 4` y hay 4 bancos ⇒ `stride = 4` ⇒
-  **conflicto total**.
+
+- Recorrer **por columnas** (lazo `i` interno): `stride = n`. Si `n = 4` y hay 4 bancos ⇒ `stride = 4` ⇒ **conflicto total**.
 
 | Recorrido | `stride` | Con 4 bancos |
 |---|---|---|
@@ -658,19 +629,21 @@ A[i][j]  está en la dirección  i·n + j
 | por columnas, `n = 4` | 4 | **1 acceso/ciclo** (4× más lento) |
 | por columnas, `n = 5` | 5 | 4 accesos/ciclo (5 y 4 coprimos) |
 
-**La solución clásica:** **transponer** `B` (o recorrer por filas) para que el lazo interno tenga `stride = 1`, o
-**rellenar** la matriz (`padding`) con una columna para que `n` deje de ser múltiplo de los bancos.
+**La solución clásica:** **transponer** `B` (o recorrer por filas) para que el lazo interno tenga `stride = 1`, o **rellenar** la matriz (`padding`) con una columna para que `n` deje de ser múltiplo de los bancos.
 
 > [!example] Ejemplo resuelto
-> "Un procesador con 4 bancos recorre una matriz de 100 × 100 por columnas. ¿Cuánto pierde respecto del recorrido
-> por filas?"
+> "Un procesador con 4 bancos recorre una matriz de 100 × 100 por columnas. ¿Cuánto pierde respecto del recorrido por filas?"
 
 1. Por filas: `stride = 1`, 4 palabras por ciclo ⇒ `10 000 / 4 = 2 500` ciclos.
+
 2. Por columnas: `stride = 100`, y `100 mod 4 = 0` ⇒ **todas** al mismo banco ⇒ `10 000` ciclos.
+
 3. Pérdida: `10 000 / 2 500 =` **4× más lento**.
+
 4. Arreglo: transponer `B` (o `padding` a 101 columnas, `101 mod 4 = 1` ⇒ sin conflicto).
 
 #### El entrelazado en la memoria real
+
 | Nivel | Cómo se ve |
 |---|---|
 | **Bancos del chip** | la DRAM tiene 4-16 *banks* por chip y los abre en paralelo |
@@ -694,22 +667,17 @@ A[i][j]  está en la dirección  i·n + j
 > Es entrelazado llevado al extremo: los canales se reparten las direcciones y transmiten a la vez. El patrón de acceso decide si el paralelismo se aprovecha o si todos los pedidos caen en el mismo canal (conflicto).
 
 #### Relacionado
-[[8.3.1 Bancos de memoria y ancho de banda]] · [[8.2.3 Multiplicación de matrices]] · [[2.5.2 Caché: mapeos y políticas]] ·
-[[Jerarquía de memorias]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
+[[8.3.1 Bancos de memoria y ancho de banda]] · [[8.2.3 Multiplicación de matrices]] · [[2.5.2 Caché: mapeos y políticas]] · [[Jerarquía de memorias]] · [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[Glosario — Unidad 8]]
 
 ## 8.4 Multiprocesadores
 
 ### 8.4.1 Multicore, coherencia de caché y ley de Amdahl
 
 > [!abstract] En una frase
-> Un **multiprocesador** pone varios núcleos a trabajar sobre el mismo problema, pero aparece un problema nuevo
-> (**coherencia de caché**: cada núcleo tiene su copia) y un techo matemático (**ley de Amdahl**: la parte
-> secuencial no se paraleliza).
+> Un **multiprocesador** pone varios núcleos a trabajar sobre el mismo problema, pero aparece un problema nuevo (**coherencia de caché**: cada núcleo tiene su copia) y un techo matemático (**ley de Amdahl**: la parte secuencial no se paraleliza).
 
 > [!note] Si la primera vez que ves esto
-> Diez personas pintando una pared: van 10 veces más rápido **si** cada uno tiene su franja y no se pisan. Si hay
-> que preparar la pintura entre todos y esperar a uno solo para decidir el color, esa parte **no** se acelera, y
-> por más gente que pongas el trabajo tarda lo mismo en esa parte.
+> Diez personas pintando una pared: van 10 veces más rápido **si** cada uno tiene su franja y no se pisan. Si hay que preparar la pintura entre todos y esperar a uno solo para decidir el color, esa parte **no** se acelera, y por más gente que pongas el trabajo tarda lo mismo en esa parte.
 
 #### La curva de Amdahl
 
@@ -723,8 +691,7 @@ A[i][j]  está en la dirección  i·n + j
 | **Multiprocesador simétrico (SMP)** | compartida | bus o red de interconexión | servidores de 2-4 sockets |
 | **Clúster / NUMA** | **distribuida** (cada nodo la suya) | red (mensajes) | supercomputadoras, granjas |
 
-**UMA** (*Uniform Memory Access*): todos tardan lo mismo en llegar a la memoria (multicore chico).
-**NUMA**: la memoria local es más rápida que la remota (varios sockets).
+**UMA** (*Uniform Memory Access*): todos tardan lo mismo en llegar a la memoria (multicore chico). **NUMA**: la memoria local es más rápida que la remota (varios sockets).
 
 #### El problema: coherencia de caché
 
@@ -742,19 +709,16 @@ núcleo 1 escribe X = 9  ⇒  su L1 dice 9, la de 2 sigue diciendo 5  ⇒  ¡INC
 | **Directorio** | una tabla central dice quién tiene copia de cada bloque (para muchos núcleos) |
 | **MESI** | cada línea está en un estado: **M**odificada, **E**xclusiva, **S**hared, **I**nvalid |
 
-**En MESI:** para escribir una línea compartida, el núcleo debe **invalidar** las copias de los demás (o
-actualizarlas) antes de escribir. Eso cuesta tiempo ⇒ es la razón por la que muchos hilos escribiendo **la misma**
-variable escalan mal.
+**En MESI:** para escribir una línea compartida, el núcleo debe **invalidar** las copias de los demás (o actualizarlas) antes de escribir. Eso cuesta tiempo ⇒ es la razón por la que muchos hilos escribiendo **la misma** variable escalan mal.
 
 > [!important] Falso compartido (*false sharing*)
-> Dos hilos escriben **variables distintas** que caen en la **misma línea de caché** (64 B): el protocolo invalida
-> igual, aunque no haya dato compartido. Se arregla **separando** (`padding`) las variables. Es un error de
-> rendimiento clásico y muy preguntable.
+> Dos hilos escriben **variables distintas** que caen en la **misma línea de caché** (64 B): el protocolo invalida igual, aunque no haya dato compartido. Se arregla **separando** (`padding`) las variables. Es un error de rendimiento clásico y muy preguntable.
 
 #### La ley de Amdahl
 ```
 S(n) = 1 / ((1 − f) + f/n)          f = fracción paralelizable · n = nº de procesadores
 ```
+
 | f | n = 4 | n = 8 | n = 16 | n → ∞ |
 |---|---|---|---|---|
 | 0,50 | 1,60 | 1,78 | 1,88 | **2,0** |
@@ -762,28 +726,32 @@ S(n) = 1 / ((1 − f) + f/n)          f = fracción paralelizable · n = nº de 
 | 0,95 | 3,48 | 5,93 | 8,42 | **20,0** |
 | 1,00 | 4,00 | 8,00 | 16,00 | ∞ |
 
-**La lectura:** con un **10 %** secuencial, el máximo es **10×** aunque pongas mil núcleos. **La parte secuencial
-manda.**
+**La lectura:** con un **10 %** secuencial, el máximo es **10×** aunque pongas mil núcleos. **La parte secuencial manda.**
 
 > [!example] Ejemplo resuelto
 > "Un programa tarda 100 s; el 80 % es paralelizable. ¿Cuánto tarda con 4 procesadores y qué speedup da?"
 
 1. `f = 0,8`; secuencial: `100 × 0,2 = 20 s` (no se toca).
+
 2. Paralelo: `80 / 4 = 20 s`.
+
 3. Total: `20 + 20 = 40 s` ⇒ `S = 100 / 40 =` **2,5**.
+
 4. Verificación con la fórmula: `1 / (0,2 + 0,8/4) = 1 / 0,4 = 2,5` ✔
+
 5. Techo con infinitos procesadores: `1 / 0,2 =` **5×**.
 
 #### Escalabilidad
+
 | Concepto | Pregunta | Qué se mantiene |
 |---|---|---|
 | **Escalado fuerte** (*strong*) | con el mismo problema, ¿cuánto acelera? | tamaño del problema |
 | **Escalado débil** (*weak*) | con `n` veces más trabajo, ¿tarda lo mismo? | tiempo por núcleo |
 
-Un problema **grande** escala mejor que uno chico (la parte secuencial pesa menos en proporción). Por eso las
-supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
+Un problema **grande** escala mejor que uno chico (la parte secuencial pesa menos en proporción). Por eso las supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
 
 #### Otros límites, además de Amdahl
+
 | Límite | Qué es |
 |---|---|
 | **Ley de Gustafson** | si el problema **crece** con `n`, se puede escalar casi linealmente |
@@ -810,20 +778,15 @@ supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
 *Fig. 18.5 — Organización de multiprocesador simétrico.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 697.
 
 #### Relacionado
-[[8.4.2 Monousuario vs multiusuario]] · [[8.3.1 Bancos de memoria y ancho de banda]] · [[2.5.2 Caché: mapeos y políticas]] ·
-[[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
+[[8.4.2 Monousuario vs multiusuario]] · [[8.3.1 Bancos de memoria y ancho de banda]] · [[2.5.2 Caché: mapeos y políticas]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Glosario — Unidad 8]]
 
 ### 8.4.2 Monousuario vs multiusuario
 
 > [!abstract] En una frase
-> Un sistema **monousuario** optimiza la **latencia** (que *mi* programa termine cuanto antes); un sistema
-> **multiusuario** optimiza la **productividad** (*throughput*: cuántas tareas terminan por unidad de tiempo). Son
-> dos objetivos distintos y llevan a máquinas distintas.
+> Un sistema **monousuario** optimiza la **latencia** (que *mi* programa termine cuanto antes); un sistema **multiusuario** optimiza la **productividad** (*throughput*: cuántas tareas terminan por unidad de tiempo). Son dos objetivos distintos y llevan a máquinas distintas.
 
 > [!note] Si la primera vez que ves esto
-> Un **taxi** y un **colectivo**. El taxi te lleva a vos rápido aunque el resto espere (latencia); el colectivo
-> lleva a muchos por hora aunque cada uno tarde más (productividad). Los dos son "transporte", pero no se diseñan
-> igual.
+> Un **taxi** y un **colectivo**. El taxi te lleva a vos rápido aunque el resto espere (latencia); el colectivo lleva a muchos por hora aunque cada uno tarde más (productividad). Los dos son "transporte", pero no se diseñan igual.
 
 #### Compartida o distribuida
 
@@ -842,6 +805,7 @@ supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
 | Ejemplo | Ryzen 8 núcleos | clúster, mainframe, granja de servidores |
 
 #### Cómo cambia el diseño de cada uno
+
 | Decisión | Monousuario | Multiusuario |
 |---|---|---|
 | Núcleos | pocos y **muy rápidos** (frecuencia alta) | muchos, más lentos, con **SMT** |
@@ -851,19 +815,20 @@ supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
 | Balance | cómputo ≫ E/S | **E/S y memoria** tan importantes como el cómputo |
 
 #### Qué se pregunta en el final
+
 1. **Diferencia conceptual:** latencia (tiempo de **una** tarea) vs productividad (tareas por **unidad de tiempo**).
+
 2. **Consecuencia:** el monousuario prioriza **frecuencia y caché**; el multiusuario, **núcleos, memoria y E/S**.
-3. **Métricas:** el PC se prueba con *benchmarks* de un hilo y de juegos; el servidor, con **tpmC**, **SPEC** de
-   throughput y **LINPACK**.
-4. **Cierre:** ambos usan las mismas técnicas (paralelismo, jerarquía de memoria, entrelazado); cambia **el
-   objetivo** con que se combinan.
+
+3. **Métricas:** el PC se prueba con *benchmarks* de un hilo y de juegos; el servidor, con **tpmC**, **SPEC** de throughput y **LINPACK**.
+
+4. **Cierre:** ambos usan las mismas técnicas (paralelismo, jerarquía de memoria, entrelazado); cambia **el objetivo** con que se combinan.
 
 > [!important] El puente con Amdahl
-> En un servidor, el trabajo **es** paralelo (muchos usuarios, cada uno independiente) ⇒ `f` alta ⇒ escala bien.
-> En un PC, un programa de un usuario suele tener partes secuenciales grandes ⇒ `f` baja ⇒ los núcleos extra se
-> quedan ociosos. **Por eso el servidor justifica 64 núcleos y la notebook, 8.**
+> En un servidor, el trabajo **es** paralelo (muchos usuarios, cada uno independiente) ⇒ `f` alta ⇒ escala bien. En un PC, un programa de un usuario suele tener partes secuenciales grandes ⇒ `f` baja ⇒ los núcleos extra se quedan ociosos. **Por eso el servidor justifica 64 núcleos y la notebook, 8.**
 
 #### Confusiones frecuentes
+
 | Se dice | Es |
 |---|---|
 | "Multiusuario = más rápido" | no: es **más productivo**; puede ser más lento por tarea |
@@ -888,19 +853,19 @@ supercomputadoras se miden con problemas enormes (LINPACK, matrices gigantes).
 *Fig. 18.2 — Organizaciones de computador alternativas.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 694.
 
 > [!example] Los límites de cada modelo
-> **Monousuario** (una PC): todos los recursos para uno, el límite es el reloj. **Multiusuario** (servidor): muchos
-> usuarios a la vez ⇒ el límite es el **ancho de banda de memoria**, la coherencia de caché y la planificación del
-> SO. Escalar de 4 a 16 núcleos no da 4×: con `p = 0,9`, Amdahl da **3,08** y **5,93** (ver
-> [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]]).
+> **Monousuario** (una PC): todos los recursos para uno, el límite es el reloj. **Multiusuario** (servidor): muchos usuarios a la vez ⇒ el límite es el **ancho de banda de memoria**, la coherencia de caché y la planificación del SO. Escalar de 4 a 16 núcleos no da 4×: con `p = 0,9`, Amdahl da **3,08** y **5,93** (ver [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]]).
 
 #### Relacionado
-[[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[8.2.2 Flynn, arreglos SIMD y conectados]] ·
-[[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Interrupciones y entrada-salida]] · [[Glosario — Unidad 8]]
+[[8.4.1 Multicore, coherencia de caché y ley de Amdahl]] · [[8.2.2 Flynn, arreglos SIMD y conectados]] · [[Técnicas para aumentar la velocidad]] · [[Paralelismo y procesamiento vectorial]] · [[Interrupciones y entrada-salida]] · [[Glosario — Unidad 8]]
 
 ---
 
 ## Al terminar la unidad
+
 - Una pasada rápida: [[00 Síntesis — Unidad 8]].
+
 - Los subtemas por separado: [[00 Unidad 8 — temas y subtemas]].
+
 - Seguir de corrido: [[00 Materia completa (las 10 unidades en un archivo)]].
+
 - Practicar: [[Banco de preguntas del final]] · [[Autoevaluación]] · [[Prácticas resueltas]].

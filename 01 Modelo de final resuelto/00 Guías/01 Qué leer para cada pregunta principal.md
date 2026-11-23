@@ -5,10 +5,7 @@ prioridad: maxima
 # Qué leer para cada pregunta principal (mapa de consulta)
 
 > [!abstract] Para qué sirve esta nota
-> Cada pregunta principal del final tiene **una nota maestra** en la bóveda (con el desarrollo completo y el
-> guion oral) y, al final de esa nota, una sección **"Para ampliar: qué leer y qué buscar"**. Esta nota junta
-> todo en una tabla: **qué fuente abrir para cada tema, en qué parte y qué mirar**. Así estudiás con material
-> de consulta real y no con resúmenes de terceros.
+> Cada pregunta principal del final tiene **una nota maestra** en la bóveda (con el desarrollo completo y el guion oral) y, al final de esa nota, una sección **"Para ampliar: qué leer y qué buscar"**. Esta nota junta todo en una tabla: **qué fuente abrir para cada tema, en qué parte y qué mirar**. Así estudiás con material de consulta real y no con resúmenes de terceros.
 
 ---
 
@@ -21,9 +18,7 @@ prioridad: maxima
 | **3. Ampliación** | libros: Hamacher, Stallings, Patterson & Hennessy, Tanenbaum, Floyd, Mano, Brey | Sólo si querés profundizar o te preguntan algo que el apunte no cubre |
 
 > [!warning] Sobre las páginas y los capítulos
-> Los libros tienen **varias ediciones** y los capítulos cambian de número. Por eso en la bóveda se indica
-> **qué sección/tema buscar** en vez de un número de página, salvo cuando el número sale del propio material de
-> la cátedra (por ejemplo, las referencias que cita `memorias.pdf`).
+> Los libros tienen **varias ediciones** y los capítulos cambian de número. Por eso en la bóveda se indica **qué sección/tema buscar** en vez de un número de página, salvo cuando el número sale del propio material de la cátedra (por ejemplo, las referencias que cita `memorias.pdf`).
 
 ---
 
@@ -41,6 +36,7 @@ prioridad: maxima
 | 8 | **Interrupciones** | [[Interrupciones y entrada-salida]] | Apuntes **U5** → *"Interrupciones"*, *"Sistema elemental de interrupciones para BLUE indexada"*, *"Interrupciones vectorizadas"* · `blue.pdf` → *"Instrucciones de entrada y salida"* (Tabla 4) y Conclusiones | **Stallings** (cap. de E/S: interrupciones, DMA, prioridades) · Hamacher · Tanenbaum · Brey (interrupciones del 8086) |
 
 ### Y las tres de la matriz que también son "principales" en la práctica
+
 | Pregunta (1.ª tanda de la matriz) | Nota maestra | Fuente de la cátedra | Ampliación |
 |---|---|---|---|
 | **BLUE vs BLUE indexada** | [[BLUE vs BLUE indexada — qué cambia y por qué]] | Apuntes **U5** → *"Nuevo hardware, nuevas instrucciones"*, *"Registro base"*, *"BLUE Indexada"* · `blue.pdf` → Conclusiones | Patterson & Hennessy (direccionamiento) · Brey (SI/DI) · Hamacher |
@@ -82,6 +78,7 @@ prioridad: maxima
 ## 3. La bibliografía, con qué es bueno cada libro
 
 ### Material de la cátedra (lo que se evalúa)
+
 | Fuente | Qué es | Fuerte en |
 |---|---|---|
 | **`blue.pdf`** — Foster, C. C., *Computer Architecture*, 2ª ed., Van Nostrand Reinhold. Cap.: *"Una máquina elemental"* | el apunte base, traducido para la cátedra | **todo el ciclo de la BLUE**: instrucciones en octal, 8 pulsos, tablas por instrucción, UC con compuertas, bus común, E/S |
@@ -91,6 +88,7 @@ prioridad: maxima
 | **`Arqui Matriz.jpg`** | la matriz del final | **qué cae y con qué peso**: [[00 Matriz del final — las 3 tandas]] |
 
 ### Libros de ampliación (por orden de utilidad para esta materia)
+
 | Libro | Bueno para | Ojo con |
 |---|---|---|
 | **Stallings, W., *Organización y arquitectura de computadores*** | **buses**, **E/S e interrupciones**, DMA, control | es amplio; andá al capítulo que necesitás |
@@ -107,24 +105,25 @@ prioridad: maxima
 ## 4. Cómo leer según el tiempo que tengas
 
 **Si tenés 2 horas** (repaso de último momento):
+
 1. `04 Resumen integrador de la materia` (20 min).
+
 2. De cada nota maestra, **sólo el guion oral** ("Cómo responderlo en el final") y los errores típicos (60 min).
+
 3. `Cómo dibujar los circuitos` + `Tablas de verdad de memoria` (40 min).
 
 **Si tenés 2 días**:
+
 - Día 1: las **5 fuentes de la cátedra** de la tabla maestra, en orden 1→8, leyendo **las notas maestras completas** y dibujando cada tema en una hoja.
+
 - Día 2: **simulacro oral** de las 8 con el guion; y para cada tema que falle, volver a **la sección exacta** de la fuente de la cátedra (columna 4 de la tabla).
 
 **Si tenés una semana**: agregá la **ampliación** de los temas con más peso (RAM 3×8, RISC/CISC, pipeline, interrupciones) y hacé los **TPs** de esos temas.
 
 > [!tip] Regla de oro para citar fuentes en el oral
-> Decí **siempre** primero la fuente de la cátedra ("según el apunte de la máquina elemental…", "según la
-> Unidad 5…") y después, si querés, la ampliación ("en Hamacher esto se llama microoperación…"). **Nunca al
-> revés**: el profesor evalúa su programa, no tu biblioteca.
+> Decí **siempre** primero la fuente de la cátedra ("según el apunte de la máquina elemental…", "según la Unidad 5…") y después, si querés, la ampliación ("en Hamacher esto se llama microoperación…"). **Nunca al revés**: el profesor evalúa su programa, no tu biblioteca.
 
 ---
 
 ## 5. Relacionado
-[[00 Matriz del final — las 3 tandas]] · [[Banco de preguntas del final]] ·
-[[Guion de respuestas — preguntas principales]] · [[00 Índice de TPs y qué aporta cada uno]] ·
-[[05 Fuentes y qué aporta cada una]] · [[04 Resumen integrador de la materia]]
+[[00 Matriz del final — las 3 tandas]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] · [[00 Índice de TPs y qué aporta cada uno]] · [[05 Fuentes y qué aporta cada una]] · [[04 Resumen integrador de la materia]]

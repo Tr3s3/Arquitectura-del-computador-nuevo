@@ -5,9 +5,7 @@ unidad: 8
 # Síntesis — Unidad 8: Paralelismo
 
 > [!abstract] Qué es este archivo
-> **Toda la Unidad 8 en un solo lugar**: pipeline aritmético, SIMD/vectorial, memoria entrelazada y
-> multiprocesadores, con las fórmulas, las recetas de examen y la autoevaluación. Sirve para repasar sin abrir las
-> 9 notas.
+> **Toda la Unidad 8 en un solo lugar**: pipeline aritmético, SIMD/vectorial, memoria entrelazada y multiprocesadores, con las fórmulas, las recetas de examen y la autoevaluación. Sirve para repasar sin abrir las 9 notas.
 
 > [!tip] Cómo usarlo
 > 1. Leer **§1 a §6** (25 minutos).
@@ -16,15 +14,25 @@ unidad: 8
 > 4. Contestar **§10** sin mirar.
 
 ## Índice
+
 1. [[#1. Las tres formas de paralelismo]]
+
 2. [[#2. Pipeline aritmético]]
+
 3. [[#3. Encadenamiento]]
+
 4. [[#4. SIMD y procesamiento vectorial]]
+
 5. [[#5. Memoria entrelazada]]
+
 6. [[#6. Multiprocesadores y Amdahl]]
+
 7. [[#7. Tablas de memoria rápida]]
+
 8. [[#8. Recetas de examen]]
+
 9. [[#9. Errores que cuestan puntos]]
+
 10. [[#10. Autoevaluación]]
 
 ---
@@ -86,8 +94,7 @@ El resultado de una etapa alimenta la operación siguiente **sin pasar por el re
 > | **encadenado** | `4 + 4 + 99 = 107` | **428 ns** |
 > `S = 206/107 = 1,93`
 
-**Límites:** etapas desparejas, dependencias (stall), llenado. **Techo:** `k`.
-👉 [[8.1.2 Encadenamiento y speedup]]
+**Límites:** etapas desparejas, dependencias (stall), llenado. **Techo:** `k`. 👉 [[8.1.2 Encadenamiento y speedup]]
 
 ## 4. SIMD y procesamiento vectorial
 
@@ -103,19 +110,17 @@ vectorial: VADD C, A, B                   ← 1 instrucción
 | AVX | 256 | 8 |
 | AVX-512 | 512 | 16 |
 
-**Instrucciones = `n / ancho`**: 10 000 elementos con AVX-512 ⇒ `10 000/16 = 625` instrucciones.
-**Se gana throughput, no latencia.**
+**Instrucciones = `n / ancho`**: 10 000 elementos con AVX-512 ⇒ `10 000/16 = 625` instrucciones. **Se gana throughput, no latencia.**
 
 ### Arreglos
+
 | | Arreglo SIMD | Arreglo conectado |
 |---|---|---|
 | Qué tiene | muchos PE con una UC común | lo mismo **+ red** entre PE |
 | Para qué | imagen: un PE por píxel | autómata celular, simulación física, convolución |
 
 ### Multiplicación de matrices
-`C[i][j] = Σ A[i][k]·B[k][j]` ⇒ **`n³`** multiplicaciones. Se vectoriza el **lazo interno** (producto punto) y se
-**bloquea** (`strip mining`) para el ancho del registro. Es el benchmark de la industria (**LINPACK/TOP500**).
-👉 [[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.2.3 Multiplicación de matrices]]
+`C[i][j] = Σ A[i][k]·B[k][j]` ⇒ **`n³`** multiplicaciones. Se vectoriza el **lazo interno** (producto punto) y se **bloquea** (`strip mining`) para el ancho del registro. Es el benchmark de la industria (**LINPACK/TOP500**). 👉 [[8.2.1 SIMD, registros vectoriales y GPU]] · [[8.2.3 Multiplicación de matrices]]
 
 ## 5. Memoria entrelazada
 
@@ -130,6 +135,7 @@ ancho de banda = (bancos × bytes por palabra) / tiempo de ciclo
 > `4 × 8 / 10 ns = 3,2 GB/s` (con 1 banco serían 0,8 GB/s). **La latencia no cambia.**
 
 ### El conflicto de banco
+
 | stride | Bancos (dir mod 4) | Resultado |
 |---|---|---|
 | **1** | 0,1,2,3 | 4 en paralelo ✔ |
@@ -137,9 +143,7 @@ ancho de banda = (bancos × bytes por palabra) / tiempo de ciclo
 | **4** | 0,0,0,0 | **conflicto total** ✘ |
 | 3 | 0,3,2,1 | 4 en paralelo ✔ (coprimo) |
 
-**Matriz por columnas:** `stride = n`; si `n` es múltiplo de los bancos ⇒ 4× más lento. Se arregla **transponiendo**
-o con **padding**.
-👉 [[8.3.1 Bancos de memoria y ancho de banda]] · [[8.3.2 Patrón de entrelazado y conflictos de banco]]
+**Matriz por columnas:** `stride = n`; si `n` es múltiplo de los bancos ⇒ 4× más lento. Se arregla **transponiendo** o con **padding**. 👉 [[8.3.1 Bancos de memoria y ancho de banda]] · [[8.3.2 Patrón de entrelazado y conflictos de banco]]
 
 ## 6. Multiprocesadores y Amdahl
 
@@ -158,13 +162,13 @@ Si cada núcleo tiene copia de `X`, al escribir uno hay que **invalidar** las de
 | **Directorio** | tabla central de quién tiene qué |
 | **MESI** | **M**odificada · **E**xclusiva · **S**hared · **I**nvalid |
 
-**Falso compartido:** dos hilos escriben variables **distintas** en la **misma línea** (64 B) ⇒ invalidaciones
-inútiles. Se arregla con **padding**.
+**Falso compartido:** dos hilos escriben variables **distintas** en la **misma línea** (64 B) ⇒ invalidaciones inútiles. Se arregla con **padding**.
 
 ### La ley de Amdahl
 ```
 S(n) = 1 / ((1 − f) + f/n)
 ```
+
 | f | n=4 | n=8 | n → ∞ |
 |---|---|---|---|
 | 0,50 | 1,60 | 1,78 | **2,0** |
@@ -175,12 +179,12 @@ S(n) = 1 / ((1 − f) + f/n)
 > [!example] 100 s, 80 % paralelizable, 4 procesadores
 > secuencial `20 s` + paralelo `80/4 = 20 s` ⇒ `40 s` ⇒ **S = 2,5** · techo `1/0,2 = 5×`
 
-**Escalado:** *fuerte* (mismo problema, más núcleos) · *débil* (más trabajo, mismo tiempo por núcleo).
-👉 [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]]
+**Escalado:** *fuerte* (mismo problema, más núcleos) · *débil* (más trabajo, mismo tiempo por núcleo). 👉 [[8.4.1 Multicore, coherencia de caché y ley de Amdahl]]
 
 ## 7. Tablas de memoria rápida
 
 ### Las cinco fórmulas
+
 | Qué | Fórmula |
 |---|---|
 | Pipeline aritmético | `ciclos = k + (n − 1)` |
@@ -190,6 +194,7 @@ S(n) = 1 / ((1 − f) + f/n)
 | Ley de Amdahl | `S = 1 / ((1−f) + f/n)` |
 
 ### Los números que hay que saber
+
 | Dato | Valor |
 |---|---|
 | Línea de caché | 64 B |
@@ -199,11 +204,13 @@ S(n) = 1 / ((1 − f) + f/n)
 | Amdahl con 10 % secuencial | techo **10×** |
 
 ### Monousuario vs multiusuario
+
 | | Monousuario | Multiusuario |
 |---|---|---|
 | Objetivo | **latencia** | **productividad** |
 | Núcleos | pocos y rápidos | muchos |
 | Se mide con | tiempo de respuesta | trabajos/hora |
+
 👉 [[8.4.2 Monousuario vs multiusuario]]
 
 ## 8. Recetas de examen
@@ -261,24 +268,38 @@ S(n) = 1 / ((1 − f) + f/n)
 ## 10. Autoevaluación
 
 1. Nombrá las **tres formas de paralelismo** y a qué tema de la unidad corresponde cada una.
+
 2. ¿Cuáles son las etapas de una suma en punto flotante y por qué se pueden solapar?
+
 3. Con `k = 4` y `n = 20`: ¿cuántos ciclos con y sin pipeline? ¿Qué speedup da?
+
 4. ¿Por qué el speedup **tiende** a `k` y no lo supera?
+
 5. ¿Qué es el **encadenamiento** y en qué se diferencia del *forwarding*?
+
 6. Definí **SIMD** y explicá por qué amortiza la decodificación.
+
 7. ¿Cuántas instrucciones pide sumar 4 000 enteros con AVX-256? ¿Y en escalar?
+
 8. Completá Flynn: SISD, SIMD, MISD, MIMD — con un ejemplo de cada uno y dónde ubicás el pipeline.
+
 9. Diferencia **arreglo SIMD** de **arreglo conectado**; dame una aplicación de cada uno.
+
 10. ¿Cuántas multiplicaciones tiene `C = A·B` con `n = 100`? ¿Qué lazo se vectoriza y por qué?
+
 11. Con 8 bancos, 4 B por palabra y ciclo de 5 ns: ¿ancho de banda? ¿Y si el `stride` es 8?
+
 12. ¿Por qué el entrelazado no mejora la latencia?
+
 13. Explicá **coherencia de caché** y **MESI** en tres frases. ¿Qué es el falso compartido?
+
 14. Aplicá Amdahl con `f = 0,9` y `n = 8`. ¿Cuál es el techo? ¿Qué conclusión saca un diseñador?
+
 15. Diferenciá **latencia** de **productividad** y explicá por qué un servidor justifica 64 núcleos y una notebook no.
+
 16. ¿Por qué el paralelismo no evita tener que resolver la **memoria entrelazada**?
 
 ---
 
 ## Relacionado
-[[00 Unidad 8 completa (lectura de corrido)]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] ·
-[[00 Índice de la materia (las 10 unidades)]] · [[Paralelismo y procesamiento vectorial]]
+[[00 Unidad 8 completa (lectura de corrido)]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 7 — temas y subtemas]] · [[00 Unidad 9 — temas y subtemas]] · [[00 Índice de la materia (las 10 unidades)]] · [[Paralelismo y procesamiento vectorial]]

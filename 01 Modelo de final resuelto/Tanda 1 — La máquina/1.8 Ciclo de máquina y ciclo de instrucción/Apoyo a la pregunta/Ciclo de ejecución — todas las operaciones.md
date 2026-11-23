@@ -7,18 +7,10 @@ prioridad: maxima
 # Ciclo de ejecución — todas las operaciones (BLUE sin indexar y BLUE indexada)
 
 > [!abstract] En una frase
-> Terminada la **búsqueda** (la instrucción ya está en el IR), empieza la **ejecución**: una secuencia de
-> ciclos de máquina de 8 pulsos que hace lo que la instrucción pide. Hay **cuatro familias** —transferencia
-> (LDA/STA), aritmético-lógicas (ADD/XOR/AND/IOR), de control (JMP/JMA/SRJ/NOP/HLT/RAL/NOT/CSA) y de E/S
-> (INP/OUT)— y en la **BLUE indexada** se agrega un ciclo previo para **calcular la dirección efectiva**, con lo
-> que las instrucciones con referencia a memoria pasan de **16 a 24 pulsos** (y a **32** en modo indirecto).
+> Terminada la **búsqueda** (la instrucción ya está en el IR), empieza la **ejecución**: una secuencia de ciclos de máquina de 8 pulsos que hace lo que la instrucción pide. Hay **cuatro familias** —transferencia (LDA/STA), aritmético-lógicas (ADD/XOR/AND/IOR), de control (JMP/JMA/SRJ/NOP/HLT/RAL/NOT/CSA) y de E/S (INP/OUT)— y en la **BLUE indexada** se agrega un ciclo previo para **calcular la dirección efectiva**, con lo que las instrucciones con referencia a memoria pasan de **16 a 24 pulsos** (y a **32** en modo indirecto).
 
 > [!note] Si es la primera vez que ves esto
-> Ya está la instrucción en el registro de instrucción. Ahora la máquina tiene que **hacer** lo que dice. Ese
-> "hacer" consiste en mover datos: traer un dato de memoria al acumulador, guardarlo, sumarlo, saltar a otra
-> dirección, o esperar a un periférico. Y como todo pasa por **un bus único**, cada paso es una transferencia
-> por pulso. Aprenderte las 16 no es memorizar 16 tablas: es entender **cuatro moldes** y ver que cada
-> instrucción es uno de esos moldes con otra operación de ALU o con otra condición.
+> Ya está la instrucción en el registro de instrucción. Ahora la máquina tiene que **hacer** lo que dice. Ese "hacer" consiste en mover datos: traer un dato de memoria al acumulador, guardarlo, sumarlo, saltar a otra dirección, o esperar a un periférico. Y como todo pasa por **un bus único**, cada paso es una transferencia por pulso. Aprenderte las 16 no es memorizar 16 tablas: es entender **cuatro moldes** y ver que cada instrucción es uno de esos moldes con otra operación de ALU o con otra condición.
 
 ---
 
@@ -34,15 +26,14 @@ prioridad: maxima
 | **(indexada) con memoria** | LDA, STA, ADD… | agrega el cálculo de la **EA** | 2 (3 en indirecto) | **24** (32 indirecto) |
 
 > [!important] La regla que resume todo
-> **Buscar es siempre igual; ejecutar depende de si la instrucción va a memoria.** Si **no** va a memoria, se
-> resuelve en los pulsos CP7/CP8 de la propia búsqueda. Si **va** a memoria, necesita un ciclo de ejecución
-> completo. Y si es **indexada**, dos (porque la dirección del operando hay que traerla y sumarle el índice).
+> **Buscar es siempre igual; ejecutar depende de si la instrucción va a memoria.** Si **no** va a memoria, se resuelve en los pulsos CP7/CP8 de la propia búsqueda. Si **va** a memoria, necesita un ciclo de ejecución completo. Y si es **indexada**, dos (porque la dirección del operando hay que traerla y sumarle el índice).
 
 ---
 
 ## 2. Familia 1 — Transferencia: LDA y STA
 
 ### LDA (`AC ← M[dir]`) — traer de memoria al acumulador
+
 | CP | Acción | Microoperación |
 |---|---|---|
 | 1 | Envíe IR, Cargue MAR · **orden de lectura** | `MAR ← IR(dir)` |
@@ -53,6 +44,7 @@ prioridad: maxima
 | 8 | `F → STATE` | fin de la instrucción |
 
 ### STA (`M[dir] ← AC`) — guardar el acumulador en memoria
+
 | CP | Acción | Microoperación |
 |---|---|---|
 | 1 | Envíe IR, Cargue MAR | `MAR ← IR(dir)` |
@@ -61,9 +53,7 @@ prioridad: maxima
 | 5-8 | — y `F → STATE` | la memoria termina de escribir sola |
 
 > [!tip] La simetría que hay que ver
-> **LDA y STA son el mismo camino, al revés**: LDA termina con `MBR → AC` (en CP5); STA empieza con
-> `AC → MBR` (en CP4) y la memoria se encarga. Si entendés uno, el otro sale solo. **Y las dos destruyen algo**:
-> LDA destruye el contenido anterior del AC; STA, el de la celda.
+> **LDA y STA son el mismo camino, al revés**: LDA termina con `MBR → AC` (en CP5); STA empieza con `AC → MBR` (en CP4) y la memoria se encarga. Si entendés uno, el otro sale solo. **Y las dos destruyen algo**: LDA destruye el contenido anterior del AC; STA, el de la celda.
 
 ---
 
@@ -81,9 +71,7 @@ Son **cuatro instrucciones que se diferencian sólo en el último pulso**: qué 
 | 8 | **Envíe SUM / XOR / AND / OR, Cargue A** y `F → STATE` | `AC ← ALU(Y,Z)` | **lo único que cambia** |
 
 > [!important] Por qué la ALU tiene dos registros de entrada (Y y Z)
-> Porque las dos entradas tienen que estar **presentes al mismo tiempo** y el bus es único: no se puede cargar
-> una y después la otra por el mismo cable sin guardar la primera. El apunte lo explica con la "gratis": la
-> salida del **primer semisumador** de la ALU **ya es la XOR**, así que la XOR no cuesta hardware extra.
+> Porque las dos entradas tienen que estar **presentes al mismo tiempo** y el bus es único: no se puede cargar una y después la otra por el mismo cable sin guardar la primera. El apunte lo explica con la "gratis": la salida del **primer semisumador** de la ALU **ya es la XOR**, así que la XOR no cuesta hardware extra.
 
 ---
 
@@ -100,8 +88,7 @@ Son **cuatro instrucciones que se diferencian sólo en el último pulso**: qué 
 | **RAL** | Envíe A, Cargue Z | Envíe 2·Z, Cargue A | rota a la izquierda |
 | **CSA** | Envíe SR, Cargue A | — | copia las llaves |
 
-Fijate el patrón: **todo lo que no va a memoria se hace con la ALU y el bus, en dos pulsos**, y **todo lo que
-cambia el PC usa `IR → PC`**.
+Fijate el patrón: **todo lo que no va a memoria se hace con la ALU y el bus, en dos pulsos**, y **todo lo que cambia el PC usa `IR → PC`**.
 
 ---
 
@@ -113,26 +100,33 @@ cambia el PC usa `IR → PC`**.
 | 8 | `E → STATE` | si **TRA = 0** ⇒ `F → STATE`; **si no, se repite el ciclo de ejecución** |
 
 - **TRA** (transferencia) avisa a los periféricos que hay una operación de E/S en curso.
-- **R** (ready) dice si el dispositivo está listo. **Si no lo está, la máquina espera dando vueltas**: la
-  instrucción puede tardar 16, 24, 32… pulsos.
-- Ese es el gran defecto del esquema y **la razón de ser de las interrupciones**
-  ([[Interrupciones y entrada-salida]]).
+
+- **R** (ready) dice si el dispositivo está listo. **Si no lo está, la máquina espera dando vueltas**: la instrucción puede tardar 16, 24, 32… pulsos.
+
+- Ese es el gran defecto del esquema y **la razón de ser de las interrupciones** ([[Interrupciones y entrada-salida]]).
 
 ---
 
 ## 6. BLUE **sin indexar** vs **indexada** (la pregunta del final)
 
 ### Sin indexar (BLUE base)
+
 - La instrucción ocupa **1 palabra** (16 bits: 4 de opcode + 12 de dirección) ⇒ la búsqueda la trae **completa**.
+
 - La ejecución va **directo** al operando: `IR(dir) → MAR`.
+
 - **LDA = 16 pulsos** (2 ciclos de máquina).
 
 ### Indexada
+
 - La instrucción ocupa **2 palabras** (32 bits: 5 + 2 + 9 + 16) ⇒ la búsqueda trae **sólo la primera**.
+
 - La ejecución tiene **dos partes**:
-  1. **traer la segunda palabra** (el campo de dirección) **y calcular la EA** con el sumador de direcciones
-     (`EA = W + X`, con X = 0/directo, RIF o RID);
+
+  1. **traer la segunda palabra** (el campo de dirección) **y calcular la EA** con el sumador de direcciones (`EA = W + X`, con X = 0/directo, RIF o RID);
+
   2. **ir al operando**.
+
 - **LDA directa o indexada = 24 pulsos** (3 ciclos) · **LDA indirecta = 32 pulsos** (4 ciclos).
 
 | | **Sin indexar** | **Indexada** |
@@ -152,12 +146,12 @@ cambia el PC usa `IR → PC`**.
 > | STA | 2 ciclos = 16 | 3 ciclos = 24 |
 > | **Total** | **6 ciclos = 48 pulsos** | **9 ciclos = 72 pulsos** |
 >
-> La indexada es **50 % más lenta** en este programa… pero ese mismo programa, bien escrito con `INI` y un lazo,
-> recorre **cualquier** arreglo con **una sola** `LDA 2, 0` en lugar de 100 instrucciones. **Ahí gana.**
+> La indexada es **50 % más lenta** en este programa… pero ese mismo programa, bien escrito con `INI` y un lazo, recorre **cualquier** arreglo con **una sola** `LDA 2, 0` en lugar de 100 instrucciones. **Ahí gana.**
 
 ---
 
 ## 7. La ejecución de la LDA indexada, en su tabla (24 pulsos)
+
 | Ciclo | Pulsos | Qué pasa |
 |---|---|---|
 | Búsqueda | 1–8 | trae la **1.ª palabra**; `PC ← PC + 1` |
@@ -172,23 +166,26 @@ Con la explicación completa: [[Ciclo de LDA indexada (los 24 pulsos)]].
 
 ## 8. Cómo responderlo en el final (4–5 minutos)
 
-**Movimiento 1 — encuadre (20 s).** "Terminada la búsqueda, la ejecución depende de **si la instrucción va a
-memoria**: si no va, se resuelve en CP7-CP8; si va, necesita un ciclo de 8 pulsos; si es indexada, dos."
+**Movimiento 1 — encuadre (20 s).** "Terminada la búsqueda, la ejecución depende de **si la instrucción va a memoria**: si no va, se resuelve en CP7-CP8; si va, necesita un ciclo de 8 pulsos; si es indexada, dos."
 
-**Movimiento 2 — dibujo (60 s).** Tres columnas: *sin memoria (8)* · *con memoria (16)* · *indexada (24)*, con
-las microoperaciones clave de cada una.
+**Movimiento 2 — dibujo (60 s).** Tres columnas: *sin memoria (8)* · *con memoria (16)* · *indexada (24)*, con las microoperaciones clave de cada una.
 
 **Movimiento 3 — desarrollo (120 s).**
+
 1. **LDA y STA**: simétricas; CP5 `MBR→AC` vs CP4 `AC→MBR`.
+
 2. **Las cuatro aritméticas**: CP2 `A→Z`, CP6 `MBR→Y`, CP8 la operación. La diferencia es **una señal**.
+
 3. **Control**: `IR→PC` en CP8; `SRJ` guarda el retorno en el AC.
+
 4. **E/S**: TRA y R, con la posibilidad de repetir el ciclo (por eso las interrupciones).
+
 5. **La indexada**: por qué 24 (dos palabras + sumador de direcciones).
 
-**Movimiento 4 — cierre (20 s).** "La ejecución no es un misterio: es una lista de transferencias. Cambia
-**cuántas** y **qué sale de la ALU**; el bus y los pulsos son siempre los mismos."
+**Movimiento 4 — cierre (20 s).** "La ejecución no es un misterio: es una lista de transferencias. Cambia **cuántas** y **qué sale de la ALU**; el bus y los pulsos son siempre los mismos."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Por qué LDA carga el MBR antes del AC y no directo? | Porque **todo lo que viene de memoria pasa por el MBR**; es el registro buffer de la memoria |
@@ -201,11 +198,17 @@ las microoperaciones clave de cada una.
 ---
 
 ## 9. Errores típicos
+
 - Ponerle ciclo de ejecución a **JMP** (se resuelve en CP8 de la búsqueda).
+
 - Confundir el **CP2 de las aritméticas** (`A→Z`) con el **CP6** (`MBR→Y`).
+
 - Decir "16 pulsos" para la LDA indexada (son **24**; 16 es la de la BLUE base).
+
 - Olvidar que **STA escribe en CP4**, no al final.
+
 - Creer que en INP/OUT el ciclo de ejecución siempre dura 8: **puede repetirse** hasta que R = 1.
+
 - Confundir `SRJ` (guarda el PC en el AC) con `JMP` (no guarda nada).
 
 ---
@@ -227,6 +230,4 @@ las microoperaciones clave de cada una.
 ---
 
 ## Relacionado
-[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de LDA indexada (los 24 pulsos)]] ·
-[[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de la instrucción LDA (24 pulsos)]] ·
-[[ALU]] · [[Interrupciones y entrada-salida]] · [[Programar en BLUE — ejemplos]]
+[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de LDA indexada (los 24 pulsos)]] · [[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de la instrucción LDA (24 pulsos)]] · [[ALU]] · [[Interrupciones y entrada-salida]] · [[Programar en BLUE — ejemplos]]

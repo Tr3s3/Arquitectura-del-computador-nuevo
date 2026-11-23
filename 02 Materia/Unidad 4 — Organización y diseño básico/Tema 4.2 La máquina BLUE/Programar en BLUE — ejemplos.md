@@ -6,11 +6,10 @@ examen: practica
 # Programar en BLUE — ejemplos
 
 > [!abstract] En una frase
-> Programar en BLUE es escribir **una instrucción por línea**, con `opcode` + `dirección`, y recordar que
-> **todo pasa por el AC**: no hay registros de propósito general. Alcanza con `LDA`, `STA`, `ADD`/`SUB`,
-> los saltos `JZ`/`JC`/`JMP` y `HLT`.
+> Programar en BLUE es escribir **una instrucción por línea**, con `opcode` + `dirección`, y recordar que **todo pasa por el AC**: no hay registros de propósito general. Alcanza con `LDA`, `STA`, `ADD`/`SUB`, los saltos `JZ`/`JC`/`JMP` y `HLT`.
 
 ## Modelo de programación
+
 | Elemento | Uso |
 |---|---|
 | `AC` | único registro de trabajo (acumulador) |
@@ -43,9 +42,9 @@ a:      12
 b:      30
 max:    0
 ```
+
 > [!tip] Cómo se compara en una máquina de un solo acumulador
-> No hay instrucción de comparación: **se compara restando**. El resultado de `SUB` actualiza Z (resultado
-> cero ⇒ son iguales) y C (borrow ⇒ el primero era menor). Después se salta según el flag.
+> No hay instrucción de comparación: **se compara restando**. El resultado de `SUB` actualiza Z (resultado cero ⇒ son iguales) y C (borrow ⇒ el primero era menor). Después se salta según el flag.
 
 ## Ejemplo 3 — lazo: sumar los primeros 5 números
 ```
@@ -80,8 +79,11 @@ cont:   0
         STA  invertido
         HLT
 ```
+
 - `AND` con una máscara = **enmascarar** (poner en 0 los bits que no interesan).
+
 - `OR` con una máscara = **encender** bits.
+
 - `XOR` con todo 1 = **complementar**; `XOR` con una máscara = **invertir sólo esos bits**.
 
 ## Ejemplo 5 — entrada/salida
@@ -101,20 +103,28 @@ Instrucción `LDA 25h` con `opcode LDA = 0000` y dirección `25h = 0000 0010 010
 ```
  0011 | 0000 0011 0000
 ```
+
 > [!warning] Números de opcode
-> Verificá la tabla binaria en tu apunte ([[Máquina BLUE — arquitectura y conjunto de instrucciones]]).
-> La estructura `4 + 12` bits sí es la de la cátedra y eso es lo que se corrige.
+> Verificá la tabla binaria en tu apunte ([[Máquina BLUE — arquitectura y conjunto de instrucciones]]). La estructura `4 + 12` bits sí es la de la cátedra y eso es lo que se corrige.
 
 ## Cómo responderlo en el final
+
 1. Aclarar el modelo: un AC, memoria con programa y datos, saltos por flags.
+
 2. Escribir un programa corto (suma, lazo o máximo) **comentado línea por línea**.
+
 3. Explicar cómo se compara (restando) y por qué `JZ`/`JC` funcionan.
+
 4. Mostrar el ensamblado en binario de una instrucción (opcode + dirección).
 
 ## Errores típicos
+
 - Usar un registro que no existe (`R1`, `R2`): en BLUE sólo hay AC.
+
 - Hacer `SUB` y saltar sin pensar qué flag corresponde (Z = iguales, C = borrow).
+
 - Olvidar recargar el AC antes de cada operación (las operaciones **destruyen** el AC anterior).
+
 - Confundir la etiqueta con una instrucción (es una dirección).
 
 ## Relacionado

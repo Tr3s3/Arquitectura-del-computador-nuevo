@@ -5,8 +5,7 @@ unidad: 9
 # Síntesis — Unidad 9: Hardware aritmético
 
 > [!abstract] Qué es este archivo
-> **Toda la Unidad 9 en un solo lugar**: representación y suma, multiplicación, división, punto flotante e IEEE 754,
-> y BCD; con las fórmulas, los ejemplos verificados, las recetas de examen y la autoevaluación.
+> **Toda la Unidad 9 en un solo lugar**: representación y suma, multiplicación, división, punto flotante e IEEE 754, y BCD; con las fórmulas, los ejemplos verificados, las recetas de examen y la autoevaluación.
 
 > [!tip] Cómo usarlo
 > 1. Leer **§1 a §6** (30 minutos).
@@ -15,15 +14,25 @@ unidad: 9
 > 4. Contestar **§10** sin mirar.
 
 ## Índice
+
 1. [[#1. Representación: complemento a 2]]
+
 2. [[#2. Suma, resta y desbordamiento]]
+
 3. [[#3. Acarreo anticipado]]
+
 4. [[#4. Multiplicación]]
+
 5. [[#5. División]]
+
 6. [[#6. Punto flotante e IEEE 754]]
+
 7. [[#7. Aritmética BCD]]
+
 8. [[#8. Tablas de memoria rápida]]
+
 9. [[#9. Recetas de examen y errores]]
+
 10. [[#10. Autoevaluación]]
 
 ---
@@ -44,8 +53,7 @@ unidad: 9
 | 16 | −32 768 … +32 767 | |
 | 32 | −2 147 483 648 … +2 147 483 647 | |
 
-**Por qué C2:** un solo sumador (`A + B' + 1`), un solo cero, sin correcciones.
-👉 [[9.1.1 Complemento a 2 y desbordamiento]]
+**Por qué C2:** un solo sumador (`A + B' + 1`), un solo cero, sin correcciones. 👉 [[9.1.1 Complemento a 2 y desbordamiento]]
 
 ## 2. Suma, resta y desbordamiento
 
@@ -61,11 +69,9 @@ resta:  A − B = A + B' + SUB          (SUB = acarreo de entrada C0; XOR en las
 | **`S`** | el MSB | signo |
 
 > [!example] Los dos casos con 4 bits
-> `0111 + 0001 = 1000`: `Cin=1, Cout=0` ⇒ **V=1** (7+1 no puede dar −8)
-> `1111 + 0001 = 1 0000`: `Cin=1, Cout=1` ⇒ **V=0** (como con signo es −1+1=0 ✔); `C=1`
+> `0111 + 0001 = 1000`: `Cin=1, Cout=0` ⇒ **V=1** (7+1 no puede dar −8) `1111 + 0001 = 1 0000`: `Cin=1, Cout=1` ⇒ **V=0** (como con signo es −1+1=0 ✔); `C=1`
 
-**Regla rápida:** mismo signo en los operandos y signo distinto en el resultado ⇒ **overflow**.
-👉 [[9.1.1 Complemento a 2 y desbordamiento]]
+**Regla rápida:** mismo signo en los operandos y signo distinto en el resultado ⇒ **overflow**. 👉 [[9.1.1 Complemento a 2 y desbordamiento]]
 
 ## 3. Acarreo anticipado
 
@@ -90,9 +96,7 @@ C4 = G3 + P3·G2 + P3·P2·G1 + P3·P2·P1·G0 + P3·P2·P1·P0·C0
 | CLA | ~4 | — |
 | CLA en bloques de 4 | ~6 | **~20** |
 
-**Ejemplo verificado:** `1011 + 0110` con `C0 = 0` ⇒ `G = 0,1,0,0`; `P = 1,0,1,1`; `C = 0,1,1,1` ⇒
-`S = 0001`, `C4 = 1` ⇒ `1 0001 = 17` ✔
-👉 [[9.1.2 Acarreo anticipado (G y P)]]
+**Ejemplo verificado:** `1011 + 0110` con `C0 = 0` ⇒ `G = 0,1,0,0`; `P = 1,0,1,1`; `C = 0,1,1,1` ⇒ `S = 0001`, `C4 = 1` ⇒ `1 0001 = 17` ✔ 👉 [[9.1.2 Acarreo anticipado (G y P)]]
 
 ## 4. Multiplicación
 
@@ -103,6 +107,7 @@ C4 = G3 + P3·G2 + P3·P2·G1 + P3·P2·P1·G0 + P3·P2·P1·P0·C0
 repetir n veces:  si Q0 = 1 ⇒ A ← A + M ;  desplazar a la derecha (C,A,Q)
 producto = A Q  (2n bits)
 ```
+
 > [!example] 13 × 11 (verificado)
 > | Iter | `Q0` | Acción | `A` | `Q` |
 > |---|---|---|---|---|
@@ -113,6 +118,7 @@ producto = A Q  (2n bits)
 > Producto `1000 1111` = **143** ✔
 
 ### Booth
+
 | `(Q0, Q−1)` | Acción |
 |---|---|
 | `00` · `11` | sólo desplazar |
@@ -120,6 +126,7 @@ producto = A Q  (2n bits)
 | `10` | `A ← A − M` |
 
 Después: **desplazamiento aritmético** de `(A, Q, Q−1)`.
+
 > [!example] 6 × (−3) = −18 (verificado)
 > `M=0110`, `−M=1010`, `Q=1101` ⇒ producto `A Q = 1110 1110` = **−18** ✔ (2 sumas en vez de 3)
 
@@ -154,6 +161,7 @@ al final: si A < 0 ⇒ A ← A + M
 | Velocidad | menor | **mayor** |
 
 ### Sobreflujo
+
 | Caso | Regla |
 |---|---|
 | Divisor 0 | trap / excepción |
@@ -180,6 +188,7 @@ valor = (−1)^S × 1.M × 2^(E − exceso)
 > `1,101×2²` + `1,1×2¹` → alinear: `0,11×2²` → sumar: `10,000×2²` → normalizar: `1,000×2³` = **8** ✔
 
 ### IEEE 754
+
 | | Simple | Doble |
 |---|---|---|
 | Bits | **1 + 8 + 23 = 32** | **1 + 11 + 52 = 64** |
@@ -196,11 +205,9 @@ valor = (−1)^S × 1.M × 2^(E − exceso)
 | todo 1 | ≠0 | **NaN** |
 
 > [!example] −6,5 = `C0D0 0000h`
-> `6,5 = 1,101×2²` ⇒ `S=1` · `E = 2+127 = 129 = 10000001` · `M = 1010…` ⇒ `1 10000001 1010…` ✔
-> Y al revés: `4120 0000h` ⇒ `e = 3`, `1,010×2³` = **10,0** ✔
+> `6,5 = 1,101×2²` ⇒ `S=1` · `E = 2+127 = 129 = 10000001` · `M = 1010…` ⇒ `1 10000001 1010…` ✔ Y al revés: `4120 0000h` ⇒ `e = 3`, `1,010×2³` = **10,0** ✔
 
-**Redondeo por defecto:** al más cercano, **empates al par** (no acumula sesgo).
-👉 [[9.4.1 Formato, normalización y operaciones]] · [[9.4.2 IEEE 754]]
+**Redondeo por defecto:** al más cercano, **empates al par** (no acumula sesgo). 👉 [[9.4.1 Formato, normalización y operaciones]] · [[9.4.2 IEEE 754]]
 
 ## 7. Aritmética BCD
 
@@ -215,15 +222,14 @@ si (dígito > 1001)  o  (hubo acarreo)  ⇒  sumar 0110  y propagar acarreo
 | `9+9` | `1 0010` | `+0110` | **8** + acarreo = 18 |
 
 > [!example] 47 + 38 = 85 (verificado)
-> Unidades: `0111+1000 = 1111` (>9) ⇒ `+0110` = `1 0101` ⇒ dígito **5**, acarreo 1.
-> Decenas: `0100+0011+1 = 1000` (válido) ⇒ **8**. Resultado `1000 0101` = **85** ✔
+> Unidades: `0111+1000 = 1111` (>9) ⇒ `+0110` = `1 0101` ⇒ dígito **5**, acarreo 1. Decenas: `0100+0011+1 = 1000` (válido) ⇒ **8**. Resultado `1000 0101` = **85** ✔
 
-**Por qué 6:** `2⁴ − 10 = 6` códigos inválidos. En el 8086: `DAA` / `DAS`.
-👉 [[9.5.1 Suma decimal corregida]]
+**Por qué 6:** `2⁴ − 10 = 6` códigos inválidos. En el 8086: `DAA` / `DAS`. 👉 [[9.5.1 Suma decimal corregida]]
 
 ## 8. Tablas de memoria rápida
 
 ### Las fórmulas de la unidad
+
 | Qué | Fórmula |
 |---|---|
 | Resta | `A − B = A + B' + 1` |
@@ -238,6 +244,7 @@ si (dígito > 1001)  o  (hubo acarreo)  ⇒  sumar 0110  y propagar acarreo
 | BCD | corrector **`+6`** |
 
 ### Los números de la unidad
+
 | Dato | Valor |
 |---|---|
 | Rango 8 bits con signo | `−128 … +127` |
@@ -302,26 +309,42 @@ si (dígito > 1001)  o  (hubo acarreo)  ⇒  sumar 0110  y propagar acarreo
 ## 10. Autoevaluación
 
 1. ¿Por qué se usa complemento a 2 y no magnitud y signo? Dame tres razones.
+
 2. Rango de 8 bits con signo en complemento a 2. ¿Qué vale `1000 0000`?
+
 3. Calculá `0110 − 1001` en 4 bits e indicá `C`, `V`, `Z`, `S`.
+
 4. ¿Cuándo hay overflow con signo? ¿Y acarreo sin signo? ¿Pueden darse los dos a la vez?
+
 5. Definí `G` y `P` con sus fórmulas. ¿Por qué `P` es un XOR?
+
 6. Escribí `C1…C4` expandidos y contá los niveles de retardo frente al ripple.
+
 7. ¿Cuántas iteraciones y cuántos bits de producto tiene una multiplicación de 8 × 8?
+
 8. Booth: ¿qué hace `01`? ¿Y `10`? ¿Por qué el desplazamiento es aritmético?
+
 9. Multiplicá `0110 × 1101` con Booth y verificá en decimal.
+
 10. Restaurativo vs no restaurativo: ¿cuál hace menos operaciones y qué paga a cambio?
+
 11. Dividí `7 ÷ 3` con los dos métodos y compará las tablas.
+
 12. ¿Qué dos casos producen sobreflujo al dividir? ¿Cómo se detecta antes de empezar?
+
 13. ¿Cuál es el signo del resto en `−7 / 3`? ¿Y el del cociente? Justificá.
+
 14. Pasos para sumar en punto flotante, con `6,5 + 1,5` como ejemplo.
+
 15. ¿Por qué la suma en punto flotante **no** es asociativa? ¿Qué son los bits de guarda y sticky?
+
 16. Codificá `−6,5` y `10,0` en IEEE 754 simple, y verificá con los valores hexadecimales.
+
 17. ¿Qué es un número **subnormal** y para qué sirve? ¿Y `NaN`?
+
 18. Sumá `47 + 38` en BCD y explicá cada corrección. ¿Por qué se suma exactamente 6?
 
 ---
 
 ## Relacionado
-[[00 Unidad 9 completa (lectura de corrido)]] · [[00 Unidad 9 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 10 — temas y subtemas]] ·
-[[00 Índice de la materia (las 10 unidades)]] · [[Hardware aritmético (resumen)]]
+[[00 Unidad 9 completa (lectura de corrido)]] · [[00 Unidad 9 — temas y subtemas]] · [[00 Unidad 8 — temas y subtemas]] · [[00 Unidad 10 — temas y subtemas]] · [[00 Índice de la materia (las 10 unidades)]] · [[Hardware aritmético (resumen)]]

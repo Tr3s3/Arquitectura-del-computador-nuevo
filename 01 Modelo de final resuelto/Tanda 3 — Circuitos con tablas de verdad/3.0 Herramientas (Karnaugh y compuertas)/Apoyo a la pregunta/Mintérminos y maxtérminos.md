@@ -7,31 +7,20 @@ prioridad: maxima
 # Mintérminos, maxtérminos y mapas de Karnaugh
 
 > [!abstract] En una frase
-> Dada una **tabla de verdad**, hay dos maneras de escribir la función sin adivinar nada: como **suma de
-> mintérminos** (los renglones donde la salida vale **1**) o como **producto de maxtérminos** (los renglones
-> donde vale **0**). Y para **simplificarla** sin pelearse con el álgebra está el **mapa de Karnaugh**: la misma
-> tabla, ordenada en código Gray, donde "agrupar unos vecinos" equivale a aplicar la ley `A·B + A·B' = A`.
+> Dada una **tabla de verdad**, hay dos maneras de escribir la función sin adivinar nada: como **suma de mintérminos** (los renglones donde la salida vale **1**) o como **producto de maxtérminos** (los renglones donde vale **0**). Y para **simplificarla** sin pelearse con el álgebra está el **mapa de Karnaugh**: la misma tabla, ordenada en código Gray, donde "agrupar unos vecinos" equivale a aplicar la ley `A·B + A·B' = A`.
 
 > [!note] Si es la primera vez que ves esto
-> Tenés tres compuertas: AND, OR, NOT. Y tenés una tabla de verdad que dice qué querés que pase. El problema
-> práctico es: **¿cómo paso de la tabla al circuito?**
+> Tenés tres compuertas: AND, OR, NOT. Y tenés una tabla de verdad que dice qué querés que pase. El problema práctico es: **¿cómo paso de la tabla al circuito?**
 >
-> El camino directo es simple: **cada renglón donde la salida es 1 se convierte en un producto (un AND) que da 1
-> justo en ese renglón**, y después **sumo (OR) todos esos productos**. Eso es la forma canónica, y siempre
-> funciona… pero gasta muchísimas compuertas. Por ejemplo, una función de 4 variables con 6 unos necesita 6
-> compuertas AND de 4 entradas + 1 OR de 6 entradas.
+> El camino directo es simple: **cada renglón donde la salida es 1 se convierte en un producto (un AND) que da 1 justo en ese renglón**, y después **sumo (OR) todos esos productos**. Eso es la forma canónica, y siempre funciona… pero gasta muchísimas compuertas. Por ejemplo, una función de 4 variables con 6 unos necesita 6 compuertas AND de 4 entradas + 1 OR de 6 entradas.
 >
-> El **mapa de Karnaugh** resuelve lo mismo con la mitad de compuertas, sin hacer cuentas: es un dibujo donde los
-> unos que se pueden juntar quedan **pegados**, y juntarlos es exactamente "cancelar la variable que cambia". Si
-> en un par de casilleros vecinos la única diferencia es que `B` vale 0 en uno y 1 en el otro, entonces el
-> resultado **no depende de B**: desaparece. Eso es todo el truco.
+> El **mapa de Karnaugh** resuelve lo mismo con la mitad de compuertas, sin hacer cuentas: es un dibujo donde los unos que se pueden juntar quedan **pegados**, y juntarlos es exactamente "cancelar la variable que cambia". Si en un par de casilleros vecinos la única diferencia es que `B` vale 0 en uno y 1 en el otro, entonces el resultado **no depende de B**: desaparece. Eso es todo el truco.
 
 ---
 
 ## 1. Mintérminos: la definición
 
-Un **mintérmino** `m_i` es un **producto en el que aparecen todas las variables**, cada una negada o no, y que
-vale **1 en una única fila** de la tabla de verdad (la fila número `i`).
+Un **mintérmino** `m_i` es un **producto en el que aparecen todas las variables**, cada una negada o no, y que vale **1 en una única fila** de la tabla de verdad (la fila número `i`).
 
 **Regla para escribirlo:** la variable que vale **0** se pone **negada**; la que vale **1**, **sin negar**.
 
@@ -48,16 +37,13 @@ Para 3 variables `A B C`, la fila `i = 5` es `A=1, B=0, C=1` ⇒ `m5 = A·B'·C`
 | 6 | 1 1 0 | `ABC'` | `A' + B' + C` |
 | 7 | 1 1 1 | `ABC` | `A' + B' + C'` |
 
-El **maxtérmino** `M_i` es lo **dual**: una **suma** con todas las variables, que vale **0 en esa única fila**;
-se escribe con la regla invertida (la variable que vale **1** va **negada**).
+El **maxtérmino** `M_i` es lo **dual**: una **suma** con todas las variables, que vale **0 en esa única fila**; se escribe con la regla invertida (la variable que vale **1** va **negada**).
 
 > [!important] Las dos formas canónicas (y por qué son iguales)
 > - **Suma de productos (SOP):** `F = Σm(los renglones con 1)`.
 > - **Producto de sumas (POS):** `F = ΠM(los renglones con 0)`.
 >
-> Son la misma función escrita de dos maneras. Por **DeMorgan**, `F' = Σm(los que faltan)` y los índices del
-> complemento son justamente los maxtérminos de `F`. Ejemplo: `F(A,B) = Σm(0,2)` ⇒ `F' = Σm(1,3)` ⇒
-> `F = ΠM(0,2)` = `(A + B)(A' + B)`.
+> Son la misma función escrita de dos maneras. Por **DeMorgan**, `F' = Σm(los que faltan)` y los índices del complemento son justamente los maxtérminos de `F`. Ejemplo: `F(A,B) = Σm(0,2)` ⇒ `F' = Σm(1,3)` ⇒ `F = ΠM(0,2)` = `(A + B)(A' + B)`.
 
 **Ejemplo de paso de tabla a función** (una función cualquiera de 3 variables):
 
@@ -80,8 +66,7 @@ se escribe con la regla invertida (la variable que vale **1** va **negada**).
 
 ## 2. El mapa de Karnaugh: cómo se arma
 
-El mapa es la tabla de verdad **ordenada en código Gray** (00, 01, **11**, 10), de modo que **casilleros vecinos
-difieren en una sola variable**. Se dibuja así:
+El mapa es la tabla de verdad **ordenada en código Gray** (00, 01, **11**, 10), de modo que **casilleros vecinos difieren en una sola variable**. Se dibuja así:
 
 **3 variables** (filas: A; columnas: BC en Gray)
 ```
@@ -102,28 +87,32 @@ difieren en una sola variable**. Se dibuja así:
 ```
 
 > [!warning] El error nº 1 del mapa
-> Las filas y columnas **no van en orden binario** (00, 01, 10, 11): van en **Gray** (00, 01, **11, 10**). Si te
-> equivocás en el orden, los vecinos no son vecinos y el mapa da mal. Y los **bordes también son vecinos**: la
-> última columna toca a la primera, y la última fila toca a la primera (el mapa es un "cilindro").
+> Las filas y columnas **no van en orden binario** (00, 01, 10, 11): van en **Gray** (00, 01, **11, 10**). Si te equivocás en el orden, los vecinos no son vecinos y el mapa da mal. Y los **bordes también son vecinos**: la última columna toca a la primera, y la última fila toca a la primera (el mapa es un "cilindro").
 
 ---
 
 ## 3. Las reglas de agrupación (esto es todo el método)
 
 1. Se agrupan **unos**, en bloques de **1, 2, 4, 8, 16** casilleros (potencias de 2), **rectangulares**.
+
 2. Los grupos deben ser **lo más grandes posible** (un grupo de 4 ahorra más que dos de 2).
+
 3. Pueden **solaparse** entre sí y pueden **dar la vuelta** por los bordes.
+
 4. Todos los unos tienen que quedar cubiertos (**al menos una vez**).
+
 5. De cada grupo se escribe **el producto de las variables que NO cambian** dentro del grupo:
+
    - si la variable vale 1 en todo el grupo ⇒ se pone tal cual;
+
    - si vale 0 en todo el grupo ⇒ negada;
+
    - si **cambia** (0 en unos casilleros, 1 en otros) ⇒ **desaparece**.
+
 6. La función es la **OR** de los productos de todos los grupos.
 
 > [!tip] La cuenta que explica todo
-> Un grupo de **2** casilleros elimina **1** variable · de **4** elimina **2** · de **8** elimina **3** ·
-> de **16** elimina **4**. Por eso "grupo más grande" = "función más simple". Es la ley `A·B + A·B' = A` aplicada
-> de a pares.
+> Un grupo de **2** casilleros elimina **1** variable · de **4** elimina **2** · de **8** elimina **3** · de **16** elimina **4**. Por eso "grupo más grande" = "función más simple". Es la ley `A·B + A·B' = A` aplicada de a pares.
 
 ---
 
@@ -136,8 +125,7 @@ Mapa:
   A=0 │  0  │  1  │   ← m1
   A=1 │  0  │  1  │   ← m3
 ```
-Grupo vertical de 2 ⇒ `A` cambia, `B` no cambia (vale 1) ⇒ **`F = B`**. (Y por álgebra:
-`A'B + AB = B(A' + A) = B`. ✔)
+Grupo vertical de 2 ⇒ `A` cambia, `B` no cambia (vale 1) ⇒ **`F = B`**. (Y por álgebra: `A'B + AB = B(A' + A) = B`. ✔)
 
 ### Ejemplo 2 — `F(A,B,C) = Σm(1,3,5,7)` (el de la cátedra)
 
@@ -148,8 +136,7 @@ Grupo vertical de 2 ⇒ `A` cambia, `B` no cambia (vale 1) ⇒ **`F = B`**. (Y p
      A=0 │ 0 │ 1 │ 1 │ 0 │
      A=1 │ 0 │ 1 │ 1 │ 0 │
 ```
-Un único grupo de **4** (la columna 01 y la 11, en las dos filas): `A` cambia, `B` cambia, `C` **vale 1 siempre**
-⇒ **`F = C`**. De 4 AND de 3 entradas a **un cable**.
+Un único grupo de **4** (la columna 01 y la 11, en las dos filas): `A` cambia, `B` cambia, `C` **vale 1 siempre** ⇒ **`F = C`**. De 4 AND de 3 entradas a **un cable**.
 
 ### Ejemplo 3 — `F(A,B,C) = Σm(0,1,2,3,6,7)`
 ```
@@ -158,7 +145,9 @@ Un único grupo de **4** (la columna 01 y la 11, en las dos filas): `A` cambia, 
      A=0 │ 1 │ 1 │ 1 │ 1 │   ← los cuatro de arriba
      A=1 │ 0 │ 0 │ 1 │ 1 │   ← los dos de la derecha (m7, m6)
 ```
+
 - Grupo de **4** (toda la fila `A=0`) ⇒ `A` vale 0 siempre ⇒ **`A'`**
+
 - Grupo de **2** (m6 y m7) ⇒ cambian C, no cambian: `A=1`, `B=1` ⇒ **`AB`**
 
 `F = A' + A·B` ⇒ por absorción (variante) ⇒ **`F = A' + B`**. Dos compuertas.
@@ -172,17 +161,13 @@ Un único grupo de **4** (la columna 01 y la 11, en las dos filas): `A` cambia, 
       AB=11│ 0 │ 0 │ 0 │ 0 │
       AB=10│ 1 │ 0 │ 0 │ 1 │
 ```
-Los cuatro unos están en las **esquinas**: se juntan en **un solo grupo de 4** (porque los bordes dan la vuelta).
-Dentro del grupo: `A` cambia, `C` cambia, `B = 0` siempre, `D = 0` siempre ⇒ **`F = B'·D'`**.
-¡Cuatro mintérminos en **una** compuerta AND! Este ejemplo es el que convence de que el mapa sirve.
+Los cuatro unos están en las **esquinas**: se juntan en **un solo grupo de 4** (porque los bordes dan la vuelta). Dentro del grupo: `A` cambia, `C` cambia, `B = 0` siempre, `D = 0` siempre ⇒ **`F = B'·D'`**. ¡Cuatro mintérminos en **una** compuerta AND! Este ejemplo es el que convence de que el mapa sirve.
 
 ### Ejemplo 5 — `F(A,B,C,D) = Σm(5,7,13,15)`
-`m5=(01,01)`, `m7=(01,11)`, `m13=(11,01)`, `m15=(11,11)` ⇒ rectángulo de 4 ⇒ `B = 1` y `D = 1` siempre ⇒
-**`F = B·D`**.
+`m5=(01,01)`, `m7=(01,11)`, `m13=(11,01)`, `m15=(11,11)` ⇒ rectángulo de 4 ⇒ `B = 1` y `D = 1` siempre ⇒ **`F = B·D`**.
 
 ### Ejemplo 6 — con **condiciones irrelevantes** (don't care)
-Si hay combinaciones que **no pueden ocurrir** (por ejemplo, un código BCD donde 1010 a 1111 no existen), se
-marcan con **X** y se usan como comodín: **se toman como 1 si agrandan un grupo, y se ignoran si no sirven**.
+Si hay combinaciones que **no pueden ocurrir** (por ejemplo, un código BCD donde 1010 a 1111 no existen), se marcan con **X** y se usan como comodín: **se toman como 1 si agrandan un grupo, y se ignoran si no sirven**.
 ```
 F(A,B,C,D) = Σm(0,1,2,3) + d(8,9,10,11)      →  F = A'
 ```
@@ -193,14 +178,17 @@ Sin los don't care habría que escribir `A'B'`; con ellos, el grupo de 8 cubre t
 ## 5. El método completo para el final (5 pasos, siempre igual)
 
 1. **Tabla de verdad** con todas las combinaciones (2ⁿ filas).
+
 2. **Forma canónica**: `Σm(...)` con los renglones que dan 1.
+
 3. **Mapa de Karnaugh**: ubicar los unos (y las X si hay).
+
 4. **Agrupar** (los más grandes posible, potencias de 2, con solapamiento y con bordes).
+
 5. **Función simplificada** = OR de los productos de cada grupo ⇒ **dibujar el circuito**.
 
 > [!example] Verificación doble (lo que da seguridad en el oral)
-> Después de simplificar, **probalo con un renglón de la tabla**: en `F = A' + B`, si `A=0,B=0,C=1` ⇒ `F = 1 + 0 = 1`,
-> y la tabla decía 1 (m1 ✔). Con dos renglones alcanza para detectar el 90 % de los errores.
+> Después de simplificar, **probalo con un renglón de la tabla**: en `F = A' + B`, si `A=0,B=0,C=1` ⇒ `F = 1 + 0 = 1`, y la tabla decía 1 (m1 ✔). Con dos renglones alcanza para detectar el 90 % de los errores.
 
 ---
 
@@ -218,21 +206,18 @@ Sin los don't care habría que escribir `A'B'`; con ellos, el grupo de 8 cubre t
 
 ## 7. Cómo responderlo en el final (3–4 minutos)
 
-**Movimiento 1 — definición (20 s).** "Mintérmino: producto con todas las variables que vale 1 en una sola fila;
-el maxtérmino es su dual."
+**Movimiento 1 — definición (20 s).** "Mintérmino: producto con todas las variables que vale 1 en una sola fila; el maxtérmino es su dual."
 
-**Movimiento 2 — de la tabla a la función (40 s).** Con una tabla de 3 variables, escribir `Σm(...)` y la suma de
-productos.
+**Movimiento 2 — de la tabla a la función (40 s).** Con una tabla de 3 variables, escribir `Σm(...)` y la suma de productos.
 
-**Movimiento 3 — el mapa (60 s).** Dibujarlo **en Gray**, explicar por qué (vecinos difieren en una variable),
-y agrupar: bloques de 1, 2, 4, 8; bordes que dan la vuelta; variable que cambia, desaparece.
+**Movimiento 3 — el mapa (60 s).** Dibujarlo **en Gray**, explicar por qué (vecinos difieren en una variable), y agrupar: bloques de 1, 2, 4, 8; bordes que dan la vuelta; variable que cambia, desaparece.
 
 **Movimiento 4 — un ejemplo resuelto (60 s).** `Σm(1,3,5,7) = C`, o el de las esquinas `Σm(0,2,8,10) = B'D'`.
 
-**Movimiento 5 — cierre (20 s).** "Karnaugh es la ley `A·B + A·B' = A` hecha dibujo: cada grupo elimina variables,
-o sea compuertas. Con la función simplificada se dibuja el circuito."
+**Movimiento 5 — cierre (20 s).** "Karnaugh es la ley `A·B + A·B' = A` hecha dibujo: cada grupo elimina variables, o sea compuertas. Con la función simplificada se dibuja el circuito."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Qué es un mintérmino? | Un producto con **todas** las variables que vale 1 en **una sola** fila |
@@ -248,12 +233,17 @@ o sea compuertas. Con la función simplificada se dibuja el circuito."
 ---
 
 ## 8. Errores típicos
+
 - Armar el mapa en orden binario en vez de **Gray**.
+
 - Olvidar que los **bordes son vecinos** (se pierden grupos de 4 y las funciones salen larguísimas).
+
 - Agrupar **diagonal** o en bloques de 3/5 casilleros.
-- Dejar un 1 sin cubrir (o cubrirlo "dos veces" pensando que es un error: **no lo es**, el solapamiento está
-  permitido y a veces es necesario).
+
+- Dejar un 1 sin cubrir (o cubrirlo "dos veces" pensando que es un error: **no lo es**, el solapamiento está permitido y a veces es necesario).
+
 - Escribir en el término una variable que **cambia** dentro del grupo.
+
 - Confundir `Σm` (unos) con `ΠM` (ceros) al pasar a la forma canónica.
 
 ---
@@ -273,5 +263,4 @@ o sea compuertas. Con la función simplificada se dibuja el circuito."
 ---
 
 ## Relacionado
-[[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]] · [[Compuertas lógicas]] ·
-[[Decodificador]] · [[Multiplexor]] · [[Semisumador]] · [[Sumador completo]]
+[[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]] · [[Compuertas lógicas]] · [[Decodificador]] · [[Multiplexor]] · [[Semisumador]] · [[Sumador completo]]

@@ -4,9 +4,7 @@ tipo: indice
 # Validación de contenido: resúmenes, TPs y claridad
 
 > [!abstract] Qué es esta nota
-> El resultado de **auditar la bóveda contra los resúmenes de la cátedra y los TPs**: qué faltaba (y cómo se
-> cerró), qué tan parejo es el material para estudiar, el estado de los videos de los TPs y una lista honesta de
-> lo que todavía queda flojo. Fecha de la revisión: **22/11/2026**.
+> El resultado de **auditar la bóveda contra los resúmenes de la cátedra y los TPs**: qué faltaba (y cómo se cerró), qué tan parejo es el material para estudiar, el estado de los videos de los TPs y una lista honesta de lo que todavía queda flojo. Fecha de la revisión: **22/11/2026**.
 
 > [!success] Resultado en una línea
 > **107 subtemas** cubiertos, **107/107 con ejemplo resuelto y con caja de error típico**, **100 diagramas propios
@@ -38,8 +36,7 @@ tipo: indice
 | **Inserción de NOP** para resolver hazards | `apuntes` U7 | sección nueva en [[7.1.2 Hazards y sus soluciones]] |
 
 > [!info] Por qué impresionaba el de códigos y el de errores
-> En `Resumen 3` la **primera página** es la tabla `decimal / binario natural / AIKEN / exceso 3`, y el CRC/LRC
-> ocupa dos páginas de los apuntes: son temas que la cátedra **da y toma**, y no estaban en la bóveda.
+> En `Resumen 3` la **primera página** es la tabla `decimal / binario natural / AIKEN / exceso 3`, y el CRC/LRC ocupa dos páginas de los apuntes: son temas que la cátedra **da y toma**, y no estaban en la bóveda.
 
 ## 3. Claridad: cómo quedó cada subtema
 
@@ -55,12 +52,9 @@ Los **107 subtemas** tienen ahora la misma estructura, para que estudiar sea sie
 | `[!warning]` error típico | lo que se pierde por escribir mal | **107 / 107** |
 | `## Relacionado` | a dónde ir después | **107 / 107** |
 
-**Tamaño:** mediana de **627 palabras** por subtema (mínimo 354, máximo ~1 100). Cada subtema entra en **una**
-pantalla de lectura de 4-5 minutos; la unidad completa, en 15-25 minutos.
+**Tamaño:** mediana de **627 palabras** por subtema (mínimo 354, máximo ~1 100). Cada subtema entra en **una** pantalla de lectura de 4-5 minutos; la unidad completa, en 15-25 minutos.
 
-**Extensión de las oraciones:** 493 de 2 505 oraciones pasan de 35 palabras (**20 %**). Están concentradas en los
-temas con mucha fórmula (U9 y U5); no impiden estudiar, pero son lo primero a recortar si se quiere un texto más
-liviano.
+**Extensión de las oraciones:** 493 de 2 505 oraciones pasan de 35 palabras (**20 %**). Están concentradas en los temas con mucha fórmula (U9 y U5); no impiden estudiar, pero son lo primero a recortar si se quiere un texto más liviano.
 
 ## 4. TPs y videos
 
@@ -73,9 +67,7 @@ liviano.
 | TPs sin videos en el PDF | **TP6, TP14, TP18, TP19, TP20**: la consigna venía sin enlaces |
 
 > [!warning] Lo que los videos NO reemplazan
-> Los videos son de canales externos y a veces usan otra convención (por ejemplo, IEEE 754 en lugar de exceso 64,
-> o máquinas de 8 bits con otro juego de instrucciones). **Para el parcial manda la nota**, que está alineada con la
-> cátedra. El video es para ver el circuito moverse.
+> Los videos son de canales externos y a veces usan otra convención (por ejemplo, IEEE 754 en lugar de exceso 64, o máquinas de 8 bits con otro juego de instrucciones). **Para el parcial manda la nota**, que está alineada con la cátedra. El video es para ver el circuito moverse.
 
 ## 5. Los resúmenes: qué se pudo leer y qué no
 
@@ -101,13 +93,14 @@ liviano.
 ## 7. Cómo estudiar con esto
 
 1. **Primera pasada (por unidad):** leer `00 Síntesis — Unidad N`. Son 15-25 minutos y dan el mapa.
-2. **Segunda pasada:** entrar a los subtemas que no cerraron, en orden. En cada uno: leer el `[!abstract]`,
-   **tapar** el resto y decirlo en voz alta; después leer la definición y comparar.
-3. **Dibujo:** copiar a mano el **diagrama propio** de cada subtema (el de la figura del libro es la fuente, no el
-   que se rinde).
+
+2. **Segunda pasada:** entrar a los subtemas que no cerraron, en orden. En cada uno: leer el `[!abstract]`, **tapar** el resto y decirlo en voz alta; después leer la definición y comparar.
+
+3. **Dibujo:** copiar a mano el **diagrama propio** de cada subtema (el de la figura del libro es la fuente, no el que se rinde).
+
 4. **Números:** resolver el **ejemplo resuelto** sin mirar y comparar. Si no sale, ése es el subtema a repetir.
+
 5. **Cierre:** `04 Práctica/Autoevaluación` y el `01 Modelo de final resuelto` para las preguntas orales.
 
 ## Relacionado
-[[07 Plan de mejoras pendientes]] (el backlog con prioridades) · [[00 Índice de la materia (las 10 unidades)]] · [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]] ·
-[[00 Figuras de los libros (índice)]] · [[00 Índice de TPs y qué aporta cada uno]] · [[02 Plan de estudio — las 10 unidades]]
+[[07 Plan de mejoras pendientes]] (el backlog con prioridades) · [[00 Índice de la materia (las 10 unidades)]] · [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]] · [[00 Figuras de los libros (índice)]] · [[00 Índice de TPs y qué aporta cada uno]] · [[02 Plan de estudio — las 10 unidades]]

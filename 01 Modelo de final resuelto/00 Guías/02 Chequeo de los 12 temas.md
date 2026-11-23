@@ -5,10 +5,7 @@ prioridad: maxima
 # Chequeo: los 12 temas de la lista del profesor
 
 > [!abstract] Para qué sirve esta nota
-> Es el **control de cobertura** de la lista de 12 temas que pasó la cátedra. Cada tema tiene su nota maestra
-> (desarrollo desde cero + tabla + dibujo + guion oral + repreguntas + "Para ampliar"), su **peso** en la matriz
-> y **lo que hay que poder decir** en 60-90 segundos. Si podés explicar la columna "decisivo", el tema está
-> aprobado.
+> Es el **control de cobertura** de la lista de 12 temas que pasó la cátedra. Cada tema tiene su nota maestra (desarrollo desde cero + tabla + dibujo + guion oral + repreguntas + "Para ampliar"), su **peso** en la matriz y **lo que hay que poder decir** en 60-90 segundos. Si podés explicar la columna "decisivo", el tema está aprobado.
 
 | # | Tema de la lista | Nota maestra | Peso / tanda | Lo decisivo (lo que no se puede omitir) |
 |---|---|---|---|---|
@@ -30,16 +27,15 @@ prioridad: maxima
 ## Cómo usar este chequeo
 
 **Método en 3 pasadas (2 h por tanda):**
-1. **Pasada 1 — decir sin mirar.** Para cada tema, contá en voz alta 60-90 segundos con la columna "decisivo" a
-   la vista. Si te trabás, marcá el tema.
-2. **Pasada 2 — dibujar.** Sólo los temas con dibujo: celda, mapa de Karnaugh, pipeline, ciclo de búsqueda,
-   LDA 24 pulsos, los 4 modos de la indexada. **El final es oral pero se rinde dibujando.**
-3. **Pasada 3 — cruzar.** Abrí la nota maestra **sólo** de los temas marcados y leé su sección
-   **"Para ampliar"** (qué fuente y qué parte) para tapar el hueco con la cátedra.
+
+1. **Pasada 1 — decir sin mirar.** Para cada tema, contá en voz alta 60-90 segundos con la columna "decisivo" a la vista. Si te trabás, marcá el tema.
+
+2. **Pasada 2 — dibujar.** Sólo los temas con dibujo: celda, mapa de Karnaugh, pipeline, ciclo de búsqueda, LDA 24 pulsos, los 4 modos de la indexada. **El final es oral pero se rinde dibujando.**
+
+3. **Pasada 3 — cruzar.** Abrí la nota maestra **sólo** de los temas marcados y leé su sección **"Para ampliar"** (qué fuente y qué parte) para tapar el hueco con la cátedra.
 
 > [!tip] Los 4 temas que hay que tener perfectos
-> Por peso y por frecuencia: **pipeline (10)**, **CISC/RISC (10)**, **los circuitos de la 3.ª tanda (12)** y
-> **LDA 24 pulsos / modos en la indexada (8)**. Esos cuatro son el 40 % de la nota.
+> Por peso y por frecuencia: **pipeline (10)**, **CISC/RISC (10)**, **los circuitos de la 3.ª tanda (12)** y **LDA 24 pulsos / modos en la indexada (8)**. Esos cuatro son el 40 % de la nota.
 
 ---
 
@@ -57,6 +53,4 @@ prioridad: maxima
 ---
 
 ## Relacionado
-[[00 Matriz del final — las 3 tandas]] · [[01 Qué leer para cada pregunta principal]] ·
-[[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] ·
-[[03 Ruta de estudio para el final]]
+[[00 Matriz del final — las 3 tandas]] · [[01 Qué leer para cada pregunta principal]] · [[Banco de preguntas del final]] · [[Guion de respuestas — preguntas principales]] · [[03 Ruta de estudio para el final]]

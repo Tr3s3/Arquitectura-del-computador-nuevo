@@ -4,23 +4,13 @@ tipo: indice
 # Figuras de los libros: índice y procedencia
 
 > [!abstract] Qué es esta nota
-> Las **132 figuras** extraídas de los dos libros de la bibliografía y pegadas en los subtemas:
-> **48 de Quiroga** y **84 de Stallings** (algunas figuras se usan en más de un subtema, así que
-> hay más filas que figuras). Cada una está en su nota con la cita de figura y página, así que se puede citar en
-> el final sin volver a buscar.
+> Las **132 figuras** extraídas de los dos libros de la bibliografía y pegadas en los subtemas: **48 de Quiroga** y **84 de Stallings** (algunas figuras se usan en más de un subtema, así que hay más filas que figuras). Cada una está en su nota con la cita de figura y página, así que se puede citar en el final sin volver a buscar.
 
 > [!info] Cómo se extrajeron
-> Con `tools/extraer_figuras.py`: el script busca el epígrafe (`Fig. 7.10`, `Figura 4.1`), parte la página en
-> bloques de contenido (franjas de tinta separadas por blanco) y recorta el bloque que está justo encima del
-> epígrafe. Sirve igual para PDFs escaneados (Quiroga) que para vectoriales (Stallings): en el segundo caso usa
-> los dibujos vectoriales para no confundir una figura con un párrafo de texto.
-> En la segunda pasada se corrigió el caso que fallaba (figura y epígrafe pegados en el mismo bloque de tinta):
-> de Quiroga se pasó de **49 a 122 figuras** detectadas, y de ahí salieron casi todas las que faltaban en las
-> unidades 1, 2, 4 y 5.
+> Con `tools/extraer_figuras.py`: el script busca el epígrafe (`Fig. 7.10`, `Figura 4.1`), parte la página en bloques de contenido (franjas de tinta separadas por blanco) y recorta el bloque que está justo encima del epígrafe. Sirve igual para PDFs escaneados (Quiroga) que para vectoriales (Stallings): en el segundo caso usa los dibujos vectoriales para no confundir una figura con un párrafo de texto. En la segunda pasada se corrigió el caso que fallaba (figura y epígrafe pegados en el mismo bloque de tinta): de Quiroga se pasó de **49 a 122 figuras** detectadas, y de ahí salieron casi todas las que faltaban en las unidades 1, 2, 4 y 5.
 
 > [!note] Las de clase no están en esta nota
-> Acá sólo se catalogan las figuras de la **bibliografía**. Las **15 figuras del resumen de cátedra** (resumen de
-> Said) están catalogadas en [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], al final.
+> Acá sólo se catalogan las figuras de la **bibliografía**. Las **15 figuras del resumen de cátedra** (resumen de Said) están catalogadas en [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]], al final.
 
 ## Quiroga — *Arquitectura de computadoras* (Alfaomega)
 
@@ -165,14 +155,14 @@ tipo: indice
 | 18.19 | 734 | Fig. 18.19 — Programas alternativos de computación vectorial | [[8.1.2 Encadenamiento y speedup]] |
 
 ## Fuentes que se pueden explotar más
+
 | Libro | Figuras detectadas | Qué cubre |
 |---|---|---|
 | Quiroga | 122 | compuertas, códigos (exceso 3, Aiken), algebra de Boole, Karnaugh, decodificadores, codificadores, MUX/DEMUX, biestables, registros, contadores, ROM, ciclo de instrucción, memorias, memoria virtual |
 | Stallings | 159 | IAS, buses, caché, memoria interna, discos, E/S, DMA, aritmética (Booth, división), pipeline, superescalar, IA-64, microprogramación, multiprocesadores |
 | Hamacher · Tanenbaum · Patterson | — | no están en PDF en esta bóveda |
 
-Los recortes crudos quedaron en `_figs/` y `_figs2/` fuera de la bóveda, por si hace falta cambiar alguno.
-Para volver a recortar un mapa de Karnaugh (que en el libro no lleva epígrafe) se usa un `clip` manual sobre la página.
+Los recortes crudos quedaron en `_figs/` y `_figs2/` fuera de la bóveda, por si hace falta cambiar alguno. Para volver a recortar un mapa de Karnaugh (que en el libro no lleva epígrafe) se usa un `clip` manual sobre la página.
 
 ## Relacionado
 [[00 Mapa de diagramas (qué gráfico tiene cada subtema)]] · [[00 Índice de la materia (las 10 unidades)]] · [[07 Plan de mejoras pendientes]]

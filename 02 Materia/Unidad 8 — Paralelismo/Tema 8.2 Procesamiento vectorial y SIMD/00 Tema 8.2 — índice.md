@@ -6,8 +6,7 @@ tema: "8.2"
 # Tema 8.2 — Procesamiento vectorial y SIMD
 
 > [!abstract] Qué se estudia acá
-> **Una instrucción, muchos datos**: registros anchos que guardan varios elementos, la clasificación de Flynn, los
-> arreglos de procesadores y el caso que siempre se pregunta: la **multiplicación de matrices**.
+> **Una instrucción, muchos datos**: registros anchos que guardan varios elementos, la clasificación de Flynn, los arreglos de procesadores y el caso que siempre se pregunta: la **multiplicación de matrices**.
 
 | Subtema | Qué resuelve | Nota |
 |---|---|---|
@@ -16,9 +15,7 @@ tema: "8.2"
 | **8.2.3** Multiplicación de matrices | el caso resuelto `C = A·B` | [[8.2.3 Multiplicación de matrices]] |
 
 > [!important] La idea
-> El vectorial **amortiza** el costo de buscar y decodificar la instrucción: una instrucción hace el trabajo de
-> `n`. Es el mismo truco que el pipeline, pero por **ancho** en vez de por **tiempo**.
+> El vectorial **amortiza** el costo de buscar y decodificar la instrucción: una instrucción hace el trabajo de `n`. Es el mismo truco que el pipeline, pero por **ancho** en vez de por **tiempo**.
 
 ## Relacionado
-[[00 Unidad 8 — temas y subtemas]] · [[00 Tema 8.1 — índice]] · [[00 Tema 8.3 — índice]] ·
-[[Paralelismo y procesamiento vectorial]]
+[[00 Unidad 8 — temas y subtemas]] · [[00 Tema 8.1 — índice]] · [[00 Tema 8.3 — índice]] · [[Paralelismo y procesamiento vectorial]]

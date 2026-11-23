@@ -4,8 +4,7 @@ tipo: guia
 # Fuentes y qué aporta cada una
 
 > [!abstract] Para qué sirve esta nota
-> Para saber **de dónde sale cada dato** de la bóveda y **qué hacer si la mesa pregunta "¿esto de dónde lo
-> sacaste?"**. En el final, citar la fuente correcta (apunte, TP, libro) suma tanto como la respuesta.
+> Para saber **de dónde sale cada dato** de la bóveda y **qué hacer si la mesa pregunta "¿esto de dónde lo sacaste?"**. En el final, citar la fuente correcta (apunte, TP, libro) suma tanto como la respuesta.
 
 ## Material entregado por la cátedra
 
@@ -24,8 +23,7 @@ tipo: guia
 | **`TEMAS FINAL.docx`** | Modelo de final (8 principales, 12 secundarias, 7 prácticas) | La lista original de temas; ver [[Banco de preguntas del final]] |
 
 > [!warning] Dos PDF (`Resumen2-20pag`, `Resumen3-13pags`) son **imágenes escaneadas** (no tienen texto
-> extraíble). No se usaron porque su contenido está cubierto por los otros resúmenes y por los apuntes. Si
-> querés que los incorpore, pasalos por OCR o contame qué tienen de distinto.
+> extraíble). No se usaron porque su contenido está cubierto por los otros resúmenes y por los apuntes. Si querés que los incorpore, pasalos por OCR o contame qué tienen de distinto.
 
 ## Cómo se resolvieron los conflictos entre fuentes
 Cuando dos fuentes no coincidían, se aplicó este criterio (y la bóveda lo deja anotado con `> [!warning]`):
@@ -42,11 +40,12 @@ Cuando dos fuentes no coincidían, se aplicó este criterio (y la bóveda lo dej
 | **TP18: 1 GB / 4 B** | El PDF dice 2²⁷ celdas | Son **2²⁸** celdas ⇒ 28 bits de dirección (ver [[TP18 Direccionamiento de memoria]]) |
 
 ## Qué NO está en la bóveda (todavía)
-- Microprogramación **en detalle** de una máquina didáctica completa (sí está el concepto, el formato de
-  microinstrucción y el ejemplo del 8088: [[Cómo se implementa la Unidad de Control]]).
+
+- Microprogramación **en detalle** de una máquina didáctica completa (sí está el concepto, el formato de microinstrucción y el ejemplo del 8088: [[Cómo se implementa la Unidad de Control]]).
+
 - El **8086 a nivel de instrucciones** más allá de lo que pide el TP21.
+
 - Los dos resúmenes escaneados.
 
 ## Relacionado
-[[00 Cómo usar esta bóveda]] · [[00 Matriz del final — las 3 tandas]] · [[00 Índice de TPs y qué aporta cada uno]] ·
-[[04 Resumen integrador de la materia]]
+[[00 Cómo usar esta bóveda]] · [[00 Matriz del final — las 3 tandas]] · [[00 Índice de TPs y qué aporta cada uno]] · [[04 Resumen integrador de la materia]]

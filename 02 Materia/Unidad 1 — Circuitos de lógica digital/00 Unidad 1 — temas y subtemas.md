@@ -5,19 +5,13 @@ unidad: 1
 # Unidad 1 — Circuitos de lógica digital
 
 > [!abstract] Qué pide la unidad
-> Entender que **un circuito digital es una tabla de verdad hecha hardware**: compuertas → álgebra de Boole →
-> simplificación (Karnaugh) → circuitos combinacionales (decodificadores, MUX, sumadores). Todo lo de esta unidad
-> se rinde **dibujando**.
+> Entender que **un circuito digital es una tabla de verdad hecha hardware**: compuertas → álgebra de Boole → simplificación (Karnaugh) → circuitos combinacionales (decodificadores, MUX, sumadores). Todo lo de esta unidad se rinde **dibujando**.
 
 > [!tip] Para leer la unidad de corrido
-> **[[00 Unidad 1 completa (lectura de corrido)]]**: los **17 subtemas** pegados en un solo archivo,
-> con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 1]]) es el
-> resumen de una página; el archivo completo es el desarrollo entero.
+> **[[00 Unidad 1 completa (lectura de corrido)]]**: los **17 subtemas** pegados en un solo archivo, con sus diagramas y figuras, sin abrir nada más. La síntesis ([[00 Síntesis — Unidad 1]]) es el resumen de una página; el archivo completo es el desarrollo entero.
 
 > [!success] Unidad desarrollada
-> Los **6 temas** y sus **17 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**:
-> el resumen de una página (**[[00 Síntesis — Unidad 1]]**) y el desarrollo completo para leer de corrido
-> (**[[00 Unidad 1 completa (lectura de corrido)]]**). Estado: ✅ completa.
+> Los **6 temas** y sus **17 subtemas** están escritos, y hay **dos archivos con toda la unidad junta**: el resumen de una página (**[[00 Síntesis — Unidad 1]]**) y el desarrollo completo para leer de corrido (**[[00 Unidad 1 completa (lectura de corrido)]]**). Estado: ✅ completa.
 
 ## La estructura de la unidad
 
@@ -63,25 +57,25 @@ Unidad 1 — Circuitos de lógica digital/
 ---
 
 ## Qué hay que saber hacer al terminar la unidad
+
 1. **Escribir la tabla de verdad** de cualquier función de 2 a 4 variables.
+
 2. **Pasar de la tabla a la función** (`Σm`) y **simplificarla** con Karnaugh.
+
 3. **Dibujar el circuito** con las compuertas, contando cuántas usa.
+
 4. **Reconocer los 4 bloques combinacionales** por su tabla (decodificador, codificador, MUX, DEMUX).
+
 5. **Sumar y restar en binario** con semisumador, sumador completo y `A + B' + 1`.
 
 ## TPs de la unidad
-[[TP1 Compuertas lógicas]] · [[TP2 Álgebra de Boole]] · [[TP3 Simplificación analítica]] ·
-[[TP4 Mintérminos, maxtérminos y Karnaugh]] · [[TP5 Sumadores]] · (apoyo) [[TP6 Decodificadores y demultiplexores]] ·
-[[TP7 Codificadores y multiplexores]]
+[[TP1 Compuertas lógicas]] · [[TP2 Álgebra de Boole]] · [[TP3 Simplificación analítica]] · [[TP4 Mintérminos, maxtérminos y Karnaugh]] · [[TP5 Sumadores]] · (apoyo) [[TP6 Decodificadores y demultiplexores]] · [[TP7 Codificadores y multiplexores]]
 
 ## Fuente de la cátedra
-Apuntes **Unidad 2 — Circuitos lógicos y digitales** · Floyd (compuertas, álgebra y simplificación) ·
-Mano (lógica combinacional).
+Apuntes **Unidad 2 — Circuitos lógicos y digitales** · Floyd (compuertas, álgebra y simplificación) · Mano (lógica combinacional).
 
 ## Desarrollo de examen de estos temas
-[[00 Tanda 3 — índice]] (la tanda de peso 12): [[Compuertas lógicas]] · [[Álgebra de Boole — postulados y teoremas]] ·
-[[Leyes de DeMorgan]] · [[Mintérminos y maxtérminos]] · [[Decodificador]] · [[Codificador]] · [[Multiplexor]] ·
-[[Demultiplexor]] · [[Semisumador]] · [[Sumador completo]]
+[[00 Tanda 3 — índice]] (la tanda de peso 12): [[Compuertas lógicas]] · [[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]] · [[Mintérminos y maxtérminos]] · [[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]] · [[Semisumador]] · [[Sumador completo]]
 
 ---
 

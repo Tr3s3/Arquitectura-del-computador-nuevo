@@ -6,20 +6,22 @@ tipo: tp
 # TP1 — Compuertas lógicas
 
 > [!abstract] Consigna (cátedra)
-> **"Compuertas lógicas: NOT, AND, NAND, OR, NOR, XOR y NXOR. ¿Qué operación corresponde a cada una de
-> ellas? Desarrolle tabla de verdad y gráfico."**
+> **"Compuertas lógicas: NOT, AND, NAND, OR, NOR, XOR y NXOR. ¿Qué operación corresponde a cada una de ellas? Desarrolle tabla de verdad y gráfico."**
 
 ## Qué hay que saber para resolverlo
 Es el TP más "de pizarrón" de todos: por cada compuerta hay que entregar **tres cosas**:
+
 1. **Símbolo** normalizado (D para AND, escudo curvo para OR, triángulo + círculo para NOT, etc.).
+
 2. **Tabla de verdad** (2 entradas ⇒ 4 filas; NOT tiene 2 filas).
+
 3. **Expresión booleana** y una frase diciendo qué operación representa.
 
 > [!warning] Ojo con el nombre "NXOR"
-> La cátedra escribe **NXOR** para la XOR negada (en los libros aparece como **XNOR**). Usá el nombre de la
-> cátedra y aclaralo: "NXOR o XNOR, la negación de la XOR".
+> La cátedra escribe **NXOR** para la XOR negada (en los libros aparece como **XNOR**). Usá el nombre de la cátedra y aclaralo: "NXOR o XNOR, la negación de la XOR".
 
 ## Respuesta sintetizada (lo que hay que decir)
+
 | Compuerta | Expresión | Operación en palabras |
 |---|---|---|
 | **NOT** | `Y = A'` | invierte: vale 1 si A = 0 |
@@ -30,11 +32,10 @@ Es el TP más "de pizarrón" de todos: por cada compuerta hay que entregar **tre
 | **XOR** | `Y = A⊕B = A'B + AB'` | 1 cuando las entradas son **distintas** |
 | **NXOR** | `Y = (A⊕B)' = AB + A'B'` | 1 cuando las entradas son **iguales** (comparador) |
 
-**Cierre que suma:** NAND y NOR son **universales** (con una sola de ellas se arma cualquier función) — se
-demuestra con [[Leyes de DeMorgan]] — y por eso son las que se fabrican como circuito integrado.
-XOR/NXOR son la base de la **suma sin acarreo** ([[Semisumador]]) y de los **comparadores**.
+**Cierre que suma:** NAND y NOR son **universales** (con una sola de ellas se arma cualquier función) — se demuestra con [[Leyes de DeMorgan]] — y por eso son las que se fabrican como circuito integrado. XOR/NXOR son la base de la **suma sin acarreo** ([[Semisumador]]) y de los **comparadores**.
 
 ## Tabla de verdad completa (para copiar en el pizarrón)
+
 | A | B | AND | NAND | OR | NOR | XOR | NXOR |
 |---|---|---|---|---|---|---|---|
 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 |
@@ -43,8 +44,7 @@ XOR/NXOR son la base de la **suma sin acarreo** ([[Semisumador]]) y de los **com
 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 
 ## Enlaces
-Desarrollo: [[Compuertas lógicas]] · Para el oral: [[Tablas de verdad de memoria]] ·
-Siguiente: [[TP2 Álgebra de Boole]]
+Desarrollo: [[Compuertas lógicas]] · Para el oral: [[Tablas de verdad de memoria]] · Siguiente: [[TP2 Álgebra de Boole]]
 
 ## Videos del TP
 
@@ -56,7 +56,4 @@ Los videos que la cátedra dejó en la consigna del TP, con el título real de c
 | ▶️ | [NAND, NOR, XOR y XNOR](https://www.youtube.com/watch?v=793BPwWgBjc) | Clases en Línea |
 
 > [!tip] Cómo usarlos
-> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
-> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
-> toma en el parcial).
-
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se toma en el parcial).

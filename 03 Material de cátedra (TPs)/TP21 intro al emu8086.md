@@ -7,24 +7,21 @@ prioridad: media
 # TP21 — Introducción al EMU8086
 
 > [!abstract] Consigna (cátedra)
-> "Ejecutar el programa emulador **EMU8086** y relacionarlo con los elementos básicos que conforman el
-> **modelo de programación del microprocesador 8086**." El TP guía la instalación, la compilación de un
-> archivo `.COM`, la ejecución **paso a paso** y el análisis del primer programa (`guia01.asm`), y termina con
-> **6 preguntas** (a–f) sobre lo observado.
+> "Ejecutar el programa emulador **EMU8086** y relacionarlo con los elementos básicos que conforman el **modelo de programación del microprocesador 8086**." El TP guía la instalación, la compilación de un archivo `.COM`, la ejecución **paso a paso** y el análisis del primer programa (`guia01.asm`), y termina con **6 preguntas** (a–f) sobre lo observado.
 
 > [!note] Unidad y encuadre
-> El TP está enmarcado en **"Procesadores / Unidad 4"** y su bibliografía es **Brey, *Los microprocesadores
-> Intel***. No es un tema de la matriz del final, pero sirve para **ver con los ojos** lo que en la BLUE se
-> explica con pulsos: registros, flags, pila, memoria y lenguaje de máquina.
+> El TP está enmarcado en **"Procesadores / Unidad 4"** y su bibliografía es **Brey, *Los microprocesadores Intel***. No es un tema de la matriz del final, pero sirve para **ver con los ojos** lo que en la BLUE se explica con pulsos: registros, flags, pila, memoria y lenguaje de máquina.
 
 ## Qué hay que saber para resolverlo
-1. **Qué es un emulador**: un programa que *simula* el microprocesador y muestra **registros, memoria, flags y
-   pila** mientras ejecuta. Permite ejecutar **instrucción por instrucción (single step)**.
-2. **El modelo de programación del 8086**: 14 registros de 16 bits (`AX BX CX DX`, `SP BP SI DI`,
-   `CS DS SS ES`, `IP`, `FLAGS`); los cuatro primeros se pueden usar como dos registros de 8 bits (`AH/AL`).
-3. **Segmento : offset**: la dirección física se calcula `CS × 10h + IP` (20 bits). En un `.COM`, `CS = DS = SS`
-   y el programa arranca en el offset **100h**.
+
+1. **Qué es un emulador**: un programa que *simula* el microprocesador y muestra **registros, memoria, flags y pila** mientras ejecuta. Permite ejecutar **instrucción por instrucción (single step)**.
+
+2. **El modelo de programación del 8086**: 14 registros de 16 bits (`AX BX CX DX`, `SP BP SI DI`, `CS DS SS ES`, `IP`, `FLAGS`); los cuatro primeros se pueden usar como dos registros de 8 bits (`AH/AL`).
+
+3. **Segmento : offset**: la dirección física se calcula `CS × 10h + IP` (20 bits). En un `.COM`, `CS = DS = SS` y el programa arranca en el offset **100h**.
+
 4. **Ensamblador vs lenguaje de máquina**: `mov AH, 7Ah` (legible) se ensambla como `B4 7A` (bytes).
+
 5. **Bases numéricas en el código**: `7Ah` hexadecimal, `11001111b` binario, `99` decimal, `'A'` carácter.
 
 ## El programa del TP, anotado
@@ -41,12 +38,12 @@ mov CX, 0ABCDh    ; CX = ABCD hexadecimal
 mov DX, 6540      ; DX = 6540 decimal (= 198Ch)
 ret               ; termina: vuelve al sistema (que ejecuta INT 20h)
 ```
+
 > [!warning] Ojo con el orden
-> `mov AX, 100` **borra** lo que se había cargado en `AH` dos instrucciones antes: `AX` es el registro de 16
-> bits que **contiene** a `AH` (bits altos) y `AL` (bajos). Lo mismo con `BX`, `CX` y `DX`. Ese es el detalle
-> que hace que el ejercicio "no dé lo que uno esperaba".
+> `mov AX, 100` **borra** lo que se había cargado en `AH` dos instrucciones antes: `AX` es el registro de 16 bits que **contiene** a `AH` (bits altos) y `AL` (bajos). Lo mismo con `BX`, `CX` y `DX`. Ese es el detalle que hace que el ejercicio "no dé lo que uno esperaba".
 
 ## Las respuestas a las 6 preguntas del TP
+
 | # | Pregunta | Respuesta |
 |---|---|---|
 | **a** | ¿Por qué se incluye `org 100h`? | Porque un programa **`.COM`** se carga en el **Program Segment Prefix**, que ocupa los primeros **256 bytes (100h)**. `ORG 100h` le dice al ensamblador que **las direcciones del programa empiezan en 100h**, para que las etiquetas y los saltos apunten bien. |
@@ -57,6 +54,7 @@ ret               ; termina: vuelve al sistema (que ejecuta INT 20h)
 | **f** | ¿Por qué los `OFFSET` no se incrementan en una cantidad constante? | Porque las instrucciones **no ocupan lo mismo**: `mov AH,7Ah` = **2 bytes**, `mov AX,100` = **3 bytes**, `mov CX,0ABCDh` = **3 bytes**. El offset avanza **el largo de cada instrucción**, que es variable. |
 
 ## Tabla 1 del TP (lo que hay que completar)
+
 | SEGM (CS) | OFFSET | Lenguaje de máquina | Ensamblador |
 |---|---|---|---|
 | 0B56 | 0100 | `B4 7A` | `mov AH, 7A` |
@@ -70,22 +68,28 @@ ret               ; termina: vuelve al sistema (que ejecuta INT 20h)
 | 0B56 | 0000 | `INT 20H` | (lo ejecuta el sistema al volver del `ret`) |
 
 > [!tip] Cómo verificar en el emulador
-> Después de **compilar** (`compile`) y abrir el emulador, usá **`single step`** y mirá cómo cambian
-> **solo algunos bytes de los registros** en cada paso (por ejemplo, `AH` cambia sin tocar `AL`). Al final,
-> `IP` salta a `0000` del segmento `CS` y se ejecuta `INT 20H`: el programa termina y vuelve al sistema.
+> Después de **compilar** (`compile`) y abrir el emulador, usá **`single step`** y mirá cómo cambian **solo algunos bytes de los registros** en cada paso (por ejemplo, `AH` cambia sin tocar `AL`). Al final, `IP` salta a `0000` del segmento `CS` y se ejecuta `INT 20H`: el programa termina y vuelve al sistema.
 
 ## Cómo se conecta con la materia
-- Los **registros índice** `SI`/`DI` del 8086 son los `RIF`/`RID` de la BLUE indexada
-  ([[Registros base e índice]]).
+
+- Los **registros índice** `SI`/`DI` del 8086 son los `RIF`/`RID` de la BLUE indexada ([[Registros base e índice]]).
+
 - Los **registros de segmento** cumplen el papel del **registro base** ([[Registros base e índice]]).
+
 - El **flag IF** de `FLAGS` es el `SI` de las interrupciones de la BLUE ([[Interrupciones y entrada-salida]]).
+
 - `IP` es el **PC** de la BLUE; `CS:IP` es la dirección efectiva ([[Flujo de información en BLUE (datos y direcciones)]]).
+
 - Todo esto en un chip real: [[El 8086 como CPU convencional (TP21)]].
 
 ## Errores típicos
+
 - Cargar `AH` y después `AX` y esperar que `AH` conserve su valor (se pisa).
+
 - Decir que `MOV` "mueve": en realidad **copia**.
+
 - Confundir **offset** (posición dentro del segmento, 16 bits) con **dirección física** (20 bits).
+
 - Pensar que `ret` termina el programa: **retorna**; quien termina es `INT 20h`.
 
 ## Videos del TP
@@ -98,11 +102,7 @@ Los videos que la cátedra dejó en la consigna del TP, con el título real de c
 | 📁 | [Material del TP en Google Drive](https://drive.google.com/file/d/1WJBJFrOIoJn9GwHm3EtbM2gDHFS-ANtZ/view) | — |
 
 > [!tip] Cómo usarlos
-> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo
-> desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se
-> toma en el parcial).
+> Mirá el video **después** de leer el subtema: sirve para ver el circuito moverse, no para aprenderlo desde cero. Si el video y la nota no coinciden en algo, **manda la nota** (está alineada con lo que se toma en el parcial).
 
 ## Relacionado
-[[El 8086 como CPU convencional (TP21)]] · [[00 Índice de TPs y qué aporta cada uno]] ·
-[[Registros de la CPU]] · [[Lenguaje máquina y clasificación de instrucciones]] ·
-[[Espacio de direccionamiento y cálculo de CodOp-Dirección]]
+[[El 8086 como CPU convencional (TP21)]] · [[00 Índice de TPs y qué aporta cada uno]] · [[Registros de la CPU]] · [[Lenguaje máquina y clasificación de instrucciones]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]]

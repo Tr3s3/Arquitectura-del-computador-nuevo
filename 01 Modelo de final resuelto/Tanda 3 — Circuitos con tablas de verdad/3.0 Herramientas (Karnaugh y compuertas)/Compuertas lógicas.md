@@ -7,24 +7,15 @@ prioridad: maxima
 # Compuertas lógicas
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En `Apoyo a la pregunta/`:** [[Mintérminos y maxtérminos]]
-> **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Leyes de DeMorgan]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.0 Herramientas]].
-
+> **En `Apoyo a la pregunta/`:** [[Mintérminos y maxtérminos]] **En otra tanda o unidad:** [[Álgebra de Boole — postulados y teoremas]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Leyes de DeMorgan]] (Tanda 3 · 3.7 Álgebra de Boole y DeMorgan) · [[Flip-Flops SR, D, JK y T]] (Tanda 3 · 3.6 Flip-flops D, T y RS) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 3.0 Herramientas]].
 
 > [!abstract] En una frase
-> Las **compuertas** son los componentes físicos que realizan las operaciones del álgebra de Boole: **AND, OR,
-> NOT** (las tres básicas), más **NAND, NOR, XOR y XNOR** (derivadas). Cada una tiene su **símbolo**, su **tabla
-> de verdad** y su **función booleana**, y con ellas se dibuja cualquier circuito combinacional de la materia.
+> Las **compuertas** son los componentes físicos que realizan las operaciones del álgebra de Boole: **AND, OR, NOT** (las tres básicas), más **NAND, NOR, XOR y XNOR** (derivadas). Cada una tiene su **símbolo**, su **tabla de verdad** y su **función booleana**, y con ellas se dibuja cualquier circuito combinacional de la materia.
 
 > [!note] Si es la primera vez que ves esto
-> Una compuerta es un **ladrillo**. Tiene una forma (el símbolo, que hay que saber dibujar), una **tabla de verdad**
-> (qué sale según lo que entra) y una **fórmula**. Igual que con ladrillos, con pocos tipos distintos se construye
-> cualquier casa: con **AND + OR + NOT** podés hacer *cualquier* función lógica, y con **NAND sola** también.
+> Una compuerta es un **ladrillo**. Tiene una forma (el símbolo, que hay que saber dibujar), una **tabla de verdad** (qué sale según lo que entra) y una **fórmula**. Igual que con ladrillos, con pocos tipos distintos se construye cualquier casa: con **AND + OR + NOT** podés hacer *cualquier* función lógica, y con **NAND sola** también.
 >
-> Lo único que hay que tener claro es esto: **la tabla de verdad manda**. Si el profesor te da una tabla y te pide
-> el circuito, la tabla es la especificación; las compuertas son la implementación. Y si te da el circuito, podés
-> leer la función y escribir la tabla. Todo el final de la 3.ª tanda es ese ida y vuelta.
+> Lo único que hay que tener claro es esto: **la tabla de verdad manda**. Si el profesor te da una tabla y te pide el circuito, la tabla es la especificación; las compuertas son la implementación. Y si te da el circuito, podés leer la función y escribir la tabla. Todo el final de la 3.ª tanda es ese ida y vuelta.
 
 ---
 
@@ -64,16 +55,19 @@ Cualquier función en **suma de productos** se dibuja en **dos niveles**:
 ```
 
 **Receta (5 pasos, sirve para cualquier ejercicio):**
+
 1. Escribir la función (de la tabla o del mapa de Karnaugh).
+
 2. Identificar los **productos** (términos separados por `+`).
+
 3. Un **AND** por producto, con las entradas que correspondan; los negados salen de un **inversor**.
+
 4. Un **OR** que recibe todas las salidas de los AND.
+
 5. Contar compuertas y, si se puede, **simplificar** (menos compuertas, menos retardo).
 
 > [!tip] Convenciones de dibujo (para que el dibujo "se entienda")
-> Entradas **a la izquierda**, salidas **a la derecha**; el flujo va de arriba-izquierda a abajo-derecha; un
-> punto grande donde hay conexión, ninguna marca donde los cables se cruzan sin tocarse; **nombrar los cables
-> intermedios** (S1, C1, X…) — eso es lo que hace que el circuito se pueda explicar en voz alta.
+> Entradas **a la izquierda**, salidas **a la derecha**; el flujo va de arriba-izquierda a abajo-derecha; un punto grande donde hay conexión, ninguna marca donde los cables se cruzan sin tocarse; **nombrar los cables intermedios** (S1, C1, X…) — eso es lo que hace que el circuito se pueda explicar en voz alta.
 
 ---
 
@@ -86,9 +80,7 @@ Con **sólo NAND** (o **sólo NOR**) se construye cualquier función:
    A·B     = NAND(NAND(A,B) , NAND(A,B))       A+B     = NOR(NOR(A,B) , NOR(A,B))
    A+B     = NAND(A', B')                      A·B     = NOR(A', B')
 ```
-**Y toda función AND-OR pasa a NAND-NAND** con DeMorgan: `A·B + C·D = NAND(NAND(A,B), NAND(C,D))`.
-Es la razón por la que en los chips reales casi todo se hace con NAND: **un solo tipo de compuerta** en la
-línea de fabricación ⇒ más barato ([[Leyes de DeMorgan]]).
+**Y toda función AND-OR pasa a NAND-NAND** con DeMorgan: `A·B + C·D = NAND(NAND(A,B), NAND(C,D))`. Es la razón por la que en los chips reales casi todo se hace con NAND: **un solo tipo de compuerta** en la línea de fabricación ⇒ más barato ([[Leyes de DeMorgan]]).
 
 ---
 
@@ -104,30 +96,24 @@ línea de fabricación ⇒ más barato ([[Leyes de DeMorgan]]).
 | **Familia lógica** (TTL/CMOS) | tecnología de fabricación | niveles de tensión, velocidad y consumo |
 
 > [!example] El dato que conecta con la materia
-> La **BLUE** tiene un **bus común**: todos los registros y la memoria comparten las mismas líneas. Eso sólo
-> funciona porque cada registro tiene **buffers de 3 estados** en su salida: cuando no está seleccionado, queda
-> en **alta impedancia** y "suelta" el cable.
+> La **BLUE** tiene un **bus común**: todos los registros y la memoria comparten las mismas líneas. Eso sólo funciona porque cada registro tiene **buffers de 3 estados** en su salida: cuando no está seleccionado, queda en **alta impedancia** y "suelta" el cable.
 
 ---
 
 ## 5. Cómo responderlo en el final (2–3 minutos)
 
-**Movimiento 1 — definición (20 s).** "Las compuertas son la implementación física de AND, OR y NOT; de ellas se
-derivan NAND, NOR, XOR y XNOR."
+**Movimiento 1 — definición (20 s).** "Las compuertas son la implementación física de AND, OR y NOT; de ellas se derivan NAND, NOR, XOR y XNOR."
 
-**Movimiento 2 — dibujar y tabular (60 s).** Dibujar AND, OR, NOT y **NAND** con su tabla de verdad (es lo
-mismo que preguntan siempre).
+**Movimiento 2 — dibujar y tabular (60 s).** Dibujar AND, OR, NOT y **NAND** con su tabla de verdad (es lo mismo que preguntan siempre).
 
-**Movimiento 3 — XOR (30 s).** "Da 1 con un número impar de unos; es el detector de paridad y está en el sumador
-(`S = A ⊕ B ⊕ Cin`)."
+**Movimiento 3 — XOR (30 s).** "Da 1 con un número impar de unos; es el detector de paridad y está en el sumador (`S = A ⊕ B ⊕ Cin`)."
 
-**Movimiento 4 — universalidad (30 s).** "Con NAND sola se hace todo: `A' = NAND(A,A)`, y `AB` con dos NAND; por
-eso los chips se fabrican con un solo tipo."
+**Movimiento 4 — universalidad (30 s).** "Con NAND sola se hace todo: `A' = NAND(A,A)`, y `AB` con dos NAND; por eso los chips se fabrican con un solo tipo."
 
-**Movimiento 5 — cierre (20 s).** "La tabla de verdad manda: de la tabla saco la función, de la función el
-circuito. Y con salidas de **3 estados** los chips comparten el bus común de la BLUE."
+**Movimiento 5 — cierre (20 s).** "La tabla de verdad manda: de la tabla saco la función, de la función el circuito. Y con salidas de **3 estados** los chips comparten el bus común de la BLUE."
 
 ### Repreguntas típicas
+
 | Repregunta | Respuesta corta |
 |---|---|
 | ¿Cuántas compuertas hay? | **3 básicas** (AND, OR, NOT) y **4 derivadas** (NAND, NOR, XOR, XNOR) |
@@ -141,10 +127,15 @@ circuito. Y con salidas de **3 estados** los chips comparten el bus común de la
 ---
 
 ## 6. Errores típicos
+
 - Dibujar el **XOR** como un OR común (le falta la doble curva o la diferencia en la tabla).
+
 - Confundir la burbuja de la **entrada** (niega la entrada) con la de la **salida** (niega el resultado).
+
 - Decir que NAND y AND "son lo mismo con otro nombre": la tabla es **complementaria**.
+
 - Escribir `Y = A + B` cuando la tabla es de XOR (con `11` la XOR da **0**, el OR da 1).
+
 - Dibujar el circuito y **no simplificar**: se paga en compuertas y en retardo.
 
 ---
@@ -164,5 +155,4 @@ circuito. Y con salidas de **3 estados** los chips comparten el bus común de la
 ---
 
 ## Relacionado
-[[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]] · [[Mintérminos y maxtérminos]] ·
-[[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]] · [[Semisumador]] · [[Sumador completo]]
+[[Álgebra de Boole — postulados y teoremas]] · [[Leyes de DeMorgan]] · [[Mintérminos y maxtérminos]] · [[Decodificador]] · [[Codificador]] · [[Multiplexor]] · [[Demultiplexor]] · [[Semisumador]] · [[Sumador completo]]

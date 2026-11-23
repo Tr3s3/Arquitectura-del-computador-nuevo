@@ -7,31 +7,21 @@ prioridad: maxima
 # BLUE vs BLUE indexada — qué cambia y por qué
 
 > [!important] Qué necesitás para responder esta pregunta
-> **En `Apoyo a la pregunta/`:** [[BLUE indexada (RIF, RID, nuevo formato)]]
-> **En otra tanda o unidad:** [[Ciclo de LDA indexada (los 24 pulsos)]] (Tanda 1 · 1.3 Ciclo de LDA indexada (24 pulsos)) · [[Registros base e índice]] (Tanda 2 · 2.9 Registros base e índice) · [[Sumador completo]] (Tanda 3 · 3.8 Sumadores) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso)
-> El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.2 BLUE vs indexada]].
-
+> **En `Apoyo a la pregunta/`:** [[BLUE indexada (RIF, RID, nuevo formato)]] **En otra tanda o unidad:** [[Ciclo de LDA indexada (los 24 pulsos)]] (Tanda 1 · 1.3 Ciclo de LDA indexada (24 pulsos)) · [[Registros base e índice]] (Tanda 2 · 2.9 Registros base e índice) · [[Sumador completo]] (Tanda 3 · 3.8 Sumadores) · [[Formato de la instrucción (4 formatos)]] (Tanda 1 · 1.7 Formato de la instrucción (4 formatos)) · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] (Tanda 2 · 2.5 Las 16 instrucciones, pulso por pulso) El detalle de **para qué sirve cada apoyo** está en [[00 Apoyos — 1.2 BLUE vs indexada]].
 
 > [!abstract] En una frase
-> La **BLUE** es la máquina elemental del apunte de Foster: 16 instrucciones, 4096 celdas, instrucción de
-> una palabra con **4 bits de opcode + 12 de dirección** y un solo modo de direccionamiento (directo).
-> La **BLUE indexada** es la misma máquina con hardware agregado —**RIF, RID, registro base, sumador de
-> direcciones, dos registros de entrada W y X y un decodificador del campo modificador**— para tener
-> **32 instrucciones, 65536 celdas y 4 modos de direccionamiento**, con instrucciones de **2 palabras**.
+> La **BLUE** es la máquina elemental del apunte de Foster: 16 instrucciones, 4096 celdas, instrucción de una palabra con **4 bits de opcode + 12 de dirección** y un solo modo de direccionamiento (directo). La **BLUE indexada** es la misma máquina con hardware agregado —**RIF, RID, registro base, sumador de direcciones, dos registros de entrada W y X y un decodificador del campo modificador**— para tener **32 instrucciones, 65536 celdas y 4 modos de direccionamiento**, con instrucciones de **2 palabras**.
 
 ## Partamos de cero: qué es "indexar" y por qué alguien querría hacerlo
-Imaginate que en la memoria hay 100 números guardados uno al lado del otro, en las direcciones 1000, 1001,
-1002… y querés sumarlos. Con la BLUE original tendrías que escribir **100 instrucciones distintas**
-(`ADD 1000`, `ADD 1001`, …), cada una con su dirección "cableada" en la instrucción. Funciona, pero:
-- el programa ocupa 100 palabras de memoria,
-- si querés sumar 200 números, reescribís todo,
-- y el programa **sólo sirve para esa posición de memoria**: si lo cargás en otra zona, todas las
-  direcciones quedan mal.
+Imaginate que en la memoria hay 100 números guardados uno al lado del otro, en las direcciones 1000, 1001, 1002… y querés sumarlos. Con la BLUE original tendrías que escribir **100 instrucciones distintas** (`ADD 1000`, `ADD 1001`, …), cada una con su dirección "cableada" en la instrucción. Funciona, pero:
 
-La solución es **separar la dirección en dos partes**: una parte fija que dice la instrucción (el
-*desplazamiento* o *offset*) y una parte variable que está en un **registro** de la CPU. La dirección
-efectiva es la **suma** de las dos. Eso es indexar: `EA = desplazamiento + registro índice`. Con eso, el
-mismo código recorre cualquier arreglo y cualquier posición (un lazo en lugar de 100 instrucciones).
+- el programa ocupa 100 palabras de memoria,
+
+- si querés sumar 200 números, reescribís todo,
+
+- y el programa **sólo sirve para esa posición de memoria**: si lo cargás en otra zona, todas las direcciones quedan mal.
+
+La solución es **separar la dirección en dos partes**: una parte fija que dice la instrucción (el *desplazamiento* o *offset*) y una parte variable que está en un **registro** de la CPU. La dirección efectiva es la **suma** de las dos. Eso es indexar: `EA = desplazamiento + registro índice`. Con eso, el mismo código recorre cualquier arreglo y cualquier posición (un lazo en lugar de 100 instrucciones).
 
 > [!important] Las cuatro cosas que hay que poder decir de memoria
 > 1. **Qué se agregó**: RIF, RID, RB, sumador de direcciones, W y X, decodificador del modificador.
@@ -59,33 +49,20 @@ mismo código recorre cualquier arreglo y cualquier posición (un lazo en lugar 
 
 ## Qué significa cada agregado de hardware
 
-**RIF y RID (Registros Índice Fuente y Destino)** — dos registros de 16 bits que el programador maneja con
-`ENI` (cargar valor), `INI` (incrementar), `LIX`/`SIX` (cargar/guardar desde memoria) y `RXT` (copiar entre
-registros). Son los "punteros" que permiten recorrer arreglos.
+**RIF y RID (Registros Índice Fuente y Destino)** — dos registros de 16 bits que el programador maneja con `ENI` (cargar valor), `INI` (incrementar), `LIX`/`SIX` (cargar/guardar desde memoria) y `RXT` (copiar entre registros). Son los "punteros" que permiten recorrer arreglos.
 
-**Sumador de direcciones (Σ)** — un sumador dedicado a calcular `dirección + índice`. ¿Por qué uno aparte y
-no la ALU? Porque **no gasta tiempo de ALU**: mientras el sumador de direcciones calcula la dirección del
-operando, la ALU puede estar resolviendo otra cosa. Sus entradas son **W** y **X** (dos registros
-temporarios): en uno se carga el campo de dirección de la instrucción y en el otro el índice (o el 0 del modo
-directo).
+**Sumador de direcciones (Σ)** — un sumador dedicado a calcular `dirección + índice`. ¿Por qué uno aparte y no la ALU? Porque **no gasta tiempo de ALU**: mientras el sumador de direcciones calcula la dirección del operando, la ALU puede estar resolviendo otra cosa. Sus entradas son **W** y **X** (dos registros temporarios): en uno se carga el campo de dirección de la instrucción y en el otro el índice (o el 0 del modo directo).
 
-**Registro Base (RB)** — se suma **siempre** que se hace una referencia a memoria, y el programador común no
-lo toca. Sirve para **reubicar** programas: si el programa se cargó en 5000, se pone 5000 en RB y todas las
-direcciones quedan automáticamente desplazadas, sin tocar las constantes. Es lo que hace innecesario el
-*Relocating Loader* que tenía que distinguir direcciones de constantes al reubicar.
+**Registro Base (RB)** — se suma **siempre** que se hace una referencia a memoria, y el programador común no lo toca. Sirve para **reubicar** programas: si el programa se cargó en 5000, se pone 5000 en RB y todas las direcciones quedan automáticamente desplazadas, sin tocar las constantes. Es lo que hace innecesario el *Relocating Loader* que tenía que distinguir direcciones de constantes al reubicar.
 
-**Decodificador del campo modificador** — un decodificador de 2 bits que, además del decodificador de
-instrucciones, elige el modo: 00 directo, 01 indirecto, 10 índice RIF, 11 índice RID.
+**Decodificador del campo modificador** — un decodificador de 2 bits que, además del decodificador de instrucciones, elige el modo: 00 directo, 01 indirecto, 10 índice RIF, 11 índice RID.
 
 > [!example] El mismo programa en las dos máquinas
 > **BLUE:** `LDA 1000` — 1 palabra; carga el contenido de la celda 1000. Siempre la misma celda.
 >
-> **BLUE indexada:** `LDA 3, 1000` — 2 palabras; si RID contiene 5000, carga `M[1000 + 5000] = M[6000]`.
-> Cambiando RID se recorre todo el arreglo **sin cambiar la instrucción**.
+> **BLUE indexada:** `LDA 3, 1000` — 2 palabras; si RID contiene 5000, carga `M[1000 + 5000] = M[6000]`. Cambiando RID se recorre todo el arreglo **sin cambiar la instrucción**.
 >
-> Y `LDA 0, 1000` es exactamente la `LDA 1000` de la BLUE original: **las viejas instrucciones son un caso
-> particular de las nuevas** (modificador 0). Eso es lo que hay que decir en el final: la indexada **no
-> reemplaza** a la BLUE, la **extiende**.
+> Y `LDA 0, 1000` es exactamente la `LDA 1000` de la BLUE original: **las viejas instrucciones son un caso particular de las nuevas** (modificador 0). Eso es lo que hay que decir en el final: la indexada **no reemplaza** a la BLUE, la **extiende**.
 
 ## El formato, dibujado
 
@@ -103,28 +80,32 @@ BLUE INDEXADA (32 bits = 2 palabras)
 └────────┴──────┴──────────┴──────────────────────┘
 ```
 
-Como la instrucción **ya no entra en una palabra**, el ciclo de búsqueda trae sólo la primera palabra y el
-campo de dirección se busca en un **ciclo de máquina extra** (por eso la `LDA` pasa de 16 a 24 pulsos).
-Desarrollo completo en [[Ciclo de LDA indexada (los 24 pulsos)]].
+Como la instrucción **ya no entra en una palabra**, el ciclo de búsqueda trae sólo la primera palabra y el campo de dirección se busca en un **ciclo de máquina extra** (por eso la `LDA` pasa de 16 a 24 pulsos). Desarrollo completo en [[Ciclo de LDA indexada (los 24 pulsos)]].
 
 ## Cómo responderlo en el final (2–3 minutos)
-1. **Definición**: "la BLUE es la máquina elemental de Foster; la indexada es la BLUE con registros índice,
-   registro base y sumador de direcciones para agregar modos de direccionamiento".
+
+1. **Definición**: "la BLUE es la máquina elemental de Foster; la indexada es la BLUE con registros índice, registro base y sumador de direcciones para agregar modos de direccionamiento".
+
 2. **Dibujo**: los dos formatos, uno arriba del otro (4+12 vs 5+2+9+16). El dibujo ya explica la mitad.
+
 3. **Tabla**: memoria, opcodes, tamaño de instrucción, modos, registros nuevos, ciclos.
+
 4. **Por qué**: recorrer arreglos con un lazo, reubicar programas, direccionar más memoria.
-5. **Cierre**: "las 16 instrucciones de la BLUE original siguen existiendo con modificador 0: la indexada es
-   una **extensión compatible**, y el precio es instrucciones de 2 palabras y ciclos más largos".
+
+5. **Cierre**: "las 16 instrucciones de la BLUE original siguen existiendo con modificador 0: la indexada es una **extensión compatible**, y el precio es instrucciones de 2 palabras y ciclos más largos".
 
 ## Errores típicos
+
 - Decir que la BLUE indexada **reemplaza** a la BLUE: la extiende.
-- Confundir los **4 modos** del modificador (0 directo, 1 indirecto, 2 RIF, 3 RID) con los 7 modos teóricos
-  de los libros. En el final de esta cátedra, los 4 de la BLUE indexada son los que importan:
-  ver [[Modos de direccionamiento]].
+
+- Confundir los **4 modos** del modificador (0 directo, 1 indirecto, 2 RIF, 3 RID) con los 7 modos teóricos de los libros. En el final de esta cátedra, los 4 de la BLUE indexada son los que importan: ver [[Modos de direccionamiento]].
+
 - Olvidar que el **registro base se suma siempre**; el índice se suma **sólo si el modificador lo pide**.
+
 - Decir "24 pulsos" sin poder explicar que son **3 ciclos de máquina de 8**.
 
 ## Para ampliar: qué leer y qué buscar
+
 | Fuente | Dónde | Qué buscar | Para qué te sirve |
 |---|---|---|---|
 | **Apuntes de cátedra**, *Unidad 5 — Arquitectura convencional* | secciones **"Nuevo hardware, nuevas instrucciones"** (registros índice, sumador de direcciones, decodificador del modificador), **"Registro base"** y **"BLUE Indexada"** (con la figura de la máquina) | la lista completa de lo que se agrega y el ejemplo del *Relocating Loader* (1000 → 5000) | **Es la fuente exacta**: la comparación y el diagrama salen de ahí |
@@ -137,6 +118,4 @@ Desarrollo completo en [[Ciclo de LDA indexada (los 24 pulsos)]].
 | **Hamacher, Vranesic, Zaky, *Organización de computadoras*** | capítulo de **direccionamiento** | indexación, registro base, reubicación | Formalización del mismo concepto |
 
 ## Relacionado
-[[Ciclo de LDA indexada (los 24 pulsos)]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] ·
-[[Registros base e índice]] · [[Modos de direccionamiento]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] ·
-[[TP15 Arquitectura de Von Neumann (IAS)]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]]
+[[Ciclo de LDA indexada (los 24 pulsos)]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Registros base e índice]] · [[Modos de direccionamiento]] · [[Espacio de direccionamiento y cálculo de CodOp-Dirección]] · [[TP15 Arquitectura de Von Neumann (IAS)]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]]

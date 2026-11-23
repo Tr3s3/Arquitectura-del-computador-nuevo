@@ -5,8 +5,7 @@ prioridad: maxima
 # Tanda 3 — Circuitos con tablas de verdad (peso 12, la más pesada)
 
 > [!warning] El orden obligatorio de cada ítem
-> **1) tabla de verdad → 2) función → 3) simplificación (Karnaugh si se pide) → 4) circuito dibujado.**
-> Si falta el circuito o la función, la tabla sola **no alcanza**. Se rinde **dibujando**.
+> **1) tabla de verdad → 2) función → 3) simplificación (Karnaugh si se pide) → 4) circuito dibujado.** Si falta el circuito o la función, la tabla sola **no alcanza**. Se rinde **dibujando**.
 
 | # | Ítem de la matriz | Carpeta | Archivos que corresponden |
 |---|---|---|---|
@@ -22,21 +21,24 @@ prioridad: maxima
 | 3.9 | **El RI y 3 ejemplos de instrucciones** | `3.9 El RI y 3 ejemplos de instrucciones/` | [[Máquina BLUE — arquitectura y conjunto de instrucciones]] |
 
 > [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
-> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**:
-> qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos
-> que viven en otras tandas. Es lo primero que muestra la nota principal.
-
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**: qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas. Es lo primero que muestra la nota principal.
 
 ---
 
 ## El orden en que conviene estudiarla
 
 1. **3.7 Boole y DeMorgan** — el idioma con el que se escribe todo lo demás.
+
 2. **3.0 Karnaugh y compuertas** — cómo se simplifica y cómo se dibuja.
+
 3. **3.1 a 3.4** los cuatro bloques combinacionales (van juntos, se preguntan juntos).
+
 4. **3.6 Flip-flops** — ecuaciones características con su mapa.
+
 5. **3.5 RS → JK** — la conversión con tabla de excitación y dos mapas.
+
 6. **3.8 Sumadores** — el circuito aritmético (y su versión de 4 bits).
+
 7. **3.9 El RI y los 3 ejemplos** — la parte "de máquina" de esta tanda.
 
 ---
@@ -57,11 +59,9 @@ prioridad: maxima
 | Sumador completo | 8 filas | `S = A⊕B⊕Cin`, `Cout = AB + Cin(A⊕B)` | 2 XOR + 2 AND + 1 OR |
 
 > [!tip] Truco de examen
-> Antes de dibujar, escribí al costado **cuántas compuertas** vas a usar y **cuáles**. Te ordena el dibujo y el
-> profesor ve que sabés lo que estás haciendo.
+> Antes de dibujar, escribí al costado **cuántas compuertas** vas a usar y **cuáles**. Te ordena el dibujo y el profesor ve que sabés lo que estás haciendo.
 
 ---
 
 ## Relacionado
-[[00 Índice — el final resuelto]] · [[00 Tanda 1 — índice]] · [[00 Tanda 2 — índice]] ·
-[[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]]
+[[00 Índice — el final resuelto]] · [[00 Tanda 1 — índice]] · [[00 Tanda 2 — índice]] · [[Cómo dibujar los circuitos (checklist de pizarrón)]] · [[Tablas de verdad de memoria]]

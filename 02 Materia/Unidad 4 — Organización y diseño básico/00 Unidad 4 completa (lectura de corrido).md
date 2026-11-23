@@ -6,10 +6,7 @@ unidad: 4
 # Unidad 4 — Organización y diseño básico
 
 > [!abstract] Qué es este archivo
-> **La Unidad 4 completa en un solo archivo**: los **10 subtemas** pegados uno detrás de otro,
-> con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores
-> típicos. Son **8.979 palabras** y **4 temas**. Está pensado para **leer de corrido** y para
-> **imprimir**: no hace falta abrir ninguna otra nota.
+> **La Unidad 4 completa en un solo archivo**: los **10 subtemas** pegados uno detrás de otro, con todo su contenido: definiciones, tablas, diagramas, ejemplos resueltos, figuras del libro y errores típicos. Son **8.916 palabras** y **4 temas**. Está pensado para **leer de corrido** y para **imprimir**: no hace falta abrir ninguna otra nota.
 >
 > - **Repaso rápido** (una página): [[00 Síntesis — Unidad 4]].
 > - **Buscar un punto**: el índice de abajo o el de la unidad, [[00 Unidad 4 — temas y subtemas]].
@@ -21,21 +18,31 @@ unidad: 4
 ## Contenido
 
 **4.1 Estructura y modelo von Neumann**
+
 - [[#4.1.1 Unidades funcionales de una computadora]]
+
 - [[#4.1.2 IAS y el programa almacenado]]
 
 **4.2 La máquina BLUE**
+
 - [[#4.2.1 Especificación, registros y 4096x16]]
+
 - [[#4.2.2 Los 16 opcodes octales]]
+
 - [[#4.2.3 Programar en BLUE]]
 
 **4.3 El ciclo de instrucción**
+
 - [[#4.3.1 Ciclo de reloj, de máquina y de instrucción]]
+
 - [[#4.3.2 Búsqueda, los 8 pulsos]]
+
 - [[#4.3.3 Ejecución instrucción por instrucción]]
 
 **4.4 Unidad de Control**
+
 - [[#4.4.1 Funciones y señales de control]]
+
 - [[#4.4.2 estado·pulso·instrucción y el decodificador 1-16]]
 
 ---
@@ -45,15 +52,10 @@ unidad: 4
 ### 4.1.1 Unidades funcionales de una computadora
 
 > [!abstract] En una frase
-> Una computadora tiene **cinco unidades funcionales**: **entrada**, **salida**, **memoria**, **ALU** y **unidad de
-> control**. ALU + UC + registros forman la **CPU**; todas se comunican por los **buses** de datos, de direcciones
-> y de control.
+> Una computadora tiene **cinco unidades funcionales**: **entrada**, **salida**, **memoria**, **ALU** y **unidad de control**. ALU + UC + registros forman la **CPU**; todas se comunican por los **buses** de datos, de direcciones y de control.
 
 > [!note] Si la primera vez que ves esto
-> Es una **cocina**: la **memoria** es la despensa (guarda ingredientes e instrucciones de la receta), la **ALU** es
-> la mesada donde se mezcla, la **UC** es el cocinero que lee la receta y dice qué hacer en cada momento, la
-> **entrada** es el delivery y la **salida** es el plato servido. Sin el cocinero (UC) todo está quieto; sin
-> despensa, no hay nada que cocinar.
+> Es una **cocina**: la **memoria** es la despensa (guarda ingredientes e instrucciones de la receta), la **ALU** es la mesada donde se mezcla, la **UC** es el cocinero que lee la receta y dice qué hacer en cada momento, la **entrada** es el delivery y la **salida** es el plato servido. Sin el cocinero (UC) todo está quieto; sin despensa, no hay nada que cocinar.
 
 #### Las cinco unidades
 
@@ -91,18 +93,20 @@ unidad: 4
 ```
 
 #### Qué hace la UC que no hace nadie más
+
 - **Secuencia**: decide qué se hace en cada pulso (buscar, decodificar, ejecutar).
+
 - **Decodifica**: mira el opcode del IR y activa la instrucción que corresponde.
+
 - **Emite señales**: `PC_out`, `MAR_in`, `Read`, `ALU_op`, `AC_in`… Una por microoperación.
+
 - **Atiende excepciones**: interrupciones, halt, reset.
 
 > [!tip] La frase que ordena el oral
-> "La memoria **guarda**, la ALU **calcula**, la E/S **transporta** y la UC **ordena**. El programa almacenado
-> (tema 4.1.2) es lo que permite que la UC lea sus propias órdenes de la memoria."
+> "La memoria **guarda**, la ALU **calcula**, la E/S **transporta** y la UC **ordena**. El programa almacenado (tema 4.1.2) es lo que permite que la UC lea sus propias órdenes de la memoria."
 
 #### Registros mínimos de la CPU
-`PC`, `MAR`, `MBR`, `IR`, `AC` (ver [[3.3.1 AC, PC, IR, MAR y MBR]]). Sin ellos no hay forma de recordar dónde
-estoy, a quién le hablo y qué me pidieron.
+`PC`, `MAR`, `MBR`, `IR`, `AC` (ver [[3.3.1 AC, PC, IR, MAR y MBR]]). Sin ellos no hay forma de recordar dónde estoy, a quién le hablo y qué me pidieron.
 
 > [!warning] Errores típicos
 > - Poner la ALU fuera de la CPU.
@@ -116,26 +120,18 @@ estoy, a quién le hablo y qué me pidieron.
 *Fig. 1.1 — Una visión funcional de un computador.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 32.
 
 > [!example] Recorrido de un dato
-> Escribís `2 + 3` en el teclado: **entrada** (teclado → buffer) → **memoria** (guarda los dígitos) → **ALU** (suma)
-> → **salida** (pantalla). Las cinco unidades clásicas —entrada, memoria, ALU, control y salida— unidas por buses:
-> ésa es la unidad funcional de von Neumann.
+> Escribís `2 + 3` en el teclado: **entrada** (teclado → buffer) → **memoria** (guarda los dígitos) → **ALU** (suma) → **salida** (pantalla). Las cinco unidades clásicas —entrada, memoria, ALU, control y salida— unidas por buses: ésa es la unidad funcional de von Neumann.
 
 #### Relacionado
-[[4.1.2 IAS y el programa almacenado]] · [[4.2.1 Especificación, registros y 4096x16]] ·
-[[3.1.3 Buses de datos, de direcciones y de control]] · [[Estructura básica de un computador]] ·
-[[TP15 Arquitectura de Von Neumann (IAS)]] · [[Glosario — Unidad 4]]
+[[4.1.2 IAS y el programa almacenado]] · [[4.2.1 Especificación, registros y 4096x16]] · [[3.1.3 Buses de datos, de direcciones y de control]] · [[Estructura básica de un computador]] · [[TP15 Arquitectura de Von Neumann (IAS)]] · [[Glosario — Unidad 4]]
 
 ### 4.1.2 IAS y el programa almacenado
 
 > [!abstract] En una frase
-> El modelo **von Neumann** (1945, máquina **IAS** de Princeton) guarda **instrucciones y datos en la misma
-> memoria**: la UC lee sus propias órdenes de ahí. Eso es el **programa almacenado**, y es lo que hace que una
-> computadora pueda cambiar de tarea **cargando otro programa**.
+> El modelo **von Neumann** (1945, máquina **IAS** de Princeton) guarda **instrucciones y datos en la misma memoria**: la UC lee sus propias órdenes de ahí. Eso es el **programa almacenado**, y es lo que hace que una computadora pueda cambiar de tarea **cargando otro programa**.
 
 > [!note] Si la primera vez que ves esto
-> Antes había que **recablear** la máquina para cada cálculo (como cambiar todas las fichas de un teléfono). Von
-> Neumann dijo: "guardemos también la **receta** en la misma memoria que los ingredientes y que la máquina la lea".
-> Desde entonces, programar es **escribir en memoria**, no enchufar cables.
+> Antes había que **recablear** la máquina para cada cálculo (como cambiar todas las fichas de un teléfono). Von Neumann dijo: "guardemos también la **receta** en la misma memoria que los ingredientes y que la máquina la lea". Desde entonces, programar es **escribir en memoria**, no enchufar cables.
 
 #### La máquina IAS
 
@@ -151,36 +147,41 @@ estoy, a quién le hablo y qué me pidieron.
 | Números | 40 bits, signo + 39 de magnitud (o complemento a 2 en variantes) |
 | Registros | `MBR`, `MAR`, `IR`, `IBR`, `PC`, `AC`, `MQ` |
 
-**Los registros que agrega respecto de la BLUE:** `IBR` (buffer de instrucción: guarda la segunda instrucción de la
-palabra) y `MQ` (multiplicador-cociente, para multiplicar y dividir). El `PC` apunta a **palabra**, no a
-instrucción: por eso hace falta el `IBR`.
+**Los registros que agrega respecto de la BLUE:** `IBR` (buffer de instrucción: guarda la segunda instrucción de la palabra) y `MQ` (multiplicador-cociente, para multiplicar y dividir). El `PC` apunta a **palabra**, no a instrucción: por eso hace falta el `IBR`.
 
-**Formato de instrucción IAS:** 8 bits de opcode + **12 bits de dirección** (2 instrucciones de 20 bits en 40).
-Es exactamente el mismo reparto que después usa la BLUE (4 + 12), con otro ancho de opcode.
+**Formato de instrucción IAS:** 8 bits de opcode + **12 bits de dirección** (2 instrucciones de 20 bits en 40). Es exactamente el mismo reparto que después usa la BLUE (4 + 12), con otro ancho de opcode.
 
 #### El ciclo del programa almacenado
+
 1. La UC **busca** la instrucción en la dirección del `PC`.
+
 2. La **decodifica** (mira el opcode).
+
 3. **Ejecuta**: accede a los operandos y opera.
+
 4. Vuelve a 1 con el `PC` apuntando a la siguiente.
 
-Ese lazo es igual en una IAS de 1945, en la BLUE didáctica y en un Ryzen. Cambian los anchos y las etapas, no la
-idea.
+Ese lazo es igual en una IAS de 1945, en la BLUE didáctica y en un Ryzen. Cambian los anchos y las etapas, no la idea.
 
 #### Las consecuencias (lo que se pregunta como "ventajas y desventajas")
 **A favor:**
+
 - **Flexibilidad total**: cambiar de programa = cargar otra memoria (no recablear).
-- **Autosimilitud**: como una instrucción es un dato, un programa puede **tratar a otro programa como dato**
-  (compiladores, cargadores, sistemas operativos, JIT).
+
+- **Autosimilitud**: como una instrucción es un dato, un programa puede **tratar a otro programa como dato** (compiladores, cargadores, sistemas operativos, JIT).
+
 - **Simplicidad de hardware**: una sola memoria y un solo camino.
 
 **En contra:**
-- **Cuello de botella von Neumann**: instrucciones y datos comparten el mismo bus ⇒ no se pueden traer a la vez.
-  Es la razón de las cachés separadas (I-cache / D-cache) y del pipeline.
+
+- **Cuello de botella von Neumann**: instrucciones y datos comparten el mismo bus ⇒ no se pueden traer a la vez. Es la razón de las cachés separadas (I-cache / D-cache) y del pipeline.
+
 - **Vulnerabilidad**: si se puede escribir donde hay código, se puede inyectar código (de ahí el bit NX).
+
 - **Un solo camino** ⇒ menos paralelismo que Harvard.
 
 #### Harvard (el contraste que se pregunta)
+
 | | **von Neumann** | **Harvard** |
 |---|---|---|
 | Memorias | una sola (datos + instrucciones) | **dos separadas** |
@@ -216,29 +217,27 @@ idea.
 
 #### Ejemplo resuelto (una instrucción en la IAS)
 `PC = 100`, y en `M[100]` está la instrucción "sumar `M[500]` al acumulador":
+
 1. **Búsqueda**: `MAR ← PC (100)`, `MBR ← M[100]`, `IR ← MBR`, `PC ← 101`.
+
 2. **Decodificación**: la UC ve que es un ADD y que el operando está en `500`.
+
 3. **Ejecución**: `MAR ← 500`, `MBR ← M[500]`, `AC ← AC + MBR`.
-- Termina con `PC = 101` **sin que la instrucción haya dicho nada del PC**: eso es el **programa almacenado**
-  (la próxima instrucción es la siguiente dirección de memoria).
+
+- Termina con `PC = 101` **sin que la instrucción haya dicho nada del PC**: eso es el **programa almacenado** (la próxima instrucción es la siguiente dirección de memoria).
 
 #### Relacionado
-[[4.1.1 Unidades funcionales de una computadora]] · [[4.2.1 Especificación, registros y 4096x16]] ·
-[[Estructura básica de un computador]] · [[TP15 Arquitectura de Von Neumann (IAS)]] · [[Pipeline]] · [[Glosario — Unidad 4]]
+[[4.1.1 Unidades funcionales de una computadora]] · [[4.2.1 Especificación, registros y 4096x16]] · [[Estructura básica de un computador]] · [[TP15 Arquitectura de Von Neumann (IAS)]] · [[Pipeline]] · [[Glosario — Unidad 4]]
 
 ## 4.2 La máquina BLUE
 
 ### 4.2.1 Especificación, registros y 4096x16
 
 > [!abstract] En una frase
-> La BLUE es una máquina **didáctica**: memoria de **4096 palabras de 16 bits**, **bus único**, arquitectura de
-> **acumulador**, con **8 pulsos de 125 ns** por ciclo de máquina (1 µs) y **16 instrucciones** de un solo operando
-> de dirección.
+> La BLUE es una máquina **didáctica**: memoria de **4096 palabras de 16 bits**, **bus único**, arquitectura de **acumulador**, con **8 pulsos de 125 ns** por ciclo de máquina (1 µs) y **16 instrucciones** de un solo operando de dirección.
 
 > [!note] Si la primera vez que ves esto
-> Es la computadora "de juguete" que tiene **lo justo** para mostrar cómo funciona una de verdad: un solo bus (para
-> ver la regla de una transferencia por pulso), un solo acumulador (para no perderse entre registros) y un juego
-> mínimo de instrucciones (para poder aprenderlas todas). Todo lo demás se entiende a partir de acá.
+> Es la computadora "de juguete" que tiene **lo justo** para mostrar cómo funciona una de verdad: un solo bus (para ver la regla de una transferencia por pulso), un solo acumulador (para no perderse entre registros) y un juego mínimo de instrucciones (para poder aprenderlas todas). Todo lo demás se entiende a partir de acá.
 
 #### Especificación
 
@@ -259,8 +258,7 @@ idea.
 
 #### La consola (lo que el operador manipula)
 
-La BLUE se opera desde un panel: 16 llaves para escribir, 16 luces para ver y seis pulsadores. Esto **se pregunta**
-en el oral porque explica cómo se carga un programa sin sistema operativo.
+La BLUE se opera desde un panel: 16 llaves para escribir, 16 luces para ver y seis pulsadores. Esto **se pregunta** en el oral porque explica cómo se carga un programa sin sistema operativo.
 
 | Elemento | Función |
 |---|---|
@@ -275,8 +273,7 @@ en el oral porque explica cómo se carga un programa sin sistema operativo.
 
 > [!tip] Cómo se carga un programa a mano
 > 1. **LOAD PC** con la primera dirección del programa. 2. Escribir la instrucción con las llaves. 3. **DEPOSIT**
-> (la guarda y avanza el `PC`). 4. Repetir 2 y 3 con cada palabra. 5. **LOAD PC** otra vez al inicio y **START**.
-> Para verificar lo cargado: **LOAD PC** + **EXAMINE** repetidos.
+> (la guarda y avanza el `PC`). 4. Repetir 2 y 3 con cada palabra. 5. **LOAD PC** otra vez al inicio y **START**. Para verificar lo cargado: **LOAD PC** + **EXAMINE** repetidos.
 
 #### Los registros
 
@@ -299,14 +296,12 @@ en el oral porque explica cómo se carga un programa sin sistema operativo.
 
 #### Direccionamiento
 La instrucción trae **12 bits de dirección**, que se usan de dos formas:
-- **Directa**: `EA = campo` (la dirección tal cual).
-- **Para E/S**: los **6 bits bajos del IR** (`IR5–IR0`) se mandan por las líneas de selección de dispositivo ⇒
-  **64 dispositivos** (0 a 63). El campo de dirección de `INP`/`OUT` se escribe `XXYY`: la parte `XX` se ignora y
-  `YY` es el número de dispositivo. El **dato** que se transfiere es de **8 bits** (los 8 bajos del `AC` al entrar,
-  los 8 altos al salir).
 
-La BLUE **básica no tiene indexación**: para recorrer un arreglo hay que **modificar la instrucción** (auto
-modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE indexada** (24 pulsos).
+- **Directa**: `EA = campo` (la dirección tal cual).
+
+- **Para E/S**: los **6 bits bajos del IR** (`IR5–IR0`) se mandan por las líneas de selección de dispositivo ⇒ **64 dispositivos** (0 a 63). El campo de dirección de `INP`/`OUT` se escribe `XXYY`: la parte `XX` se ignora y `YY` es el número de dispositivo. El **dato** que se transfiere es de **8 bits** (los 8 bajos del `AC` al entrar, los 8 altos al salir).
+
+La BLUE **básica no tiene indexación**: para recorrer un arreglo hay que **modificar la instrucción** (auto modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE indexada** (24 pulsos).
 
 #### Tiempos
 ```
@@ -317,9 +312,7 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 ```
 
 > [!tip] La justificación del "8"
-> La búsqueda usa **7 pulsos** de trabajo real; el 8.º es la **reescritura** de la memoria de ferrita (se leía
-> destruyendo el dato). Por eso el ciclo quedó en **8**: siete de operación y uno de reescritura. Es la respuesta
-> que se espera cuando preguntan "¿por qué 8 y no 7?".
+> La búsqueda usa **7 pulsos** de trabajo real; el 8.º es la **reescritura** de la memoria de ferrita (se leía destruyendo el dato). Por eso el ciclo quedó en **8**: siete de operación y uno de reescritura. Es la respuesta que se espera cuando preguntan "¿por qué 8 y no 7?".
 
 > [!warning] Errores típicos
 > - Decir 4096 **bytes**: son 4096 **palabras** de 16 bits (8 KB de 8 bits).
@@ -327,10 +320,13 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 > - Decir que el acumulador es opcional: en esta arquitectura **todo** pasa por el `AC`.
 
 #### Ejemplo resuelto (dimensionar la BLUE)
+
 - `4096 palabras × 16 bits`: `4096 = 2¹²` ⇒ **12 bits de dirección** y **16 bits de dato**.
+
 - Capacidad total: `4096 × 16 = 65 536 bits = 8 KB`.
-- Instrucción = **4 bits de opcode + 12 de dirección** = 16 bits ⇒ **16 instrucciones** distintas y direcciona
-  **cualquier** palabra de la memoria.
+
+- Instrucción = **4 bits de opcode + 12 de dirección** = 16 bits ⇒ **16 instrucciones** distintas y direcciona **cualquier** palabra de la memoria.
+
 - Tiempo: 8 pulsos de 125 ns = **1 µs** por ciclo de máquina ⇒ **1 000 000** de ciclos por segundo.
 
 #### Figura de clase
@@ -354,20 +350,15 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 > Los seis pasos muestran cómo cambian `PC`, `IR`, `MAR`, `MDR` y el acumulador en cada instrucción. Es la misma mecánica de la BLUE: la memoria siempre se toca a través de `MAR` y `MDR`.
 
 #### Relacionado
-[[4.2.2 Los 16 opcodes octales]] · [[4.2.3 Programar en BLUE]] · [[4.3.2 Búsqueda, los 8 pulsos]] ·
-[[Máquina BLUE — arquitectura y conjunto de instrucciones]] · [[TP16 Ciclo de instrucción básico]] · [[Glosario — Unidad 4]]
+[[4.2.2 Los 16 opcodes octales]] · [[4.2.3 Programar en BLUE]] · [[4.3.2 Búsqueda, los 8 pulsos]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · [[TP16 Ciclo de instrucción básico]] · [[Glosario — Unidad 4]]
 
 ### 4.2.2 Los 16 opcodes octales
 
 > [!abstract] En una frase
-> La BLUE tiene **16 instrucciones**, numeradas en **octal** del `00` al `17`: 4 bits de código de operación y 12
-> bits de dirección. Ocho se ejecutan en **un ciclo**, dos usan **dos ciclos** (LDA y STA) y dos hablan con
-> periféricos (**INP**, **OUT**).
+> La BLUE tiene **16 instrucciones**, numeradas en **octal** del `00` al `17`: 4 bits de código de operación y 12 bits de dirección. Ocho se ejecutan en **un ciclo**, dos usan **dos ciclos** (LDA y STA) y dos hablan con periféricos (**INP**, **OUT**).
 
 > [!note] Si la primera vez que ves esto
-> El **opcode** es el número de la instrucción, como el código de un trámite: `06` siempre significa "traeme el dato
-> que está en tal dirección" (`LDA`). No hay que confundirlo con los nemónicos del 8086: **éstos son los 16 de la
-> BLUE** y son los que se usan en el pizarrón.
+> El **opcode** es el número de la instrucción, como el código de un trámite: `06` siempre significa "traeme el dato que está en tal dirección" (`LDA`). No hay que confundirlo con los nemónicos del 8086: **éstos son los 16 de la BLUE** y son los que se usan en el pizarrón.
 
 #### Los 16 opcodes, en octal
 
@@ -403,8 +394,7 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 | **2+n pulsos** | INP, OUT | esperan al periférico (`TRA`/listo): el ciclo de ejecución se repite |
 
 > [!important] Ojo con la numeración
-> Después de `07` **no** sigue `08`: es **octal**, así que sigue `10`. Escribir `08`, `09` o `15` como decimal es el
-> error más común de esta tabla.
+> Después de `07` **no** sigue `08`: es **octal**, así que sigue `10`. Escribir `08`, `09` o `15` como decimal es el error más común de esta tabla.
 
 #### El formato de la instrucción
 
@@ -416,9 +406,13 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 ```
 
 - **Aritméticas y lógicas** (`01`-`04`): la dirección apunta al **operando** en memoria (`NOT` y `RAL` trabajan sólo sobre el `AC`).
+
 - **LDA / STA** (`06`, `07`): la dirección es el operando; el acceso usa el **2.º ciclo**.
+
 - **Saltos** (`10`, `11`, `12`): la dirección es **a dónde saltar**.
+
 - **E/S** (`13`, `14`): los **bits bajos** son el número de dispositivo; los altos, `00`.
+
 - **Sin operando** (`00`, `15`, `16`, `17`): la dirección se ignora (`000`).
 
 #### Ejemplos de codificación
@@ -479,19 +473,15 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 > Es exactamente el formato de la BLUE: `15..12` opcode y `11..0` dirección ⇒ 16 opcodes y 4096 posiciones. Los 4 bits son los que permiten escribir los opcodes en octal del `00` al `17`.
 
 #### Relacionado
-[[4.2.3 Programar en BLUE]] · [[4.2.1 Especificación, registros y 4096x16]] ·
-[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · [[Glosario — Unidad 4]]
+[[4.2.3 Programar en BLUE]] · [[4.2.1 Especificación, registros y 4096x16]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Máquina BLUE — arquitectura y conjunto de instrucciones]] · [[Glosario — Unidad 4]]
 
 ### 4.2.3 Programar en BLUE
 
 > [!abstract] En una frase
-> Programar la BLUE es **escribir una lista de instrucciones y datos en memoria**: las instrucciones se ejecutan en
-> orden desde la dirección 0 y el `PC` las recorre. No hay variables: hay **direcciones**.
+> Programar la BLUE es **escribir una lista de instrucciones y datos en memoria**: las instrucciones se ejecutan en orden desde la dirección 0 y el `PC` las recorre. No hay variables: hay **direcciones**.
 
 > [!note] Si la primera vez que ves esto
-> Es como escribir una **receta para alguien muy obediente y muy literal**: "buscá el número de la dirección 10,
-> sumale el de la 11, guardá el resultado en la 12, terminá". Nada de `for` ni `if`: los lazos y las decisiones se
-> hacen con **saltos** (`JMA`, `SRJ`) y comparaciones.
+> Es como escribir una **receta para alguien muy obediente y muy literal**: "buscá el número de la dirección 10, sumale el de la 11, guardá el resultado en la 12, terminá". Nada de `for` ni `if`: los lazos y las decisiones se hacen con **saltos** (`JMA`, `SRJ`) y comparaciones.
 
 #### Un programa en memoria
 
@@ -511,8 +501,7 @@ modificarse) o usar `JMA`. Eso es justamente lo que viene a resolver la **BLUE i
 ```
 
 ##### 2) Lazo sin índices (auto modificación)
-La BLUE básica **no tiene registros índice**: para recorrer un arreglo hay que **cambiar la dirección de la
-instrucción**. El truco clásico es mantener en memoria una instrucción y modificarla:
+La BLUE básica **no tiene registros índice**: para recorrer un arreglo hay que **cambiar la dirección de la instrucción**. El truco clásico es mantener en memoria una instrucción y modificarla:
 ```
 lazo: LDA 0, dir_dato     (carga el dato apuntado)
       ADD acumulador
@@ -520,8 +509,7 @@ lazo: LDA 0, dir_dato     (carga el dato apuntado)
       ... incrementar la dirección guardada ...
       JMA lazo
 ```
-En la práctica, en el TP se hace con un contador y una condición de corte: **es la limitación que motiva la BLUE
-indexada** (allí el lazo se escribe una vez y sólo se incrementa `RIF`).
+En la práctica, en el TP se hace con un contador y una condición de corte: **es la limitación que motiva la BLUE indexada** (allí el lazo se escribe una vez y sólo se incrementa `RIF`).
 
 ##### 3) Decisión (si … entonces)
 ```
@@ -533,6 +521,7 @@ indexada** (allí el lazo se escribe una vez y sólo se incrementa `RIF`).
 ```
 
 #### Las instrucciones que hacen "magia"
+
 | Instrucción | Para qué se usa en un programa |
 |---|---|
 | **RAL** | rotar el `AC` a la izquierda: multiplicar por 2 y mover bits |
@@ -545,18 +534,20 @@ indexada** (allí el lazo se escribe una vez y sólo se incrementa `RIF`).
 ```
 tiempo = (instrucciones de 1 ciclo × 1 µs) + (instrucciones de 2 ciclos × 2 µs)
 ```
-Ejemplo: en el programa de la suma, `LDA` son **2** ciclos, `ADD` **2**, `STA` **2** y `HLT` **1** ⇒
-`2 + 2 + 2 + 1 = 7` ⇒ **7 µs**. En un lazo de 100 vueltas se multiplica por las vueltas.
+Ejemplo: en el programa de la suma, `LDA` son **2** ciclos, `ADD` **2**, `STA` **2** y `HLT` **1** ⇒ `2 + 2 + 2 + 1 = 7` ⇒ **7 µs**. En un lazo de 100 vueltas se multiplica por las vueltas.
 
 #### Reglas de estilo del TP
+
 1. **Reservar las direcciones de datos** después del código (por ejemplo desde 100).
+
 2. Comentar **cada línea** con la microoperación (`AC ← AC + M[11]`).
+
 3. Terminar siempre con `HLT` (si no, la máquina sigue leyendo memoria).
+
 4. Verificar los valores finales a mano, instrucción por instrucción.
 
 > [!tip] Lo que se evalúa
-> No se evalúa la elegancia: se evalúa que el programa **termine**, que el resultado quede donde se pide y que se
-> pueda **explicar qué hace cada instrucción**.
+> No se evalúa la elegancia: se evalúa que el programa **termine**, que el resultado quede donde se pide y que se pueda **explicar qué hace cada instrucción**.
 
 > [!warning] Errores típicos
 > - Olvidar el `HLT` y "caer" en la zona de datos.
@@ -565,9 +556,7 @@ Ejemplo: en el programa de la suma, `LDA` son **2** ciclos, `ADD` **2**, `STA` *
 > - Intentar indexar sin tocar la instrucción (la BLUE básica no lo permite).
 
 > [!example] Un programa de 3 instrucciones
-> Sumar `M[500] + M[501]` y guardar en `M[502]`: `LDA 500` (16 pulsos) · `ADD 501` (16 pulsos) · `STA 502`
-> (16 pulsos) = **48 pulsos = 6 µs**. Un bucle de 10 repeticiones serían **60 µs**: por eso se cuenta en pulsos y
-> no en "instrucciones".
+> Sumar `M[500] + M[501]` y guardar en `M[502]`: `LDA 500` (16 pulsos) · `ADD 501` (16 pulsos) · `STA 502` (16 pulsos) = **48 pulsos = 6 µs**. Un bucle de 10 repeticiones serían **60 µs**: por eso se cuenta en pulsos y no en "instrucciones".
 
 #### Figura del libro
 
@@ -579,21 +568,17 @@ Ejemplo: en el programa de la suma, `LDA` son **2** ciclos, `ADD` **2**, `STA` *
 > Un programa es una cadena de ciclos de instrucción: búsqueda, ejecución y paso a la siguiente. Programar en BLUE es ordenar esas instrucciones y tener en cuenta cuántos pulsos cuesta cada una.
 
 #### Relacionado
-[[4.2.2 Los 16 opcodes octales]] · [[4.2.1 Especificación, registros y 4096x16]] · [[Programar en BLUE — ejemplos]] ·
-[[BLUE indexada (RIF, RID, nuevo formato)]] · [[TP16 Ciclo de instrucción básico]] · [[Glosario — Unidad 4]]
+[[4.2.2 Los 16 opcodes octales]] · [[4.2.1 Especificación, registros y 4096x16]] · [[Programar en BLUE — ejemplos]] · [[BLUE indexada (RIF, RID, nuevo formato)]] · [[TP16 Ciclo de instrucción básico]] · [[Glosario — Unidad 4]]
 
 ## 4.3 El ciclo de instrucción
 
 ### 4.3.1 Ciclo de reloj, de máquina y de instrucción
 
 > [!abstract] En una frase
-> Hay **tres ciclos anidados**: el **de reloj** (un pulso, 125 ns en la BLUE), el **de máquina** (8 pulsos, 1 µs:
-> una búsqueda completa) y el **de instrucción** (uno o más ciclos de máquina, según la instrucción).
+> Hay **tres ciclos anidados**: el **de reloj** (un pulso, 125 ns en la BLUE), el **de máquina** (8 pulsos, 1 µs: una búsqueda completa) y el **de instrucción** (uno o más ciclos de máquina, según la instrucción).
 
 > [!note] Si la primera vez que ves esto
-> Pensá en un **reloj de pared**: el **tic** es el ciclo de reloj; las **12 campanadas** que marcan una hora son el
-> ciclo de máquina (varios tics juntos con un sentido); y "desde que te levantás hasta que terminás de desayunar" es
-> el ciclo de instrucción (puede durar una o varias horas).
+> Pensá en un **reloj de pared**: el **tic** es el ciclo de reloj; las **12 campanadas** que marcan una hora son el ciclo de máquina (varios tics juntos con un sentido); y "desde que te levantás hasta que terminás de desayunar" es el ciclo de instrucción (puede durar una o varias horas).
 
 #### Los tres niveles
 
@@ -622,21 +607,19 @@ Ejemplo: en el programa de la suma, `LDA` son **2** ciclos, `ADD` **2**, `STA` *
 | **2+n** | **INP, OUT** | 2 + espera | 16 o más |
 
 > [!important] Por qué las seis son de dos ciclos
-> La **búsqueda** trae la **instrucción** (opcode + dirección) al `IR`, pero **no el operando**. Las seis que operan
-> con un dato de memoria necesitan un ciclo extra para: poner la dirección del campo en el `MAR` (`IR → MAR`) y
-> hacer la lectura. Las otras ocho (HLT, NOT, RAL, CSA y los saltos) **no van a memoria** por un operando: viven
-> con lo que ya tienen (`AC`, `PC` o las llaves), así que ejecutan sus pocas microoperaciones dentro del mismo ciclo
-> de búsqueda y **no cambian** el biestable `STATE`.
+> La **búsqueda** trae la **instrucción** (opcode + dirección) al `IR`, pero **no el operando**. Las seis que operan con un dato de memoria necesitan un ciclo extra para: poner la dirección del campo en el `MAR` (`IR → MAR`) y hacer la lectura. Las otras ocho (HLT, NOT, RAL, CSA y los saltos) **no van a memoria** por un operando: viven con lo que ya tienen (`AC`, `PC` o las llaves), así que ejecutan sus pocas microoperaciones dentro del mismo ciclo de búsqueda y **no cambian** el biestable `STATE`.
 
 #### Los flip-flops de estado en el tiempo
 ```
         búsqueda            ejecución
 STATE =    0        →          1        →   0 (vuelve a buscar)
 ```
+
 - `STATE = 0` ⇒ la UC ejecuta la secuencia de **búsqueda**.
+
 - `STATE = 1` ⇒ ejecuta la secuencia de **ejecución** de la instrucción decodificada.
-- `TRA = 1` ⇒ hay una transferencia de E/S en curso: el ciclo de ejecución **se repite** hasta que el periférico
-  responda.
+
+- `TRA = 1` ⇒ hay una transferencia de E/S en curso: el ciclo de ejecución **se repite** hasta que el periférico responda.
 
 #### Cálculo de tiempos (lo que se pregunta)
 ```
@@ -661,25 +644,18 @@ Ejemplo: un programa con 100 `ADD` y 10 `LDA` tarda `(100 × 2 + 10 × 2) µs = 
 *Fig. 3.6 — Diagrama de estados del ciclo de intrucción.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 87.
 
 > [!example] Las tres escalas de tiempo
-> Pulso: **125 ns**. Ciclo de máquina: **8 pulsos = 1 µs**. Instrucción: 1 ciclo (8 pulsos) o 2 ciclos (16 pulsos)
-> ⇒ **1 o 2 µs**. Reloj de 8 MHz ⇒ 8 millones de pulsos por segundo. Si preguntan cuánto tardan 100 instrucciones
-> de 2 ciclos: `100 × 2 µs = 200 µs`.
+> Pulso: **125 ns**. Ciclo de máquina: **8 pulsos = 1 µs**. Instrucción: 1 ciclo (8 pulsos) o 2 ciclos (16 pulsos) ⇒ **1 o 2 µs**. Reloj de 8 MHz ⇒ 8 millones de pulsos por segundo. Si preguntan cuánto tardan 100 instrucciones de 2 ciclos: `100 × 2 µs = 200 µs`.
 
 #### Relacionado
-[[4.3.2 Búsqueda, los 8 pulsos]] · [[4.3.3 Ejecución instrucción por instrucción]] · [[Ciclo de máquina]] ·
-[[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Glosario — Unidad 4]]
+[[4.3.2 Búsqueda, los 8 pulsos]] · [[4.3.3 Ejecución instrucción por instrucción]] · [[Ciclo de máquina]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Glosario — Unidad 4]]
 
 ### 4.3.2 Búsqueda, los 8 pulsos
 
 > [!abstract] En una frase
-> La **búsqueda** (*fetch*) es la secuencia de **8 pulsos** que trae la instrucción de la memoria al `IR` y deja el
-> `PC` apuntando a la siguiente. Es **igual para todas las instrucciones** y se hace siempre.
+> La **búsqueda** (*fetch*) es la secuencia de **8 pulsos** que trae la instrucción de la memoria al `IR` y deja el `PC` apuntando a la siguiente. Es **igual para todas las instrucciones** y se hace siempre.
 
 > [!note] Si la primera vez que ves esto
-> Es el momento en que la máquina "**va a leer el renglón siguiente**" de la receta. Como el bus es único, hay que
-> hacerlo por partes: primero decir **a qué dirección** ir (CP1), después **actualizar el marcador** para la próxima
-> (CP2-CP4), después **recibir** el dato (CP5), después **guardarlo** en el registro de instrucción (CP6), y al
-> final **decidir** si se pasa a ejecutar (CP8).
+> Es el momento en que la máquina "**va a leer el renglón siguiente**" de la receta. Como el bus es único, hay que hacerlo por partes: primero decir **a qué dirección** ir (CP1), después **actualizar el marcador** para la próxima (CP2-CP4), después **recibir** el dato (CP5), después **guardarlo** en el registro de instrucción (CP6), y al final **decidir** si se pasa a ejecutar (CP8).
 
 #### Los 8 pulsos de la búsqueda
 
@@ -699,19 +675,17 @@ Ejemplo: un programa con 100 `ADD` y 10 `LDA` tarda `(100 × 2 + 10 × 2) µs = 
 | **CP8** | `STATE ← 1` si la instrucción lo pide · o `E → STATE` | `STATE_in` | pasa a ejecución (o queda en búsqueda) |
 
 > [!important] Por qué son **dos** pulsos para el `PC + 1`
-> Porque hay **un solo bus**: el PC no puede, en el mismo pulso, salir al bus (para ir a `MAR`) y a la vez entrar a
-> la ALU. Por eso va **primero** a `MAR` (CP1) y **después** a `Y` (CP2). Es el ejemplo canónico de la regla
-> "una transferencia por pulso".
+> Porque hay **un solo bus**: el PC no puede, en el mismo pulso, salir al bus (para ir a `MAR`) y a la vez entrar a la ALU. Por eso va **primero** a `MAR` (CP1) y **después** a `Y` (CP2). Es el ejemplo canónico de la regla "una transferencia por pulso".
 
 #### Y el pulso 8, ¿para qué está?
-En la memoria de **ferrita** original, **leer destruye el dato**: había que **reescribirlo**. El 8.º pulso es
-justamente esa **reescritura**. De ahí que la búsqueda "real" parezca de 7 pulsos y el ciclo sea de **8**:
+En la memoria de **ferrita** original, **leer destruye el dato**: había que **reescribirlo**. El 8.º pulso es justamente esa **reescritura**. De ahí que la búsqueda "real" parezca de 7 pulsos y el ciclo sea de **8**:
 
 ```
 7 pulsos de operación  +  1 pulso de reescritura  =  8 pulsos = 1 µs
 ```
 
 #### Qué queda al terminar la búsqueda
+
 | Registro | Contenido |
 |---|---|
 | `IR` | la instrucción (opcode de 4 bits + dirección de 12) |
@@ -719,8 +693,7 @@ justamente esa **reescritura**. De ahí que la búsqueda "real" parezca de 7 pul
 | `MBR` | la palabra que se trajo (la instrucción) |
 | `STATE` | 0 (sigue en búsqueda) o 1 (pasa a ejecutar) |
 
-Con el `IR` cargado, la UC ya puede **decodificar**: el decodificador 1→16 activa la línea de la instrucción
-([[4.4.2 estado·pulso·instrucción y el decodificador 1-16]]).
+Con el `IR` cargado, la UC ya puede **decodificar**: el decodificador 1→16 activa la línea de la instrucción ([[4.4.2 estado·pulso·instrucción y el decodificador 1-16]]).
 
 > [!warning] Errores típicos
 > - Poner `PC ← PC + 1` en el mismo pulso que `MAR ← PC` (viola la regla del bus único).
@@ -734,25 +707,18 @@ Con el `IR` cargado, la UC ya puede **decodificar**: el decodificador 1→16 act
 *Fig. 7.10 — Fase fetch.* · Quiroga, *Arquitectura de computadoras*, p. 178.
 
 > [!example] Los 8 pulsos, en una línea
-> `CP1: PC → MAR` · `CP2: PC + 1` · `CP3: MEMout, MBRin` (llega la instrucción) · `CP4: MBR → IR` · `CP5: decodifica
-> el opcode` · `CP6: decodifica la dirección` · `CP7-CP8: decide el ciclo de ejecución`. Al terminar, el `IR` tiene
-> la instrucción y el `PC` ya apunta a la siguiente.
+> `CP1: PC → MAR` · `CP2: PC + 1` · `CP3: MEMout, MBRin` (llega la instrucción) · `CP4: MBR → IR` · `CP5: decodifica el opcode` · `CP6: decodifica la dirección` · `CP7-CP8: decide el ciclo de ejecución`. Al terminar, el `IR` tiene la instrucción y el `PC` ya apunta a la siguiente.
 
 #### Relacionado
-[[4.3.3 Ejecución instrucción por instrucción]] · [[4.3.1 Ciclo de reloj, de máquina y de instrucción]] ·
-[[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Ciclo de máquina]] · [[Glosario — Unidad 4]]
+[[4.3.3 Ejecución instrucción por instrucción]] · [[4.3.1 Ciclo de reloj, de máquina y de instrucción]] · [[Ciclo de búsqueda (7 y 8 pulsos)]] · [[Ciclo de ejecución — todas las operaciones]] · [[Ciclo de máquina]] · [[Glosario — Unidad 4]]
 
 ### 4.3.3 Ejecución instrucción por instrucción
 
 > [!abstract] En una frase
-> La **ejecución** es la parte que cambia: **8 instrucciones** la resuelven **dentro** del ciclo de búsqueda (no
-> cambian `STATE`), **6** piden un **ciclo de ejecución completo** porque van a buscar un operando a memoria (ADD,
-> XOR, AND, IOR, LDA, STA) y **2** (INP, OUT) esperan al periférico.
+> La **ejecución** es la parte que cambia: **8 instrucciones** la resuelven **dentro** del ciclo de búsqueda (no cambian `STATE`), **6** piden un **ciclo de ejecución completo** porque van a buscar un operando a memoria (ADD, XOR, AND, IOR, LDA, STA) y **2** (INP, OUT) esperan al periférico.
 
 > [!note] Si la primera vez que ves esto
-> Pensá en el **CP8 de la búsqueda como una bifurcación**: "¿esta instrucción necesita algo más de la memoria?" Si
-> la respuesta es **no** (un salto, un `HLT`, un `NOT`), la máquina termina ahí y vuelve a buscar. Si es **sí**, pone
-> `STATE = 1` y hace **otra vuelta de 8 pulsos** dedicada a traer ese dato.
+> Pensá en el **CP8 de la búsqueda como una bifurcación**: "¿esta instrucción necesita algo más de la memoria?" Si la respuesta es **no** (un salto, un `HLT`, un `NOT`), la máquina termina ahí y vuelve a buscar. Si es **sí**, pone `STATE = 1` y hace **otra vuelta de 8 pulsos** dedicada a traer ese dato.
 
 #### La instrucción, pulso por pulso
 
@@ -772,35 +738,35 @@ Con el `IR` cargado, la UC ya puede **decodificar**: el decodificador 1→16 act
 | **RAL** (15) | `AC → Z` y `2·Z → AC` (rotación) | CP7-CP8 |
 
 > [!note] Por qué NOT y RAL usan el par Z → A
-> La ALU **sólo** trabaja con las entradas `Y` y `Z`. Entonces el dato tiene que pasar del acumulador a `Z` (CP7),
-> la ALU calcula (`Z'` o `2·Z`) y en CP8 el resultado vuelve al `AC`. Es el mismo truco del `PC + 1`.
+> La ALU **sólo** trabaja con las entradas `Y` y `Z`. Entonces el dato tiene que pasar del acumulador a `Z` (CP7), la ALU calcula (`Z'` o `2·Z`) y en CP8 el resultado vuelve al `AC`. Es el mismo truco del `PC + 1`.
 
 #### Grupo B — las 6 que necesitan un ciclo de ejecución (2 ciclos, 16 pulsos)
 
 Todas terminan la **búsqueda** con `CP8: E → STATE` y después ejecutan:
 
 ##### LDA — cargar el acumulador
+
 | Fase | CP1 | CP2 | CP3 | CP4 | CP5 | CP6 | CP7 | CP8 |
 |---|---|---|---|---|---|---|---|---|
 | Búsqueda | PC→MAR, lectura | +1→Y | — | SUMA→PC | Strobe MBR | MBR→IR | — | **E→STATE** |
 | Ejecución | **IR→MAR**, lectura | — | — | — | Strobe MBR | **MBR→A** | — | **F→STATE** |
 
 ##### STA — almacenar el acumulador
+
 | Fase | CP1 | CP2 | CP3 | CP4 | CP5 | CP6 | CP7 | CP8 |
 |---|---|---|---|---|---|---|---|---|
 | Búsqueda | PC→MAR, lectura | +1→Y | — | SUMA→PC | Strobe MBR | MBR→IR | — | **E→STATE** |
 | Ejecución | **IR→MAR** | — | — | **A→MBR**, **escritura** | — | — | — | **F→STATE** |
 
 ##### ADD / XOR / AND / IOR — las cuatro aritmético-lógicas
+
 | Fase | CP1 | CP2 | CP3 | CP4 | CP5 | CP6 | CP7 | CP8 |
 |---|---|---|---|---|---|---|---|---|
 | Búsqueda | PC→MAR, lectura | +1→Y | — | SUMA→PC | Strobe MBR | MBR→IR | — | **E→STATE** |
 | Ejecución | **IR→MAR**, lectura | **A→Z** | — | — | Strobe MBR | **MBR→Y** | — | **SUMA/XOR/AND/OR → A**, `F→STATE` |
 
 > [!important] La lógica de las cuatro (la que se valora)
-> En **CP2** el acumulador va a `Z`; en **CP6** el dato de memoria va a `Y`. La ALU queda con los **dos operandos** y
-> en **CP8** hace la operación: el resultado cae en el `AC`. **La única diferencia entre ADD, XOR, AND e IOR es qué
-> salida de la ALU se habilita en CP8.**
+> En **CP2** el acumulador va a `Z`; en **CP6** el dato de memoria va a `Y`. La ALU queda con los **dos operandos** y en **CP8** hace la operación: el resultado cae en el `AC`. **La única diferencia entre ADD, XOR, AND e IOR es qué salida de la ALU se habilita en CP8.**
 
 #### Grupo C — las 2 de entrada/salida (16 pulsos o más)
 Usan **`TRA`** (transferencia en curso) y la señal **`R`** (periférico listo):
@@ -811,9 +777,10 @@ Usan **`TRA`** (transferencia en curso) y la señal **`R`** (periférico listo):
 | Ejecución | si **R = 1** → copiar el dato (`INP`: líneas de entrada → `AC`) y **TRA ← 0** | si `TRA = 0` → **F → STATE**; si no, **se repite el ciclo** |
 
 - `INP` (13): los **8 bits bajos** del `AC` ← dato del dispositivo; los altos, en 0.
+
 - `OUT` (14): los **8 bits altos** del `AC` → dispositivo.
-- Si el periférico no está listo, **se repite** el ciclo: 16, 24, 32… pulsos. Ése es el defecto de la E/S por
-  consulta y la razón de ser de las **interrupciones**.
+
+- Si el periférico no está listo, **se repite** el ciclo: 16, 24, 32… pulsos. Ése es el defecto de la E/S por consulta y la razón de ser de las **interrupciones**.
 
 #### Resumen en una tabla
 
@@ -858,25 +825,20 @@ Usan **`TRA`** (transferencia en curso) y la señal **`R`** (periférico listo):
 | CP1-CP8 (búsqueda) | `PC → MAR`, `M[MAR] → MBR`, `MBR → IR`, `PC + 1`, decodifica |
 | CP9-CP16 (ejecución) | `IR(dirección) → MAR`, `M[MAR] → MBR`, `AC ← AC + MBR` |
 
-Total **16 pulsos = 2 µs**. Una instrucción de 1 ciclo (como `NOT`) son **8 pulsos = 1 µs**. La cuenta
-`pulsos × 125 ns` es lo primero que se pregunta.
+Total **16 pulsos = 2 µs**. Una instrucción de 1 ciclo (como `NOT`) son **8 pulsos = 1 µs**. La cuenta `pulsos × 125 ns` es lo primero que se pregunta.
 
 #### Relacionado
-[[4.3.2 Búsqueda, los 8 pulsos]] · [[4.4.1 Funciones y señales de control]] ·
-[[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de ejecución — todas las operaciones]] ·
-[[Interrupciones y entrada-salida]] · [[Glosario — Unidad 4]]
+[[4.3.2 Búsqueda, los 8 pulsos]] · [[4.4.1 Funciones y señales de control]] · [[Las 16 instrucciones de BLUE — ciclo completo pulso por pulso]] · [[Ciclo de ejecución — todas las operaciones]] · [[Interrupciones y entrada-salida]] · [[Glosario — Unidad 4]]
 
 ## 4.4 Unidad de Control
 
 ### 4.4.1 Funciones y señales de control
 
 > [!abstract] En una frase
-> La Unidad de Control **secuencia** (búsqueda/ejecución), **decodifica** la instrucción, **emite las señales** que
-> abren y cierran las compuertas del bus, y **atiende** las excepciones (halt, reset, interrupciones).
+> La Unidad de Control **secuencia** (búsqueda/ejecución), **decodifica** la instrucción, **emite las señales** que abren y cierran las compuertas del bus, y **atiende** las excepciones (halt, reset, interrupciones).
 
 > [!note] Si la primera vez que ves esto
-> Es el **director de orquesta**: no toca ningún instrumento (no suma, no guarda), pero dice **quién entra y
-> cuándo**. Cada músico es una compuerta del bus; la partitura son las señales; el compás es el pulso del reloj.
+> Es el **director de orquesta**: no toca ningún instrumento (no suma, no guarda), pero dice **quién entra y cuándo**. Cada músico es una compuerta del bus; la partitura son las señales; el compás es el pulso del reloj.
 
 #### La UC y sus señales
 
@@ -892,6 +854,7 @@ Total **16 pulsos = 2 µs**. Una instrucción de 1 ciclo (como `NOT`) son **8 pu
 | **4. Controlar excepciones** | halt, reset, interrupciones | `RUN`, `SI`, `EMR` |
 
 #### Las señales (el vocabulario)
+
 | Señal | Qué hace |
 |---|---|
 | `PC_out` / `PC_in` | habilita el PC a salir al bus / a cargarse |
@@ -903,19 +866,22 @@ Total **16 pulsos = 2 µs**. Una instrucción de 1 ciclo (como `NOT`) son **8 pu
 | `STATE_in`, `RUN_in`, `TRA_in` | cambian el estado de la máquina |
 
 > [!important] Cada señal es un **AND** de tres cosas
-> `PC_out` en el CP1 de la búsqueda no es una señal suelta: es `STATE' · CP1` (**estado** de búsqueda **y** pulso 1).
-> Si además depende de la instrucción, se agrega el término del decodificador: `STATE · CP1 · LDA`.
+> `PC_out` en el CP1 de la búsqueda no es una señal suelta: es `STATE' · CP1` (**estado** de búsqueda **y** pulso 1). Si además depende de la instrucción, se agrega el término del decodificador: `STATE · CP1 · LDA`.
 
 #### Quién es síncrono y quién asíncrono
+
 - **Señales sincrónicas**: todas las de los pulsos (ocurren con el reloj).
-- **Señales asíncronas**: `Reset` (borra todo en cualquier momento) y, en algunas máquinas, la carga del `PC` por
-  interrupción.
-- **El reloj**: `RUN` habilita el reloj; con `RUN = 0` (después de `HLT`) la máquina **se detiene** porque no llegan
-  pulsos.
+
+- **Señales asíncronas**: `Reset` (borra todo en cualquier momento) y, en algunas máquinas, la carga del `PC` por interrupción.
+
+- **El reloj**: `RUN` habilita el reloj; con `RUN = 0` (después de `HLT`) la máquina **se detiene** porque no llegan pulsos.
 
 #### Cómo se prueba que la UC está bien diseñada
+
 1. **Para cada microoperación** de la tabla del ciclo, existe **una** señal que la habilita.
+
 2. **Ningún pulso habilita dos fuentes** del mismo bus (no hay conflicto).
+
 3. Toda instrucción **termina** en `F → STATE` o en `HLT` (no queda colgada).
 
 > [!warning] Errores típicos
@@ -948,19 +914,15 @@ Para `LDA dir` (cargar al acumulador), las señales de control por pulso son:
 Cada fila son **dos** señales: nunca una sola, porque siempre hay **origen y destino**.
 
 #### Relacionado
-[[4.4.2 estado·pulso·instrucción y el decodificador 1-16]] · [[4.3.2 Búsqueda, los 8 pulsos]] ·
-[[Cómo se implementa la Unidad de Control]] · [[Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[Glosario — Unidad 4]]
+[[4.4.2 estado·pulso·instrucción y el decodificador 1-16]] · [[4.3.2 Búsqueda, los 8 pulsos]] · [[Cómo se implementa la Unidad de Control]] · [[Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[Glosario — Unidad 4]]
 
 ### 4.4.2 estado·pulso·instrucción y el decodificador 1-16
 
 > [!abstract] En una frase
-> Toda señal de control de la BLUE se escribe como **`señal = estado · pulso · instrucción`**: el estado dice *en
-> qué fase* estamos, el pulso dice *en qué instante*, la instrucción dice *para quién*. El **decodificador 1→16**
-> convierte los 4 bits del opcode en **una línea activa** por instrucción.
+> Toda señal de control de la BLUE se escribe como **`señal = estado · pulso · instrucción`**: el estado dice *en qué fase* estamos, el pulso dice *en qué instante*, la instrucción dice *para quién*. El **decodificador 1→16** convierte los 4 bits del opcode en **una línea activa** por instrucción.
 
 > [!note] Si la primera vez que ves esto
-> Es un **semáforo con tres condiciones**: la luz verde sólo se prende si es de día (estado), si toca el minuto 8
-> (pulso) y si el que espera es un auto (instrucción). Las tres cosas a la vez: eso es un **AND** de tres entradas.
+> Es un **semáforo con tres condiciones**: la luz verde sólo se prende si es de día (estado), si toca el minuto 8 (pulso) y si el que espera es un auto (instrucción). Las tres cosas a la vez: eso es un **AND** de tres entradas.
 
 #### estado · pulso · instrucción
 
@@ -985,8 +947,7 @@ Cada fila son **dos** señales: nunca una sola, porque siempre hay **origen y de
 | … | … | … |
 | `L_NOP` | `opcode = 1111` | `IR15..12 = 1111` |
 
-**Costo:** 4 inversores y **16 compuertas AND de 4 entradas** (una por instrucción). Es el mismo circuito que un
-decodificador de memoria: `Yi = mi` ([[1.4.1 Decodificador]]).
+**Costo:** 4 inversores y **16 compuertas AND de 4 entradas** (una por instrucción). Es el mismo circuito que un decodificador de memoria: `Yi = mi` ([[1.4.1 Decodificador]]).
 
 #### La fórmula de la señal
 
@@ -1009,14 +970,14 @@ Ejemplos reales de la BLUE:
 | `IR → MAR` | `E · CP1 · (ADD + XOR + AND + IOR + LDA + STA)` | dirección del operando al MAR |
 
 > [!important] Y las OR
-> Las señales que producen **el mismo efecto** se juntan: `MBR_in` puede ser `F·CP5` **o** `E·CP5·(las de 2 ciclos)`.
-> Entonces:
+> Las señales que producen **el mismo efecto** se juntan: `MBR_in` puede ser `F·CP5` **o** `E·CP5·(las de 2 ciclos)`. Entonces:
 > ```
 > MBR_in = F·CP5 + E·CP5·(ADD + XOR + AND + IOR + LDA + STA)
 > ```
 > **Los AND «eligen», las OR «juntan».** Con esas dos reglas se dibuja cualquier UC cableada.
 
 #### Cómo se implementa (los dos caminos)
+
 | | **Cableada** | **Microprogramada** |
 |---|---|---|
 | Cómo | compuertas AND/OR + decodificador | una **ROM** con una palabra de control por pulso |
@@ -1039,18 +1000,19 @@ La BLUE usa cableada: son pocas instrucciones y siempre las mismas.
 *Fig. 16.10 — Unidad de control con entradas decodificadas.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 642.
 
 > [!example] El AND de estado y pulso
-> Si `PCout` debe activarse en `estado1, CP1`, entonces `PCout = E1 · CP1`: la señal se activa **sólo** si el estado
-> es el correcto **y** el pulso es el correcto. Ése es todo el decodificador **1 de 16** (4 bits de estado → 16
-> líneas) más los generadores de pulso.
+> Si `PCout` debe activarse en `estado1, CP1`, entonces `PCout = E1 · CP1`: la señal se activa **sólo** si el estado es el correcto **y** el pulso es el correcto. Ése es todo el decodificador **1 de 16** (4 bits de estado → 16 líneas) más los generadores de pulso.
 
 #### Relacionado
-[[4.4.1 Funciones y señales de control]] · [[4.3.3 Ejecución instrucción por instrucción]] ·
-[[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[1.4.1 Decodificador]] · [[Glosario — Unidad 4]]
+[[4.4.1 Funciones y señales de control]] · [[4.3.3 Ejecución instrucción por instrucción]] · [[Cómo se implementa la Unidad de Control]] · [[Unidad de control cableada y microprogramada]] · [[1.4.1 Decodificador]] · [[Glosario — Unidad 4]]
 
 ---
 
 ## Al terminar la unidad
+
 - Una pasada rápida: [[00 Síntesis — Unidad 4]].
+
 - Los subtemas por separado: [[00 Unidad 4 — temas y subtemas]].
+
 - Seguir de corrido: [[00 Materia completa (las 10 unidades en un archivo)]].
+
 - Practicar: [[Banco de preguntas del final]] · [[Autoevaluación]] · [[Prácticas resueltas]].

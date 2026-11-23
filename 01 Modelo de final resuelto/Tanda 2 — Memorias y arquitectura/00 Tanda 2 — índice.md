@@ -5,9 +5,7 @@ prioridad: maxima
 # Tanda 2 — Memorias y arquitectura (10 preguntas)
 
 > [!abstract] Cómo está armada esta tanda
-> Una **carpeta por pregunta**, con el **desarrollo principal** y sus **subtemas** adentro. Los pesos son los de
-> la [[00 Matriz del final — las 3 tandas|matriz]]: acá están las dos preguntas de **peso 10** (CISC/RISC y
-> pipeline) y la de **peso 9** (interrupciones).
+> Una **carpeta por pregunta**, con el **desarrollo principal** y sus **subtemas** adentro. Los pesos son los de la [[00 Matriz del final — las 3 tandas|matriz]]: acá están las dos preguntas de **peso 10** (CISC/RISC y pipeline) y la de **peso 9** (interrupciones).
 
 | # | Pregunta | Peso | Carpeta | Archivos que corresponden |
 |---|---|---|---|---|
@@ -23,30 +21,21 @@ prioridad: maxima
 | 2.10 | **Modos de direccionamiento** | 8 | `2.10 Modos de direccionamiento/` | [[Modos de direccionamiento]] |
 
 > [!note] Un subtema que vive en la Tanda 1
-> [[BLUE indexada (RIF, RID, nuevo formato)]] es el **hardware** que hace posibles los modos 2 y 3 de la pregunta
-> 2.10 y los registros de la 2.9. Está guardado en `Tanda 1 → 1.2 BLUE vs BLUE indexada/`, porque ahí es donde
-> más se usa.
+> [[BLUE indexada (RIF, RID, nuevo formato)]] es el **hardware** que hace posibles los modos 2 y 3 de la pregunta 2.10 y los registros de la 2.9. Está guardado en `Tanda 1 → 1.2 BLUE vs BLUE indexada/`, porque ahí es donde más se usa.
 
 > [!note] La carpeta `Apoyo a la pregunta/` (está dentro de cada pregunta)
-> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**:
-> qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos
-> que viven en otras tandas. Es lo primero que muestra la nota principal.
-
+> Cada pregunta tiene adentro **`Apoyo a la pregunta/`** con la nota **`00 Apoyos — N.M …`**: qué archivos hacen falta para responderla, **para qué sirve cada uno** y el enlace a los apoyos que viven en otras tandas. Es lo primero que muestra la nota principal.
 
 ---
 
 ## El orden en que conviene estudiarla
 
-**Bloque memorias (2.1 → 2.4):** primero la **celda**, después cómo se organiza en un chip (RAM/ROM), después
-cómo se ordenan los chips (jerarquía) y por último el nivel rápido (caché).
+**Bloque memorias (2.1 → 2.4):** primero la **celda**, después cómo se organiza en un chip (RAM/ROM), después cómo se ordenan los chips (jerarquía) y por último el nivel rápido (caché).
 
-**Bloque arquitectura (2.5 → 2.10):** las 16 instrucciones como repaso de la máquina, después **pipeline** y
-**CISC/RISC** (que se explican uno con otro), después **interrupciones** y al final los **modos** con sus dos
-registros índice.
+**Bloque arquitectura (2.5 → 2.10):** las 16 instrucciones como repaso de la máquina, después **pipeline** y **CISC/RISC** (que se explican uno con otro), después **interrupciones** y al final los **modos** con sus dos registros índice.
 
 > [!tip] Los dibujos de esta tanda
-> Celda elemental (los 4 bloques) · pirámide de la jerarquía · mapa de Karnaugh no hace falta acá, pero sí el
-> **diagrama de etapas del pipeline** y el **diagrama de tiempos** de las 3 operaciones en 8 pulsos.
+> Celda elemental (los 4 bloques) · pirámide de la jerarquía · mapa de Karnaugh no hace falta acá, pero sí el **diagrama de etapas del pipeline** y el **diagrama de tiempos** de las 3 operaciones en 8 pulsos.
 
 ---
 
@@ -68,5 +57,4 @@ registros índice.
 ---
 
 ## Relacionado
-[[00 Índice — el final resuelto]] · [[00 Tanda 1 — índice]] · [[00 Tanda 3 — índice]] ·
-[[00 Matriz del final — las 3 tandas]]
+[[00 Índice — el final resuelto]] · [[00 Tanda 1 — índice]] · [[00 Tanda 3 — índice]] · [[00 Matriz del final — las 3 tandas]]
