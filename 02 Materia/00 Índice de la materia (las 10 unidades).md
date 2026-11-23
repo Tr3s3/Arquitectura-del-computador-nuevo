@@ -41,7 +41,7 @@ prioridad: maxima
 | Unidad | Temas | Subtemas | Estado | Síntesis |
 |---|---|---|---|---|
 | **1** Circuitos de lógica digital | 5 | 15 | ✅ **desarrollada** | [[00 Síntesis — Unidad 1]] |
-| **2** Memorias y circuitos secuenciales | 7 | 19 | ⏳ estructura definida | — |
+| **2** Memorias y circuitos secuenciales | 7 | 19 | ✅ **desarrollada** | [[00 Síntesis — Unidad 2]] |
 | **3** Transferencia de registros y microoperaciones | 3 | 7 | ⏳ estructura definida | — |
 | **4** Organización y diseño básico | 4 | 10 | ⏳ estructura definida | — |
 | **5** Programación básica y CPU convencional | 6 | 12 | ⏳ estructura definida | — |
@@ -50,7 +50,7 @@ prioridad: maxima
 | **8** Paralelismo | 4 | 4 | ⏳ estructura definida | — |
 | **9** Hardware aritmético | 5 | 8 | ⏳ estructura definida | — |
 | **10** Entrada y Salida | 4 | 7 | ⏳ estructura definida | — |
-| **Total** | **45** | **95** | 15 subtemas escritos | 1 de 10 |
+| **Total** | **45** | **95** | **34 subtemas escritos** | **2 de 10** |
 
 > [!note] Mientras una unidad no está desarrollada
 > No queda vacía: su índice ya tiene **el árbol completo de temas y subtemas** y, en la tabla "Material ya

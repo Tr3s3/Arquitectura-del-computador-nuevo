@@ -9,8 +9,8 @@ modelo tiene su nota de desarrollo, con los conceptos previos, los gráficos y e
 verdad**. Por eso todas las notas de examen son *habladas* (definición → dibujo → desarrollo →
 cierre) y los diagramas están pensados para reproducirse a mano en el pizarrón.
 
-**Estado:** 154 notas · 22 diagramas SVG · ~155.000 palabras · 2.225 enlaces internos, 0 rotos.
-**Materia en detalle:** Unidad 1 completa (5 temas, 15 subtemas) + `00 Síntesis — Unidad 1`; unidades 2 a 10 con la estructura `Unidad → Tema → Subtema` definida.
+**Estado:** 181 notas · 22 diagramas SVG · ~168.000 palabras · 2.412 enlaces internos, 0 rotos.
+**Materia en detalle:** unidades 1 y 2 completas (12 temas, 34 subtemas) con sus `00 Síntesis`; unidades 3 a 10 con la estructura `Unidad → Tema → Subtema` definida.
 
 **Organización:** `01 Modelo de final resuelto/` → `Tanda 1|2|3` → `N. Pregunta/` → **los archivos de esa
 pregunta** (desarrollo + subtemas juntos) · `02 Materia/` → `Unidad N — nombre/` → `Tema N.M/` → **subtemas**.
@@ -49,12 +49,16 @@ adentro: el nombre de la carpeta lo dice).
 └── Tanda 3 — Circuitos con tablas de verdad/   3.0 … 3.9 (incluye el RI)
 02 Materia/                       la materia completa, las 10 unidades (Unidad → Tema → Subtema)
 ├── 00 Índice de la materia (las 10 unidades).md
-├── Unidad 1 — Circuitos de lógica digital/        ✅ desarrollada
+├── Unidad 1 — Circuitos de lógica digital/        ✅ desarrollada (5 temas / 15 subtemas)
 │   ├── 00 Unidad 1 — temas y subtemas
 │   ├── 00 Síntesis — Unidad 1            ← toda la unidad en un solo archivo
 │   ├── Tema 1.1 Compuertas lógicas/  1.1.1 … 1.1.3   (una nota por subtema)
 │   └── Tema 1.2 … Tema 1.5
-├── Unidad 2 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol de temas y subtemas)
+├── Unidad 2 — Memorias y circuitos secuenciales/  ✅ desarrollada (7 temas / 19 subtemas)
+│   ├── 00 Síntesis — Unidad 2
+│   ├── Tema 2.1 Biestables y flip-flops/  2.1.1 … 2.1.4
+│   └── Tema 2.2 … Tema 2.7
+└── Unidad 3 … Unidad 10 — <nombre>/      00 Unidad N — temas y subtemas (árbol definido)
 │   └── Tema 2.4 Registros y contadores/  etc. (carpeta cuando el tema tiene varios archivos)
 00 Empezar acá/                  cómo usar, mapa (MOC), plan de las 10 unidades, ruta para el final,
                                  resumen integrador, fuentes y glosario
