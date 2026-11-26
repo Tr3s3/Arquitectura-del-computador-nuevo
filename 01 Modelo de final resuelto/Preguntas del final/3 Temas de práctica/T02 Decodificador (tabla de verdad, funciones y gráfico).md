@@ -37,6 +37,17 @@ El decodificador es la pieza que **direcciona** memoria. Si entendés el decodif
 
 > Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
 
+## Cómo se ve el circuito (combinacional)
+
+El decodificador 2 a 4 tiene 2 entradas (A1, A0) y 4 salidas (D0 a D3). Los inversores generan los complementos de las entradas y cada AND recibe una combinación de A1 y A0 (directa o negada). Solo una AND queda en 1 para cada combinación de entrada.
+
+![[C03-decodificador-2a4-puertas.svg]]
+
+> [!tip] Cómo leerlo
+> - Entrada 00 activa D0; 01 activa D1; 10 activa D2; 11 activa D3.
+> - Cada salida es un minitérmino de las dos variables, por eso el decodificador sirve para generar cualquier función en forma de suma de minitérminos (con una OR).
+> - Con habilitación (E), cada AND recibe una entrada más y todas las salidas quedan en 0 cuando E = 0.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad 2 → 4

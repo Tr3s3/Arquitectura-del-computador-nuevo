@@ -41,6 +41,23 @@ El sumador es el **ejemplo estrella** de un circuito combinacional: tiene tabla 
 
 > Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
 
+## Cómo se ve el circuito (combinacional)
+
+Un circuito **combinacional** no tiene memoria: la salida depende solo de las entradas que tiene en ese momento. Por eso no aparece ningún biestable ni realimentación.
+
+**Semisumador (2 entradas, sin acarreo de entrada):** la XOR calcula el bit de suma y la AND calcula el acarreo. Las dos compuertas trabajan en paralelo con las mismas entradas A y B.
+
+![[C01-semisumador-puertas.svg]]
+
+**Sumador completo (3 entradas: A, B, Cin):** se arma con dos semisumadores y una OR. El primero suma A + B, el segundo suma ese resultado con Cin, y la OR junta los dos acarreos.
+
+![[C02-sumador-completo-bloques.svg]]
+
+> [!tip] Cómo leerlo
+> - S sale de la segunda XOR: S = A ⊕ B ⊕ Cin.
+> - Cout = C1 + C2 = A·B + Cin·(A ⊕ B).
+> - Un sumador de n bits se hace encadenando n sumadores completos, donde el Cout de uno entra como Cin del siguiente.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad (8 filas)

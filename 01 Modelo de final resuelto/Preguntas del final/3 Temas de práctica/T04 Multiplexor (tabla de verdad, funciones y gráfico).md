@@ -37,6 +37,17 @@ El multiplexor es la pieza que **elige** qué fuente llega al bus. En BLUE, el b
 
 > Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
 
+## Cómo se ve el circuito (combinacional)
+
+El multiplexor 4 a 1 tiene 4 entradas de dato (I0 a I3), 2 de selección (S1, S0) y una salida Y. Las líneas de selección pasan por un decodificador 2 a 4; cada AND deja pasar solo una entrada de dato, y la OR junta las cuatro salidas.
+
+![[C04-multiplexor-4a1-bloques.svg]]
+
+> [!tip] Cómo leerlo
+> - Con S1 S0 = 00 pasa I0; 01 pasa I1; 10 pasa I2; 11 pasa I3.
+> - Las figuras reales del multiplexor de cátedra y de Quiroga (arriba) muestran el mismo esquema en forma de integrado.
+> - Un multiplexor de n entradas necesita log₂(n) líneas de selección.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad (selección → entrada)
