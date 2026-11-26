@@ -1,0 +1,136 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='620' viewBox='0 0 900 620'><title>Las 16 operaciones de la máquina BLUE</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='620' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Las 16 operaciones de la máquina BLUE</text><rect x='60' y='60' width='110' height='32' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='80.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Octal</text>
+<rect x='170' y='60' width='130' height='32' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='80.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Mnem.</text>
+<rect x='300' y='60' width='430' height='32' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='80.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Qué hace</text>
+<rect x='730' y='60' width='130' height='32' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='80.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Pulsos</text>
+<rect x='60' y='92' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='112.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>00</text>
+<rect x='170' y='92' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='112.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>HLT</text>
+<rect x='300' y='92' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='112.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>detiene (RUN ← 0)</text>
+<rect x='730' y='92' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='112.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='124' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='144.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>01</text>
+<rect x='170' y='124' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='144.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>ADD</text>
+<rect x='300' y='124' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='144.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← AC + M[X]</text>
+<rect x='730' y='124' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='144.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='156' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='176.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>02</text>
+<rect x='170' y='156' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='176.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>XOR</text>
+<rect x='300' y='156' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='176.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← AC ⊕ M[X]</text>
+<rect x='730' y='156' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='176.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='188' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='208.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>03</text>
+<rect x='170' y='188' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='208.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AND</text>
+<rect x='300' y='188' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='208.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← AC · M[X]</text>
+<rect x='730' y='188' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='208.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='220' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='240.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>04</text>
+<rect x='170' y='220' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='240.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>IOR</text>
+<rect x='300' y='220' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='240.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← AC + M[X] (OR)</text>
+<rect x='730' y='220' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='240.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='252' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='272.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>05</text>
+<rect x='170' y='252' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='272.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>NOT</text>
+<rect x='300' y='252' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='272.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← AC'</text>
+<rect x='730' y='252' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='272.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='284' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='304.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>06</text>
+<rect x='170' y='284' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='304.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA</text>
+<rect x='300' y='284' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='304.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← M[X]</text>
+<rect x='730' y='284' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='304.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='316' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='336.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>07</text>
+<rect x='170' y='316' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='336.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>STA</text>
+<rect x='300' y='316' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='336.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>M[X] ← AC</text>
+<rect x='730' y='316' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='336.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='60' y='348' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='368.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>10</text>
+<rect x='170' y='348' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='368.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>SRJ</text>
+<rect x='300' y='348' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='368.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← PC+1; PC ← X</text>
+<rect x='730' y='348' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='368.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='380' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='400.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>11</text>
+<rect x='170' y='380' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='400.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>JMA</text>
+<rect x='300' y='380' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='400.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>si A15=1: PC ← X</text>
+<rect x='730' y='380' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='400.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='412' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='432.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>12</text>
+<rect x='170' y='412' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='432.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>JMP</text>
+<rect x='300' y='412' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='432.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>PC ← X</text>
+<rect x='730' y='412' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='432.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='444' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='464.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>13</text>
+<rect x='170' y='444' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='464.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>INP</text>
+<rect x='300' y='444' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='464.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC[7..0] ← dispositivo</text>
+<rect x='730' y='444' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='464.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16+</text>
+<rect x='60' y='476' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='496.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>14</text>
+<rect x='170' y='476' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='496.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>OUT</text>
+<rect x='300' y='476' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='496.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>dispositivo ← AC[15..8]</text>
+<rect x='730' y='476' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='496.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16+</text>
+<rect x='60' y='508' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='528.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>15</text>
+<rect x='170' y='508' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='528.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>RAL</text>
+<rect x='300' y='508' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='528.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← 2·AC</text>
+<rect x='730' y='508' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='528.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='540' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='560.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>16</text>
+<rect x='170' y='540' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='560.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>CSA</text>
+<rect x='300' y='540' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='560.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>AC ← llaves</text>
+<rect x='730' y='540' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='560.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text>
+<rect x='60' y='572' width='110' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='592.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>17</text>
+<rect x='170' y='572' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='235.0' y='592.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>NOP</text>
+<rect x='300' y='572' width='430' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='515.0' y='592.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>sin operación</text>
+<rect x='730' y='572' width='130' height='32' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='795.0' y='592.3333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>8</text></svg>

@@ -1,0 +1,84 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='560' viewBox='0 0 900 560'><title>Modos de direccionamiento y dirección efectiva</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='560' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Modos de direccionamiento y dirección efectiva</text><rect x='40' y='60' width='150' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='84.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Modo</text>
+<rect x='190' y='60' width='200' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='84.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Cómo se calcula EA</text>
+<rect x='390' y='60' width='150' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='84.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Accesos</text>
+<rect x='540' y='60' width='120' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='84.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Ejemplo</text>
+<rect x='660' y='60' width='180' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='84.33333333333333' font-size='13' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Uso típico</text>
+<rect x='40' y='100' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='124.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Inmediato</text>
+<rect x='190' y='100' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='124.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>el dato está en el campo</text>
+<rect x='390' y='100' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='124.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>0</text>
+<rect x='540' y='100' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='124.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA #5</text>
+<rect x='660' y='100' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='124.33333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>constantes</text>
+<rect x='40' y='140' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='164.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Directo</text>
+<rect x='190' y='140' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='164.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>EA = campo</text>
+<rect x='390' y='140' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='164.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>1</text>
+<rect x='540' y='140' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='164.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA 30</text>
+<rect x='660' y='140' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='164.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>variables globales</text>
+<rect x='40' y='180' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='204.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Indirecto</text>
+<rect x='190' y='180' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='204.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>EA = M[campo]</text>
+<rect x='390' y='180' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='204.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>2</text>
+<rect x='540' y='180' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='204.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA (30)</text>
+<rect x='660' y='180' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='204.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>punteros dobles</text>
+<rect x='40' y='220' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='244.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Registro</text>
+<rect x='190' y='220' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='244.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>dato en un registro</text>
+<rect x='390' y='220' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='244.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>0</text>
+<rect x='540' y='220' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='244.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>MOV A,R1</text>
+<rect x='660' y='220' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='244.33333333333334' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>variables rápidas</text>
+<rect x='40' y='260' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='284.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Reg. indirecto</text>
+<rect x='190' y='260' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='284.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>EA = R</text>
+<rect x='390' y='260' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='284.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>1</text>
+<rect x='540' y='260' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='284.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA (R2)</text>
+<rect x='660' y='260' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='284.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>listas, vectores</text>
+<rect x='40' y='300' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='324.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Indexado</text>
+<rect x='190' y='300' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='324.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>EA = campo + RIF/RID</text>
+<rect x='390' y='300' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='324.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>1</text>
+<rect x='540' y='300' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='324.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>LDA 2,X</text>
+<rect x='660' y='300' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='324.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>arreglos, tablas</text>
+<rect x='40' y='340' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='115.0' y='364.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Pila</text>
+<rect x='190' y='340' width='200' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='290.0' y='364.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>EA = SP (tope)</text>
+<rect x='390' y='340' width='150' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='465.0' y='364.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>1</text>
+<rect x='540' y='340' width='120' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='600.0' y='364.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>POP</text>
+<rect x='660' y='340' width='180' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='750.0' y='364.3333333333333' font-size='13' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>subrutinas</text>
+<rect x='40' y='400' width='820' height='110' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='441.6666666666667' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>BLUE indexada (modificador 2 bits):</text>
+<text x='450.0' y='459.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>0 = directo · 1 = indirecto · 2 = indexado por RIF · 3 = indexado por RID</text>
+<text x='450.0' y='477.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>El indexado: un mismo código recorre arreglos, ahorra bits y es reubicable.</text></svg>

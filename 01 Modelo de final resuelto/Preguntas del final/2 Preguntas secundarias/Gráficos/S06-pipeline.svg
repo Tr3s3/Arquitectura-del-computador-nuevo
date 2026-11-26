@@ -1,0 +1,53 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='430' viewBox='0 0 900 430'><title>Pipeline de 5 etapas: instrucciones solapadas</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='430' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Pipeline de 5 etapas: instrucciones solapadas</text><text x='30' y='70' font-size='13' text-anchor='start' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>Instrucción</text>
+<text x='186' y='70' font-size='13' text-anchor='middle' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>t1</text>
+<text x='266' y='70' font-size='13' text-anchor='middle' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>t2</text>
+<text x='346' y='70' font-size='13' text-anchor='middle' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>t3</text>
+<text x='426' y='70' font-size='13' text-anchor='middle' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>t4</text>
+<text x='506' y='70' font-size='13' text-anchor='middle' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>t5</text>
+<text x='30' y='132' font-size='14' text-anchor='start' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>I1</text>
+<rect x='150' y='90' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='186.0' y='113.66666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>IF búsq.</text>
+<rect x='230' y='90' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='266.0' y='113.66666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ID decod.</text>
+<rect x='310' y='90' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='346.0' y='113.66666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>EX ejec.</text>
+<rect x='390' y='90' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='426.0' y='113.66666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>MEM mem.</text>
+<rect x='470' y='90' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='506.0' y='113.66666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>WB escr.</text>
+<text x='30' y='182' font-size='14' text-anchor='start' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>I2</text>
+<rect x='230' y='140' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='266.0' y='163.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>IF búsq.</text>
+<rect x='310' y='140' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='346.0' y='163.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ID decod.</text>
+<rect x='390' y='140' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='426.0' y='163.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>EX ejec.</text>
+<rect x='470' y='140' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='506.0' y='163.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>MEM mem.</text>
+<rect x='550' y='140' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='586.0' y='163.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>WB escr.</text>
+<text x='30' y='232' font-size='14' text-anchor='start' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>I3</text>
+<rect x='310' y='190' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='346.0' y='213.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>IF búsq.</text>
+<rect x='390' y='190' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='426.0' y='213.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ID decod.</text>
+<rect x='470' y='190' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='506.0' y='213.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>EX ejec.</text>
+<rect x='550' y='190' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='586.0' y='213.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>MEM mem.</text>
+<rect x='630' y='190' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='666.0' y='213.66666666666666' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>WB escr.</text>
+<text x='30' y='282' font-size='14' text-anchor='start' font-weight='bold' fill='#222' font-family='Helvetica,Arial,sans-serif'>I4</text>
+<rect x='390' y='240' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='426.0' y='263.6666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>IF búsq.</text>
+<rect x='470' y='240' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='506.0' y='263.6666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ID decod.</text>
+<rect x='550' y='240' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='586.0' y='263.6666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>EX ejec.</text>
+<rect x='630' y='240' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='666.0' y='263.6666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>MEM mem.</text>
+<rect x='710' y='240' width='72' height='40' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='746.0' y='263.6666666666667' text-anchor='middle' font-size='11' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>WB escr.</text>
+<text x='30' y='330' font-size='14' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Sin pipeline: 4 instrucciones × 5 etapas = 20 ciclos.</text>
+<text x='30' y='355' font-size='14' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Con pipeline: 5 + (4 − 1) = 8 ciclos. En general: k + (n − 1) ciclos.</text>
+<text x='30' y='380' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Conflictos: estructural (memoria compartida) · datos (RAW, forwarding) · control (saltos).</text></svg>

@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='470' viewBox='0 0 900 470'><title>Manejo de una instrucción: quién hace qué</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='470' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Manejo de una instrucción: quién hace qué</text><rect x='40' y='100' width='250' height='220' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='165.0' y='178.66666666666666' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>1. BÚSQUEDA</text>
+<text x='165.0' y='196.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>PC → MAR → memoria → MBR → IR</text>
+<text x='165.0' y='214.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'></text>
+<text x='165.0' y='232.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Unidad:</text>
+<text x='165.0' y='250.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>UC + registros PC, MAR, MBR, IR</text>
+<line x1='290' y1='210' x2='330' y2='210' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='330' y='100' width='250' height='220' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='455.0' y='178.66666666666666' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>2. DECODIFICACIÓN</text>
+<text x='455.0' y='196.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>la UC lee el opcode del IR</text>
+<text x='455.0' y='214.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'></text>
+<text x='455.0' y='232.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Unidad:</text>
+<text x='455.0' y='250.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>UC (genera las señales)</text>
+<line x1='580' y1='210' x2='620' y2='210' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='620' y='100' width='250' height='220' rx='6' fill='#ffe1e1' stroke='#333' stroke-width='2'/>
+<text x='745.0' y='178.66666666666666' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>3. EJECUCIÓN</text>
+<text x='745.0' y='196.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ALU opera · registros · memoria</text>
+<text x='745.0' y='214.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'></text>
+<text x='745.0' y='232.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Unidad:</text>
+<text x='745.0' y='250.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>ALU + AC + UC</text>
+<text x='40' y='380' font-size='14' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Lo maneja la UC: ella ordena, y los registros y la ALU ejecutan.</text>
+<text x='40' y='405' font-size='14' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>La búsqueda es igual para todas las instrucciones; la ejecución depende del opcode.</text></svg>

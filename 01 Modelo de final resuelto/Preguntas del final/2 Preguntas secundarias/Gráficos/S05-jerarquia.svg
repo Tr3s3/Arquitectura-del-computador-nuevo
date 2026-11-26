@@ -1,0 +1,20 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='560' viewBox='0 0 900 560'><title>Jerarquía de memorias: más rápida y cara arriba, más grande abajo</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='560' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Jerarquía de memorias: más rápida y cara arriba, más grande abajo</text><rect x='360.0' y='60' width='180' height='60' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='85.66666666666667' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Registros</text>
+<text x='450.0' y='103.66666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>&lt; 1 ns · en la CPU</text>
+<rect x='320.0' y='140' width='260' height='60' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='165.66666666666666' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Caché L1</text>
+<text x='450.0' y='183.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>1–2 ns · SRAM</text>
+<rect x='280.0' y='220' width='340' height='60' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='245.66666666666666' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Caché L2 / L3</text>
+<text x='450.0' y='263.66666666666663' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>5–20 ns · SRAM</text>
+<rect x='240.0' y='300' width='420' height='60' rx='6' fill='#fff8e6' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='325.6666666666667' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>RAM (DRAM)</text>
+<text x='450.0' y='343.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>50–100 ns · SO (paginación)</text>
+<rect x='200.0' y='380' width='500' height='60' rx='6' fill='#fff8e6' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='405.6666666666667' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Disco / SSD</text>
+<text x='450.0' y='423.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>µs–ms · memoria virtual</text>
+<rect x='170.0' y='460' width='560' height='60' rx='6' fill='#fff8e6' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='485.6666666666667' text-anchor='middle' font-size='14' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Cinta / respaldo</text>
+<text x='450.0' y='503.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>segundos · backup</text>
+<text x='40' y='530' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Velocidad y costo/bit suben hacia arriba; capacidad sube hacia abajo.</text>
+<text x='40' y='550' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Funciona por localidad temporal y espacial.</text></svg>
