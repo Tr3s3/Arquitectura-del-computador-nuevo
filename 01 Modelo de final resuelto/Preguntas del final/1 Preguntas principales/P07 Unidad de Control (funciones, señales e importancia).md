@@ -41,6 +41,18 @@ La UC es **el cerebro de la CPU** en el sentido de que decide. El profesor pregu
 
 *Lectura:* a la izquierda, las cuatro entradas (opcode, estado, reloj, flags). En el centro, la UC. A la derecha, las salidas: control de registros (LOAD/OUT), operación de la ALU, memoria (MEMR/MEMW) y habilitación del bus.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f16-10.png]]
+
+*Unidad de control con entradas decodificadas.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed.
+
+![[libro-quiroga-f7-11.png]]
+
+*Fig. 7.11 — Estructura de una parte del módulo de control para la fase fetch.* · Quiroga, *Arquitectura de computadoras*, p. 179
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Las cuatro funciones

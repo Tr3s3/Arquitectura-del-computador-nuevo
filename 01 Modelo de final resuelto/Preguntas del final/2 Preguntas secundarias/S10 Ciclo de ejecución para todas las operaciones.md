@@ -31,6 +31,18 @@ Es la pregunta de la **tabla maestra**. El profesor quiere que sepas que no toda
 
 *Lectura:* la tabla resume las familias, sus instrucciones, los ciclos y los pulsos.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f8-2.png]]
+
+*Ciclo de instrucción para las n instrucciones de un programa.* · Quiroga, *Arquitectura de computadoras*
+
+![[libro-stallings-f3-6.png]]
+
+*Fig. 3.6 — Diagrama de estados del ciclo de instrucción.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 87
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Familia 1: se resuelven en la búsqueda (1 ciclo, 8 pulsos)

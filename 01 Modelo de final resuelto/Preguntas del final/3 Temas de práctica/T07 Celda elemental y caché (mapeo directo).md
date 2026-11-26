@@ -35,6 +35,18 @@ La caché es la aplicación más importante de la celda SRAM y de la jerarquía 
 
 *Lectura:* a la izquierda, 16 bloques de la memoria principal. A la derecha, 8 líneas de la caché. Cada bloque va a la línea `bloque mod 8`. Los bloques 0 y 8 compiten por la línea 0.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f4-8.png]]
+
+*Fig. 4.8 — Ejemplo de correspondencia directa.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 141
+
+![[libro-stallings-f4-12.png]]
+
+*Fig. 4.12 — Correspondencia asociativa por conjuntos de dos vías.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 147
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Mapeo directo

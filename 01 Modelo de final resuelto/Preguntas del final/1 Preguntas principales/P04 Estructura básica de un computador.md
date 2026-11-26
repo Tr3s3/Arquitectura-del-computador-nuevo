@@ -38,6 +38,18 @@ Esta pregunta es el **mapa** de la materia. Todo lo demás se ubica dentro de es
 
 *Lectura:* la CPU (izquierda) se conecta a la memoria (arriba derecha) y a la E/S (abajo derecha) por tres buses: datos, direcciones y control. El bus de datos es bidireccional; el de direcciones sale de la CPU.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f1-1.png]]
+
+*Fig. 1.1 — Una visión funcional de un computador.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 32
+
+![[libro-quiroga-f1-3.png]]
+
+*Fig. 1.3 — Esquema básico de una computadora von Neumann.* · Quiroga, *Arquitectura de computadoras*, p. 32
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 La CPU

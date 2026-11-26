@@ -42,6 +42,14 @@ Esta pregunta es la base de todo lo que sigue: el ciclo de búsqueda, el LDA, la
 
 *Lectura del gráfico:* arriba está la memoria; en el medio, el bus único; abajo, los cinco registros, cada uno conectado al bus con una flecha. La UC (que manda) y la ALU (que calcula) están abajo.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f3-16.png]]
+
+*Fig. 3.16 — Esquema de interconexión mediante un bus.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 99
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Flujo de direcciones (12 bits, unidireccional)

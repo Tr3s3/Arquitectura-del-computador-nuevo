@@ -23,6 +23,14 @@ El demux aparece en el final porque es el "complemento" del multiplexor: uno rep
 
 *Lectura:* el dato D entra a la izquierda; las selecciones S1 S0 controlan a cuál salida va. La tabla muestra qué salida recibe D para cada selección.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f6-19.png]]
+
+*Fig. 6.19 — Diagrama de bloque de un demultiplexor de cuatro salidas.* · Quiroga, *Arquitectura de computadoras*, p. 149
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad 1 → 4

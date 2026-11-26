@@ -38,6 +38,18 @@ El ciclo de máquina es **la unidad de trabajo** de la CPU. Todo lo que hace el 
 
 *Lectura:* mientras RUN = 1, la máquina repite búsqueda → decodificación → ejecución. Si la instrucción no necesita ejecución (por ejemplo JMP), vuelve directamente a la búsqueda. HLT pone RUN = 0 y la máquina se detiene.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f3-3.png]]
+
+*Fig. 3.3 — Ciclo de instrucción básico.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 84
+
+![[libro-stallings-f3-6.png]]
+
+*Fig. 3.6 — Diagrama de estados del ciclo de instrucción.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 87
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 La búsqueda (fetch), siempre igual

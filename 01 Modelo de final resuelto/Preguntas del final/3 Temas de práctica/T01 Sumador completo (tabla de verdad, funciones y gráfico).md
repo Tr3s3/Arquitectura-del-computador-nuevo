@@ -29,6 +29,18 @@ El sumador es el **ejemplo estrella** de un circuito combinacional: tiene tabla 
 
 *Lectura:* dos semisumadores en cascada y una OR para el acarreo de salida. La tabla de la izquierda cubre las entradas con acarreo 0 y la de la derecha, con A = 1.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f5-17.png]]
+
+*Fig. 5.17 — Circuito lógico del semisumador.* · Quiroga, *Arquitectura de computadoras*, p. 127
+
+![[libro-quiroga-f5-19.png]]
+
+*Fig. 5.19 — Circuito lógico con las FND del sumador completo.* · Quiroga, *Arquitectura de computadoras*, p. 131
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad (8 filas)

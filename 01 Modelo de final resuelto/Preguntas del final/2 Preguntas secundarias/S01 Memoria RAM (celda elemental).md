@@ -41,6 +41,18 @@ Es la pregunta que va "de abajo hacia arriba": de la celda a la memoria. Aparece
 
 *Lectura:* el biestable guarda el bit. La línea de selección y la L/E llegan desde arriba. A la derecha, el buffer de tres estados conecta la salida al bus de datos compartido.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f9-4.png]]
+
+*Detalle de la celda de memoria.* · Quiroga, *Arquitectura de computadoras*
+
+![[libro-stallings-f5-3.png]]
+
+*Fig. 5.3 — DRAM típica de 16 megabits.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 178
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Escritura

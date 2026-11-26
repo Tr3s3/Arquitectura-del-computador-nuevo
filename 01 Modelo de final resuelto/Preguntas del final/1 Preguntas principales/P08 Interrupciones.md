@@ -43,6 +43,22 @@ Las interrupciones son la respuesta del computador al problema de la **E/S**. So
 
 *Lectura:* nueve pasos en orden, de arriba a abajo. Los tres pasos en verde son los que más se preguntan: guardar contexto, saltar a la rutina y retornar.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f3-9.png]]
+
+*Fig. 3.9 — Ciclo de instrucción con interrupciones.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 91
+
+![[libro-stallings-f7-6.png]]
+
+*Fig. 7.6 — Procedimiento de interrupción simple.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 244
+
+![[libro-stallings-f10-8.png]]
+
+*Fig. 10.8 — Uso de una pila para implementar el anidamiento de subrutinas.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 397
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Secuencia general (la respuesta que se espera)

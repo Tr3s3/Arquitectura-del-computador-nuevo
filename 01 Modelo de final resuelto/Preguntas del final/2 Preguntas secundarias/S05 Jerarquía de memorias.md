@@ -38,6 +38,18 @@ La jerarquía es la razón por la que las computadoras son rápidas **y** grande
 
 *Lectura:* arriba, los niveles rápidos y chicos (registros, L1). Abajo, los lentos y grandes (disco, cinta). El ancho de cada caja representa la capacidad.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f4-1.png]]
+
+*Fig. 4.1 — Jerarquía de memoria.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 130
+
+![[libro-stallings-f4-5.png]]
+
+*Fig. 4.5 — Operación de lectura de caché.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 135
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Por qué funciona: la localidad

@@ -34,6 +34,18 @@ Esta pregunta es un **resumen de la CPU**: pide que digas qué hace cada unidad 
 
 *Lectura:* tres bloques en secuencia: búsqueda, decodificación y ejecución. Debajo de cada bloque, la unidad que lo maneja.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f3-3.png]]
+
+*Fig. 3.3 — Ciclo de instrucción básico.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 84
+
+![[libro-quiroga-f7-10.png]]
+
+*Fig. 7.10 — Fase fetch.* · Quiroga, *Arquitectura de computadoras*, p. 178
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Búsqueda

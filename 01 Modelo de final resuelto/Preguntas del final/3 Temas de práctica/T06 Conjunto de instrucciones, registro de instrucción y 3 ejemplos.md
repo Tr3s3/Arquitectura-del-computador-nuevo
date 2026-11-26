@@ -29,6 +29,18 @@ Esta pregunta une el IR (registro), el conjunto de instrucciones (16 operaciones
 
 *Lectura:* arriba, el IR dividido en opcode (4 bits, rosa) y dirección (12 bits, celeste). Abajo, tres ejemplos en binario, hexadecimal y microoperación.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-formato-ri.png]]
+
+*Corte del registro de instrucción: opcode 15..12 y dirección 11..0.* · Resumen de cátedra (Said)
+
+![[catedra-said-16-instrucciones-nombres.png]]
+
+*Los 16 nombres de instrucción de la BLUE.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Ejemplo 1: `LDA 500` (dirección hexadecimal 500)

@@ -25,6 +25,18 @@ El decodificador es la pieza que **direcciona** memoria. Si entendés el decodif
 
 *Lectura:* las entradas A1 y A0 llegan a la izquierda; las salidas Y0 a Y3 salen a la derecha. La tabla de abajo muestra qué salida vale 1 para cada entrada.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f6-13.png]]
+
+*Fig. 6.13 — Diagrama de bloque del decodificador n → 2ⁿ.* · Quiroga, *Arquitectura de computadoras*, p. 145
+
+![[libro-quiroga-f6-15.png]]
+
+*Fig. 6.15 — Diagrama de lógica de un decodificador 2 → 4 (dos inversores y cuatro AND).* · Quiroga, *Arquitectura de computadoras*, p. 146
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad 2 → 4

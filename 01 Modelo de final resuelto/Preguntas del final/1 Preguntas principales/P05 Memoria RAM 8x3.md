@@ -40,6 +40,14 @@ La RAM 8×3 es el modelo didáctico de **toda** memoria. El profesor la pide por
 
 *Lectura:* a la izquierda está el mapa de direcciones (dirección → contenido). En el centro, el decodificador 3→8 activa una línea; esa línea habilita una palabra de 3 bits. La salida pasa por el buffer hacia el bus de datos. CS y R/W' controlan la operación.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f5-5.png]]
+
+*Fig. 5.5 — Organización de una memoria de 256 KB.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 181
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Mapa de direcciones (la tabla que se dibuja)

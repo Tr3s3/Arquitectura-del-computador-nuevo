@@ -42,6 +42,26 @@ Esta pregunta es el **núcleo** del final: une formato, registros, modos y pulso
 
 *Lectura:* arriba, el formato nuevo (5 + 16 + 2 + 9 sin uso). En el medio, el sumador de direcciones recibe el campo de dirección (por W) y el índice (por X) y entrega la EA. Abajo, la tabla de los 3 ciclos del LDA con modo indexado.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-blue-indexada.png]]
+
+*Plano de la BLUE indexada: RIF, RID, RB, sumador y decodificadores.* · Resumen de cátedra (Said)
+
+![[catedra-said-formato-indexada.png]]
+
+*Formato de la BLUE indexada: opcode 5, dirección 16, modificador 2.* · Resumen de cátedra (Said)
+
+![[catedra-said-lda3-ejecucion.png]]
+
+*Pulsos CP1 a CP8 de las dos fases de ejecución de LDA 3, X.* · Resumen de cátedra (Said)
+
+![[catedra-said-modos-modificador.png]]
+
+*Los cuatro modos según el modificador.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 BLUE base (sin indexar): LDA en 16 pulsos

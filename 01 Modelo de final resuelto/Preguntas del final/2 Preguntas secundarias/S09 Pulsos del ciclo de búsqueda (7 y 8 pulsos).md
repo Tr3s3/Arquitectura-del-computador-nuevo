@@ -29,6 +29,18 @@ Esta pregunta es **casi la misma que P03**, pero pide el detalle pulso por pulso
 
 *Lectura:* cada fila es un pulso, con la microoperación y la razón. La fila de CP8 está resaltada: es el pulso que decide si la máquina pasa a ejecutar.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f7-10.png]]
+
+*Fig. 7.10 — Fase fetch.* · Quiroga, *Arquitectura de computadoras*, p. 178
+
+![[catedra-said-lda3-ejecucion.png]]
+
+*Tabla de pulsos de la fase de ejecución (referencia de la misma notación CP1 a CP8).* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Los ocho pulsos

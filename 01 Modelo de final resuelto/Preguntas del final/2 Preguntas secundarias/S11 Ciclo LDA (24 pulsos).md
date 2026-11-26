@@ -29,6 +29,18 @@ El LDA es la instrucción **más preguntada** del ciclo de ejecución. Es el eje
 
 *Lectura:* tres bloques de ocho pulsos: búsqueda, ejecución 1 (segunda palabra y sumador) y ejecución 2 (operando al AC).
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-lda3-ejecucion.png]]
+
+*Pulsos CP1 a CP8 de las dos fases de ejecución de LDA 3, X.* · Resumen de cátedra (Said)
+
+![[libro-quiroga-f7-13.png]]
+
+*Fig. 7.13 — Fase execute LDA.* · Quiroga, *Arquitectura de computadoras*, p. 182
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Ciclo 1: búsqueda (8 pulsos)

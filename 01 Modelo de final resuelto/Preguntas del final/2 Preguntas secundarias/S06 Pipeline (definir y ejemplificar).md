@@ -35,6 +35,22 @@ El pipeline es la idea que convierte una CPU de "una instrucción a la vez" en u
 
 *Lectura:* cada fila es una instrucción; cada columna es un instante de tiempo. Las instrucciones se "escalonan": cuando la I1 pasa a ID, la I2 entra a IF.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-etapas-pipeline.png]]
+
+*Las cinco etapas IF, ID, EX, MEM y WB con su función.* · Resumen de cátedra (Said)
+
+![[libro-stallings-f12-10.png]]
+
+*Fig. 12.10 — Diagrama de tiempos de un cauce de instrucciones.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 474
+
+![[libro-stallings-f12-11.png]]
+
+*Fig. 12.11 — Efecto de un salto condicional en un cauce.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 474
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Ejemplo numérico

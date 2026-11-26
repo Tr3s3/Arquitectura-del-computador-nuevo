@@ -38,6 +38,18 @@ Es una de las preguntas de mayor peso según la matriz del profesor (peso 10). E
 
 *Lectura:* las dos columnas comparan las dos filosofías, fila por fila.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f13-8.png]]
+
+*Formatos de instrucciones del MIPS.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed.
+
+![[libro-stallings-f10-15.png]]
+
+*Comparación de tres programas para el mismo cálculo.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed.
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Ejemplo: la misma operación en las dos

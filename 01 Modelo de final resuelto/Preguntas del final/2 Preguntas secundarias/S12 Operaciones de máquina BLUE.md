@@ -25,6 +25,18 @@ Es la tabla más útil del final: si la sabés, podés responder P03, P06, S10 y
 
 *Lectura:* la tabla con el código en octal, el mnemónico, lo que hace y los pulsos.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-16-instrucciones-nombres.png]]
+
+*Los 16 nombres de instrucción de la BLUE.* · Resumen de cátedra (Said)
+
+![[catedra-said-panel-frontal-blue.png]]
+
+*Panel frontal de la BLUE: pulsadores y llaves binarias.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 La tabla de las 16 operaciones

@@ -43,6 +43,26 @@ Los biestables son el **puente** entre la lógica combinacional (compuertas) y l
 
 *Lectura:* cada caja muestra el nombre, sus entradas, la ecuación característica y la observación clave. Los cuatro tipos en una sola hoja.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f6-27.png]]
+
+*Fig. 6.27 — Biestable RS con compuertas NOR.* · Quiroga, *Arquitectura de computadoras*, p. 157
+
+![[libro-quiroga-f6-30.png]]
+
+*Fig. 6.30 — Biestable J-K sincrónico.* · Quiroga, *Arquitectura de computadoras*, p. 158
+
+![[libro-quiroga-f6-34.png]]
+
+*Fig. 6.34 — Biestable D sincrónico.* · Quiroga, *Arquitectura de computadoras*, p. 159
+
+![[catedra-said-clasificacion-biestables.png]]
+
+*Árbol de clasificación de biestables.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 RS

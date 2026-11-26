@@ -28,6 +28,18 @@ Este tema decide la **arquitectura**: cuántos operandos explícitos tiene cada 
 
 *Lectura:* cada fila es un formato. El primer campo (rosa) es el opcode; los demás (celeste) son direcciones. La última fila es BLUE.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[catedra-said-formatos-comparacion.png]]
+
+*Qué elimina cada formato al bajar de 4 a 1 dirección.* · Resumen de cátedra (Said)
+
+![[catedra-said-formato-ri.png]]
+
+*Corte del registro de instrucción: opcode 15..12 y dirección 11..0.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 Tomemos la misma operación en los cuatro formatos: `X = A + B`.

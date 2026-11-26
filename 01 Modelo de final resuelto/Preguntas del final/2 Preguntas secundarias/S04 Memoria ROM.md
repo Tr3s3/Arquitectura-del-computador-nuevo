@@ -41,6 +41,14 @@ La ROM es el ejemplo perfecto de **lógica combinacional usada como memoria**: u
 
 *Lectura:* el decodificador 2→4 activa una línea de palabra (W0…W3). Cada punto (1) donde la línea cruza una columna de datos indica que ese bit vale 1. La tabla de abajo es el contenido.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f6-23.png]]
+
+*Fig. 6.23 — Diagrama de bloque de cualquiera de las memorias de sólo lectura.* · Quiroga, *Arquitectura de computadoras*, p. 153
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 La ROM es un bloque combinacional

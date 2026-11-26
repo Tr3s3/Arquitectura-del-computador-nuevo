@@ -39,6 +39,26 @@ El álgebra de Boole es la **herramienta** para simplificar funciones. Es lo que
 
 *Lectura:* arriba, las cuatro compuertas básicas. Abajo, la equivalencia de DeMorgan: un NAND es lo mismo que un OR con entradas negadas, y un NOR es un AND con entradas negadas.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f5-2.png]]
+
+*Fig. 5.2 — Compuerta AND.* · Quiroga, *Arquitectura de computadoras*, p. 119
+
+![[libro-quiroga-f5-6.png]]
+
+*Fig. 5.6 — Compuerta NAND.* · Quiroga, *Arquitectura de computadoras*, p. 121
+
+![[libro-quiroga-f5-8.png]]
+
+*Fig. 5.8 — Teorema de De Morgan aplicado a la suma lógica.* · Quiroga, *Arquitectura de computadoras*, p. 122
+
+![[libro-quiroga-f5-9.png]]
+
+*Fig. 5.9 — Teorema de De Morgan aplicado al producto lógico.* · Quiroga, *Arquitectura de computadoras*, p. 122
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Demostración de DeMorgan por tabla de verdad

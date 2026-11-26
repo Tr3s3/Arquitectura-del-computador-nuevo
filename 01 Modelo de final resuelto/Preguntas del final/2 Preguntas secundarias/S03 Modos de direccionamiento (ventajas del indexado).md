@@ -44,6 +44,22 @@ Este tema es el **por qué** de la BLUE indexada (P06 explica el **cómo**). El 
 
 *Lectura:* la tabla compara los siete modos. Abajo, los cuatro modos de la BLUE indexada, con el modificador.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-stallings-f11-1.png]]
+
+*Fig. 11.1 — Modos de direccionamiento.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 431
+
+![[libro-stallings-f11-2.png]]
+
+*Fig. 11.2 — Cálculos en el modo de direccionamiento del Pentium.* · Stallings, *Organización y arquitectura de computadores*, 7ª ed., p. 438
+
+![[catedra-said-modos-modificador.png]]
+
+*Los cuatro modos según el modificador.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Ejemplo numérico

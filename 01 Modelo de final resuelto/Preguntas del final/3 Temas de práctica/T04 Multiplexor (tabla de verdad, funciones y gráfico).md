@@ -25,6 +25,18 @@ El multiplexor es la pieza que **elige** qué fuente llega al bus. En BLUE, el b
 
 *Lectura:* cuatro entradas I0 a I3 a la izquierda; las selecciones S1 S0 abajo; la salida Y a la derecha. La tabla muestra qué entrada pasa para cada selección.
 
+## Figuras reales (libros y resumen de cátedra)
+
+![[libro-quiroga-f6-20.png]]
+
+*Fig. 6.20 — Diagrama de bloque de un multiplexor para cuatro entradas.* · Quiroga, *Arquitectura de computadoras*, p. 149
+
+![[catedra-said-mux-integrado.png]]
+
+*El MUX 4:1 dibujado como integrado.* · Resumen de cátedra (Said)
+
+> Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad (selección → entrada)
