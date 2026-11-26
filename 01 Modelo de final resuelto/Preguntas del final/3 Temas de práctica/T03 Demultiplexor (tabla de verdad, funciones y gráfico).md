@@ -31,6 +31,16 @@ El demux aparece en el final porque es el "complemento" del multiplexor: uno rep
 
 > Las imágenes están en `assets/` de la bóveda; el gráfico propio de arriba es un resumen esquemático.
 
+## Cómo se ve el circuito (combinacional)
+
+El demultiplexor 1 a 4 es un decodificador con una entrada extra de dato D. La entrada D entra a las cuatro AND en paralelo, y las líneas de selección S1 y S0 deciden cuál de las cuatro salidas recibe el dato.
+
+![[C05-demultiplexor-1a4-bloques.svg]]
+
+> [!tip] Cómo leerlo
+> - Yk = D cuando la selección vale k; las demás salidas quedan en 0.
+> - Es el camino inverso del multiplexor: un dato que va a una de varias salidas.
+
 ## 4. Desarrollo detallado
 
 ### 4.1 Tabla de verdad 1 → 4
