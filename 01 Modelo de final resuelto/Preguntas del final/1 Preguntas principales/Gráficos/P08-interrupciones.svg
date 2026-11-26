@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='620' viewBox='0 0 900 620'><title>Interrupción: secuencia de atención</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='620' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Interrupción: secuencia de atención</text><rect x='200' y='50' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='76.66666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>1. El periférico activa INT (IRQ)</text>
+<line x1='450' y1='94' x2='450' y2='112' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='112' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='138.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>2. La CPU termina la instrucción en curso</text>
+<line x1='450' y1='156' x2='450' y2='174' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='174' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='200.66666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>3. ¿SI = 1 (habilitada)?  sí → sigue</text>
+<line x1='450' y1='218' x2='450' y2='236' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='236' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='262.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>4. INTACK: reconoce el pedido</text>
+<line x1='450' y1='280' x2='450' y2='298' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='298' width='500' height='44' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='324.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>5. Guarda el contexto (PC en la posición 0)</text>
+<line x1='450' y1='342' x2='450' y2='360' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='360' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='386.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>6. Identifica la fuente (polling o vector)</text>
+<line x1='450' y1='404' x2='450' y2='422' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='422' width='500' height='44' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='448.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>7. Salta a la rutina de servicio (PC = 1)</text>
+<line x1='450' y1='466' x2='450' y2='484' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='484' width='500' height='44' rx='6' fill='#e3f0ff' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='510.6666666666667' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>8. La rutina atiende y baja el pedido</text>
+<line x1='450' y1='528' x2='450' y2='546' stroke='#333' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='200' y='546' width='500' height='44' rx='6' fill='#eef6ee' stroke='#333' stroke-width='2'/>
+<text x='450.0' y='572.6666666666666' text-anchor='middle' font-size='14' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>9. RTI: restaura PC y SI = 1, y vuelve</text>
+<text x='30' y='610' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>BLUE: SI habilita/deshabilita · F/E/I = búsqueda/ejecución/interrupción</text></svg>

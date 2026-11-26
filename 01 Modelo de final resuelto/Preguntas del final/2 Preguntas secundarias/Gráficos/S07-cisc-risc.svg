@@ -1,0 +1,50 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500' viewBox='0 0 900 500'><title>CISC vs RISC: dos filosofías de diseño</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='500' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>CISC vs RISC: dos filosofías de diseño</text><rect x='30' y='60' width='230' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='84.66666666666667' font-size='14' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Característica</text>
+<rect x='260' y='60' width='300' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='84.66666666666667' font-size='14' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>CISC</text>
+<rect x='560' y='60' width='300' height='40' fill='#dfe9f5' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='84.66666666666667' font-size='14' font-weight='bold' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>RISC</text>
+<rect x='30' y='100' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='124.66666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Instrucciones</text>
+<rect x='260' y='100' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='124.66666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>muchas, complejas</text>
+<rect x='560' y='100' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='124.66666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>pocas, simples</text>
+<rect x='30' y='140' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='164.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Longitud</text>
+<rect x='260' y='140' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='164.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>variable</text>
+<rect x='560' y='140' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='164.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>fija</text>
+<rect x='30' y='180' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='204.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Acceso a memoria</text>
+<rect x='260' y='180' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='204.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>cualquier instrucción</text>
+<rect x='560' y='180' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='204.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>solo LOAD / STORE</text>
+<rect x='30' y='220' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='244.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Registros</text>
+<rect x='260' y='220' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='244.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>pocos</text>
+<rect x='560' y='220' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='244.66666666666666' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>muchos (32 o más)</text>
+<rect x='30' y='260' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='284.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Unidad de control</text>
+<rect x='260' y='260' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='284.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>microprogramada</text>
+<rect x='560' y='260' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='284.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>cableada</text>
+<rect x='30' y='300' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='324.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Pipeline</text>
+<rect x='260' y='300' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='324.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>difícil</text>
+<rect x='560' y='300' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='324.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>natural</text>
+<rect x='30' y='340' width='230' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='145.0' y='364.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>Ejemplos</text>
+<rect x='260' y='340' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='410.0' y='364.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>x86, 8086</text>
+<rect x='560' y='340' width='300' height='40' fill='#ffffff' stroke='#555' stroke-width='1'/>
+<text x='710.0' y='364.6666666666667' font-size='14' font-weight='normal' text-anchor='middle' font-family='Helvetica,Arial,sans-serif'>ARM, MIPS, RISC-V</text>
+<text x='30' y='430' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Idea de RISC: instrucciones simples y regulares para ejecutar casi una por ciclo.</text>
+<text x='30' y='455' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Idea de CISC: la complejidad va en el hardware o microcódigo para ahorrar instrucciones.</text></svg>

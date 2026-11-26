@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='560' viewBox='0 0 900 560'><title>Biestables: RS, D, JK y T (ecuaciones y tablas)</title><defs><marker id='ah' markerWidth='10' markerHeight='10' refX='9' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><rect width='900' height='560' fill='#ffffff'/><text x='20' y='30' font-size='18' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>Biestables: RS, D, JK y T (ecuaciones y tablas)</text><rect x='40' y='60' width='380' height='180' rx='6' fill='#eef0fb' stroke='#333' stroke-width='2'/>
+<text x='230.0' y='126.5' text-anchor='middle' font-size='15' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>RS</text>
+<text x='230.0' y='145.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>S, R</text>
+<text x='230.0' y='164.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Q(t+1) = S + R'·Q</text>
+<text x='230.0' y='183.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>S = R = 1 prohibido</text>
+<rect x='480' y='60' width='380' height='180' rx='6' fill='#eef0fb' stroke='#333' stroke-width='2'/>
+<text x='670.0' y='126.5' text-anchor='middle' font-size='15' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>D</text>
+<text x='670.0' y='145.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>D</text>
+<text x='670.0' y='164.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Q(t+1) = D</text>
+<text x='670.0' y='183.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>copia la entrada</text>
+<rect x='40' y='300' width='380' height='180' rx='6' fill='#eef0fb' stroke='#333' stroke-width='2'/>
+<text x='230.0' y='366.5' text-anchor='middle' font-size='15' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>JK</text>
+<text x='230.0' y='385.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>J, K</text>
+<text x='230.0' y='404.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Q(t+1) = J·Q' + K'·Q</text>
+<text x='230.0' y='423.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>11 ⇒ invierte</text>
+<rect x='480' y='300' width='380' height='180' rx='6' fill='#eef0fb' stroke='#333' stroke-width='2'/>
+<text x='670.0' y='366.5' text-anchor='middle' font-size='15' font-weight='bold' font-family='Helvetica,Arial,sans-serif'>T</text>
+<text x='670.0' y='385.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>T</text>
+<text x='670.0' y='404.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>Q(t+1) = T ⊕ Q</text>
+<text x='670.0' y='423.5' text-anchor='middle' font-size='15' font-weight='normal' font-family='Helvetica,Arial,sans-serif'>T=J=K</text>
+<text x='40' y='520' font-size='13' text-anchor='start' font-weight='normal' fill='#222' font-family='Helvetica,Arial,sans-serif'>Activados por flanco de reloj (síncronos). Un biestable es memoria de 1 bit.</text></svg>
